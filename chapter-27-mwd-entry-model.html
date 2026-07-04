@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 27: Monthly → Weekly → Daily → Entry Model — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.template-box { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.template-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.template-row { padding: 8px 0; border-bottom: 1px dashed #c9b97a; font-size: 14.5px; }
+.template-row strong { display: inline-block; min-width: 150px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 27: CHART READING MASTERY</div>
+  <h1 class="chapter-title">Monthly → Weekly → Daily<br>→ Entry Model</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>साजनले एउटा stock को Daily chart हेर्दा राम्रो Breakout जस्तो देख्यो। Price resistance माथि गएको थियो। Candle हरियो थियो। RSI पनि राम्रो देखिन्थ्यो। उसले तुरुन्त Entry गर्‍यो। तर केही दिनपछि price माथि टिक्न सकेन र तल फर्कियो। पछि उसले Monthly र Weekly chart हेर्दा थाहा पायो—stock Monthly Resistance नजिक थियो, Weekly chart मा पनि धेरै समयदेखि seller active थिए। Daily chart को Breakout ठूलो supply zone भित्रको सानो move मात्र रहेछ।</p>
+
+<p>अर्कोतर्फ, अर्को stockमा Monthly chart लामो base बाट निस्किन तयार देखिन्थ्यो। Weekly chart मा HH/HL structure बन्न थालेको थियो। Daily chart मा price Breakout पछि Retest मा आएको थियो। Volume Pullback मा घटेको थियो र buyer reaction देखिएको थियो। यो setup पहिलेको भन्दा धेरै structured थियो।</p>
+
+<p>साजनले त्यही दिन एउटा ठूलो lesson सिक्यो—<strong>Entry Daily chart मा खोज्न सकिन्छ, तर Entry को quality Monthly र Weekly context ले निर्धारण गर्छ।</strong></p>
+
+<p>Monthly → Weekly → Daily → Entry Model भनेको top-down trading decision system हो। यसमा trader पहिले ठूलो picture हेर्छ, त्यसपछि swing structure बुझ्छ, त्यसपछि Daily setup खोज्छ, अनि अन्त्यमा Entry, Stop Loss, Target, Position Size, Risk-Reward, र trade management plan बनाउँछ।</p>
+
+<p>यो model ले trader लाई random decision बाट बचाउँछ। <strong>“Stock बढ्छ जस्तो छ”</strong> भन्ने सोचबाट <strong>“Market context, sector, timeframe alignment, setup, risk, and execution”</strong> मा लैजान्छ। यही professional trading process हो।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>अघिल्लो chapter मा Multi-Timeframe Analysis को concept सिक्यौं। यो chapterमा त्यसलाई practical Entry Model मा बदल्नेछौं। धेरै traderलाई theory थाहा हुन्छ, तर actual trade plan बनाउँदा के पहिले हेर्ने, के पछि हेर्ने, कहाँ Entry गर्ने, कहाँ Stop Loss राख्ने भन्ने clear हुँदैन। यही confusion हटाउन यो model आवश्यक छ।</p>
+
+<p>Monthly → Weekly → Daily → Entry Model ले trader लाई structured thinking दिन्छ। यसले तपाईंलाई chart हेर्ने fixed sequence दिन्छ। Fixed sequence भएन भने trader कहिले RSI हेर्छ, कहिले news, कहिले candle, कहिले social media, कहिले Volume—अनि decision messy हुन्छ।</p>
+
+<p>यो model महत्वपूर्ण छ किनकि यसले तीन तहको filter प्रयोग गर्छ:</p>
+
+<ul>
+  <li>Monthly chart ले ठूलो risk zone र opportunity zone देखाउँछ।</li>
+  <li>Weekly chart ले swing trend र structure confirm गर्छ।</li>
+  <li>Daily chart ले Entry setup र timing दिन्छ।</li>
+  <li>Entry Model ले risk, reward, position size, and execution define गर्छ।</li>
+</ul>
+
+<p>Trading मा राम्रो analysis मात्र पर्याप्त छैन। राम्रो analysis लाई executable trade planमा बदल्नुपर्छ। यो chapter त्यसैका लागि हो।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Monthly → Weekly → Daily → Entry Model को सरल अर्थ हो:</p>
+
+<ul>
+  <li>पहिले Monthly chartबाट ठूलो direction र major Support/Resistance बुझ्ने।</li>
+  <li>त्यसपछि Weekly chartबाट swing trend, HH/HL, LH/LL, Volume, and structure बुझ्ने।</li>
+  <li>त्यसपछि Daily chartमा actual setup खोज्ने—Breakout, Pullback, Retest, Support Bounce, Base Breakout आदि।</li>
+  <li>अन्त्यमा Entry plan बनाउने—कहाँ buy गर्ने, Stop Loss कहाँ, Target कहाँ, Risk-Reward कति, Position Size कति, र trade invalid कहिले हुन्छ।</li>
+</ul>
+
+<p>यसलाई यसरी सम्झन सकिन्छ:</p>
+
+<div class="content-box">
+  <p style="margin-bottom:8px;"><strong>Monthly</strong> = कहाँ छौं?</p>
+  <p style="margin-bottom:8px;"><strong>Weekly</strong> = कुन direction मा जाँदैछौं?</p>
+  <p style="margin-bottom:8px;"><strong>Daily</strong> = कहाँ Entry गर्ने?</p>
+  <p style="margin-bottom:0;"><strong>Entry Model</strong> = risk कसरी manage गर्ने?</p>
+</div>
+
+<!-- VISUAL 1: The 4-Step Funnel Model -->
+<div class="visual-block">
+  <div class="visual-title">Monthly → Weekly → Daily → Entry — Decision Funnel</div>
+  <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">हरेक तहले weak trade filter गर्छ — अन्त्यमा clear plan मात्र बाँकी</text>
+
+    <!-- Funnel Step 1: Monthly (widest) -->
+    <path d="M 110 50 L 610 50 L 560 110 L 160 110 Z" fill="#7b1fa2" fill-opacity="0.85"/>
+    <text x="360" y="78" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">1. MONTHLY — कहाँ छौं?</text>
+    <text x="360" y="98" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fff">Major Support/Resistance • Long-term trend • Zone</text>
+
+    <!-- Arrow down -->
+    <line x1="360" y1="113" x2="360" y2="128" stroke="#111" stroke-width="1.5" marker-end="url(#arr27)"/>
+
+    <!-- Funnel Step 2: Weekly -->
+    <path d="M 160 133 L 560 133 L 510 193 L 210 193 Z" fill="#ff9800" fill-opacity="0.85"/>
+    <text x="360" y="161" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">2. WEEKLY — कुन direction?</text>
+    <text x="360" y="181" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fff">HH/HL या LH/LL • Swing S/R • Volume • Trend strength</text>
+
+    <!-- Arrow down -->
+    <line x1="360" y1="196" x2="360" y2="211" stroke="#111" stroke-width="1.5" marker-end="url(#arr27)"/>
+
+    <!-- Funnel Step 3: Daily -->
+    <path d="M 210 216 L 510 216 L 460 276 L 260 276 Z" fill="#26a69a" fill-opacity="0.85"/>
+    <text x="360" y="244" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">3. DAILY — कहाँ Entry?</text>
+    <text x="360" y="264" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fff">Setup • Candle • Volume • RSI • MA • Trigger</text>
+
+    <!-- Arrow down -->
+    <line x1="360" y1="279" x2="360" y2="294" stroke="#111" stroke-width="1.5" marker-end="url(#arr27)"/>
+
+    <!-- Funnel Step 4: Entry Model (narrowest) -->
+    <path d="M 260 299 L 460 299 L 430 355 L 290 355 Z" fill="#c8a800" fill-opacity="0.9"/>
+    <text x="360" y="325" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">4. ENTRY MODEL</text>
+    <text x="360" y="343" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">Entry • SL • Target • R:R • Size</text>
+
+    <defs>
+      <marker id="arr27" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M 0 0 L 8 4.5 L 0 9 z" fill="#111"/>
+      </marker>
+    </defs>
+
+    <!-- Side labels -->
+    <text x="640" y="84" font-family="sans-serif" font-size="9" font-style="italic" fill="#7b1fa2">Context</text>
+    <text x="640" y="167" font-family="sans-serif" font-size="9" font-style="italic" fill="#e68a00">Structure</text>
+    <text x="640" y="250" font-family="sans-serif" font-size="9" font-style="italic" fill="#00897b">Timing</text>
+    <text x="640" y="330" font-family="sans-serif" font-size="9" font-style="italic" fill="#c8a800">Risk</text>
+
+    <!-- Bottom note -->
+    <text x="360" y="385" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef5350">कुनै तहमा warning आयो भने तल हतार नगर्ने — wait / avoid पनि decision हो</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो funnel मा देखाइएको छ कसरी trade decision माथिबाट तल साँघुरिँदै आउँछ। सबैभन्दा माथि Monthly (ठूलो context), अनि Weekly (structure), अनि Daily (timing), अनि अन्त्यमा सबैभन्दा साँघुरो Entry Model (risk plan)। हरेक तहले कमजोर trade filter गर्छ — माथिको context मा warning आयो भने तल हतार नगर्ने। अन्त्यमा funnel बाट निस्केको trade मात्र clear plan सहितको हुन्छ।
+</div>
+
+<p>यदि Monthly chart Resistance नजिक warning दिन्छ भने Daily chartको signalमा सावधानी चाहिन्छ। यदि Weekly chart strong uptrendमा छ भने Daily Pullback opportunity हुन सक्छ। यदि Daily setup राम्रो छ तर Stop Loss धेरै टाढा छ भने trade avoid गर्न सकिन्छ।</p>
+
+<p>यो model को मुख्य उद्देश्य perfect prediction गर्नु होइन। यसको उद्देश्य हो—trade लिनुअघि context, setup, and risk clear बनाउनु।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>यो modelलाई step-by-step प्रयोग गर्नुपर्छ। हतार गरेर Daily chartबाट Entry खोज्ने बानी हटाउनुपर्छ। Professional traderको process माथिबाट तल आउँछ।</p>
+
+<p><strong>पहिलो चरण: Monthly Chart</strong></p>
+
+<p>Monthly chart खोल्दा traderले detail खोज्दैन। यहाँ ठूलो picture हेर्नुपर्छ। Price लामो समयदेखि कहाँ छ? Major Support कहाँ छ? Major Resistance कहाँ छ? Stock long-term base बाट उठ्दैछ कि historical high नजिक छ? Monthly candle strong close दिइरहेको छ कि upper wick देखाइरहेको छ? Price long-term downtrendबाट recover हुँदैछ कि अझै weak छ?</p>
+
+<p>Monthly chartबाट तीनवटा conclusion निकाल्नुपर्छ:</p>
+
+<ul>
+  <li>पहिलो, stock ठूलो Support नजिक छ कि Resistance नजिक?</li>
+  <li>दोस्रो, long-term structure bullish, bearish, कि sideways?</li>
+  <li>तेस्रो, Daily tradeका लागि room छ कि Higher Timeframe Resistance धेरै नजिक छ?</li>
+</ul>
+
+<p>यदि Monthly chartमा price major Resistance नजिक छ भने Daily Breakoutमा chase गर्नु riskपूर्ण हुन सक्छ। यदि Monthly chartमा price major Support नजिक stabilization देखाइरहेको छ भने Weekly/Daily confirmation पर्खेर opportunity खोज्न सकिन्छ। यदि Monthly chart middle zoneमा छ भने Weekly structure अझ महत्वपूर्ण हुन्छ।</p>
+
+<p><strong>दोस्रो चरण: Weekly Chart</strong></p>
+
+<p>Weekly chart swing traderका लागि निर्णयको backbone हो। यहाँ trend structure, swing highs/lows, Volume, Moving Average, and recent momentum पढ्नुपर्छ। Stock HH/HL बनाइरहेको छ? कि LH/LL? Weekly candle close strong छ? Pullback controlled छ? Weekly Breakout आएको छ? Weekly Resistance कति टाढा छ? Weekly support कहाँ छ?</p>
+
+<p>Weekly chartबाट traderले market control बुझ्छ। Buyer control छ भने Daily Pullback खोज्न सकिन्छ। Seller control छ भने Daily bounceमा सावधानी चाहिन्छ। Weekly sideways छ भने range high/low mark गरेर Breakout पर्खिन सकिन्छ।</p>
+
+<p>Weekly chartमा राम्रो setupको संकेत यस्तो हुन सक्छ:</p>
+
+<ul>
+  <li>Price major baseबाट निस्किन थालेको छ।</li>
+  <li>Higher Low बनिरहेको छ।</li>
+  <li>Weekly candle strong close देिरहेको छ।</li>
+  <li>Volume buying weekमा बढेको छ, Pullback weekमा घटेको छ।</li>
+  <li>Price 20/50 Moving Average माथि stabilize हुँदैछ।</li>
+  <li>Sector पनि बलियो छ।</li>
+</ul>
+
+<p>तर Weekly warning यस्तो हुन सक्छ:</p>
+
+<ul>
+  <li>Repeated upper wick near Resistance।</li>
+  <li>Failed Breakout।</li>
+  <li>Lower High formation।</li>
+  <li>Support breakdown।</li>
+  <li>High Volume selling।</li>
+  <li>Price 50 MA तल reject हुनु।</li>
+</ul>
+
+<p><strong>तेस्रो चरण: Daily Chart</strong></p>
+
+<p>Monthly र Weekly context बुझिसकेपछि Daily chartमा actual setup खोजिन्छ। Daily chart traderको execution chart हो। यहाँ candle, Volume, RSI, Moving Average, Support/Resistance, Breakout, Pullback, Retest, and Entry trigger detailमा हेर्नुपर्छ।</p>
+
+<p>Daily chartमा यी setup खोज्न सकिन्छ:</p>
+
+<ul>
+  <li>Breakout with Volume</li>
+  <li>Breakout Retest</li>
+  <li>Healthy Pullback</li>
+  <li>Support Bounce</li>
+  <li>Base Breakout</li>
+  <li>Range Breakout</li>
+  <li>Failed Breakdown Recovery</li>
+  <li>Trend Continuation</li>
+</ul>
+
+<p>तर setup देखियो भन्दैमा trade हुँदैन। Setupसँग Risk-Reward मिल्नुपर्छ। Stop Loss logical ठाउँमा हुनुपर्छ। Position Size manageable हुनुपर्छ। Liquidity पर्याप्त हुनुपर्छ। NEPSE index र sector supportive हुनुपर्छ।</p>
+
+<p><strong>चौथो चरण: Entry Model</strong></p>
+
+<p>Entry Model सबै analysisलाई practical trade planमा बदल्ने चरण हो। यहाँ traderले exact decision लेख्छ:</p>
+
+<ul>
+  <li><strong>Entry Zone:</strong> कुन price rangeमा Entry गर्ने?</li>
+  <li><strong>Trigger:</strong> कुन signal आए Entry valid हुन्छ?</li>
+  <li><strong>Stop Loss:</strong> setup invalid हुने level कहाँ?</li>
+  <li><strong>Target:</strong> next Resistance, measured move, or Risk-Reward target कहाँ?</li>
+  <li><strong>Position Size:</strong> Stop Loss distance अनुसार कति quantity?</li>
+  <li><strong>Risk per Trade:</strong> capitalको कति भाग riskमा?</li>
+  <li><strong>Invalidation:</strong> कुन condition आए trade cancel?</li>
+  <li><strong>Trade Management:</strong> T1, partial exit, trailing Stop, final exit?</li>
+</ul>
+
+<!-- VISUAL 2: High-Quality Alignment Example (Scenario 1) -->
+<div class="visual-block">
+  <div class="visual-title">High-Quality Setup — तीनै Timeframe Aligned (Scenario 1)</div>
+  <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Monthly base ↑ + Weekly HH/HL + Daily Retest = structured Entry</text>
+
+    <!-- 3 stacked mini panels -->
+    <!-- MONTHLY -->
+    <rect x="20" y="40" width="210" height="240" fill="#fffdf5" stroke="#7b1fa2" stroke-width="1.5" rx="4"/>
+    <rect x="20" y="40" width="210" height="26" fill="#7b1fa2"/>
+    <text x="125" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">MONTHLY</text>
+    <text x="125" y="82" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#7b1fa2">Long base बाट निस्कँदै</text>
+    <!-- Monthly resistance far above -->
+    <line x1="30" y1="95" x2="220" y2="95" stroke="#ef5350" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="33" y="91" font-family="sans-serif" font-size="7" fill="#ef5350">Major R (टाढा)</text>
+    <!-- base then rising candles -->
+    <line x1="45" y1="230" x2="45" y2="250" stroke="#ef5350" stroke-width="1"/>
+    <rect x="42" y="233" width="6" height="14" fill="#ef5350"/>
+    <line x1="65" y1="232" x2="65" y2="252" stroke="#26a69a" stroke-width="1"/>
+    <rect x="62" y="235" width="6" height="14" fill="#26a69a"/>
+    <line x1="85" y1="228" x2="85" y2="248" stroke="#ef5350" stroke-width="1"/>
+    <rect x="82" y="231" width="6" height="14" fill="#ef5350"/>
+    <line x1="105" y1="230" x2="105" y2="250" stroke="#26a69a" stroke-width="1"/>
+    <rect x="102" y="233" width="6" height="14" fill="#26a69a"/>
+    <!-- breakout from base -->
+    <line x1="125" y1="200" x2="125" y2="232" stroke="#26a69a" stroke-width="1"/>
+    <rect x="122" y="203" width="6" height="26" fill="#26a69a"/>
+    <line x1="145" y1="180" x2="145" y2="205" stroke="#26a69a" stroke-width="1"/>
+    <rect x="142" y="183" width="6" height="20" fill="#26a69a"/>
+    <line x1="165" y1="165" x2="165" y2="188" stroke="#26a69a" stroke-width="1"/>
+    <rect x="162" y="168" width="6" height="18" fill="#26a69a"/>
+    <line x1="185" y1="150" x2="185" y2="172" stroke="#26a69a" stroke-width="1"/>
+    <rect x="182" y="153" width="6" height="16" fill="#26a69a"/>
+    <line x1="205" y1="142" x2="205" y2="162" stroke="#26a69a" stroke-width="1"/>
+    <rect x="202" y="145" width="6" height="14" fill="#26a69a"/>
+    <!-- base zone marker -->
+    <rect x="38" y="245" width="78" height="12" fill="#26a69a" fill-opacity="0.2"/>
+    <text x="125" y="270" text-anchor="middle" font-family="sans-serif" font-size="8" font-style="italic" fill="#2e7d32">✓ Room to run</text>
+
+    <!-- Arrow -->
+    <line x1="232" y1="160" x2="248" y2="160" stroke="#111" stroke-width="1.5" marker-end="url(#arr27b)"/>
+
+    <!-- WEEKLY -->
+    <rect x="250" y="40" width="210" height="240" fill="#fffdf5" stroke="#ff9800" stroke-width="1.5" rx="4"/>
+    <rect x="250" y="40" width="210" height="26" fill="#ff9800"/>
+    <text x="355" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">WEEKLY</text>
+    <text x="355" y="82" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e68a00">HH/HL + Breakout</text>
+    <!-- HH/HL candles -->
+    <line x1="275" y1="220" x2="275" y2="242" stroke="#26a69a" stroke-width="1"/>
+    <rect x="272" y="223" width="6" height="15" fill="#26a69a"/>
+    <line x1="295" y1="205" x2="295" y2="228" stroke="#26a69a" stroke-width="1"/>
+    <rect x="292" y="208" width="6" height="16" fill="#26a69a"/>
+    <line x1="315" y1="212" x2="315" y2="232" stroke="#ef5350" stroke-width="1"/>
+    <rect x="312" y="215" width="6" height="13" fill="#ef5350"/>
+    <text x="315" y="245" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#c8a800">HL</text>
+    <line x1="335" y1="190" x2="335" y2="213" stroke="#26a69a" stroke-width="1"/>
+    <rect x="332" y="193" width="6" height="16" fill="#26a69a"/>
+    <line x1="355" y1="172" x2="355" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="352" y="175" width="6" height="16" fill="#26a69a"/>
+    <text x="355" y="167" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#26a69a">HH</text>
+    <line x1="375" y1="182" x2="375" y2="202" stroke="#ef5350" stroke-width="1"/>
+    <rect x="372" y="185" width="6" height="13" fill="#ef5350"/>
+    <text x="375" y="215" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#c8a800">HL</text>
+    <!-- weekly breakout candle -->
+    <line x1="395" y1="155" x2="395" y2="185" stroke="#26a69a" stroke-width="1.2"/>
+    <rect x="391" y="158" width="8" height="24" fill="#26a69a" stroke="#00897b" stroke-width="0.8"/>
+    <line x1="415" y1="145" x2="415" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="412" y="148" width="6" height="14" fill="#26a69a"/>
+    <line x1="435" y1="148" x2="435" y2="168" stroke="#ef5350" stroke-width="1"/>
+    <rect x="432" y="151" width="6" height="13" fill="#ef5350"/>
+    <text x="355" y="270" text-anchor="middle" font-family="sans-serif" font-size="8" font-style="italic" fill="#e68a00">✓ Buyer control</text>
+
+    <!-- Arrow -->
+    <line x1="462" y1="160" x2="478" y2="160" stroke="#111" stroke-width="1.5" marker-end="url(#arr27b)"/>
+
+    <!-- DAILY -->
+    <rect x="480" y="40" width="220" height="240" fill="#fffdf5" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <rect x="480" y="40" width="220" height="26" fill="#26a69a"/>
+    <text x="590" y="58" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">DAILY — Entry</text>
+    <text x="590" y="82" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#00897b">Breakout + Retest</text>
+    <!-- BO level -->
+    <line x1="490" y1="150" x2="690" y2="150" stroke="#c9b97a" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="495" y="146" font-family="sans-serif" font-size="7" fill="#111">BO level → Support</text>
+    <!-- rally to breakout -->
+    <line x1="505" y1="200" x2="505" y2="222" stroke="#26a69a" stroke-width="1"/>
+    <rect x="502" y="203" width="6" height="15" fill="#26a69a"/>
+    <line x1="525" y1="185" x2="525" y2="208" stroke="#26a69a" stroke-width="1"/>
+    <rect x="522" y="188" width="6" height="16" fill="#26a69a"/>
+    <!-- breakout candle -->
+    <line x1="545" y1="130" x2="545" y2="170" stroke="#26a69a" stroke-width="1.2"/>
+    <rect x="541" y="133" width="8" height="35" fill="#26a69a" stroke="#00897b" stroke-width="0.8"/>
+    <!-- retest pullback -->
+    <line x1="565" y1="140" x2="565" y2="162" stroke="#ef5350" stroke-width="1"/>
+    <rect x="562" y="143" width="6" height="14" fill="#ef5350"/>
+    <line x1="585" y1="148" x2="585" y2="170" stroke="#ef5350" stroke-width="1"/>
+    <rect x="582" y="151" width="6" height="14" fill="#ef5350"/>
+    <!-- retest buyer candle at BO level -->
+    <line x1="605" y1="145" x2="605" y2="168" stroke="#26a69a" stroke-width="1.2"/>
+    <rect x="601" y="148" width="8" height="12" fill="#26a69a" stroke="#00897b" stroke-width="0.8"/>
+    <circle cx="605" cy="166" r="3.5" fill="#fff" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="620" y="160" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">Entry</text>
+    <!-- continue up -->
+    <line x1="625" y1="128" x2="625" y2="148" stroke="#26a69a" stroke-width="1"/>
+    <rect x="622" y="131" width="6" height="14" fill="#26a69a"/>
+    <line x1="645" y1="115" x2="645" y2="135" stroke="#26a69a" stroke-width="1"/>
+    <rect x="642" y="118" width="6" height="14" fill="#26a69a"/>
+    <line x1="665" y1="105" x2="665" y2="125" stroke="#26a69a" stroke-width="1"/>
+    <rect x="662" y="108" width="6" height="14" fill="#26a69a"/>
+    <!-- SL marker -->
+    <line x1="490" y1="178" x2="690" y2="178" stroke="#ef5350" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="495" y="190" font-family="sans-serif" font-size="7" font-weight="700" fill="#ef5350">SL (घाटा रोक्ने सीमा)</text>
+    <text x="590" y="270" text-anchor="middle" font-family="sans-serif" font-size="8" font-style="italic" fill="#00897b">✓ Retest hold + buyer</text>
+
+    <defs>
+      <marker id="arr27b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M 0 0 L 8 4.5 L 0 9 z" fill="#111"/>
+      </marker>
+    </defs>
+
+    <!-- Entry plan box -->
+    <rect x="20" y="295" width="680" height="90" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <text x="360" y="315" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">Entry Model Plan</text>
+    <text x="35" y="335" font-family="sans-serif" font-size="10" fill="#111"><tspan font-weight="700">Entry:</tspan> Retest zone नजिक</text>
+    <text x="250" y="335" font-family="sans-serif" font-size="10" fill="#111"><tspan font-weight="700">Stop Loss:</tspan> Retest low तल</text>
+    <text x="490" y="335" font-family="sans-serif" font-size="10" fill="#111"><tspan font-weight="700">Target:</tspan> Weekly Resistance</text>
+    <text x="35" y="357" font-family="sans-serif" font-size="10" fill="#111"><tspan font-weight="700">Risk:</tspan> Capital को छोटो defined भाग</text>
+    <text x="350" y="357" font-family="sans-serif" font-size="10" fill="#111"><tspan font-weight="700">Condition:</tspan> NEPSE index + sector supportive</text>
+    <text x="360" y="377" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">✓ तीनै timeframe मिल्यो → Trade विचार गर्न योग्य</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो तीन panel मा perfect alignment देखाइएको छ। Monthly (बायाँ) मा stock long base बाट निस्कँदै र major resistance टाढा छ (room छ)। Weekly (बीच) मा HH/HL structure + breakout (buyer control)। Daily (दायाँ) मा breakout पछि retest मा buyer candle — यही Entry point। तल Entry Model plan मा Entry, Stop Loss, Target, Risk सबै लेखिएको छ। जब तीनै timeframe एउटै कुरा भन्छन् र risk plan clear हुन्छ, तब trade को probability राम्रो हुन्छ — तर guarantee होइन, त्यसैले SL अनिवार्य।
+</div>
+
+<p>Entry Model बिना analysis incomplete छ। धेरै trader <strong>“stock राम्रो छ”</strong> भन्छन्, तर Entry कहाँ गर्ने भन्ने clear हुँदैन। <strong>“Breakout आए buy”</strong> भन्छन्, तर Breakout कति माथि, Volume कस्तो, Stop Loss कहाँ, Risk-Reward कति—यी कुरा लेख्दैनन्। यही कारण emotionले decision चलाउँछ।</p>
+
+<p>यो model प्रयोग गर्दा एउटा important rule छ—यदि कुनै चरणमा major warning आयो भने अर्को चरणमा हतार नगर्नुहोस्। उदाहरणका लागि, Monthly chart major Resistance नजिक छ र Weekly chart upper wick देखाइरहेको छ भने Daily green candle देखेर FOMO नगर्नुहोस्। त्यस्तै Monthly/Weekly supportive छन् तर Daily setup अझै बनेको छैन भने patience राख्नुहोस्।</p>
+
+<p>यो model केवल buy decisionका लागि होइन; avoid decisionका लागि पनि प्रयोग हुन्छ। कहिलेकाहीँ सबै analysisपछि result आउँछ—<strong>“Trade छैन।”</strong> यो पनि राम्रो decision हो। Professional traderलाई हरेक chartबाट trade निकाल्नुपर्छ भन्ने हुँदैन।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा यो model धेरै उपयोगी छ, किनकि यहाँ index, sector, and stock तीनैको context बिना trading risk बढ्छ। कुनै stock Daily chartमा राम्रो देखिए पनि NEPSE index Weekly Resistanceबाट reject हुँदैछ भने Breakout fail हुने risk बढ्न सक्छ। कुनै sector कमजोर छ भने individual stockको move टिक्न गाह्रो हुन सक्छ।</p>
+
+<p>NEPSE traderले यो model प्रयोग गर्दा stock मात्र होइन, तीन तह हेर्नुपर्छ:</p>
+
+<ul>
+  <li>पहिले NEPSE index Monthly → Weekly → Daily</li>
+  <li>त्यसपछि Sector Monthly → Weekly → Daily</li>
+  <li>त्यसपछि Stock Monthly → Weekly → Daily</li>
+</ul>
+
+<!-- VISUAL 3: NEPSE Three-Layer Filter -->
+<div class="visual-block">
+  <div class="visual-title">NEPSE 3-Layer Filter — Index → Sector → Stock</div>
+  <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="320" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">तीनै तह supportive भए मात्र probability राम्रो — कुनै weak भए caution</text>
+
+    <!-- GREEN PATH (all supportive) -->
+    <text x="180" y="56" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">✓ High Probability Path</text>
+
+    <!-- Layer 1 Index -->
+    <rect x="60" y="68" width="240" height="48" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5" rx="5"/>
+    <text x="180" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">1. NEPSE Index</text>
+    <text x="180" y="105" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Supportive (50 MA माथि, HH/HL)</text>
+
+    <line x1="180" y1="118" x2="180" y2="132" stroke="#26a69a" stroke-width="1.5" marker-end="url(#arr27g)"/>
+
+    <!-- Layer 2 Sector -->
+    <rect x="60" y="135" width="240" height="48" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5" rx="5"/>
+    <text x="180" y="155" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">2. Sector</text>
+    <text x="180" y="172" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Strong (base breakout, rotation)</text>
+
+    <line x1="180" y1="185" x2="180" y2="199" stroke="#26a69a" stroke-width="1.5" marker-end="url(#arr27g)"/>
+
+    <!-- Layer 3 Stock -->
+    <rect x="60" y="202" width="240" height="48" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5" rx="5"/>
+    <text x="180" y="222" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">3. Stock</text>
+    <text x="180" y="239" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Clear Daily setup</text>
+
+    <line x1="180" y1="252" x2="180" y2="266" stroke="#26a69a" stroke-width="1.5" marker-end="url(#arr27g)"/>
+
+    <rect x="90" y="269" width="180" height="38" fill="#26a69a" rx="5"/>
+    <text x="180" y="288" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">Better Probability</text>
+    <text x="180" y="301" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#fff">(तर guarantee होइन — SL राख्ने)</text>
+
+    <!-- Divider -->
+    <line x1="360" y1="50" x2="360" y2="310" stroke="#c9b97a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+    <!-- RED PATH (one weak) -->
+    <text x="540" y="56" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#ef5350">✗ Caution Path</text>
+
+    <!-- Layer 1 Index weak -->
+    <rect x="420" y="68" width="240" height="48" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.5" rx="5"/>
+    <text x="540" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#ef5350">1. NEPSE Index</text>
+    <text x="540" y="105" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Weak (Resistance reject, LH/LL)</text>
+
+    <line x1="540" y1="118" x2="540" y2="132" stroke="#ef5350" stroke-width="1.5" marker-end="url(#arr27r)"/>
+
+    <!-- Layer 2 Sector weak -->
+    <rect x="420" y="135" width="240" height="48" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.5" rx="5"/>
+    <text x="540" y="155" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#ef5350">2. Sector</text>
+    <text x="540" y="172" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Weak / no momentum</text>
+
+    <line x1="540" y1="185" x2="540" y2="199" stroke="#ef5350" stroke-width="1.5" marker-end="url(#arr27r)"/>
+
+    <!-- Layer 3 Stock looks good alone -->
+    <rect x="420" y="202" width="240" height="48" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5" rx="5"/>
+    <text x="540" y="222" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#c8a800">3. Stock</text>
+    <text x="540" y="239" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">एक्लै राम्रो देखिन्छ (isolated)</text>
+
+    <line x1="540" y1="252" x2="540" y2="266" stroke="#ef5350" stroke-width="1.5" marker-end="url(#arr27r)"/>
+
+    <rect x="450" y="269" width="180" height="38" fill="#ef5350" rx="5"/>
+    <text x="540" y="288" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">Capital बचाउनु राम्रो</text>
+    <text x="540" y="301" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#fff">Isolated move टिक्न गाह्रो</text>
+
+    <defs>
+      <marker id="arr27g" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#26a69a"/>
+      </marker>
+      <marker id="arr27r" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#ef5350"/>
+      </marker>
+    </defs>
+  </svg>
+</div>
+<div class="visual-explanation">
+NEPSE मा trade गर्नुअघि तीन तह जाँच्ने — NEPSE Index, अनि Sector, अनि Stock (हरेक Monthly→Weekly→Daily)। बायाँ (हरियो) मा तीनै तह supportive छन् — Index strong, Sector strong, Stock setup clear — यसले probability राम्रो बनाउँछ। दायाँ (रातो) मा Index र Sector weak छन् तर Stock एक्लै राम्रो देखिन्छ — यस्तो isolated move टिक्न गाह्रो हुन्छ, capital बचाउनु बुद्धिमानी। यो filter ले धेरै weak setup पहिले नै हटाइदिन्छ।
+</div>
+
+<p>यो धेरै जस्तो लाग्न सक्छ, तर swing tradingमा यसले धेरै weak setup filter गर्छ। यदि NEPSE index supportive, sector strong, and stock setup clear छ भने probability improve हुन्छ। यदि तीनै विपरीत छन् भने capital बचाउनु राम्रो हुन सक्छ।</p>
+
+<p>NEPSE मा sector rotationको समयमा यो model धेरै शक्तिशाली हुन्छ। मानौं, Finance sector Weekly chartमा base Breakout गर्दैछ। Sectorका केही strong stock Daily chartमा Pullback/Retest दिँदैछन्। NEPSE index पनि stable छ। यस्तो अवस्थामा sector-led trade setup meaningful हुन सक्छ।</p>
+
+<p>NEPSE मा fake breakout, operator trap, and low liquidity stock common हुन सक्छन्। Monthly/Weekly context हेर्दा धेरै traps पहिले नै filter गर्न सकिन्छ। यदि stock Monthly Resistance नजिक छ, Weekly upper wick छ, Daily sudden Volume Spike छ, and social media hype छ भने caution चाहिन्छ।</p>
+
+<p>TMS मा order राख्ने practical discipline पनि Entry Modelकै भाग हो। Entry zone define नभई market order जस्तो हतारमा buy गर्नु हुँदैन। Quantity Stop Loss distanceअनुसार हुनुपर्छ। Sell गरेपछि EDIS, WACC, settlement, and net profit calculation पनि traderको processमा आउनुपर्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Monthly → Weekly → Daily → Entry Modelले traderको psychology calm बनाउँछ। जब fixed process हुन्छ, trader random signalमा हल्लिँदैन। Daily candle हरियो भयो भन्दैमा तुरुन्त buy गर्दैन। Social media hype आयो भन्दैमा plan बदल्दैन। Price धेरै बढ्यो भन्दैमा chase गर्दैन।</p>
+
+<p>यो modelले FOMO घटाउँछ। यदि price Daily chartमा भागिसकेको छ तर Weekly target नजिक छ भने trader बुझ्छ—Risk-Reward खराब छ। यदि Daily setup missed भयो तर Retest आउन सक्छ भने trader wait गर्न सक्छ। यदि Retest आएन भने पनि ऊ chase गर्दैन, किनकि उसको system chase होइन।</p>
+
+<p>यो modelले fear पनि घटाउँछ। यदि Weekly trend strong छ र Daily Pullback normal छ भने trader panic हुँदैन। ऊ Pullback quality हेर्छ। Volume घटेको छ कि selling बढ़ेको छ? Support बचिरहेको छ? Buyer reaction आएको छ? यसरी डरलाई structureमा बदलिन्छ।</p>
+
+<p>तर यो modelको गलत प्रयोगले over-analysis पनि ल्याउन सक्छ। Trader हरेक timeframeबाट perfect confirmation खोज्छ र कहिल्यै trade गर्दैन। Perfect setup खोज्दा good setup miss हुन सक्छ। त्यसैले modelको उद्देश्य perfection होइन, structured probability हो।</p>
+
+<p>Traderले याद राख्नुपर्छ—तीन timeframe मिल्दा पनि trade fail हुन सक्छ। त्यसैले Stop Loss हट्दैन। Position Size हट्दैन। Risk-Reward हट्दैन। Multi-Timeframe Alignment guarantee होइन, probability improvement हो।</p>
+
+<p>यो model traderलाई professional बनाउँछ किनकि यसले decisionलाई emotionबाट हटाएर processमा ल्याउँछ। Process repeated भयो भने journalबाट improvement हुन्छ। Random tradeबाट improvement गाह्रो हुन्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Daily chartबाट सुरु गर्नु। Signal देखेपछि Higher Timeframe search गर्नु biased analysis हुन सक्छ।</p>
+
+<p>दोस्रो गल्ती हो—Monthly chart ignore गर्नु। Major Resistance नजिक Daily Breakout chase गर्दा trap हुन सक्छ।</p>
+
+<p>तेस्रो गल्ती हो—Weekly structure नहेर्नु। Swing tradeमा Weekly trend अत्यन्त महत्वपूर्ण हुन्छ।</p>
+
+<p>चौथो गल्ती हो—Daily setup नभई केवल Monthly/Weekly राम्रो छ भनेर buy गर्नु। Higher Timeframe supportive भए पनि Entry timing चाहिन्छ।</p>
+
+<p>पाँचौँ गल्ती हो—तीन timeframe विरोधमा हुँदा पनि forced trade गर्नु। Conflict छ भने wait गर्न सकिन्छ।</p>
+
+<p>छैटौँ गल्ती हो—Entry zone clear नगर्नु। <strong>“Buy गर्न मिल्छ”</strong> भन्नु पर्याप्त छैन। कुन price, कुन trigger, कुन stop—clear हुनुपर्छ।</p>
+
+<p>सातौँ गल्ती हो—Stop Loss monthly/weekly context बिना अत्यन्त tight राख्नु। Normal Pullbackमा stop hit हुन सक्छ। तर धेरै wide stop पनि riskपूर्ण हुन्छ।</p>
+
+<p>आठौँ गल्ती हो—Risk-Reward नहेर्नु। Higher Timeframe Resistance नजिक target कम हुन सक्छ।</p>
+
+<p>नवौँ गल्ती हो—Position Size Stop Loss distance अनुसार नघटाउनु। Stop Loss टाढा छ भने quantity कम हुनुपर्छ।</p>
+
+<p>दशौँ गल्ती हो—Modelलाई rigid बनाउनु। Market dynamic छ। Model guide हो, guarantee होइन।</p>
+
+<p>एघारौँ गल्ती हो—NEPSE index र sectorलाई ignore गर्नु। Stock राम्रो भए पनि market/sector weak छ भने risk बढ्छ।</p>
+
+<p>बाह्रौँ गल्ती हो—Analysisपछि journal नलेख्नु। Model प्रयोग भयो कि emotionले trade भयो भन्ने record हुनुपर्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Daily signal राम्रो देखिए पनि Monthly/Weekly context बिना Entry अधुरो हुन्छ</div>
+  <p style="margin-bottom:0;">साजन को पहिलो गल्ती यही थियो — Daily Breakout देखेर तुरुन्त किन्यो, Monthly/Weekly पछि हेर्‍यो। सही process उल्टो हो — पहिले Monthly (context), अनि Weekly (structure), अनि Daily (setup), अनि Entry Model (risk)। <strong>हरेक तहले filter गर्छ।</strong> कुनै तहमा warning आयो भने तल हतार नगर्नुहोस्। र याद राख्नुहोस् — सबै analysis पछि "Trade छैन" भन्ने conclusion पनि एउटा राम्रो, professional decision हो। हरेक chart बाट trade निकाल्नुपर्छ भन्ने छैन।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Monthly → Weekly → Daily → Entry Model प्रयोग गर्दा यी rules अपनाउनुहोस्:</p>
+
+<ul>
+  <li>सधैं Monthly chartबाट सुरु गर्नुहोस्।</li>
+  <li>Monthly मा major Support/Resistance mark गर्नुहोस्।</li>
+  <li>Weekly मा trend structure, HH/HL, LH/LL, Volume, and swing level हेर्नुहोस्।</li>
+  <li>Daily मा मात्र Entry setup खोज्नुहोस्।</li>
+  <li>NEPSE indexको Monthly/Weekly/Daily context पहिले जाँच्नुहोस्।</li>
+  <li>Sector strength stock setupसँग मिल्छ कि मिल्दैन हेर्नुहोस्।</li>
+  <li>Daily setup Higher Timeframe warningसँग टकराइरहेको छ भने सावधानी गर्नुहोस्।</li>
+  <li>Entry Zone exact price होइन, price rangeका रूपमा सोच्नुहोस्।</li>
+  <li>Entry trigger clear नभई order नराख्नुहोस्।</li>
+  <li>Stop Loss setup invalid हुने ठाउँमा राख्नुहोस्।</li>
+  <li>Stop Loss distance अनुसार Position Size घटाउनुहोस्।</li>
+  <li>Target Higher Timeframe Resistance अघि राख्नुपर्छ कि Risk-Reward targetसम्म पर्खिनुपर्छ, plan गर्नुहोस्।</li>
+  <li>Trade invalid condition पहिले लेख्नुहोस्।</li>
+  <li>Setup missed भयो भने chase नगर्नुहोस्।</li>
+  <li>यदि three-timeframe clarity छैन भने wait गर्नुहोस्।</li>
+  <li>Trade गरेपछि journalमा Monthly, Weekly, Daily conclusion लेख्नुहोस्।</li>
+</ul>
+
+<p>यो modelको मुख्य rule हो—<strong>Context बिना setup अधुरो हुन्छ, setup बिना Entry अधुरो हुन्छ, र risk plan बिना trade खतरनाक हुन्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: High-Quality Alignment</strong></p>
+<p><strong>Monthly View:</strong> Stock 2 वर्षको baseबाट बिस्तारै माथि उठ्दैछ। Major Resistance अझै टाढा छ। Monthly candle strong close देिरहेको छ।</p>
+<p><strong>Weekly View:</strong> Weekly chartमा HH/HL structure बनेको छ। Recent weekly Breakout volume सहित आएको छ। Pullback controlled छ।</p>
+<p><strong>Daily View:</strong> Daily chartमा Breakout पछि Retest आएको छ। Selling Volume कम छ। Retest zoneमा lower wick र strong close छ। RSI 50 माथि hold छ। Price 20/50 MA माथि छ।</p>
+<p><strong>Entry Model:</strong> Entry Zone: Retest zone नजिक। Stop Loss: Retest low वा structure support तल। Target: Weekly Resistance वा Risk-Reward अनुसार। Risk: capitalको छोटो defined भाग। Decision: Trade विचार गर्न योग्य, यदि NEPSE index र sector supportive छन्।</p>
+
+<p><strong>Scenario 2: Daily Good, Higher Timeframe Warning</strong></p>
+<p><strong>Monthly View:</strong> Stock major historical Resistance zone नजिक छ।</p>
+<p><strong>Weekly View:</strong> Weekly candleमा बारम्बार upper wick बनेको छ। Volume high छ तर close weak छ।</p>
+<p><strong>Daily View:</strong> Daily chartमा एक green candle बनेको छ र RSI 60 छ।</p>
+<p><strong>Entry Model:</strong> Daily signal देखिए पनि Higher Timeframe supply zone बलियो छ। Entry chase गर्नु risky हुन सक्छ। Better plan: wait for clean weekly close above resistance or avoid.</p>
+
+<p><strong>Scenario 3: Monthly Support तर Daily Setup Ready छैन</strong></p>
+<p><strong>Monthly View:</strong> Stock major Support नजिक छ।</p>
+<p><strong>Weekly View:</strong> Trend अझै LH/LL मा छ। Seller control weak हुँदैछ, तर confirmation छैन।</p>
+<p><strong>Daily View:</strong> Price support नजिक छ तर buyer candle आएको छैन। Volume selling अझै छ।</p>
+<p><strong>Entry Model:</strong> Support नजिक price छ भन्दैमा buy छैन। Wait for Daily reversal, Weekly structure shift, or failed breakdown recovery.</p>
+
+<p><strong>Scenario 4: Weekly Strong, Daily Pullback</strong></p>
+<p><strong>Monthly View:</strong> Broad trend neutral-to-positive छ। Major resistance टाढा छ।</p>
+<p><strong>Weekly View:</strong> Stock HH/HL structureमा छ। Weekly trend strong छ।</p>
+<p><strong>Daily View:</strong> Price 20 MA नजिक Pullbackमा छ। Volume घटेको छ। Support zone नजिक buyer reaction आएको छ।</p>
+<p><strong>Entry Model:</strong> This could be Pullback setup. Stop Loss last swing low तल। Target recent high/weekly resistance। Risk-Reward मिल्यो भने trade विचार गर्न सकिन्छ।</p>
+
+<p><strong>Scenario 5: Weekly Downtrend, Daily Bounce</strong></p>
+<p><strong>Monthly View:</strong> Stock long-term downtrendमा छ।</p>
+<p><strong>Weekly View:</strong> LH/LL structure स्पष्ट छ। Price 50 MA तल छ।</p>
+<p><strong>Daily View:</strong> 2 दिन green candle आएको छ। RSI 45 पुगेको छ।</p>
+<p><strong>Entry Model:</strong> यो strong reversal होइन, Weekly downtrend भित्र bounce हुन सक्छ। Avoid or wait for Weekly LH break and structure shift.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:20%;">Stage</th>
+      <th style="width:42%;">Role</th>
+      <th style="width:38%;">Decision Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="color:#7b1fa2;">Monthly</strong></td>
+      <td>ठूलो direction, major S/R, demand/supply zone, room जाँच</td>
+      <td>Trade गर्ने वातावरण छ कि छैन?</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#e68a00;">Weekly</strong></td>
+      <td>Swing structure (HH/HL या LH/LL), Volume, trend strength</td>
+      <td>Buyer control कि Seller control?</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#00897b;">Daily</strong></td>
+      <td>Setup (Breakout/Pullback/Retest), candle, Volume, RSI, MA</td>
+      <td>Entry timing कहाँ?</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#c8a800;">Entry Model</strong></td>
+      <td>Entry zone, Trigger, SL, Target, R:R, Size, Invalidation</td>
+      <td>Risk-defined plan + execute</td>
+    </tr>
+    <tr>
+      <td><strong>Alignment</strong></td>
+      <td>तीनै तह + risk plan एकैसाथ मिल्छ कि?</td>
+      <td>Trade / Wait / Avoid</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="template-box">
+  <div class="template-title">📋 Trade Plan Template</div>
+  <div class="template-row"><strong>Monthly View:</strong> _________________________________</div>
+  <div class="template-row"><strong>Weekly View:</strong> __________________________________</div>
+  <div class="template-row"><strong>Daily Setup:</strong> __________________________________</div>
+  <div class="template-row"><strong>Entry Zone:</strong> ___________________________________</div>
+  <div class="template-row"><strong>Entry Trigger:</strong> ________________________________</div>
+  <div class="template-row"><strong>Stop Loss:</strong> ____________________________________</div>
+  <div class="template-row"><strong>Target 1 / Target 2:</strong> __________________________</div>
+  <div class="template-row"><strong>Risk-Reward:</strong> __________________________________</div>
+  <div class="template-row"><strong>Position Size:</strong> ________________________________</div>
+  <div class="template-row" style="border-bottom:none;"><strong>Invalid Condition:</strong> ____________________________</div>
+</div>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Monthly → Weekly → Daily → Entry Model Checklist</div>
+
+  <div class="checklist-sub">Monthly Check:</div>
+  <ul>
+    <li>Long-term trend कस्तो छ?</li>
+    <li>Major Support कहाँ छ?</li>
+    <li>Major Resistance कहाँ छ?</li>
+    <li>Price demand zone, supply zone, कि middle zoneमा छ?</li>
+    <li>Monthly candle close strong छ?</li>
+    <li>Upper wick warning छ?</li>
+    <li>Major resistanceसम्म reward room छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Weekly Check:</div>
+  <ul>
+    <li>Weekly HH/HL छ?</li>
+    <li>Weekly LH/LL छ?</li>
+    <li>Weekly sideways/base छ?</li>
+    <li>Weekly Support कहाँ छ?</li>
+    <li>Weekly Resistance कहाँ छ?</li>
+    <li>Weekly Volume trend कस्तो छ?</li>
+    <li>Weekly Breakout वा Pullback छ?</li>
+    <li>Weekly close strong छ कि weak?</li>
+    <li>Sector weekly structure supportive छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Daily Check:</div>
+  <ul>
+    <li>Daily setup के हो?</li>
+    <li>Breakout, Pullback, Retest, Support Bounce, कि Base Breakout?</li>
+    <li>Volume support छ?</li>
+    <li>RSI momentum कस्तो छ?</li>
+    <li>Moving Average context के छ?</li>
+    <li>Candle body, wick, close कस्तो छ?</li>
+    <li>Entry chase हो कि structured?</li>
+    <li>Liquidity पर्याप्त छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Entry Model Check:</div>
+  <ul>
+    <li>Entry Zone कहाँ छ?</li>
+    <li>Entry Trigger के हो?</li>
+    <li>Stop Loss कहाँ छ?</li>
+    <li>Trade invalid कहिले हुन्छ?</li>
+    <li>Target 1 कहाँ छ?</li>
+    <li>Target 2 कहाँ छ?</li>
+    <li>Risk-Reward कति छ?</li>
+    <li>Position Size कति?</li>
+    <li>Capitalको कति risk?</li>
+    <li>NEPSE index supportive छ?</li>
+    <li>Sector supportive छ?</li>
+    <li>Trade journalमा plan लेखिएको छ?</li>
+    <li>यो trade processबाट आएको हो कि emotionबाट?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Monthly Read on 5 Stocks</div>
+  <p>कुनै 5 वटा NEPSE stock छान्नुहोस्। प्रत्येक stockका लागि Monthly chartबाट यी कुरा लेख्नुहोस्:</p>
+  <ul>
+    <li>Major Support</li>
+    <li>Major Resistance</li>
+    <li>Long-term trend</li>
+    <li>Price अहिले कुन zoneमा छ</li>
+    <li>Monthly warning वा opportunity</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Weekly Read on Same 5</div>
+  <p>त्यही 5 stockको Weekly chart खोल्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>HH/HL वा LH/LL</li>
+    <li>Weekly Support</li>
+    <li>Weekly Resistance</li>
+    <li>Weekly Volume</li>
+    <li>Weekly conclusion: Bullish / Bearish / Sideways / Wait</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Daily Setup on Same 5</div>
+  <p>त्यही 5 stockको Daily chart खोल्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>Daily setup छ कि छैन</li>
+    <li>Setup type</li>
+    <li>Entry zone</li>
+    <li>Stop Loss</li>
+    <li>Target</li>
+    <li>Risk-Reward</li>
+    <li>Volume confirmation</li>
+    <li>RSI/MA support</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Final Decision Per Stock</div>
+  <p>प्रत्येक stockका लागि final decision लेख्नुहोस्:</p>
+  <ul>
+    <li>Stock Name:</li>
+    <li>Monthly View:</li>
+    <li>Weekly View:</li>
+    <li>Daily Setup:</li>
+    <li>Entry Plan:</li>
+    <li>Risk Plan:</li>
+    <li>Final Decision: Trade / Wait / Avoid</li>
+    <li>Reason:</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Review 3 Past Trades</div>
+  <p>आफ्नो पुरानो 3 वटा trade review गर्नुहोस्। प्रत्येकमा लेख्नुहोस्:</p>
+  <ul>
+    <li>मैले Monthly chart हेरेको थिएँ?</li>
+    <li>Weekly structure कस्तो थियो?</li>
+    <li>Daily setup स्पष्ट थियो?</li>
+    <li>Entry plan थियो?</li>
+    <li>Stop Loss र Position Size calculated थिए?</li>
+    <li>यदि यो model प्रयोग गरेको भए trade लिने थिएँ कि avoid गर्थें?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Monthly → Weekly → Daily → Entry Model traderको decisionलाई professional बनाउने framework हो। यसले तपाईंलाई random chart signalबाट बचाएर structured analysisमा लैजान्छ।</p>
+  <p>Monthly ले तपाईंलाई ठूलो battlefield देखाउँछ। Weekly ले buyer-seller control देखाउँछ। Daily ले Entry timing दिन्छ। Entry Model ले riskलाई सीमित गर्छ।</p>
+  <p>यो modelले profit guarantee गर्दैन। तर यसले कमजोर trade filter गर्छ, FOMO कम गर्छ, Stop Loss clear बनाउँछ, र तपाईंलाई journal गर्न योग्य repeatable process दिन्छ।</p>
+  <p style="margin-bottom:0;">सफल traderसँग predictionभन्दा बढी process हुन्छ। यो model त्यही processको आधार हो।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 27 Summary</div>
+  <p>Monthly → Weekly → Daily → Entry Model top-down trading decision system हो। यसमा trader पहिले Monthly chartबाट ठूलो direction र major levels बुझ्छ, Weekly chartबाट swing structure र trend पढ्छ, Daily chartबाट actual setup खोज्छ, अनि Entry Modelबाट risk-defined trade plan बनाउँछ।</p>
+  <p>Monthly chartले broad trend, major Support/Resistance, demand/supply zone, and long-term context दिन्छ। Weekly chartले HH/HL, LH/LL, swing structure, Volume, and trend strength देखाउँछ। Daily chartले candle, Volume, RSI, Moving Average, Breakout, Pullback, Retest, and Entry timing दिन्छ।</p>
+  <p>Entry Modelमा Entry Zone, Trigger, Stop Loss, Target, Risk-Reward, Position Size, Invalidation, and Trade Management स्पष्ट हुनुपर्छ। Analysis बिना Entry अधुरो हो, तर risk plan बिना analysis पनि खतरनाक हो।</p>
+  <p>NEPSE मा यो model index, sector, and stock तीनै तहमा प्रयोग गर्नुपर्छ। Strong NEPSE + strong sector + strong stock + clear Daily setup = better probability. Weak index + weak sector + isolated stock move = caution.</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Daily chartमा signal देखिनु trade होइन। Monthly context, Weekly structure, Daily setup, and clear Entry Model मिलेपछि मात्र trade professional हुन्छ।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader बजारलाई एकै झलकमा होइन, तह-तहमा पढ्छ—<br>
+  Monthly बाट दिशा, Weekly बाट संरचना,<br>
+  Daily बाट मौका, र Entry Model बाट<br>
+  जोखिम नियन्त्रण।
+</div>
+
+</div>
+</body>
+</html>

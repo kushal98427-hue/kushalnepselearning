@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 25: Moving Average को practical प्रयोग — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 25: CHART READING MASTERY</div>
+  <h1 class="chapter-title">Moving Average को<br>practical प्रयोग</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>बिबेकले chart मा Moving Average पहिलोपटक राख्दा उसलाई धेरै सजिलो लाग्यो। उसले सुन्यो—<strong>“Price Moving Average माथि छ भने buy, तल छ भने sell।”</strong> उसले chart मा 20-day Moving Average राख्यो। Price line माथि गयो, उसले buy गर्‍यो। केही दिनपछि price तल आयो, ऊ डराएर बेच्यो। फेरि price माथि गयो, ऊ फेरि buy गर्‍यो। केही हप्तामा उसले धेरै साना-साना loss र confusion भोग्यो।</p>
+
+<p>त्यसपछि उसले अर्को कुरा सुन्यो—<strong>“20-day, 50-day, 200-day Moving Average प्रयोग गर।”</strong> उसले तीनवटा line chart मा राख्यो। तर अब chart झन् confusing भयो। कुन line हेर्ने? Price 20 MA तल छ तर 50 MA माथि छ। 200 MA तल छ। अब trend bullish हो कि bearish?</p>
+
+<p>बिबेकले Moving Average राखेको थियो, तर त्यसको practical meaning बुझेन। Moving Average buy/sell button होइन। यो trend, dynamic support/resistance, momentum, pullback area, trend strength, र market condition बुझ्न प्रयोग गर्ने tool हो।</p>
+
+<p>Moving Average को सही प्रयोग गर्दा chart धेरै स्पष्ट हुन सक्छ। गलत प्रयोग गर्दा chart indicator को भीडमा हराउन सक्छ। Professional trader Moving Average लाई price action को सहायक tool बनाउँछ, decision maker होइन।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Moving Average Technical Analysis मा सबैभन्दा धेरै प्रयोग हुने tools मध्ये एक हो। Beginner देखि professional trader सम्म धेरैले यसलाई प्रयोग गर्छन्। तर धेरै trader ले Moving Average लाई mechanical signal जसरी प्रयोग गर्छन्—price माथि buy, price तल sell, crossover आयो buy, crossover तल sell। यस्तो simple rule market को सबै condition मा काम गर्दैन।</p>
+
+<p>Moving Average को practical प्रयोग trend बुझ्न, pullback area पत्ता लगाउन, price momentum जाँच्न, dynamic support/resistance हेर्न, र market structure confirm गर्न उपयोगी हुन्छ। तर यो lagging indicator हो। यसको अर्थ यो price पछि चल्छ। Price बदलिन्छ, त्यसपछि Moving Average बदलिन्छ। त्यसैले Moving Average ले भविष्य पहिले बताउँदैन; यसले past price को average आधारमा current trend smooth गरेर देखाउँछ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि Moving Average को गलत प्रयोगले trader लाई late entry, false signal, overtrading, र sideways market मा धेरै loss दिन सक्छ। तर सही प्रयोगले trader लाई trend direction, pullback quality, and market phase बुझ्न मद्दत गर्छ।</p>
+
+<p>Moving Average लाई Price Action, Volume, Support/Resistance, RSI, Trend Structure, NEPSE index, sector context, Stop Loss, and Risk-Reward सँग जोडेर प्रयोग गर्नुपर्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Moving Average भनेको निश्चित समयावधिको average price लाई line का रूपमा chart मा देखाउने tool हो। उदाहरणका लागि, 20-day Moving Average ले पछिल्लो 20 trading days को average price देखाउँछ। 50-day Moving Average ले 50 दिनको average price देखाउँछ। 200-day Moving Average ले लामो trend को average देखाउन सक्छ।</p>
+
+<p>Moving Average ले price movement लाई smooth बनाउँछ। यसले chart को noise कम गरेर overall direction बुझ्न मद्दत गर्छ।</p>
+
+<p>सामान्य प्रयोग:</p>
+
+<ul>
+  <li><strong>20 MA</strong> = short-term trend</li>
+  <li><strong>50 MA</strong> = medium-term trend</li>
+  <li><strong>200 MA</strong> = long-term trend</li>
+</ul>
+
+<p>यदि price 20 MA माथि छ भने short-term momentum राम्रो हुन सक्छ। यदि price 50 MA माथि छ भने medium-term trend supportive हुन सक्छ। यदि price 200 MA माथि छ भने long-term structure बलियो हुन सक्छ।</p>
+
+<!-- VISUAL 1: Bullish MA Alignment + Slope -->
+<div class="visual-block">
+  <div class="visual-title">Bullish MA Alignment — 20 MA > 50 MA > 200 MA (तीनै माथि Slope)</div>
+  <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">तीनै MA एउटै direction (माथि) — Short, Medium, Long सबै trend bullish</text>
+
+    <!-- Legend -->
+    <line x1="120" y1="40" x2="145" y2="40" stroke="#2962ff" stroke-width="2.5"/>
+    <text x="150" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#2962ff">20 MA</text>
+    <line x1="220" y1="40" x2="245" y2="40" stroke="#ff9800" stroke-width="2.5"/>
+    <text x="250" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#ff9800">50 MA</text>
+    <line x1="320" y1="40" x2="345" y2="40" stroke="#7b1fa2" stroke-width="2.5"/>
+    <text x="350" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#7b1fa2">200 MA</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="55" width="630" height="290" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="678" y="90" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 560</text>
+    <text x="678" y="160" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+    <text x="678" y="230" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 440</text>
+    <text x="678" y="300" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 380</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="90" x2="670" y2="90" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="160" x2="670" y2="160" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="230" x2="670" y2="230" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="300" x2="670" y2="300" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 200 MA (purple) - slowest, lowest, gentle up slope -->
+    <path d="M 55 290 L 130 285 L 210 278 L 290 270 L 370 260 L 450 248 L 530 235 L 610 222 L 655 215"
+          stroke="#7b1fa2" stroke-width="2.5" fill="none"/>
+
+    <!-- 50 MA (orange) - medium, middle, up slope -->
+    <path d="M 55 270 L 130 258 L 210 245 L 290 230 L 370 212 L 450 192 L 530 172 L 610 152 L 655 142"
+          stroke="#ff9800" stroke-width="2.5" fill="none"/>
+
+    <!-- 20 MA (blue) - fastest, highest, steeper up slope -->
+    <path d="M 55 250 L 130 235 L 210 215 L 290 195 L 370 172 L 450 148 L 530 125 L 610 105 L 655 95"
+          stroke="#2962ff" stroke-width="2.5" fill="none"/>
+
+    <!-- Candles riding above all MAs -->
+    <g>
+    <!-- ascending candles -->
+    <line x1="80" y1="235" x2="80" y2="258" stroke="#26a69a" stroke-width="1"/>
+    <rect x="76" y="238" width="8" height="17" fill="#26a69a"/>
+    <line x1="130" y1="220" x2="130" y2="242" stroke="#26a69a" stroke-width="1"/>
+    <rect x="126" y="223" width="8" height="17" fill="#26a69a"/>
+    <line x1="180" y1="205" x2="180" y2="228" stroke="#ef5350" stroke-width="1"/>
+    <rect x="176" y="208" width="8" height="16" fill="#ef5350"/>
+    <line x1="230" y1="190" x2="230" y2="212" stroke="#26a69a" stroke-width="1"/>
+    <rect x="226" y="193" width="8" height="17" fill="#26a69a"/>
+    <line x1="290" y1="172" x2="290" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="286" y="175" width="8" height="17" fill="#26a69a"/>
+    <line x1="340" y1="158" x2="340" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="336" y="161" width="8" height="16" fill="#26a69a"/>
+    <line x1="390" y1="145" x2="390" y2="168" stroke="#ef5350" stroke-width="1"/>
+    <rect x="386" y="148" width="8" height="16" fill="#ef5350"/>
+    <line x1="440" y1="128" x2="440" y2="150" stroke="#26a69a" stroke-width="1"/>
+    <rect x="436" y="131" width="8" height="17" fill="#26a69a"/>
+    <line x1="490" y1="115" x2="490" y2="138" stroke="#26a69a" stroke-width="1"/>
+    <rect x="486" y="118" width="8" height="17" fill="#26a69a"/>
+    <line x1="540" y1="100" x2="540" y2="122" stroke="#26a69a" stroke-width="1"/>
+    <rect x="536" y="103" width="8" height="16" fill="#26a69a"/>
+    <line x1="590" y1="90" x2="590" y2="112" stroke="#26a69a" stroke-width="1"/>
+    <rect x="586" y="93" width="8" height="16" fill="#26a69a"/>
+    <line x1="635" y1="82" x2="635" y2="102" stroke="#26a69a" stroke-width="1"/>
+    <rect x="631" y="85" width="8" height="14" fill="#26a69a"/>
+    </g>
+
+    <!-- Alignment label -->
+    <rect x="380" y="250" width="270" height="80" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <text x="515" y="270" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">Bullish Alignment ✓</text>
+    <text x="395" y="288" font-family="sans-serif" font-size="9" fill="#111">• 20 MA सबैभन्दा माथि (blue)</text>
+    <text x="395" y="303" font-family="sans-serif" font-size="9" fill="#111">• 50 MA बीचमा (orange)</text>
+    <text x="395" y="318" font-family="sans-serif" font-size="9" fill="#111">• 200 MA सबैभन्दा तल (purple)</text>
+
+    <!-- X-axis -->
+    <text x="80" y="362" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 1</text>
+    <text x="360" y="362" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 30</text>
+    <text x="635" y="362" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 60</text>
+
+    <text x="360" y="385" text-anchor="middle" font-family="sans-serif" font-size="10" font-style="italic" fill="#555">Slope सबै माथि + क्रम मिलेको = strong trend confirmation</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा तीनवटा Moving Average एउटै क्रममा छन् — सबैभन्दा माथि 20 MA (छोटो), बीचमा 50 MA (मध्यम), तल 200 MA (लामो), र तीनै माथितिर ढल्किरहेका छन्। यसलाई "bullish alignment" भनिन्छ — short, medium, long तीनै trend एउटै bullish direction मा। Price पनि सबै MA माथि छ। तर याद राख्नुस् — यो alignment आइसक्दा price पहिले नै धेरै बढिसकेको हुन सक्छ, त्यसैले यो confirmation हो, fresh entry signal होइन।
+</div>
+
+<p>तर यो rule absolute होइन। Sideways market मा price बारम्बार Moving Average माथि-तल जान सक्छ। यसले धेरै false signal दिन सक्छ।</p>
+
+<p>सरल भाषामा, Moving Average ले तपाईंलाई price को average direction देखाउँछ। तर price कहाँ छ, Volume कस्तो छ, Support/Resistance कहाँ छ, trend structure के छ, र Risk-Reward कस्तो छ भन्ने कुरा पनि सँगै हेर्नुपर्छ।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Moving Average को पहिलो practical प्रयोग trend direction बुझ्न हो। यदि price लगातार 20 MA र 50 MA माथि छ, र Moving Average हरू माथितिर slope भएका छन् भने stock short-to-medium term uptrend मा हुन सक्छ। यदि price 20 MA र 50 MA तल छ, र Moving Average हरू तलतिर slope भएका छन् भने stock weak trend मा हुन सक्छ।</p>
+
+<p>Slope धेरै महत्वपूर्ण हुन्छ। Moving Average माथि छ कि तल मात्र हेर्नु पर्याप्त छैन। यदि 50 MA माथि slope गरिरहेको छ भने medium-term buyer momentum राम्रो हुन सक्छ। यदि 50 MA flat छ भने market sideways हुन सक्छ। यदि 50 MA तल slope गरिरहेको छ भने seller control बलियो हुन सक्छ।</p>
+
+<p>दोस्रो प्रयोग dynamic support/resistance हो। Strong uptrend मा price 20 MA वा 50 MA नजिक pullback आएर bounce गर्न सक्छ। यस्तो अवस्थामा Moving Average dynamic support जस्तो काम गर्न सक्छ। Downtrend मा price 20 MA वा 50 MA नजिक bounce आएर reject हुन सक्छ। यस्तो अवस्थामा Moving Average dynamic resistance जस्तो काम गर्न सक्छ।</p>
+
+<p>तर Moving Average support/resistance exact line होइन। Price कहिलेकाहीँ line भन्दा अलि तल/माथि गएर फर्किन सक्छ। त्यसैले Moving Average लाई zone का रूपमा सोच्नु राम्रो हुन्छ। Moving Average + horizontal support + Volume reaction मिल्यो भने setup अझ meaningful हुन सक्छ।</p>
+
+<!-- VISUAL 2: MA as Dynamic Support - Healthy Pullback (Scenario 1) -->
+<div class="visual-block">
+  <div class="visual-title">Moving Average = Dynamic Support (Uptrend Pullback Bounce)</div>
+  <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Uptrend मा Price 20 MA नजिक Pullback → Buyer Reaction → Bounce</text>
+
+    <!-- Legend -->
+    <line x1="200" y1="40" x2="225" y2="40" stroke="#2962ff" stroke-width="2.5"/>
+    <text x="230" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#2962ff">20 MA</text>
+    <line x1="320" y1="40" x2="345" y2="40" stroke="#ff9800" stroke-width="2.5"/>
+    <text x="350" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#ff9800">50 MA</text>
+
+    <!-- Price chart -->
+    <rect x="40" y="55" width="630" height="215" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="678" y="90" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 570</text>
+    <text x="678" y="150" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 540</text>
+    <text x="678" y="210" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="90" x2="670" y2="90" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="150" x2="670" y2="150" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="210" x2="670" y2="210" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 50 MA (orange) - lower, gentle slope -->
+    <path d="M 55 220 L 150 210 L 250 198 L 350 185 L 450 168 L 550 150 L 650 135"
+          stroke="#ff9800" stroke-width="2.5" fill="none"/>
+
+    <!-- 20 MA (blue) - closer to price, the pullback support -->
+    <path d="M 55 195 L 150 178 L 250 162 L 350 150 L 450 130 L 550 110 L 650 98"
+          stroke="#2962ff" stroke-width="2.5" fill="none"/>
+
+    <!-- Rally candles -->
+    <line x1="75" y1="185" x2="75" y2="205" stroke="#26a69a" stroke-width="1"/>
+    <rect x="71" y="188" width="8" height="15" fill="#26a69a"/>
+    <line x1="105" y1="170" x2="105" y2="190" stroke="#26a69a" stroke-width="1"/>
+    <rect x="101" y="173" width="8" height="15" fill="#26a69a"/>
+    <line x1="135" y1="155" x2="135" y2="175" stroke="#26a69a" stroke-width="1"/>
+    <rect x="131" y="158" width="8" height="15" fill="#26a69a"/>
+    <line x1="165" y1="145" x2="165" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="161" y="148" width="8" height="14" fill="#26a69a"/>
+
+    <!-- Pullback candles down toward 20 MA -->
+    <line x1="195" y1="150" x2="195" y2="172" stroke="#ef5350" stroke-width="1"/>
+    <rect x="191" y="153" width="8" height="16" fill="#ef5350"/>
+    <line x1="225" y1="158" x2="225" y2="178" stroke="#ef5350" stroke-width="1"/>
+    <rect x="221" y="161" width="8" height="15" fill="#ef5350"/>
+
+    <!-- Touch 20 MA - buyer candle with lower wick -->
+    <line x1="255" y1="160" x2="255" y2="185" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="250" y="163" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="255" cy="183" r="4" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <text x="255" y="200" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#26a69a">Bounce!</text>
+
+    <!-- Bounce continuation -->
+    <line x1="290" y1="145" x2="290" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="286" y="148" width="8" height="15" fill="#26a69a"/>
+    <line x1="330" y1="130" x2="330" y2="150" stroke="#26a69a" stroke-width="1"/>
+    <rect x="326" y="133" width="8" height="15" fill="#26a69a"/>
+    <line x1="370" y1="118" x2="370" y2="138" stroke="#26a69a" stroke-width="1"/>
+    <rect x="366" y="121" width="8" height="15" fill="#26a69a"/>
+
+    <!-- Second pullback to 20MA -->
+    <line x1="410" y1="120" x2="410" y2="142" stroke="#ef5350" stroke-width="1"/>
+    <rect x="406" y="123" width="8" height="16" fill="#ef5350"/>
+    <line x1="450" y1="125" x2="450" y2="148" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="445" y="128" width="10" height="13" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="450" cy="146" r="4" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+
+    <!-- Continue up -->
+    <line x1="490" y1="108" x2="490" y2="128" stroke="#26a69a" stroke-width="1"/>
+    <rect x="486" y="111" width="8" height="15" fill="#26a69a"/>
+    <line x1="530" y1="98" x2="530" y2="118" stroke="#26a69a" stroke-width="1"/>
+    <rect x="526" y="101" width="8" height="15" fill="#26a69a"/>
+    <line x1="570" y1="90" x2="570" y2="110" stroke="#26a69a" stroke-width="1"/>
+    <rect x="566" y="93" width="8" height="14" fill="#26a69a"/>
+    <line x1="610" y1="85" x2="610" y2="105" stroke="#26a69a" stroke-width="1"/>
+    <rect x="606" y="88" width="8" height="14" fill="#26a69a"/>
+    <line x1="645" y1="82" x2="645" y2="100" stroke="#26a69a" stroke-width="1"/>
+    <rect x="641" y="85" width="8" height="13" fill="#26a69a"/>
+
+    <!-- Volume panel -->
+    <rect x="40" y="285" width="630" height="75" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="48" y="300" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#555">Volume (कारोबार)</text>
+
+    <!-- Rally volume normal, pullback volume LOW, bounce volume up -->
+    <rect x="71" y="330" width="8" height="25" fill="#26a69a"/>
+    <rect x="101" y="328" width="8" height="27" fill="#26a69a"/>
+    <rect x="131" y="332" width="8" height="23" fill="#26a69a"/>
+    <rect x="161" y="335" width="8" height="20" fill="#26a69a"/>
+    <!-- pullback low volume -->
+    <rect x="191" y="345" width="8" height="10" fill="#ef5350"/>
+    <rect x="221" y="347" width="8" height="8" fill="#ef5350"/>
+    <!-- bounce volume increases -->
+    <rect x="250" y="333" width="10" height="22" fill="#26a69a"/>
+    <rect x="286" y="330" width="8" height="25" fill="#26a69a"/>
+    <rect x="326" y="332" width="8" height="23" fill="#26a69a"/>
+    <rect x="366" y="335" width="8" height="20" fill="#26a69a"/>
+    <rect x="406" y="345" width="8" height="10" fill="#ef5350"/>
+    <rect x="445" y="335" width="10" height="20" fill="#26a69a"/>
+    <rect x="486" y="332" width="8" height="23" fill="#26a69a"/>
+    <rect x="526" y="330" width="8" height="25" fill="#26a69a"/>
+    <rect x="566" y="333" width="8" height="22" fill="#26a69a"/>
+    <rect x="606" y="330" width="8" height="25" fill="#26a69a"/>
+    <rect x="641" y="328" width="8" height="27" fill="#26a69a"/>
+
+    <text x="225" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#c8a800">↑ Pullback मा Volume घट्यो (healthy)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा stock uptrend मा छ र price माथि गइरहँदा बीच-बीचमा 20 MA (नीलो line) नजिक pullback आउँछ। हरेक पटक 20 MA नजिक buyer candle (lower wick + हरियो close) बन्यो र price फेरि माथि bounce भयो — यहाँ 20 MA ले "dynamic support" को काम गर्‍यो। तलको Volume panel मा pullback को बेला Volume घट्यो (healthy correction संकेत)। तर MA touch भयो भन्दैमा blind buy होइन — buyer reaction, घटेको volume, र support zone सबै मिलेपछि मात्र trade।
+</div>
+
+<p>तेस्रो प्रयोग pullback quality बुझ्न हो। Uptrend stock मा price 20 MA नजिक controlled Pullback आयो, Volume घट्यो, RSI 50 नजिक hold भयो, and buyer candle बन्यो भने healthy Pullback हुन सक्छ। तर price 20 MA र 50 MA दुवै strong selling सहित break गर्छ भने trend weakness warning हुन सक्छ।</p>
+
+<p>चौथो प्रयोग trend strength बुझ्न हो। यदि price 20 MA भन्दा धेरै माथि भागिसकेको छ भने stock overextended हुन सक्छ। यस्तो अवस्थामा FOMO entry risky हुन्छ। Price Moving Average बाट धेरै टाढा जाँदा mean reversion वा pullback आउन सक्छ। तर strong trend मा price केही समय टाढा पनि रहन सक्छ। त्यसैले overextension warning हो, direct sell signal होइन।</p>
+
+<p>पाँचौँ प्रयोग Moving Average alignment हो। यदि 20 MA > 50 MA > 200 MA र तीनै माथि slope भएका छन् भने bullish alignment हुन सक्छ। यसले short-term, medium-term, and long-term trend एउटै direction मा छन् भन्ने संकेत दिन सक्छ। यदि 20 MA < 50 MA < 200 MA र तीनै तल slope भएका छन् भने bearish alignment हुन सक्छ।</p>
+
+<p>तर alignment पनि late signal हुन सक्छ। जबसम्म 20 MA 50 MA माथि जान्छ, price पहिले नै धेरै चलिसकेको हुन सक्छ। त्यसैले crossover मात्रको आधारमा late entry गर्नु हुँदैन। Price structure, base, Breakout, Volume, and Risk-Reward सँग मिलाउनुपर्छ।</p>
+
+<p>छैटौँ प्रयोग market phase छुट्याउन हो। Trending market मा Moving Average उपयोगी हुन्छ। Sideways market मा Moving Average false signal धेरै दिन्छ। यदि price MA माथि-तल बारम्बार cross गरिरहेको छ र MA flat छ भने market sideways हुन सक्छ। यस्तो अवस्थामा MA crossover trade खतरनाक हुन्छ।</p>
+
+<!-- VISUAL 3: Sideways Market MA Trap (Scenario 3) - CRITICAL -->
+<div class="visual-block">
+  <div class="visual-title">Sideways Market — Flat MA को "Whipsaw" Trap</div>
+  <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Range Market मा Flat MA — हरेक cross मा trade गर्दा साना loss को थुप्रो</text>
+
+    <!-- Legend -->
+    <line x1="260" y1="40" x2="285" y2="40" stroke="#2962ff" stroke-width="2.5"/>
+    <text x="290" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#2962ff">20 MA (flat)</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="55" width="630" height="245" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="678" y="100" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 450</text>
+    <text x="678" y="180" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 425</text>
+    <text x="678" y="260" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 400</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="100" x2="670" y2="100" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="180" x2="670" y2="180" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="260" x2="670" y2="260" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- Range boundaries -->
+    <line x1="40" y1="100" x2="670" y2="100" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="50" y="95" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#ef5350">Range High Rs. 450 (रोकान)</text>
+    <line x1="40" y1="260" x2="670" y2="260" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="50" y="275" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">Range Low Rs. 400 (टेकान)</text>
+
+    <!-- 20 MA - FLAT, around middle -->
+    <path d="M 55 182 L 130 178 L 210 183 L 290 179 L 370 181 L 450 178 L 530 182 L 610 180 L 655 181"
+          stroke="#2962ff" stroke-width="2.5" fill="none"/>
+
+    <!-- Choppy candles crossing MA repeatedly -->
+    <!-- Below then cross up -->
+    <line x1="75" y1="200" x2="75" y2="225" stroke="#ef5350" stroke-width="1"/>
+    <rect x="71" y="203" width="8" height="18" fill="#ef5350"/>
+    <line x1="105" y1="160" x2="105" y2="185" stroke="#26a69a" stroke-width="1"/>
+    <rect x="101" y="163" width="8" height="18" fill="#26a69a"/>
+    <text x="105" y="155" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <!-- cross up - false buy -->
+    <line x1="135" y1="120" x2="135" y2="145" stroke="#26a69a" stroke-width="1"/>
+    <rect x="131" y="123" width="8" height="18" fill="#26a69a"/>
+    <line x1="165" y1="150" x2="165" y2="175" stroke="#ef5350" stroke-width="1"/>
+    <rect x="161" y="153" width="8" height="18" fill="#ef5350"/>
+    <!-- cross down - false sell -->
+    <line x1="195" y1="195" x2="195" y2="220" stroke="#ef5350" stroke-width="1"/>
+    <rect x="191" y="198" width="8" height="18" fill="#ef5350"/>
+    <text x="195" y="235" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <line x1="225" y1="210" x2="225" y2="235" stroke="#26a69a" stroke-width="1"/>
+    <rect x="221" y="213" width="8" height="18" fill="#26a69a"/>
+    <!-- cross up again -->
+    <line x1="255" y1="155" x2="255" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="251" y="158" width="8" height="18" fill="#26a69a"/>
+    <line x1="285" y1="125" x2="285" y2="150" stroke="#26a69a" stroke-width="1"/>
+    <rect x="281" y="128" width="8" height="18" fill="#26a69a"/>
+    <text x="285" y="120" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <!-- cross down -->
+    <line x1="315" y1="160" x2="315" y2="185" stroke="#ef5350" stroke-width="1"/>
+    <rect x="311" y="163" width="8" height="18" fill="#ef5350"/>
+    <line x1="345" y1="195" x2="345" y2="220" stroke="#ef5350" stroke-width="1"/>
+    <rect x="341" y="198" width="8" height="18" fill="#ef5350"/>
+    <text x="345" y="235" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <!-- up -->
+    <line x1="375" y1="200" x2="375" y2="225" stroke="#26a69a" stroke-width="1"/>
+    <rect x="371" y="203" width="8" height="18" fill="#26a69a"/>
+    <line x1="405" y1="150" x2="405" y2="175" stroke="#26a69a" stroke-width="1"/>
+    <rect x="401" y="153" width="8" height="18" fill="#26a69a"/>
+    <text x="405" y="145" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <!-- down -->
+    <line x1="435" y1="165" x2="435" y2="190" stroke="#ef5350" stroke-width="1"/>
+    <rect x="431" y="168" width="8" height="18" fill="#ef5350"/>
+    <line x1="465" y1="195" x2="465" y2="220" stroke="#ef5350" stroke-width="1"/>
+    <rect x="461" y="198" width="8" height="18" fill="#ef5350"/>
+    <text x="465" y="235" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <!-- up -->
+    <line x1="495" y1="155" x2="495" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="491" y="158" width="8" height="18" fill="#26a69a"/>
+    <line x1="525" y1="130" x2="525" y2="155" stroke="#26a69a" stroke-width="1"/>
+    <rect x="521" y="133" width="8" height="18" fill="#26a69a"/>
+    <text x="525" y="125" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ef5350">✗</text>
+    <!-- down -->
+    <line x1="555" y1="165" x2="555" y2="190" stroke="#ef5350" stroke-width="1"/>
+    <rect x="551" y="168" width="8" height="18" fill="#ef5350"/>
+    <line x1="585" y1="195" x2="585" y2="220" stroke="#ef5350" stroke-width="1"/>
+    <rect x="581" y="198" width="8" height="18" fill="#ef5350"/>
+    <line x1="615" y1="170" x2="615" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="611" y="173" width="8" height="18" fill="#26a69a"/>
+    <line x1="645" y1="160" x2="645" y2="185" stroke="#ef5350" stroke-width="1"/>
+    <rect x="641" y="163" width="8" height="18" fill="#ef5350"/>
+
+    <!-- Note about X marks -->
+    <text x="360" y="320" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#ef5350">हरेक ✗ = एउटा false signal (whipsaw) — buy गर्‍यो price झर्‍यो, sell गर्‍यो price बढ्यो</text>
+
+    <!-- Bottom message -->
+    <rect x="40" y="335" width="630" height="50" fill="#ffe5e0" stroke="#ef5350" stroke-width="1" rx="3"/>
+    <text x="360" y="356" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#ef5350">MA flat + Price range-bound = MA crossover trade गर्नु हुँदैन</text>
+    <text x="360" y="376" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">यस्तो बेला Range high/low strategy वा Breakout पर्खनु बढी उपयोगी</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा stock Rs. 400–450 को range मा फसेको छ र 20 MA (नीलो) पूरै flat छ (कुनै slope छैन)। Price बारम्बार MA माथि र तल cross गरिरहेको छ — हरेक ✗ ले एउटा false signal देखाउँछ। यदि beginner ले "MA माथि = buy, तल = sell" नियम लगायो भने ऊ बारम्बार गलत समयमा किन्छ र बेच्छ — साना-साना loss को थुप्रो (whipsaw)। मुख्य सिकाइ — MA flat छ र market sideways छ भने MA crossover trade नगर्ने; range high/low वा breakout पर्खने।
+</div>
+
+<p>सातौँ प्रयोग Stop Loss र trailing Stop मा हो। केही trader uptrend मा 20 MA वा 50 MA को तल close आएपछि exit signal मान्छन्। तर यो strategy सबै stock र time horizon मा मिल्दैन। Short-term trader 20 MA प्रयोग गर्न सक्छ, swing trader 50 MA हेर्न सक्छ, long-term investor 200 MA हेर्न सक्छ। तर Stop Loss सधैं structure, volatility, and risk tolerance अनुसार हुनुपर्छ। Moving Average line मात्रै Stop Loss होइन।</p>
+
+<p>आठौँ प्रयोग stock strength compare गर्न हो। यदि NEPSE index 50 MA तल छ तर कुनै stock 20/50 MA माथि टिकिरहेको छ भने त्यो relative strength देखाउन सक्छ। यदि sector कमजोर छ तर stock Moving Average support बचाइरहेको छ भने watchlist मा राख्न सकिन्छ। तर एक्लै MA हेरेर trade गर्नु हुँदैन।</p>
+
+<p>Moving Average प्रयोग गर्दा एउटा गल्ती धेरै हुन्छ—indicator धेरै थप्ने। 5 MA, 10 MA, 20 MA, 50 MA, 100 MA, 200 MA, EMA, SMA सबै राख्दा chart confusing हुन्छ। Beginner का लागि 20, 50, 200 पर्याप्त हुन सक्छन्। केही trader EMA प्रयोग गर्छन् किनकि यो recent price लाई बढी weight दिन्छ। SMA सरल average हो। कुन प्रयोग गर्ने भन्दा पनि कसरी consistent प्रयोग गर्ने महत्वपूर्ण छ।</p>
+
+<p>Moving Average को सही practical प्रयोग यस्तो हुनुपर्छ:</p>
+
+<ul>
+  <li>पहिले trend structure हेर्नु।</li>
+  <li>त्यसपछि price Moving Average माथि/तल कहाँ छ हेर्नु।</li>
+  <li>Slope जाँच्नु।</li>
+  <li>Pullback MA नजिक छ कि support zone नजिक, हेर्नु।</li>
+  <li>Volume र candle reaction हेर्नु।</li>
+  <li>RSI momentum support गर्छ कि छैन, जाँच्नु।</li>
+  <li>Market र sector context मिल्छ कि छैन, हेर्नु।</li>
+  <li>Stop Loss र Risk-Reward बिना Entry नगर्नु।</li>
+</ul>
+
+<p>Moving Average ले तपाईंलाई बजारको तापक्रम बताउँछ, तर trade decision तपाईंले पूरा diagnosis गरेर लिनुपर्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Moving Average practical रूपमा उपयोगी छ, विशेष गरी swing trading मा। धेरै trader 20 EMA, 50 EMA/SMA, and 200 MA जस्ता average प्रयोग गर्छन्। तर NEPSE का सबै stock मा Moving Average equally clean काम गर्दैन। Low liquidity stock मा price irregular भएकाले Moving Average signal misleading हुन सक्छ।</p>
+
+<p>NEPSE index को Moving Average हेर्नु market condition बुझ्न useful हुन सक्छ। यदि NEPSE index 50 MA माथि छ, 20 MA 50 MA माथि छ, and index HH/HL बनाइरहेको छ भने market environment supportive हुन सक्छ। यदि index 50 MA तल छ, 20 MA तल slope छ, and index LH/LL बनाउँदैछ भने aggressive trading मा सावधानी चाहिन्छ।</p>
+
+<p>Sector chart मा Moving Average अझ practical हुन्छ। कुनै sector index 20 MA र 50 MA माथि फर्किन थालेको छ, sector मा Volume बढेको छ, and price resistance break गर्दैछ भने sector rotation सम्भावना हुन सक्छ। त्यो sector भित्र strong stock खोज्न सकिन्छ।</p>
+
+<p>NEPSE stock मा Moving Average pullback धेरै देखिन सक्छ। Strong trend stock 20 MA नजिक shallow pullback दिन सक्छ। Medium trend stock 50 MA सम्म आउन सक्छ। तर MA touch गरेको मात्र buy signal होइन। Buyer candle, Volume, support zone, and market context चाहिन्छ।</p>
+
+<p>NEPSE मा केही stock gap-like movement, circuit, low volume, or sudden spike देखाउन सक्छन्। यस्तो अवस्थामा Moving Average धेरै lag गर्न सक्छ। Price धेरै अगाडि बढिसकेपछि मात्र MA bullish देखिन सक्छ। त्यसैले MA signalमा late entry जोखिम हुन्छ।</p>
+
+<p>NEPSE मा sideways period धेरै आउन सक्छ। Index वा stock range मा हुँदा price 20 MA माथि-तल धेरै cross गर्छ। यस्तो बेला Moving Average crossover strategy ले false signals दिन सक्छ। Trader ले MA flat छ भने trend trading कम गर्नुपर्छ।</p>
+
+<p>NEPSE मा transaction cost, broker commission, tax, DP charge, settlement, and liquidity trading resultमा असर गर्छन्। MA crossover जस्ता frequent signalमा धेरै trade गर्दा cost बढ्न सक्छ। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले official source बाट verify गर्नुपर्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Moving Average ले trader लाई comfort दिन सक्छ। Chart मा line राख्दा decision सजिलो लाग्छ। तर यही comfort कहिलेकाहीँ trap हुन्छ। Trader सोच्न थाल्छ—<strong>“Price MA माथि छ, त्यसैले safe छ।”</strong> Market मा safe केही हुँदैन। MA support break हुन सक्छ, fake cross हुन सक्छ, sideways market मा noise हुन सक्छ।</p>
+
+<p>Beginner Moving Average लाई rule-maker बनाउँछ। Professional trader Moving Average लाई context-maker बनाउँछ। फरक यही हो। Beginner line cross देखेर order राख्छ। Professional सोध्छ—trend कस्तो छ? MA slope कस्तो छ? Volume कस्तो छ? level कहाँ छ? Risk कहाँ छ?</p>
+
+<p>Moving Average मा FOMO पनि आउन सक्छ। Price 20 MA भन्दा धेरै माथि जाँदा trader लाई strong stock छुट्यो जस्तो लाग्छ। ऊ late entry गर्छ। तर price MA बाट धेरै टाढा हुँदा Pullback risk बढ्न सक्छ। Patience भएको trader better pullback पर्खिन सक्छ।</p>
+
+<p>Moving Average breakdown हुँदा fear आउन सक्छ। Price 20 MA तल आयो भन्दैमा सबै trend समाप्त भयो भन्ने हुँदैन। कहिलेकाहीँ price 50 MA सम्म normal pullback गर्न सक्छ। Trader ले आफ्नो time horizon स्पष्ट गर्नुपर्छ। Short-term trader र medium-term trader को MA interpretation फरक हुन्छ।</p>
+
+<p>Moving Average को psychological lesson हो—indicatorलाई विश्वास गर्नु अघि price behavior विश्वास गर्नुहोस्। Moving Average ले trend smooth गर्छ, तर market decision price ले गर्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Moving Average लाई direct buy/sell signal मान्नु। Price MA माथि गयो भन्दैमा buy र तल आयो भन्दैमा sell गर्नु अधुरो logic हो।</p>
+
+<p>दोस्रो गल्ती हो—Sideways market मा MA crossover trade गर्नु। Flat MA र range market मा धेरै false signal आउँछन्।</p>
+
+<p>तेस्रो गल्ती हो—Slope नहेर्नु। MA माथि छ कि तल मात्र होइन, MA उठ्दैछ कि flat छ कि तल झर्दैछ हेर्नुपर्छ।</p>
+
+<p>चौथो गल्ती हो—Price overextended हुँदा chase गर्नु। Price 20 MA वा 50 MA बाट धेरै टाढा छ भने pullback risk हुन सक्छ।</p>
+
+<p>पाँचौँ गल्ती हो—MA support लाई exact line मान्नु। Moving Average zone जस्तै हो। Price अलि तल/माथि गएर फर्किन सक्छ।</p>
+
+<p>छैटौँ गल्ती हो—Volume ignore गर्नु। MA bounce Volume बिना कमजोर हुन सक्छ।</p>
+
+<p>सातौँ गल्ती हो—Support/Resistance ignore गर्नु। MA support horizontal support सँग मिल्यो भने strong हुन सक्छ; MA एक्लै कमजोर हुन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Too many Moving Averages राख्नु। धेरै line ले clarity भन्दा confusion बढाउँछ।</p>
+
+<p>नवौँ गल्ती हो—Low liquidity stock मा MA signal trust गर्नु। Irregular price movement ले MA misleading बनाउन सक्छ।</p>
+
+<p>दशौँ गल्ती हो—Stop Loss Moving Average line मात्रमा राख्नु। Stop Loss structure र risk अनुसार हुनुपर्छ।</p>
+
+<p>एघारौँ गल्ती हो—Crossover आएपछि late entry गर्नु। Crossover धेरै पटक price move पछि आउँछ।</p>
+
+<p>बाह्रौँ गल्ती हो—Long-term MA र short-term trade मिसाउनु। 200 MA long-term context हो; short-term entry timing का लागि Daily price action अझ महत्वपूर्ण हुन सक्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Moving Average buy/sell button होइन; trend र context बुझ्ने tool हो</div>
+  <p style="margin-bottom:0;">"Price MA माथि = buy, तल = sell" भन्ने mechanical rule sideways market मा whipsaw (बारम्बार false signal) दिन्छ, र trending market मा late entry गराउँछ। MA को सही प्रयोग — <strong>Slope</strong> (माथि/flat/तल), <strong>Alignment</strong> (20>50>200 क्रम), <strong>Dynamic support/resistance</strong> (pullback bounce zone), र <strong>Market phase</strong> (trending vs sideways) बुझ्न। MA lagging indicator हो — यो price पछि चल्छ, अगाडि होइन। Price नै king, MA सहायक मात्र।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Moving Average प्रयोग गर्दा यी rules अपनाउनुहोस्:</p>
+
+<ul>
+  <li>20 MA short-term, 50 MA medium-term, 200 MA long-term context का रूपमा हेर्नुहोस्।</li>
+  <li>Price MA माथि/तल छ भन्ने मात्र होइन, MA को slope पनि हेर्नुहोस्।</li>
+  <li>MA flat छ भने market sideways हुन सक्छ; false signal बाट बच्नुहोस्।</li>
+  <li>Uptrend मा MA नजिक Pullback आए buyer reaction खोज्नुहोस्।</li>
+  <li>Downtrend मा MA नजिक bounce आए rejection सम्भावना हेर्नुहोस्।</li>
+  <li>Moving Average लाई exact line होइन, dynamic zone मान्नुहोस्।</li>
+  <li>MA support horizontal Support सँग मिलेको छ कि हेर्नुहोस्।</li>
+  <li>MA bounce मा Volume support छ कि छैन जाँच्नुहोस्।</li>
+  <li>Price MA बाट धेरै टाढा छ भने FOMO entry नगर्नुहोस्।</li>
+  <li>Crossover signalमा तुरुन्त Entry गर्नु अघि price already overextended छ कि छैन हेर्नुहोस्।</li>
+  <li>Low liquidity stock मा MA signal सावधानीपूर्वक प्रयोग गर्नुहोस्।</li>
+  <li>Too many indicators नराख्नुहोस्।</li>
+  <li>MA signalलाई Trend Structure, Volume, RSI, and Support/Resistance सँग जोड्नुहोस्।</li>
+  <li>Stop Loss structure-based राख्नुहोस्, MA line मात्रमा होइन।</li>
+  <li>Risk-Reward नमिले MA support भए पनि trade नगर्नुहोस्।</li>
+</ul>
+
+<p>Moving Average को मुख्य rule हो—<strong>Line follow नगर्नुहोस्, line वरिपरि price behavior पढ्नुहोस्।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Healthy MA Pullback</strong></p>
+<p>एउटा stock uptrend मा छ। 20 MA 50 MA माथि छ र दुवै माथि slope गरिरहेका छन्। Price Rs. 500 बाट Rs. 570 पुगेको थियो। केही दिनको Pullback पछि price 20 MA नजिक Rs. 540 मा आउँछ। Pullback मा Volume घटेको छ। Candle मा lower wick र strong close देखिन्छ। RSI 50 माथि छ। Sector पनि strong छ। यस्तो अवस्थामा 20 MA zone healthy Pullback support हुन सक्छ। Trader ले Stop Loss र Risk-Reward जाँच्न सक्छ।</p>
+
+<p><strong>Scenario 2: 50 MA Medium Support</strong></p>
+<p>Stock medium-term uptrend मा छ। Price 20 MA तल आएको छ तर 50 MA नजिक support लिएको छ। Horizontal Support पनि त्यही area मा छ। Volume selling मा high छैन। Buyer candle बनेको छ। यस्तो अवस्थामा 50 MA + Support zone important हुन सक्छ। तर 50 MA तल strong close भए caution चाहिन्छ।</p>
+
+<p><strong>Scenario 3: MA Trap in Sideways Market</strong></p>
+<p>Stock Rs. 400–450 range मा छ। 20 MA flat छ। Price बारम्बार 20 MA माथि-तल जान्छ। Beginner प्रत्येक cross मा buy/sell गर्छ र loss हुन्छ। यहाँ Moving Average useful trend signal होइन, किनकि market sideways छ। Range high/low strategy वा breakout wait बढी उपयोगी हुन सक्छ।</p>
+
+<p><strong>Scenario 4: Overextended Price</strong></p>
+<p>Stock Rs. 300 बाट Rs. 420 सम्म धेरै छिटो बढेको छ। Price 20 MA बाट धेरै टाढा छ। RSI high छ। Volume spike छ। Social media hype धेरै छ। Beginner late entry गर्छ। Professional trader wait गर्छ—Pullback, consolidation, or Retest आएपछि मात्र plan बनाउने। Strong stock पनि overextended entry मा risky हुन सक्छ।</p>
+
+<p><strong>Scenario 5: Bearish MA Resistance</strong></p>
+<p>Stock downtrend मा छ। Price 20 MA र 50 MA तल छ। Bounce आएर price 50 MA नजिक पुग्छ, तर candle मा upper wick बनाउँछ। RSI 50 माथि जान सक्दैन। Volume कमजोर छ। यस्तो अवस्थामा 50 MA dynamic resistance जस्तो काम गर्न सक्छ। Beginner यसलाई reversal सम्झेर buy गर्न सक्छ, तर structure अझै weak छ।</p>
+
+<!-- VISUAL 4: MA as Dynamic Resistance in Downtrend (Scenario 5) -->
+<div class="visual-block">
+  <div class="visual-title">Moving Average = Dynamic Resistance (Downtrend Bounce Rejection)</div>
+  <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="380" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Downtrend मा Price 50 MA नजिक Bounce → Reject → फेरि तल</text>
+
+    <!-- Legend -->
+    <line x1="200" y1="40" x2="225" y2="40" stroke="#2962ff" stroke-width="2.5"/>
+    <text x="230" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#2962ff">20 MA</text>
+    <line x1="320" y1="40" x2="345" y2="40" stroke="#ff9800" stroke-width="2.5"/>
+    <text x="350" y="44" font-family="Roboto, sans-serif" font-size="10" fill="#ff9800">50 MA</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="55" width="630" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="678" y="90" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 600</text>
+    <text x="678" y="160" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 550</text>
+    <text x="678" y="230" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="90" x2="670" y2="90" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="160" x2="670" y2="160" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="230" x2="670" y2="230" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 20 MA (blue) - declining, closer to price -->
+    <path d="M 55 110 L 150 130 L 250 152 L 350 168 L 450 188 L 550 205 L 650 220"
+          stroke="#2962ff" stroke-width="2.5" fill="none"/>
+
+    <!-- 50 MA (orange) - declining, above price (resistance) -->
+    <path d="M 55 95 L 150 112 L 250 128 L 350 145 L 450 160 L 550 175 L 650 190"
+          stroke="#ff9800" stroke-width="2.5" fill="none"/>
+
+    <!-- Falling candles -->
+    <line x1="75" y1="100" x2="75" y2="122" stroke="#ef5350" stroke-width="1"/>
+    <rect x="71" y="103" width="8" height="16" fill="#ef5350"/>
+    <line x1="105" y1="112" x2="105" y2="135" stroke="#ef5350" stroke-width="1"/>
+    <rect x="101" y="115" width="8" height="17" fill="#ef5350"/>
+    <line x1="135" y1="128" x2="135" y2="150" stroke="#ef5350" stroke-width="1"/>
+    <rect x="131" y="131" width="8" height="16" fill="#ef5350"/>
+
+    <!-- Bounce attempt 1 toward 50 MA -->
+    <line x1="165" y1="125" x2="165" y2="148" stroke="#26a69a" stroke-width="1"/>
+    <rect x="161" y="128" width="8" height="17" fill="#26a69a"/>
+    <line x1="195" y1="115" x2="195" y2="135" stroke="#26a69a" stroke-width="1"/>
+    <rect x="191" y="118" width="8" height="15" fill="#26a69a"/>
+
+    <!-- REJECTION at 50 MA - upper wick -->
+    <line x1="225" y1="105" x2="225" y2="140" stroke="#888" stroke-width="1.5"/>
+    <rect x="220" y="125" width="10" height="13" fill="#ef5350" stroke="#c62828" stroke-width="1"/>
+    <circle cx="225" cy="105" r="4" fill="#fff" stroke="#ef5350" stroke-width="2"/>
+    <text x="225" y="100" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">Reject!</text>
+
+    <!-- Fall continues -->
+    <line x1="255" y1="135" x2="255" y2="158" stroke="#ef5350" stroke-width="1"/>
+    <rect x="251" y="138" width="8" height="17" fill="#ef5350"/>
+    <line x1="285" y1="150" x2="285" y2="172" stroke="#ef5350" stroke-width="1"/>
+    <rect x="281" y="153" width="8" height="16" fill="#ef5350"/>
+    <line x1="315" y1="162" x2="315" y2="185" stroke="#ef5350" stroke-width="1"/>
+    <rect x="311" y="165" width="8" height="17" fill="#ef5350"/>
+
+    <!-- Bounce attempt 2 toward 50 MA -->
+    <line x1="345" y1="155" x2="345" y2="178" stroke="#26a69a" stroke-width="1"/>
+    <rect x="341" y="158" width="8" height="17" fill="#26a69a"/>
+    <line x1="375" y1="145" x2="375" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="371" y="148" width="8" height="15" fill="#26a69a"/>
+
+    <!-- REJECTION at 50 MA again - upper wick -->
+    <line x1="405" y1="130" x2="405" y2="165" stroke="#888" stroke-width="1.5"/>
+    <rect x="400" y="148" width="10" height="13" fill="#ef5350" stroke="#c62828" stroke-width="1"/>
+    <circle cx="405" cy="130" r="4" fill="#fff" stroke="#ef5350" stroke-width="2"/>
+    <text x="405" y="125" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">Reject!</text>
+
+    <!-- Continue down -->
+    <line x1="435" y1="160" x2="435" y2="183" stroke="#ef5350" stroke-width="1"/>
+    <rect x="431" y="163" width="8" height="17" fill="#ef5350"/>
+    <line x1="465" y1="175" x2="465" y2="198" stroke="#ef5350" stroke-width="1"/>
+    <rect x="461" y="178" width="8" height="16" fill="#ef5350"/>
+    <line x1="495" y1="188" x2="495" y2="210" stroke="#ef5350" stroke-width="1"/>
+    <rect x="491" y="191" width="8" height="17" fill="#ef5350"/>
+    <line x1="525" y1="200" x2="525" y2="222" stroke="#ef5350" stroke-width="1"/>
+    <rect x="521" y="203" width="8" height="16" fill="#ef5350"/>
+    <line x1="555" y1="210" x2="555" y2="232" stroke="#ef5350" stroke-width="1"/>
+    <rect x="551" y="213" width="8" height="17" fill="#ef5350"/>
+    <line x1="585" y1="218" x2="585" y2="240" stroke="#ef5350" stroke-width="1"/>
+    <rect x="581" y="221" width="8" height="16" fill="#ef5350"/>
+    <line x1="615" y1="225" x2="615" y2="248" stroke="#ef5350" stroke-width="1"/>
+    <rect x="611" y="228" width="8" height="17" fill="#ef5350"/>
+    <line x1="645" y1="232" x2="645" y2="252" stroke="#ef5350" stroke-width="1"/>
+    <rect x="641" y="235" width="8" height="15" fill="#ef5350"/>
+
+    <!-- 50 MA resistance annotation -->
+    <text x="500" y="125" font-family="sans-serif" font-size="10" font-weight="700" fill="#ff9800">50 MA = Dynamic Resistance ↑</text>
+
+    <!-- Bottom message -->
+    <rect x="40" y="300" width="630" height="55" fill="#ffe5e0" stroke="#ef5350" stroke-width="1" rx="3"/>
+    <text x="360" y="322" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#ef5350">Downtrend मा MA "छत" बन्छ — bounce reject हुन्छ, "reversal" होइन</text>
+    <text x="360" y="342" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">Beginner ले bounce लाई buy सम्झन्छ, तर structure अझै weak — MA माथि sustain नभएसम्म caution</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा stock downtrend मा छ — price दुवै MA (नीलो 20, सुन्तला 50) भन्दा तल छ र MA हरू तल ढल्किरहेका छन्। Price bounce भएर 50 MA नजिक पुग्दा माथि upper wick बनाएर reject भयो (दुई पटक) — यहाँ 50 MA ले "dynamic resistance" अर्थात् छत को काम गर्‍यो। Uptrend मा support दिने MA, downtrend मा resistance बन्छ। Beginner ले यो bounce लाई "reversal, अब बढ्छ" सम्झेर buy गर्न सक्छ, तर structure अझै weak भएकाले त्यो trap हो — price MA माथि sustain नगरेसम्म पर्खनुपर्छ।
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:25%;">MA Situation</th>
+      <th style="width:25%;">Meaning</th>
+      <th style="width:25%;">❌ Beginner Mistake</th>
+      <th style="width:25%;">✓ Professional Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>20>50>200, slope up</strong></td>
+      <td>Bullish alignment</td>
+      <td>Alignment देखेर तुरुन्त buy</td>
+      <td>Pullback मा structured entry पर्ख</td>
+    </tr>
+    <tr>
+      <td><strong>Price pulls to 20 MA, uptrend</strong></td>
+      <td>Dynamic support test</td>
+      <td>MA touch = blind buy</td>
+      <td>Buyer candle + volume confirm</td>
+    </tr>
+    <tr>
+      <td><strong>MA flat, price chops across</strong></td>
+      <td>Sideways market</td>
+      <td>हरेक cross मा buy/sell</td>
+      <td>Crossover skip; range/breakout पर्ख</td>
+    </tr>
+    <tr>
+      <td><strong>Price far above 20 MA</strong></td>
+      <td>Overextended</td>
+      <td>FOMO late entry</td>
+      <td>Pullback/consolidation पर्ख</td>
+    </tr>
+    <tr>
+      <td><strong>Bounce rejects at 50 MA, downtrend</strong></td>
+      <td>Dynamic resistance</td>
+      <td>"Reversal" सम्झेर buy</td>
+      <td>Structure weak; MA माथि sustain पर्ख</td>
+    </tr>
+    <tr>
+      <td><strong>Crossover after big move</strong></td>
+      <td>Late lagging signal</td>
+      <td>Crossover मा chase</td>
+      <td>Price already extended कि जाँच</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Moving Average Practical Checklist</div>
+  <ul>
+    <li>Price 20 MA माथि छ कि तल?</li>
+    <li>Price 50 MA माथि छ कि तल?</li>
+    <li>Price 200 MA माथि छ कि तल?</li>
+    <li>20 MA को slope माथि, flat, कि तल?</li>
+    <li>50 MA को slope माथि, flat, कि तल?</li>
+    <li>200 MA long-term context के देखाउँछ?</li>
+    <li>20 MA > 50 MA > 200 MA bullish alignment छ?</li>
+    <li>20 MA < 50 MA < 200 MA bearish alignment छ?</li>
+    <li>Price MA बाट धेरै टाढा छ?</li>
+    <li>Price MA नजिक healthy Pullback मा छ?</li>
+    <li>MA horizontal Support/Resistance सँग मिलेको छ?</li>
+    <li>MA bounce मा Volume छ?</li>
+    <li>Pullback Volume घटेको छ?</li>
+    <li>MA flat भएर sideways market संकेत गर्दैछ?</li>
+    <li>Crossover late signal त होइन?</li>
+    <li>NEPSE index MA context के छ?</li>
+    <li>Sector MA context supportive छ?</li>
+    <li>Stock liquid छ?</li>
+    <li>Stop Loss कहाँ छ?</li>
+    <li>Risk-Reward मिल्छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: MA Setup on 10 Stocks</div>
+  <p>कुनै 10 वटा NEPSE stock को Daily chart मा 20 MA, 50 MA, र 200 MA राख्नुहोस्। प्रत्येक stock का लागि लेख्नुहोस्:</p>
+  <ul>
+    <li>Price कुन MA माथि छ?</li>
+    <li>20 MA को slope कस्तो छ?</li>
+    <li>50 MA को slope कस्तो छ?</li>
+    <li>Stock uptrend, downtrend, कि sideways देखिन्छ?</li>
+    <li>MA support/resistance जस्तो काम गरेको छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: 5 Strong Uptrend MA Pullbacks</div>
+  <p>5 वटा strong uptrend stock खोज्नुहोस्। प्रत्येकमा हेर्नुहोस्:</p>
+  <ul>
+    <li>Price 20 MA नजिक Pullback आयो?</li>
+    <li>Pullback मा Volume घटेको थियो?</li>
+    <li>Buyer reaction आयो?</li>
+    <li>Stop Loss कहाँ राख्न सकिन्थ्यो?</li>
+    <li>Entry chase थियो कि planned?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: 5 Sideways Stocks MA Behavior</div>
+  <p>5 वटा sideways stock खोज्नुहोस्। प्रत्येकमा लेख्नुहोस्:</p>
+  <ul>
+    <li>MA flat छ?</li>
+    <li>Price बारम्बार MA माथि-तल cross गर्छ?</li>
+    <li>Crossover false signal बनेको छ?</li>
+    <li>Range high/low Moving Average भन्दा बढी useful थियो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: 5 Downtrend Stocks MA Resistance</div>
+  <p>5 वटा downtrend stock खोज्नुहोस्। प्रत्येकमा हेर्नुहोस्:</p>
+  <ul>
+    <li>Price 20/50 MA तल छ?</li>
+    <li>Bounce MA नजिक reject भयो?</li>
+    <li>RSI 50 माथि जान सकेन?</li>
+    <li>Volume कमजोर थियो?</li>
+    <li>Beginner reversal सम्झेर कहाँ फस्न सक्थे?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Past Trade MA Review</div>
+  <p>आफ्नो पुरानो कुनै trade review गर्नुहोस्:</p>
+  <ul>
+    <li>Entry गर्दा price कुन MA नजिक थियो?</li>
+    <li>MA slope कस्तो थियो?</li>
+    <li>Market sideways थियो कि trending?</li>
+    <li>मैले MA cross लाई direct signal मानेको थिएँ?</li>
+    <li>Volume र Support/Resistance हेरेको थिएँ?</li>
+    <li>अब त्यही setup आए म Moving Average कसरी प्रयोग गर्थें?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Moving Average ले chart clean बनाउन सक्छ, तर गलत प्रयोगले chart भ्रमपूर्ण पनि बनाउन सक्छ। यो tool हो, निर्णयकर्ता होइन।</p>
+  <p>Price MA माथि छ भनेर blind buy नगर्नुहोस्। Price MA तल छ भनेर blind sell नगर्नुहोस्। MA को slope, trend structure, Support/Resistance, Volume, RSI, market context, and Risk-Reward सबै हेर्नुहोस्।</p>
+  <p>Trending market मा Moving Average उपयोगी हुन्छ। Sideways market मा यही Moving Average धेरै false signal दिन सक्छ। त्यसैले market phase पहिले बुझ्नुहोस्।</p>
+  <p style="margin-bottom:0;">Moving Average को असली शक्ति line मा होइन, line वरिपरि price कसरी व्यवहार गर्छ भन्ने पढ्नमा छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 25 Summary</div>
+  <p>Moving Average निश्चित समयावधिको average price लाई chart मा line का रूपमा देखाउने tool हो। यसले price movement smooth गरेर trend direction, momentum, dynamic support/resistance, and pullback area बुझ्न मद्दत गर्छ।</p>
+  <p>20 MA short-term trend, 50 MA medium-term trend, and 200 MA long-term trend context का लागि प्रयोग गर्न सकिन्छ। तर Moving Average lagging indicator हो, त्यसैले यो price पछि चल्छ। यसलाई future prediction tool बनाउनु हुँदैन।</p>
+  <p>Moving Average को practical प्रयोग trend direction, slope, pullback support, dynamic resistance, overextension warning, alignment, and market phase बुझ्न हो। Sideways market मा Moving Average crossover धेरै false signal दिन सक्छ।</p>
+  <p>NEPSE मा Moving Average प्रयोग गर्दा index, sector, stock liquidity, Volume, and price structure सँग जोडेर हेर्नुपर्छ। Low liquidity stock मा MA signal misleading हुन सक्छ। Strong stock पनि overextended entry मा risky हुन सक्छ।</p>
+  <p>Moving Average लाई Price Action, Support/Resistance, Trend Structure, Volume, RSI, Stop Loss, Position Sizing, and Risk-Reward सँग जोडेर प्रयोग गर्नुपर्छ। Moving Average buy/sell button होइन।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Moving Average line होइन, trend को behavior पढ्ने lens हो। Line cross भन्दा बढी महत्त्वपूर्ण कुरा हो, price त्यो line वरिपरि कसरी प्रतिक्रिया दिइरहेको छ।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader Moving Average लाई आदेश दिने गुरु मान्दैन;<br>
+  ऊ यसलाई trend, pullback, momentum, र risk<br>
+  बुझ्न सहयोग गर्ने शान्त guide का रूपमा प्रयोग गर्छ।
+</div>
+
+</div>
+</body>
+</html>

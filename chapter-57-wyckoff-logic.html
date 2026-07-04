@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 57: Wyckoff Logic — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+.sub-heading { font-family: 'Roboto', sans-serif; font-size: 17px; font-weight: 700; color: #111; margin: 26px 0 12px; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.callout-quote { background: #fffdf5; border-left: 4px solid #c9b97a; border-radius: 0 4px 4px 0; padding: 18px 24px; margin: 22px 0; font-size: 15px; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul, ol { margin: 14px 0 14px 28px; }
+ul li, ol li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 14.5px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 22px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li, ol li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 57</div>
+  <h1 class="chapter-title">Wyckoff Logic</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>रोशनले एउटा कुरा वर्षौँसम्म बुझ्न सकेन। ऊ बजारमा सधैं एउटै गल्ती दोहोर्‍याइरहन्थ्यो। जब कुनै शेयरको मूल्य धेरै बढिसकेको हुन्थ्यो, ऊ अत्यधिक उत्साहित भएर त्यसलाई किन्न हतारिन्थ्यो। तर अचम्मको कुरा, जब मूल्य धेरै घटिसकेको हुन्थ्यो र जताततै निराशा छाउँथ्यो, ऊ डराएर भएको शेयर पनि घाटामा बेचेर निस्किन्थ्यो।</p>
+
+<p>उसले बारम्बार सोच्थ्यो, <strong>“म सधैं गलत समयमा किन किन्छु र गलत समयमा नै किन बेच्छु? के बजार मेरो मनोविज्ञानसँग खेलिरहेको छ?”</strong></p>
+
+<p>एक दिन उसले एउटा कम्पनीको चार्ट गहिरिएर हेर्‍यो। त्यो शेयर लगभग ८ महिनासम्म एउटा निश्चित र साघुरो दायरा (Range) भित्र मात्र घुमिरहेको थियो। बजारका धेरैजसो साधारण ट्रेडरहरूले त्यसलाई <strong>“मरेको शेयर”</strong> को संज्ञा दिएका थिए। कसैमा पनि त्यस प्रति कुनै उत्साह थिएन र दैनिक कारोबार भोल्युम पनि एकदमै सामान्य र सुस्त थियो।</p>
+
+<p>तर केही महिनापछि त्यही “मरेको शेयर” मा अचानक ठूलो हलचल आयो र त्यो बलियो रूपमा बढ्न थाल्यो। रोशनको मनमा एउटा गम्भीर प्रश्न उठ्यो, <strong>“यदि यो शेयर पछि गएर यति धेरै बलियो र महँगो बन्ने नै थियो भने, पहिले यति धेरै महिनासम्म किन यति शान्त बसेको थियो?”</strong></p>
+
+<p>त्यही प्रश्नको वास्तविक उत्तर खोज्दै जाँदा उसले प्राविधिक विश्लेषणको एउटा निकै शक्तिशाली सिद्धान्त ‘Wyckoff Logic’ (वाइकोफ लजिक) सिक्ने मौका पायो। त्यसपछि उसले एउटा महत्वपूर्ण कुरा बुझ्यो—बजारमा बाहिर देखिने अन्तिम परिणाम मात्र मूल्य (Price) हो। तर त्यो मूल्यको पर्दा पछाडि सधैँ एउटा ठूलो र रोचक कथा चलिरहेको हुन्छ। Wyckoff Logic भनेको चार्टमा देखिने त्यही भित्री कथालाई सुरुमै पढ्ने र बुझ्ने एउटा कला हो।</p>
+
+<!-- VISUAL 1: Roshan buys high sells low + dead stock then move -->
+<div class="visual-block">
+  <div class="visual-title">रोशन — Top मा किन्यो, Bottom मा बेच्यो; "मरेको शेयर" पछि उड्यो</div>
+  <svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="840" height="430" fill="#fffdf5"/>
+    <text x="420" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">शान्त Range (तयारी) → अचानक ठूलो Move</text>
+
+    <rect x="50" y="62" width="740" height="250" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- range box -->
+    <line x1="90" y1="200" x2="430" y2="200" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <line x1="90" y1="255" x2="430" y2="255" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <!-- 8 month sideways small candles -->
+    <g stroke-width="1.6">
+      <line x1="100" y1="218" x2="100" y2="250" stroke="#26a69a"/><rect x="93" y="226" width="14" height="16" fill="#26a69a"/>
+      <line x1="135" y1="210" x2="135" y2="245" stroke="#ef5350"/><rect x="128" y="216" width="14" height="14" fill="#ef5350"/>
+      <line x1="170" y1="215" x2="170" y2="252" stroke="#26a69a"/><rect x="163" y="222" width="14" height="16" fill="#26a69a"/>
+      <line x1="205" y1="208" x2="205" y2="248" stroke="#ef5350"/><rect x="198" y="215" width="14" height="14" fill="#ef5350"/>
+      <line x1="240" y1="212" x2="240" y2="250" stroke="#26a69a"/><rect x="233" y="220" width="14" height="16" fill="#26a69a"/>
+      <line x1="275" y1="206" x2="275" y2="246" stroke="#ef5350"/><rect x="268" y="213" width="14" height="14" fill="#ef5350"/>
+      <line x1="310" y1="214" x2="310" y2="252" stroke="#26a69a"/><rect x="303" y="221" width="14" height="16" fill="#26a69a"/>
+      <line x1="345" y1="208" x2="345" y2="248" stroke="#ef5350"/><rect x="338" y="214" width="14" height="14" fill="#ef5350"/>
+      <line x1="380" y1="210" x2="380" y2="250" stroke="#26a69a"/><rect x="373" y="218" width="14" height="16" fill="#26a69a"/>
+      <line x1="415" y1="206" x2="415" y2="245" stroke="#26a69a"/><rect x="408" y="213" width="14" height="16" fill="#26a69a"/>
+      <!-- breakout + markup -->
+      <line x1="455" y1="150" x2="455" y2="200" stroke="#00897b" stroke-width="2"/><rect x="445" y="154" width="20" height="36" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+      <line x1="500" y1="130" x2="500" y2="162" stroke="#26a69a"/><rect x="491" y="135" width="18" height="20" fill="#26a69a"/>
+      <line x1="545" y1="112" x2="545" y2="144" stroke="#26a69a"/><rect x="536" y="117" width="18" height="20" fill="#26a69a"/>
+      <line x1="590" y1="100" x2="590" y2="128" stroke="#ef5350"/><rect x="581" y="105" width="18" height="11" fill="#ef5350"/>
+      <line x1="635" y1="88" x2="635" y2="116" stroke="#26a69a"/><rect x="626" y="92" width="18" height="18" fill="#26a69a"/>
+      <line x1="680" y1="78" x2="680" y2="104" stroke="#26a69a"/><rect x="671" y="82" width="18" height="16" fill="#26a69a"/>
+    </g>
+    <!-- bubble: dead stock range -->
+    <line x1="240" y1="252" x2="220" y2="340" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="70" y="334" width="300" height="44" rx="9" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="220" y="354" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c8a800">८ महिना शान्त — "मरेको शेयर"</text>
+    <text x="220" y="372" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">(भित्र तयारी चलिरहेको)</text>
+    <!-- bubble: big move -->
+    <line x1="545" y1="120" x2="600" y2="340" stroke="#00897b" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="455" y="334" width="320" height="44" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.6"/>
+    <text x="615" y="354" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">अचानक ठूलो Move →</text>
+    <text x="615" y="372" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">रोशन यहाँ (Top नजिक) हतारमा किन्छ</text>
+
+    <rect x="50" y="388" width="740" height="0" fill="none"/>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले रोशनको पाठ देखाउँछ — मूल्यको पर्दा पछाडिको कथा। बायाँ: शेयर ८ महिना एउटै साँघुरो range मा घुमिरह्यो (साना candle, सुस्त Volume) — सबैले "मरेको शेयर" भने। तर त्यो शान्त range भित्र वास्तवमा ठूला खेलाडीले गोप्य तयारी गरिरहेका थिए। दायाँ: अचानक एउटा बलियो green candle ले range तोड्यो र मूल्य आक्रामक रूपमा माथि गयो। रोशनको गल्ती — ऊ यही Top नजिक उत्साहित भएर हतारमा किन्थ्यो, अनि मूल्य घट्दा डराएर घाटामा बेच्थ्यो (Top मा किन्ने, Bottom मा बेच्ने)। मुख्य पाठ — बाहिर देखिने मूल्य अन्तिम परिणाम मात्र हो; त्यसको पछाडि सधैँ एउटा कथा चलिरहेको हुन्छ। Wyckoff Logic ले त्यही भित्री कथा सुरुमै पढ्न सिकाउँछ।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>अहिलेसम्म हामीले प्राविधिक विश्लेषणका धेरै महत्वपूर्ण पाटाहरू सिकिसकेका छौँ, जस्तै:</p>
+<ul>
+  <li>Trend (प्रवृत्ति)</li>
+  <li>Support र Resistance (सपोर्ट र रेजिस्टेन्स)</li>
+  <li>Volume (कारोबार रकम)</li>
+  <li>Breakout र Pullback (ब्रेकआउट र पुलब्याक)</li>
+  <li>Sector Strength (क्षेत्रगत शक्ति)</li>
+  <li>Market Structure (बजारको संरचना)</li>
+</ul>
+
+<p>तर यी सबै कुरा सिकिसकेपछि पनि एउटा सबैभन्दा ठूलो र आधारभूत प्रश्न अझै बाँकी नै रहन्छ—<strong>“बजारमा शेयरको मूल्य वास्तवमा किन चल्छ वा परिवर्तन हुन्छ?”</strong></p>
+
+<p>यदि यो प्रश्नको वास्तविक मर्म र उत्तर बुझिएन भने, एउटा ट्रेडरले चार्टमा रेखाहरू कोर्न त सक्छ, तर चार्टले भन्न खोजेको वास्तविक कथा र बजारको गन्तव्य कहिल्यै बुझ्न सक्दैन। Wyckoff Logic ले ट्रेडरलाई:</p>
+<ul>
+  <li>बजारको गहिरो र वास्तविक संरचना बुझ्न</li>
+  <li>Supply र Demand को अन्तरसम्बन्ध ठम्याउन</li>
+  <li>बजारका ठूला खेलाडीहरूले (Big Money) कसरी सोच्छन् र चल्छन् भन्ने बुझ्न</li>
+  <li>बजारको चक्र (Market Cycle) पहिचान गर्न</li>
+  <li>भोल्युमको वास्तविक र लुकेको अर्थ बुझ्न</li>
+</ul>
+<p>मद्दत गर्छ। यो अध्याय हाम्रो पुस्तकको 'Part 7: Advanced Concepts' को मुख्य प्रवेशद्वार र बलियो आधार हो। अब आउने आगामी सबै एड्भान्स च्याप्टरहरू यही आधारभूत नियम माथि निर्माण हुनेछन्।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Wyckoff Logic लाई धेरै जटिल वा गाह्रो परिभाषा बनाएर बुझ्न आवश्यक छैन। यसको आधारभूत विचार एकदमै सरल र प्राकृतिक छ।</p>
+
+<p>हाम्रो समग्र वित्तीय बजारमा मुख्य दुईवटा मात्र अदृश्य शक्तिहरू सक्रिय छन्:</p>
+<ul>
+  <li>Supply (बेच्ने दबाब वा आपूर्ति)</li>
+  <li>Demand (किन्ने दबाब वा माग)</li>
+</ul>
+
+<p>जब बजारमा माग (Demand) बढी हुन्छ, मूल्य सजिलै माथि जान्छ। जब बजारमा आपूर्ति (Supply) बढी हुन्छ, मूल्य सिधै तल खस्छ। तर वास्तविक बजारमा खेल यतिमा मात्र सीमित हुँदैन।</p>
+
+<!-- VISUAL 2: Supply vs Demand -->
+<div class="visual-block">
+  <div class="visual-title">बजारका 2 अदृश्य शक्ति — Supply र Demand</div>
+  <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="300" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">यी दुईको सन्तुलनले मूल्यको दिशा तय गर्छ</text>
+
+    <!-- Demand -->
+    <rect x="40" y="66" width="345" height="170" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="212" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#2e7d32">Demand (माग) बढी ↑</text>
+    <!-- up candles -->
+    <g stroke-width="1.8">
+      <line x1="110" y1="180" x2="110" y2="205" stroke="#26a69a"/><rect x="101" y="185" width="18" height="16" fill="#26a69a"/>
+      <line x1="160" y1="162" x2="160" y2="190" stroke="#26a69a"/><rect x="151" y="167" width="18" height="18" fill="#26a69a"/>
+      <line x1="210" y1="146" x2="210" y2="174" stroke="#26a69a"/><rect x="201" y="151" width="18" height="18" fill="#26a69a"/>
+      <line x1="260" y1="132" x2="260" y2="158" stroke="#26a69a"/><rect x="251" y="137" width="18" height="18" fill="#26a69a"/>
+      <line x1="310" y1="120" x2="310" y2="146" stroke="#26a69a"/><rect x="301" y="125" width="18" height="16" fill="#26a69a"/>
+    </g>
+    <text x="212" y="225" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">क्रेता आक्रामक → मूल्य माथि</text>
+
+    <!-- Supply -->
+    <rect x="435" y="66" width="345" height="170" rx="12" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <text x="607" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#c62828">Supply (आपूर्ति) बढी ↓</text>
+    <g stroke-width="1.8">
+      <line x1="505" y1="120" x2="505" y2="146" stroke="#ef5350"/><rect x="496" y="125" width="18" height="16" fill="#ef5350"/>
+      <line x1="555" y1="132" x2="555" y2="160" stroke="#ef5350"/><rect x="546" y="137" width="18" height="18" fill="#ef5350"/>
+      <line x1="605" y1="146" x2="605" y2="176" stroke="#ef5350"/><rect x="596" y="151" width="18" height="18" fill="#ef5350"/>
+      <line x1="655" y1="162" x2="655" y2="192" stroke="#ef5350"/><rect x="646" y="167" width="18" height="18" fill="#ef5350"/>
+      <line x1="705" y1="178" x2="705" y2="206" stroke="#ef5350"/><rect x="696" y="183" width="18" height="16" fill="#ef5350"/>
+    </g>
+    <text x="607" y="225" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c62828">विक्रेता हावी → मूल्य तल</text>
+
+    <text x="410" y="278" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">दुवै बराबर हुँदा → बजार Range मा कन्सोलिडेसन</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Wyckoff को आधारभूत विचार देखाउँछ — बजारमा दुई अदृश्य शक्ति मात्र सक्रिय छन्। बायाँ (<strong>Demand / माग</strong>): जब किन्ने दबाब बढी हुन्छ, क्रेता आक्रामक हुन्छन् — मूल्य सजिलै माथि जान्छ (हरियो candle माथि)। दायाँ (<strong>Supply / आपूर्ति</strong>): जब बेच्ने दबाब बढी हुन्छ, विक्रेता हावी हुन्छन् — मूल्य तल खस्छ (रातो candle तल)। र जब दुवै बराबर हुन्छन्, बजार एउटै range मा कन्सोलिडेसनमा बस्छ। मुख्य कुरा — यी दुई शक्तिको सन्तुलनले नै मूल्यको दिशा तय गर्छ। तर ठूला लगानीकर्तासँग यति धेरै पूँजी हुन्छ कि उनीहरूले एकै दिनमा किनेर/बेचेर भ्याउँदैनन् — त्यसैले बजारमा विभिन्न चरण (Phases) देखिन्छन्, जुन Wyckoff Logic ले चिन्न सिकाउँछ।
+</div>
+
+<p>बजारका ठूला र संस्थागत लगानीकर्ताहरू (Large Participants) सँग यति धेरै पूँजी हुन्छ कि उनीहरूले आफूले चाहेको शेयर एकै दिनमा वा एउटै मूल्यमा किनेर वा बेचेर भ्याउन सक्दैनन्। उनीहरूले बजारमा आफ्नो पोजिसन बनाउन र घटाउन लामो समय लिन्छन्। त्यही कारणले गर्दा बजारमा विभिन्न चरणहरू (Phases) देखिने गर्छन्। Wyckoff Logic ले चार्टको माध्यमबाट तिनै चरणहरूलाई समयमै चिन्न सिकाउँछ।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<div class="sub-heading">Richard Wyckoff को मुख्य सोच</div>
+<p>रिचार्ड वाइकोफले सन् १९०० को सुरुवाततिर बजारको अध्ययन गर्दा एउटा महत्वपूर्ण वास्तविकता देखे। उनले पाए कि धेरैजसो साधारण रिटेल ट्रेडरहरू शेयरको मूल्य ह्वात्तै बढेपछि वा अन्तिम परिणाम (Final Movement) देखिएपछि मात्र बजारमा प्रवेश गर्छन्।</p>
+
+<p>तर बजारमा ठूलो पैसा चलाउने खेलाडीहरूले त्यो मूल्य बढ्नु भन्दा धेरै पहिलेदेखि नै शान्त बजारमा आफ्नो तयारी गरिरहेका हुन्छन्। त्यसैले उनले मूल्य र भोल्युम (Price + Volume) को आपसी सम्बन्धलाई हेरेर बजारको वास्तविक व्यवहार र ठूला खेलाडीहरूको चाल बुझ्ने एउटा वैज्ञानिक फ्रेमवर्क (Framework) तयार पारे।</p>
+
+<div class="sub-heading">Composite Man Concept (ठूला खेलाडीको अवधारणा)</div>
+<p>Wyckoff को सबैभन्दा प्रसिद्ध र रोचक अवधारणा नै 'Composite Man' हो। यसलाई एकदमै सरल रूपमा बुझौँ। बजारमा दैनिक हजारौँ र लाखौँको संख्यामा साना-ठूला लगानीकर्ताहरूले कारोबार गरिरहेका हुन्छन्। तर बजारको विश्लेषणलाई सजिलो र तार्किक बनाउनका लागि वाइकोफले बजारका सबै ठूला संस्थागत लगानीकर्ता, बैंक र स्मार्ट मनीलाई एउटै काल्पनिक पात्रको रूपमा सोच्न सिकाए, जसलाई उनले 'Composite Man' नाम दिए।</p>
+
+<p>यो Composite Man लाई बजारको सबैभन्दा धेरै पूँजी भएको, चतुर र अनुभवी पात्रको रूपमा लिन सकिन्छ। उसको एकमात्र मुख्य लक्ष्य हुन्छ:</p>
+<ul>
+  <li>बजार पूरै निराश र सस्तो भएको बेला लुकेर शेयर किन्नु (Accumulation)</li>
+  <li>बजारमा अत्यधिक उत्साह र महँगो मूल्य भएको बेला साधारण जनतालाई शेयर भिराएर निस्किनु (Distribution)</li>
+</ul>
+
+<!-- VISUAL 3: Composite Man -->
+<div class="visual-block">
+  <div class="visual-title">Composite Man — निराशामा किन्छ, उत्साहमा बेच्छ</div>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="320" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">स्मार्ट मनी भीडको ठीक विपरीत चल्छ</text>
+
+    <!-- Accumulation -->
+    <rect x="40" y="66" width="345" height="200" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="212" y="98" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#2e7d32">Accumulation</text>
+    <text x="212" y="122" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">बजार निराश + सस्तो</text>
+    <!-- low flat candles -->
+    <g stroke-width="1.6">
+      <line x1="90" y1="200" x2="90" y2="225" stroke="#26a69a"/><rect x="83" y="206" width="14" height="14" fill="#26a69a"/>
+      <line x1="130" y1="195" x2="130" y2="222" stroke="#ef5350"/><rect x="123" y="201" width="14" height="12" fill="#ef5350"/>
+      <line x1="170" y1="198" x2="170" y2="226" stroke="#26a69a"/><rect x="163" y="204" width="14" height="14" fill="#26a69a"/>
+      <line x1="210" y1="194" x2="210" y2="220" stroke="#ef5350"/><rect x="203" y="200" width="14" height="12" fill="#ef5350"/>
+      <line x1="250" y1="197" x2="250" y2="224" stroke="#26a69a"/><rect x="243" y="203" width="14" height="14" fill="#26a69a"/>
+      <line x1="290" y1="195" x2="290" y2="222" stroke="#26a69a"/><rect x="283" y="201" width="14" height="14" fill="#26a69a"/>
+    </g>
+    <text x="212" y="252" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">🤫 लुकेर किन्छ (Buy)</text>
+
+    <!-- Distribution -->
+    <rect x="435" y="66" width="345" height="200" rx="12" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <text x="607" y="98" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#c62828">Distribution</text>
+    <text x="607" y="122" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">अत्यधिक उत्साह + महँगो</text>
+    <!-- high flat candles -->
+    <g stroke-width="1.6">
+      <line x1="485" y1="150" x2="485" y2="178" stroke="#26a69a"/><rect x="478" y="156" width="14" height="14" fill="#26a69a"/>
+      <line x1="525" y1="145" x2="525" y2="172" stroke="#ef5350"/><rect x="518" y="151" width="14" height="12" fill="#ef5350"/>
+      <line x1="565" y1="148" x2="565" y2="175" stroke="#26a69a"/><rect x="558" y="154" width="14" height="14" fill="#26a69a"/>
+      <line x1="605" y1="144" x2="605" y2="170" stroke="#ef5350"/><rect x="598" y="150" width="14" height="12" fill="#ef5350"/>
+      <line x1="645" y1="147" x2="645" y2="174" stroke="#ef5350"/><rect x="638" y="153" width="14" height="14" fill="#ef5350"/>
+      <line x1="685" y1="150" x2="685" y2="178" stroke="#ef5350"/><rect x="678" y="156" width="14" height="14" fill="#ef5350"/>
+    </g>
+    <text x="607" y="252" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c62828">📤 जनतालाई भिराएर बेच्छ (Sell)</text>
+
+    <text x="410" y="298" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">प्रश्न सोध्नुहोस्: "म Composite Man भए, अहिले के गर्थें?"</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Wyckoff को प्रसिद्ध 'Composite Man' अवधारणा देखाउँछ — बजारका सबै ठूला संस्थागत लगानीकर्ता, बैंक र स्मार्ट मनीलाई एउटै काल्पनिक चतुर पात्रको रूपमा कल्पना गर्ने। उसको दुई मात्र लक्ष्य: बायाँ (<strong>Accumulation</strong>) — जब बजार निराश र सस्तो हुन्छ, ऊ चुपचाप लुकेर शेयर किन्छ (साना candle, तल)। दायाँ (<strong>Distribution</strong>) — जब बजारमा अत्यधिक उत्साह र महँगो मूल्य हुन्छ, ऊ साधारण जनतालाई शेयर भिराएर बेचेर निस्किन्छ (साना candle, माथि)। मुख्य पाठ — स्मार्ट मनी भीडको ठीक विपरीत चल्छ। त्यसैले चार्ट हेर्दा सधैँ सोध्नुहोस्: "यदि म यो Composite Man भएको भए, अहिलेको अवस्थामा के गर्थें होला?" यही सोचले तपाईंलाई भीडभन्दा अलग, स्पष्ट दृष्टिकोण दिन्छ।
+</div>
+
+<p>अब एउटा व्यावसायिक ट्रेडरको रूपमा तपाईंले चार्ट हेर्दा सधैं आफैँलाई एउटा प्रश्न सोध्नुपर्छ, <strong>“यदि म बजारको यो 'Composite Man' भएको भए, अहिलेको यो अवस्थामा के गर्थें होला?”</strong> यही सोच्ने शैलीले तपाईंलाई भीडभन्दा अलग राखेर बजारलाई एउटा नयाँ र स्पष्ट दृष्टिकोणबाट हेर्न मद्दत गर्छ।</p>
+
+<div class="sub-heading">Wyckoff को पहिलो नियम: Law of Supply and Demand</div>
+<p>यो पूरै वित्तीय बजारको पहिलो र अकाट्य नियम हो। यदि बजारमा माग बढी छ भने मूल्य माथि जान्छ र यदि आपूर्ति बढी छ भने मूल्य तल जान्छ। तर यो कुरा केवल मूल्यको रेखा वा क्यान्डल मात्र हेरेर सधैं स्पष्ट रूपमा बुझ्न सम्भव हुँदैन। त्यसैले हामीले अनिवार्य रूपमा भोल्युम (Volume) लाई पनि सँगै जोड्नुपर्छ।</p>
+
+<p>उदाहरणका लागि: यदि बजारमा शेयरको मूल्य पनि बढिरहेको छ र साथसाथै तल भोल्युमको बार पनि लगातार ठूलो हुँदै गइरहेको छ भने, यसले बजारमा ठूला खेलाडीहरूबाट वास्तविक र बलियो माग (Strong Demand) सिर्जना भएको प्रस्ट संकेत दिन्छ।</p>
+
+<div class="sub-heading">Wyckoff को दोस्रो नियम: Law of Cause and Effect (कारण र परिणामको नियम)</div>
+<p>यो नियम धेरैजसो Beginner ट्रेडरहरूले पूर्ण रूपमा छुटाउने गर्छन्।</p>
+<ul>
+  <li>Cause (कारण) = बजारमा ठूलो मुभ आउनु अगाडिको तयारी वा कन्सोलिडेसन चरण।</li>
+  <li>Effect (परिणाम) = त्यो तयारी सकिएपछि मूल्यमा आउने ठूलो ट्रेन्ड वा उतारचढाव।</li>
+</ul>
+
+<p>उदाहरणका लागि: मानौँ एउटा शेयर ६ महिनासम्म एउटै साँघुरो दायरामा (Sideways) बसिरहेको छ। धेरै साना ट्रेडरहरूलाई लाग्छ, “यो शेयर काम नलाग्ने र मरेको बजार हो।” तर वाइकोफका अनुसार त्यो कन्सोलिडेसन फेज भित्र ठूला खेलाडीहरूले बिस्तारै शेयर जम्मा गर्ने ठूलो तयारी गरिरहेका हुन सक्छन्। त्यो लामो तयारी नै 'Cause' हो र पछि त्यो दायरा तोडेर आउने ठूलो अपट्रेन्ड (Uptrend) त्यसकै 'Effect' हो। तयारी जति लामो र बलियो हुन्छ, त्यसपछिको परिणाम पनि त्यत्तिकै ठूलो र दिगो हुन्छ।</p>
+
+<!-- VISUAL 4: Cause & Effect -->
+<div class="visual-block">
+  <div class="visual-title">Cause (लामो तयारी) → Effect (ठूलो ट्रेन्ड)</div>
+  <svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="360" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">तयारी जति लामो → परिणाम त्यति ठूलो</text>
+
+    <rect x="50" y="62" width="720" height="230" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- cause range -->
+    <line x1="80" y1="190" x2="400" y2="190" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <line x1="80" y1="240" x2="400" y2="240" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <g stroke-width="1.6">
+      <line x1="95" y1="205" x2="95" y2="235" stroke="#26a69a"/><rect x="88" y="211" width="14" height="16" fill="#26a69a"/>
+      <line x1="130" y1="200" x2="130" y2="232" stroke="#ef5350"/><rect x="123" y="206" width="14" height="14" fill="#ef5350"/>
+      <line x1="165" y1="204" x2="165" y2="236" stroke="#26a69a"/><rect x="158" y="210" width="14" height="16" fill="#26a69a"/>
+      <line x1="200" y1="198" x2="200" y2="230" stroke="#ef5350"/><rect x="193" y="204" width="14" height="14" fill="#ef5350"/>
+      <line x1="235" y1="202" x2="235" y2="234" stroke="#26a69a"/><rect x="228" y="208" width="14" height="16" fill="#26a69a"/>
+      <line x1="270" y1="200" x2="270" y2="230" stroke="#ef5350"/><rect x="263" y="205" width="14" height="14" fill="#ef5350"/>
+      <line x1="305" y1="203" x2="305" y2="235" stroke="#26a69a"/><rect x="298" y="209" width="14" height="16" fill="#26a69a"/>
+      <line x1="340" y1="198" x2="340" y2="228" stroke="#26a69a"/><rect x="333" y="204" width="14" height="16" fill="#26a69a"/>
+      <line x1="375" y1="200" x2="375" y2="230" stroke="#ef5350"/><rect x="368" y="206" width="14" height="14" fill="#ef5350"/>
+      <!-- effect uptrend -->
+      <line x1="420" y1="160" x2="420" y2="205" stroke="#00897b" stroke-width="2"/><rect x="410" y="164" width="20" height="32" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+      <line x1="465" y1="140" x2="465" y2="172" stroke="#26a69a"/><rect x="456" y="145" width="18" height="20" fill="#26a69a"/>
+      <line x1="510" y1="120" x2="510" y2="152" stroke="#26a69a"/><rect x="501" y="125" width="18" height="20" fill="#26a69a"/>
+      <line x1="555" y1="108" x2="555" y2="136" stroke="#ef5350"/><rect x="546" y="113" width="18" height="11" fill="#ef5350"/>
+      <line x1="600" y1="96" x2="600" y2="124" stroke="#26a69a"/><rect x="591" y="100" width="18" height="18" fill="#26a69a"/>
+      <line x1="645" y1="86" x2="645" y2="112" stroke="#26a69a"/><rect x="636" y="90" width="18" height="16" fill="#26a69a"/>
+      <line x1="690" y1="78" x2="690" y2="104" stroke="#26a69a"/><rect x="681" y="82" width="18" height="16" fill="#26a69a"/>
+    </g>
+    <!-- labels -->
+    <line x1="235" y1="240" x2="235" y2="320" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="100" y="312" width="270" height="38" rx="9" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="235" y="336" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c8a800">CAUSE — लामो कन्सोलिडेसन (तयारी)</text>
+    <line x1="555" y1="120" x2="600" y2="320" stroke="#00897b" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="450" y="312" width="270" height="38" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="585" y="336" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">EFFECT — ठूलो Uptrend</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Wyckoff को दोस्रो नियम — Law of Cause and Effect देखाउँछ। बायाँ (<strong>CAUSE</strong>): शेयर लामो समय एउटै साँघुरो range मा बस्यो (साना candle) — धेरै साना ट्रेडरले "मरेको बजार" भने, तर त्यही बेला ठूला खेलाडीले बिस्तारै शेयर जम्मा (Accumulation) गरिरहेका थिए। यो लामो तयारी नै 'Cause' हो। दायाँ (<strong>EFFECT</strong>): तयारी सकिएपछि range तोडेर बलियो Uptrend आयो — त्यो नै 'Cause' को 'Effect' हो। मुख्य पाठ — तयारी (Cause) जति लामो र बलियो हुन्छ, त्यसपछिको परिणाम (Effect) पनि त्यति ठूलो र दिगो हुन्छ। त्यसैले लामो sideways लाई बेकार नठानी, त्यसभित्रको Volume र संरचना अध्ययन गर्नुपर्छ।
+</div>
+
+<div class="sub-heading">Wyckoff को तेस्रो नियम: Law of Effort vs Result (प्रयास र परिणामको नियम)</div>
+<p>यो नियमले बजारमा देखिने प्रयास र त्यसको बदलामा प्राप्त भएको नतिजालाई तुलना गर्छ।</p>
+<ul>
+  <li>Effort (प्रयास) = Volume (बजारमा कति कारोबार वा पैसा प्रयोग भयो)</li>
+  <li>Result (परिणाम) = Price Movement (त्यसको बदलामा मूल्यको क्यान्डल कति ठूलो वा सानो बन्यो)</li>
+</ul>
+
+<div class="callout-quote">
+  <p><strong>उदाहरण १:</strong> बजारमा भोल्युम एकदमै धेरै (High Effort) देखियो, तर त्यसको तुलनामा मूल्य भने खासै बढ्न सकेन, एकदमै सानो क्यान्डल बन्यो (Low Result)। यसले के संकेत गर्छ? यसको अर्थ माथिल्लो लेभलमा कुनै ठूलो सेलिङ प्रेसर वा सप्लाई (Supply) लुकेको छ, जसले क्रेताहरूको पूरै प्रयासलाई रोकिदिएको छ।</p>
+  <p style="margin-bottom:0;"><strong>उदाहरण २:</strong> बजारमा भोल्युम एकदमै सामान्य वा कम छ (Low Effort), तर मूल्य भने निकै बलियो र ठूलो मारुबोजु क्यान्डल बनाएर माथि गयो (High Result)। यसको अर्थ बजारमा विक्रेताहरू पूरै सकिएका छन् र थोरै प्रयासले पनि मूल्य सजिलै माथि गइरहेको छ।</p>
+</div>
+
+<!-- VISUAL 5: Effort vs Result -->
+<div class="visual-block">
+  <div class="visual-title">Effort vs Result — Volume र Price को सन्तुलन</div>
+  <svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="400" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">प्रयास (Volume) र परिणाम (Price) तुलना</text>
+
+    <!-- LEFT: high effort low result -->
+    <rect x="25" y="62" width="385" height="38" fill="#ef5350" rx="6"/>
+    <text x="217" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#fff">High Effort, Low Result</text>
+    <rect x="25" y="106" width="385" height="160" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- small candle at top -->
+    <line x1="217" y1="125" x2="217" y2="200" stroke="#ef5350" stroke-width="2"/><rect x="206" y="165" width="22" height="16" fill="#ef5350"/>
+    <text x="217" y="225" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c62828">सानो candle</text>
+    <!-- volume -->
+    <rect x="25" y="106" width="0" height="0"/>
+    <text x="217" y="250" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">(मूल्य खासै बढेन)</text>
+    <rect x="25" y="272" width="385" height="60" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="50" y="290" font-family="sans-serif" font-size="13" font-weight="700" fill="#555">Volume</text>
+    <rect x="180" y="290" width="75" height="36" fill="#ef5350" opacity="0.6"/>
+    <text x="217" y="350" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#c62828">माथि Supply लुकेको</text>
+
+    <!-- RIGHT: low effort high result -->
+    <rect x="430" y="62" width="385" height="38" fill="#26a69a" rx="6"/>
+    <text x="622" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#fff">Low Effort, High Result</text>
+    <rect x="430" y="106" width="385" height="160" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- big marubozu -->
+    <line x1="622" y1="120" x2="622" y2="240" stroke="#00897b" stroke-width="2"/><rect x="610" y="124" width="24" height="100" fill="#26a69a" stroke="#00897b" stroke-width="1.6"/>
+    <text x="622" y="258" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">ठूलो Marubozu</text>
+    <rect x="430" y="272" width="385" height="60" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="455" y="290" font-family="sans-serif" font-size="13" font-weight="700" fill="#555">Volume</text>
+    <rect x="585" y="306" width="75" height="20" fill="#26a69a" opacity="0.5"/>
+    <text x="622" y="350" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#2e7d32">विक्रेता सकिए, थोरैमै ↑</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Wyckoff को तेस्रो नियम — Effort vs Result देखाउँछ (Effort = Volume, Result = मूल्यको candle)। बायाँ (<strong>High Effort, Low Result</strong>): Volume एकदमै धेरै आयो (ठूलो bar), तर मूल्य खासै बढेन — सानो candle मात्र बन्यो। यसको अर्थ — माथि कुनै ठूलो Supply (सेलिङ प्रेसर) लुकेको छ, जसले क्रेताको पूरै प्रयासलाई रोकिदियो (reversal को चेतावनी)। दायाँ (<strong>Low Effort, High Result</strong>): Volume सामान्य/कम (सानो bar), तर मूल्य ठूलो Marubozu candle बनाएर बलियोसँग माथि गयो। यसको अर्थ — विक्रेता पूरै सकिएका छन्, त्यसैले थोरै प्रयासले पनि मूल्य सजिलै माथि गइरहेको छ (बलियो संकेत)। मुख्य पाठ — Volume वा Price एक्लै आधा कथा मात्र भन्छन्; दुवै सँगै तुलना गर्दा मात्र बजारको साँचो सत्य देखिन्छ।
+</div>
+
+<p>किन महत्वपूर्ण छ? किनभने केवल भोल्युम वा केवल मूल्यले मात्र बजारको आधा कथा मात्र भन्छन्। जब यी दुवैलाई एकसाथ राखेर तुलना गरिन्छ, तब मात्र बजारको वास्तविक सत्य बाहिर आउँछ।</p>
+
+<div class="sub-heading">Market किन Cycle (चक्र) मा चल्छ?</div>
+<p>एकजना नयाँ ट्रेडरले प्रायः सोच्ने गर्छ, “यदि यो राम्रो र नाफा कमाउने कम्पनी हो भने यसको शेयर मूल्य सधैं सीधा माथि मात्र गइरहनुपर्छ।” तर वास्तविक बजार यसरी कहिल्यै चल्दैन। बजार सधैं एउटा चक्रमा चल्छ।</p>
+<ol>
+  <li>पहिले बजार एक ठाउँमा शान्त भएर तयारी गर्छ (<strong>Accumulation</strong>)</li>
+  <li>त्यसपछि मूल्य आक्रामक रूपमा माथि बढ्छ (<strong>Markup</strong>)</li>
+  <li>माथि पुगेपछि बजार थाक्छ र शेयर बिक्री गरिन्छ (<strong>Distribution</strong>)</li>
+  <li>अन्तमा बजार तीव्र गतिमा तल खस्छ (<strong>Markdown</strong>)</li>
+</ol>
+<p>यो चक्र समाप्त भएपछि बजार फेरि पहिलो चरणबाट सुरु हुन्छ र यो प्रक्रिया अनन्त कालसम्म दोहोरिइरहन्छ।</p>
+
+<!-- VISUAL 6: Market Cycle 4 phases -->
+<div class="visual-block">
+  <div class="visual-title">Market Cycle — 4 चरण (Accumulation → Markup → Distribution → Markdown)</div>
+  <svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="380" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">बजार सधैँ यो चक्रमा घुम्छ</text>
+
+    <rect x="40" y="58" width="740" height="240" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- Phase 1 Accumulation (low range) -->
+    <g stroke-width="1.6">
+      <line x1="70" y1="232" x2="70" y2="262" stroke="#26a69a"/><rect x="63" y="238" width="14" height="16" fill="#26a69a"/>
+      <line x1="105" y1="228" x2="105" y2="258" stroke="#ef5350"/><rect x="98" y="234" width="14" height="14" fill="#ef5350"/>
+      <line x1="140" y1="230" x2="140" y2="260" stroke="#26a69a"/><rect x="133" y="236" width="14" height="16" fill="#26a69a"/>
+      <line x1="175" y1="226" x2="175" y2="256" stroke="#ef5350"/><rect x="168" y="232" width="14" height="14" fill="#ef5350"/>
+      <!-- Phase 2 Markup (rising) -->
+      <line x1="215" y1="200" x2="215" y2="232" stroke="#26a69a"/><rect x="206" y="205" width="18" height="22" fill="#26a69a"/>
+      <line x1="255" y1="175" x2="255" y2="205" stroke="#26a69a"/><rect x="246" y="180" width="18" height="20" fill="#26a69a"/>
+      <line x1="295" y1="152" x2="295" y2="182" stroke="#ef5350"/><rect x="286" y="157" width="18" height="12" fill="#ef5350"/>
+      <line x1="335" y1="130" x2="335" y2="160" stroke="#26a69a"/><rect x="326" y="135" width="18" height="20" fill="#26a69a"/>
+      <line x1="375" y1="110" x2="375" y2="138" stroke="#26a69a"/><rect x="366" y="114" width="18" height="18" fill="#26a69a"/>
+      <!-- Phase 3 Distribution (high range) -->
+      <line x1="415" y1="95" x2="415" y2="125" stroke="#26a69a"/><rect x="408" y="101" width="14" height="14" fill="#26a69a"/>
+      <line x1="450" y1="92" x2="450" y2="122" stroke="#ef5350"/><rect x="443" y="98" width="14" height="14" fill="#ef5350"/>
+      <line x1="485" y1="96" x2="485" y2="126" stroke="#26a69a"/><rect x="478" y="102" width="14" height="12" fill="#26a69a"/>
+      <line x1="520" y1="93" x2="520" y2="123" stroke="#ef5350"/><rect x="513" y="99" width="14" height="14" fill="#ef5350"/>
+      <!-- Phase 4 Markdown (falling) -->
+      <line x1="560" y1="110" x2="560" y2="142" stroke="#ef5350"/><rect x="551" y="115" width="18" height="22" fill="#ef5350"/>
+      <line x1="600" y1="135" x2="600" y2="168" stroke="#ef5350"/><rect x="591" y="141" width="18" height="22" fill="#ef5350"/>
+      <line x1="640" y1="160" x2="640" y2="195" stroke="#26a69a"/><rect x="631" y="166" width="18" height="12" fill="#26a69a"/>
+      <line x1="680" y1="185" x2="680" y2="220" stroke="#ef5350"/><rect x="671" y="191" width="18" height="22" fill="#ef5350"/>
+      <line x1="720" y1="210" x2="720" y2="245" stroke="#ef5350"/><rect x="711" y="216" width="18" height="22" fill="#ef5350"/>
+    </g>
+    <!-- phase labels -->
+    <text x="122" y="285" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#2e7d32">1. Accumulation</text>
+    <text x="295" y="285" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#1a56cc">2. Markup ↑</text>
+    <text x="467" y="285" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c8a800">3. Distribution</text>
+    <text x="650" y="285" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c62828">4. Markdown ↓</text>
+
+    <rect x="40" y="316" width="740" height="48" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="410" y="338" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#111">तल किन्छ (Accumulation) → माथि बेच्छ (Distribution) → चक्र फेरि दोहोरिन्छ</text>
+    <text x="410" y="357" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">कुनै ट्रेन्ड सधैँ रहँदैन — बजार चक्रमा चल्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले बजारको Market Cycle का 4 चरण real candle मा देखाउँछ। (1) <strong>Accumulation</strong>: बजार तल शान्त range मा (साना candle) — स्मार्ट मनी चुपचाप किन्दै। (2) <strong>Markup</strong>: तयारी सकिएपछि मूल्य आक्रामक रूपमा माथि (हरियो candle बढी)। (3) <strong>Distribution</strong>: माथि पुगेपछि बजार थाक्छ, range मा घुम्छ (साना candle माथि) — स्मार्ट मनी जनतालाई बेच्दै। (4) <strong>Markdown</strong>: अन्त्यमा मूल्य तीव्र गतिमा तल खस्छ (रातो candle बढी)। यो चक्र सकिएपछि फेरि पहिलो चरणबाट सुरु हुन्छ। मुख्य पाठ — "राम्रो कम्पनीको शेयर सधैँ माथि मात्र जान्छ" भन्ने भ्रम हो; कुनै ट्रेन्ड सधैँ रहँदैन, बजार सधैँ यो चक्रमा घुम्छ। यो चक्र चिन्न सके भीडभन्दा अगाडि रहन सकिन्छ।
+</div>
+
+<div class="sub-heading">Retail Trader किन फस्छ?</div>
+<p>साधारण रिटेल ट्रेडरहरू प्रायः बजारमा अन्तिम परिणाम आइसकेपछि मात्र ब्युँझिन्छन्। जब जताततै राम्रा समाचारहरू (News) आउँछन्, सामाजिक सञ्जालहरू त्यो स्टकको चर्चाले भरिन्छन् र चार्टको ब्रेकआउट सबैको आँखामा छर्लङ्ग देखिन्छ, तब मात्र उनीहरू उत्साहित भएर बजारमा छिर्छन् (Entry)।</p>
+
+<p>तर वास्तविकता के हो भने, त्यतिबेला सम्म ठूला खेलाडीहरूको तयारी र कमाउने चरण पहिले नै समाप्त भइसकेको हुन्छ। त्यसैले Wyckoff Logic ले ट्रेडरलाई भीडभन्दा अगाडि बढेर बजारको प्रारम्भिक संकेतहरू खोज्न सिकाउँछ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>नेपाली शेयर बजार (NEPSE) मा पनि धेरै पटक यो वाइकोफको नियम दुरुस्तै देखिने गर्छ। नेप्सेमा कुनै कम्पनीको शेयर लामो समयसम्म एकदमै शान्त बस्छ, दैनिक कारोबार कित्ता र रकम (Volume) निकै कम हुन्छ र धेरैजसो लगानीकर्ताहरूको ध्यान त्यसमा कत्ति पनि जाँदैन।</p>
+
+<p>तर पछि बिस्तारै र गोप्य रूपमा:</p>
+<ul>
+  <li>त्यसको दैनिक भोल्युम बढ्न थाल्छ</li>
+  <li>चार्टको आन्तरिक संरचनामा सुधार आउँछ</li>
+  <li>विक्रेताहरू कम हुँदै जान्छन् र डिमान्ड बलियो बन्छ</li>
+</ul>
+
+<p>र अन्ततः बजारमा सबैले थाहा पाउनु अगावै त्यसले एउटा ठूलो र तीव्र गतिको मुभ (Move) लिन्छ। यसको अर्थ बजारमा साइडवेज बसेका हरेक कम्पनीका शेयरहरू बढ्छन् नै भन्ने होइन। तर साइडवेज फेजलाई केवल “मरेको वा बेकार बजार” भनेर आँखा चिम्लेर बेवास्ता गर्नु पनि ठूलो भूल हो। एउटा चतुर ट्रेडरले त्यसको भित्र लुकेको वास्तविक शक्तिलाई भोल्युम र प्राइस एक्सनको माध्यमबाट पहिल्याउन सक्नुपर्छ।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>मानव मनोविज्ञान सधैं बाहिरी परिणाम र भीडको पछि लाग्न मन पराउँछ। जब मूल्य तीव्र गतिमा बढ्छ, मानिसहरूमा लोभ र उत्साह जाग्छ। जब मूल्य लगातार घट्छ, मानिसहरूमा डर र निराशा पैदा हुन्छ।</p>
+
+<p>तर बजारका ठूला र वास्तविक अवसरहरू सधैं त्यतिबेला निर्माण भइरहेका हुन्छन्, जब भीडको ध्यान बजारमा परेको हुँदैन। Wyckoff Logic ले ट्रेडरलाई बजारमा आउने उतारचढावसँगै विचलित भएर तत्काल 'Reaction' (प्रतिक्रिया) दिनुको सट्टा, एक शान्त र तटस्थ दर्शक बनेर बजारको भित्री चाललाई 'Observation' (अवलोकन) गर्ने एउटा परिपक्व बानी सिकाउँछ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<ul>
+  <li>चार्ट हेर्दा केवल मूल्य (Price) को चाल मात्र हेर्नु र भोल्युमलाई पूर्ण रूपमा बेवास्ता गर्नु।</li>
+  <li>लामो समयसम्म साइडवेज (Sideways) बसेको बजारलाई काम नलाग्ने ठानेर विश्लेषण नै नगर्नु।</li>
+  <li>बजारको जग मानिने 'Cause' र 'Effect' को आपसी सम्बन्धलाई बुझ्ने प्रयास नगर्नु।</li>
+  <li>बजारमा कुन समयमा Demand बलियो छ र कुन समयमा Supply, सो नहेर्नु।</li>
+  <li>बजारको आफ्नै चार्ट भन्दा सामाजिक सञ्जाल र हल्लाहरूलाई अकाट्य सत्य मान्नु।</li>
+  <li>भीड र बजारको अत्यधिक उत्साहलाई अन्धो भएर पछ्याउनु।</li>
+  <li>चार्टमा देखिने प्रयास र त्यसको परिणाम (Effort vs Result) को असमानतालाई ध्यान नदिनु।</li>
+  <li>बजार सधैं चक्र (Cycle) मा चल्छ भन्ने सत्यलाई भुलेर एउटै ट्रेन्ड सधैं रहन्छ भन्ने भ्रममा पर्नु।</li>
+  <li>ठूला खेलाडीहरूको स्पष्ट प्राविधिक कन्फर्मेसन (Confirmation) नआउँदै हतारमा निर्णय लिनु।</li>
+  <li>बजारले आफ्नो संरचना तयार पार्न समय लिने हुनाले आवश्यक धैर्यता गुमाउनु।</li>
+</ul>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ चेतावनी</div>
+  <p style="margin-bottom:0;">बजारमा कुनै पनि ठूलो ब्रेकआउट (Breakout) वा ट्रेन्ड देखिनु भन्दा धेरै पहिले बजारको भित्री संरचनामा एउटा महत्वपूर्ण र गोप्य तयारी (Cause) भइरहेको हुन सक्छ। त्यसैले केवल बाहिर देखिने मूल्यको पछिल्लो लहर मात्र हेरेर हतारमा ट्रेड नलिनुहोस्; त्यसको पछाडिको वास्तविक भोल्युम र तयारीको चरणलाई अनिवार्य रूपमा विश्लेषण गर्नुहोस्।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<ul>
+  <li>चार्ट खोल्ने बित्तिकै सधैं मूल्य (Price) र भोल्युम (Volume) लाई एकसाथ राखेर मात्र अध्ययन गर्नुहोस्।</li>
+  <li>लामो समयसम्म एउटै दायरामा बसेका Sideways Phase वा कन्सोलिडेसनहरूलाई विशेष ध्यान दिएर नियाल्नुहोस्।</li>
+  <li>बजारको हरेक उतारचढावलाई सधैं Supply र Demand को सन्तुलनको दृष्टिकोणबाट सोच्ने बानी बसाल्नुहोस्।</li>
+  <li>चार्टमा जहिले पनि ठूलो मुभ आउनु अगाडिको 'Cause' र त्यसपछिको 'Effect' खोज्ने प्रयास गर्नुहोस्।</li>
+  <li>बजारको महत्वपूर्ण सपोर्ट र रेजिस्टेन्स लेभलहरूमा Effort र Result को आपसी सम्बन्ध तुलना गर्नुहोस्।</li>
+  <li>भीडको मनोविज्ञान (Crowd Psychology) बुझेर जहिले पनि त्यसको विपरीत स्मार्ट मनीको दृष्टिकोणबाट सोच्नुहोस्।</li>
+  <li>बजारको प्राकृतिक चक्र (Market Cycle) लाई सधैं सम्मान गर्नुहोस् र सोही अनुसार आफ्नो रणनीति बनाउनुहोस्।</li>
+  <li>बजारमा हतारमा प्रतिक्रिया दिनु भन्दा आफ्नो आन्तरिक Observation Skill लाई लगातार बलियो बनाउनुहोस्।</li>
+  <li>बजारको स्पष्ट दिशा र भोल्युमको पुष्टि नभएसम्म आफ्नो ट्रेडिङ अनुशासन र धैर्यता कायम राख्नुहोस्।</li>
+  <li>बजारको समग्र सन्दर्भ (Context) र ब्याकग्राउन्ड नबुझी कुनै पनि एकल संकेतको आधारमा मात्र निष्कर्ष नलगाउनुहोस्।</li>
+</ul>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: लामो कन्सोलिडेसन र लुकेको तयारी</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">नेप्सेको एउटा स्टक विगत ८ महिनादेखि एउटा निश्चित दायरा (Range) भित्र मात्र तलमाथि गरिरहेको छ। बाहिर कतै पनि यसको कुनै चर्चा छैन, तर पछिल्ला केही हप्तादेखि मूल्य स्थिर रहँदा पनि तल भोल्युमका बारहरू विस्तारै र व्यवस्थित रूपमा बढिरहेका छन्। यसले बजारमा एउटा ठूलो 'Cause' (तैयारी) निर्माण भइरहेको संकेत गर्छ।</p></div>
+
+<p><strong>Scenario 2: बलियो ब्रेकआउट र डिमान्डको पुष्टि</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">लामो समयको कन्सोलिडेसन पछि उक्त शेयरले आफ्नो माथिल्लो रेजिस्टेन्स रेन्जलाई एउटा ठूलो मारुबोजु क्यान्डल र अत्यधिक बलियो भोल्युमका साथ ब्रेकआउट दियो। यसले बजारमा आधिकारिक रूपमा 'Effect' को चरण सुरु भएको र डिमान्ड पूर्ण रूपमा हावी भएको पुष्टि गर्छ।</p></div>
+
+<p><strong>Scenario 3: उच्च भोल्युम तर परिणाम शून्य</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">बजारको एउटा स्टक आफ्नो उच्च विन्दुमा पुगेको छ। त्यहाँ दिनभरिमा इतिहासकै सबैभन्दा धेरै कारोबार र भोल्युम (Huge Effort) आयो, तर दिनको अन्त्यमा मूल्य भने जम्मा ०.५० पैसा मात्र बढ्न सक्यो (Low Result)। एउटा सजग वाइकोफ ट्रेडरले यहाँ ठूलो सप्लाई आएको बुझ्छ र चनाखो बन्छ।</p></div>
+
+<h2 class="section-heading">Table 57.1: Wyckoff का ३ नियमको सारांश</h2>
+
+<table>
+  <thead>
+    <tr><th>नियम</th><th>अर्थ</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Law of Supply and Demand</td><td>मूल्यको दिशा तय गर्छ</td></tr>
+    <tr><td>Law of Cause and Effect</td><td>मुभको गहिराइ र तयारीको समय बुझाउँछ</td></tr>
+    <tr><td>Law of Effort vs Result</td><td>Volume र मूल्यको सन्तुलनबाट ट्रेन्डको आधिकारिकता नाप्छ</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 57.2: Supply vs Demand विश्लेषण</h2>
+
+<table>
+  <thead>
+    <tr><th>बजारको शक्ति</th><th>परिणाम</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Demand &gt; Supply</td><td>क्रेता आक्रामक → मूल्य माथि</td></tr>
+    <tr><td>Supply &gt; Demand</td><td>विक्रेता हावी → मूल्य तल</td></tr>
+    <tr><td>दुवै बराबर</td><td>बजार एउटै रेन्जमा कन्सोलिडेसन</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 57.3: Cause vs Effect उदाहरण</h2>
+
+<table>
+  <thead>
+    <tr><th>चरण</th><th>बजार रूप</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cause</td><td>Accumulation वा Distribution को लामो साइडवेज अवधि (शक्ति जम्मा)</td></tr>
+    <tr><td>Effect</td><td>त्यसपछि सुरु हुने बलियो Uptrend (Markup) वा Downtrend (Markdown)</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Wyckoff Observation Checklist</div>
+  <ul>
+    <li>के मैले हालको बजार वा स्टकको मुख्य Price Structure र प्रवृत्तिलाई स्पष्टसँग बुझ्न सकेँ?</li>
+    <li>के मैले मूल्यको चालसँगै तलको Volume को वास्तविक स्थितिलाई गम्भीरतापूर्वक अध्ययन गरेँ?</li>
+    <li>के वर्तमान बजारको यो विन्दुमा Supply (आपूर्ति) को दबाब बढी छ कि Demand (माग) को?</li>
+    <li>के यो स्टक लामो समयदेखि कुनै Sideways Phase वा कन्सोलिडेसन दायराभित्र बसिरहेको छ?</li>
+    <li>के चार्टमा एउटा ठूलो मुभ आउनका लागि आवश्यक 'Cause' (तयारी) निर्माण भइरहेको देखिन्छ?</li>
+    <li>के कन्सोलिडेसन रेन्ज समाप्त भएर बजारमा वास्तविक 'Effect' (ट्रेन्ड) को सुरुवात भएको हो?</li>
+    <li>के मैले चार्टको मुख्य विन्दुहरूमा Effort भर्सेस Result को नियम पूर्ण रूपमा लागू गरेर तुलना गरेँ?</li>
+    <li>के मैले भीडको भावना (Crowd Psychology) भन्दा अलग हटेर स्मार्ट मनीको दृष्टिकोणबाट सोचेँ?</li>
+    <li>के यो ट्रेडको योजना बनाउँदा मैले समग्र बजारको व्यापक Context र वातावरणलाई विचार गरेको छु?</li>
+    <li>के मेरो यो विश्लेषण कुनै भावना वा हल्लामा आधारित नभएर पूर्ण रूपमा चार्टको ठोस तथ्यमा आधारित छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1</div>
+  <p>नेपाल शेयर बजार (NEPSE) का हालका कुनै पनि ५ वटा स्पष्ट Sideways Chart हरू खोज्नुहोस्। तिनीहरूको भोल्युमको ट्रेन्ड हेरेर कुन-कुन स्टकमा भोल्युम बिस्तारै बढ्दैछ, आफ्नो डायरीमा नोट बनाउनुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2</div>
+  <p>नेप्सेको इतिहासबाट एउटा यस्तो पुरानो चार्ट खोज्नुहोस् जसमा ठूलो ब्रेकआउट आएको थियो। त्यो ब्रेकआउट हुनु भन्दा अगाडिको 'Cause Phase' (तयारीको चरण) कति महिना लामो थियो, गणना गरेर लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3</div>
+  <p>चार्टहरूमा एउटा यस्तो उदाहरण फेला पार्नुहोस् जहाँ दैनिक भोल्युम एकदमै धेरै बढेको थियो तर मूल्यको क्यान्डल भने एकदमै सानो बन्यो। त्यसपछिका दिनहरूमा मूल्यमा कस्तो परिवर्तन आयो, आफ्नो विश्लेषण लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4</div>
+  <p>आजै आफ्नो ट्रेडिङ जर्नल (Trading Journal) को नयाँ पाना पल्टाउनुहोस् र इमानदारीपूर्वक यो आत्म-समीक्षा लेख्नुहोस्: “म बजारमा केवल बाहिरी मूल्य (Price) मात्र पछ्याउँछु कि त्यो मूल्य परिवर्तन हुनुको भित्री कारण (Cause) खोज्ने प्रयास गर्छु?”</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p style="margin-bottom:0;">Wyckoff Logic को मुख्य उद्देश्य बजारको भविष्यको शतप्रतिशत सटीक भविष्यवाणी गर्नु कदापि होइन। यसको वास्तविक उद्देश्य त बजारले वर्तमान समयमा देखाpageको वास्तविक व्यवहार र चरित्रलाई सही रूपमा बुझ्नु हो। जब तपाईं चार्ट हेर्दा केवल मूल्यको रेखा मात्र हेर्न छोडेर मूल्य र भोल्युमको मिश्रणबाट बन्ने वास्तविक कथा पढ्न सिक्नुहुन्छ, तब चार्ट तपाईंका लागि केवल केही कोरिएका रेखाहरू मात्र रहने छैन, बरु त्यो त बजारको भित्री सत्य ओकल्ने सबैभन्दा भरपर्दो स्रोत बन्न जानेछ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 57 Summary</div>
+  <p>Wyckoff Logic भनेको वित्तीय बजारलाई Supply र Demand को सनातन र प्राकृतिक नियमको दृष्टिकोणबाट बुझ्ने एउटा निकै शक्तिशाली फ्रेमवर्क हो। यस सिद्धान्तका तीनवटा मुख्य खम्बाहरू छन्: Law of Supply and Demand, Law of Cause and Effect, र Law of Effort vs Result।</p>
+  <p style="margin-bottom:0;">यसमा प्रयोग हुने 'Composite Man' को अवधारणाले ट्रेडरलाई बजारका ठूला र चतुर खेलाडीहरूको दृष्टिकोणबाट सोच्न र रणनीतिक योजना बनाउन सिकाउँछ। मूल्य र भोल्युमलाई सधैं एकसाथ राखेर अध्ययन गर्दा बजारको वास्तविक चाल र चक्रलाई अझ स्पष्ट रूपमा बुझ्न सकिन्छ। अर्को अध्यायमा हामी यही बलियो आधारलाई प्रयोग गरेर बजारका चारवटा अत्यन्तै महत्वपूर्ण चरणहरू: Accumulation, Markup, Distribution र Markdown को बारेमा विस्तृत र व्यावहारिक रूपमा बुझ्नेछौँ।</p>
+</div>
+
+<div class="closing-quote">
+  एकजना सफल र परिपक्व ट्रेडरले केवल मूल्य (Price) कहाँ पुग्यो र<br>
+  कहाँ छ भन्ने मात्र हेर्दैन, बरु त्यो मूल्य त्यहाँसम्म<br>
+  किन र कसरी पुगेको छ भन्ने कुराको<br>
+  भित्री रहस्य पनि उत्तिकै गहिराइमा बुझ्ने प्रयास गर्छ।
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4: Broker, TMS, Demat, MeroShare, EDIS, WACC — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.checklist-subheading { font-weight: 700; font-size: 15px; margin: 16px 0 8px; color: #111111; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 20px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 4: FOUNDATION</div>
+  <h1 class="chapter-title">Broker, TMS, Demat, MeroShare, EDIS, WACC</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>बिनोदले एउटा share बेच्यो। उसको सोच थियो—<strong>“Share बेचें, अब पैसा आउँछ।”</strong> तर केही दिनपछि उसलाई broker बाट message आयो कि EDIS भएको छैन। ऊ अलमलियो। <strong>“EDIS भनेको के हो? मैले त share बेचिसकें नि!”</strong> त्यसपछि उसले MeroShare खोल्यो, तर कुन share transfer गर्ने, कसरी confirm गर्ने, WACC मिलेको छ कि छैन भन्ने कुरा बुझेन।</p>
+
+<p>अर्को beginner सुष्माले TMS मा buy order राख्दा price गलत हालिन्। उनले Rs. 450 मा किन्न खोजेकी थिइन्, तर हतारमा Rs. 540 हालिन्। Order execute भएपछि मात्र गल्ती थाहा भयो। उनलाई chart भन्दा पहिले system नबुझ्नुको मूल्य चुकाउनुपर्‍यो।</p>
+
+<p>धेरै नयाँ trader हरू chart सिक्न चाहन्छन्, Breakout खोज्न चाहन्छन्, RSI हेर्न चाहन्छन्, तर Broker, TMS, Demat, MeroShare, EDIS, WACC जस्ता practical system राम्रोसँग बुझ्दैनन्। सेयर बजारमा केवल analysis जानेर हुँदैन; transaction system नबुझ्दा राम्रो trade पनि problem मा पर्न सक्छ।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Trading को आधार केवल chart होइन। तपाईंले share किन्न र बेच्न प्रयोग गर्ने system पनि तपाईंको trading journey को महत्वपूर्ण भाग हो। Broker, TMS, Demat, MeroShare, EDIS, WACC जस्ता कुरा नबुझी secondary market मा active trading गर्नु practical risk हो।</p>
+
+<p>धेरै beginner हरूले गल्ती analysis मा मात्र गर्दैनन्; process मा पनि गर्छन्। Order गलत राख्ने, executed order नबुझ्ने, share बेचेर EDIS नगर्ने, WACC update नगर्ने, broker payment process नबुझ्ने, Demat मा share आयो कि आएन check नगर्ने, settlement समय नबुझ्ने—यी सबै वास्तविक समस्या हुन्।</p>
+
+<p>यो chapter ले तपाईंलाई NEPSE मा share किनबेच गर्दा प्रयोग हुने मुख्य system हरूको practical अर्थ बुझाउँछ। यो ज्ञानले तपाईंलाई unnecessary panic, penalty risk, confusion, र operational mistake बाट बचाउन मद्दत गर्छ। Trader का लागि system clarity पनि Risk Management कै भाग हो।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p><strong>Broker</strong> भनेको तपाईं र NEPSE बीचको माध्यम हो। तपाईं आफैं direct NEPSE मा गएर share किन्न-बेच्न सक्नुहुन्न। तपाईंले licensed broker मार्फत transaction गर्नुपर्छ। Broker ले तपाईंको buy/sell order market मा पठाउने, transaction process गर्ने, payment/settlement मिलाउने काम गर्छ।</p>
+
+<p><strong>TMS</strong> अर्थात् Trading Management System हो, जहाँबाट तपाईं secondary market मा buy र sell order राख्नुहुन्छ। TMS मा तपाईं stock symbol खोज्नुहुन्छ, quantity हाल्नुहुन्छ, price हाल्नुहुन्छ, अनि buy/sell order submit गर्नुहुन्छ। Order match भयो भने trade execute हुन्छ।</p>
+
+<p><strong>Demat account</strong> भनेको तपाईंका share electronic form मा राखिने account हो। पहिले physical share certificate हुन्थ्यो, अहिले share digital रूपमा Demat मा रहन्छ। तपाईंले share किन्नुभयो भने settlement पछि Demat मा आउँछ। बेच्नुभयो भने Demat बाट transfer हुन्छ।</p>
+
+<p><strong>MeroShare</strong> भनेको CDSC सँग सम्बन्धित online platform हो, जहाँबाट तपाईं IPO apply गर्न, portfolio हेर्न, EDIS गर्न, WACC update गर्न, र share transfer सम्बन्धी काम गर्न सक्नुहुन्छ।</p>
+
+<p><strong>EDIS</strong> भनेको Electronic Delivery Instruction Slip हो। तपाईंले secondary market मा share बेचिसकेपछि आफ्नो Demat account बाट buyer तर्फ share transfer गर्न electronic instruction दिनुपर्छ। यही process EDIS हो।</p>
+
+<p><strong>WACC</strong> अर्थात् Weighted Average Cost of Capital हो। सरल भाषामा, तपाईंले कुनै share कुन average cost मा किन्नुभएको हो भन्ने calculation हो। Share बेच्दा capital gain/loss calculation का लागि WACC महत्वपूर्ण हुन्छ।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Broker छान्दा beginner ले केवल broker number वा साथीले प्रयोग गरेको broker मात्र नहेर्नु राम्रो हुन्छ। Broker को service, payment speed, customer support, TMS access, communication clarity, settlement handling, र problem आउँदा response कस्तो छ भन्ने कुरा पनि महत्वपूर्ण हुन्छ। Active trader का लागि broker को reliability धेरै महत्वपूर्ण हुन्छ, किनकि trading मा timing र settlement दुवै matter गर्छन्।</p>
+
+<p>TMS trader को daily working platform हो। TMS मा order राख्दा सानो गल्ती पनि महँगो पर्न सक्छ। Quantity गलत हाल्दा तपाईंले सोचेजति भन्दा धेरै share किन्न सक्नुहुन्छ। Price गलत हाल्दा खराब Entry हुन सक्छ। Buy को सट्टा Sell वा Sell को सट्टा Buy click गर्ने गल्ती पनि beginner मा हुन सक्छ। त्यसैले order submit गर्नु अघि symbol, price, quantity, order type, र total amount ध्यान दिएर check गर्नु trader को basic discipline हो।</p>
+
+<p>TMS मा order राखेपछि त्यो तुरुन्त execute नहुन पनि सक्छ। यदि तपाईंले राखेको buy price मा seller छैन भने order pending रहन सक्छ। यदि seller को price मिल्यो भने execute हुन्छ। त्यस्तै sell order मा buyer price मिल्नुपर्छ। Beginner ले pending order र executed order बीच फरक नबुझ्दा confusion हुन्छ। केहीले order राखेको मात्र आधारमा share किनेको ठान्छन्, तर order execute नभएसम्म trade भएको हुँदैन।</p>
+
+<p>Demat account तपाईंको share राख्ने digital locker जस्तै हो। तपाईंले secondary market बाट share किन्नुभयो भने settlement पछि share तपाईंको Demat मा आउँछ। तपाईंले share बेच्नुभयो भने share तपाईंको Demat बाट transfer गर्नुपर्छ। Demat बिना modern share transaction practical रूपमा सम्भव हुँदैन।</p>
+
+<p>MeroShare धेरै beginner का लागि IPO apply गर्ने platform मात्र जस्तो लाग्छ, तर active trader का लागि यसको importance अझ धेरै छ। MeroShare बाट तपाईंले आफ्नो share balance हेर्न सक्नुहुन्छ, EDIS गर्न सक्नुहुन्छ, WACC update गर्न सक्नुहुन्छ, portfolio information हेर्न सक्नुहुन्छ। Share बेचिसकेपछि MeroShare मा गएर EDIS गर्नु बिर्सिनु ठूलो practical गल्ती हो।</p>
+
+<p>EDIS गर्दा तपाईंले बेचेको share transfer गर्न instruction दिनुहुन्छ। यदि तपाईंले time मा EDIS गर्नुभएन भने settlement problem, closeout risk, penalty risk, वा broker बाट follow-up आउन सक्छ। त्यसैले share बेच्ने trader ले <strong>“Sell भयो”</strong> भनेर मात्र ढुक्क हुन हुँदैन। Sell पछि EDIS भयो कि भएन, त्यो confirm गर्नुपर्छ।</p>
+
+<p>WACC trader र investor दुवैका लागि महत्वपूर्ण छ। तपाईंले कुनै share फरक-फरक price मा धेरै पटक किन्नुभएको छ भने तपाईंको average cost फरक हुन्छ। Share बेच्दा capital gain calculation मा cost base चाहिन्छ। WACC update नगर्दा tax calculation वा profit/loss understanding मा confusion हुन सक्छ। Beginner ले धेरै पटक <strong>“म profit मा छु कि loss मा?”</strong> भनेर गलत हिसाब गर्छन् किनकि उनीहरूले actual cost, charges, tax, र WACC राम्रोसँग मिलाएका हुँदैनन्।</p>
+
+<p>Trading मा profit calculation गर्दा केवल buy price र sell price हेरेर पुग्दैन। Broker commission, SEBON fee, DP charge, capital gain tax, र अन्य लागू हुने charges जोडिन सक्छन्। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्। त्यसैले trade गर्नु अघि official source बाट updated rate verify गर्नु आवश्यक हुन्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<p>Active trader ले operational checklist राख्नु राम्रो हुन्छ। Buy अघि पैसा available छ कि छैन। Order सही छ कि छैन। Buy executed भयो कि pending छ। Sell अघि Demat मा share available छ कि छैन। Sell पछि EDIS गर्नुपर्ने छ कि छैन। WACC updated छ कि छैन। Broker settlement clear छ कि छैन। यी कुरा boring लाग्न सक्छन्, तर यही boring discipline ले धेरै समस्या बचाउँछ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा secondary market transaction broker मार्फत हुन्छ। Trader ले broker बाट TMS access लिन्छ, bank/payment process मिलाउँछ, Demat account link हुन्छ, अनि buy/sell order राख्न सक्छ। प्रत्येक broker को internal service style, payment process, collateral rule, communication method, र settlement handling फरक हुन सक्छ। त्यसैले आफ्नो broker को process राम्ररी बुझ्नु आवश्यक छ।</p>
+
+<p>नेपालमा धेरै investor को journey MeroShare बाट IPO apply गर्दै सुरु हुन्छ। तर secondary market मा आएपछि MeroShare को भूमिका EDIS र WACC मा धेरै महत्वपूर्ण हुन्छ। Share बेचिसकेपछि <strong>“मैले sell गरिसकें”</strong> भनेर छोड्नु हुँदैन। EDIS complete भयो कि भएन, त्यो check गर्नु trader को जिम्मेवारी हो।</p>
+
+<p>NEPSE मा beginner ले कहिलेकाहीँ practical system नबुझेर unnecessary डर मान्छन्। उदाहरणका लागि, share किनेको दिनमै Demat मा नदेखिए panic हुन्छन्। Sell गरेपछि पैसा तुरुन्त नआउँदा broker लाई दोष दिन्छन्। तर settlement cycle, broker process, CDSC process, र official rule बुझ्दा यस्तो confusion कम हुन्छ।</p>
+
+<p>यस chapter को उद्देश्य exact current settlement rule, fee, tax, वा broker charge memorize गराउनु होइन। उद्देश्य तपाईंलाई system-aware trader बनाउनु हो। किनकि यी कुरा समयसँगै परिवर्तन हुन सक्छन्। Trader ले सधैं official source बाट updated rule verify गर्नुपर्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<p>NEPSE मा technical skill र operational skill दुवै चाहिन्छ। तपाईंले perfect Breakout पहिचान गर्नुभयो, तर TMS मा order गलत राख्नुभयो भने problem हुन्छ। तपाईंले राम्रो profit मा sell गर्नुभयो, तर EDIS बिर्सिनुभयो भने stress हुन्छ। तपाईंले trade गरेपछि actual net profit calculate गर्नुभयो, तर WACC मिलाउनुभएन भने tax confusion हुन्छ। त्यसैले system knowledge पनि trading system कै भाग हो।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>System नबुझ्ने trader सानो practical problem मा पनि emotional हुन्छ। Order pending भयो भने डराउँछ। Price तल गयो भने cancel गर्न बिर्सिन्छ। Sell गरेपछि पैसा तुरुन्त नआए panic गर्छ। EDIS गर्न नजान्दा broker को message देखेर तनावमा पर्छ। WACC confusion हुँदा profit भए पनि मन ढुक्क हुँदैन।</p>
+
+<p>Trading मा already price movement को stress हुन्छ। यदि system पनि नबुझेको छ भने stress दोब्बर हुन्छ। राम्रो trader ले आफ्नो stress घटाउन process स्पष्ट राख्छ। उसलाई थाहा हुन्छ—कहाँ order राख्ने, कसरी check गर्ने, sell पछि के गर्ने, record कहाँ राख्ने, broker सँग कहिले follow-up गर्ने, र कुन कुरा official source बाट verify गर्ने।</p>
+
+<p>Beginner को अर्को psychological mistake हो—हतार। Market खुल्नेबित्तिकै share किन्न हतार, price बढ्दा chase गर्ने हतार, sell गर्दा order check नगर्ने हतार, EDIS पछि गर्छु भनेर छोड्ने बानी। Trading मा हतार धेरै महँगो पर्न सक्छ।</p>
+
+<p>System discipline ले trader को confidence बढाउँछ। जब तपाईंलाई TMS, Demat, MeroShare, EDIS, WACC को process थाहा हुन्छ, तपाईं market decision मा बढी focus गर्न सक्नुहुन्छ। Operational confusion कम भएपछि chart analysis, risk management, र psychology मा ध्यान दिन सजिलो हुन्छ।</p>
+
+<p>राम्रो trader केवल <strong>“कहाँ buy गर्ने?”</strong> मा राम्रो हुँदैन। ऊ <strong>“buy गरेपछि process कसरी manage गर्ने?”</strong> र <strong>“sell गरेपछि settlement कसरी complete गर्ने?”</strong> मा पनि disciplined हुन्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—broker को process नबुझी account खोल्नु। Broker account खुल्नु मात्र पर्याप्त होइन। Payment कसरी गर्ने, collateral कसरी काम गर्छ, sell proceeds कहिले आउँछ, support कसरी contact गर्ने, statement कसरी check गर्ने—यी कुरा बुझ्नु आवश्यक हुन्छ।</p>
+
+<p>दोस्रो गल्ती हो—TMS मा order राख्दा symbol, price, र quantity double-check नगर्नु। एउटै digit को गल्तीले trade बिग्रिन सक्छ। Active market मा हतार गर्दा beginner ले गलत price मा Entry गर्न सक्छ।</p>
+
+<p>तेस्रो गल्ती हो—pending order cancel गर्न बिर्सिनु। Trader ले buy order राख्यो, execute भएन, अनि बिर्सियो। पछि price move भएर order execute भयो भने plan बिग्रिन सक्छ। Pending order manage गर्नु पनि discipline हो।</p>
+
+<p>चौथो गल्ती हो—share sell गरेपछि EDIS गर्न बिर्सिनु। Sell order execute भएपछि काम सकियो भन्ने सोच गलत हो। EDIS complete गर्नु आवश्यक process हो।</p>
+
+<p>पाँचौँ गल्ती हो—WACC update नगर्नु वा गलत राख्नु। Actual cost नबुझ्दा trader ले आफ्नो profit/loss गलत बुझ्न सक्छ। Tax calculation मा पनि confusion हुन सक्छ।</p>
+
+<p>छैटौँ गल्ती हो—Demat मा share आएन भनेर तुरुन्त panic गर्नु। Settlement process बुझ्नु आवश्यक छ। कुनै problem भए broker वा official system बाट verify गर्नुपर्छ, तर नियम नबुझी डराउनु उचित होइन।</p>
+
+<p>सातौँ गल्ती हो—net profit calculation नगर्नु। Buy price र sell price को difference मात्र profit होइन। Charges, tax, DP charge, broker fee, र अन्य लागू हुने cost पछि मात्र real net result थाहा हुन्छ।</p>
+
+<p>आठौँ गल्ती हो—official source नहेरी social media बाट rule सिक्नु। Fee, tax, settlement, EDIS, WACC, broker process जस्ता कुरा time-sensitive हुन सक्छन्। त्यसैले official verification आवश्यक छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Broker, TMS, Demat, MeroShare, EDIS, WACC सम्बन्धी मुख्य गल्तीहरू</div>
+  <ul style="margin:8px 0 0 24px;">
+    <li>Broker को payment, settlement, र support process नबुझी account खोल्नु</li>
+    <li>TMS मा order राख्दा symbol/price/quantity double-check नगर्नु</li>
+    <li>Pending order बिर्सिनु — पछि unwanted execution हुनु</li>
+    <li>Sell गरेपछि EDIS बिर्सिएर penalty/closeout risk बढाउनु</li>
+    <li>WACC update नगरेर profit/loss र tax मा confusion हुनु</li>
+    <li>Settlement process नबुझेर unnecessary panic गर्नु</li>
+    <li>Net profit calculate नगरी charges र tax ignore गर्नु</li>
+    <li>Social media बाट rule विश्वास गर्नु, official source verify नगर्नु</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Broker र system प्रयोग गर्दा यी practical rules पालन गर्नुहोस्:</p>
+
+<ul>
+  <li>Broker account खोल्दा broker को service, support, payment process, र TMS access बुझ्नुहोस्।</li>
+  <li>TMS मा order राख्नुअघि stock symbol, price, quantity, र total amount double-check गर्नुहोस्।</li>
+  <li>Order submit गरेपछि order pending छ कि executed, confirm गर्नुहोस्।</li>
+  <li>Pending order plan मा छैन भने timely cancel गर्नुहोस्।</li>
+  <li>Buy order execute भएपछि settlement र Demat transfer process बुझ्नुहोस्।</li>
+  <li>Sell order execute भएपछि EDIS गर्नुपर्ने छ कि छैन तुरुन्त check गर्नुहोस्।</li>
+  <li>MeroShare मा share balance, EDIS status, र WACC status समय-समयमा check गर्नुहोस्।</li>
+  <li>WACC update गर्दा actual purchase cost र system instruction ध्यान दिनुहोस्।</li>
+  <li>Net profit/loss calculate गर्दा charges र tax समावेश गर्नुहोस्।</li>
+  <li>कुनै rule, rate, tax, fee, वा settlement confusion भए official source बाट verify गर्नुहोस्।</li>
+  <li>Broker सँग problem हुँदा screenshot, transaction detail, order number, र date सहित clear communication गर्नुहोस्।</li>
+  <li>Trading Journal मा केवल Entry/Exit होइन, operational mistake पनि लेख्नुहोस्।</li>
+</ul>
+
+<p>System discipline boring लाग्न सक्छ, तर यो capital protection को practical हिस्सा हो। बजारमा पैसा गुमाउने कारण सधैं गलत analysis मात्र हुँदैन; कहिलेकाहीँ गलत click, बिर्सिएको EDIS, गलत WACC, वा unmanaged order पनि हुन सक्छ।</p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p>मानौं, प्रकाशले Rs. 1,00,000 capital बाट trading सुरु गर्‍यो। उसले एउटा stock Rs. 500 मा 100 कित्ता किन्ने plan बनायो। तर TMS मा हतारमा 100 को सट्टा 200 quantity राख्यो। Order execute भयो। अब उसको position size double भयो। Stop Loss 5% थियो भने पहिले उसको risk Rs. 2,500 हुनुपर्ने थियो, तर अब risk Rs. 5,000 भयो। गल्ती chart मा थिएन, order entry मा थियो।</p>
+
+<p>अर्को scenario मा मिना ले एउटा share profit मा बेचिन्। Sell order execute भयो। उनी खुसी भइन्। तर EDIS गर्न बिर्सिइन्। पछि broker बाट message आएपछि मात्र थाहा भयो। मिना को profit trade unnecessary stress मा बदलियो। Sell गर्नु मात्र पर्याप्त थिएन; sell पछि process complete गर्नु पनि trading discipline थियो।</p>
+
+<p>तेस्रो scenario मा अजयले एउटै stock तीन पटक फरक price मा किन्यो—Rs. 400, Rs. 450, र Rs. 500 मा। पछि Rs. 520 मा बेच्दा उसलाई लाग्यो ठूलो profit भयो। तर actual average cost, broker charge, tax, र WACC मिलाउँदा net profit उसले सोचेभन्दा कम थियो। यसपछि उसले Trading Journal र WACC record राख्न सुरु गर्‍यो।</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:18%;">System</th>
+      <th style="width:42%;">मुख्य भूमिका</th>
+      <th style="width:40%;">Trader ले गर्नुपर्ने काम</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Broker</strong></td>
+      <td>तपाईं र NEPSE बीचको licensed माध्यम; order routing, payment, settlement</td>
+      <td>Service, payment speed, support, र statement बुझ्ने; clear communication राख्ने</td>
+    </tr>
+    <tr>
+      <td><strong>TMS</strong></td>
+      <td>Secondary market मा buy/sell order राख्ने online platform</td>
+      <td>Symbol, price, quantity double-check; pending vs executed order verify</td>
+    </tr>
+    <tr>
+      <td><strong>Demat</strong></td>
+      <td>Share electronic रूपमा राख्ने digital locker</td>
+      <td>Buy पछि share आयो कि check; sell अघि holding available छ verify</td>
+    </tr>
+    <tr>
+      <td><strong>MeroShare</strong></td>
+      <td>IPO apply, portfolio view, EDIS, WACC, share transfer platform</td>
+      <td>Regular login; EDIS, WACC, balance समयमा check</td>
+    </tr>
+    <tr>
+      <td><strong>EDIS</strong></td>
+      <td>Sell भएको share buyer तर्फ transfer गर्ने electronic instruction</td>
+      <td>हरेक sell पछि deadline भित्र EDIS complete गर्ने</td>
+    </tr>
+    <tr>
+      <td><strong>WACC</strong></td>
+      <td>Share को average cost; profit/loss र tax calculation को आधार</td>
+      <td>Actual purchase cost अनुसार WACC update राख्ने</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Buy गर्नुअघि:</div>
+  <ul>
+    <li>Broker account active छ?</li>
+    <li>TMS login सही छ?</li>
+    <li>Required fund/collateral available छ?</li>
+    <li>Stock symbol सही छ?</li>
+    <li>Quantity plan अनुसार छ?</li>
+    <li>Price plan अनुसार छ?</li>
+    <li>Total amount check गरिएको छ?</li>
+    <li>Trade idea, Stop Loss, Risk-Reward clear छ?</li>
+  </ul>
+</div>
+
+<div class="checklist-box">
+  <div class="checklist-title">Buy order पछि:</div>
+  <ul>
+    <li>Order pending छ कि executed?</li>
+    <li>Partial execute भएको छ कि full execute?</li>
+    <li>Pending बाँकी order manage गरिएको छ?</li>
+    <li>Trade journal मा Entry record गरिएको छ?</li>
+    <li>Stop Loss level note गरिएको छ?</li>
+  </ul>
+</div>
+
+<div class="checklist-box">
+  <div class="checklist-title">Sell गर्नुअघि:</div>
+  <ul>
+    <li>Share Demat मा available छ?</li>
+    <li>Sell quantity सही छ?</li>
+    <li>Sell price plan अनुसार छ?</li>
+    <li>Profit booking वा Stop Loss decision plan अनुसार हो?</li>
+    <li>WACC status clear छ?</li>
+  </ul>
+</div>
+
+<div class="checklist-box">
+  <div class="checklist-title">Sell order पछि:</div>
+  <ul>
+    <li>Sell order executed भयो?</li>
+    <li>EDIS गर्नुपर्ने छ?</li>
+    <li>EDIS complete भयो?</li>
+    <li>WACC update भयो?</li>
+    <li>Broker settlement check गर्नुपर्ने छ?</li>
+    <li>Net profit/loss journal मा लेखियो?</li>
+    <li>Trade बाट सिकेको lesson note गरियो?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Vocabulary Reinforcement</div>
+  <p>आफ्नो notebook मा यी शब्दहरूको simple meaning लेख्नुहोस्:</p>
+  <ul>
+    <li>Broker</li>
+    <li>TMS</li>
+    <li>Demat</li>
+    <li>MeroShare</li>
+    <li>EDIS</li>
+    <li>WACC</li>
+    <li>Settlement</li>
+    <li>Pending Order</li>
+    <li>Executed Order</li>
+    <li>Net Profit</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: TMS Observation Practice</div>
+  <p>TMS मा real order नराखी केवल observation practice गर्नुहोस्:</p>
+  <ul>
+    <li>कुनै stock symbol search गर्नुहोस्।</li>
+    <li>Market depth हेर्नुहोस्।</li>
+    <li>Buyer र seller price फरक छ कि छैन हेर्नुहोस्।</li>
+    <li>LTP, Volume, high-low, र price movement observe गर्नुहोस्।</li>
+    <li>Order राख्दा कुन-कुन field भर्नुपर्छ भनेर note गर्नुहोस्।</li>
+  </ul>
+  <p style="margin-bottom:0;">यो exercise को उद्देश्य trade गर्नु होइन। उद्देश्य platform बुझ्नु हो।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Past Trade Review</div>
+  <p>यदि तपाईंले पहिले trade गर्नुभएको छ भने एउटा पुरानो trade छान्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>Buy price कति थियो?</li>
+    <li>Sell price कति थियो?</li>
+    <li>Quantity कति थियो?</li>
+    <li>WACC के थियो?</li>
+    <li>Charges पछि net profit/loss कति भयो?</li>
+    <li>EDIS समयमै भयो कि ढिलो?</li>
+    <li>Order राख्दा कुनै operational mistake भयो कि भएन?</li>
+    <li>अर्को पटक process कसरी सुधार्ने?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Build Your Post-Trade Routine</div>
+  <p>आफ्नो लागि एउटा <strong>“Post-Trade Routine”</strong> लेख्नुहोस्। उदाहरण:</p>
+  <p style="background:#fdf6e3; padding:14px 18px; border-left:3px solid #c9b97a; font-style:italic; margin:12px 0;">Sell भयो → EDIS check → WACC check → settlement note → journal update → screenshot save → lesson write.</p>
+  <p style="margin-bottom:0;">यो routine तपाईंको trading discipline को practical हिस्सा हुनेछ।</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Chart analysis trader को आँखा हो, तर system knowledge trader को हात हो। आँखा राम्रो भएर पनि हात गलत चल्यो भने गल्ती हुन्छ। तपाईंले राम्रो setup भेट्नुभयो तर TMS मा गलत order राख्नुभयो भने analysis को फाइदा हराउन सक्छ।</p>
+  <p>Professional trader जस्तो सोच्नु भनेको केवल Breakout र Volume बुझ्नु होइन। Professional trader ले आफ्नो process पनि clean राख्छ। Order clear, record clear, EDIS clear, WACC clear, settlement clear, journal clear।</p>
+  <p>Operational discipline नभएको trader market मा unnecessary stress बोकेर हिँड्छ। System बुझ्ने trader शान्त हुन्छ, किनकि उसलाई थाहा हुन्छ—trade अघि के गर्ने, trade पछि के गर्ने, र problem आए कहाँ verify गर्ने।</p>
+  <p style="margin-bottom:0;">Trading मा सानो गल्तीले ठूलो असर पार्न सक्छ। त्यसैले हरेक click अघि एक सेकेन्ड रोकिएर check गर्नु पनि Risk Management हो।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 4 Summary</div>
+  <p>Broker तपाईं र NEPSE बीचको माध्यम हो। TMS secondary market मा buy/sell order राख्ने platform हो। Demat account share राखिने digital account हो। MeroShare IPO apply, EDIS, WACC, portfolio, र share transfer सम्बन्धी कामका लागि महत्वपूर्ण platform हो। EDIS sell भएको share transfer गर्न दिने electronic instruction हो। WACC share को average cost calculation हो, जसले profit/loss र tax calculation मा भूमिका खेल्छ।</p>
+  <p>NEPSE मा trader बन्न chart मात्र जानेर पुग्दैन। Broker process, TMS order, Demat holding, MeroShare access, EDIS deadline, WACC update, settlement, charges, tax, र official rules को practical understanding चाहिन्छ।</p>
+  <p>Beginner ले गर्ने मुख्य गल्तीहरूमा गलत order राख्नु, pending order manage नगर्नु, sell पछि EDIS बिर्सिनु, WACC update नगर्नु, net profit गलत calculate गर्नु, र official source बाट rule verify नगर्नु पर्छन्।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Trading system नबुझी trading गर्नु खतरनाक हुन्छ। Market risk मात्र होइन, operational risk पनि control गर्नुपर्छ।</p>
+</div>
+
+<div class="closing-quote">
+  राम्रो trader chart मा मात्र smart हुँदैन; ऊ आफ्नो broker, TMS, Demat, MeroShare, EDIS, WACC, र पूरा process मा पनि disciplined हुन्छ।
+</div>
+
+</div>
+</body>
+</html>

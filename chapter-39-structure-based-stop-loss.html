@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 39: Structure-based Stop Loss — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.part-label { font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #c8a800; margin-bottom: 16px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+.part-intro { background: #f0e6c0; border-radius: 6px; padding: 18px 24px; margin-bottom: 36px; text-align: center; font-size: 15px; font-weight: 600; color: #111; border: 1px solid #c9b97a; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 22px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="part-label">PART 5 — Risk Management • Trader को असली हतियार</div>
+  <div class="chapter-number">CHAPTER 39: RISK MANAGEMENT</div>
+  <h1 class="chapter-title">Structure-based Stop Loss</h1>
+</header>
+
+<div class="part-intro">
+  PART 5: Risk Management — Trader को असली हतियार
+</div>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>सागरले Stop Loss राख्न सिकेको थियो। तर उसले Stop Loss सधैं 5% तल राख्थ्यो। कुनै पनि stock, कुनै पनि setup, कुनै पनि market condition—उसको नियम एउटै थियो: <strong>“Entry बाट 5% तल Stop Loss।”</strong></p>
+
+<p>एक दिन उसले एउटा stock Rs. 500 मा किन्यो। Chart मा Pullback Setup जस्तो देखिएको थियो। Support zone Rs. 470–480 नजिक थियो। तर सागरले 5% Stop Loss राखेर Rs. 475 मा sell गर्ने plan बनायो। Price Rs. 476 सम्म आयो, Stop Loss hit भयो, अनि त्यही support zone बाट stock Rs. 560 पुग्यो। सागर रिसायो—<strong>“Market ले मेरो Stop Loss खायो।”</strong></p>
+
+<p>समस्या market मा थिएन। समस्या Stop Loss को logic मा थियो। उसले Stop Loss market structure अनुसार होइन, आफ्नो सुविधाअनुसार राखेको थियो।</p>
+
+<p>अर्को दिन सागरले अर्को stock Rs. 1000 मा किनेको थियो। उसले फेरि 5% Stop Loss राख्यो—Rs. 950। तर chart मा real support Rs. 900 तल थियो। Price Rs. 950 तल आयो, सागर बाहिरियो, तर setup अझै invalid भएको थिएन। फेरि अर्को trade मा real invalidation Rs. 980 थियो, तर 5% ruleले Stop Loss Rs. 950 राख्यो। यसपटक loss unnecessarily ठूलो भयो।</p>
+
+<p>त्यसपछि सागरले बुझ्यो—Stop Loss percentage बाट मात्र राख्ने कुरा होइन। Stop Loss structure बाट राख्नुपर्छ।</p>
+
+<p>Structure-based Stop Loss भनेको chart को वास्तविक structure अनुसार Stop Loss राख्ने तरिका हो। Support कहाँ छ? Last Higher Low कहाँ छ? Breakout level कहाँ छ? Retest low कहाँ छ? Range low कहाँ छ? Setup invalid कहाँ हुन्छ? यी प्रश्नको उत्तरबाट Stop Loss राखिन्छ।</p>
+
+<p>Structure-based Stop Loss trader लाई random loss बाट बचाउँछ। यसले Stop Loss लाई <strong>“म कति loss सहन सक्छु?”</strong> बाट <strong>“यो trade idea कहाँ गलत हुन्छ?”</strong> भन्ने professional सोचमा बदल्छ।</p>
+
+<!-- VISUAL 1: Percentage SL vs Structure SL (Sagar story) -->
+<div class="visual-block">
+  <div class="visual-title">Percentage SL vs Structure SL — सागरको गल्ती (Good vs Bad)</div>
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">एउटै stock — SL को logic फरक भए नतिजा फरक</text>
+
+    <!-- LEFT: Percentage SL (BAD) -->
+    <rect x="20" y="40" width="355" height="30" fill="#ef5350" rx="4"/>
+    <text x="197" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ 5% Percentage SL (सुविधा अनुसार)</text>
+
+    <rect x="20" y="74" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- entry Rs.500 line -->
+    <line x1="20" y1="120" x2="375" y2="120" stroke="#111" stroke-width="1.5"/>
+    <!-- 5% SL Rs.475 line (too tight, inside support zone) -->
+    <line x1="20" y1="158" x2="375" y2="158" stroke="#ef5350" stroke-width="1.6" stroke-dasharray="5,3"/>
+    <!-- support zone Rs.470-480 -->
+    <rect x="20" y="150" width="355" height="24" fill="#26a69a" fill-opacity="0.12"/>
+
+    <!-- candles dip into support, hit 5% SL, then fly up -->
+    <line x1="50" y1="115" x2="50" y2="138" stroke="#26a69a" stroke-width="1"/><rect x="46" y="118" width="8" height="16" fill="#26a69a"/>
+    <circle cx="50" cy="120" r="4" fill="#fff" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="80" y1="125" x2="80" y2="152" stroke="#ef5350" stroke-width="1"/><rect x="76" y="128" width="8" height="20" fill="#ef5350"/>
+    <line x1="110" y1="140" x2="110" y2="166" stroke="#888" stroke-width="1.4"/><rect x="106" y="143" width="8" height="14" fill="#ef5350"/>
+    <!-- dips to 476, hits SL -->
+    <line x1="140" y1="150" x2="140" y2="172" stroke="#888" stroke-width="1.5"/><rect x="135" y="153" width="10" height="10" fill="#ef5350"/>
+    <!-- then bounces and flies -->
+    <line x1="170" y1="125" x2="170" y2="152" stroke="#26a69a" stroke-width="1"/><rect x="166" y="128" width="8" height="20" fill="#26a69a"/>
+    <line x1="200" y1="105" x2="200" y2="128" stroke="#26a69a" stroke-width="1"/><rect x="196" y="108" width="8" height="18" fill="#26a69a"/>
+    <line x1="230" y1="92" x2="230" y2="110" stroke="#26a69a" stroke-width="1"/><rect x="226" y="95" width="8" height="14" fill="#26a69a"/>
+    <line x1="260" y1="105" x2="260" y2="95" stroke="#26a69a" stroke-width="1"/><rect x="256" y="82" width="8" height="14" fill="#26a69a"/>
+    <line x1="290" y1="78" x2="290" y2="96" stroke="#26a69a" stroke-width="1"/><rect x="286" y="80" width="8" height="14" fill="#26a69a"/>
+    <line x1="320" y1="68" x2="320" y2="86" stroke="#26a69a" stroke-width="1"/><rect x="316" y="70" width="8" height="13" fill="#26a69a"/>
+    <line x1="350" y1="62" x2="350" y2="80" stroke="#26a69a" stroke-width="1"/><rect x="346" y="64" width="8" height="13" fill="#26a69a"/>
+
+    <!-- bubble: SL hit -->
+    <line x1="140" y1="172" x2="140" y2="200" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="35" y="200" width="240" height="36" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="155" y="216" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">5% SL Rs. 475 hit (Rs. 476 मा)</text>
+      <text x="155" y="229" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">support zone भित्रै SL — wick ले खायो</text>
+    </g>
+    <!-- bubble: flew up -->
+    <line x1="320" y1="75" x2="290" y2="250" stroke="#888" stroke-width="0.7" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="180" y="250" width="180" height="34" rx="7" fill="#fff8dc" stroke="#c8a800" stroke-width="1.2"/>
+      <text x="270" y="266" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">अनि stock Rs. 560 उड्यो!</text>
+      <text x="270" y="278" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">"market ले मेरो SL खायो" 😣</text>
+    </g>
+
+    <!-- RIGHT: Structure SL (GOOD) -->
+    <rect x="385" y="40" width="355" height="30" fill="#26a69a" rx="4"/>
+    <text x="562" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✓ Structure SL (support zone तल)</text>
+
+    <rect x="385" y="74" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- entry Rs.500 line -->
+    <line x1="385" y1="120" x2="740" y2="120" stroke="#111" stroke-width="1.5"/>
+    <!-- support zone Rs.470-480 -->
+    <rect x="385" y="150" width="355" height="24" fill="#26a69a" fill-opacity="0.12"/>
+    <!-- structure SL below zone Rs.468 -->
+    <line x1="385" y1="182" x2="740" y2="182" stroke="#26a69a" stroke-width="1.6" stroke-dasharray="5,3"/>
+
+    <!-- same candles: dip into support, hold (SL not hit), fly up -->
+    <line x1="415" y1="115" x2="415" y2="138" stroke="#26a69a" stroke-width="1"/><rect x="411" y="118" width="8" height="16" fill="#26a69a"/>
+    <circle cx="415" cy="120" r="4" fill="#fff" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="445" y1="125" x2="445" y2="152" stroke="#ef5350" stroke-width="1"/><rect x="441" y="128" width="8" height="20" fill="#ef5350"/>
+    <line x1="475" y1="140" x2="475" y2="168" stroke="#888" stroke-width="1.4"/><rect x="471" y="143" width="8" height="16" fill="#ef5350"/>
+    <!-- dips to 476 (inside zone) but SL is at 468 so survives -->
+    <line x1="505" y1="150" x2="505" y2="172" stroke="#888" stroke-width="1.5"/><rect x="500" y="153" width="10" height="12" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <!-- bounces and flies -->
+    <line x1="535" y1="125" x2="535" y2="152" stroke="#26a69a" stroke-width="1"/><rect x="531" y="128" width="8" height="20" fill="#26a69a"/>
+    <line x1="565" y1="105" x2="565" y2="128" stroke="#26a69a" stroke-width="1"/><rect x="561" y="108" width="8" height="18" fill="#26a69a"/>
+    <line x1="595" y1="92" x2="595" y2="110" stroke="#26a69a" stroke-width="1"/><rect x="591" y="95" width="8" height="14" fill="#26a69a"/>
+    <line x1="625" y1="82" x2="625" y2="98" stroke="#26a69a" stroke-width="1"/><rect x="621" y="84" width="8" height="14" fill="#26a69a"/>
+    <line x1="655" y1="72" x2="655" y2="90" stroke="#26a69a" stroke-width="1"/><rect x="651" y="74" width="8" height="14" fill="#26a69a"/>
+    <line x1="685" y1="64" x2="685" y2="82" stroke="#26a69a" stroke-width="1"/><rect x="681" y="66" width="8" height="13" fill="#26a69a"/>
+    <line x1="715" y1="60" x2="715" y2="78" stroke="#26a69a" stroke-width="1"/><rect x="711" y="62" width="8" height="13" fill="#26a69a"/>
+
+    <!-- bubble: survived -->
+    <line x1="505" y1="172" x2="505" y2="200" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="400" y="200" width="245" height="36" rx="7" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.2"/>
+      <text x="522" y="216" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">SL Rs. 468 (zone तल) — hit भएन ✓</text>
+      <text x="522" y="229" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">dip ले छुएन, trade बाँच्यो</text>
+    </g>
+    <!-- bubble: caught the move -->
+    <line x1="685" y1="72" x2="660" y2="250" stroke="#26a69a" stroke-width="0.7" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="560" y="250" width="180" height="34" rx="7" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.2"/>
+      <text x="650" y="266" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Rs. 560 को move समात्यो 🎯</text>
+      <text x="650" y="278" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">structure ले बचायो</text>
+    </g>
+
+    <!-- support zone labels -->
+    <text x="28" y="148" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#26a69a">Support 470–480</text>
+    <text x="393" y="148" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#26a69a">Support 470–480</text>
+
+    <!-- bottom lesson -->
+    <rect x="20" y="358" width="720" height="36" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="380" y="375" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">मुख्य पाठ: SL support zone भित्र (5%) राखे wick ले खान्छ; zone तल (structure) राखे trade बाँच्छ</text>
+    <text x="380" y="389" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">समस्या market मा होइन — SL को logic मा थियो</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले सागरको गल्ती र सही तरिका सँगै देखाउँछ — एउटै stock, एउटै dip, तर SL को logic फरक। बायाँ (गलत): सागरले "Entry बाट 5% तल" भनेर SL Rs. 475 राख्यो — तर त्यो त support zone (470–480) कै भित्र पर्‍यो। Normal dip ले Rs. 476 मा SL hit गर्‍यो, अनि त्यही support बाट stock Rs. 560 उड्यो। सागर रिसायो "market ले मेरो SL खायो"। दायाँ (सही): structure-based SL support zone <strong>तल</strong> Rs. 468 मा राखियो। उही dip आयो तर SL छुएन — trade बाँच्यो र Rs. 560 को move समात्यो। मुख्य पाठ — SL support zone भित्र (सुविधा अनुसार) होइन, zone तल (structure अनुसार) राख्ने। समस्या market मा होइन, SL को logic मा थियो।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Stop Loss राख्नु आवश्यक छ, तर Stop Loss कहाँ राख्ने भन्ने अझै महत्वपूर्ण छ। Wrong Stop Loss ले राम्रो setup पनि बिगार्न सक्छ। धेरै tight Stop Lossले normal market noise मा बाहिर निकाल्छ। धेरै wide Stop Lossले unnecessary ठूलो loss दिन्छ। Random Stop Lossले chartको logicसँग कुनै सम्बन्ध राख्दैन।</p>
+
+<p>Structure-based Stop Loss trading को practical backbone हो। यसले trader लाई chart अनुसार risk define गर्न सिकाउँछ। Market percentage अनुसार चल्दैन। Market support, resistance, swing high/low, trend structure, liquidity zone, Volume, and buyer-seller behavior अनुसार चल्छ। त्यसैले Stop Loss पनि market structure अनुसार हुनुपर्छ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि धेरै beginner fixed percentage Stop Lossमा अड्किन्छन्। 5%, 7%, 10% भनेर Stop Loss राख्छन्, तर chartमा setup invalid कहाँ हुन्छ भन्ने बुझ्दैनन्। Fixed percentage केही risk limitका लागि उपयोगी हुन सक्छ, तर structureसँग नमिले त्यो practical हुँदैन।</p>
+
+<p>Structure-based Stop Loss ले तपाईंलाई यी कुरा सिकाउँछ:</p>
+
+<ul>
+  <li>Trade idea कहाँ गलत हुन्छ?</li>
+  <li>Support break भयो कि normal pullback हो?</li>
+  <li>Breakout fail भयो कि Retest हो?</li>
+  <li>Trend structure बच्यो कि बिग्रियो?</li>
+  <li>Range low बच्यो कि range breakdown भयो?</li>
+  <li>Stop Loss distance अनुसार Position Size कति राख्ने?</li>
+</ul>
+
+<p>Structure-based Stop Loss ले trading लाई emotional decisionबाट process decisionमा बदल्छ। Price घट्दा डराएर sell गर्ने होइन; structure invalid भयो कि छैन हेर्ने। Price Stop Loss नजिक आयो भन्दै panic होइन; setup logic जाँच्ने। Stop Loss hit भयो भने ego होइन; process follow गर्ने।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Structure-based Stop Loss भनेको chartको meaningful level अनुसार Stop Loss राख्नु हो। यो random percentage वा मनले सोचेको number होइन।</p>
+
+<p>उदाहरण:</p>
+
+<ul>
+  <li>Support Bounce tradeमा Stop Loss support zone तल राखिन्छ।</li>
+  <li>Breakout tradeमा Stop Loss breakout level वा breakout candle low तल राखिन्छ।</li>
+  <li>Pullback tradeमा Stop Loss pullback low वा last Higher Low तल राखिन्छ।</li>
+  <li>Range tradeमा Stop Loss range low तल राखिन्छ।</li>
+  <li>Base Breakout tradeमा Stop Loss Retest low वा base structure तल राखिन्छ।</li>
+  <li>Trend Continuation tradeमा Stop Loss last Higher Low वा consolidation low तल राखिन्छ।</li>
+</ul>
+
+<p>यसको simple logic हो:</p>
+
+<p><strong>यदि price मेरो Stop Loss levelसम्म पुग्यो भने मेरो trade idea कमजोर वा गलत भयो।</strong></p>
+
+<p>Structure-based Stop Loss को उद्देश्य marketको normal fluctuationलाई ठाउँ दिनु हो, तर setup invalid भएपछि loss काट्नु हो।</p>
+
+<p>सरल भाषामा, Structure-based Stop Loss भनेको <strong>“मलाई कति loss मन पर्दैन?”</strong> होइन, <strong>“Chartले मेरो idea गलत कहाँ देखाउँछ?”</strong> भन्ने प्रश्नको उत्तर हो।</p>
+
+<!-- VISUAL 2: The question shift -->
+<div class="visual-block">
+  <div class="visual-title">सोचको परिवर्तन — Stop Loss को असली प्रश्न</div>
+  <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="320" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Stop Loss राख्दा कुन प्रश्न सोध्ने?</text>
+
+    <!-- LEFT: wrong question -->
+    <rect x="30" y="55" width="320" height="200" rx="10" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.6"/>
+    <text x="190" y="85" text-anchor="middle" font-family="Roboto, sans-serif" font-size="30" fill="#ef5350">✗</text>
+    <text x="190" y="125" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#c62828">गलत प्रश्न (Beginner)</text>
+    <text x="190" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#111">"मलाई कति loss</text>
+    <text x="190" y="182" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#111">मन पर्दैन?"</text>
+    <text x="190" y="215" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#111">→ SL आफ्नो comfort/डर अनुसार</text>
+    <text x="190" y="234" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#111">→ chart सँग कुनै सम्बन्ध छैन</text>
+
+    <!-- arrow -->
+    <text x="380" y="160" text-anchor="middle" font-family="Roboto, sans-serif" font-size="26" font-weight="700" fill="#c8a800">→</text>
+
+    <!-- RIGHT: right question -->
+    <rect x="410" y="55" width="320" height="200" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.6"/>
+    <text x="570" y="85" text-anchor="middle" font-family="Roboto, sans-serif" font-size="30" fill="#26a69a">✓</text>
+    <text x="570" y="125" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#2e7d32">सही प्रश्न (Professional)</text>
+    <text x="570" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#111">"Chart ले मेरो idea</text>
+    <text x="570" y="182" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#111">गलत कहाँ देखाउँछ?"</text>
+    <text x="570" y="215" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#111">→ SL setup invalid हुने structure मा</text>
+    <text x="570" y="234" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#111">→ support/level/HL अनुसार</text>
+
+    <!-- bottom -->
+    <rect x="100" y="275" width="560" height="36" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="380" y="298" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">यो एउटा प्रश्न बदल्दा random loss → logical risk मा बदलिन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+Structure-based Stop Loss को पूरा सार यही एउटा सोचको परिवर्तनमा छ। बायाँ (गलत प्रश्न): beginner सोच्छ "मलाई कति loss मन पर्दैन?" — यसले SL लाई आफ्नो comfort वा डर अनुसार राख्न लगाउँछ, chart सँग कुनै सम्बन्ध हुँदैन (यही सागरको 5% गल्ती थियो)। दायाँ (सही प्रश्न): professional सोध्छ "Chart ले मेरो trade idea गलत कहाँ देखाउँछ?" — यसले SL लाई setup invalid हुने structure (support तल, breakout level तल, last Higher Low तल) मा राख्न लगाउँछ। एउटै प्रश्न बदल्दा random loss logical risk मा बदलिन्छ। SL तपाईंको मनको होइन, chart को।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Structure-based Stop Loss बुझ्न सबैभन्दा पहिले market structure बुझ्नुपर्छ। Chart मा price randomly चल्दैन। Price swing high, swing low, support, resistance, range, breakout level, trendline, moving average zone, and volume area वरिपरि react गर्न सक्छ। Stop Loss राख्दा यी structureहरूलाई ध्यान दिनुपर्छ।</p>
+
+<p>सबैभन्दा common structure हो Support Zone। यदि तपाईं Support Bounce trade लिँदै हुनुहुन्छ भने तपाईंको logic हो—support zoneमा buyer आउनेछन्। त्यसैले Stop Loss support zone तल हुनुपर्छ। यदि price support zone तल strong close भयो भने buyer support गर्न असफल भए। Trade idea कमजोर भयो। यही structure-based Stop Loss हो।</p>
+
+<p>दोस्रो structure हो Breakout Level। Breakout tradeमा तपाईंको logic हो—price resistance माथि निस्केर नयाँ zoneमा sustain हुन्छ। यदि price फेरि breakout level तल गयो र close भयो भने Breakout fail हुन सक्छ। Stop Loss breakout level तल वा breakout candle low तल राख्न सकिन्छ। तर level exact line होइन, zone हो। Price अलि retest गर्न सक्छ। त्यसैले buffer र confirmation rule चाहिन्छ।</p>
+
+<p>तेस्रो structure हो Last Higher Low। Uptrend मा last Higher Low महत्वपूर्ण हुन्छ, किनकि यसले trend structure बचाइरहेको हुन्छ। Pullback trade वा Trend Continuation tradeमा price last Higher Low तल गयो भने uptrend कमजोर हुन सक्छ। त्यसैले Stop Loss last HL तल राख्न सकिन्छ। यदि HL break भयो भने trade thesis invalid हुन सक्छ।</p>
+
+<!-- VISUAL 3: Pullback Setup structure stop -->
+<div class="visual-block">
+  <div class="visual-title">Pullback Setup — Last Higher Low तल Structure Stop (Scenario 1)</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Entry Rs. 510 → SL Rs. 478 (Last Higher Low Rs. 480 तल)</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="60" width="560" height="250" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="608" y="95" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 560</text>
+    <text x="608" y="150" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 510</text>
+    <text x="608" y="225" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 490</text>
+    <text x="608" y="262" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 480</text>
+    <text x="608" y="285" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 478</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="95" x2="600" y2="95" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="150" x2="600" y2="150" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- support zone Rs.490-500 (previous breakout support) -->
+    <rect x="40" y="200" width="560" height="25" fill="#26a69a" fill-opacity="0.10"/>
+    <!-- last HL line Rs.480 -->
+    <line x1="40" y1="255" x2="600" y2="255" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <!-- SL line Rs.478 -->
+    <line x1="300" y1="278" x2="600" y2="278" stroke="#ef5350" stroke-width="1.8"/>
+
+    <!-- uptrend HH/HL then pullback then entry -->
+    <line x1="60" y1="245" x2="60" y2="268" stroke="#26a69a" stroke-width="1"/><rect x="56" y="248" width="8" height="16" fill="#26a69a"/>
+    <line x1="86" y1="225" x2="86" y2="248" stroke="#26a69a" stroke-width="1"/><rect x="82" y="228" width="8" height="16" fill="#26a69a"/>
+    <!-- earlier HL -->
+    <line x1="112" y1="238" x2="112" y2="262" stroke="#ef5350" stroke-width="1"/><rect x="108" y="241" width="8" height="14" fill="#ef5350"/>
+    <line x1="138" y1="205" x2="138" y2="240" stroke="#26a69a" stroke-width="1"/><rect x="134" y="208" width="8" height="20" fill="#26a69a"/>
+    <!-- swing high -->
+    <line x1="164" y1="160" x2="164" y2="185" stroke="#26a69a" stroke-width="1"/><rect x="160" y="163" width="8" height="18" fill="#26a69a"/>
+    <line x1="190" y1="148" x2="190" y2="168" stroke="#26a69a" stroke-width="1"/><rect x="186" y="151" width="8" height="14" fill="#26a69a"/>
+    <!-- pullback down to support/last HL zone -->
+    <line x1="216" y1="160" x2="216" y2="195" stroke="#ef5350" stroke-width="1"/><rect x="212" y="163" width="8" height="20" fill="#ef5350"/>
+    <line x1="242" y1="185" x2="242" y2="218" stroke="#ef5350" stroke-width="1"/><rect x="238" y="188" width="8" height="22" fill="#ef5350"/>
+    <!-- pullback low ~Rs.485, last HL forms -->
+    <line x1="268" y1="200" x2="268" y2="245" stroke="#888" stroke-width="1.5"/><rect x="263" y="203" width="10" height="18" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <!-- entry at Rs.510 (bounce) -->
+    <line x1="296" y1="142" x2="296" y2="165" stroke="#26a69a" stroke-width="1.5"/><rect x="291" y="145" width="10" height="18" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="296" cy="148" r="5" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <!-- continuation up -->
+    <line x1="326" y1="128" x2="326" y2="150" stroke="#26a69a" stroke-width="1"/><rect x="322" y="131" width="8" height="16" fill="#26a69a"/>
+    <line x1="356" y1="115" x2="356" y2="135" stroke="#26a69a" stroke-width="1"/><rect x="352" y="118" width="8" height="14" fill="#26a69a"/>
+    <line x1="386" y1="105" x2="386" y2="125" stroke="#26a69a" stroke-width="1"/><rect x="382" y="107" width="8" height="14" fill="#26a69a"/>
+    <line x1="416" y1="98" x2="416" y2="116" stroke="#26a69a" stroke-width="1"/><rect x="412" y="100" width="8" height="13" fill="#26a69a"/>
+    <line x1="446" y1="92" x2="446" y2="110" stroke="#26a69a" stroke-width="1"/><rect x="442" y="94" width="8" height="13" fill="#26a69a"/>
+    <line x1="476" y1="88" x2="476" y2="105" stroke="#26a69a" stroke-width="1"/><rect x="472" y="90" width="8" height="12" fill="#26a69a"/>
+
+    <!-- ===== CALLOUT BUBBLES ===== -->
+    <!-- Entry bubble -->
+    <line x1="296" y1="142" x2="296" y2="78" stroke="#26a69a" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="200" y="40" width="200" height="38" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <path d="M 291 78 L 301 78 L 296 86 Z" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="300" y="58" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Entry Rs. 510</text>
+      <text x="300" y="72" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">pullback पछि bounce</text>
+    </g>
+
+    <!-- Last HL bubble -->
+    <line x1="268" y1="245" x2="180" y2="330" stroke="#26a69a" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="55" y="330" width="245" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="177" y="348" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">Last Higher Low Rs. 480</text>
+      <text x="177" y="362" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">uptrend बचाउने अन्तिम तल</text>
+    </g>
+
+    <!-- SL bubble -->
+    <line x1="450" y1="278" x2="450" y2="330" stroke="#ef5350" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="335" y="330" width="280" height="40" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+      <path d="M 445 330 L 455 330 L 450 322 Z" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+      <text x="475" y="348" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#c62828">Stop Loss Rs. 478 (last HL तल)</text>
+      <text x="475" y="362" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">यहाँ गयो = HL break = trend कमजोर</text>
+    </g>
+
+    <!-- bottom note -->
+    <rect x="40" y="378" width="708" height="36" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="4"/>
+    <text x="394" y="401" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">Logic: Last HL टुट्यो भने uptrend structure भत्कियो → Pullback idea invalid → exit</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Pullback trade मा structure-based Stop Loss देखाउँछ। पहिले बुझौं — uptrend मा price माथि जान्छ, बीचमा सानो pullback गर्छ, अनि अघिल्लो भन्दा माथिल्लो "Higher Low" बनाउँदै फेरि उक्लन्छ। यहाँ stock uptrend मा थियो, pullback आएर Last Higher Low (Rs. 480) बन्यो, अनि bounce देखेर Entry Rs. 510 मा गरियो। अब Stop Loss को structure logic: यदि price त्यो Last Higher Low (Rs. 480) तल गयो भने uptrend को structure नै भत्कियो — मतलब मेरो Pullback idea गलत भयो। त्यसैले SL Rs. 478 (last HL तल थोरै buffer सहित)। यो random number होइन — trend टुट्ने ठ्याक्कै point हो।
+</div>
+
+<p>चौथो structure हो Retest Low। Breakout पछि price पुरानो Resistance zoneमा फर्कियो। त्यहाँ buyer reaction आयो। यदि trader Retest Entry गर्छ भने Stop Loss Retest low तल राख्न सकिन्छ। Retest low तल price गयो भने buyerले पुरानो resistanceलाई support बनाउन सकेनन् भन्ने संकेत हुन सक्छ।</p>
+
+<!-- VISUAL 4: Breakout Retest structure stop -->
+<div class="visual-block">
+  <div class="visual-title">Breakout Retest — Retest Low तल Structure Stop (Scenario 2)</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Entry Rs. 615 → SL Rs. 595 (Retest low Rs. 598 तल)</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="60" width="560" height="250" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="608" y="95" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 650</text>
+    <text x="608" y="150" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 615</text>
+    <text x="608" y="200" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 600</text>
+    <text x="608" y="230" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 598</text>
+    <text x="608" y="260" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 595</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="95" x2="600" y2="95" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="150" x2="600" y2="150" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- Resistance/breakout level Rs.600 (becomes support) -->
+    <line x1="40" y1="200" x2="600" y2="200" stroke="#c8a800" stroke-width="1.6" stroke-dasharray="5,3"/>
+    <!-- SL line Rs.595 -->
+    <line x1="320" y1="255" x2="600" y2="255" stroke="#ef5350" stroke-width="1.8"/>
+
+    <!-- base below resistance -->
+    <line x1="60" y1="208" x2="60" y2="230" stroke="#26a69a" stroke-width="1"/><rect x="56" y="211" width="8" height="16" fill="#26a69a"/>
+    <line x1="86" y1="212" x2="86" y2="235" stroke="#ef5350" stroke-width="1"/><rect x="82" y="215" width="8" height="16" fill="#ef5350"/>
+    <line x1="112" y1="208" x2="112" y2="230" stroke="#26a69a" stroke-width="1"/><rect x="108" y="211" width="8" height="15" fill="#26a69a"/>
+    <line x1="138" y1="210" x2="138" y2="232" stroke="#ef5350" stroke-width="1"/><rect x="134" y="213" width="8" height="15" fill="#ef5350"/>
+
+    <!-- BREAKOUT candle above Rs.600 -->
+    <line x1="168" y1="148" x2="168" y2="208" stroke="#26a69a" stroke-width="2"/><rect x="161" y="152" width="14" height="46" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+
+    <!-- pullback/retest to Rs.600 (retest low Rs.598) -->
+    <line x1="200" y1="155" x2="200" y2="178" stroke="#ef5350" stroke-width="1"/><rect x="196" y="158" width="8" height="18" fill="#ef5350"/>
+    <line x1="226" y1="172" x2="226" y2="200" stroke="#ef5350" stroke-width="1"/><rect x="222" y="175" width="8" height="20" fill="#ef5350"/>
+    <!-- retest low candle with lower wick at Rs.598, buyer reaction -->
+    <line x1="252" y1="190" x2="252" y2="222" stroke="#888" stroke-width="1.5"/><rect x="247" y="193" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+
+    <!-- entry Rs.615 -->
+    <line x1="280" y1="142" x2="280" y2="165" stroke="#26a69a" stroke-width="1.5"/><rect x="275" y="145" width="10" height="18" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="280" cy="148" r="5" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+
+    <!-- continuation up -->
+    <line x1="310" y1="128" x2="310" y2="150" stroke="#26a69a" stroke-width="1"/><rect x="306" y="131" width="8" height="16" fill="#26a69a"/>
+    <line x1="340" y1="115" x2="340" y2="135" stroke="#26a69a" stroke-width="1"/><rect x="336" y="118" width="8" height="14" fill="#26a69a"/>
+    <line x1="370" y1="105" x2="370" y2="125" stroke="#26a69a" stroke-width="1"/><rect x="366" y="107" width="8" height="14" fill="#26a69a"/>
+    <line x1="400" y1="98" x2="400" y2="116" stroke="#26a69a" stroke-width="1"/><rect x="396" y="100" width="8" height="13" fill="#26a69a"/>
+    <line x1="430" y1="92" x2="430" y2="110" stroke="#26a69a" stroke-width="1"/><rect x="426" y="94" width="8" height="13" fill="#26a69a"/>
+    <line x1="460" y1="88" x2="460" y2="105" stroke="#26a69a" stroke-width="1"/><rect x="456" y="90" width="8" height="12" fill="#26a69a"/>
+    <line x1="490" y1="85" x2="490" y2="102" stroke="#26a69a" stroke-width="1"/><rect x="486" y="87" width="8" height="12" fill="#26a69a"/>
+
+    <!-- ===== CALLOUT BUBBLES ===== -->
+    <!-- Breakout level / R->S flip bubble -->
+    <line x1="120" y1="200" x2="120" y2="78" stroke="#c8a800" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="40" y="40" width="200" height="38" rx="8" fill="#fff8dc" stroke="#c8a800" stroke-width="1.3"/>
+      <path d="M 115 78 L 125 78 L 120 86 Z" fill="#fff8dc" stroke="#c8a800" stroke-width="1.3"/>
+      <text x="140" y="58" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#c8a800">BO level Rs. 600 → अब support</text>
+      <text x="140" y="72" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">पुरानो रोकान अब टेकान (flip)</text>
+    </g>
+
+    <!-- Entry bubble -->
+    <line x1="280" y1="142" x2="320" y2="95" stroke="#26a69a" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="320" y="76" width="195" height="36" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="417" y="92" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">Entry Rs. 615</text>
+      <text x="417" y="105" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">retest मा buyer reaction पछि</text>
+    </g>
+
+    <!-- Retest low + SL bubble -->
+    <line x1="252" y1="222" x2="200" y2="330" stroke="#ef5350" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="80" y="330" width="270" height="42" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+      <path d="M 195 330 L 205 330 L 200 322 Z" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+      <text x="215" y="348" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#c62828">SL Rs. 595 (Retest low Rs. 598 तल)</text>
+      <text x="215" y="362" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">यहाँ गयो = पुरानो रोकान support बनेन</text>
+    </g>
+
+    <!-- bottom note -->
+    <rect x="380" y="330" width="368" height="42" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="564" y="348" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#111">Logic: Breakout पछि पुरानो resistance</text>
+    <text x="564" y="364" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">support बन्नुपर्छ। Retest low टुट्यो = idea गलत</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Breakout Retest trade मा structure stop देखाउँछ। पहिले बुझौं — price Rs. 600 resistance माथि breakout गर्‍यो (strong green candle)। Breakout पछि एउटा नियम छ: पुरानो resistance अब support बन्नुपर्छ (R→S flip)। Price फेरि Rs. 600 तिर "retest" गर्न आयो, retest low Rs. 598 बन्यो, र त्यहाँ buyer reaction (lower wick) देखियो — यो confirm भयो कि पुरानो resistance अब support हो। Entry Rs. 615 मा। अब SL को logic: यदि price त्यो retest low (Rs. 598) तल गयो भने पुरानो resistance support बन्न सकेन — मतलब breakout idea गलत। त्यसैले SL Rs. 595 (retest low तल)। Structure ले ठ्याक्कै invalid point देखायो।
+</div>
+
+<p>पाँचौँ structure हो Range Low। Range Trading Setup मा range low support zone हुन्छ। Trader range low नजिक buyer reactionपछि Entry गर्छ। यदि price range low तल strong close भयो भने range structure break भयो। Stop Loss range low तल राख्नुपर्छ।</p>
+
+<p>छैटौँ structure हो Base Low वा Base Support। Base Breakout tradeमा कहिलेकाहीँ stop breakout candle low तल राखिन्छ, कहिलेकाहीँ base structure तल। यदि base धेरै wide छ भने full base low तल Stop Loss राख्दा risk धेरै हुन सक्छ। यस्तो अवस्थामा quantity कम गर्नुपर्छ वा setup skip गर्नुपर्छ। Structure stop practical हुनुपर्छ।</p>
+
+<p>सातौँ structure हो Failed Breakdown Low। Failed Breakdown Setup मा price support तल गएर फेरि माथि फर्किन्छ। यदि trader recoveryपछि Entry गर्छ भने Stop Loss failed breakdown low तल राख्न सकिन्छ। यदि price फेरि त्यो low तल गयो भने failed breakdown setup invalid हुन सक्छ।</p>
+
+<!-- VISUAL 5: Structure levels map across setups -->
+<div class="visual-block">
+  <div class="visual-title">कुन Setup मा Stop Loss कहाँ? — Structure Map</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">हरेक setup को आफ्नै invalidation structure — SL त्यही तल</text>
+
+    <!-- 7 setup rows, each with a mini-icon + SL location -->
+    <!-- Row template: setup name | structure | SL placement -->
+
+    <!-- Support Bounce -->
+    <rect x="30" y="48" width="700" height="46" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+    <text x="48" y="68" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">Support Bounce</text>
+    <text x="48" y="86" font-family="sans-serif" font-size="9.5" fill="#111">logic: support मा buyer आउँछन्</text>
+    <line x1="350" y1="71" x2="380" y2="71" stroke="#555" stroke-width="1.3" marker-end="url(#ar39)"/>
+    <text x="395" y="68" font-family="sans-serif" font-size="11" font-weight="700" fill="#c62828">SL: Support zone तल</text>
+    <text x="395" y="86" font-family="sans-serif" font-size="9" fill="#555">invalid: support break (buyer fail)</text>
+
+    <!-- Breakout -->
+    <rect x="30" y="100" width="700" height="46" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+    <text x="48" y="120" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#c8a800">Breakout</text>
+    <text x="48" y="138" font-family="sans-serif" font-size="9.5" fill="#111">logic: level माथि sustain हुन्छ</text>
+    <line x1="350" y1="123" x2="380" y2="123" stroke="#555" stroke-width="1.3" marker-end="url(#ar39)"/>
+    <text x="395" y="120" font-family="sans-serif" font-size="11" font-weight="700" fill="#c62828">SL: BO level / candle low तल</text>
+    <text x="395" y="138" font-family="sans-serif" font-size="9" fill="#555">invalid: level तल फर्कियो (BO fail)</text>
+
+    <!-- Pullback -->
+    <rect x="30" y="152" width="700" height="46" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+    <text x="48" y="172" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">Pullback / Trend Continuation</text>
+    <text x="48" y="190" font-family="sans-serif" font-size="9.5" fill="#111">logic: uptrend जारी रहन्छ</text>
+    <line x1="350" y1="175" x2="380" y2="175" stroke="#555" stroke-width="1.3" marker-end="url(#ar39)"/>
+    <text x="395" y="172" font-family="sans-serif" font-size="11" font-weight="700" fill="#c62828">SL: Last Higher Low तल</text>
+    <text x="395" y="190" font-family="sans-serif" font-size="9" fill="#555">invalid: HL break (trend कमजोर)</text>
+
+    <!-- Breakout Retest -->
+    <rect x="30" y="204" width="700" height="46" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+    <text x="48" y="224" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#c8a800">Breakout Retest / Base Breakout</text>
+    <text x="48" y="242" font-family="sans-serif" font-size="9.5" fill="#111">logic: पुरानो रोकान अब टेकान</text>
+    <line x1="350" y1="227" x2="380" y2="227" stroke="#555" stroke-width="1.3" marker-end="url(#ar39)"/>
+    <text x="395" y="224" font-family="sans-serif" font-size="11" font-weight="700" fill="#c62828">SL: Retest low / base structure तल</text>
+    <text x="395" y="242" font-family="sans-serif" font-size="9" fill="#555">invalid: support बनेन</text>
+
+    <!-- Range -->
+    <rect x="30" y="256" width="700" height="46" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+    <text x="48" y="276" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">Range Trade</text>
+    <text x="48" y="294" font-family="sans-serif" font-size="9.5" fill="#111">logic: range low बाट bounce</text>
+    <line x1="350" y1="279" x2="380" y2="279" stroke="#555" stroke-width="1.3" marker-end="url(#ar39)"/>
+    <text x="395" y="276" font-family="sans-serif" font-size="11" font-weight="700" fill="#c62828">SL: Range low तल</text>
+    <text x="395" y="294" font-family="sans-serif" font-size="9" fill="#555">invalid: range low sustain (broken)</text>
+
+    <!-- Failed Breakdown -->
+    <rect x="30" y="308" width="700" height="46" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+    <text x="48" y="328" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#c8a800">Failed Breakdown</text>
+    <text x="48" y="346" font-family="sans-serif" font-size="9.5" fill="#111">logic: support तल trap → recovery</text>
+    <line x1="350" y1="331" x2="380" y2="331" stroke="#555" stroke-width="1.3" marker-end="url(#ar39)"/>
+    <text x="395" y="328" font-family="sans-serif" font-size="11" font-weight="700" fill="#c62828">SL: Failed breakdown low तल</text>
+    <text x="395" y="346" font-family="sans-serif" font-size="9" fill="#555">invalid: फेरि त्यो low तल</text>
+
+    <defs>
+      <marker id="ar39" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#555"/>
+      </marker>
+    </defs>
+
+    <!-- bottom key -->
+    <rect x="30" y="366" width="700" height="42" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="380" y="384" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">हरेक setup को SL = त्यो setup को idea गलत साबित हुने structure point</text>
+    <text x="380" y="400" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">SL कहाँ राख्ने थाहा छैन भने सायद trade idea नै स्पष्ट छैन</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो map ले सबै setup को structure-based Stop Loss एकै ठाउँमा देखाउँछ — reference को रूपमा। हरेक setup को आफ्नै logic छ, र SL त्यो logic गलत साबित हुने structure point मा राखिन्छ: <strong>Support Bounce</strong> → support zone तल (buyer fail भए)। <strong>Breakout</strong> → BO level/candle low तल (level तल फर्कियो भने)। <strong>Pullback/Trend Continuation</strong> → Last Higher Low तल (HL break = trend कमजोर)। <strong>Retest/Base Breakout</strong> → retest low/base structure तल (support बनेन)। <strong>Range</strong> → range low तल (range broken)। <strong>Failed Breakdown</strong> → failed breakdown low तल। मुख्य कुरा — SL कहाँ राख्ने थाहा छैन भने सायद तपाईंको trade idea नै स्पष्ट छैन। SL placement ले analysis को clarity जाँच्छ।
+</div>
+
+<p>Structure-based Stop Loss राख्दा एकदमै important कुरा हो buffer। यदि Support zone Rs. 500–510 छ भने Stop Loss Rs. 500 exactमा राख्दा wickले hit गर्न सक्छ। Stop Loss support zone तल meaningful bufferमा राख्न सकिन्छ। तर buffer कति? यसको answer stockको volatility, candle range, liquidity, and timeframeमा निर्भर हुन्छ। Buffer धेरै ठूलो भयो भने risk बढ्छ। Buffer सानो भयो भने noiseमा hit हुन्छ।</p>
+
+<p>Structure-based Stop Loss मा closing basis र intraday basisको निर्णय पनि चाहिन्छ। यदि तपाईं swing trader हुनुहुन्छ भने धेरै पटक daily close support तल भयो भने exit गर्ने rule राख्न सक्नुहुन्छ। तर यदि price strong sellingसहित stop level तल गइरहेको छ भने close पर्खिँदा loss बढ्न सक्छ। त्यसैले planमा पहिले लेख्नुपर्छ—Stop Loss price hit basis हो कि closing basis?</p>
+
+<p>Structure-based Stop Loss को अर्को मुख्य भाग हो Position Sizing। धेरै trader structure stop राख्छन्, तर quantity adjust गर्दैनन्। उदाहरण:</p>
+
+<ul>
+  <li>Entry: Rs. 500</li>
+  <li>Structure Stop: Rs. 460</li>
+  <li>Risk per share: Rs. 40</li>
+</ul>
+
+<p>यदि traderले धेरै quantity किने भने total risk ठूलो हुन्छ। यदि Stop Loss टाढा छ भने quantity घटाउनुपर्छ। Structure-based Stop Loss मात्र पर्याप्त छैन; structure-based position sizing पनि चाहिन्छ।</p>
+
+<p>कहिलेकाहीँ structure stop धेरै टाढा हुन्छ। यस्तो अवस्थामा तीन option हुन्छन्:</p>
+
+<ul>
+  <li>पहिलो, trade avoid गर्ने।</li>
+  <li>दोस्रो, better Entry पर्खिने।</li>
+  <li>तेस्रो, quantity घटाउने।</li>
+</ul>
+
+<p>कहिल्यै पनि <strong>“setup राम्रो छ”</strong> भनेर oversized position लिनु हुँदैन। राम्रो setup पनि fail हुन सक्छ।</p>
+
+<p>Structure-based Stop Loss र percentage Stop Loss मिलाएर पनि प्रयोग गर्न सकिन्छ। उदाहरणका लागि traderको rule हुन सक्छ—<strong>“म सामान्यतया structure stop प्रयोग गर्छु, तर risk per trade मेरो capitalको 1% भन्दा बढी हुन दिँदिनँ।”</strong> यसरी structure र risk capacity दुवै मिल्छ।</p>
+
+<p>Structure-based Stop Loss ले traderलाई market noise र real invalidation छुट्याउन मद्दत गर्छ। Price थोरै तल आयो तर structure बचेको छ भने panic गर्नु हुँदैन। Price structure break भयो भने hope गर्नु हुँदैन। यही यसको असली शक्ति हो।</p>
+
+<p>तर Structure-based Stop Loss पनि guarantee होइन। Price Stop Loss hit गरेर फेरि फर्किन सक्छ। Price support तल wick बनाउँछ र recover गर्न सक्छ। यस्तो हुन्छ। तर यदि तपाईंको Stop Loss logic consistent छ र journal review राम्रो छ भने long runमा process बचाउँछ।</p>
+
+<p>Structure-based Stop Loss को professional process:</p>
+
+<ul>
+  <li>Setup type identify गर्नु।</li>
+  <li>Trade idea लेख्नु।</li>
+  <li>Setup invalid हुने structure mark गर्नु।</li>
+  <li>Stop Loss zone define गर्नु।</li>
+  <li>Buffer decide गर्नु।</li>
+  <li>Intraday/closing basis decide गर्नु।</li>
+  <li>Risk per share calculate गर्नु।</li>
+  <li>Position Size calculate गर्नु।</li>
+  <li>Trade journalमा Stop Loss reason लेख्नु।</li>
+  <li>Stop Loss hit भए discipline follow गर्नु।</li>
+  <li>पछि review गर्नु—Stop Loss सही थियो कि Entry खराब?</li>
+</ul>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Structure-based Stop Loss राख्नु धेरै practical छ, तर execution चुनौतीपूर्ण हुन सक्छ। किनकि धेरै trader manually monitor गर्छन्। Automatic Stop Loss execution सबैका लागि सहज नहुन सक्छ। त्यसैले structure stop राख्दा daily monitoring, alert, and discipline चाहिन्छ।</p>
+
+<p>NEPSE मा support/resistance zonesमा wick धेरै देखिन सक्छ। Low liquidity stockमा price अचानक support तल गएर फेरि फर्किन सक्छ। त्यसैले exact line stop धेरै पटक shakeout हुन सक्छ। Structure zone, buffer, and closing basis विचार गर्नुपर्छ। तर <strong>“shakeout हुन सक्छ”</strong> भन्दै stop हटाउनु हुँदैन।</p>
+
+<p>NEPSE मा circuit risk पनि हुन्छ। यदि stock low liquidity छ वा hype-driven छ भने price Stop Loss levelसम्म पुग्दा sell गर्न गाह्रो हुन सक्छ। यसैले structure-based stop राख्नु अघि liquidity check अनिवार्य छ। Stop Loss practical रूपमा execute गर्न नसकिने stockमा position size सानो राख्नु वा avoid गर्नु राम्रो हुन्छ।</p>
+
+<p>NEPSE मा sector rotationले structure छिटो बदल्न सक्छ। Stockको support बचिरहेको छ तर sector breakdownमा छ भने structure soon fail हुन सक्छ। त्यसैले Stop Loss केवल stock chartबाट होइन, NEPSE index र sector contextसँग पनि जोडेर manage गर्नुपर्छ।</p>
+
+<p>NEPSE मा धेरै trader <strong>“Stop Loss hit भयो भने बेच्दिनँ, long-term hold गर्छु”</strong> भन्ने गल्ती गर्छन्। यदि trade intention swing थियो भने Stop Loss hit भएपछि investmentमा convert गर्नु process तोड्नु हो। Investing decision अलग analysisबाट आउनुपर्छ, lossबाट भाग्न होइन।</p>
+
+<p>TMS executionमा Stop Loss hit हुँदा order राख्ने discipline चाहिन्छ। Panicमा wrong quantity, wrong price, or wrong symbol mistake हुन सक्छ। Stop Loss level पहिले journalमा लेखिएको छ भने execution calm हुन्छ।</p>
+
+<p>Broker commission, tax, DP charge, WACC, EDIS, and settlement ले net resultमा असर गर्छन्। Stop Loss calculation गर्दा transaction cost पनि अन्तिम performanceमा जोडिन्छ। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Structure-based Stop Loss traderको egoलाई test गर्छ। किनकि Stop Loss level chartले define गर्छ, traderको wishले होइन। Traderलाई कहिलेकाहीँ Stop Loss level धेरै टाढा लाग्छ। कहिलेकाहीँ धेरै नजिक लाग्छ। तर professional trader structure र risk capacity बीच balance खोज्छ।</p>
+
+<p>सबैभन्दा ठूलो psychological benefit के हो भने structure stopले panic घटाउँछ। Price घट्दैछ, तर structure अझै बचेको छ भने trader शान्त रहन सक्छ। Price structure break भयो भने trader स्पष्ट decision गर्न सक्छ। यसले random fear र random hope दुबै घटाउँछ।</p>
+
+<p>Beginner price रातो देख्नेबित्तिकै डराउँछ। Professional trader सोध्छ—<strong>“Structure break भयो कि normal pullback हो?”</strong> Beginner price Stop Loss नजिक आएपछि bargaining गर्छ। Professional trader सोध्छ—<strong>“Setup invalid भयो कि छैन?”</strong> यही फरक हो।</p>
+
+<p>Structure-based Stop Loss ले traderलाई आफ्नो trade idea स्पष्ट बनाउन बाध्य पार्छ। यदि तपाईं Stop Loss कहाँ राख्ने थाहा पाउनुहुन्न भने सम्भवतः तपाईंलाई trade idea नै स्पष्ट छैन। Stop Loss placementले analysisको clarity जाँच गर्छ।</p>
+
+<p>तर structure stopको नाममा wide Stop Loss राखेर ठूलो position लिनु dangerous हो। मनले भन्छ—<strong>“यो support बलियो छ, केही हुँदैन।”</strong> तर marketमा केही पनि निश्चित हुँदैन। Stop Loss टाढा छ भने quantity घटाउनु psychological maturity हो।</p>
+
+<p>Stop Loss hit भएपछि traderलाई दुःख लाग्छ, विशेष गरी price पछि फर्कियो भने। तर यो tradingको भाग हो। यदि तपाईं Stop Loss hit भएको प्रत्येक tradeमा system बदल्नुहुन्छ भने discipline बन्न सक्दैन। Journalबाट pattern हेर्नुहोस्, emotionबाट होइन।</p>
+
+<p>Structure-based Stop Loss को psychological rule हो—<strong>“म priceसँग बहस गर्दिनँ। मेरो setupको structure भत्कियो भने म बाहिरिन्छु।”</strong></p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Structure नहेरी fixed percentage Stop Loss राख्नु। Percentage risk useful हुन सक्छ, तर chart structureसँग मिल्नुपर्छ।</p>
+
+<p>दोस्रो गल्ती हो—Stop Loss exact support lineमा राख्नु। Support zone हो; wickले hit गर्न सक्छ।</p>
+
+<p>तेस्रो गल्ती हो—Buffer धेरै ठूलो राख्नु। Bufferको नाममा risk अनावश्यक बढ्न सक्छ।</p>
+
+<p>चौथो गल्ती हो—Stop Loss level तर्कसंगत भए पनि position size नघटाउनु। Stop Loss टाढा छ भने quantity घटाउनुपर्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Setup invalid भए पनि Stop Loss हटाउनु। Structure break भएपछि hope गर्नु खतरनाक हुन्छ।</p>
+
+<p>छैटौँ गल्ती हो—Stop Loss closing basis हो कि intraday basis स्पष्ट नगर्नु। Execution timeमा confusion हुन्छ।</p>
+
+<p>सातौँ गल्ती हो—Low liquidity stockमा structure stop trust गर्नु। Sell गर्न buyer नहुन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Structure stopको नाममा too wide risk लिनु। <strong>“Support धेरै तल छ”</strong> भने trade skip पनि गर्न सकिन्छ।</p>
+
+<p>नवौँ गल्ती हो—Entry खराब गरेर Stop Lossलाई दोष दिनु। Late Entryले stop distance र risk बिगार्छ।</p>
+
+<p>दशौँ गल्ती हो—Stop Loss hit भएपछि तुरुन्त re-entry गर्नु। Setup फेरि बनेको छ कि revenge trade हो, जाँच्नुपर्छ।</p>
+
+<p>एघारौँ गल्ती हो—Every wickलाई stop hunt भनेर ignore गर्नु। Real breakdown पनि हुन सक्छ।</p>
+
+<p>बाह्रौँ गल्ती हो—Stop Loss reason journalमा नलेख्नु। Review गर्न सकिँदैन।</p>
+
+<!-- VISUAL 6: Structure Stop Too Wide -> Position Size fix -->
+<div class="visual-block">
+  <div class="visual-title">Structure Stop टाढा भयो? → Position Size घटाएर Risk Control (Scenario 5)</div>
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Structure SL राख्नु मात्र पर्याप्त छैन — quantity adjust नगरे risk uncontrolled</text>
+
+    <!-- setup info -->
+    <rect x="30" y="44" width="700" height="40" rx="6" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1"/>
+    <text x="380" y="62" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Entry Rs. 1000 • Structure SL Rs. 900 (logical) • Risk/share = Rs. 100 • Allowed risk/trade = Rs. 2,000</text>
+    <text x="380" y="78" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">Structure stop टाढा छ (Rs. 100/share) — अब के गर्ने?</text>
+
+    <!-- LEFT: WRONG (oversized) -->
+    <rect x="30" y="100" width="345" height="190" rx="10" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="202" y="124" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#c62828">✗ "Setup राम्रो छ" — 100 shares</text>
+
+    <text x="50" y="152" font-family="sans-serif" font-size="11" fill="#111">Quantity: 100 shares</text>
+    <text x="50" y="176" font-family="sans-serif" font-size="11" fill="#111">Risk/share: Rs. 100</text>
+    <text x="50" y="206" font-family="sans-serif" font-size="13" font-weight="700" fill="#c62828">Total risk = 100 × 100</text>
+    <text x="50" y="228" font-family="sans-serif" font-size="16" font-weight="700" fill="#c62828">= Rs. 10,000 😱</text>
+    <rect x="50" y="244" width="305" height="34" fill="#fff" stroke="#ef5350" stroke-width="1" rx="4"/>
+    <text x="202" y="266" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#c62828">Plan को Rs. 2,000 भन्दा 5× बढी! uncontrolled</text>
+
+    <!-- RIGHT: RIGHT (sized) -->
+    <rect x="385" y="100" width="345" height="190" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="557" y="124" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#2e7d32">✓ Quantity घटाउने — 20 shares</text>
+
+    <text x="405" y="152" font-family="sans-serif" font-size="11" fill="#111">Allowed risk: Rs. 2,000</text>
+    <text x="405" y="176" font-family="sans-serif" font-size="11" fill="#111">Risk/share: Rs. 100</text>
+    <text x="405" y="206" font-family="sans-serif" font-size="13" font-weight="700" fill="#2e7d32">Quantity = 2,000 ÷ 100</text>
+    <text x="405" y="228" font-family="sans-serif" font-size="16" font-weight="700" fill="#2e7d32">= 20 shares ✓</text>
+    <rect x="405" y="244" width="305" height="34" fill="#fff" stroke="#26a69a" stroke-width="1" rx="4"/>
+    <text x="557" y="266" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Total risk = 20 × 100 = Rs. 2,000 (plan भित्र)</text>
+
+    <!-- bottom 3 options -->
+    <text x="380" y="312" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">Structure stop धेरै टाढा भए 3 विकल्प:</text>
+    <rect x="50" y="322" width="210" height="38" rx="6" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.1"/>
+    <text x="155" y="338" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#1a56cc">1. Quantity घटाउने</text>
+    <text x="155" y="352" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">(risk fixed राख्ने)</text>
+
+    <rect x="275" y="322" width="210" height="38" rx="6" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.1"/>
+    <text x="380" y="338" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#1a56cc">2. Better Entry पर्खने</text>
+    <text x="380" y="352" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">(SL नजिक हुने ठाउँ)</text>
+
+    <rect x="500" y="322" width="210" height="38" rx="6" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.1"/>
+    <text x="605" y="338" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#1a56cc">3. Trade Avoid गर्ने</text>
+    <text x="605" y="352" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">(risk fit नभए)</text>
+
+    <!-- bottom line -->
+    <rect x="30" y="370" width="700" height="26" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="4"/>
+    <text x="380" y="388" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#111">कहिल्यै "setup राम्रो छ" भनेर oversized position होइन — राम्रो setup पनि fail हुन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Structure-based Stop Loss को सबैभन्दा बिर्सिने भाग सिकाउँछ — SL राख्नु मात्र पर्याप्त छैन, Position Size पनि adjust गर्नैपर्छ। उदाहरण: Entry Rs. 1000, structure SL Rs. 900 (logical), risk Rs. 100/share। Trader को नियम — एक trade मा बढीमा Rs. 2,000 risk। बायाँ (गलत): "setup राम्रो छ" भनेर 100 shares किन्यो → total risk Rs. 10,000, जुन plan भन्दा 5× बढी — uncontrolled। दायाँ (सही): quantity = allowed risk ÷ risk per share = 2,000 ÷ 100 = 20 shares मात्र → risk ठ्याक्कै Rs. 2,000, plan भित्र। Structure stop टाढा भए 3 विकल्प: (1) quantity घटाउने, (2) better entry पर्खने, (3) trade avoid। कहिल्यै oversized position होइन — राम्रो setup पनि fail हुन्छ।
+</div>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Structure-based Stop Loss राखेपछि Position Size adjust नगरे risk अझै uncontrolled रहन्छ</div>
+  <p style="margin-bottom:0;">धेरै trader ले मेहनत गरेर सही structure SL त राख्छन्, तर quantity उही ठूलो राख्छन् — अनि "मैले त SL राखेको छु नि" भनेर ढुक्क हुन्छन्। तर SL टाढा (जस्तै Rs. 100/share) भयो र quantity घटाइएन भने एउटै trade ले plan भन्दा कैयौँ गुणा बढी loss दिन सक्छ। Structure SL र Position Size <strong>एउटै सिक्काका दुई पाटा</strong> हुन् — दुवै सँगै नचले risk control अधुरो हुन्छ। नियम सरल: allowed risk ÷ risk per share = quantity। SL जति टाढा, quantity त्यति कम। Structure stop धेरै टाढा छ र quantity घटाउँदा पनि trade size अर्थहीन हुन्छ भने — त्यो trade avoid गर्नु नै बुद्धिमानी। "Setup राम्रो छ" भन्ने भावनाले oversized position justify गर्दैन।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Structure-based Stop Loss का लागि यी rules प्रयोग गर्नुहोस्:</p>
+
+<ul>
+  <li>Stop Loss setup invalid हुने structureमा आधारित हुनुपर्छ।</li>
+  <li>Support zone तल Stop Loss राख्दा zone र buffer दुवै सोच्नुहोस्।</li>
+  <li>Breakout tradeमा Breakout level, candle low, वा Retest low तल Stop Loss राख्न सकिन्छ।</li>
+  <li>Pullback tradeमा pullback low वा last Higher Low तल Stop Loss राख्न सकिन्छ।</li>
+  <li>Range tradeमा range low तल Stop Loss राख्नुहोस्।</li>
+  <li>Failed Breakdown tradeमा failed breakdown low तल Stop Loss राख्नुहोस्।</li>
+  <li>Structure stop धेरै टाढा छ भने quantity घटाउनुहोस् वा trade avoid गर्नुहोस्।</li>
+  <li>Stop Loss exact lineमा होइन, logical invalidation zoneमा सोच्नुहोस्।</li>
+  <li>Stop Loss intraday hit basis हो कि closing basis, पहिले तय गर्नुहोस्।</li>
+  <li>Stop Loss राख्नुअघि stockको liquidity जाँच्नुहोस्।</li>
+  <li>Stop Loss level journalमा लेख्नुहोस्।</li>
+  <li>Stop Loss राख्नुको reason लेख्नुहोस्।</li>
+  <li>Stop Loss hit भएपछि तल सार्नु हुँदैन।</li>
+  <li>Stop Loss hit भएर price फर्कियो भने journal review गर्नुहोस्, revenge trade नगर्नुहोस्।</li>
+  <li>Structure break भयो भने opinion बदल्न तयार हुनुहोस्।</li>
+  <li>Stop Loss र Position Sizing सधैं सँगै प्रयोग गर्नुहोस्।</li>
+</ul>
+
+<p>Structure-based Stop Loss को मुख्य rule हो—<strong>Stop Loss तपाईंको डरमा होइन, chartको invalidation structureमा हुनुपर्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Pullback Setup Structure Stop</strong></p>
+<p>Stock uptrendमा छ। Entry Rs. 510 मा भयो। Price previous breakout support Rs. 490–500 zoneमा pullback आएर bounce गरेको थियो। Pullback low Rs. 485 छ। Last Higher Low Rs. 480 हो।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:6px;"><strong>Possible Structure Stop:</strong></p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 478 तल</p>
+  <p style="margin-bottom:0;"><strong>Logic:</strong> यदि price Rs. 480 तल गयो भने last Higher Low break हुन्छ र Pullback setup कमजोर हुन्छ। यो structure-based Stop Loss हो।</p>
+</div>
+
+<p><strong>Scenario 2: Breakout Retest Structure Stop</strong></p>
+<p>Stock Rs. 600 Resistance माथि Breakout भयो। Price Retestमा Rs. 605 सम्म आयो र buyer reaction आयो। Entry Rs. 615 मा भयो। Retest low Rs. 598 छ।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:6px;"><strong>Possible Structure Stop:</strong></p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 595 तल</p>
+  <p style="margin-bottom:0;"><strong>Logic:</strong> यदि price Retest low तल गयो भने पुरानो Resistance support बन्न सकेन। Breakout Retest setup invalid हुन सक्छ।</p>
+</div>
+
+<p><strong>Scenario 3: Support Bounce Structure Stop</strong></p>
+<p>Stock Rs. 700–710 support zoneमा थियो। Price Rs. 705 बाट bounce भयो। Reaction candle low Rs. 695 छ। Entry Rs. 720 मा भयो।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:6px;"><strong>Possible Structure Stop:</strong></p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 692 तल</p>
+  <p style="margin-bottom:0;"><strong>Logic:</strong> यदि price support zone र reaction low तल गयो भने buyer support fail भयो।</p>
+</div>
+
+<p><strong>Scenario 4: Range Trade Structure Stop</strong></p>
+<p>Stock Rs. 400–450 rangeमा छ। Trader Rs. 410 मा buyer reactionपछि Entry गर्छ। Range low Rs. 400 हो। Reaction low Rs. 397 छ।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:6px;"><strong>Possible Structure Stop:</strong></p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 394 तल</p>
+  <p style="margin-bottom:0;"><strong>Logic:</strong> यदि price range low तल sustain भयो भने range trade invalid भयो।</p>
+</div>
+
+<p><strong>Scenario 5: Structure Stop Too Wide</strong></p>
+<p>Stock Rs. 1000 मा Breakout Entry छ। Logical structure Stop Rs. 900 तल छ। Risk per share Rs. 100। Traderको allowed risk per trade Rs. 2,000 मात्र छ।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:6px;"><strong>Position Size:</strong></p>
+  <p style="margin-bottom:6px;">Rs. 2,000 ÷ Rs. 100 = 20 shares</p>
+  <p style="margin-bottom:0;">यदि trader 100 shares किन्छ भने risk Rs. 10,000 हुन्छ, जुन planभन्दा धेरै हो। Solution: quantity घटाउने, better Entry पर्खिने, वा trade avoid गर्ने।</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:24%;">Setup Type</th>
+      <th style="width:26%;">Structure Level</th>
+      <th style="width:26%;">Stop Loss Placement</th>
+      <th style="width:24%;">Invalid Condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pullback</strong></td>
+      <td>Last Higher Low</td>
+      <td>Last HL तल</td>
+      <td>HL break = trend weak</td>
+    </tr>
+    <tr>
+      <td><strong>Breakout Retest</strong></td>
+      <td>Retest low</td>
+      <td>Retest low तल</td>
+      <td>पुरानो resistance support बनेन</td>
+    </tr>
+    <tr>
+      <td><strong>Support Bounce</strong></td>
+      <td>Support zone / reaction low</td>
+      <td>Reaction low तल</td>
+      <td>Buyer support fail</td>
+    </tr>
+    <tr>
+      <td><strong>Range Trade</strong></td>
+      <td>Range low</td>
+      <td>Range low तल</td>
+      <td>Range low sustain (broken)</td>
+    </tr>
+    <tr>
+      <td><strong>Base Breakout</strong></td>
+      <td>Retest low / base structure</td>
+      <td>Base structure तल</td>
+      <td>Base fail</td>
+    </tr>
+    <tr>
+      <td><strong>Failed Breakdown</strong></td>
+      <td>Failed breakdown low</td>
+      <td>Failed breakdown low तल</td>
+      <td>फेरि त्यो low तल</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Structure-based Stop Loss Checklist</div>
+
+  <div class="checklist-sub">Setup Check:</div>
+  <ul>
+    <li>यो कुन setup हो?</li>
+    <li>Trade idea के हो?</li>
+    <li>Setup invalid कहाँ हुन्छ?</li>
+    <li>Structure level स्पष्ट छ?</li>
+    <li>Stop Loss chart structureसँग मिल्छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Structure Check:</div>
+  <ul>
+    <li>Support zone कहाँ छ?</li>
+    <li>Resistance/Breakout level कहाँ छ?</li>
+    <li>Pullback low कहाँ छ?</li>
+    <li>Last Higher Low कहाँ छ?</li>
+    <li>Retest low कहाँ छ?</li>
+    <li>Range low कहाँ छ?</li>
+    <li>Base support कहाँ छ?</li>
+    <li>Failed breakdown low कहाँ छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Placement Check:</div>
+  <ul>
+    <li>Stop Loss exact lineमा छ कि zone/bufferसहित?</li>
+    <li>Stop Loss धेरै tight छ?</li>
+    <li>Stop Loss धेरै wide छ?</li>
+    <li>Stop Loss hit भए setup साँच्चै invalid हुन्छ?</li>
+    <li>Stop Loss only percentage ruleबाट राखिएको त छैन?</li>
+    <li>Closing basis कि intraday basis स्पष्ट छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Risk Check:</div>
+  <ul>
+    <li>Entry price कति?</li>
+    <li>Stop Loss price कति?</li>
+    <li>Risk per share कति?</li>
+    <li>Total risk कति?</li>
+    <li>Position Size calculate गरिएको छ?</li>
+    <li>Stop Loss wide भए quantity घटाइएको छ?</li>
+    <li>Allowed risk per trade भन्दा बढी छैन?</li>
+  </ul>
+
+  <div class="checklist-sub">Execution Check:</div>
+  <ul>
+    <li>Stock liquid छ?</li>
+    <li>Stop Loss hit भए sell गर्न practical छ?</li>
+    <li>TMSमा order राख्ने plan छ?</li>
+    <li>Stop Loss hit भएपछि delay गर्ने habit छैन?</li>
+    <li>Stop Loss तल सार्ने छैन?</li>
+  </ul>
+
+  <div class="checklist-sub">Review Check:</div>
+  <ul>
+    <li>Stop Loss hit भए journal लेख्ने?</li>
+    <li>Stop Loss too tight थियो कि structure सही थियो?</li>
+    <li>Entry late थियो?</li>
+    <li>Setup weak थियो?</li>
+    <li>Position Size सही थियो?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Mark Structure Stops in 10 Charts</div>
+  <p>कुनै 10 वटा NEPSE stockको chart खोल्नुहोस्। प्रत्येकमा एउटा possible setup छानेर structure stop mark गर्नुहोस्:</p>
+  <ul>
+    <li>Setup type</li>
+    <li>Entry zone</li>
+    <li>Structure level</li>
+    <li>Stop Loss level</li>
+    <li>Stop Loss राख्नुको reason</li>
+    <li>Invalidation meaning</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: 5 Pullback Setups</div>
+  <p>5 वटा Pullback Setup खोज्नुहोस्। प्रत्येकमा:</p>
+  <ul>
+    <li>Last Higher Low mark गर्नुहोस्।</li>
+    <li>Pullback low mark गर्नुहोस्।</li>
+    <li>Stop Loss कहाँ राख्ने लेख्नुहोस्।</li>
+    <li>Stop Loss distance calculate गर्नुहोस्।</li>
+    <li>Position Size कति हुनुपर्छ भनेर सोच्नुहोस्।</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: 5 Breakout Retest Setups</div>
+  <p>5 वटा Breakout Retest Setup खोज्नुहोस्। प्रत्येकमा:</p>
+  <ul>
+    <li>Breakout level mark गर्नुहोस्।</li>
+    <li>Retest low mark गर्नुहोस्।</li>
+    <li>Stop Loss Retest low तल राख्दा risk कति हुन्छ?</li>
+    <li>Breakout candle low तल राख्दा risk कति हुन्छ?</li>
+    <li>कुन stop practical छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Review 5 Old Loss Trades</div>
+  <p>आफ्नो 5 वटा पुराना loss trade review गर्नुहोस्:</p>
+  <ul>
+    <li>Stop Loss structureमा आधारित थियो?</li>
+    <li>Stop Loss percentage ruleमा आधारित थियो?</li>
+    <li>Stop Loss hit भएपछि price फर्कियो?</li>
+    <li>Stop Loss too tight थियो कि Entry bad थियो?</li>
+    <li>Structure stop प्रयोग गरेको भए result फरक हुन्थ्यो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Build a Full Stop Loss Plan</div>
+  <p>एक full Stop Loss plan बनाउनुहोस्:</p>
+  <ul>
+    <li>Stock Name:</li>
+    <li>Setup Type:</li>
+    <li>Entry Zone:</li>
+    <li>Trade Logic:</li>
+    <li>Invalidation Structure:</li>
+    <li>Stop Loss Level:</li>
+    <li>Stop Loss Basis: Intraday / Closing</li>
+    <li>Risk per Share:</li>
+    <li>Allowed Risk:</li>
+    <li>Position Size:</li>
+    <li>Exit Rule:</li>
+    <li>Review Note:</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Structure-based Stop Loss traderलाई market structureसँग जोड्छ। यो तपाईंको डर, आशा, वा random percentageमा आधारित हुँदैन। यो trade idea invalid हुने ठाउँमा आधारित हुन्छ।</p>
+  <p>तर structure stop राख्नु मात्र पर्याप्त छैन। Stop Loss टाढा छ भने quantity घटाउनुपर्छ। Stop Loss practical रूपमा execute गर्न सकिन्छ कि छैन हेर्नुपर्छ। Stop Loss hit भएपछि discipline चाहिन्छ।</p>
+  <p>Good Stop Loss सधैं hit नहुने Stop Loss होइन। Good Stop Loss त्यो हो जसले trade idea गलत हुँदा lossलाई सीमित गर्छ। कहिलेकाहीँ Stop Loss hit भएर price फर्किन्छ। त्यो tradingको भाग हो। Process review गर्नुहोस्, तर discipline नछोड्नुहोस्।</p>
+  <p style="margin-bottom:0;">Structure-based Stop Loss को अर्थ हो—म marketसँग बहस गर्दिनँ; chartको structureले मेरो idea गलत देखायो भने म बाहिरिन्छु।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 39 Summary</div>
+  <p>Structure-based Stop Loss भनेको chartको meaningful structure अनुसार Stop Loss राख्ने method हो। Support zone, Breakout level, Retest low, Pullback low, Last Higher Low, Range low, Base support, Failed Breakdown low जस्ता structure levelहरू Stop Loss placementका आधार हुन सक्छन्।</p>
+  <p>यो Stop Loss random percentage भन्दा practical हुन्छ, किनकि market support, resistance, swing structure, and price behavior अनुसार चल्छ। तर percentage risk र structure stopलाई सँगै जोड्नुपर्छ। Structure stop टाढा छ भने Position Size घटाउनुपर्छ।</p>
+  <p>Structure-based Stop Loss राख्दा buffer, candle close basis, intraday basis, volatility, liquidity, and execution discipline ध्यान दिनुपर्छ। Stop Loss exact lineमा राख्दा wickले hit गर्न सक्छ। Buffer धेरै राख्दा risk बढ्न सक्छ।</p>
+  <p>NEPSE मा Structure-based Stop Loss practical छ, तर manual execution, low liquidity, circuit risk, TMS discipline, and transaction cost ध्यान दिनुपर्छ। Trade fail भएपछि investment बनाउनु हुँदैन। Trading plan अलग र investing plan अलग हुनुपर्छ।</p>
+  <p>Structure-based Stop Loss traderको psychologyलाई पनि सुधार गर्छ। Price घट्दा panic होइन, structure check। Structure बचेको छ भने patience। Structure break भयो भने exit। यही professional thinking हो।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Stop Loss तपाईंको मनले सहन सक्ने loss होइन; chartले trade idea गलत भएको देखाउने logical structure हो।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader Stop Lossलाई डरको line बनाउँदैन;<br>
+  ऊ यसलाई आफ्नो trade idea गलत भएको प्रमाण भेटिने structureमा राख्छ,<br>
+  र त्यो structure भत्किएपछि<br>
+  शान्त भएर capital बचाउँछ।
+</div>
+
+</div>
+</body>
+</html>

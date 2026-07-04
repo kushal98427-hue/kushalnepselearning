@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 56: Liquidity, Interest Rate, Policy Impact — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+.sub-heading { font-family: 'Roboto', sans-serif; font-size: 17px; font-weight: 700; color: #111; margin: 26px 0 12px; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul, ol { margin: 14px 0 14px 28px; }
+ul li, ol li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 14.5px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 26px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 20px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li, ol li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 56</div>
+  <h1 class="chapter-title">Liquidity, Interest Rate, Policy Impact</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>अनिलले एउटा share किनेको थियो। प्राविधिक रूपमा त्यसको Chart एकदमै राम्रो देखिएको थियो र Price पनि बिस्तारै बढिरहेको थियो। उसले मनमनै सोच्यो, <strong>“यो त पक्कै पनि एउटा धेरै नाफामूलक र राम्रो trade हो।”</strong></p>
+
+<p>तर केही दिनपछि उसलाई पैसाको आवश्यकता पर्‍यो र उसले आफ्नो share बेच्न खोज्यो। उसले बजारमा Sell Order राख्यो, तर दिनभरिमा उसको Order कत्ति पनि execute भएन। फेरि अर्को दिन प्रयास गर्‍यो, तर फेरि पनि शेयर बिक्री हुन सकेन।</p>
+
+<p>त्यसपछि अनिलले एउटा धेरै महत्वपूर्ण कुरा बुझ्यो। बजारमा केवल मूल्य बढेको वा घटिरहेको प्राविधिक पक्ष मात्र हेर्नु पर्याप्त हुँदैन। बजारमा आफूले चाहेको समयमा किन्नका लागि Buyer र बेच्नका लागि Seller को उपस्थिति पनि उत्तिकै अनिवार्य हुनुपर्छ।</p>
+
+<p>अर्कोतर्फ, त्यसको केही महिनापछि बैंकहरूको ब्याजदर अचानक बढ्यो। ब्याजदर बढेसँगै बजारका धेरै राम्रा sector हरू पनि बिस्तारै कमजोर हुन थाले। अनिल फेरि अन्योलमा पर्‍यो। उसले सोध्यो, <strong>“मेरो कम्पनी र stock त उही हो, अनि किन अचानक बजारको व्यवहार यसरी बदलियो?”</strong></p>
+
+<p>उसको यो प्रश्नको उत्तर बजारमा हुने तरलता (Liquidity), ब्याजदर (Interest Rate) र वित्तीय नीति (Policy) को प्रभावभित्र लुकेको थियो।</p>
+
+<!-- VISUAL 1: Anil cant sell - low liquidity + rate rise -->
+<div class="visual-block">
+  <div class="visual-title">अनिल — Chart राम्रो, तर बेच्न Buyer नै भेटिएन</div>
+  <svg viewBox="0 0 840 440" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="840" height="440" fill="#fffdf5"/>
+    <text x="420" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">कागजमा profit — तर बेच्न Buyer नभए भ्रम मात्र</text>
+
+    <!-- LEFT: chart looks good -->
+    <rect x="25" y="62" width="385" height="38" fill="#26a69a" rx="6"/>
+    <text x="217" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff">Chart राम्रो, Price बढ्दै</text>
+    <rect x="25" y="106" width="385" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <g stroke-width="1.8">
+      <line x1="70" y1="265" x2="70" y2="295" stroke="#26a69a"/><rect x="61" y="271" width="18" height="18" fill="#26a69a"/>
+      <line x1="120" y1="245" x2="120" y2="275" stroke="#ef5350"/><rect x="111" y="251" width="18" height="13" fill="#ef5350"/>
+      <line x1="170" y1="222" x2="170" y2="252" stroke="#26a69a"/><rect x="161" y="227" width="18" height="22" fill="#26a69a"/>
+      <line x1="220" y1="200" x2="220" y2="228" stroke="#26a69a"/><rect x="211" y="205" width="18" height="18" fill="#26a69a"/>
+      <line x1="270" y1="180" x2="270" y2="208" stroke="#26a69a"/><rect x="261" y="185" width="18" height="18" fill="#26a69a"/>
+      <line x1="320" y1="160" x2="320" y2="188" stroke="#26a69a"/><rect x="311" y="165" width="18" height="18" fill="#26a69a"/>
+      <line x1="370" y1="144" x2="370" y2="172" stroke="#26a69a"/><rect x="361" y="149" width="18" height="16" fill="#26a69a"/>
+    </g>
+    <text x="217" y="305" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">"राम्रो trade" जस्तो देखियो</text>
+
+    <!-- RIGHT: cant sell -->
+    <rect x="430" y="62" width="385" height="38" fill="#ef5350" rx="6"/>
+    <text x="622" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff">बेच्न खोज्दा — Buyer छैन</text>
+    <rect x="430" y="106" width="385" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- order book empty buyers -->
+    <text x="622" y="140" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">Sell Order राख्यो...</text>
+    <rect x="470" y="158" width="305" height="34" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="622" y="180" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#c62828">दिन १: execute भएन</text>
+    <rect x="470" y="198" width="305" height="34" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="622" y="220" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#c62828">दिन २: फेरि बिक्री भएन</text>
+    <rect x="470" y="238" width="305" height="34" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="622" y="260" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c62828">Buyer अभाव = Low Liquidity</text>
+    <text x="622" y="300" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c62828">पैसा फस्यो</text>
+
+    <!-- bottom -->
+    <rect x="25" y="332" width="790" height="92" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="420" y="362" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">मूल्य मात्र होइन — Buyer/Seller को उपस्थिति पनि अनिवार्य</text>
+    <text x="420" y="392" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">पछि ब्याजदर बढ्यो → राम्रा sector पनि कमजोर भए</text>
+    <text x="420" y="414" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">उत्तर: Liquidity + Interest Rate + Policy भित्र लुकेको</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले अनिलको पाठ देखाउँछ। बायाँ: उसको stock को chart राम्रो थियो, price बढ्दै थियो — "राम्रो trade" जस्तो देखियो, कागजमा profit पनि थियो। दायाँ: तर जब उसले बेच्न Sell Order राख्यो, दिनभरि execute भएन; भोलिपल्ट पनि बिक्री भएन — किनकि त्यो stock मा Buyer नै थिएनन् (Low Liquidity)। फलस्वरूप पैसा फस्यो। मुख्य पाठ — बजारमा मूल्य बढेको/घटेको प्राविधिक पक्ष मात्र होइन, आफूले चाहेको बेला किन्न Buyer र बेच्न Seller को उपस्थिति पनि उत्तिकै अनिवार्य हुन्छ। पछि ब्याजदर बढ्दा राम्रा sector पनि कमजोर भए — किनकि बजारलाई पर्दा पछाडिबाट Liquidity, Interest Rate र Policy ले चलाउँछन्।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>धेरै Beginner trader हरू केवल चार्टको संरचना र क्यान्डलस्टिक मात्र हेर्छन्। तर समग्र बजारलाई पर्दा पछाडिबाट चलाउने केही ठूला र अदृश्य शक्तिहरू पनि हुन्छन्।</p>
+
+<p>तीमध्ये मुख्य शक्तिहरू:</p>
+<ul>
+  <li>तरलता (Liquidity)</li>
+  <li>ब्याजदर (Interest Rate)</li>
+  <li>सरकारी नीति (Government Policy)</li>
+  <li>मौद्रिक नीति (Monetary Policy)</li>
+</ul>
+<p>हुन्। यी आधारभूत कुराहरू राम्ररी बुझ्न सकेपछि मात्र ट्रेडरले बजारलाई अझ ठूलो र स्पष्ट दृष्टिकोणबाट हेर्न सक्छ। यस अध्यायको उद्देश्य कसैलाई अर्थशास्त्री (Economist) बनाउनु होइन। यसको वास्तविक उद्देश्य ट्रेडरलाई बजारको समग्र वातावरण बुझ्न र सोही अनुसार आफ्नो रणनीतिको जोखिम कम गर्न मद्दत गर्नु हो।</p>
+
+<!-- VISUAL 2: 3 hidden forces -->
+<div class="visual-block">
+  <div class="visual-title">बजार चलाउने 3 अदृश्य शक्ति</div>
+  <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="300" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">चार्ट सतह हो — पछाडि यी शक्ति काम गर्छन्</text>
+
+    <rect x="40" y="70" width="230" height="170" rx="12" fill="#e8f0fe" stroke="#2962ff" stroke-width="2"/>
+    <text x="155" y="108" text-anchor="middle" font-family="sans-serif" font-size="30">💧</text>
+    <text x="155" y="148" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#1a56cc">Liquidity</text>
+    <text x="155" y="176" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">पैसा/कारोबारको</text>
+    <text x="155" y="196" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">सहज उपलब्धता</text>
+    <text x="155" y="220" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">बजारको जीवनरेखा</text>
+
+    <rect x="295" y="70" width="230" height="170" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="410" y="108" text-anchor="middle" font-family="sans-serif" font-size="30">📊</text>
+    <text x="410" y="148" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#2e7d32">Interest Rate</text>
+    <text x="410" y="176" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">पैसा कता बग्ने</text>
+    <text x="410" y="196" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">भन्ने दिशा</text>
+    <text x="410" y="220" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">Sentiment नियन्त्रण</text>
+
+    <rect x="550" y="70" width="230" height="170" rx="12" fill="#fff8dc" stroke="#c8a800" stroke-width="2"/>
+    <text x="665" y="108" text-anchor="middle" font-family="sans-serif" font-size="30">📜</text>
+    <text x="665" y="148" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#c8a800">Policy</text>
+    <text x="665" y="176" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">सरकार/NRB/SEBON</text>
+    <text x="665" y="196" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">का नियम/निर्णय</text>
+    <text x="665" y="220" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">दिशा बदल्न सक्ने</text>
+
+    <text x="410" y="278" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">उद्देश्य: economist बन्नु होइन — बजारको वातावरण बुझेर जोखिम घटाउनु</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले बजारलाई पर्दा पछाडिबाट चलाउने 3 अदृश्य शक्ति देखाउँछ। <strong>Liquidity (तरलता)</strong>: बजारमा पैसा र कारोबारको सहज उपलब्धता — किन्न/बेच्न कति सजिलो; यो बजारको जीवनरेखा हो। <strong>Interest Rate (ब्याजदर)</strong>: पैसा कता बग्ने भन्ने दिशा तय गर्छ, बजारको sentiment नियन्त्रण गर्छ। <strong>Policy (नीति)</strong>: सरकार, नेपाल राष्ट्र बैंक वा SEBON का नियम/निर्णय — बजारको दिशा एकाएक बदल्न सक्छन्। धेरै beginner केवल chart र candlestick हेर्छन्, तर यी तीन शक्ति नबुझे ठूलो तस्वीर छुट्छ। मुख्य कुरा — यो chapter ले economist बनाउने होइन; बजारको समग्र वातावरण बुझेर आफ्नो रणनीतिको जोखिम घटाउन सिकाउँछ।
+</div>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<div class="sub-heading">Liquidity के हो?</div>
+<p>Liquidity अर्थात् तरलता भनेको market मा पैसा र कारोबारको सहज उपलब्धता हो। सरल भाषामा भन्दा, यदि तपाईं बजारमा कुनै पनि स्टकलाई आफूले चाहेको समयमा सजिलै Buy र Sell गर्न सक्नुहुन्छ भने त्यहाँ Liquidity राम्रो छ भन्ने बुझिन्छ। तर यदि तपाईंले शेयर बेच्न खोज्दा Buyer भेट्न वा किन्न खोज्दा Seller भेट्न गाह्रो हुन्छ भने त्यस्तो स्टकमा Liquidity एकदमै कमजोर छ।</p>
+
+<div class="sub-heading">Interest Rate के हो?</div>
+<p>Interest Rate भनेको बैंक तथा वित्तीय संस्थाहरूले ऋणमा लिने वा निक्षेपमा दिने ब्याजसँग सम्बन्धित दर हो। यसले सर्वसाधारण र ठूला लगानीकर्ताहरूको पैसा प्रवाह गर्ने दिशालाई प्रत्यक्ष असर गर्छ।</p>
+
+<div class="sub-heading">Policy के हो?</div>
+<p>Policy भनेको सरकार, नेपाल राष्ट्र बैंक वा धितोपत्र बोर्ड जस्ता सम्बन्धित नियामक निकायले बनाएका नियम, कानुनी निर्णय वा व्यवस्थाहरू हुन्। यी नीतिगत निर्णयहरूले बजारको दिशा र लगानीकर्ताको भावनामा ठूलो प्रभाव पार्न सक्छन्।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<div class="sub-heading">भाग १: तरलता (Liquidity)</div>
+<p>तरलता कुनै पनि सक्रिय ट्रेडरका लागि अत्यन्तै महत्वपूर्ण विषय हो। किन? किनकि ट्रेडिङ भनेको केवल सही समयमा Buy गर्ने प्रक्रिया मात्र होइन, आफूले चाहेको बेला सुरक्षित रूपमा Sell गर्न सक्नु पनि उत्तिकै महत्वपूर्ण हुन्छ।</p>
+
+<p><strong>High Liquidity (उच्च तरलता)</strong></p>
+<p>उच्च तरलता भएको स्टकमा:</p>
+<ul>
+  <li>दैनिक कारोबार संख्या र रकम धेरै हुन्छ।</li>
+  <li>बजारमा सधैँ Buyer हरू प्रशस्त उपलब्ध हुन्छन्।</li>
+  <li>शेयर बेच्नका लागि Seller हरू पनि सधैँ तयार हुन्छन्।</li>
+  <li>बिना कुनै झन्झट सहज रूपमा Entry गर्न सकिन्छ।</li>
+  <li>आवश्यक परेको बेला तुरुन्तै Exit गर्न सकिन्छ।</li>
+</ul>
+<p>यस्ता स्टकहरूमा सामान्यतया मूल्यको उतारचढाव बढी व्यवस्थित र प्राविधिक नियम अनुसार चल्ने खालको हुन्छ।</p>
+
+<p><strong>Low Liquidity (कम तरलता)</strong></p>
+<p>कम तरलता भएको स्टकमा:</p>
+<ul>
+  <li>दैनिक कारोबार रकम र कित्ता एकदमै कम हुन्छ।</li>
+  <li>बजारमा पर्याप्त Buyer हरू भेटिँदैनन्।</li>
+  <li>शेयर बिक्रीका लागि Seller हरूको अभाव हुन सक्छ।</li>
+</ul>
+<p>यसले गर्दा बजारमा दुईवटा ठूला जोखिम आउँछन्:</p>
+<ul>
+  <li>थोरै कित्ता खरिद गर्दा पनि Price अचानक धेरै माथि उफ्रिन सक्छ।</li>
+  <li>थोरै सेलिङ प्रेसर आउँदा पनि Price अचानक लगातार घट्न सक्छ।</li>
+  <li>आफूले घाटा कम गर्न खोज्दा वा नाफा बुक गर्न खोज्दा सजिलै Exit गर्न गाह्रो हुन्छ।</li>
+</ul>
+
+<!-- VISUAL 3: High vs Low Liquidity (real candles) -->
+<div class="visual-block">
+  <div class="visual-title">High Liquidity vs Low Liquidity — Chart कस्तो देखिन्छ</div>
+  <svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="400" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">तरलता = बजारको जीवनरेखा</text>
+
+    <!-- LEFT high liquidity smooth -->
+    <rect x="25" y="62" width="385" height="38" fill="#26a69a" rx="6"/>
+    <text x="217" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff">✓ High Liquidity</text>
+    <rect x="25" y="106" width="385" height="200" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- smooth ordered candles -->
+    <g stroke-width="1.8">
+      <line x1="60" y1="250" x2="60" y2="280" stroke="#26a69a"/><rect x="51" y="256" width="18" height="18" fill="#26a69a"/>
+      <line x1="100" y1="232" x2="100" y2="262" stroke="#ef5350"/><rect x="91" y="238" width="18" height="14" fill="#ef5350"/>
+      <line x1="140" y1="218" x2="140" y2="248" stroke="#26a69a"/><rect x="131" y="224" width="18" height="20" fill="#26a69a"/>
+      <line x1="180" y1="202" x2="180" y2="230" stroke="#26a69a"/><rect x="171" y="207" width="18" height="18" fill="#26a69a"/>
+      <line x1="220" y1="188" x2="220" y2="216" stroke="#ef5350"/><rect x="211" y="193" width="18" height="13" fill="#ef5350"/>
+      <line x1="260" y1="172" x2="260" y2="200" stroke="#26a69a"/><rect x="251" y="177" width="18" height="20" fill="#26a69a"/>
+      <line x1="300" y1="158" x2="300" y2="186" stroke="#26a69a"/><rect x="291" y="163" width="18" height="18" fill="#26a69a"/>
+      <line x1="340" y1="146" x2="340" y2="172" stroke="#26a69a"/><rect x="331" y="151" width="18" height="16" fill="#26a69a"/>
+      <line x1="380" y1="136" x2="380" y2="162" stroke="#ef5350"/><rect x="371" y="141" width="18" height="12" fill="#ef5350"/>
+    </g>
+    <text x="217" y="296" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">व्यवस्थित, S/R पालना, सहज Exit</text>
+
+    <!-- RIGHT low liquidity gappy -->
+    <rect x="430" y="62" width="385" height="38" fill="#ef5350" rx="6"/>
+    <text x="622" y="88" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff">✗ Low Liquidity</text>
+    <rect x="430" y="106" width="385" height="200" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- gappy erratic candles with big wicks -->
+    <g stroke-width="1.8">
+      <line x1="465" y1="255" x2="465" y2="285" stroke="#26a69a"/><rect x="456" y="261" width="18" height="16" fill="#26a69a"/>
+      <line x1="510" y1="180" x2="510" y2="260" stroke="#26a69a"/><rect x="501" y="200" width="18" height="30" fill="#26a69a"/>
+      <line x1="555" y1="160" x2="555" y2="240" stroke="#ef5350"/><rect x="546" y="168" width="18" height="14" fill="#ef5350"/>
+      <line x1="600" y1="150" x2="600" y2="250" stroke="#26a69a"/><rect x="591" y="160" width="18" height="34" fill="#26a69a"/>
+      <line x1="645" y1="170" x2="645" y2="270" stroke="#ef5350"/><rect x="636" y="178" width="18" height="40" fill="#ef5350"/>
+      <line x1="690" y1="140" x2="690" y2="230" stroke="#26a69a"/><rect x="681" y="150" width="18" height="32" fill="#26a69a"/>
+      <line x1="735" y1="185" x2="735" y2="285" stroke="#ef5350"/><rect x="726" y="193" width="18" height="44" fill="#ef5350"/>
+    </g>
+    <text x="622" y="296" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c62828">ग्याप, अस्वाभाविक उफ्राइ, Exit गाह्रो</text>
+
+    <rect x="25" y="324" width="790" height="58" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="410" y="350" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#111">कागजमा profit भए पनि — बेच्दा Buyer नभए भ्रम मात्र</text>
+    <text x="410" y="373" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">Low Liquidity मा थोरै order ले पनि ठूलो उतारचढाव</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले तरलताको फरक देखाउँछ। बायाँ (High Liquidity): दैनिक कारोबार धेरै, Buyer/Seller सधैँ उपलब्ध — candle हरू व्यवस्थित, Support/Resistance पालना गर्दै सहज रूपमा चल्छन्, र आवश्यक परे तुरुन्तै Exit गर्न सकिन्छ। दायाँ (Low Liquidity): दैनिक कारोबार थोरै — candle हरूमा ठूला ग्याप र लामा wick, थोरै order ले पनि price अस्वाभाविक रूपमा उफ्रन्छ वा झर्छ, र बेच्न Buyer नभेटिँदा Exit गाह्रो हुन्छ। मुख्य पाठ — कागजमा ठूलो profit देखिए पनि बजारमा बेच्न Buyer नभए त्यो केवल प्राविधिक भ्रम हो। त्यसैले तरलतालाई बजारको जीवनरेखा मानिन्छ; ट्रेड गर्नुअघि सधैँ liquidity जाँच्नुपर्छ।
+</div>
+
+<p>त्यसैले एउटा सचेत ट्रेडरले चार्ट हेर्दा उक्त स्टकको तरलता कस्तो छ भन्ने कुरामा सधैँ ध्यान दिनुपर्छ। मानौँ, तपाईंसँग कागजमा ठूलो profit देखिएको छ, तर बजारमा त्यो शेयर बेच्न खोज्दा Buyer नै उपलब्ध छैन भने त्यो नाफा केवल प्राविधिक भ्रम मात्र हुन सक्छ। त्यसैले ट्रेडिङको दुनियाँमा तरलतालाई बजारको जीवनरेखा मानिन्छ।</p>
+
+<div class="sub-heading">भाग २: ब्याजदर (Interest Rate)</div>
+<p>अब ब्याजदरले बजारको मनोविज्ञानलाई कसरी नियन्त्रण गर्छ भन्ने कुरा बुझौँ।</p>
+
+<!-- VISUAL 4: Interest rate flow -->
+<div class="visual-block">
+  <div class="visual-title">ब्याजदर ↓ vs ब्याजदर ↑ — पैसा कता बग्छ?</div>
+  <svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="340" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">ब्याजदरले पैसाको दिशा तय गर्छ</text>
+
+    <!-- rate down -->
+    <rect x="25" y="62" width="385" height="240" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="217" y="92" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#2e7d32">ब्याजदर घट्दा ↓</text>
+    <line x1="50" y1="104" x2="385" y2="104" stroke="#26a69a" stroke-width="0.7"/>
+    <text x="50" y="134" font-family="sans-serif" font-size="14.5" fill="#111">• ऋण सस्तो र सजिलो</text>
+    <text x="50" y="166" font-family="sans-serif" font-size="14.5" fill="#111">• व्यवसाय विस्तार सजिलो</text>
+    <text x="50" y="198" font-family="sans-serif" font-size="14.5" fill="#111">• FD मा कम ब्याज</text>
+    <!-- arrow bank -> market -->
+    <rect x="60" y="218" width="120" height="40" rx="8" fill="#fff" stroke="#26a69a" stroke-width="1.3"/>
+    <text x="120" y="243" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#111">🏦 Bank</text>
+    <line x1="184" y1="238" x2="248" y2="238" stroke="#26a69a" stroke-width="3" marker-end="url(#a56a)"/>
+    <rect x="252" y="218" width="120" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+    <text x="312" y="243" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">📈 Market</text>
+    <text x="217" y="288" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#2e7d32">पैसा बजारतिर → Bullish सम्भावना</text>
+
+    <!-- rate up -->
+    <rect x="430" y="62" width="385" height="240" rx="10" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <text x="622" y="92" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#c62828">ब्याजदर बढ्दा ↑</text>
+    <line x1="455" y1="104" x2="790" y2="104" stroke="#ef5350" stroke-width="0.7"/>
+    <text x="455" y="134" font-family="sans-serif" font-size="14.5" fill="#111">• FD आकर्षक र सुरक्षित</text>
+    <text x="455" y="166" font-family="sans-serif" font-size="14.5" fill="#111">• ऋण महँगो, बुझाउन गाह्रो</text>
+    <text x="455" y="198" font-family="sans-serif" font-size="14.5" fill="#111">• बजारमा पैसा प्रवाह कम</text>
+    <rect x="465" y="218" width="120" height="40" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="525" y="243" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c62828">📉 Market</text>
+    <line x1="589" y1="238" x2="653" y2="238" stroke="#ef5350" stroke-width="3" marker-end="url(#a56b)"/>
+    <rect x="657" y="218" width="120" height="40" rx="8" fill="#fff" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="717" y="243" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#111">🏦 Bank</text>
+    <text x="622" y="288" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c62828">पैसा बैंकतिर → Bearish दबाब</text>
+
+    <defs>
+      <marker id="a56a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#26a69a"/></marker>
+      <marker id="a56b" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#ef5350"/></marker>
+    </defs>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले ब्याजदरले पैसाको दिशा कसरी तय गर्छ देखाउँछ। बायाँ (ब्याजदर घट्दा): ऋण सस्तो र सजिलो हुन्छ, व्यवसाय विस्तार सजिलो, FD मा कम ब्याज आउने हुनाले मानिसको पैसा बैंकबाट बजारतिर बग्छ (🏦→📈) — समग्र बजारमा सकारात्मक/Bullish सम्भावना। दायाँ (ब्याजदर बढ्दा): FD आकर्षक र सुरक्षित बन्छ, ऋण महँगो, बजारबाट पैसा बैंकतिर तानिन्छ (📉→🏦) — बजारमा बिक्रीको दबाब वा Bearish sentiment। मुख्य पाठ — ब्याजदरले बजारको sentiment, sector को शक्ति र लगानीकर्ताको जोखिम लिने क्षमता (Risk Appetite) लाई गहिरो असर गर्छ। त्यसैले trader ले ब्याजदर परिवर्तनसँगै बजारको भावना कता मोडिँदैछ भनेर पूर्वअनुमान गर्न सक्नुपर्छ।
+</div>
+
+<p><strong>ब्याजदर घट्दा के हुन सक्छ?</strong></p>
+<p>जब बैंकहरूको ब्याजदर घट्छ, तब:</p>
+<ul>
+  <li>बैंकबाट व्यापार वा शेयरका लागि ऋण लिन सजिलो र सस्तो हुन्छ।</li>
+  <li>उद्योग र व्यवसायहरूलाई कम लागतमा आफ्नो काम विस्तार गर्न मद्दत पुग्छ।</li>
+  <li>बैंकको मुद्दती निक्षेपमा पैसा राख्दा थोरै ब्याज आउने हुनाले मानिसहरूको पैसा शेयर बजार जस्ता बढी प्रतिफल दिने क्षेत्रमा बढी सक्रिय हुन थाल्छ।</li>
+</ul>
+<p>यसले समग्र शेयर मार्केटमा सकारात्मक र गतिशील प्रभाव पार्न सक्छ।</p>
+
+<p><strong>ब्याजदर बढ्दा के हुन सक्छ?</strong></p>
+<p>जब बैंकहरूको ब्याजदर बढ्छ, तब:</p>
+<ul>
+  <li>बैंकको मुद्दती निक्षेप (Fixed Deposit) मा पैसा राख्नु बढी सुरक्षित र आकर्षक बन्न जान्छ।</li>
+  <li>बैंकबाट लिइने ऋणहरू महँगो र बुझाउन कठिन हुन थाल्छन्।</li>
+  <li>बजारबाट पैसा बिस्तारै बैंक तर्फ तानिन्छ र बजारमा पैसाको प्रवाह कम हुन्छ।</li>
+</ul>
+<p>यसले गर्दा शेयर मार्केटमा लगातार बिक्रीको दबाब वा सेन्टिमेन्टमा मन्दी आउन सक्छ।</p>
+
+<p><strong>ट्रेडरले किन बुझ्नुपर्छ?</strong></p>
+<p>ट्रेडरले ब्याजदरमा आउने परिवर्तनसँगै बजारको भित्री भावना (Market Sentiment) कसरी बदलिन्छ भन्ने कुराको पूर्वअनुमान लगाउन सक्नुपर्छ। यसले बजारका विभिन्न Sector को शक्ति, बजारको गति र लगानीकर्ताहरूको जोखिम लिने क्षमता (Risk Appetite) लाई गहिरो असर गर्छ।</p>
+
+<div class="sub-heading">भाग ३: वित्तीय नीतिको प्रभाव (Policy Impact)</div>
+<p>नियामक निकायका नीतिहरूले बजारको ट्रेन्डलाई एकाएक परिवर्तन गर्ने क्षमता राख्छन्।</p>
+
+<p><strong>Monetary Policy (मौद्रिक नीति)</strong></p>
+<p>नेपाल राष्ट्र बैंकले जारी गर्ने मौद्रिक नीति र यसका त्रैमासिक समीक्षाहरूमा लिइने विभिन्न नीतिगत निर्णयहरू, जस्तै मार्जिन लेन्डिङको सीमा वा ब्याजदर सम्बन्धी निर्देशनहरूले सिधै बजारको मनोविज्ञानलाई प्रभावित गर्छन्।</p>
+
+<p><strong>Fiscal Policy (राजस्व वा बजेट नीति)</strong></p>
+<p>सरकारको वार्षिक बजेट, खर्च गर्ने क्षमता, करका दरहरूमा गरिने फेरबदल तथा आर्थिक कार्यक्रमले बजार र देशको अर्थतन्त्रलाई प्रभाव पार्छ।</p>
+
+<p><strong>Sector-Specific Policy (क्षेत्रगत नीति)</strong></p>
+<p>कहिलेकाहीँ बैंकिङ, जलविद्युत, बीमा वा लघुवित्त जस्ता निश्चित क्षेत्रहरूलाई मात्र प्रत्यक्ष असर गर्ने खालका नयाँ नियम वा निर्देशनहरू आउन सक्छन्। त्यसले बजारमा सेक्टर रोटेसन (Sector Rotation) गराउन र पैसा एक क्षेत्रबाट अर्को क्षेत्रमा स्थानान्तरण हुन ठूलो भूमिका खेल्छ।</p>
+
+<!-- VISUAL 5: Policy -> sector rotation -->
+<div class="visual-block">
+  <div class="visual-title">Policy → Sector Rotation — पैसा अनुकूल क्षेत्रमा सर्छ</div>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="320" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">नयाँ नीति → पैसा कमजोरबाट अनुकूल sector मा</text>
+
+    <!-- policy box -->
+    <rect x="300" y="62" width="220" height="50" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="2"/>
+    <text x="410" y="84" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c8a800">📜 नयाँ Policy</text>
+    <text x="410" y="103" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">(जस्तै: Hydro अनुकूल)</text>
+
+    <!-- from weak sector -->
+    <rect x="50" y="170" width="240" height="110" rx="10" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <text x="170" y="200" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c62828">कमजोर Sector</text>
+    <text x="170" y="228" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">पैसा बाहिरिँदै</text>
+    <!-- small down candles -->
+    <line x1="110" y1="245" x2="110" y2="268" stroke="#ef5350" stroke-width="1.6"/><rect x="103" y="250" width="14" height="14" fill="#ef5350"/>
+    <line x1="150" y1="250" x2="150" y2="272" stroke="#ef5350" stroke-width="1.6"/><rect x="143" y="255" width="14" height="14" fill="#ef5350"/>
+    <line x1="190" y1="255" x2="190" y2="275" stroke="#ef5350" stroke-width="1.6"/><rect x="183" y="259" width="14" height="12" fill="#ef5350"/>
+
+    <!-- arrow -->
+    <line x1="298" y1="225" x2="528" y2="225" stroke="#c8a800" stroke-width="3" marker-end="url(#a56r)"/>
+    <text x="410" y="215" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c8a800">पैसा सर्‍यो</text>
+    <defs><marker id="a56r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#c8a800"/></marker></defs>
+
+    <!-- to strong sector -->
+    <rect x="530" y="170" width="240" height="110" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="650" y="200" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">अनुकूल Sector</text>
+    <text x="650" y="228" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">Volume + Price ↑</text>
+    <line x1="590" y1="268" x2="590" y2="248" stroke="#26a69a" stroke-width="1.6"/><rect x="583" y="252" width="14" height="16" fill="#26a69a"/>
+    <line x1="630" y1="260" x2="630" y2="238" stroke="#26a69a" stroke-width="1.6"/><rect x="623" y="242" width="14" height="18" fill="#26a69a"/>
+    <line x1="670" y1="250" x2="670" y2="226" stroke="#26a69a" stroke-width="1.6"/><rect x="663" y="230" width="14" height="20" fill="#26a69a"/>
+    <line x1="710" y1="240" x2="710" y2="216" stroke="#26a69a" stroke-width="1.6"/><rect x="703" y="220" width="14" height="20" fill="#26a69a"/>
+
+    <text x="410" y="305" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#111">ट्रेडर: headline होइन — चार्ट + Volume ले पुष्टि भएपछि मात्र</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Policy ले Sector Rotation कसरी गराउँछ देखाउँछ। जब कुनै नयाँ क्षेत्रगत नीति आउँछ (जस्तै Hydropower अनुकूल निर्णय), बजारको पैसा कमजोर/प्रभावित sector बाट बाहिरिएर नीति अनुकूल भएको sector तर्फ सर्छ। बायाँ (कमजोर sector): पैसा बाहिरिँदै, रातो candle। दायाँ (अनुकूल sector): पैसा प्रवेश गर्दै — Volume र Price दुवै बढ्दै, हरियो candle। मुख्य कुरा — नीतिले पैसा एक क्षेत्रबाट अर्कोमा स्थानान्तरण गराउन ठूलो भूमिका खेल्छ। तर परिपक्व ट्रेडरले नीतिको headline मात्र पढेर हाम फाल्दैन; ऊ सोध्छ — नीति आएपछि चार्टमा Price कस्तो प्रतिक्रिया दिँदैछ, Volume बढेको छ कि, कुन sector मा प्रभाव प्रस्ट छ। नीतिको साब्दिक अर्थ भन्दा लगानीकर्ताले त्यसलाई कसरी लिए भन्ने बढी महत्वपूर्ण हुन्छ।
+</div>
+
+<p><strong>ट्रेडरले Policy लाई कसरी हेर्ने?</strong></p>
+<p>एउटा परिपक्व र व्यावसायिक ट्रेडरले नीति आउने बित्तिकै समाचारको Headline मात्र पढेर धारणा बनाउँदैन। उसले जहिले पनि सोध्छ:</p>
+<ul>
+  <li>यो नीति आएपछि बजारले चार्टमा कसरी वास्तविक प्रतिक्रिया दिइरहेको छ?</li>
+  <li>के नीति आएपछि बजारमा कारोबार भोल्युम बढेको छ?</li>
+  <li>कुन निश्चित Sector मा यसको सकारात्मक वा नकारात्मक प्रभाव प्रस्ट देखिएको छ?</li>
+  <li>के यस नीतिले बजारको समग्र प्राविधिक Trend लाई नै बदलेको छ?</li>
+</ul>
+<p>ट्रेडिङमा नीतिको साब्दिक अर्थ के हो भन्ने कुरा भन्दा पनि बजारका लगानीकर्ताले त्यसलाई कसरी लिए र कसरी Reaction दिए भन्ने कुरा सधैँ बढी महत्वपूर्ण हुन्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>नेपाली शेयर बजार (NEPSE) मा तरलता र नीतिको प्रभाव अत्यन्तै संवेदनशील रूपमा देखिने गर्छ। विशेष गरी नेप्सेमा गुडिरहेको Bull Market र Bear Market को समयमा तरलताको स्तर र दैनिक कारोबार रकममा जमीन-आसमानको फरक आउने गर्छ।</p>
+
+<p>ब्याजदरमा हुने सामान्य उतारचढाव, नेपाल राष्ट्र बैंकको मौद्रिक नीति, धितोपत्र बोर्डका निर्णयहरू र राजनीतिक वातावरणले नेप्सेको गतिलाई निकै छिटो प्रभावित बनाउँछन्। तर एउटा कुरा सधैँ सम्झनु आवश्यक छ: कुनै पनि नीति आउने बित्तिकै बजार सधैँ किताबमा लेखिए जस्तै एउटै सिधा दिशामा मात्र जान्छ भन्ने कुनै ग्यारेन्टी हुँदैन। त्यसैले ट्रेडरले नीतिको हल्लासँगै जहिले पनि चार्टको वास्तविक संरचना, भोल्युम र मूल्यको व्यवहारलाई अनिवार्य रूपमा अध्ययन गर्नुपर्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">📌 नोट</div>
+  <p style="margin-bottom:0;">बजारका नीति, नियम, पुँजीगत लाभकर, सेवा शुल्क, ब्याजदर, सीडीएससी, धितोपत्र बोर्ड (SEBON) तथा ब्रोकर सम्बन्धी व्यवस्थाहरू समय र परिस्थिति अनुसार परिवर्तन भइरहने हुनाले कुनै पनि ठूलो व्यापारिक निर्णय लिनुअघि सम्बन्धित आधिकारिक स्रोत (Official Source) बाट नवीनतम जानकारी प्रमाणित गर्न आवश्यक हुन्छ।</p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>जब बजारमा तरलता र पैसाको प्रवाह धेरै हुन्छ, तब साधारण ट्रेडरहरू अत्यधिक आत्मविश्वासी बन्छन् र जुनसुकै मूल्यमा पनि शेयर किन्न तयार हुन्छन्। तर जब बजारमा तरलता घट्छ र कारोबार रकम सुक्न थाल्छ, तब मानिसहरूमा डर र निराशा तीव्र रूपमा बढ्छ।</p>
+
+<p>त्यस्तै, जब ब्याजदर घट्छ, धेरै मानिस बजार प्रति अस्वाभाविक रूपमा आशावादी बन्छन् र ब्याजदर बढ्दा बजार पूरै सकियो भन्दै चिन्तित हुन्छन्। तर एउटा व्यावसायिक ट्रेडरले यस्ता भावनात्मक उतारचढाव भन्दा बजारका वास्तविक तथ्यहरूलाई मात्र हेर्छ। उसले हल्ला र डरको बीचमा पनि चार्टमा देखिने Price, Volume र Trend को वास्तविक स्थितिलाई नै आफ्नो निर्णयको पहिलो र अन्तिम आधार बनाउँछ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<ul>
+  <li>स्टक छनोट गर्दा त्यसको दैनिक तरलता र सहजै किन्न/बेच्न सकिने अवस्थालाई पूर्ण रूपमा बेवास्ता गर्नु।</li>
+  <li>चार्टमा मूल्य बढेको मात्र हेर्नु तर बजारमा Buyer र Seller को वास्तविक सक्रियता (Activity) ध्यान नदिनु।</li>
+  <li>समष्टिगत अर्थतन्त्र र ब्याजदरमा आएको ठूलो परिवर्तनले बजारमा पार्न सक्ने दीर्घकालीन प्रभावलाई नजरअन्दाज गर्नु।</li>
+  <li>कुनै पनि नीतिको वास्तविक बजार प्रभाव नहेरी केवल मिडियामा आउने Headline मात्र पढेर हतारमा निर्णय गर्नु।</li>
+  <li>नीति आउने बित्तिकै बजारले देखाउने वास्तविक प्रतिक्रिया र भोल्युमको परिवर्तनलाई विश्लेषण नगर्नु।</li>
+  <li>कम तरलता (Low Liquidity) भएका वा दैनिक थोरै कित्ता मात्र कारोबार हुने स्टकहरूमा आफ्नो क्षमता भन्दा धेरै ठूलो Position लिनु।</li>
+  <li>ट्रेड लिने बेलामा बजारको खराब अवस्थामा हुन सक्ने निकासको जोखिम (Exit Risk) को बारेमा अलिकति पनि नसोच्नु।</li>
+  <li>नयाँ आउने नीतिले कुन सेक्टरलाई फाइदा वा कुनलाई बेफाइदा गर्छ भन्ने क्षेत्रगत प्रभाव (Sector Impact) नबुझ्नु।</li>
+  <li>बजारमा चल्ने सस्तो हल्ला (Rumor) र नियामक निकायको आधिकारिक नीति (Official Policy) बीचको फरक छुट्याउन नसक्नु।</li>
+  <li>बजारको वृहत आर्थिक वातावरण (Macro Environment) लाई पूर्ण रूपमा बेवास्ता गरी केवल एउटै स्टकमा मात्र केन्द्रित हुनु।</li>
+</ul>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ चेतावनी</div>
+  <p style="margin-bottom:0;">प्राविधिक रूपमा जतिसुकै उत्कृष्ट र आकर्षक चार्ट प्याटर्न बनेको स्टक भए पनि यदि बजारमा त्यसको तरलता (Liquidity) एकदमै कमजोर छ भने त्यस्तो शेयरमा ट्रेड गर्नु अत्यन्तै जोखिमपूर्ण हुन सक्छ। कम तरलता भएको स्टकमा तपाईं सजिलै भित्र पस्न त सक्नुहोला, तर बजार घट्न थाल्दा बाहिर निस्किन Buyer नभएर तपाईंको पूरै लगानी लामो समयका लागि फस्न सक्छ।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<ul>
+  <li>कुनै पनि स्टकमा ट्रेड गर्नु अघि त्यसको बजारमा सहज उपलब्धता र तरलता अनिवार्य रूपमा जाँच गर्नुहोस्।</li>
+  <li>उक्त स्टकको विगत केही हप्ताको दैनिक औसत कारोबार भोल्युम (Average Volume) कस्तो छ, त्यसको अध्ययन गर्नुहोस्।</li>
+  <li>बजारमा अचानक सेलिङ प्रेसर आउँदा म बिना कुनै ठूलो नोक्सानी तुरुन्तै निस्किन सक्छु कि सक्दिन भन्ने Exit सम्भावना सधैँ विचार गर्नुहोस्।</li>
+  <li>ब्याजदर वा मौद्रिक नीति सम्बन्धी कुनै ठूलो परिवर्तन हुँदा बजारको सूचकले कस्तो प्राविधिक प्रतिक्रिया दिन्छ, त्यसलाई नजिकबाट नियाल्नुहोस्।</li>
+  <li>नीतिको बारेमा मानिसहरूले गर्ने गफ वा ब्याख्या भन्दा चार्टमा देखिने Price Action को दिशालाई पहिलो प्राथमिकता दिनुहोस्।</li>
+  <li>नयाँ नियम वा बजेट आउँदा त्यसले कुन निश्चित सेक्टरलाई बढी प्रभाव पार्छ भन्ने कुरा प्राविधिक रूपमा बुझ्ने प्रयास गर्नुहोस्।</li>
+  <li>नेप्सेका कम तरलता भएका साना कम्पनीहरूमा ट्रेड गर्दा सधैँ आफ्नो Position Size सानो राख्नुहोस् र अतिरिक्त सावधानी अपनाउनुहोस्।</li>
+  <li>बजारमा चल्ने सामाजिक सञ्जालका हल्ला र आधिकारिक रूपमा आउने नीतिगत घोषणाहरू स्पष्ट रूपमा छुट्याउनुहोस्।</li>
+  <li>समष्टिगत आर्थिक वातावरण जस्तोसुकै भए पनि आफ्नो व्यक्तिगत ट्रेडमा कडा Risk Management को नियम अनिवार्य रूपमा लागू गर्नुहोस्।</li>
+  <li>बजारको वृहत आर्थिक वातावरण (Macro Environment) लाई पूर्ण रूपमा बेवास्ता नगर्नुहोस्, यसलाई बजारको लहर बुझ्ने माध्यम बनाउनुहोस्।</li>
+</ul>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: बलियो चार्ट तर कमजोर तरलता</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">एउटा सानो कम्पनीको शेयर मूल्यले चार्टमा ६ महिना लामो कन्सोलिडेसन पछि सुन्दर Breakout दियो। तर बजारमा त्यसको दैनिक कारोबार रकम एकदमै कम छ र दिनभरिमा जम्मा केही सय कित्ता मात्र ट्रेड हुन्छ। यस्तो अवस्थामा चार्ट बलियो भए पनि कमजोर लिक्विडिटीका कारण यसमा ठूलो रकम लगानी गर्दा Exit Risk धेरै उच्च हुन्छ।</p></div>
+
+<p><strong>Scenario 2: ब्याजदरको गिरावट र बजारको उत्साह</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">बैंकहरूमा अचानक पैसाको प्रचुरता भयो र निक्षेपको ब्याजदर उल्लेख्य रूपमा घट्यो। यससँगै बजारमा लगानीकर्ताको सेन्टिमेन्ट सकारात्मक बन्यो, नेप्सेको दैनिक कारोबार भोल्युम लगातार बढ्न थाल्यो र सूचकले बलियो अपट्रेन्ड समात्यो। यसले प्राविधिक रूपमा एउटा बलियो र सुरक्षित Bullish वातावरण निर्माण भएको संकेत गर्छ।</p></div>
+
+<p><strong>Scenario 3: क्षेत्रगत नीतिको घोषणा र ट्रेडरको दृष्टिकोण</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">नियामक निकायले जलविद्युत क्षेत्रको विकास र वित्तीय व्यवस्थापनका लागि एउटा नयाँ र उत्साहजनक नीति घोषणा गर्‍यो। घोषणाको भोलिपल्टैबाट Hydropower Sector का स्टकहरूमा अचानक कारोबार भोल्युम र मूल्य दुवै तीव्र गतिमा बढ्न थाल्यो। ट्रेडरले हल्लाको पछि नलागी चार्ट र भोल्युम दुवैको ठोस विश्लेषण गरेर ट्रेड सेटअप लिन्छ। यो एक प्रक्रियामा आधारित दृष्टिकोण हो।</p></div>
+
+<h2 class="section-heading">Table 56.1: High Liquidity vs Low Liquidity</h2>
+
+<table>
+  <thead>
+    <tr><th>विशेषता</th><th>High Liquidity</th><th>Low Liquidity</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>दैनिक कारोबार</td><td>धेरै उच्च (कित्ता/रकम)</td><td>विरलै र थोरै</td></tr>
+    <tr><td>Spread (खरिद-बिक्री अन्तर)</td><td>एकदमै न्यून</td><td>धेरै फराकिलो</td></tr>
+    <tr><td>ठूलो Order को असर</td><td>मूल्यमा अस्वाभाविक उतारचढाव हुँदैन</td><td>थोरैमै सर्किट/ठूलो गिरावट</td></tr>
+    <tr><td>Exit</td><td>सहज र तुरुन्त</td><td>Buyer नभए फस्ने</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 56.2: Interest Rate Impact Framework</h2>
+
+<table>
+  <thead>
+    <tr><th>ब्याजदरको अवस्था</th><th>पैसाको प्रवाह</th><th>बजारको सम्भावित दिशा</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>लगातार घट्दो ↓</td><td>तरलता बढ्छ, लागत सस्तो</td><td>Bullish / सकारात्मक सम्भावना</td></tr>
+    <tr><td>लगातार बढ्दो ↑</td><td>पैसा बाहिरिन्छ, कर्जा महँगो</td><td>Bearish / दबाबपूर्ण</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 56.3: Policy Event Analysis Checklist</h2>
+
+<table>
+  <thead>
+    <tr><th>चरण</th><th>के जाँच्ने</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>पहिलो</td><td>नीतिको आधिकारिक स्रोत र सत्यता जाँच्ने</td></tr>
+    <tr><td>दोस्रो</td><td>कुन निश्चित sector लाई बढी प्रभाव पार्छ पहिचान गर्ने</td></tr>
+    <tr><td>तेस्रो</td><td>नीति आएपछि Price र Volume मा व्यावहारिक परिवर्तन चार्टमा विश्लेषण गर्ने</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Macro Environment Checklist</div>
+  <ul>
+    <li>के म ट्रेड गर्न लागिरहेको स्टकको बजारमा तरलता (Liquidity) राम्रो र भरपर्दो छ?</li>
+    <li>के यस स्टकको दैनिक कारोबार भोल्युम मेरो Position Size लाई सहजै धान्न सक्ने गरी पर्याप्त छ?</li>
+    <li>के बजारमा कुनै आपतकालीन अवस्था आएमा म यस स्टकबाट सहजै र तुरुन्तै Entry र Exit हुन सक्छु?</li>
+    <li>के हाल बजारमा समष्टिगत लगानीकर्ताहरूको मनोभावना (Market Sentiment) सकारात्मक दिशामा छ?</li>
+    <li>के निकट भविष्यमा वा हालसालै ब्याजदर सम्बन्धी बजारलाई हल्लाउने खालको कुनै ठूलो परिवर्तन भएको छ?</li>
+    <li>के सरकार वा राष्ट्र बैंकको नयाँ नीतिले म आवद्ध भएको Sector मा कुनै प्रत्यक्ष सकारात्मक वा नकारात्मक असर पारेको छ?</li>
+    <li>के मैले यो ट्रेड लिनु अघि नयाँ Policy को बजार प्रभावलाई चार्टको माध्यमबाट वस्तुगत रूपमा विश्लेषण गरेको छु?</li>
+    <li>के बजारको समग्र र दीर्घकालीन प्राविधिक Trend मेरो ट्रेडको दिशासँग प्रस्ट रूपमा मेल खान्छ?</li>
+    <li>के बजार मेरो सोच विपरीत चल्न थालेमा मेरो Risk Management र स्टप लसको योजना पूर्ण रूपमा तयार छ?</li>
+    <li>के यो ट्रेड मेरो आफ्नै विवेक र स्पष्ट Trade Plan को आधारमा तय गरिएको हो?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1</div>
+  <p>नेपाल शेयर बजार (NEPSE) का हालका ५ वटा अत्यधिक High Liquidity भएका स्टकहरू र ५ वटा एकदमै कम कारोबार हुने Low Liquidity स्टकहरू पहिचान गर्नुहोस्। तिनीहरूको दैनिक कारोबार कित्ता र चार्टको बनावट हेरेर आफ्नो डायरीमा स्पष्ट भिन्नता तुलना गर्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2</div>
+  <p>नेप्से बजारको इतिहासमा पछिल्लो एक वर्षभित्र आएको कुनै पनि एउटा महत्वपूर्ण आर्थिक वा मौद्रिक नीति (जस्तै मौद्रिक नीतिको समीक्षा) को अध्ययन गर्नुहोस्। त्यो नीति सार्वजनिक भएको हप्ता र त्यसको एक महिना पछिसम्म समग्र बजारको प्राविधिक Reaction र भोल्युम कस्तो रह्यो, नोट गर्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3</div>
+  <p>तपाईंको आफ्नै Watchlist मा रहेका सम्पूर्ण स्टकहरूको तरलताको अवस्था जाँच गरी तिनीहरूलाई High, Medium, र Low Liquidity को श्रेणीमा वर्गीकरण गरेर एउटा व्यक्तिगत Liquidity Score तयार पार्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4</div>
+  <p>आफ्नो ट्रेडिङ जर्नलमा इमानदारीपूर्वक यो प्रश्नको उत्तर लेख्नुहोस्: “कम तरलता (Low Liquidity) भएको स्टकमा ठूलो रकम लगानी गर्दा मेरो पूँजीमा आइपर्न सक्ने सबैभन्दा ठूलो र भयानक जोखिम के हो र म यसबाट बच्न अब कस्तो नियम पालना गर्नेछु?”</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p style="margin-bottom:0;">ट्रेडिङ भनेको केवल कम्प्युटरको स्क्रिनमा देखिने चार्टहरूको एकाङ्की खेल मात्र होइन। बजारको वास्तविक दुनियाँमा पैसा कुन गतिमा र कतातिर बगिरहेको छ भन्ने कुरा बुझ्नु सधैँ उत्तिकै महत्वपूर्ण हुन्छ। बजारको तरलता, ब्याजदरको उतारचढाव र नियामक निकायका नीतिगत निर्णयहरूले बजार चल्ने मुख्य वातावरण र जग तयार गर्छन्। तर एकजना अनुशासित ट्रेडरको रूपमा बजारमा प्रवेश गर्ने र निस्किने तपाईंको अन्तिम निर्णय भने सधैँ चार्टमा देखिने Price Action, वास्तविक Volume र कडा Risk Management को बलियो आधारमा मात्र हुनुपर्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 56 Summary</div>
+  <p>तरलताले बजारमा कुनै पनि शेयरलाई विनाकुनै कठिनाइ र मूल्यको ठूलो क्षति विना सहजै Buy र Sell गर्न कति सजिलो छ भन्ने कुराको मापन गर्छ। ब्याजदरको उतारचढावले बजारमा उपलब्ध हुने पैसाको कुल प्रवाह र लगानीकर्ताहरूको भित्री सेन्टिमेन्टलाई गहिरो रूपमा प्रभाव पार्न सक्छ। त्यस्तै, सरकारी तथा मौद्रिक नीतिहरूले निश्चित क्षेत्र र समग्र बजारको दीर्घकालीन व्यवहारमा ठूलो फेरबदल ल्याउन सक्छन्।</p>
+  <p style="margin-bottom:0;">एकजना कुशल र दूरदर्शी ट्रेडरले बजारमा काम गर्दा जहिले पनि तरलता, ब्याजदरको चक्र, नीतिको प्रभाव, चार्टको Price Action, र भोल्युमको अवस्था यी सबै महत्वपूर्ण पक्षहरूलाई एकै ठाउँमा राखेर मात्र आफ्नो विश्लेषण तयार गर्छ। बजारको यो वृहत आर्थिक वातावरण बुझ्दा चार्टमा देखिने मुभमेन्टहरूलाई अझ स्पष्ट र विश्वासिलो रूपमा बुझ्न ठूलो मद्दत मिल्छ।</p>
+</div>
+
+<div class="closing-quote">
+  एकजना सफल र परिपक्व ट्रेडरले<br>
+  केवल चार्टको सतह मात्र हेर्दैन,<br>
+  बरु त्यो चार्टको पछाडि बजारको पैसा, देशको नीति र<br>
+  समग्र बजारको वातावरण कसरी चलिरहेको छ भन्ने<br>
+  कुराको भित्री भाषा पनि उत्तिकै गहिराइमा बुझ्दछ।
+</div>
+
+</div>
+</body>
+</html>

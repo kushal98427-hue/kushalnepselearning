@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5: Share Price किन बढ्छ/घट्छ? — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.chart-placeholder { background: #fffdf5; border: 2px dashed #c9b97a; border-radius: 4px; padding: 40px 24px; margin: 24px 0; text-align: center; color: #555; font-style: italic; font-size: 14.5px; }
+.chart-placeholder::before { content: "📊"; display: block; font-size: 24px; margin-bottom: 10px; font-style: normal; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 30px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 5: FOUNDATION</div>
+  <h1 class="chapter-title">Share Price किन बढ्छ/घट्छ?</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>नवीनले एउटा share Rs. 600 मा किन्यो। उसले सोचेको थियो, <strong>“यो company राम्रो छ, अब price बढ्छ।”</strong> तर किनेको केही दिनपछि price Rs. 560 मा आयो। ऊ अचम्म पर्‍यो—<strong>“Company त राम्रो हो, अनि price किन घट्यो?”</strong></p>
+
+<p>अर्कोतर्फ, एउटा अर्को stock को financial report त्यति राम्रो थिएन, तर price लगातार बढिरहेको थियो। Facebook group मा चर्चा थियो, Volume बढेको थियो, buyer धेरै देखिएका थिए। नवीन झन् confused भयो—<strong>“राम्रो company घट्छ, कमजोर company बढ्छ, बजारमा logic छ कि छैन?”</strong></p>
+
+<p>यही confusion धेरै beginner trader र investor ले भोग्छन्। उनीहरूलाई लाग्छ share price केवल company राम्रो वा नराम्रो भएको कारणले चल्छ। तर वास्तविक बजारमा price धेरै कारणले चल्छ—demand, supply, expectation, news, rumor, liquidity, sector rotation, technical level, Volume, market sentiment, operator activity, fear, greed, र overall NEPSE condition।</p>
+
+<p>Share price बढ्नु वा घट्नुको पछाडि एउटै कारण हुँदैन। कहिलेकाहीँ price company को result ले चल्छ, कहिलेकाहीँ expectation ले, कहिलेकाहीँ market cycle ले, कहिलेकाहीँ operator activity ले, र कहिलेकाहीँ केवल भीडको emotion ले। राम्रो trader ले price किन चल्यो भनेर केवल कारण खोज्दैन; उसले price movement मा strength छ कि weakness छ भनेर पढ्न सिक्छ।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Share price किन बढ्छ वा घट्छ भन्ने कुरा नबुझी trading गर्नु धेरै खतरनाक हुन्छ। यदि तपाईंलाई price movement को logic थाहा छैन भने तपाईं हरियो candle देखेर लोभिनुहुन्छ र रातो candle देखेर डराउनुहुन्छ। बजारमा यस्तो emotional reaction ले गलत Entry, late Entry, panic selling, र bad holding decision गराउँछ।</p>
+
+<p>धेरै beginner हरू share price घट्दा केवल एउटै कुरा सोच्छन्—<strong>“अब के भयो?”</strong> अनि बढ्दा सोच्छन्—<strong>“अब त अझै बढ्छ।”</strong> तर professional trader ले यसरी सोच्दैन। ऊ सोध्छ—price बढ्दा Volume कस्तो छ? Resistance break भयो कि केवल spike हो? Price घट्दा selling pressure कति छ? Support नजिक buyer आयो कि आएन? Market र sector ले यो move support गरेको छ कि छैन?</p>
+
+<p>यो chapter ले तपाईंलाई share price movement को आधार बुझाउँछ। Price किन बढ्छ, किन घट्छ, कहिले बढेर पनि weak हुन सक्छ, कहिले घटेर पनि opportunity बन्न सक्छ, र trader ले price movement लाई कसरी practical रूपमा पढ्नुपर्छ भन्ने कुरा यही chapter बाट सुरु हुन्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Share price मुख्य रूपमा demand र supply बाट चल्छ। यदि कुनै share किन्न चाहने मानिसहरू बेच्न चाहने मानिसहरूभन्दा धेरै छन् भने price बढ्न सक्छ। यदि बेच्न चाहने मानिसहरू किन्न चाहने मानिसहरूभन्दा धेरै छन् भने price घट्न सक्छ।</p>
+
+<p>तर demand र supply आफैं बनिँदैन। त्यसको पछाडि कारण हुन्छ। Company को राम्रो report, dividend expectation, sector मा पैसा आउनु, positive news, market bullish हुनु, technical breakout, operator activity, वा social media hype ले demand बढाउन सक्छ। त्यस्तै bad news, weak result, policy डर, market bearish हुनु, sector weakness, profit booking, panic selling, वा technical breakdown ले supply बढाउन सक्छ।</p>
+
+<p>सरल भाषामा भन्नुपर्दा, share price तब बढ्छ जब बजारमा धेरै मानिसहरू त्यो share किन्न तयार हुन्छन् र बेच्ने मानिसहरू कम हुन्छन्। Share price तब घट्छ जब धेरै मानिसहरू बेच्न चाहन्छन् र किन्न तयार मानिसहरू कम हुन्छन्।</p>
+
+<p>तर trader का लागि यति बुझेर मात्र पुग्दैन। Trader ले सोध्नुपर्छ—यो demand real हो कि temporary? Volume genuine छ कि fake excitement? Price बढेको छ तर Risk-Reward अझै बाँकी छ कि छैन? Price घटेको छ तर support बचिरहेको छ कि breakdown भयो? यही practical thinking ले trader लाई भीडबाट अलग बनाउँछ।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Share price movement लाई बुझ्न पहिलो कुरा हो—<strong>market expectation</strong>। Share market आजको result मात्र होइन, भोलिको expectation मा पनि चल्छ। कहिलेकाहीँ company को current profit average हुन्छ, तर भविष्यमा growth आउँछ भन्ने expectation ले price बढ्न सक्छ। कहिलेकाहीँ company को current result राम्रो हुन्छ, तर बजारले त्यो result पहिले नै price मा adjust गरिसकेको हुन्छ, त्यसैले result आएपछि price घट्न पनि सक्छ।</p>
+
+<p>यो कुरा beginner लाई अचम्म लाग्छ। उनीहरू सोच्न सक्छन्—<strong>“राम्रो news आयो, price किन घट्यो?”</strong> कारण के हुन सक्छ भने smart money ले news आउनुअघि नै buy गरेको हुन सक्छ। News public भएपछि retailer हरू late entry गर्न आउँछन्, अनि पहिले किनेका मानिसहरूले profit booking गर्छन्। यसलाई कहिलेकाहीँ <strong>“buy the rumor, sell the news”</strong> जस्तो behavior भन्न सकिन्छ। तर यो सधैं लागू हुन्छ भन्ने होइन। Trader ले news भन्दा price reaction हेर्नुपर्छ।</p>
+
+<p>दोस्रो कुरा हो—<strong>liquidity</strong>। बजारमा पैसा कति छ, investor/trader को confidence कस्तो छ, bank interest rate, policy environment, credit flow, र economic sentiment कस्तो छ भन्ने कुराले share price मा असर गर्छ। Liquidity सजिलो हुँदा बजारमा पैसा आउन सक्छ, demand बढ्न सक्छ। Liquidity tight हुँदा मानिसहरू share बेचेर cash राख्न खोज्न सक्छन्।</p>
+
+<p>तेस्रो कुरा हो—<strong>sector rotation</strong>। सबै share एउटै समयमा बढ्दैनन्। कहिले Banking sector मा पैसा आउँछ, कहिले Hydropower, कहिले Insurance, कहिले Finance, कहिले Microfinance। यदि कुनै sector मा पैसा आउन थालेको छ भने त्यो sector का धेरै stock हरूमा demand देखिन सक्छ। Trader ले individual stock मात्र होइन, sector behavior पनि हेर्नुपर्छ।</p>
+
+<p>चौथो कुरा हो—<strong>technical level</strong>। Support र Resistance price movement मा ठूलो भूमिका खेल्छन्। Resistance नजिक धेरै seller आउन सक्छन्, किनकि त्यहाँ पहिले फसेका trader बेच्न चाहन्छन् वा profit booking हुन सक्छ। Support नजिक buyer आउन सक्छन्, किनकि त्यहाँ price सस्तो ठानिन्छ वा demand zone मानिन्छ। यदि Resistance strong Volume सहित break भयो भने price माथि जान सक्छ। यदि Support strong selling सहित break भयो भने price तल जान सक्छ।</p>
+
+<p>पाँचौँ कुरा हो—<strong>Volume</strong>। Price बढ्दा Volume बढेको छ भने demand participation आएको संकेत हुन सक्छ। Price बढ्छ तर Volume कमजोर छ भने move कमजोर हुन सक्छ। Price घट्दा Volume धेरै छ भने selling pressure बलियो हुन सक्छ। Price घट्दैछ तर Volume सुक्दैछ भने seller कमजोर हुँदै गएको संकेत हुन सक्छ। तर Volume लाई एक्लै होइन, price structure सँग जोडेर पढ्नुपर्छ।</p>
+
+<p>छैटौँ कुरा हो—<strong>psychology</strong>। Share price धेरै हदसम्म मानिसहरूको डर र लोभबाट पनि चल्छ। Bull market मा मानिसहरू महँगो share पनि किन्न तयार हुन्छन्, किनकि उनीहरूलाई अझ महँगोमा बेच्न पाइन्छ भन्ने आशा हुन्छ। Bear market मा राम्रो company पनि बेचिन्छ, किनकि डरले मानिसलाई cash सुरक्षित लाग्छ। यही fear र greed ले price लाई कहिलेकाहीँ fundamental value भन्दा धेरै माथि वा धेरै तल लैजान सक्छ।</p>
+
+<p>सातौँ कुरा हो—<strong>operator activity र smart money behavior</strong>। केही stock मा price movement natural demand-supply भन्दा धेरै sharp देखिन सक्छ। Volume अचानक बढ्नु, price लाई resistance माथि लगेर फेरि तल झार्नु, low volume मा price उठाउनु, retail लाई FOMO मा तान्नु, stop hunt गर्नु, shakeout गरेर कमजोर holder निकाल्नु—यी सबै behavior बजारमा देखिन सक्छन्। सबै movement operator activity हो भन्नु गलत हुन्छ, तर सबै movement innocent हो भन्नु पनि कमजोर सोच हो।</p>
+
+<p>Trader ले share price बढ्दा तुरुन्त खुशी हुनु हुँदैन। Price किन बढ्यो, कहाँबाट बढ्यो, कति Volume मा बढ्यो, Resistance कहाँ छ, move overextended छ कि healthy छ, Risk-Reward अझै मिल्छ कि छैन—यी कुरा जाँच्नुपर्छ।</p>
+
+<p>त्यस्तै price घट्दा तुरुन्त डराउनु पनि हुँदैन। Price normal Pullback हो कि trend breakdown? Support बचिरहेको छ कि छैन? Volume panic जस्तो छ कि controlled selling? Strong buyer आएको छ कि छैन? Market र sector कस्तो छ? यी कुरा हेरेर मात्र decision गर्नुपर्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा share price movement मा market sentiment को भूमिका धेरै ठूलो हुन्छ। कहिलेकाहीँ कुनै sector मा अचानक चर्चा बढ्छ र धेरै stock हरू चल्न थाल्छन्। कहिलेकाहीँ policy news, interest rate expectation, dividend season, quarterly report, monetary policy, budget, regulatory notice, वा liquidity sentiment ले market direction बदल्न सक्छ।</p>
+
+<p>नेपालमा social media को असर पनि कम छैन। Facebook group, YouTube video, Telegram/Viber group, broker room discussion, साथीभाइको tips, र rumor ले short-term demand सिर्जना गर्न सक्छ। तर rumor मा आएको demand टिक्छ भन्ने ग्यारेन्टी हुँदैन। धेरै beginner हरू discussion बढेपछि late entry गर्छन्, तर price पहिले नै धेरै बढिसकेको हुन्छ।</p>
+
+<p>NEPSE मा low liquidity stock हरूमा price छिटो माथि वा तल जान सक्छ। कम buyer-seller भएको stock मा सानो capital ले पनि price धेरै move हुन सक्छ। यस्तो stock मा chart आकर्षक देखिए पनि Exit risk बढी हुन सक्छ। Trader ले price मात्र होइन, Volume र turnover पनि हेर्नुपर्छ।</p>
+
+<p>NEPSE मा dividend expectation ले पनि price मा असर गर्छ। Bonus share, cash dividend, right share, merger/acquisition, quarterly report, capital plan, regulatory requirement जस्ता कुराले demand-supply बदल्न सक्छ। तर dividend news पछि price adjustment, book close, tax, र market expectation पनि बुझ्नुपर्छ। केवल <strong>“bonus आउँछ”</strong> भनेर किन्नु पर्याप्त analysis होइन।</p>
+
+<p>NEPSE मा index, sector, र stock तीनै तह जोडेर हेर्नु आवश्यक छ। NEPSE bullish छ, sector बलियो छ, stock resistance break गर्दैछ, Volume आएको छ, Risk-Reward मिल्छ—यस्तो अवस्थामा price movement तुलनात्मक रूपमा meaningful हुन सक्छ। तर NEPSE कमजोर छ, sector कमजोर छ, stock मात्र social media hype मा चल्दैछ भने risk बढी हुन सक्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Share price बढ्दा beginner को मनमा लोभ जाग्छ। उसलाई लाग्छ, <strong>“अब नकिने छुट्छ।”</strong> यही FOMO ले धेरै trader लाई Resistance नजिक late Entry गर्न लगाउँछ। Price धेरै बढिसकेपछि Entry गर्दा Stop Loss टाढा हुन्छ, Risk-Reward बिग्रिन्छ, अनि सानो correction मा पनि ठूलो loss देखिन सक्छ।</p>
+
+<p>Share price घट्दा beginner को मनमा डर जाग्छ। यदि उसले plan बिना share किनेको छ भने price घट्दा ऊ confused हुन्छ। Sell गर्ने कि hold गर्ने? Average down गर्ने कि wait गर्ने? Stop Loss काट्ने कि hope गर्ने? Plan नभएको trader price घट्दा आफ्नो psychology को गुलाम बन्छ।</p>
+
+<p>Price बढ्दा overconfidence आउन सक्छ। केही profitable trade भएपछि trader लाई लाग्न सक्छ कि उसले market बुझिसक्यो। उसले position size बढाउँछ, Stop Loss ignore गर्छ, अनि weak setup मा पनि Entry गर्छ। Bull market मा यस्तो overconfidence धेरै देखिन्छ।</p>
+
+<p>Price घट्दा ego दुख्न सक्छ। Trader ले share किनेपछि price घट्यो भने उसलाई आफ्नो analysis गलत भएको स्वीकार्न गाह्रो हुन्छ। ऊ chart भन्दा आफ्नो opinion बचाउन खोज्छ। यही ego ले small loss लाई big loss बनाउँछ।</p>
+
+<p>राम्रो trader ले price movement लाई आफ्नो ego सँग जोड्दैन। Price बढ्यो भने उसले plan अनुसार manage गर्छ। Price घट्यो भने Stop Loss वा exit rule अनुसार action लिन्छ। उसको focus <strong>“म सही छु कि गलत?”</strong> मा होइन, <strong>“मेरो risk control मा छ कि छैन?”</strong> मा हुन्छ।</p>
+
+<p>Share price movement लाई बुझ्दा trader ले एउटा कुरा गहिरो रूपमा स्वीकार्नुपर्छ—price तपाईंको इच्छा अनुसार चल्दैन। तपाईंले share किनेपछि price बढ्नै पर्छ भन्ने छैन। तपाईंले राम्रो analysis गरे पनि market ले फरक behavior देखाउन सक्छ। त्यसैले trader को वास्तविक सुरक्षा prediction मा होइन, risk management मा हुन्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—price बढ्यो भने राम्रो share, price घट्यो भने नराम्रो share भन्ने सोच्नु। Price movement short-term मा धेरै कारणले हुन सक्छ। राम्रो company पनि correction मा घट्न सक्छ। कमजोर company पनि hype मा बढ्न सक्छ।</p>
+
+<p>दोस्रो गल्ती हो—हरियो candle देखेर Entry गर्नु। Price बढ्दैछ भन्दैमा buy गर्नु राम्रो trading होइन। Entry level, Volume, Resistance, Stop Loss, Risk-Reward, र market context हेर्नुपर्छ।</p>
+
+<p>तेस्रो गल्ती हो—घटेको share सस्तो भयो भनेर किन्नु। Price Rs. 1000 बाट Rs. 700 आयो भन्दैमा सस्तो भएको हो भन्ने छैन। यदि trend कमजोर छ, support break भएको छ, sector bearish छ, र selling pressure अझै छ भने price अझ घट्न सक्छ।</p>
+
+<p>चौथो गल्ती हो—news सुनेर late Entry गर्नु। धेरै पटक news आउँदासम्म price move भइसकेको हुन्छ। News पछि price sustain हुन्छ कि profit booking आउँछ, त्यो हेर्नुपर्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Volume ignore गर्नु। Price बढेको देखिन्छ तर Volume कमजोर छ भने demand कमजोर हुन सक्छ। Price घटेको देखिन्छ तर Volume dry छ भने panic गर्नुपर्ने नहुन सक्छ। Volume बिना price reading अधुरो हुन्छ।</p>
+
+<p>छैटौँ गल्ती हो—market र sector नहेरी individual stock मा decision गर्नु। Individual stock strong देखिए पनि market bearish छ भने risk बढ्न सक्छ।</p>
+
+<p>सातौँ गल्ती हो—operator trap नबुझ्नु। अचानक Volume spike, तेज price move, social media hype, resistance माथि false breakout, अनि तुरुन्त fall—यस्ता अवस्थाले beginner लाई फसाउन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—loss भएपछि reason खोज्दै बस्नु तर Stop Loss नमान्नु। Price किन घट्यो भनेर खोज्नु राम्रो हो, तर risk limit पार गरेपछि action नगर्नु खतरनाक हो।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Price Movement मा गर्ने मुख्य गल्तीहरू</div>
+  <ul style="margin:8px 0 0 24px;">
+    <li>हरियो candle देखेर FOMO मा late Entry गर्नु</li>
+    <li>घटेको share "सस्तो भयो" भनेर बिना analysis किन्नु</li>
+    <li>News सुनेर price already move भइसकेपछि Entry गर्नु</li>
+    <li>Volume confirmation ignore गरेर price मात्र हेर्नु</li>
+    <li>NEPSE index र sector context नहेरी stock decision गर्नु</li>
+    <li>Operator trap, false breakout, र stop hunt नबुझ्नु</li>
+    <li>Loss limit पार भएपछि पनि Stop Loss नमान्नु</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Share price movement पढ्दा यी rules ध्यानमा राख्नुहोस्:</p>
+
+<ul>
+  <li>Price बढ्यो भन्दैमा तुरुन्त buy नगर्नुहोस्।</li>
+  <li>Price घट्यो भन्दैमा तुरुन्त panic sell नगर्नुहोस्।</li>
+  <li>Price movement लाई सधैं Volume सँग पढ्नुहोस्।</li>
+  <li>Resistance नजिक chase गर्नु अघि Risk-Reward जाँच्नुहोस्।</li>
+  <li>Support break भयो भने “सस्तो भयो” मात्र नसोच्नुहोस्।</li>
+  <li>News आएपछि price reaction हेर्नुहोस्।</li>
+  <li>NEPSE index, sector, र stock तीनै direction मिल्छ कि मिल्दैन हेर्नुहोस्।</li>
+  <li>Low liquidity stock मा तेज price move देख्दा सावधान हुनुहोस्।</li>
+  <li>Breakout मा Volume र close confirmation खोज्नुहोस्।</li>
+  <li>Pullback मा selling Volume घटेको छ कि छैन हेर्नुहोस्।</li>
+  <li>Price move overextended छ भने late Entry बाट बच्नुहोस्।</li>
+  <li>Stop Loss पहिले decide गर्नुहोस्, कारण पछि खोज्दै नबस्नुहोस्।</li>
+  <li>Profit हुँदा पनि plan बिना greed नगर्नुहोस्।</li>
+  <li>Loss हुँदा पनि ego बचाउन hold नगर्नुहोस्।</li>
+</ul>
+
+<p>Trader को काम price बढ्छ कि घट्छ भनेर पक्का भन्नु होइन। Trader को काम price movement को quality जाँच्नु हो। Quality राम्रो छ, risk defined छ, reward उचित छ, market context supportive छ भने trade विचार गर्न सकिन्छ। नत्र wait गर्नु पनि राम्रो decision हो।</p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p>मानौं, एउटा stock Rs. 400 देखि Rs. 500 सम्म केही दिनमै बढ्यो। Social media मा चर्चा धेरै भयो। Beginner trader ले Rs. 500 मा buy गर्‍यो, किनकि उसलाई लाग्यो यो अब Rs. 600 जान्छ। तर Rs. 500 पुरानो Resistance zone थियो। Volume पनि climax जस्तो धेरै आएको थियो। अर्को दिन price Rs. 480 मा आयो, त्यसपछि Rs. 455। Trader फस्यो।</p>
+
+<p>यही situation मा disciplined trader ले फरक तरिकाले सोच्थ्यो। उसले हेर्थ्यो—Rs. 500 Resistance हो। Price धेरै छिटो बढेको छ। Volume spike छ। Risk-Reward अब राम्रो छैन। यदि real Breakout हो भने price Resistance माथि sustain हुनुपर्छ वा Retest मा buyer आउनुपर्छ। त्यसैले उसले तुरुन्त Entry नगरी wait गर्‍यो।</p>
+
+<p>अब अर्को scenario हेरौं। एउटा stock Rs. 700 बाट Rs. 620 सम्म घट्यो। Beginner ले भन्यो, <strong>“धेरै घट्यो, सस्तो भयो।”</strong> तर chart मा Support Rs. 650 break भएको थियो। Volume selling day मा धेरै थियो। Sector पनि कमजोर थियो। Price Rs. 620 मा आएको मात्र आधारमा buy गर्नु जोखिमपूर्ण थियो।</p>
+
+<p>Disciplined trader ले support बच्यो कि break भयो, selling volume घट्यो कि बढ्यो, reversal candle आयो कि आएन, sector सुधारियो कि छैन, risk कहाँ define गर्ने भनेर हेर्थ्यो। यदि clear setup छैन भने ऊ wait गर्थ्यो।</p>
+
+<div class="chart-placeholder">
+  Chart Placeholder: Resistance नजिक FOMO Entry गरेर फसेको scenario —<br>
+  Rs. 500 Resistance + Volume climax → Late entry → Reversal
+</div>
+
+<div class="chart-placeholder">
+  Chart Placeholder: Support breakdown पछि "सस्तो भयो" भनेर किन्दा अझ घटेको scenario —<br>
+  Support break + heavy selling volume + weak sector → Continuation down
+</div>
+
+<div class="chart-placeholder">
+  Chart Placeholder: Price + Volume + Support/Resistance जोडेर —<br>
+  Meaningful move vs. Weak move को side-by-side comparison
+</div>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Price बढ्दा आफैंलाई सोध्नुहोस्:</div>
+  <ul>
+    <li>Price कुन level बाट बढेको हो?</li>
+    <li>यो Resistance नजिक छ कि Resistance break गरेको छ?</li>
+    <li>Volume बढेको छ कि कमजोर छ?</li>
+    <li>Move healthy छ कि overextended?</li>
+    <li>NEPSE index support मा छ कि weak छ?</li>
+    <li>Sector पनि बलियो छ?</li>
+    <li>Entry गर्दा Stop Loss कहाँ राख्ने?</li>
+    <li>Risk-Reward अझै मिल्छ?</li>
+    <li>म setup मा Entry गर्दैछु कि FOMO मा?</li>
+    <li>Breakout पछि sustain वा Retest confirmation छ?</li>
+  </ul>
+</div>
+
+<div class="checklist-box">
+  <div class="checklist-title">Price घट्दा आफैंलाई सोध्नुहोस्:</div>
+  <ul>
+    <li>Price normal Pullback हो कि breakdown?</li>
+    <li>Major Support बचिरहेको छ?</li>
+    <li>Selling Volume कस्तो छ?</li>
+    <li>Volume घट्दै गएको छ कि panic selling छ?</li>
+    <li>Sector कमजोर छ कि केवल stock correction मा छ?</li>
+    <li>Trend अझै valid छ?</li>
+    <li>Stop Loss hit भयो कि छैन?</li>
+    <li>म plan अनुसार सोच्दैछु कि डरले?</li>
+    <li>Average down गर्ने आधार छ कि केवल loss घटाउने आशा?</li>
+    <li>यो stock avoid गर्नुपर्ने weak structure मा त छैन?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Five Stock Observation</div>
+  <p>NEPSE मा कुनै 5 वटा stock छान्नुहोस् र प्रत्येक stock का लागि लेख्नुहोस्:</p>
+  <ul>
+    <li>पछिल्लो 1 महिनामा price बढेको छ कि घटेको?</li>
+    <li>Price बढ्दा Volume बढेको छ कि घटेको?</li>
+    <li>Price घट्दा Volume कस्तो थियो?</li>
+    <li>Stock major Support नजिक छ कि Resistance नजिक?</li>
+    <li>Move healthy देखिन्छ कि overextended?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Overextended Stock Study</div>
+  <p>कुनै एउटा stock खोज्नुहोस् जुन धेरै बढिसकेको छ। त्यसमा यी कुरा note गर्नुहोस्:</p>
+  <ul>
+    <li>Price कहाँबाट बढ्न सुरु भयो?</li>
+    <li>बीचमा Pullback आयो कि सीधै बढ्यो?</li>
+    <li>Volume gradually बढ्यो कि अचानक spike आयो?</li>
+    <li>Social media मा चर्चा बढेको थियो कि थिएन?</li>
+    <li>अहिले Entry गर्दा Risk-Reward मिल्छ कि chase हुन्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Falling Stock Analysis</div>
+  <p>कुनै एउटा घटिरहेको stock छान्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>घट्नु normal correction हो कि trend breakdown?</li>
+    <li>Support levels कहाँ छन्?</li>
+    <li>Volume selling pressure देखाइरहेको छ?</li>
+    <li>Sector पनि कमजोर छ?</li>
+    <li>“सस्तो भयो” भन्नु उचित छ कि अझै wait गर्नुपर्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Past Trade Self-Audit</div>
+  <p>आफ्नो पुरानो एउटा trade सम्झनुहोस् जहाँ तपाईं price बढेको देखेर किन्नुभएको थियो। अब लेख्नुहोस्:</p>
+  <ul>
+    <li>तपाईंले Entry गर्दा Resistance हेर्नुभएको थियो?</li>
+    <li>Volume हेर्नुभएको थियो?</li>
+    <li>Stop Loss राख्नुभएको थियो?</li>
+    <li>Risk-Reward मिलेको थियो?</li>
+    <li>त्यो trade setup थियो कि FOMO?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Share price बढ्नु मात्र opportunity होइन। Share price घट्नु मात्र danger होइन। Opportunity र danger price को direction मा होइन, price movement को quality मा लुकेको हुन्छ।</p>
+  <p>Beginner price हेर्छ। Intermediate trader price र Volume हेर्छ। Serious trader price, Volume, level, market context, sector strength, Risk-Reward, र psychology सबै जोडेर हेर्छ।</p>
+  <p>Price बढ्दा सबैभन्दा ठूलो खतरा <strong>FOMO</strong> हो। Price घट्दा सबैभन्दा ठूलो खतरा <strong>hope</strong> हो। FOMO ले महँगोमा किन्न लगाउँछ। Hope ले गलत share लामो समय hold गराउँछ। यी दुवैबाट बच्ने उपाय हो—plan, Stop Loss, र process।</p>
+  <p style="margin-bottom:0;">बजारमा price तपाईंको control मा हुँदैन। तर तपाईं कहाँ Entry गर्ने, कति risk लिने, कहाँ Exit गर्ने, र कुन setup avoid गर्ने भन्ने कुरा तपाईंको control मा हुन्छ। यही control नै trader को असली शक्ति हो।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 5 Summary</div>
+  <p>Share price मुख्य रूपमा demand र supply बाट चल्छ। Demand बढी हुँदा price बढ्न सक्छ, supply बढी हुँदा price घट्न सक्छ। तर demand र supply को पछाडि company performance, expectation, news, rumor, liquidity, sector rotation, market sentiment, technical level, Volume, psychology, र operator activity जस्ता धेरै कारण हुन्छन्।</p>
+  <p>Trader का लागि price movement को direction भन्दा पनि quality महत्वपूर्ण हुन्छ। Price बढ्दा Volume छ कि छैन, Resistance कहाँ छ, Breakout sustain भएको छ कि छैन, Risk-Reward मिल्छ कि छैन भन्ने कुरा हेर्नुपर्छ। Price घट्दा Support बचिरहेको छ कि छैन, selling Volume कस्तो छ, trend breakdown भयो कि normal Pullback हो भन्ने कुरा बुझ्नुपर्छ।</p>
+  <p>NEPSE मा social media hype, sector rotation, liquidity, policy expectation, dividend season, and market sentiment ले price movement मा ठूलो असर पार्न सक्छ। त्यसैले केवल rumor वा news को आधारमा decision गर्नु खतरनाक हुन्छ।</p>
+  <p>Share price बढ्दा FOMO बाट बच्नुपर्छ। Share price घट्दा hope र ego बाट बच्नुपर्छ। राम्रो trader ले price movement लाई emotion बाट होइन, structure, Volume, market context, र risk management बाट पढ्छ।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—price किन बढ्यो वा घट्यो भन्ने कुरा बुझ्नु महत्वपूर्ण छ, तर अझ महत्वपूर्ण कुरा हो, त्यो movement trade गर्न योग्य छ कि छैन भनेर जाँच्नु।</p>
+</div>
+
+<div class="closing-quote">
+  Share price को हरेक चालमा आवाज हुन्छ;<br>सफल trader त्यो आवाज सुन्दैन, त्यसको पछाडिको demand, supply, Volume, level, र psychology पढ्छ।
+</div>
+
+</div>
+</body>
+</html>

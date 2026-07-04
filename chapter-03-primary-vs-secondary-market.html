@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3: Primary Market vs Secondary Market — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 30px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 3: FOUNDATION</div>
+  <h1 class="chapter-title">Primary Market vs Secondary Market</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>सुरेशले पहिलोपटक share market सुन्दा IPO बाट सुरु गर्‍यो। उसले MeroShare खोलेर IPO apply गर्‍यो। केही समयपछि उसलाई 10 कित्ता share पर्यो। उसलाई लाग्यो, <strong>“Share market त सजिलो रहेछ। IPO हाल्यो, share पर्यो, अनि listing पछि बेच्यो भने profit।”</strong></p>
+
+<p>केही महिनापछि उसले secondary market मा trading गर्ने सोच बनायो। TMS खोलेर price बढिरहेको एउटा share किन्यो। IPO मा जस्तो सजिलो होला भन्ने सोचेको थियो। तर यहाँ price तुरुन्त बदलियो। कहिले buyer धेरै देखियो, कहिले seller धेरै। किनेपछि price घट्यो। उसलाई थाहा भएन—hold गर्ने कि sell गर्ने? Stop Loss कहाँ राख्ने? Profit target के हो? यो trade हो कि investment?</p>
+
+<p>त्यसपछि उसले बुझ्यो—Primary Market र Secondary Market एउटै share market का भाग भए पनि, तिनीहरूको nature, risk, decision process, र psychology फरक हुन्छ।</p>
+
+<p>IPO मा तपाईं company बाट पहिलोपटक share किन्नुहुन्छ। Secondary Market मा तपाईं अर्को investor वा trader बाट already listed share किन्नुहुन्छ। IPO मा allotment को chance हुन्छ। Secondary Market मा price movement को risk हुन्छ। IPO मा तपाईंलाई price छान्ने धेरै freedom हुँदैन। Secondary Market मा तपाईंलाई Entry, Exit, Stop Loss, Risk-Reward, Volume, Trend, र psychology सबै आफैं manage गर्नुपर्छ।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>धेरै नेपाली लगानीकर्ताको share market journey IPO बाट सुरु हुन्छ। IPO ले बजारसँग परिचय गराउँछ, तर IPO को अनुभवले secondary market trading सिकाउँदैन। यही कुरा नबुझ्दा beginner हरू secondary market मा छिट्टै गल्ती गर्छन्।</p>
+
+<p>IPO मा share पर्नु र secondary market मा share किनेर profit निकाल्नु एउटै skill होइन। IPO मा luck, allotment, company quality, listing sentiment, र market mood को भूमिका हुन्छ। Secondary market मा timing, chart reading, Volume, market context, sector strength, Stop Loss, Position Sizing, र Trading Psychology को भूमिका धेरै ठूलो हुन्छ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि यसले तपाईंलाई दुई बजारबीचको फरक स्पष्ट बनाउँछ। तपाईं IPO investor हुनुहुन्छ कि secondary market trader? तपाईं long-term hold गर्न खोज्दै हुनुहुन्छ कि short-term trade? तपाईंको risk कहाँ छ? तपाईंको decision process के हुनुपर्छ? यी कुरा सुरुमै स्पष्ट भएन भने तपाईं गलत बजारमा गलत expectation लिएर पस्नुहुन्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p><strong>Primary Market</strong> भनेको company ले पहिलोपटक public बाट पैसा उठाउन share issue गर्ने बजार हो। IPO, FPO, Right Share जस्ता issue हरू Primary Market सँग सम्बन्धित हुन्छन्। यहाँ investor ले company बाट direct share पाउने प्रक्रिया हुन्छ, तर allotment, eligibility, application process, र regulatory rules लागू हुन्छन्।</p>
+
+<p><strong>Secondary Market</strong> भनेको already listed share हरू investor र trader बीच किनबेच हुने बजार हो। NEPSE मा broker/TMS मार्फत हुने दैनिक share trading Secondary Market हो। यहाँ तपाईंले share company बाट होइन, अर्को holder बाट किन्नुहुन्छ। तपाईंले बेच्दा पनि अर्को buyer लाई बेच्नुहुन्छ।</p>
+
+<p>Primary Market मा तपाईं मुख्यतया application दिनुहुन्छ र share पर्छ कि पर्दैन भन्ने पर्खनुहुन्छ। Secondary Market मा तपाईंलाई live price, buyer-seller, Volume, trend, Support, Resistance, Breakout, Pullback, र market sentiment हेरेर निर्णय गर्नुपर्छ।</p>
+
+<p>सरल रूपमा भन्नुपर्दा, Primary Market प्रवेशद्वार जस्तो हो। Secondary Market वास्तविक मैदान हो। Primary Market ले तपाईंलाई share ownership को अनुभव दिन्छ। Secondary Market ले तपाईंको discipline, risk control, psychology, र decision-making skill test गर्छ।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Primary Market मा company ले capital raise गर्न public लाई share issue गर्छ। <strong>IPO</strong> अर्थात् Initial Public Offering मा company पहिलोपटक public मा share बेच्न आउँछ। <strong>FPO</strong> मा already listed company ले थप share issue गर्न सक्छ। <strong>Right Share</strong> मा existing shareholder लाई निश्चित अनुपातमा थप share किन्ने अधिकार दिइन सक्छ। यी सबै process मा regulatory approval, issue manager, application system, allotment, listing, र official notice जस्ता कुरा जोडिएका हुन्छन्।</p>
+
+<p>Primary Market मा investor को मुख्य काम company को background, purpose of issue, financial position, risk factor, sector, management, project status, earning capacity, debt, र valuation बुझ्नु हो। तर धेरै beginner ले IPO मा यी कुरा पढ्दैनन्। उनीहरू केवल <strong>“IPO हो, हाल्नै पर्छ”</strong> भन्ने सोचमा apply गर्छन्। केही IPO ले listing gain दिन सक्छन्, केहीले लामो समय कमजोर performance पनि दिन सक्छन्। IPO सधैं safe profit हो भन्ने सोच गलत हो।</p>
+
+<p>Secondary Market मा risk फरक तरिकाले देखिन्छ। यहाँ price live movement मा हुन्छ। तपाईंले share Rs. 400 मा किन्नुभयो भने केही मिनेट, केही घण्टा, केही दिन, वा केही हप्तामा price Rs. 420 पनि हुन सक्छ, Rs. 370 पनि हुन सक्छ। Secondary Market मा पैसा कमाउने सम्भावना बढी dynamic छ, तर गल्ती गर्ने सम्भावना पनि धेरै हुन्छ।</p>
+
+<p>Trader का लागि Secondary Market को सबैभन्दा महत्वपूर्ण कुरा plan हो। Entry किन? Stop Loss कहाँ? Target कहाँ? Risk-Reward कति? Position size कति? Market bullish छ कि bearish? Sector support छ कि छैन? Volume confirmation छ कि छैन? Breakout हो कि fake move? यी कुरा बिना secondary market मा trade गर्नु अन्धो रूपमा गाडी चलाउनु जस्तै हो।</p>
+
+<p>Primary Market मा तपाईंले application गर्दा तपाईंको पैसा केही समय block हुन सक्छ, allotment नपरे refund हुन सक्छ, share परे listing पछि Demat मा आउन सक्छ। Secondary Market मा तपाईंले buy गरेपछि settlement process, payment obligation, sell गरेपछि EDIS, WACC, capital gain calculation, broker settlement जस्ता practical कुरा बुझ्नुपर्छ।</p>
+
+<p>Secondary Market मा trader ले एउटा कुरा गहिरो रूपमा बुझ्नुपर्छ—यहाँ तपाईंले पैसा कमाउनु भनेको अरू मानिसहरूको decision, डर, लोभ, आशा, र mistake बीच आफ्नो plan अनुसार चल्नु हो। जब धेरै मानिस FOMO मा किनिरहेका हुन्छन्, smart trader Risk-Reward हेर्छ। जब धेरै मानिस panic बेचिरहेका हुन्छन्, smart trader support र volume behavior हेर्छ। जब धेरै मानिस tips को पछि लाग्छन्, smart trader setup को quality हेर्छ।</p>
+
+<p>Primary Market मा तपाईं धेरैजसो <strong>“apply गर्ने कि नगर्ने?”</strong> भन्ने decision लिनुहुन्छ। Secondary Market मा तपाईं <strong>“कहिले किन्ने, कति किन्ने, कहाँ stop राख्ने, कहिले बेच्ने, profit कसरी manage गर्ने, loss कसरी काट्ने, फेरि Entry गर्ने कि नगर्ने?”</strong> जस्ता धेरै decision लिनुहुन्छ। यही कारण secondary market trading धेरै गहिरो skill हो।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>नेपालमा Primary Market को लागि MeroShare, Demat account, CRN, bank account, application process, issue manager, allotment, listing, र CDSC सम्बन्धी प्रक्रिया जोडिन्छ। Beginner हरूका लागि IPO बाट सुरु गर्नु सजिलो हुन सक्छ, किनकि process तुलनात्मक रूपमा simple देखिन्छ। तर IPO apply गर्दा पनि company को basic जानकारी नहेरी apply गर्नु राम्रो अभ्यास होइन।</p>
+
+<p>Secondary Market मा NEPSE मा listed share हरू broker र TMS मार्फत किनबेच हुन्छन्। यहाँ trader ले live market depth, buyer-seller order, LTP, Volume, turnover, price range, sector movement, index direction, chart structure, र आफ्नो trading plan सँग decision जोड्नुपर्छ।</p>
+
+<p>NEPSE मा धेरै beginner हरू IPO मा profit भएको अनुभव लिएर secondary market मा overconfident भएर पस्छन्। उनीहरूलाई लाग्छ, <strong>“IPO बाट पैसा आयो, अब secondary market बाट झन् धेरै कमाइन्छ।”</strong> तर secondary market मा discipline नभए IPO बाट कमाएको सानो profit पनि ठूलो loss मा बदलिन सक्छ।</p>
+
+<p>नेपालमा IPO प्रति आकर्षण धेरै छ। धेरै मानिसहरूले IPO लाई <strong>“कम risk”</strong> भनेर बुझ्छन्। तर risk कहिल्यै शून्य हुँदैन। Company कमजोर हुन सक्छ, listing पछि price expectation अनुसार नचल्न सक्छ, market bearish हुन सक्छ, sector sentiment खराब हुन सक्छ। त्यसैले Primary Market मा पनि अध्ययन चाहिन्छ।</p>
+
+<p>Secondary Market मा NEPSE को practical समस्या अझ बढी हुन्छ। TMS मा order राख्दा price गल्ती, quantity गल्ती, pending order नबुझ्नु, sell गरेपछि EDIS बिर्सिनु, WACC update नगर्नु, broker payment ढिलो बुझ्नु, tax/fee confusion हुनु, panic selling गर्नु—यी सबै secondary market का वास्तविक समस्या हुन्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Primary Market मा beginner को psychology प्रायः आशामा चल्छ। <strong>“IPO पर्यो भने profit हुन्छ”, “सबैले apply गरिरहेका छन्”, “थोरै पैसा मात्रै हो”, “पर्‍यो भने राम्रो, नपरे केही छैन”</strong>—यस्तो सोच सामान्य छ। यो सोचले बजारप्रति interest बढाउँछ, तर यही सोच secondary market मा ल्यायो भने खतरा हुन्छ।</p>
+
+<p>Secondary Market मा psychology धेरै तीव्र हुन्छ। यहाँ price live चल्छ। Green candle देख्दा लोभ लाग्छ। Red candle देख्दा डर लाग्छ। Market depth मा buyer धेरै देख्दा excitement आउँछ। Seller धेरै देख्दा panic हुन्छ। Price आफ्नो buy price भन्दा तल जाँदा ego दुख्छ। Profit आएपछि <strong>“अझै बढ्छ”</strong> भन्ने greed आउँछ। Profit घट्न थालेपछि regret आउँछ।</p>
+
+<p>IPO investor ले धेरै पटक wait गर्न सिकेको हुन्छ, तर secondary market trader ले wait मात्र होइन, cut-loss पनि सिक्नुपर्छ। IPO मा share परेन भने पैसा फर्किन्छ। Secondary market मा गलत trade पर्‍यो भने पैसा आफैं फर्किँदैन। तपाईंले Stop Loss, Exit, वा risk management decision लिनुपर्छ।</p>
+
+<p>धेरै trader हरू secondary market मा गल्ती गर्दा आफूलाई investor घोषणा गर्छन्। उनीहरूले Rs. 600 मा short-term trade का लागि share किनेका हुन्छन्। Price Rs. 540 पुग्छ। Stop Loss राखेको हुँदैन। त्यसपछि भन्छन्, <strong>“अब long-term राख्छु।”</strong> यो psychology हो—loss accept गर्न नसक्ने मन। वास्तविक investing मा Entry अघि company analysis हुन्छ। Loss भएपछि नाम परिवर्तन गरेर trade लाई investment बनाउनु disciplined approach होइन।</p>
+
+<p>Primary Market ले patience सिकाउन सक्छ। Secondary Market ले discipline सिकाउँछ। दुवैबाट सिक्न सकिन्छ, तर दुवैलाई एउटै mindset ले चलाउन मिल्दैन।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>Primary Market मा beginner ले गर्ने पहिलो गल्ती हो—सबै IPO राम्रो हुन्छ भन्ने सोच्नु। IPO नयाँ छ भन्दैमा company राम्रो हुन्छ भन्ने छैन। Company को sector, financial condition, project risk, promoter background, valuation, र future earning potential बुझ्नु आवश्यक हुन्छ।</p>
+
+<p>दोस्रो गल्ती हो—IPO परेपछि listing day मा के गर्ने plan नहुनु। केही मानिस listing profit देख्दा तुरुन्त बेच्न चाहन्छन्। केही धेरै लोभ गरेर hold गर्छन्। केही company को quality नबुझी लामो समय राख्छन्। IPO परेपछि sell गर्ने कि hold गर्ने निर्णय company, valuation, market condition, र personal goal अनुसार हुनुपर्छ।</p>
+
+<p>तेस्रो गल्ती हो—IPO बाट आएको confidence secondary market मा blind trading मा प्रयोग गर्नु। IPO मा profit भयो भन्दैमा तपाईं trader भइसक्नुभयो भन्ने होइन। Secondary market मा अलग skill चाहिन्छ।</p>
+
+<p>चौथो गल्ती हो—Secondary Market मा बिना plan Entry गर्नु। <strong>“आज बढ्छ जस्तो छ”, “market depth मा buyer धेरै छन्”, “Facebook मा चर्चा छ”, “साथीले भन्यो”</strong>—यी कारण trading plan होइनन्।</p>
+
+<p>पाँचौँ गल्ती हो—Secondary Market मा Stop Loss नराख्नु। Primary Market मा allotment नपरे पैसा फर्किन्छ, तर Secondary Market मा गलत Entry भयो भने loss control गर्न तपाईंले नै action लिनुपर्छ।</p>
+
+<p>छैटौँ गल्ती हो—Trading र Investing को capital मिसाउनु। IPO का लागि राखेको पैसा, long-term investing का लागि राखेको पैसा, र short-term trading का लागि राखेको पैसा अलग सोच्नुपर्छ। सबै पैसा एउटै भावनाले चलाउँदा decision बिग्रिन्छ।</p>
+
+<p>सातौँ गल्ती हो—Secondary Market मा liquidity नहेरी Entry गर्नु। कम Volume भएको share मा paper profit देखिए पनि real exit गर्न गाह्रो हुन सक्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Primary र Secondary Market मा गर्ने फरक-फरक गल्तीहरू</div>
+  <p style="margin-bottom:8px;"><strong>Primary Market मा:</strong></p>
+  <ul style="margin:4px 0 12px 24px;">
+    <li>सबै IPO लाई risk-free profit सम्झनु</li>
+    <li>Company background, sector, र valuation नहेरी apply गर्नु</li>
+    <li>Listing day मा sell/hold plan नबनाउनु</li>
+  </ul>
+  <p style="margin-bottom:8px;"><strong>Secondary Market मा:</strong></p>
+  <ul style="margin:4px 0 0 24px;">
+    <li>Stop Loss बिना Entry गर्नु</li>
+    <li>FOMO र hype मा price chase गर्नु</li>
+    <li>Loss भएपछि trade लाई जबरजस्ती investment बनाउनु</li>
+    <li>Low liquidity stock मा ठूलो capital फसाउनु</li>
+    <li>Trading र Investing capital मिसाउनु</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p><strong>Primary Market का लागि practical rules:</strong></p>
+<ul>
+  <li>IPO apply गर्नु अघि company को basic information पढ्नुहोस्।</li>
+  <li>Sector, project, financial condition, risk factor, र valuation बुझ्ने प्रयास गर्नुहोस्।</li>
+  <li>IPO परेपछि listing day मा के गर्ने भन्ने plan बनाउनुहोस्।</li>
+  <li>सबै IPO long-term hold गर्न योग्य हुँदैनन्।</li>
+  <li>Listing gain लाई guaranteed profit नसम्झनुहोस्।</li>
+  <li>IPO मा परेको share लाई पनि समय-समयमा review गर्नुहोस्।</li>
+</ul>
+
+<p><strong>Secondary Market का लागि practical rules:</strong></p>
+<ul>
+  <li>Secondary Market मा Entry गर्नु अघि market, sector, र stock तीनै कुरा हेर्नुहोस्।</li>
+  <li>Trade हो कि Investment हो, Entry अघि नै स्पष्ट गर्नुहोस्।</li>
+  <li>Stop Loss बिना trade नगर्नुहोस्।</li>
+  <li>Risk-Reward नमिलेको trade avoid गर्नुहोस्।</li>
+  <li>Volume र liquidity नहेरी Entry नगर्नुहोस्।</li>
+  <li>FOMO मा price chase नगर्नुहोस्।</li>
+  <li>Loss भएपछि trade लाई जबरजस्ती investment नबनाउनुहोस्।</li>
+  <li>TMS मा order राख्दा price, quantity, र order status ध्यान दिएर check गर्नुहोस्।</li>
+  <li>Sell गरेपछि EDIS/WACC सम्बन्धी process verify गर्नुहोस्।</li>
+  <li>Trading capital र investing capital अलग राख्नुहोस्।</li>
+</ul>
+
+<p>Primary Market मा तपाईंले opportunity खोज्नुहुन्छ। Secondary Market मा तपाईंले opportunity सँगै risk पनि manage गर्नुहुन्छ। यही फरक गहिरो रूपमा बुझ्नुपर्छ।</p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p>मानौं, अनिता IPO मा नियमित apply गर्छिन्। एउटा company को IPO उनलाई 10 कित्ता पर्यो। Listing पछि price बढ्यो। उनलाई नाफा देखियो। अब उनी सोचमा परिन्—बेच्ने कि hold गर्ने?</p>
+
+<p>यदि अनिताले company को fundamental राम्रोसँग हेरेकी छिन्, sector future राम्रो देखिन्छ, market condition ठीक छ, र long-term hold गर्ने plan छ भने उनी hold गर्न सक्छिन्। तर यदि उनले केवल listing gain का लागि IPO apply गरेकी थिइन् र company quality मा confidence छैन भने profit booking पनि valid decision हुन सक्छ।</p>
+
+<p>अब Secondary Market को अर्को scenario हेरौं। राजनले एउटा share Rs. 850 मा किन्यो किनकि price लगातार बढिरहेको थियो। उसले chart मा Resistance हेरेन, Volume climax जस्तो छ कि छैन बुझेन, Stop Loss राखेन। Price Rs. 800 पुग्दा उसले भन्यो, <strong>“अहिले बेच्दिनँ।”</strong> Rs. 750 पुगेपछि भन्यो, <strong>“अब long-term।”</strong> केही महिनापछि price Rs. 620 पुग्यो। राजनको समस्या share होइन, plan नभएको Entry थियो।</p>
+
+<p>त्यही stock अर्को trader ले Rs. 850 मा chase गरेन। उसले wait गर्‍यो। Price correction भयो, support zone मा आयो, selling volume घट्यो, अनि पछि strong candle र Volume सहित bounce देखियो। त्यसपछि उसले defined Stop Loss सहित सानो position लियो। यहाँ फरक stock होइन, process हो।</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:25%;">पक्ष (Aspect)</th>
+      <th style="width:37.5%;">Primary Market</th>
+      <th style="width:37.5%;">Secondary Market</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>परिभाषा</strong></td>
+      <td>Company ले पहिलोपटक public बाट capital raise गर्ने बजार</td>
+      <td>Already listed share investor र trader बीच किनबेच हुने बजार</td>
+    </tr>
+    <tr>
+      <td><strong>उदाहरण</strong></td>
+      <td>IPO, FPO, Right Share</td>
+      <td>NEPSE मा दैनिक TMS trading</td>
+    </tr>
+    <tr>
+      <td><strong>Price निर्धारण</strong></td>
+      <td>Issue price fixed वा book-built</td>
+      <td>Live demand-supply, buyer-seller order</td>
+    </tr>
+    <tr>
+      <td><strong>मुख्य Focus</strong></td>
+      <td>Company, issue purpose, financial, valuation</td>
+      <td>Price action, Volume, trend, Entry-Exit, liquidity, psychology</td>
+    </tr>
+    <tr>
+      <td><strong>मुख्य प्रश्न</strong></td>
+      <td>Apply गर्ने कि नगर्ने?</td>
+      <td>कहिले Entry, कहाँ Exit, कति risk, setup valid छ?</td>
+    </tr>
+    <tr>
+      <td><strong>Risk Type</strong></td>
+      <td>Allotment, listing performance, company quality</td>
+      <td>Price volatility, fake breakout, liquidity, emotion</td>
+    </tr>
+    <tr>
+      <td><strong>Skill चाहिने</strong></td>
+      <td>Basic company analysis, patience</td>
+      <td>Chart reading, risk management, discipline, psychology</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Comparison को सार:</strong></p>
+<p>Primary Market मा focus हुन्छ—company issue, application, allotment, listing, basic valuation। Secondary Market मा focus हुन्छ—price action, Volume, trend, Entry, Exit, Stop Loss, liquidity, psychology।</p>
+
+<p>Primary Market मा मुख्य प्रश्न हुन्छ—<strong>Apply गर्ने कि नगर्ने?</strong> Secondary Market मा मुख्य प्रश्न हुन्छ—<strong>कहिले Entry गर्ने, कहाँ Exit गर्ने, कति risk लिने, र setup valid छ कि छैन?</strong></p>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Primary Market Checklist:</div>
+  <ul>
+    <li>Company कुन sector को हो?</li>
+    <li>Company को business model बुझिएको छ?</li>
+    <li>Issue को purpose के हो?</li>
+    <li>Company को financial condition सामान्य रूपमा ठीक छ?</li>
+    <li>Risk factors पढिएको छ?</li>
+    <li>Listing पछि sell गर्ने कि hold गर्ने plan छ?</li>
+    <li>यो IPO मा apply गर्नु मेरो financial plan सँग मिल्छ?</li>
+  </ul>
+</div>
+
+<div class="checklist-box">
+  <div class="checklist-title">Secondary Market Checklist:</div>
+  <ul>
+    <li>यो decision Trade हो कि Investment?</li>
+    <li>NEPSE index को अवस्था कस्तो छ?</li>
+    <li>Sector बलियो छ कि कमजोर?</li>
+    <li>Stock को Trend कस्तो छ?</li>
+    <li>Support र Resistance कहाँ छन्?</li>
+    <li>Volume ले move support गरेको छ?</li>
+    <li>Entry chase जस्तो त छैन?</li>
+    <li>Stop Loss स्पष्ट छ?</li>
+    <li>Risk-Reward उचित छ?</li>
+    <li>Position size मेरो capital अनुसार सुरक्षित छ?</li>
+    <li>Liquidity पर्याप्त छ?</li>
+    <li>Exit plan बनेको छ?</li>
+    <li>यो decision मेरो analysis बाट आएको हो कि tips बाट?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Self-Reflection</div>
+  <p>आफ्नो notebook मा दुई column बनाउनुहोस्—<strong>Primary Market</strong> र <strong>Secondary Market</strong>। अब यी प्रश्नहरूको उत्तर लेख्नुहोस्:</p>
+  <ul>
+    <li>तपाईंले अहिलेसम्म कुन-कुन IPO apply गर्नुभएको छ?</li>
+    <li>IPO apply गर्दा company को information पढ्नुभएको थियो कि थिएन?</li>
+    <li>IPO परेपछि तपाईंले sell/hold decision कसरी लिनुभयो?</li>
+    <li>Secondary Market मा तपाईंले पहिलो share किन किन्नुभयो?</li>
+    <li>त्यो decision chart, fundamental, वा tips मध्ये कुन आधारमा थियो?</li>
+    <li>तपाईंले Entry गर्नु अघि Stop Loss सोच्नुभएको थियो?</li>
+    <li>तपाईंले loss भएपछि trade लाई investment बनाएको अनुभव छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Recently Listed Company Study</div>
+  <p>कुनै एक recently listed company छान्नुहोस् र यी कुरा अध्ययन गर्नुहोस्:</p>
+  <ul>
+    <li>IPO price र listing पछि price behavior</li>
+    <li>Listing पछि Volume कस्तो थियो?</li>
+    <li>Price बढेपछि correction आयो कि आएन?</li>
+    <li>Long-term hold गर्न company को आधार के छ?</li>
+    <li>Short-term trade गर्न chart setup कहाँ देखिन्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Trade vs Invest Classification</div>
+  <p>कुनै एक Secondary Market stock छान्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>यो stock अहिले trading का लागि हो कि investing का लागि?</li>
+    <li>यदि trading हो भने Entry, Stop Loss, Target कहाँ हुन सक्छ?</li>
+    <li>यदि investing हो भने fundamental आधार के छ?</li>
+    <li>यदि दुवैको answer clear छैन भने किन यो stock avoid गर्नुपर्छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>IPO ले तपाईंलाई share market मा प्रवेश गराउन सक्छ, तर Secondary Market ले तपाईंलाई trader बनाउँछ। IPO मा तपाईंको patience test हुन्छ। Secondary Market मा तपाईंको discipline, risk control, timing, र psychology test हुन्छ।</p>
+  <p>सबै IPO राम्रो हुँदैनन्। सबै Secondary Market opportunity पनि trade गर्न योग्य हुँदैनन्। तपाईंको काम हरेक मौका लिनु होइन; सही मौका छान्नु हो।</p>
+  <p>सबैभन्दा खतरनाक बानी हो—<strong>Trading गर्दा loss भयो भने आफूलाई investor भन्नु।</strong> Trade को plan trade अघि नै हुन्छ। Investment को thesis investment अघि नै हुन्छ। Loss भएपछि plan बनाउनु plan होइन, emotion हो।</p>
+  <p style="margin-bottom:0;">Primary Market मा प्रवेश गर्नु सजिलो हुन सक्छ। Secondary Market मा टिक्नु skill हो।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 3 Summary</div>
+  <p>Primary Market भनेको company ले public बाट capital raise गर्न share issue गर्ने बजार हो। IPO, FPO, Right Share जस्ता issue हरू Primary Market सँग सम्बन्धित हुन्छन्। यहाँ investor ले company, issue purpose, risk factor, financial condition, sector, र valuation बुझ्नुपर्छ।</p>
+  <p>Secondary Market भनेको listed share हरू investor र trader बीच broker/TMS मार्फत किनबेच हुने बजार हो। NEPSE को दैनिक trading यही Secondary Market हो। यहाँ price demand-supply, Volume, liquidity, market sentiment, sector movement, news, psychology, र order flow बाट चल्छ।</p>
+  <p>Primary Market मा मुख्य decision apply गर्ने कि नगर्ने हो। Secondary Market मा Entry, Exit, Stop Loss, Position Sizing, Risk-Reward, Volume, liquidity, र psychology सबै manage गर्नुपर्छ।</p>
+  <p>IPO बाट profit भयो भन्दैमा secondary market trading सजिलो हुन्छ भन्ने सोच गलत हो। Secondary Market मा plan बिना Entry गर्नु, Stop Loss नराख्नु, low liquidity stock किन्नु, र loss भएपछि trade लाई investment बनाउनु beginner का मुख्य गल्ती हुन्।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Primary Market र Secondary Market फरक मैदान हुन्। दुवैमा पैसा लगाउनुअघि दुवैको risk, process, र mindset फरक बुझ्नुपर्छ।</p>
+</div>
+
+<div class="closing-quote">
+  IPO ले तपाईंलाई बजारको ढोका खोलिदिन्छ, तर Secondary Market मा टिक्न तपाईंलाई ज्ञान, योजना, discipline, र risk control चाहिन्छ।
+</div>
+
+</div>
+</body>
+</html>

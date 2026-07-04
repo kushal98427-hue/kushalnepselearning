@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 26: Multi-Timeframe Analysis — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 26: CHART READING MASTERY</div>
+  <h1 class="chapter-title">Multi-Timeframe Analysis</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>आकाशले Daily chart मा एउटा stock बलियो देख्यो। Price 20 MA माथि थियो, RSI 60 नजिक थियो, र एउटा राम्रो green candle बनेको थियो। उसलाई लाग्यो, <strong>“यो stock मा momentum छ।”</strong> उसले Entry गर्‍यो।</p>
+
+<p>तर केही दिनपछि price माथि जान सकेन। बरु Resistance नजिकबाट तल फर्कियो। आकाशले पछि Weekly chart खोल्दा थाहा पायो—त्यो stock Weekly chart मा ठूलो Resistance zone नजिक थियो। Monthly chart मा पनि price लामो समयदेखि supply zone मा अड्किएको रहेछ। Daily chart मा देखिएको strength वास्तवमा Higher Timeframe Resistance भित्रको सानो bounce मात्र थियो।</p>
+
+<p>आकाशको गल्ती Daily chart हेर्नु थिएन। उसको गल्ती Daily chart मात्र हेर्नु थियो।</p>
+
+<p>Multi-Timeframe Analysis भनेको एउटै stock लाई फरक-फरक timeframe बाट हेर्ने प्रक्रिया हो। Monthly chart ले ठूलो picture देखाउँछ। Weekly chart ले swing structure देखाउँछ। Daily chart ले Entry timing देखाउँछ। कहिलेकाहीँ 1-hour वा smaller timeframe ले precise Entry मा सहयोग गर्न सक्छ, तर beginner र swing trader का लागि Monthly, Weekly, Daily नै पर्याप्त शक्तिशाली हुन्छन्।</p>
+
+<p>एउटा chart ले कहिलेकाहीँ आधा सत्य देखाउँछ। धेरै timeframe मिलाएर हेर्दा market को पूरा story बुझ्न सकिन्छ। Daily chart मा Breakout जस्तो देखिएको move Weekly Resistance नजिक trap हुन सक्छ। Daily chart मा Pullback जस्तो देखिएको fall Monthly Support नजिक opportunity हुन सक्छ। Daily chart मा कमजोरी जस्तो देखिएको candle Weekly uptrend भित्रको normal pause हुन सक्छ।</p>
+
+<p>यसैले professional trader एउटै timeframe मा अड्किँदैन। ऊ माथिबाट तल हेर्छ—पहिले ठूलो picture, त्यसपछि structure, अनि मात्र Entry।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Multi-Timeframe Analysis trader का लागि अत्यन्त महत्वपूर्ण छ, किनकि market लाई केवल एउटा angle बाट हेर्दा decision अधुरो हुन्छ। धेरै beginner Daily chart मात्र हेरेर trade गर्छन्। केही trader केवल 5-minute वा 15-minute chart मा अल्झिन्छन्। तर Higher Timeframe को direction नबुझी lower timeframe मा Entry गर्नु कमजोर decision हुन सक्छ।</p>
+
+<p>Higher Timeframe ले market को मुख्य direction र important Support/Resistance देखाउँछ। Weekly chart मा stock downtrend मा छ भने Daily chart को सानो bounce trap हुन सक्छ। Monthly Resistance नजिक stock छ भने Daily Breakout मा सावधानी चाहिन्छ। Weekly uptrend बलियो छ भने Daily Pullback opportunity हुन सक्छ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि यसले तपाईंलाई chart लाई hierarchy मा हेर्न सिकाउँछ। कुन timeframe बाट direction लिने? कुन timeframe बाट setup खोज्ने? कुन timeframe बाट Entry timing गर्ने? कुन timeframe को Support/Resistance बढी महत्वपूर्ण हुन्छ? यी कुरा नबुझ्दा trader गलत ठाउँमा Entry गर्छ।</p>
+
+<p>Multi-Timeframe Analysis ले तीन मुख्य फाइदा दिन्छ। पहिलो, market को ठूलो picture बुझिन्छ। दोस्रो, गलत signal filter गर्न सकिन्छ। तेस्रो, Entry, Stop Loss, and Target अझ logical बनाउन सकिन्छ।</p>
+
+<p>तर Multi-Timeframe Analysis को गलत प्रयोगले confusion पनि बढाउन सक्छ। प्रत्येक timeframe हेर्दै जाने, हरेक chart फरक देखिने, अनि decision नै नलिन सक्ने अवस्था आउन सक्छ। त्यसैले यसको प्रयोग structured हुनुपर्छ—पहिले Monthly, त्यसपछि Weekly, त्यसपछि Daily।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Multi-Timeframe Analysis भनेको एउटै stock लाई फरक timeframe मा हेरेर decision बनाउनु हो।</p>
+
+<p><strong>Monthly chart</strong> ले लामो समयको trend, ठूलो Support/Resistance, market cycle, र major structure देखाउँछ।</p>
+
+<p><strong>Weekly chart</strong> ले medium-term swing, trend strength, major pullback, breakout quality, र sector-level movement बुझ्न मद्दत गर्छ।</p>
+
+<p><strong>Daily chart</strong> ले short-term setup, Entry timing, Stop Loss placement, candle behavior, Volume, RSI, Moving Average, and trade management मा सहयोग गर्छ।</p>
+
+<!-- VISUAL 1: Top-Down Framework Flow -->
+<div class="visual-block">
+  <div class="visual-title">Top-Down Framework — Monthly → Weekly → Daily</div>
+  <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="360" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">सही क्रम — माथिबाट तल: पहिले Context, अनि Structure, अनि Entry</text>
+
+    <!-- STEP 1: MONTHLY -->
+    <rect x="30" y="55" width="200" height="250" fill="#fffdf5" stroke="#7b1fa2" stroke-width="2" rx="6"/>
+    <rect x="30" y="55" width="200" height="38" fill="#7b1fa2" rx="6"/>
+    <text x="130" y="80" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">1. MONTHLY</text>
+
+    <text x="130" y="112" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#7b1fa2">ठूलो Direction</text>
+
+    <!-- Mini monthly chart - big trend -->
+    <line x1="55" y1="200" x2="55" y2="220" stroke="#26a69a" stroke-width="1"/>
+    <rect x="51" y="203" width="8" height="14" fill="#26a69a"/>
+    <line x1="80" y1="185" x2="80" y2="205" stroke="#26a69a" stroke-width="1"/>
+    <rect x="76" y="188" width="8" height="14" fill="#26a69a"/>
+    <line x1="105" y1="170" x2="105" y2="190" stroke="#26a69a" stroke-width="1"/>
+    <rect x="101" y="173" width="8" height="14" fill="#26a69a"/>
+    <line x1="130" y1="158" x2="130" y2="178" stroke="#26a69a" stroke-width="1"/>
+    <rect x="126" y="161" width="8" height="14" fill="#26a69a"/>
+    <line x1="155" y1="148" x2="155" y2="168" stroke="#26a69a" stroke-width="1"/>
+    <rect x="151" y="151" width="8" height="14" fill="#26a69a"/>
+    <line x1="180" y1="140" x2="180" y2="160" stroke="#26a69a" stroke-width="1"/>
+    <rect x="176" y="143" width="8" height="14" fill="#26a69a"/>
+    <line x1="205" y1="135" x2="205" y2="152" stroke="#26a69a" stroke-width="1"/>
+    <rect x="201" y="138" width="8" height="11" fill="#26a69a"/>
+
+    <text x="130" y="245" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Major Support/Resistance</text>
+    <text x="130" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Long-term trend</text>
+    <text x="130" y="279" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Market cycle / zone</text>
+    <text x="130" y="296" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#7b1fa2">"कहाँ छ?"</text>
+
+    <!-- Arrow 1 -->
+    <line x1="232" y1="180" x2="258" y2="180" stroke="#111" stroke-width="2" marker-end="url(#arr26)"/>
+
+    <!-- STEP 2: WEEKLY -->
+    <rect x="260" y="55" width="200" height="250" fill="#fffdf5" stroke="#ff9800" stroke-width="2" rx="6"/>
+    <rect x="260" y="55" width="200" height="38" fill="#ff9800" rx="6"/>
+    <text x="360" y="80" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">2. WEEKLY</text>
+
+    <text x="360" y="112" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#e68a00">Swing Structure</text>
+
+    <!-- Mini weekly chart - HH/HL -->
+    <line x1="290" y1="195" x2="290" y2="215" stroke="#26a69a" stroke-width="1"/>
+    <rect x="286" y="198" width="8" height="14" fill="#26a69a"/>
+    <line x1="312" y1="178" x2="312" y2="198" stroke="#26a69a" stroke-width="1"/>
+    <rect x="308" y="181" width="8" height="14" fill="#26a69a"/>
+    <line x1="334" y1="188" x2="334" y2="205" stroke="#ef5350" stroke-width="1"/>
+    <rect x="330" y="191" width="8" height="11" fill="#ef5350"/>
+    <line x1="356" y1="165" x2="356" y2="185" stroke="#26a69a" stroke-width="1"/>
+    <rect x="352" y="168" width="8" height="14" fill="#26a69a"/>
+    <line x1="378" y1="150" x2="378" y2="170" stroke="#26a69a" stroke-width="1"/>
+    <rect x="374" y="153" width="8" height="14" fill="#26a69a"/>
+    <line x1="400" y1="160" x2="400" y2="178" stroke="#ef5350" stroke-width="1"/>
+    <rect x="396" y="163" width="8" height="11" fill="#ef5350"/>
+    <line x1="422" y1="142" x2="422" y2="162" stroke="#26a69a" stroke-width="1"/>
+    <rect x="418" y="145" width="8" height="14" fill="#26a69a"/>
+
+    <text x="360" y="245" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• HH/HL कि LH/LL?</text>
+    <text x="360" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Swing Support/Resistance</text>
+    <text x="360" y="279" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Breakout / Volume</text>
+    <text x="360" y="296" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#e68a00">"कस्तो structure?"</text>
+
+    <!-- Arrow 2 -->
+    <line x1="462" y1="180" x2="488" y2="180" stroke="#111" stroke-width="2" marker-end="url(#arr26)"/>
+
+    <!-- STEP 3: DAILY -->
+    <rect x="490" y="55" width="200" height="250" fill="#fffdf5" stroke="#26a69a" stroke-width="2" rx="6"/>
+    <rect x="490" y="55" width="200" height="38" fill="#26a69a" rx="6"/>
+    <text x="590" y="80" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">3. DAILY</text>
+
+    <text x="590" y="112" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#00897b">Entry Timing</text>
+
+    <!-- Mini daily chart - entry zone -->
+    <line x1="520" y1="175" x2="520" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="516" y="178" width="8" height="14" fill="#26a69a"/>
+    <line x1="542" y1="165" x2="542" y2="185" stroke="#26a69a" stroke-width="1"/>
+    <rect x="538" y="168" width="8" height="14" fill="#26a69a"/>
+    <line x1="564" y1="172" x2="564" y2="192" stroke="#ef5350" stroke-width="1"/>
+    <rect x="560" y="175" width="8" height="13" fill="#ef5350"/>
+    <line x1="586" y1="178" x2="586" y2="200" stroke="#ef5350" stroke-width="1"/>
+    <rect x="582" y="181" width="8" height="14" fill="#ef5350"/>
+    <!-- entry candle -->
+    <line x1="608" y1="170" x2="608" y2="195" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="603" y="173" width="10" height="13" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="608" cy="193" r="3" fill="#26a69a"/>
+    <line x1="632" y1="155" x2="632" y2="175" stroke="#26a69a" stroke-width="1"/>
+    <rect x="628" y="158" width="8" height="14" fill="#26a69a"/>
+
+    <text x="590" y="245" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Entry + Stop Loss</text>
+    <text x="590" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Candle / Volume / RSI</text>
+    <text x="590" y="279" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">• Risk-Reward</text>
+    <text x="590" y="296" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#00897b">"कहिले किन्ने?"</text>
+
+    <defs>
+      <marker id="arr26" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M 0 0 L 8 4.5 L 0 9 z" fill="#111"/>
+      </marker>
+    </defs>
+
+    <!-- Bottom note -->
+    <text x="360" y="335" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#ef5350">⚠ उल्टो क्रम (Daily पहिले) = आकाश को गल्ती</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो diagram मा chart पढ्ने सही क्रम देखाइएको छ — पहिले Monthly (ठूलो direction — stock कहाँ छ?), अनि Weekly (swing structure — HH/HL कि LH/LL?), अनि अन्त्यमा Daily (Entry timing — कहिले किन्ने?)। धेरै beginner उल्टो गर्छन् — Daily मा signal देखेर तुरुन्त किन्छन्, अनि मात्र Higher Timeframe हेर्छन्। सही बाटो — पहिले context, अनि structure, अनि entry। यसले गलत ठाउँको सही-देखिने signal बाट बचाउँछ।
+</div>
+
+<p>सरल रूपमा:</p>
+
+<ul>
+  <li><strong>Monthly</strong> = ठूलो direction</li>
+  <li><strong>Weekly</strong> = swing structure</li>
+  <li><strong>Daily</strong> = Entry timing</li>
+</ul>
+
+<p>यदि तीनै timeframe एउटै direction मा छन् भने setup बलियो हुन सक्छ। यदि Monthly bullish, Weekly bullish, Daily Pullback मा छ भने त्यो opportunity हुन सक्छ। यदि Monthly Resistance नजिक, Weekly कमजोर, Daily मात्र green candle देखिएको छ भने सावधानी चाहिन्छ।</p>
+
+<p>Multi-Timeframe Analysis को उद्देश्य धेरै chart हेरेर confuse हुनु होइन। उद्देश्य हो—ठूलो picture र सानो Entry लाई मिलाउनु।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Multi-Timeframe Analysis गर्दा सबैभन्दा पहिले Higher Timeframe बाट सुरु गर्नुपर्छ। धेरै beginner उल्टो गर्छन्। उनीहरू Daily chart मा signal देख्छन्, Entry गर्न मन लाग्छ, अनि पछि मात्र Weekly/Monthly chart हेर्छन्। यो गलत क्रम हो। सही क्रम हो—पहिले context, अनि setup, अनि Entry।</p>
+
+<p>पहिलो चरण Monthly chart हो। Monthly chart खोल्दा तपाईंले stock कहाँ छ भनेर ठूलो picture बुझ्नुहुन्छ। Stock long-term uptrend मा छ कि downtrend मा? Major Support कहाँ छ? Major Resistance कहाँ छ? Price historical high नजिक छ कि long base बाट निस्किँदैछ? Monthly candle strong close छ कि upper wick rejection छ? यो chartले तपाईंलाई stock को ठूलो battlefield देखाउँछ।</p>
+
+<p>Monthly chart मा तपाईंले धेरै detail खोज्नु हुँदैन। यहाँ मुख्य कुरा हो—large trend, major levels, and broad structure। यदि Monthly chart मा price धेरै ठूलो Resistance नजिक छ भने Daily Breakout मा सावधानी चाहिन्छ। यदि Monthly chart मा price long-term Support बाट bounce गर्दैछ भने Weekly/Daily setup हेर्न सकिन्छ।</p>
+
+<p>दोस्रो चरण Weekly chart हो। Weekly chart swing trader का लागि धेरै महत्वपूर्ण हुन्छ। Weekly chart ले stock को medium-term structure देखाउँछ—HH/HL बनिरहेको छ कि LH/LL? Weekly candle close कस्तो छ? Volume support छ? Price 20/50 MA माथि छ? Sector movementसँग stock मिलिरहेको छ? Weekly chart मा Breakout आएको छ कि only bounce?</p>
+
+<p>Weekly chart मा trend structure र swing level mark गर्नुहोस्। Last Higher Low कहाँ छ? Last Lower High कहाँ छ? Weekly Resistance कहाँ छ? Weekly Support कहाँ छ? यदि Weekly chart bullish structure मा छ भने Daily Pullback trade meaningful हुन सक्छ। यदि Weekly chart downtrend मा छ भने Daily green candle केवल short-term bounce हुन सक्छ।</p>
+
+<p>तेस्रो चरण Daily chart हो। Daily chart बाट Entry timing गरिन्छ। यहाँ candle, Volume, RSI, Moving Average, Support/Resistance, Breakout, Pullback, Retest, Stop Loss, and Risk-Reward detail मा हेर्नुपर्छ। यदि Monthly र Weekly supportive छन् भने Daily chart मा राम्रो setup खोज्न सकिन्छ। यदि Higher Timeframe कमजोर छन् भने Daily signal मा position size घटाउने वा trade avoid गर्ने सोच्नुपर्छ।</p>
+
+<p>Multi-Timeframe Alignment को अर्थ हो—तीन timeframe को message एकअर्कासँग मिल्नु। उदाहरणका लागि:</p>
+
+<ul>
+  <li>Monthly chart मा stock major base बाट उठ्दैछ।</li>
+  <li>Weekly chart मा HH/HL structure बनिरहेको छ।</li>
+  <li>Daily chart मा Breakout पछि Retest मा buyer reaction छ।</li>
+</ul>
+
+<p>यो alignment राम्रो हुन सक्छ।</p>
+
+<p>अर्को उदाहरण:</p>
+
+<ul>
+  <li>Monthly chart मा stock major Resistance नजिक छ।</li>
+  <li>Weekly chart मा upper wick rejection आएको छ।</li>
+  <li>Daily chart मा price सानो green candle बनाउँदैछ।</li>
+</ul>
+
+<p>यो setup weak हुन सक्छ, किनकि Higher Timeframe supply zone नजिक छ।</p>
+
+<!-- VISUAL 2: Same Stock 3 Timeframes - Daily Bullish but Higher TF Resistance (Scenario 2) -->
+<div class="visual-block">
+  <div class="visual-title">एउटै Stock, 3 Timeframe — Daily Bullish तर Higher TF मा Resistance Trap</div>
+  <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="380" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Daily मा हरियो candle राम्रो देखिन्छ — तर Weekly/Monthly Resistance भित्र trapped</text>
+
+    <!-- PANEL 1: MONTHLY -->
+    <rect x="20" y="45" width="220" height="290" fill="#fffdf5" stroke="#7b1fa2" stroke-width="1.5" rx="4"/>
+    <rect x="20" y="45" width="220" height="28" fill="#7b1fa2"/>
+    <text x="130" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">MONTHLY</text>
+
+    <!-- Monthly resistance -->
+    <line x1="30" y1="105" x2="230" y2="105" stroke="#ef5350" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="35" y="100" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">Supply Zone (रोकान)</text>
+
+    <!-- Monthly supply zone shading -->
+    <rect x="30" y="85" width="200" height="20" fill="#ffe5e0" fill-opacity="0.5"/>
+
+    <!-- Monthly candles - rising into supply zone -->
+    <line x1="50" y1="250" x2="50" y2="275" stroke="#26a69a" stroke-width="1"/>
+    <rect x="46" y="253" width="8" height="18" fill="#26a69a"/>
+    <line x1="75" y1="225" x2="75" y2="250" stroke="#26a69a" stroke-width="1"/>
+    <rect x="71" y="228" width="8" height="18" fill="#26a69a"/>
+    <line x1="100" y1="195" x2="100" y2="225" stroke="#26a69a" stroke-width="1"/>
+    <rect x="96" y="198" width="8" height="22" fill="#26a69a"/>
+    <line x1="125" y1="165" x2="125" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="121" y="168" width="8" height="22" fill="#26a69a"/>
+    <line x1="150" y1="140" x2="150" y2="170" stroke="#26a69a" stroke-width="1"/>
+    <rect x="146" y="143" width="8" height="22" fill="#26a69a"/>
+    <line x1="175" y1="120" x2="175" y2="148" stroke="#26a69a" stroke-width="1"/>
+    <rect x="171" y="123" width="8" height="18" fill="#26a69a"/>
+    <!-- approaching supply zone -->
+    <line x1="200" y1="100" x2="200" y2="130" stroke="#888" stroke-width="1.5"/>
+    <rect x="195" y="108" width="10" height="14" fill="#ef5350"/>
+    <text x="200" y="148" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">यहाँ!</text>
+
+    <text x="130" y="310" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#7b1fa2">Major Supply zone नजिक</text>
+    <text x="130" y="325" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">लामो समय अड्किएको area</text>
+
+    <!-- PANEL 2: WEEKLY -->
+    <rect x="250" y="45" width="220" height="290" fill="#fffdf5" stroke="#ff9800" stroke-width="1.5" rx="4"/>
+    <rect x="250" y="45" width="220" height="28" fill="#ff9800"/>
+    <text x="360" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">WEEKLY</text>
+
+    <!-- Weekly resistance -->
+    <line x1="260" y1="110" x2="460" y2="110" stroke="#ef5350" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="265" y="105" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">Resistance (रोकान)</text>
+
+    <!-- Weekly candles rising to resistance with upper wick reject -->
+    <line x1="280" y1="240" x2="280" y2="265" stroke="#26a69a" stroke-width="1"/>
+    <rect x="276" y="243" width="8" height="18" fill="#26a69a"/>
+    <line x1="305" y1="215" x2="305" y2="245" stroke="#26a69a" stroke-width="1"/>
+    <rect x="301" y="218" width="8" height="22" fill="#26a69a"/>
+    <line x1="330" y1="185" x2="330" y2="215" stroke="#26a69a" stroke-width="1"/>
+    <rect x="326" y="188" width="8" height="22" fill="#26a69a"/>
+    <line x1="355" y1="155" x2="355" y2="185" stroke="#26a69a" stroke-width="1"/>
+    <rect x="351" y="158" width="8" height="22" fill="#26a69a"/>
+    <line x1="380" y1="135" x2="380" y2="160" stroke="#26a69a" stroke-width="1"/>
+    <rect x="376" y="138" width="8" height="18" fill="#26a69a"/>
+    <!-- UPPER WICK REJECTION at resistance -->
+    <line x1="405" y1="105" x2="405" y2="145" stroke="#888" stroke-width="1.5"/>
+    <rect x="400" y="128" width="10" height="13" fill="#ef5350" stroke="#c62828" stroke-width="1"/>
+    <circle cx="405" cy="105" r="3" fill="#fff" stroke="#ef5350" stroke-width="2"/>
+    <text x="405" y="100" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">Reject</text>
+    <!-- next candle starting down -->
+    <line x1="430" y1="135" x2="430" y2="165" stroke="#ef5350" stroke-width="1"/>
+    <rect x="426" y="138" width="8" height="20" fill="#ef5350"/>
+
+    <text x="360" y="310" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e68a00">Upper wick rejection</text>
+    <text x="360" y="325" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">Seller active at resistance</text>
+
+    <!-- PANEL 3: DAILY -->
+    <rect x="480" y="45" width="220" height="290" fill="#fffdf5" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <rect x="480" y="45" width="220" height="28" fill="#26a69a"/>
+    <text x="590" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">DAILY</text>
+
+    <!-- Daily looks bullish - green candle -->
+    <line x1="510" y1="230" x2="510" y2="255" stroke="#ef5350" stroke-width="1"/>
+    <rect x="506" y="233" width="8" height="18" fill="#ef5350"/>
+    <line x1="535" y1="225" x2="535" y2="248" stroke="#26a69a" stroke-width="1"/>
+    <rect x="531" y="228" width="8" height="16" fill="#26a69a"/>
+    <line x1="560" y1="210" x2="560" y2="235" stroke="#26a69a" stroke-width="1"/>
+    <rect x="556" y="213" width="8" height="18" fill="#26a69a"/>
+    <line x1="585" y1="190" x2="585" y2="215" stroke="#26a69a" stroke-width="1"/>
+    <rect x="581" y="193" width="8" height="18" fill="#26a69a"/>
+    <line x1="610" y1="170" x2="610" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="606" y="173" width="8" height="18" fill="#26a69a"/>
+    <!-- the green candle beginner sees -->
+    <line x1="635" y1="150" x2="635" y2="175" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="630" y="153" width="10" height="18" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <text x="635" y="145" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">हरियो!</text>
+    <line x1="660" y1="145" x2="660" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="656" y="148" width="8" height="14" fill="#26a69a"/>
+
+    <!-- Beginner thought -->
+    <rect x="490" y="290" width="200" height="38" fill="#ffe5e0" stroke="#ef5350" stroke-width="1" rx="3"/>
+    <text x="590" y="307" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">Beginner: "Strong! Buy!"</text>
+    <text x="590" y="321" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">तर Higher TF resistance भित्र trapped</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो तीन panel मा एउटै stock फरक timeframe मा देखाइएको छ। Daily (दायाँ) मा हरियो candle देखेर beginner लाई "strong, buy!" लाग्छ। तर Monthly (बायाँ) मा price लामो supply zone नजिक छ, र Weekly (बीच) मा resistance मा upper wick rejection आइसकेको छ। अर्थात् Daily को त्यो हरियो candle वास्तवमा Higher Timeframe resistance भित्रको सानो bounce मात्र हो। यदि trader ले Weekly/Monthly हेरेको थिएन भने ऊ trap मा पर्थ्यो — यही आकाश को गल्ती थियो।
+</div>
+
+<p>Multi-Timeframe Analysis मा एक महत्वपूर्ण concept हो—Higher Timeframe level को शक्ति। Monthly Resistance Daily Resistance भन्दा शक्तिशाली हुन सक्छ। Weekly Support Daily Support भन्दा meaningful हुन सक्छ। यदि Daily chart मा breakout देखिन्छ तर त्यो breakout Monthly Resistance तल अड्किएको छ भने move limited हुन सक्छ।</p>
+
+<p>तर Higher Timeframe को अर्थ सधैं trade नगर्नु होइन। यदि Monthly Resistance नजिक छ भने trader target छोटो राख्न सक्छ, position size घटाउन सक्छ, वा confirmation पर्खिन सक्छ। यदि Monthly Support नजिक छ तर Daily chart अझै downtrend मा छ भने trader तुरुन्त buy नगरी Daily structure shift पर्खिन सक्छ।</p>
+
+<p>Multi-Timeframe Analysis मा conflict आउन सक्छ। Monthly bullish, Weekly sideways, Daily bearish हुन सक्छ। यस्तो अवस्थामा traderले आफ्नो strategy र time horizon स्पष्ट गर्नुपर्छ। Swing trader का लागि Weekly र Daily बढी महत्वपूर्ण हुन सक्छन्, तर Monthly context ignore गर्नु हुँदैन। Short-term trader Daily focus गर्न सक्छ, तर Weekly Resistance नजिक छ भने सावधान हुनुपर्छ।</p>
+
+<p>Timeframe conflict हुँदा यी प्रश्न सोध्नुहोस्:</p>
+
+<ul>
+  <li>मेरो trade horizon कति हो?</li>
+  <li>म 2–4 दिनका लागि trade गर्दैछु कि 2–4 हप्ताका लागि?</li>
+  <li>Higher Timeframe level कति नजिक छ?</li>
+  <li>Daily setup risk-reward दिन्छ कि छैन?</li>
+  <li>Weekly trend मेरो पक्षमा छ कि विरुद्ध?</li>
+  <li>Monthly chart ले ठूलो warning दिइरहेको छ?</li>
+</ul>
+
+<p>यदि धेरै timeframe एकअर्कासँग विरोधमा छन् भने trade avoid गर्नु पनि राम्रो decision हुन सक्छ।</p>
+
+<p>Multi-Timeframe Analysis को अर्को practical use Stop Loss र Target मा हुन्छ। Daily Entry भए पनि Stop Loss Daily structure अनुसार राख्न सकिन्छ। तर Target Weekly Resistance वा Monthly Resistance अनुसार राख्नुपर्छ। यदि Daily target छोटो छ र Weekly Resistance नजिक छ भने reward कम हुन सक्छ। यदि Daily Entry support नजिक छ र Weekly target टाढा छ भने Risk-Reward राम्रो हुन सक्छ।</p>
+
+<p>Volume पनि timeframe अनुसार पढ्नुपर्छ। Daily Breakout मा Volume राम्रो छ, तर Weekly Volume weak छ भने move short-term हुन सक्छ। Weekly candle strong Volume सहित close भयो भने swing strength बलियो हुन सक्छ। Monthly Volume unusual छ भने ठूलो participation आएको हुन सक्छ, तर context चाहिन्छ।</p>
+
+<p>Multi-Timeframe Analysis को professional sequence यस्तो हुन सक्छ:</p>
+
+<ul>
+  <li>Monthly chart खोल्ने।</li>
+  <li>Major trend, Support, Resistance, candle close, and large structure mark गर्ने।</li>
+  <li>Weekly chart खोल्ने।</li>
+  <li>Swing structure, HH/HL or LH/LL, major levels, Volume, Moving Average, and momentum हेर्ने।</li>
+  <li>Daily chart खोल्ने।</li>
+  <li>Setup, Entry, Stop Loss, Risk-Reward, Volume, RSI, candle, and timing हेर्ने।</li>
+  <li>तीनै chartको message मिल्छ कि मिल्दैन जाँच्ने।</li>
+  <li>Plan बनेपछि मात्र trade गर्ने।</li>
+</ul>
+
+<p>यो process समय लाग्छ, तर यसले weak trade धेरै filter गर्न सक्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Multi-Timeframe Analysis विशेष गरी उपयोगी छ, किनकि नेपाली बजारमा sector rotation, market cycle, policy sentiment, liquidity, and retail emotion को असर धेरै हुन्छ। Daily chartमा एक दिनको movementले भ्रम दिन सक्छ, तर Weekly र Monthly chartले ठूलो context देखाउँछन्।</p>
+
+<p>NEPSE index को Multi-Timeframe Analysis पहिले गर्नुपर्छ। Monthly chartमा NEPSE long-term Support/Resistance नजिक छ कि छैन हेर्नुहोस्। Weekly chartमा index HH/HL बनाइरहेको छ कि LH/LL। Daily chartमा short-term momentum, pullback, breakout, or weakness हेर्नुहोस्। यदि NEPSE index तीनै timeframeमा supportive छ भने individual stock setup बढी अर्थपूर्ण हुन सक्छ।</p>
+
+<p>Sector analysis पनि Multi-Timeframe मा गर्नुपर्छ। कुनै sector Daily मा strong देखिन्छ, तर Weekly मा Resistance नजिक reject हुँदैछ भने सावधानी चाहिन्छ। अर्को sector Monthly base बाट उठ्दै, Weekly breakout गर्दै, Daily pullback मा छ भने watchlist-worthy हुन सक्छ।</p>
+
+<p>NEPSE stock मा धेरै पटक Daily Breakout उत्साहजनक देखिन्छ, तर Weekly Resistance नजिक price अड्किन्छ। यदि trader ले Weekly chart नहेरेको छ भने ऊ fake breakout मा फस्न सक्छ। त्यस्तै Daily red candle देखेर डराउँदा Weekly uptrend भित्रको normal pullback miss हुन सक्छ।</p>
+
+<p>NEPSE मा low liquidity stockमा lower timeframe धेरै noisy हुन सक्छ। Daily chart पनि कहिलेकाहीँ irregular देखिन्छ। यस्तो अवस्थामा Weekly chartले clearer structure दिन सक्छ। तर trade execution Daily chart र liquidity हेरेर गर्नुपर्छ।</p>
+
+<p>Swing trader का लागि NEPSE मा Monthly → Weekly → Daily model धेरै उपयोगी हुन्छ। Monthly ले ठूलो zone, Weekly ले tradable swing, Daily ले Entry दिन्छ। बिना Higher Timeframe context short-term candle मा trade गर्दा confusion बढ्न सक्छ।</p>
+
+<p>NEPSE मा broker cost, tax, DP charge, WACC, EDIS, and settlement practical factors हुन्। Multi-Timeframe Analysis ले trade horizon स्पष्ट बनाउँछ, जसले overtrading घटाउन सक्छ। Overtrading घट्दा cost को impact पनि कम हुन सक्छ। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले official source बाट verify गर्नुपर्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Multi-Timeframe Analysis ले trader को impulse कम गर्छ। यदि तपाईं Daily green candle देखेर तुरुन्त Entry गर्न लाग्नुभएको छ भने Weekly chartले तपाईंलाई रोक्न सक्छ—<strong>“यो Resistance नजिक छ।”</strong> यदि Daily red candle देखेर panic sell गर्न लाग्नुभएको छ भने Weekly chartले देखाउन सक्छ—<strong>“Trend अझै intact छ।”</strong></p>
+
+<p>Beginner को मन सानो timeframe मा धेरै हल्लिन्छ। Daily candle हरियो भयो भने excitement। रातो भयो भने fear। Lower timeframe मा अझ धेरै noise हुन्छ। Multi-Timeframe Analysis ले trader लाई ठूलो picture सम्झाउँछ।</p>
+
+<p>तर यसको अर्को psychological trap पनि छ—analysis paralysis। धेरै timeframe हेर्दा trader confuse हुन सक्छ। Monthly bullish, Weekly neutral, Daily bearish। अब के गर्ने? यस्तो अवस्थामा rule चाहिन्छ। तपाईंको primary trading timeframe कुन हो? यदि तपाईं swing trader हुनुहुन्छ भने Weekly direction र Daily setupलाई प्राथमिकता दिन सक्नुहुन्छ, तर Monthly major level ignore नगर्नुहोस्।</p>
+
+<p>Multi-Timeframe Analysis ले patience बढाउँछ। तपाईं Daily chart मा setup देख्नुहुन्छ, तर Weekly confirmation छैन। तपाईं wait गर्नुहुन्छ। अर्को समय Weekly setup बनेपछि Daily Entry खोज्नुहुन्छ। यो disciplined approach हो।</p>
+
+<p>FOMO कम गर्न पनि यो tool उपयोगी छ। Price Daily मा धेरै माथि गएको छ। FOMO आयो। Weekly chart खोल्दा देखिन्छ—price major resistance नजिक छ। Monthly chart खोल्दा देखिन्छ—historical supply zone। अब तपाईं chase गर्नुअघि दुईपटक सोच्नुहुन्छ।</p>
+
+<p>Multi-Timeframe Analysis को psychological lesson हो—साना signalले मन हल्लिन नदिन ठूलो picture हेर्नुहोस्। तर ठूलो picture को नाममा action नै नगर्ने डर पनि नराख्नुहोस्। Structure, rule, and risk plan अनुसार decision लिनुहोस्।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Daily chart मात्र हेरेर trade गर्नु। Higher Timeframe Support/Resistance ignore गर्दा trader trap मा पर्न सक्छ।</p>
+
+<p>दोस्रो गल्ती हो—Monthly chart धेरै detail मा पढ्न खोज्नु। Monthly ठूलो context का लागि हो, micro Entry का लागि होइन।</p>
+
+<p>तेस्रो गल्ती हो—Weekly trend ignore गर्नु। Swing trader का लागि Weekly structure धेरै महत्वपूर्ण हुन्छ।</p>
+
+<p>चौथो गल्ती हो—Lower timeframe को noise मा फस्नु। सानो candle movement देखेर plan बदल्नु weak discipline हो।</p>
+
+<p>पाँचौँ गल्ती हो—Timeframe conflict हुँदा पनि forced trade गर्नु। यदि charts clear छैनन् भने wait गर्न सकिन्छ।</p>
+
+<p>छैटौँ गल्ती हो—Higher Timeframe level नजिक Risk-Reward नहेर्नु। Daily Entry राम्रो देखिए पनि target नजिक resistance हुन सक्छ।</p>
+
+<p>सातौँ गल्ती हो—Lower timeframe signalलाई Higher Timeframe trend भन्दा ठूलो मान्नु। Daily bounce Weekly downtrend भित्र trap हुन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Analysis paralysis। धेरै timeframe, धेरै indicator, धेरै opinionले decision रोक्न सक्छ। Simple framework चाहिन्छ।</p>
+
+<p>नवौँ गल्ती हो—Time horizon अस्पष्ट राख्नु। Short-term trade, swing trade, and long-term investment अलग timeframe logic चाहिन्छ।</p>
+
+<p>दशौँ गल्ती हो—Multi-Timeframe Alignment खोज्दा price धेरै भागिसकेपछि entry गर्नु। सबै confirmation पर्खिँदा entry late हुन सक्छ। त्यसैले Risk-Reward सधैं जाँच्नुपर्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Daily chart मात्र हेरेर trade गर्दा Weekly/Monthly Resistance मा फस्न सकिन्छ</div>
+  <p style="margin-bottom:0;">Daily मा सबै राम्रो देखिन सक्छ — हरियो candle, RSI 60, price 20 MA माथि। तर त्यो "strength" Higher Timeframe मा एउटा ठूलो Resistance/supply zone भित्रको सानो bounce मात्र हुन सक्छ। <strong>Daily Entry गर्नुअघि सधैं प्रश्न गर्नुस्</strong> — Weekly मा यो price कहाँ छ? Monthly major level नजिक छ? Higher Timeframe मा upper wick rejection छ? ठूलो picture नहेरी सानो signal मा trade गर्नु आकाश को जस्तै महँगो गल्ती हो।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Multi-Timeframe Analysis गर्दा यी rules अपनाउनुहोस्:</p>
+
+<ul>
+  <li>सधैं माथिबाट तल हेर्नुहोस्—Monthly → Weekly → Daily।</li>
+  <li>Monthly chartमा major Support, Resistance, and broad trend मात्र हेर्नुहोस्।</li>
+  <li>Weekly chartमा swing structure, HH/HL, LH/LL, Volume, and major levels हेर्नुहोस्।</li>
+  <li>Daily chartमा Entry, Stop Loss, candle, Volume, RSI, and Risk-Reward हेर्नुहोस्।</li>
+  <li>Higher Timeframe Resistance नजिक Breakout trade गर्दा सावधानी गर्नुहोस्।</li>
+  <li>Higher Timeframe Support नजिक price reaction ध्यान दिनुहोस्।</li>
+  <li>Weekly uptrendमा Daily Pullback opportunity हुन सक्छ।</li>
+  <li>Weekly downtrendमा Daily bounce trap हुन सक्छ।</li>
+  <li>Three-timeframe alignment भए setup बलियो हुन सक्छ, तर guarantee होइन।</li>
+  <li>Timeframe conflict भए position size घटाउने वा trade avoid गर्ने सोच्नुहोस्।</li>
+  <li>आफ्नो trading horizon clear गर्नुहोस्।</li>
+  <li>Entry timeframe सानो भए पनि target Higher Timeframe level अनुसार राख्नुहोस्।</li>
+  <li>Stop Loss Entry timeframe structure अनुसार राख्नुहोस्, तर Higher Timeframe volatility बुझ्नुहोस्।</li>
+  <li>Lower timeframe noiseले Higher Timeframe plan बिगार्न नदिनुहोस्।</li>
+  <li>Multi-Timeframe Analysis पछि पनि Stop Loss र Position Sizing अनिवार्य छ।</li>
+</ul>
+
+<p>Multi-Timeframe Analysis को मुख्य rule हो—<strong>ठूलो picture बिना सानो signal अधुरो हुन्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Perfect Alignment</strong></p>
+<p>Monthly chart मा stock long base बाट उठ्दैछ र major Resistance अझै टाढा छ। Weekly chart मा HH/HL structure छ। Weekly Breakout पछि price healthy pullback मा छ। Daily chart मा price previous Resistance Retest गर्दैछ, Volume घटेको छ, and buyer candle बनेको छ।</p>
+<p>यो Multi-Timeframe Alignment राम्रो हुन सक्छ। Trader ले Entry, Stop Loss, Risk-Reward, and Position Size योजना बनाउन सक्छ।</p>
+
+<p><strong>Scenario 2: Daily Bullish तर Weekly Resistance</strong></p>
+<p>Daily chart मा stock strong green candle बनाउँछ। RSI 65 छ। Volume पनि राम्रो छ। तर Weekly chart मा price पुरानो major Resistance zone नजिक छ र अघिल्लो Weekly candle मा upper wick थियो। Monthly chart मा पनि supply zone देखिन्छ।</p>
+<p>यहाँ Daily strength भए पनि Higher Timeframe caution छ। Trader ले chase नगर्ने, target छोटो राख्ने, वा confirmation पर्खिने निर्णय गर्न सक्छ।</p>
+
+<p><strong>Scenario 3: Daily Weakness तर Weekly Uptrend</strong></p>
+<p>Stock Weekly chart मा strong uptrend छ। Higher High र Higher Low बनाइरहेको छ। Daily chart मा 3 दिन red candle आएको छ र price 20 MA नजिक pullback मा छ। Volume घट्दैछ। Weekly support अझै बचेको छ।</p>
+<p>यहाँ Daily weakness panic sell signal नहुन सक्छ। यो healthy pullback हुन सक्छ। Trader ले buyer reaction पर्खेर setup हेर्न सक्छ।</p>
+
+<!-- VISUAL 3: Weekly Uptrend -> Daily Pullback Opportunity (Scenario 3) -->
+<div class="visual-block">
+  <div class="visual-title">Weekly Uptrend + Daily Pullback = Opportunity (Alignment काम गर्दै)</div>
+  <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="340" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Weekly बलियो uptrend भित्र Daily 3-दिन pullback — panic होइन, opportunity</text>
+
+    <!-- LEFT: WEEKLY -->
+    <rect x="20" y="45" width="335" height="245" fill="#fffdf5" stroke="#ff9800" stroke-width="1.5" rx="4"/>
+    <rect x="20" y="45" width="335" height="28" fill="#ff9800"/>
+    <text x="187" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">WEEKLY — Uptrend (HH/HL)</text>
+
+    <!-- Weekly HH/HL candles -->
+    <line x1="50" y1="230" x2="50" y2="255" stroke="#26a69a" stroke-width="1"/>
+    <rect x="46" y="233" width="8" height="18" fill="#26a69a"/>
+    <line x1="80" y1="210" x2="80" y2="235" stroke="#26a69a" stroke-width="1"/>
+    <rect x="76" y="213" width="8" height="18" fill="#26a69a"/>
+    <!-- HL1 -->
+    <line x1="110" y1="220" x2="110" y2="242" stroke="#ef5350" stroke-width="1"/>
+    <rect x="106" y="223" width="8" height="15" fill="#ef5350"/>
+    <text x="110" y="255" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c8a800">HL</text>
+    <!-- HH1 -->
+    <line x1="140" y1="190" x2="140" y2="215" stroke="#26a69a" stroke-width="1"/>
+    <rect x="136" y="193" width="8" height="18" fill="#26a69a"/>
+    <line x1="170" y1="170" x2="170" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="166" y="173" width="8" height="18" fill="#26a69a"/>
+    <text x="170" y="165" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">HH</text>
+    <!-- HL2 -->
+    <line x1="200" y1="185" x2="200" y2="208" stroke="#ef5350" stroke-width="1"/>
+    <rect x="196" y="188" width="8" height="15" fill="#ef5350"/>
+    <text x="200" y="220" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c8a800">HL</text>
+    <!-- HH2 -->
+    <line x1="230" y1="155" x2="230" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="226" y="158" width="8" height="18" fill="#26a69a"/>
+    <line x1="260" y1="135" x2="260" y2="160" stroke="#26a69a" stroke-width="1"/>
+    <rect x="256" y="138" width="8" height="18" fill="#26a69a"/>
+    <text x="260" y="130" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">HH</text>
+    <!-- current pullback area -->
+    <line x1="290" y1="150" x2="290" y2="175" stroke="#ef5350" stroke-width="1"/>
+    <rect x="286" y="153" width="8" height="16" fill="#ef5350"/>
+    <line x1="320" y1="158" x2="320" y2="180" stroke="#ef5350" stroke-width="1"/>
+    <rect x="316" y="161" width="8" height="14" fill="#ef5350"/>
+    <text x="305" y="200" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">Support बचेको</text>
+
+    <text x="187" y="278" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e68a00">Structure intact — trend up</text>
+
+    <!-- RIGHT: DAILY -->
+    <rect x="365" y="45" width="335" height="245" fill="#fffdf5" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <rect x="365" y="45" width="335" height="28" fill="#26a69a"/>
+    <text x="532" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">DAILY — Pullback (zoom in)</text>
+
+    <!-- 20 MA line on daily -->
+    <path d="M 385 200 L 450 195 L 520 188 L 590 180 L 660 175"
+          stroke="#2962ff" stroke-width="2" fill="none"/>
+    <text x="600" y="170" font-family="sans-serif" font-size="8" fill="#2962ff">20 MA</text>
+
+    <!-- Daily candles - rally then 3 red pullback to 20 MA then buyer -->
+    <line x1="390" y1="160" x2="390" y2="185" stroke="#26a69a" stroke-width="1"/>
+    <rect x="386" y="163" width="8" height="18" fill="#26a69a"/>
+    <line x1="415" y1="148" x2="415" y2="170" stroke="#26a69a" stroke-width="1"/>
+    <rect x="411" y="151" width="8" height="15" fill="#26a69a"/>
+    <line x1="440" y1="140" x2="440" y2="162" stroke="#26a69a" stroke-width="1"/>
+    <rect x="436" y="143" width="8" height="15" fill="#26a69a"/>
+    <!-- 3 red pullback candles -->
+    <line x1="465" y1="148" x2="465" y2="172" stroke="#ef5350" stroke-width="1"/>
+    <rect x="461" y="151" width="8" height="17" fill="#ef5350"/>
+    <line x1="490" y1="160" x2="490" y2="185" stroke="#ef5350" stroke-width="1"/>
+    <rect x="486" y="163" width="8" height="18" fill="#ef5350"/>
+    <line x1="515" y1="172" x2="515" y2="198" stroke="#ef5350" stroke-width="1"/>
+    <rect x="511" y="175" width="8" height="18" fill="#ef5350"/>
+    <text x="490" y="215" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">3 दिन red (pullback)</text>
+    <!-- buyer candle at 20 MA -->
+    <line x1="540" y1="170" x2="540" y2="195" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="535" y="173" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="540" cy="193" r="4" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <text x="540" y="165" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">Buyer!</text>
+    <!-- continuation -->
+    <line x1="565" y1="155" x2="565" y2="178" stroke="#26a69a" stroke-width="1"/>
+    <rect x="561" y="158" width="8" height="16" fill="#26a69a"/>
+    <line x1="590" y1="142" x2="590" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="586" y="145" width="8" height="16" fill="#26a69a"/>
+    <line x1="615" y1="130" x2="615" y2="152" stroke="#26a69a" stroke-width="1"/>
+    <rect x="611" y="133" width="8" height="16" fill="#26a69a"/>
+    <line x1="640" y1="120" x2="640" y2="142" stroke="#26a69a" stroke-width="1"/>
+    <rect x="636" y="123" width="8" height="16" fill="#26a69a"/>
+
+    <rect x="375" y="255" width="315" height="28" fill="#eaf6ea" stroke="#26a69a" stroke-width="1" rx="3"/>
+    <text x="532" y="273" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Daily red ≠ trend over → Weekly uptrend भित्र healthy pullback</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो दुई panel मा Weekly (बायाँ) मा stock बलियो uptrend मा छ — HH/HL बनाउँदै, support बचाउँदै। Daily (दायाँ) मा zoom गर्दा 3 दिन red candle (pullback) देखिन्छ जसले beginner लाई "trend सकियो" भन्ने डर दिन्छ। तर यो Weekly uptrend भित्रको सामान्य pullback मात्र हो — price 20 MA नजिक आएर buyer candle बन्यो र फेरि माथि गयो। Higher Timeframe context थाहा भएको trader यो Daily weakness लाई opportunity सम्झन्छ, panic होइन।
+</div>
+
+<p><strong>Scenario 4: Weekly Downtrend, Daily Bounce Trap</strong></p>
+<p>Weekly chart मा stock LH/LL बनाइरहेको छ। Price 50 MA तल छ। Daily chart मा अचानक 2 green candle बने। Beginner ले reversal सम्झेर buy गर्छ। तर price Weekly Lower High zone नजिक reject हुन्छ। केही दिनपछि stock फेरि तल जान्छ।</p>
+<p>यहाँ Daily bounce Higher Timeframe downtrend भित्रको relief rally थियो। Weekly structure नहेर्दा beginner फस्यो।</p>
+
+<!-- VISUAL 4: Weekly Downtrend -> Daily Bounce Trap (Scenario 4) -->
+<div class="visual-block">
+  <div class="visual-title">Weekly Downtrend + Daily Bounce = Trap (Alignment विरुद्ध)</div>
+  <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="340" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Weekly downtrend भित्र Daily 2-दिन bounce — "reversal" होइन, relief rally trap</text>
+
+    <!-- LEFT: WEEKLY -->
+    <rect x="20" y="45" width="335" height="245" fill="#fffdf5" stroke="#ff9800" stroke-width="1.5" rx="4"/>
+    <rect x="20" y="45" width="335" height="28" fill="#ff9800"/>
+    <text x="187" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">WEEKLY — Downtrend (LH/LL)</text>
+
+    <!-- Weekly LH/LL candles -->
+    <line x1="50" y1="95" x2="50" y2="118" stroke="#ef5350" stroke-width="1"/>
+    <rect x="46" y="98" width="8" height="16" fill="#ef5350"/>
+    <line x1="80" y1="108" x2="80" y2="132" stroke="#ef5350" stroke-width="1"/>
+    <rect x="76" y="111" width="8" height="18" fill="#ef5350"/>
+    <!-- bounce LH1 -->
+    <line x1="110" y1="100" x2="110" y2="122" stroke="#26a69a" stroke-width="1"/>
+    <rect x="106" y="103" width="8" height="15" fill="#26a69a"/>
+    <text x="110" y="95" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">LH</text>
+    <!-- LL1 -->
+    <line x1="140" y1="120" x2="140" y2="145" stroke="#ef5350" stroke-width="1"/>
+    <rect x="136" y="123" width="8" height="18" fill="#ef5350"/>
+    <line x1="170" y1="138" x2="170" y2="162" stroke="#ef5350" stroke-width="1"/>
+    <rect x="166" y="141" width="8" height="18" fill="#ef5350"/>
+    <text x="170" y="175" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">LL</text>
+    <!-- bounce LH2 -->
+    <line x1="200" y1="130" x2="200" y2="152" stroke="#26a69a" stroke-width="1"/>
+    <rect x="196" y="133" width="8" height="15" fill="#26a69a"/>
+    <text x="200" y="125" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">LH</text>
+    <!-- LL2 -->
+    <line x1="230" y1="155" x2="230" y2="180" stroke="#ef5350" stroke-width="1"/>
+    <rect x="226" y="158" width="8" height="18" fill="#ef5350"/>
+    <line x1="260" y1="172" x2="260" y2="198" stroke="#ef5350" stroke-width="1"/>
+    <rect x="256" y="175" width="8" height="18" fill="#ef5350"/>
+    <text x="260" y="210" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">LL</text>
+    <!-- current small bounce (the trap zone) -->
+    <line x1="290" y1="165" x2="290" y2="188" stroke="#26a69a" stroke-width="1"/>
+    <rect x="286" y="168" width="8" height="15" fill="#26a69a"/>
+    <line x1="320" y1="158" x2="320" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="316" y="161" width="8" height="14" fill="#26a69a"/>
+    <!-- LH resistance zone marker -->
+    <line x1="280" y1="150" x2="340" y2="150" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="310" y="145" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">LH zone (छत)</text>
+
+    <text x="187" y="278" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">Structure weak — trend down</text>
+
+    <!-- RIGHT: DAILY -->
+    <rect x="365" y="45" width="335" height="245" fill="#fffdf5" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <rect x="365" y="45" width="335" height="28" fill="#26a69a"/>
+    <text x="532" y="64" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">DAILY — 2 Green Candle (zoom in)</text>
+
+    <!-- Daily downtrend then 2 green bounce then reject -->
+    <line x1="390" y1="110" x2="390" y2="135" stroke="#ef5350" stroke-width="1"/>
+    <rect x="386" y="113" width="8" height="18" fill="#ef5350"/>
+    <line x1="415" y1="125" x2="415" y2="150" stroke="#ef5350" stroke-width="1"/>
+    <rect x="411" y="128" width="8" height="18" fill="#ef5350"/>
+    <line x1="440" y1="142" x2="440" y2="168" stroke="#ef5350" stroke-width="1"/>
+    <rect x="436" y="145" width="8" height="18" fill="#ef5350"/>
+    <line x1="465" y1="160" x2="465" y2="185" stroke="#ef5350" stroke-width="1"/>
+    <rect x="461" y="163" width="8" height="18" fill="#ef5350"/>
+    <!-- 2 GREEN bounce candles (the trap) -->
+    <line x1="490" y1="148" x2="490" y2="172" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="485" y="151" width="10" height="16" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <line x1="515" y1="130" x2="515" y2="152" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="510" y="133" width="10" height="15" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <text x="503" y="125" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#26a69a">2 हरियो!</text>
+    <!-- beginner buys here -->
+    <text x="503" y="200" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">Beginner buys 👆</text>
+    <!-- rejection - upper wick then fall -->
+    <line x1="540" y1="115" x2="540" y2="150" stroke="#888" stroke-width="1.5"/>
+    <rect x="535" y="135" width="10" height="12" fill="#ef5350" stroke="#c62828" stroke-width="1"/>
+    <circle cx="540" cy="115" r="3" fill="#fff" stroke="#ef5350" stroke-width="2"/>
+    <text x="555" y="115" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">Reject!</text>
+    <!-- fall continues -->
+    <line x1="565" y1="148" x2="565" y2="175" stroke="#ef5350" stroke-width="1"/>
+    <rect x="561" y="151" width="8" height="20" fill="#ef5350"/>
+    <line x1="590" y1="168" x2="590" y2="195" stroke="#ef5350" stroke-width="1"/>
+    <rect x="586" y="171" width="8" height="20" fill="#ef5350"/>
+    <line x1="615" y1="185" x2="615" y2="210" stroke="#ef5350" stroke-width="1"/>
+    <rect x="611" y="188" width="8" height="18" fill="#ef5350"/>
+    <line x1="640" y1="198" x2="640" y2="222" stroke="#ef5350" stroke-width="1"/>
+    <rect x="636" y="201" width="8" height="18" fill="#ef5350"/>
+
+    <rect x="375" y="255" width="315" height="28" fill="#ffe5e0" stroke="#ef5350" stroke-width="1" rx="3"/>
+    <text x="532" y="273" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">2 हरियो candle = relief rally → Weekly LH zone मा reject → फेरि तल</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो दुई panel मा Weekly (बायाँ) मा stock downtrend मा छ — LH/LL बनाउँदै, weak structure। Daily (दायाँ) मा zoom गर्दा 2 हरियो candle देखिन्छ जसले beginner लाई "reversal, अब बढ्छ" भन्ने भ्रम दिन्छ र ऊ buy गर्छ। तर त्यो bounce Weekly को Lower High zone (छत) नजिक पुगेर reject भयो र price फेरि तल गयो। यो "relief rally trap" हो — Higher Timeframe downtrend भित्रको सानो bounce। Weekly structure हेरेको भए beginner यो trap बाट बच्न सक्थ्यो।
+</div>
+
+<p><strong>Scenario 5: Monthly Support, Daily Reversal Not Ready</strong></p>
+<p>Monthly chart मा stock major Support नजिक छ। Beginner सोच्छ—<strong>“Support छ, buy।”</strong> तर Weekly chart अझै bearish छ। Daily chart मा पनि कुनै reversal candle छैन, Volume selling छ। यहाँ Monthly Support important भए पनि immediate Entry ready छैन। Traderले Daily/Weekly confirmation पर्खिनुपर्छ।</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:18%;">Timeframe</th>
+      <th style="width:27%;">Purpose</th>
+      <th style="width:30%;">What to Check</th>
+      <th style="width:25%;">Decision Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="color:#7b1fa2;">Monthly</strong></td>
+      <td>ठूलो direction / context</td>
+      <td>Major S/R, long-term trend, cycle, supply/demand zone</td>
+      <td>Trade गर्ने कि नगर्ने को बृहत् निर्णय</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#e68a00;">Weekly</strong></td>
+      <td>Swing structure</td>
+      <td>HH/HL या LH/LL, swing S/R, Volume, MA, breakout</td>
+      <td>Setup valid छ कि छैन filter</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#00897b;">Daily</strong></td>
+      <td>Entry timing</td>
+      <td>Candle, Volume, RSI, MA, Retest, SL, R:R</td>
+      <td>Exact Entry + Stop Loss</td>
+    </tr>
+    <tr>
+      <td><strong>Alignment</strong></td>
+      <td>तीनै मिल्छ कि?</td>
+      <td>सबै एउटै direction कि conflict?</td>
+      <td>Strong / Caution / Avoid</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Multi-Timeframe Analysis Checklist</div>
+
+  <div class="checklist-sub">Monthly chart check:</div>
+  <ul>
+    <li>Stock long-term uptrend, downtrend, कि sideways छ?</li>
+    <li>Major Support कहाँ छ?</li>
+    <li>Major Resistance कहाँ छ?</li>
+    <li>Price historical high नजिक छ कि base बाट उठ्दैछ?</li>
+    <li>Monthly candle close strong छ कि weak?</li>
+    <li>Monthly upper/lower wick warning छ?</li>
+    <li>Price major supply zone नजिक छ?</li>
+    <li>Price major demand zone नजिक छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Weekly chart check:</div>
+  <ul>
+    <li>Weekly trend HH/HL मा छ?</li>
+    <li>Weekly trend LH/LL मा छ?</li>
+    <li>Weekly range/sideways छ?</li>
+    <li>Weekly Support कहाँ छ?</li>
+    <li>Weekly Resistance कहाँ छ?</li>
+    <li>Weekly Volume कस्तो छ?</li>
+    <li>Weekly Moving Average support/resistance छ?</li>
+    <li>Weekly breakout वा breakdown भएको छ?</li>
+    <li>Weekly candle close कस्तो छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Daily chart check:</div>
+  <ul>
+    <li>Daily setup के हो—Breakout, Pullback, Retest, Support Bounce?</li>
+    <li>Daily Volume support छ?</li>
+    <li>Daily RSI momentum कस्तो छ?</li>
+    <li>Daily candle quality कस्तो छ?</li>
+    <li>Entry level कहाँ छ?</li>
+    <li>Stop Loss कहाँ छ?</li>
+    <li>Target Higher Timeframe Resistance अघि नै छ?</li>
+    <li>Risk-Reward मिल्छ?</li>
+    <li>Entry chase त होइन?</li>
+  </ul>
+
+  <div class="checklist-sub">Alignment check:</div>
+  <ul>
+    <li>Monthly, Weekly, Daily एउटै direction मा छन्?</li>
+    <li>Higher Timeframe warning छ?</li>
+    <li>Lower Timeframe signal Higher Timeframe विरुद्ध छ?</li>
+    <li>Timeframe conflict भए trade avoid गर्नुपर्छ?</li>
+    <li>Position size घटाउनुपर्छ?</li>
+    <li>यो trade मेरो time horizonसँग मिल्छ?</li>
+    <li>म एक timeframe को signalमा मात्रै trade गर्दैछु?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Monthly Context on 5 Stocks</div>
+  <p>कुनै 5 वटा NEPSE stock छान्नुहोस्। प्रत्येक stock का लागि Monthly chart खोल्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>Major Support कहाँ छ?</li>
+    <li>Major Resistance कहाँ छ?</li>
+    <li>Long-term trend कस्तो छ?</li>
+    <li>Price अहिले demand zone, supply zone, कि middle area मा छ?</li>
+    <li>Monthly candle strong छ कि weak?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Weekly Structure on Same 5 Stocks</div>
+  <p>त्यही 5 stock को Weekly chart खोल्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>Weekly HH/HL छ कि LH/LL?</li>
+    <li>Weekly Support/Resistance कहाँ छ?</li>
+    <li>Weekly Volume कस्तो छ?</li>
+    <li>Weekly chart trade-friendly छ कि caution?</li>
+    <li>Weekly trend Monthly contextसँग मिल्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Daily Setup on Same 5 Stocks</div>
+  <p>त्यही 5 stock को Daily chart खोल्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>Daily setup छ कि छैन?</li>
+    <li>Entry level कहाँ हुन सक्छ?</li>
+    <li>Stop Loss कहाँ राख्न सकिन्छ?</li>
+    <li>Target Higher Timeframe Resistance अघि छ कि पछि?</li>
+    <li>Risk-Reward मिल्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Combine All Three Views</div>
+  <p>तीनै timeframeको conclusion एउटै ठाउँमा लेख्नुहोस्:</p>
+  <ul>
+    <li>Monthly View:</li>
+    <li>Weekly View:</li>
+    <li>Daily View:</li>
+    <li>Final Decision: Trade / Wait / Avoid</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Past Loss Trade Multi-TF Review</div>
+  <p>आफ्नो पुरानो कुनै loss trade review गर्नुहोस्:</p>
+  <ul>
+    <li>Entry गर्दा Daily chart मात्र हेरेको थिएँ?</li>
+    <li>Weekly Resistance थियो?</li>
+    <li>Monthly supply zone थियो?</li>
+    <li>Higher Timeframe हेरेको भए decision फरक हुन्थ्यो?</li>
+    <li>अबदेखि trade अघि कुन क्रम follow गर्छु?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Multi-Timeframe Analysis trader लाई सानो candle को भावनाबाट बाहिर निकालेर ठूलो picture देखाउने lens हो। Daily chart ले Entry देखाउँछ, तर Weekly र Monthly chartले त्यो Entry कहाँ भइरहेको छ भनेर बताउँछन्।</p>
+  <p>Daily green candle देखेर किन्नुअघि Weekly Resistance हेर्नुहोस्। Daily red candle देखेर डराउनुअघि Weekly trend हेर्नुहोस्। Monthly Support नजिक stock छ भन्दैमा तुरुन्त buy नगर्नुहोस्; Daily confirmation पर्खिनुहोस्।</p>
+  <p>सफल trader एउटै chartमा प्रेम गर्दैन। ऊ chartलाई तह-तहमा पढ्छ। पहिले ठूलो direction, त्यसपछि swing structure, अनि मात्र Entry timing।</p>
+  <p style="margin-bottom:0;">Multi-Timeframe Analysis को लक्ष्य धेरै जानकारी बटुल्नु होइन। लक्ष्य हो—गलत ठाउँमा सही signal देखेर फस्नबाट बच्नु।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 26 Summary</div>
+  <p>Multi-Timeframe Analysis भनेको एउटै stockलाई Monthly, Weekly, Daily जस्ता फरक timeframe बाट हेरेर decision बनाउने process हो। Monthly chartले ठूलो direction र major levels देखाउँछ। Weekly chartले swing structure र medium-term trend देखाउँछ। Daily chartले Entry timing, candle, Volume, Stop Loss, and Risk-Reward देखाउँछ।</p>
+  <p>सही क्रम माथिबाट तल हो—Monthly → Weekly → Daily। पहिले context, त्यसपछि structure, अनि Entry। Daily chart मात्र हेरेर trade गर्दा Higher Timeframe Resistance वा Support ignore हुन सक्छ।</p>
+  <p>Multi-Timeframe Alignment हुँदा setup बलियो हुन सक्छ। Monthly supportive, Weekly bullish, Daily Pullback/Retest setup भए trade quality राम्रो हुन सक्छ। तर Higher Timeframe warning हुँदा Daily signal सावधानीपूर्वक लिनुपर्छ।</p>
+  <p>NEPSE मा Multi-Timeframe Analysis index, sector, and stock तीनै तहमा गर्नुपर्छ। NEPSE index को Monthly/Weekly/Daily condition, sector rotation, and individual stock setup मिल्दा probability सुधारिन्छ।</p>
+  <p>Timeframe conflict हुँदा trader ले आफ्नो trade horizon स्पष्ट गर्नुपर्छ। Confusion भए trade avoid गर्न सकिन्छ। Analysis paralysisबाट बच्न simple checklist र fixed sequence प्रयोग गर्नुपर्छ।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—ठूलो picture नहेरी सानो signalमा trade नगर्नुहोस्। Monthly ले दिशा दिन्छ, Weekly ले structure दिन्छ, Daily ले Entry दिन्छ।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader एउटै candle मा निर्णय गर्दैन;<br>
+  ऊ Monthly को ठूलो कथा, Weekly को संरचना,<br>
+  र Daily को timing मिलाएर<br>
+  मात्र आफ्नो कदम चाल्छ।
+</div>
+
+</div>
+</body>
+</html>

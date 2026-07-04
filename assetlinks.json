@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.kushalsubedi.nepse",
+        "sha256_cert_fingerprints": ["46:06:29:1C:4B:BC:2B:27:4E:90:9B:70:D8:0B:4A:26:6B:E4:E5:AA:43:9A:57:99:77:75:C2:68:C2:AD:F9:74"]
+      }
+    }]

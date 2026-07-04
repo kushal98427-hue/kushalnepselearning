@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Trader Checklist — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.8; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+.container { max-width: 920px; margin: 0 auto; background: #fdf6e3; padding: 46px 56px 80px; }
+p { font-size: 15.5px; line-height: 1.85; color: #111; }
+strong { font-weight: 700; color: #111; }
+
+/* Header — workbook style */
+.fs-header { text-align: center; padding: 30px 20px 34px; margin-bottom: 30px; border-bottom: 2px solid #c9b97a; position: relative; }
+.fs-label { display: inline-block; font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a7a3a; background: #f0e6c0; padding: 6px 18px; border-radius: 20px; border: 1px solid #c9b97a; margin-bottom: 18px; }
+.fs-title { font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 700; color: #111; line-height: 1.2; letter-spacing: -0.01em; }
+.fs-rule { width: 54px; height: 4px; background: #c9b97a; border-radius: 3px; margin: 16px auto 0; }
+
+/* Intro rule box */
+.intro-rule { background: linear-gradient(180deg,#fff8dc 0%,#fffdf5 100%); border: 1px solid #e0c84a; border-left: 5px solid #c8a800; border-radius: 8px; padding: 22px 26px; margin: 26px 0 8px; }
+.intro-rule .ir-tag { font-family:'Roboto',sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #b08900; margin-bottom: 10px; }
+.intro-rule p { font-size: 15.5px; font-weight: 500; line-height: 1.9; }
+
+/* Visual blocks */
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 10px; padding: 22px 20px; margin: 30px 0 8px; text-align: center; box-shadow: 0 1px 0 #ece1bd; }
+.visual-title { font-family:'Roboto',sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8a7a3a; margin-bottom: 14px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 13px 17px; margin: 8px 0 26px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 5px 5px 0; }
+
+/* Part cards */
+.part { margin: 34px 0 8px; }
+.part-head { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; padding-bottom: 12px; border-bottom: 1.5px dashed #d8cda0; }
+.part-num { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-family:'Roboto',sans-serif; font-size: 18px; font-weight: 700; color: #fff; }
+.part-titles { flex: 1; }
+.part-title { font-family:'Roboto',sans-serif; font-size: 18px; font-weight: 700; color: #111; line-height: 1.25; }
+.part-sub { font-size: 13.5px; color: #6b6244; font-style: italic; margin-top: 2px; }
+/* phase accent colors */
+.p1 { background:#7c5cd0; } .p2 { background:#2962ff; } .p3 { background:#0c8b78; }
+.p4 { background:#c39400; } .p5 { background:#d9772b; } .p6 { background:#c0506b; }
+.b1 { border-color:#7c5cd0; } .b2 { border-color:#2962ff; } .b3 { border-color:#0c8b78; }
+.b4 { border-color:#c39400; } .b5 { border-color:#d9772b; } .b6 { border-color:#c0506b; }
+
+/* Checkbox items */
+.checks { margin-top: 14px; }
+.check { display: flex; align-items: flex-start; gap: 13px; padding: 11px 15px; margin-bottom: 8px; background: #fffdf5; border: 1px solid #e8ddb6; border-radius: 8px; cursor: pointer; transition: background .14s, border-color .14s; }
+.check:hover { background: #f8f1d9; border-color: #d4c68c; }
+.check input { appearance: none; -webkit-appearance: none; flex: 0 0 auto; width: 22px; height: 22px; margin-top: 1px; border: 2px solid #c2b277; border-radius: 6px; background: #fff; cursor: pointer; position: relative; transition: background .12s; }
+.check input:checked { background: #0c8b78; border-color: #0c8b78; }
+.check input:checked::after { content: "\2713"; position: absolute; top: -3px; left: 3px; color: #fff; font-size: 17px; font-weight: 700; font-family:'Roboto',sans-serif; }
+.check span { font-size: 15px; line-height: 1.65; color: #111; }
+.check span strong { font-weight: 700; }
+
+/* Sub-timeframe headings (Part 5) */
+.tf-head { display:inline-block; font-family:'Roboto',sans-serif; font-size: 14px; font-weight:700; color:#0c8b78; background:#e6f3f0; border:1px solid #b6ddd5; padding: 6px 14px; border-radius: 7px; margin: 18px 0 10px; }
+.tf-head span { font-weight: 500; color:#4a7c72; font-style: italic; }
+
+/* Master trader numbered cards */
+.master-grid { margin-top: 14px; }
+.mq { display: flex; gap: 14px; align-items: flex-start; background: #fffdf5; border: 1px solid #e3d4dc; border-left: 4px solid #c0506b; border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
+.mq-n { flex:0 0 auto; width: 30px; height: 30px; border-radius: 50%; background:#c0506b; color:#fff; font-family:'Roboto',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center; }
+.mq p { font-size: 15px; font-weight: 600; line-height: 1.6; }
+
+/* Golden rule */
+.golden { background: linear-gradient(180deg,#fbf3d3 0%,#fffdf5 100%); border: 2px solid #c9b97a; border-radius: 12px; padding: 26px; margin: 14px 0 8px; }
+.golden-tag { font-family:'Roboto',sans-serif; font-size: 12.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#a8881f; margin-bottom: 12px; }
+.golden p.lead { font-size: 15.5px; font-weight: 600; line-height: 1.85; margin-bottom: 6px; }
+.golden .check { background:#fff; border-color:#e0d09a; }
+.golden .check input:checked { background:#c8a800; border-color:#c8a800; }
+
+/* Promise card */
+.promise { background:#0e3d36; color:#f3efe0; border-radius: 12px; padding: 30px 30px 26px; margin: 30px 0; }
+.promise-tag { font-family:'Roboto',sans-serif; font-size: 12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#8fc9bd; margin-bottom: 6px; }
+.promise h3 { font-family:'Roboto',sans-serif; font-size: 21px; font-weight:700; margin-bottom: 4px; color:#fff; }
+.promise .psub { font-size: 13.5px; color:#bcd8d1; font-style: italic; margin-bottom: 16px; }
+.promise .pintro { font-size: 15.5px; color:#eae4d2; margin-bottom: 16px; line-height:1.8; }
+.promise ul { list-style:none; }
+.promise li { position: relative; padding-left: 30px; margin-bottom: 12px; font-size: 15px; line-height: 1.7; color:#eef0e6; }
+.promise li::before { content:"\2713"; position:absolute; left:0; top:0; color:#5fb8a6; font-weight:700; font-size: 17px; }
+.promise li strong { color:#ffe9a8; font-weight:700; }
+
+/* Final message */
+.final-msg { margin: 30px 0 0; }
+.final-msg .fm-block { background:#fffdf5; border:1px solid #c9b97a; border-left: 5px solid #c8a800; border-radius: 8px; padding: 22px 26px; margin-bottom: 16px; }
+.final-msg p { font-size: 15.5px; font-weight: 500; line-height: 1.9; }
+
+@media (max-width: 768px) {
+  .container { padding: 30px 18px 60px; }
+  .fs-title { font-size: 25px; }
+  .part-title { font-size: 16px; }
+  .part-num { width: 38px; height: 38px; font-size: 16px; }
+  .check span { font-size: 14.5px; }
+  .promise { padding: 24px 20px; }
+  .visual-block { padding: 16px 12px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="fs-header">
+  <div class="fs-label">Final Section &bull; 01</div>
+  <h1 class="fs-title">Complete Trader Checklist</h1>
+  <div class="fs-rule"></div>
+</header>
+
+<div class="intro-rule">
+  <div class="ir-tag">&#9888;&#65039; महत्वपूर्ण नियम</div>
+  <p>कुनै पनि Trade लिनु अघि यो Checklist पूरा गर्नुहोस्। यदि धेरै प्रश्नहरूको उत्तर &ldquo;हो&rdquo; आउँछ भने मात्र Trade विचार गर्नुहोस्। यदि धेरै प्रश्नहरूको उत्तर &ldquo;होइन&rdquo; आउँछ भने Trade नगर्नु नै सबैभन्दा बुद्धिमानी र उत्तम निर्णय हुन सक्छ। बजारमा पूँजी जोगाउनु पनि नाफा कमाउनु सरह हो।</p>
+</div>
+
+<!-- VISUAL 1: 6-phase checklist system map -->
+<div class="visual-block">
+  <div class="visual-title">17-Part Checklist System — 6 चरणको यात्रा</div>
+  <svg viewBox="0 0 820 620" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="620" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="25" font-weight="700" fill="#111">Trade अघि — माथिबाट तल क्रमैसँग</text>
+
+    <!-- Row 1 -->
+    <rect x="70" y="64" width="680" height="74" rx="12" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.5"/>
+    <rect x="70" y="64" width="9" height="74" rx="4" fill="#7c5cd0"/>
+    <circle cx="116" cy="101" r="20" fill="#7c5cd0"/><text x="116" y="108" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#fff">1</text>
+    <text x="150" y="96" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#5b3fa6">मानसिक तयारी</text>
+    <text x="150" y="122" font-family="sans-serif" font-size="15" fill="#333">Part 1 &mdash; Pre-Market (दिमाग शान्त छ?)</text>
+
+    <!-- Row 2 -->
+    <rect x="70" y="150" width="680" height="74" rx="12" fill="#eaf1ff" stroke="#2962ff" stroke-width="1.5"/>
+    <rect x="70" y="150" width="9" height="74" rx="4" fill="#2962ff"/>
+    <circle cx="116" cy="187" r="20" fill="#2962ff"/><text x="116" y="194" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">2-4</text>
+    <text x="150" y="182" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#1a47b8">विश्लेषण</text>
+    <text x="150" y="208" font-family="sans-serif" font-size="15" fill="#333">Market &rarr; Sector &rarr; Stock छनोट</text>
+
+    <!-- Row 3 -->
+    <rect x="70" y="236" width="680" height="74" rx="12" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.5"/>
+    <rect x="70" y="236" width="9" height="74" rx="4" fill="#0c8b78"/>
+    <circle cx="116" cy="273" r="20" fill="#0c8b78"/><text x="116" y="280" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">5-8</text>
+    <text x="150" y="268" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#0a6e5f">प्राविधिक पुष्टि</text>
+    <text x="150" y="294" font-family="sans-serif" font-size="14.5" fill="#333">Multi-TF, Setup, Volume, Smart Money</text>
+
+    <!-- Row 4 -->
+    <rect x="70" y="322" width="680" height="74" rx="12" fill="#fbf3d8" stroke="#c39400" stroke-width="1.5"/>
+    <rect x="70" y="322" width="9" height="74" rx="4" fill="#c39400"/>
+    <circle cx="116" cy="359" r="20" fill="#c39400"/><text x="116" y="366" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">9-12</text>
+    <text x="150" y="354" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#9a7400">कार्यान्वयन र जोखिम</text>
+    <text x="150" y="380" font-family="sans-serif" font-size="14.5" fill="#333">Entry, Stop Loss, Risk, Position Size</text>
+
+    <!-- Row 5 -->
+    <rect x="70" y="408" width="680" height="74" rx="12" fill="#fbeede" stroke="#d9772b" stroke-width="1.5"/>
+    <rect x="70" y="408" width="9" height="74" rx="4" fill="#d9772b"/>
+    <circle cx="116" cy="445" r="20" fill="#d9772b"/><text x="116" y="452" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#fff">13-15</text>
+    <text x="150" y="440" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#b35e1c">व्यवस्थापन र समीक्षा</text>
+    <text x="150" y="466" font-family="sans-serif" font-size="14.5" fill="#333">Exit, Trade Management, Journal</text>
+
+    <!-- Row 6 -->
+    <rect x="70" y="494" width="680" height="74" rx="12" fill="#f9eaef" stroke="#c0506b" stroke-width="1.5"/>
+    <rect x="70" y="494" width="9" height="74" rx="4" fill="#c0506b"/>
+    <circle cx="116" cy="531" r="20" fill="#c0506b"/><text x="116" y="538" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#fff">16-17</text>
+    <text x="150" y="526" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#a03c54">मनोविज्ञान र निपुणता</text>
+    <text x="150" y="552" font-family="sans-serif" font-size="14.5" fill="#333">Psychology + Master Trader (अन्तिम जाँच)</text>
+
+    <text x="410" y="598" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#111">हरेक चरण पार गरे मात्र अर्कोमा &mdash; एउटा पनि नछुटाउने</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले सिङ्गो Checklist लाई 6 चरणको एउटा यात्रा (system) मा देखाउँछ — माथिबाट तल क्रमैसँग। <strong>चरण 1 — मानसिक तयारी</strong> (Part 1): ट्रेड अघि दिमाग शान्त छ कि? <strong>चरण 2 — विश्लेषण</strong> (Part 2-4): Market → Sector → Stock क्रममा छनोट। <strong>चरण 3 — प्राविधिक पुष्टि</strong> (Part 5-8): Multi-Timeframe, Setup, Volume, Smart Money जाँच। <strong>चरण 4 — कार्यान्वयन र जोखिम</strong> (Part 9-12): Entry, Stop Loss, Risk, Position Size। <strong>चरण 5 — व्यवस्थापन र समीक्षा</strong> (Part 13-15): Exit, Trade Management, Journal। <strong>चरण 6 — मनोविज्ञान र निपुणता</strong> (Part 16-17): Psychology र अन्तिम Master Trader प्रश्नहरू। मुख्य कुरा — हरेक चरण पार गरेर मात्र अर्कोमा जाने; एउटा पनि चरण नछुटाई पूरा Checklist भर्ने।
+</div>
+
+<!-- VISUAL 2: scoring decision gauge -->
+<div class="visual-block">
+  <div class="visual-title">आफ्नो उत्तर कसरी पढ्ने — निर्णय मापन</div>
+  <svg viewBox="0 0 820 250" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="250" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="25" font-weight="700" fill="#111">धेरै &ldquo;हो&rdquo; कि धेरै &ldquo;होइन&rdquo;?</text>
+
+    <defs>
+      <linearGradient id="scale" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#ef5350"/>
+        <stop offset="0.5" stop-color="#f0c419"/>
+        <stop offset="1" stop-color="#26a69a"/>
+      </linearGradient>
+    </defs>
+    <rect x="90" y="74" width="640" height="26" rx="13" fill="url(#scale)"/>
+    <text x="110" y="92" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff">धेरै &ldquo;होइन&rdquo;</text>
+    <text x="710" y="92" text-anchor="end" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff">धेरै &ldquo;हो&rdquo;</text>
+
+    <!-- left outcome -->
+    <rect x="90" y="124" width="300" height="96" rx="12" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.7"/>
+    <text x="240" y="156" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#c62828">Trade नगर्ने</text>
+    <text x="240" y="182" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">पूँजी जोगाउनु = बुद्धिमानी</text>
+    <text x="240" y="204" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">(पर्खनु पनि उत्तम निर्णय)</text>
+
+    <!-- right outcome -->
+    <rect x="430" y="124" width="300" height="96" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.7"/>
+    <text x="580" y="156" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#2e7d32">Trade विचार गर्ने</text>
+    <text x="580" y="182" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">नियम मिले मात्र अगाडि</text>
+    <text x="580" y="204" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">(जोखिम नियन्त्रणमा राखेर)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो मापन ले Checklist को नतिजा कसरी पढ्ने सिकाउँछ। तपाईंका उत्तर जति बायाँ (<strong>धेरै &ldquo;होइन&rdquo;</strong>, रातो) पर्छन्, बजार त्यति नै तपाईंको पक्षमा छैन — त्यस्तो बेला <strong>Trade नगर्नु</strong> नै सबैभन्दा बुद्धिमानी हो; पर्खनु र पूँजी जोगाउनु आफैँमा उत्तम निर्णय हो। उत्तर जति दायाँ (<strong>धेरै &ldquo;हो&rdquo;</strong>, हरियो) पर्छन्, ट्रेडका खम्बाहरू त्यति मिलेका छन् — त्यस्तो बेला मात्र जोखिम नियन्त्रणमा राखेर <strong>Trade विचार</strong> गर्ने। मुख्य पाठ — यो Checklist तपाईंलाई राम्रो ट्रेड खोज्न मात्र होइन, गलत ट्रेडबाट रोकेर पूँजी बचाउन पनि हो।
+</div>
+
+<!-- ============ PART 1 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p1">1</div>
+    <div class="part-titles">
+      <div class="part-title">Part 1: Pre-Market Checklist</div>
+      <div class="part-sub">(Trading सुरु गर्नु अघि मानसिक तयारी)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के आज म मानसिक रूपमा पूर्ण शान्त र स्थिर छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के म डर, रिस, तनाव वा अत्यधिक उत्साह (Euphoria) जस्ता मानसिक आवेगबाट मुक्त छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले आजको दिनका लागि पर्याप्त र राम्रोसँग निद्रा लिएको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के आज म बजारको उतारचढावमा आफ्नो Trading Plan अनुसार मात्र चल्न दृढ छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के आज म बजारमा पैसा कमाउने लोभले होइन, केवल आफ्नो व्यावसायिक प्रक्रिया (Process) पालना गर्न आएको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के म यो ट्रेड गलत साबित भएको खण्डमा हुने निश्चित Loss लाई सहजै स्वीकार गर्न मानसिक रूपमा तयार छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के म हिजोको घाटा असुल गर्ने (Revenge Trading) कडा मानसिक अवस्थामा त छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के म बजार फुट्ला कि वा अवसर छुट्ला कि भन्ने कडा FOMO को प्रभावबाट मुक्त छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के म Facebook, Viber, Clubhouse वा अन्य Social Media को हल्ला र सिफारिसबाट प्रभावित नभई आफ्नै विश्लेषणमा अडिग छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के म आज बजार जस्तोसुकै कडा अवस्थामा गए पनि आफ्ना नियमहरू शत-प्रतिशत पालना गर्ने प्रतिवद्धता राख्छु?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 2 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p2">2</div>
+    <div class="part-titles">
+      <div class="part-title">Part 2: Market Analysis Checklist</div>
+      <div class="part-sub">(NEPSE Index को प्राविधिक विश्लेषण)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले आजको सेसन सुरु हुनु अघि NEPSE Index को दैनिक र साप्ताहिक Chart गहिराइबाट हेरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के समग्र Market स्पष्ट रूपमा अपट्रेन्ड (Uptrend) मा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के समग्र Market डाउनट्रेन्ड (Downtrend) मा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के समग्र Market एउटा निश्चित दायरामा अर्थात् साइडवेज (Sideways) अवस्थामा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के नेप्सेको समग्र बजारको बनोट (Market Structure) प्राविधिक रूपमा स्पष्ट छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के चार्टमा स्पष्ट रूपमा हायर हाई र हायर लो (Higher High / Higher Low) को बुलिस संरचना देखिन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के चार्टमा लोअर हाई र लोअर लो (Lower High / Lower Low) को बियरिस संरचना देखिन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के बजार हाल कुनै कडा निर्णय नभएको अस्पष्ट वा अलमलताको अवस्थामा त छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के बजारको भोल्युम (Volume) ले हालको Market Direction लाई पूर्ण रूपमा समर्थन गरिरहेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले हालको समग्र Market Environment (Bull, Bear or Volatile Range) लाई राम्रोसँग पहिचान गरेको छु?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 3 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p2">3</div>
+    <div class="part-titles">
+      <div class="part-title">Part 3: Sector Analysis Checklist</div>
+      <div class="part-sub">(बलियो समूह वा क्षेत्रको छनोट)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले स्टक छान्नु भन्दा अगाडि विभिन्न उप-सूचकहरूको कडा Sector Analysis गरेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले बजारमा कुन Sector मा नयाँ पैसा र संस्थागत पूँजी प्रवेश गरिरहेको छ (Sector Rotation) भन्ने स्पष्ट रूपमा हेरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले छानेको Sector Index प्राविधिक रूपमा नेप्से सूचक भन्दा कडा र बलियो छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के सो Sector को समग्र Chart Structure स्वस्थ र दीगो देखिन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के सो Sector ले सापेक्षिक शक्ति (Relative Strength) मा समग्र Market लाई आउटपरफर्म गरिरहेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के सो Sector मा हाल मूल्यको कडा Momentum र ट्रेडरहरूको आकर्षण बढेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के सो Sector को वृद्धिमा बलियो भोल्युमको समर्थन (Volume Support) देखिन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो Sector हालको बजारको नेतृत्व गरिरहेको मुख्य आकर्षण (Leading Sector) हो?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 4 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p2">4</div>
+    <div class="part-titles">
+      <div class="part-title">Part 4: Stock Selection Checklist</div>
+      <div class="part-sub">(कम्पनीको प्राविधिक छनोट)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले छानेको Stock मा पर्याप्त तरलता (Liquidity) छ, जसले गर्दा सहजै अर्डर म्याच हुन सक्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यस कम्पनीको दैनिक औसत कारोबार रकम (Average Volume) प्राविधिक रूपमा राम्रो र स्वस्थ छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो Stock हालको सबैभन्दा Strong र सक्रिय Sector भित्र नै पर्दछ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो Stock आफ्नो सेक्टर र समग्र Market भन्दा बढी बलियो र जुझारु देखिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यसको Relative Strength चार्टमा अरू कम्पनीको तुलनामा निकै कडा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यसको प्राविधिक Chart सफा, बुझ्न सजिलो र द्विविधारहित छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो Stock अत्यधिक कर्नररिङ वा Manipulated देखिँदैन, जहाँ सर्वसाधारण फस्ने डर हुन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यसको Price Structure स्वस्थ रूपमा माथि गइरहेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के चार्टको मुख्य सपोर्ट विन्दुहरूमा कडा खरिद माग (Demand) स्पष्ट रूपमा देखिन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के रजिस्ट्रटेन्स विन्दुहरू नजिक बिक्रीको चाप (Supply) बिस्तारै कमजोर हुँदै गएको छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 5 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p3">5</div>
+    <div class="part-titles">
+      <div class="part-title">Part 5: Multi-Timeframe Checklist</div>
+      <div class="part-sub">(Top-Down Analysis को कडा जाँच)</div>
+    </div>
+  </div>
+  <div class="tf-head">Monthly <span>(दीर्घकालीन परिप्रेक्ष्य)</span></div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>Monthly Chart अनुसार यसको Long-term Trend के हो? (Bullish / Bearish / Sideways)</span></label>
+    <label class="check"><input type="checkbox"><span>ऐतिहासिक चार्ट अनुसार यसको सबैभन्दा ठूलो र Major Resistance कहाँ छ?</span></label>
+    <label class="check"><input type="checkbox"><span>बजार ओरालो लाग्दा यसलाई जोगाउने प्रमुख र Major Support विन्दु कहाँ छ?</span></label>
+  </div>
+  <div class="tf-head">Weekly <span>(मध्यमकालीन संरचना)</span></div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के Weekly Structure प्राविधिक रूपमा स्वस्थ र बलियो देखिन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के Weekly Trend को मुख्य Direction पूर्ण रूपमा स्पष्ट र द्विविधारहित छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के साप्ताहिक चार्टको Volume ले मूल्यको वृद्धिलाई बलियो समर्थन गरिरहेको छ?</span></label>
+  </div>
+  <div class="tf-head">Daily <span>(अल्पकालीन कार्यान्वयन)</span></div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के Daily Chart मा मेरो नियम अनुसारको Setup स्पष्ट रूपमा बनेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के हालको मूल्य मेरो सुरक्षित खरिद क्षेत्र (Entry Zone) को एकदमै नजिक छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के हालको विन्दुबाट लिइने ट्रेडको गणितीय जोखिम (Risk) उचित र नियमभित्र छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 6 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p3">6</div>
+    <div class="part-titles">
+      <div class="part-title">Part 6: Setup Checklist</div>
+      <div class="part-sub">(रणनीतिको प्राविधिक गुणस्तर जाँच)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के यो एउका कडा तेर्सो रजिस्ट्रटेन्स तोडिएको <strong>Breakout Setup</strong> हो?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो अपट्रेन्डमा रहेको स्टक थोरै घटेर सपोर्टमा आएको <strong>Pullback Setup</strong> हो?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्यले लामो अवधिको कडा जग तोडेर माथि जान लागेको <strong>Base Breakout Setup</strong> हो?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्यले आफ्नो कडा प्राविधिक सपोर्टबाट फर्कन लागेको <strong>Support Bounce Setup</strong> हो?</span></label>
+    <label class="check"><input type="checkbox"><span>के यसमा सामान्य दिनको तुलनामा कैयौँ गुणा बढी कारोबार भएको <strong>Volume Breakout Setup</strong> हो?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो चल्दै गरेको बलियो ट्रेन्ड बीचको विश्राम पछि सुरु भएको <strong>Trend Continuation Setup</strong> हो?</span></label>
+    <label class="check"><input type="checkbox"><span>के चार्टमा यो Setup एकदमै स्पष्ट र प्रमाणित छ, कि म मात्र यसलाई कल्पना गरिरहेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो Setup बजारमा प्राकृतिक रूपमा बनेको हो र मैले जबरजस्ती चार्टमा खोजेको त होइन?</span></label>
+    <label class="check"><input type="checkbox"><span>के ट्रेड लिनु अघि मेरो रणनीति अनुसारको निश्चित प्राविधिक <strong>Confirmation</strong> आइसकेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो सेटअपको विगतको ब्याकटेस्टिङ नतिजा र जित्ने सम्भावना (Probability) उच्च छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 7 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p3">7</div>
+    <div class="part-titles">
+      <div class="part-title">Part 7: Volume Checklist</div>
+      <div class="part-sub">(कारोबार रकमको गहिरो विश्लेषण)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के चार्टमा मूल्यको Breakout सँगै कारोबार रकम (Volume) अस्वाभाविक रूपमा बढेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यसको हालैको Volume विगतको २० दिनको औसत भोल्युम (Average Volume) भन्दा धेरै माथि छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्य बढ्दा भोल्युम सुक्ने (Dry Volume) जस्तो नकारात्मक प्राविधिक संकेत त छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो वृद्धिको अन्तिम विन्दुमा आउने अत्यधिक ठूलो भोल्युम अर्थात् <strong>Climax Volume</strong> त होइन?</span></label>
+    <label class="check"><input type="checkbox"><span>के ठूला क्यान्डल र भोल्युम बारले चार्टमा कडा माग (Demand) को स्पष्ट संकेत देखाएका छन्?</span></label>
+    <label class="check"><input type="checkbox"><span>के यस स्टकमा संस्थागत खरिदकर्ता वा स्मार्ट मनीको कडा सक्रियता (Smart Money Activity) को संकेत छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के Volume र Price दुवै एउटै दिशामा (मूल्य बढ्दा भोल्युम बढ्ने र मूल्य घट्दा भोल्युम घट्ने) छन्?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 8 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p3">8</div>
+    <div class="part-titles">
+      <div class="part-title">Part 8: Smart Money Checklist</div>
+      <div class="part-sub">(सञ्चालक र ठूला खेलाडीहरूको चाल पहिचान)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के चार्टमा सर्वसाधारणको स्टप लस खाएर मूल्य माथि उचाल्ने कडा <strong>Stop Hunt</strong> को संकेत देखिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के कमजोर ट्रेडरहरूलाई बजारबाट बाहिर निकाल्नका लागि जानाजानी कडा <strong>Shakeout</strong> गराइएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के बजारमा रहेका आत्तिएका र कमजोर हातहरू (Weak Hands) पूर्ण रूपमा बाहिरिइसकेका छन्?</span></label>
+    <label class="check"><input type="checkbox"><span>के चार्टको बनोटमा कडा र संस्थागत हातहरू (Strong Hands) प्रवेश गरेको स्पष्ट प्राविधिक आधार छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्यले झुठो ब्रेकडाउन (Fake Breakdown) गराएर तुरुन्तै कडा रिकभरी (Recovery) देखाएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो फेकआउट पछि कम्पनीको Price Structure अझ बढी बलियो र मजबुत भएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के चार्टमा रहेको प्रमुख डिमान्ड जोन (Demand Zone) ठूला खेलाडीहरूद्वारा सुरक्षित राखिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के माथिल्लो विन्दुमा रहेको मुख्य सप्लाइ जोन (Supply Zone) बिस्तारै शोषित र कमजोर हुँदै गएको छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 9 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p4">9</div>
+    <div class="part-titles">
+      <div class="part-title">Part 9: Entry Checklist</div>
+      <div class="part-sub">(ट्रेड एक्जिक्युट गर्नु अघिको अन्तिम कडा जाँच)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मेरो प्राविधिक योजना अनुसार निश्चित र स्पष्ट खरिद विन्दु (Entry Point) तोकिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के म यो ट्रेड लिनुको वास्तविक प्राविधिक कारण आफ्नो डायरीमा स्पष्ट रूपमा लेख्न सक्छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के म मूल्य अचानक माथि कुद्न थालेकाले हतारिएर वा FOMO का कारण Entry लिइरहेको त छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो खरिद गर्ने पूर्ण योजना लाइभ मार्केट सुरु हुनु भन्दा पहिल्यै कागजमा तयार थियो?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो खरिदका लागि क्यान्डल क्लोजिङ वा भोल्युमको उचित <strong>Confirmation</strong> आइसकेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो विशिष्ट ट्रेड मेरो पूर्व-निर्धारित नियम र रिस्क सेटअपको दायरा भित्र पूर्ण रूपमा पर्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो ट्रेड गलत साबित हुँदा मेरो अकाउन्टमा पर्ने प्राविधिक जोखिम मेरो लागि स्वीकार्य (Acceptable) छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यस ट्रेडबाट प्राप्त हुने सम्भावित प्रतिफल (Reward) मेरो जोखिमको तुलनामा पर्याप्त र आकर्षक छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 10 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p4">10</div>
+    <div class="part-titles">
+      <div class="part-title">Part 10: Stop Loss Checklist</div>
+      <div class="part-sub">(साँवा पूँजीको रक्षा गर्ने कडा साङ्लो)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले सेयर किन्नु भन्दा अगाडि नै कम्प्युटर स्क्रिनमा आफ्नो निश्चित स्टप लस (Stop Loss) तय गरेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो स्टप लस चार्टको वास्तविक प्राविधिक संरचना र मुख्य सपोर्ट विन्दुको प्राविधिक आधारमा राखिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो स्टप लस बजारको सामान्य उतारचढावले नै हिट हुने गरी धेरै नजिक (Too Tight) त छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो स्टप लस ट्रेड गलत हुँदा धेरै ठूलो नोक्सानी हुने गरी धेरै टाढा (Too Wide) त राखिएको छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो स्टप लस मेरो मनको भावना वा डर अनुसार होइन, चार्टको ठोस गणितीय नियम अनुसार राखिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यदि बजार मेरो विपरित गएमा कुन ठ्याक्कै मूल्यमा म बिनाकुनै प्रश्न बाहिरिनेछु भन्ने मलाई स्पष्ट थाहा छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 11 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p4">11</div>
+    <div class="part-titles">
+      <div class="part-title">Part 11: Risk Management Checklist</div>
+      <div class="part-sub">(Risk First - जोखिमलाई पहिलो प्राथमिकता)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मलाई गणितीय रूपमा स्पष्ट थाहा छ कि म यो एउटै Trade मा आफ्नो कुल पूँजीको कति रुपैयाँ जोखिम लिँदैछु?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो प्रति ट्रेडको कुल जोखिम मेरो पूँजीको अधिकतम १% देखि २% को कडा नियम भित्र पर्दछ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यो ट्रेड पूर्ण रूपमा असफल भए पनि मेरो कुल ट्रेडिङ अकाउन्टमा कुनै ठूलो वा घातक असर पर्दैन भन्ने कुरामा म ढुक्क छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के लगातार ५ वटा ट्रेडमा नोक्सानी (Consecutive Losses) भए पनि मेरो ट्रेडिङ अकाउन्ट पूर्ण रूपमा सुरक्षित रहन्छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के यस ट्रेडको रिस्क-रिवार्ड रेसियो (Risk-Reward Ratio) कम्तीमा 1:2 वा सो भन्दा बढी उचित छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो दिमागमा नाफा कमाउने लोभ भन्दा पनि आफ्नो पूँजी जोगाउने (Capital Protection) कुरा पहिलो प्राथमिकतामा छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 12 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p4">12</div>
+    <div class="part-titles">
+      <div class="part-title">Part 12: Position Sizing Checklist</div>
+      <div class="part-sub">(कित्ता संख्या र ट्रेडको आकार निर्धारण)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले ट्रेड लिनु अघि मेरो स्टप लस र रिस्कको आधारमा कित्ता संख्या (Position Size) को सही गणना गरेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो खरिद गर्ने कित्ता संख्या मेरो मनको लोभ वा भावना अनुसार होइन, सुत्रबद्ध गणित अनुसार तय भएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो Position Size मैले यो ट्रेडमा लिन चाहेको अधिकतम नोक्सानीको सीमा अनुसार नै तय गरिएको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले कडा ओभर-साइजिङ (Over-sizing) गरेर आफ्नो क्षमता भन्दा बढी कित्ता किन्न त खोजिरहेको छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले आफ्नो ट्रेडिङ अकाउन्टको सम्पूर्ण पूँजी (Full Capital) झुक्किएर पनि यही एउटै ट्रेडमा मात्र त खन्याएको छैन?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 13 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p5">13</div>
+    <div class="part-titles">
+      <div class="part-title">Part 13: Exit Checklist</div>
+      <div class="part-sub">(नाफा र निकास व्यवस्थापन)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले सेयर खरिद गर्नु अघि नै चार्टको प्रमुख रजिस्ट्रटेन्सको आधारमा आफ्नो नाफा सुरक्षित गर्ने लक्ष्य (Profit Target) तय गरेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्य पहिलो टार्गेटमा पुगेपछि आफ्नो केही प्रतिशत नाफा बुक गर्ने (<strong>Partial Exit Plan</strong>) स्पष्ट योजना छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्य माथि जाँदै गर्दा आफ्नो नाफा लक गर्न र जोखिम कम गर्न <strong>Trailing Stop Loss</strong> प्रयोग गर्ने योजना छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के बजारको कडा गिरावट वा ट्रेन्ड चेन्ज हुँदा म कुन नियमका आधारमा बाहिरिनेछु भन्ने Exit Rules स्पष्ट छन्?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्य मेरो टार्गेटमा पुगेर मलाई राम्रो नाफा हुँदा म आफ्नो कडा लोभलाई पूर्ण नियन्त्रण गर्न सक्छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मूल्य मेरो स्टप लसमा आउँदा म बिनाकुनै तर्क, आशा वा बहाना आफ्नो नियम मानेर बाहिरिन सक्छु?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 14 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p5">14</div>
+    <div class="part-titles">
+      <div class="part-title">Part 14: Trade Management Checklist</div>
+      <div class="part-sub">(ट्रेड खुला भएपछिको कडा अनुशासन)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के म सेयर खरिद गरिसकेपछि पनि सुरुमा बनाइएको आफ्नो लिखित योजना र नियम अनुसार नै चलिरहेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले लाइभ मार्केटको उतारचढाव देखेर आत्तिएर बीचमा आफ्नो मुख्य नियम र योजना परिवर्तन त गरेको छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो यो व्यवस्थापन मेरो क्षणिक डर वा लोभ जस्ता Emotion ले नभई चार्टको वास्तविक चालले गरिरहेको छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के म हल्ला वा हल्ला फैलाउने ग्रुपहरू हेरेर होइन, केवल प्रत्यक्ष रूपमा Chart र प्राविधिक सूचक हेरेर निर्णय गर्दैछु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले बजार घटेको बेला डरका कारण आफ्नो स्टप लसलाई अझ तल सारेर आफ्नो एकाउन्टको जोखिम बढाउने आत्मघाती काम त गरेको छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के म यो ट्रेड खुला रहुन्जेल पूर्ण रूपमा एक व्यावसायिक र अनुशासित ट्रेडरका रूपमा उभिन सकेको छु?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 15 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p5">15</div>
+    <div class="part-titles">
+      <div class="part-title">Part 15: Trading Journal Checklist</div>
+      <div class="part-sub">(ट्रेड सकिएपछिको कडा आत्म-समीक्षा)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के मैले यस ट्रेडमा प्रवेश गर्नुको मुख्य प्राविधिक कारण (Entry Reason) र क्याप्चर गरिएको चार्ट जर्नलमा लेखेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले यो ट्रेडबाट बाहिरिनुको वास्तविक कारण (Exit Reason) इमानदारीपूर्वक डायरीमा दर्ता गरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले ट्रेड लिँदाको समग्र नेप्से बजारको अवस्था (Market Condition) जर्नलमा स्पष्ट उल्लेख गरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले सो समयको सेक्टरको बल र सापेक्षिक शक्ति (Sector Strength) को विवरण रेकर्ड गरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले यो ट्रेडको सुरुदेखि अन्त्य सम्म आफूबाट भएका साना-ठूला प्राविधिक गल्तीहरू (Mistakes) सूचीकृत गरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले यस ट्रेडको हार वा जितबाट भविष्यका लागि सिकेको कडा पाठ (Lessons) डायरीमा नोट गरेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मैले खरिद गर्दाको र बिक्री गर्दाको दुवै समयको चार्टको स्क्रिनसट (Screenshot) आफ्नो कम्प्युटरमा सुरक्षित राखेँ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो समग्र ट्रेडिङ जर्नलको तथ्याङ्क आजको दिनका लागि पूर्ण रूपमा अपडेट (Journal Update) भयो?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 16 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p6">16</div>
+    <div class="part-titles">
+      <div class="part-title">Part 16: Psychology Checklist</div>
+      <div class="part-sub">(मानसिक अनुशासन र दिमागको नियन्त्रण)</div>
+    </div>
+  </div>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span>के बजार तीव्र गतिमा उकालो लाग्दा पनि मेरो मनको <strong>FOMO</strong> पूर्ण नियन्त्रणमा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मलाई लगातार नाफा हुँदा पनि मेरो भित्री लोभ र अहङ्कार (<strong>Greed</strong>) नियन्त्रणमा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के बजार ओरालो लाग्दा वा स्टप लस हिट हुँदा मेरो मनको डर (<strong>Fear</strong>) नियन्त्रणमा छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के म बजारसँग बदला लिने भावना (Revenge Trading) बाट पूर्ण रूपमा मुक्त छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मलाई केही ट्रेडमा सफलता मिल्दैमा ममा अत्यधिक आत्मविश्वास (<strong>Overconfidence</strong>) त पलाएको छैन?</span></label>
+    <label class="check"><input type="checkbox"><span>के ट्रेड घाटामा जाँदा हुने क्षणिक निराशा र तनावलाई मैले एक व्यावसायिक ट्रेडर झैँ नियन्त्रणमा राख्न सकेको छु?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो सम्पूर्ण ध्यान आज हुने नतिजा (पैसा) मा भन्दा बढी आफ्नो ट्रेडिङको कडा <strong>Process</strong> मा केन्द्रित छ?</span></label>
+    <label class="check"><input type="checkbox"><span>के मेरो लागि बजारको क्षणिक नाफा भन्दा मेरो दीर्घकालीन नियम र अनुशासन (<strong>Discipline</strong>) हजार गुणा बढी महत्वपूर्ण छ?</span></label>
+  </div>
+</div>
+
+<!-- ============ PART 17 ============ -->
+<div class="part">
+  <div class="part-head">
+    <div class="part-num p6">17</div>
+    <div class="part-titles">
+      <div class="part-title">Part 17: Master Trader Checklist</div>
+      <div class="part-sub">(कुनै पनि Trade लिनु अघि आफैँलाई सोध्नुपर्ने अन्तिम १० कडा प्रश्नहरू)</div>
+    </div>
+  </div>
+  <div class="master-grid">
+    <div class="mq"><div class="mq-n">1</div><p><strong>यदि यो Trade पूर्ण रूपमा Loss भयो र मेरो स्टप लस हिट भयो भने पनि के म मानसिक र आर्थिक रूपमा पूर्ण सहज रहनेछु?</strong></p></div>
+    <div class="mq"><div class="mq-n">2</div><p><strong>के म यो निर्णय कसैको हल्ला, हल्ला फैलाउने ग्रुप वा भित्री हल्लाका भरमा नभई केवल ठोस Chart का आधारमा गर्दैछु?</strong></p></div>
+    <div class="mq"><div class="mq-n">3</div><p><strong>के यो विशिष्ट ट्रेड मेरो लिखित ट्रेडिङ निर्देशिका र नियमबद्ध Plan भित्र शत-प्रतिशत पर्दछ?</strong></p></div>
+    <div class="mq"><div class="mq-n">4</div><p><strong>के समग्र नेप्से बजार (NEPSE Index) को मुख्य दिशा र ट्रेन्ड मेरो ट्रेडको पक्षमा उभिएको छ?</strong></p></div>
+    <div class="mq"><div class="mq-n">5</div><p><strong>के मैले छानेको कम्पनीको उप-सूचक (Sector) बजारको सबैभन्दा बलियो र मेरो पक्षमा छ?</strong></p></div>
+    <div class="mq"><div class="mq-n">6</div><p><strong>के मैले खरिद गर्न लागेको Stock प्राविधिक रूपमा आफ्नो सेक्टर भन्दा कडा र पर्याप्त बलियो छ?</strong></p></div>
+    <div class="mq"><div class="mq-n">7</div><p><strong>के चार्टमा रहेको प्राविधिक Setup कुनै पनि द्विविधा बिना एकदमै स्पष्ट र बुझिने गरी बनेको छ?</strong></p></div>
+    <div class="mq"><div class="mq-n">8</div><p><strong>के यस ट्रेडमा रहेको कुल नोक्सानीको सीमा र गणित मेरो पूर्ण नियन्त्रण (Risk Under Control) भित्र छ?</strong></p></div>
+    <div class="mq"><div class="mq-n">9</div><p><strong>के यो ट्रेड सफल हुँदा प्राप्त हुने सम्भावित प्रतिफल र Reward मेरो जोखिमको तुलनामा उचित र न्यायसंगत छ?</strong></p></div>
+    <div class="mq"><div class="mq-n">10</div><p><strong>चाहे यो ट्रेड सफल होस् वा असफल, के म यो ट्रेड आफ्नो Trading Journal मा गर्वका साथ र इमानदारीपूर्वक लेख्न सक्छु?</strong></p></div>
+  </div>
+</div>
+
+<!-- VISUAL 3: Golden Rule 5-pillar scorecard -->
+<div class="visual-block">
+  <div class="visual-title">Golden Rule — ट्रेडका ५ खम्बा</div>
+  <svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="340" fill="#fffdf5"/>
+    <!-- roof banner -->
+    <rect x="80" y="56" width="660" height="48" rx="10" fill="#fbf3d3" stroke="#c8a800" stroke-width="2"/>
+    <text x="410" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#a8881f">५ वटै खम्बामा &ldquo;हो&rdquo; भए मात्र &mdash; Trade लिने</text>
+    <!-- 5 pillars -->
+    <!-- pillar template: x centers 150,290,410(? recompute) ; use 5 across 90..730 -->
+    <g>
+      <rect x="96" y="120" width="116" height="150" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+      <circle cx="154" cy="150" r="17" fill="#26a69a"/><text x="154" y="157" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="154" y="196" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Market</text>
+      <text x="154" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">NEPSE</text>
+      <text x="154" y="240" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">बुलिस</text>
+    </g>
+    <g>
+      <rect x="234" y="120" width="116" height="150" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+      <circle cx="292" cy="150" r="17" fill="#26a69a"/><text x="292" y="157" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="292" y="196" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Sector</text>
+      <text x="292" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">Smart Money</text>
+      <text x="292" y="240" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">+ Volume</text>
+    </g>
+    <g>
+      <rect x="372" y="120" width="116" height="150" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+      <circle cx="430" cy="150" r="17" fill="#26a69a"/><text x="430" y="157" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="430" y="196" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Stock</text>
+      <text x="430" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">Relative</text>
+      <text x="430" y="240" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">Strength</text>
+    </g>
+    <g>
+      <rect x="510" y="120" width="116" height="150" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+      <circle cx="568" cy="150" r="17" fill="#26a69a"/><text x="568" y="157" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="568" y="196" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Setup</text>
+      <text x="568" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">स्पष्ट र</text>
+      <text x="568" y="240" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">प्रमाणित</text>
+    </g>
+    <g>
+      <rect x="648" y="120" width="116" height="150" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+      <circle cx="706" cy="150" r="17" fill="#26a69a"/><text x="706" y="157" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#fff">&#10003;</text>
+      <text x="706" y="196" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Risk</text>
+      <text x="706" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">SL नजिक,</text>
+      <text x="706" y="240" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">RR उत्तम</text>
+    </g>
+    <!-- base -->
+    <rect x="80" y="284" width="660" height="40" rx="9" fill="#c9b97a"/>
+    <text x="410" y="310" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff">व्यावसायिक ट्रेडिङको स्वर्ण नियम (Golden Rule)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो scorecard ले व्यावसायिक ट्रेडिङको Golden Rule लाई ५ खम्बाको रूपमा देखाउँछ — माथिको छानो र तलको जग दुवैले बताउँछ: <strong>पाँचै खम्बामा &ldquo;हो&rdquo; भए मात्र Trade लिने</strong>। ती खम्बा हुन्: <strong>Market</strong> (NEPSE बुलिस/सुरक्षित), <strong>Sector</strong> (Smart Money + Volume को आकर्षण), <strong>Stock</strong> (Relative Strength र स्पष्ट संरचना), <strong>Setup</strong> (चार्टमा स्पष्ट र प्रमाणित रणनीति), <strong>Risk</strong> (Stop Loss नजिक र Risk-Reward उत्तम)। मुख्य पाठ — एउटै खम्बा कमजोर भए सिङ्गो ट्रेड कमजोर हुन्छ; पाँचै हरियो (हो) भएको दिन मात्र ट्रेड विचार गर्ने।
+</div>
+
+<!-- GOLDEN RULE CHECKLIST -->
+<div class="golden">
+  <div class="golden-tag">&#11088; Golden Rule Checklist</div>
+  <p class="lead">यदि बजारमा लिइने ट्रेडमा तलका ५ वटा मुख्य खम्बाहरूमा &ldquo;हो&rdquo; आउँछ भने मात्र त्यो ट्रेड लिनका लागि विचार गर्नुहोस्। यो व्यावसायिक ट्रेडिङको स्वर्ण नियम हो:</p>
+  <div class="checks">
+    <label class="check"><input type="checkbox"><span><strong>Market राम्रो छ</strong> (NEPSE बुलिस वा सुरक्षित वातावरणमा छ)</span></label>
+    <label class="check"><input type="checkbox"><span><strong>Sector राम्रो छ</strong> (सो क्षेत्रमा स्मार्ट मनी र भोल्युमको कडा आकर्षण छ)</span></label>
+    <label class="check"><input type="checkbox"><span><strong>Stock राम्रो छ</strong> (कम्पनीको चार्टमा Relative Strength र स्पष्ट संरचना छ)</span></label>
+    <label class="check"><input type="checkbox"><span><strong>Setup राम्रो छ</strong> (चार्टमा स्पष्ट र प्रमाणित प्राविधिक रणनीति बनेको छ)</span></label>
+    <label class="check"><input type="checkbox"><span><strong>Risk राम्रो छ</strong> (स्टप लस नजिक छ र रिस्क-रिवार्ड रेसियो उत्कृष्ट छ)</span></label>
+  </div>
+</div>
+
+<!-- FINAL TRADER PROMISE -->
+<div class="promise">
+  <div class="promise-tag">Final Trader Promise</div>
+  <h3>ट्रेड लिनु अघि मेरो आत्म-प्रतिज्ञा</h3>
+  <div class="pintro">म बजारमा एक सचेत, अनुशासित र व्यावसायिक ट्रेडर बन्नका लागि कुनै पनि ट्रेड लिनु अघि सधैँ:</div>
+  <ul>
+    <li>समग्र <strong>Market</strong> को दिशा र वातावरण राम्रोसँग हेर्नेछु।</li>
+    <li>पैसा प्रवाह भइरहेको बलियो <strong>Sector</strong> को विश्लेषण गर्नेछु।</li>
+    <li>सोही समूह भित्रको प्राविधिक रूपमा उत्कृष्ट र लिडर <strong>Stock</strong> मात्र छान्नेछु।</li>
+    <li>चार्टमा मेरो नियम अनुसारको स्पष्ट रConfirmed <strong>Setup</strong> धैर्यताका साथ पर्खिनेछु।</li>
+    <li>ट्रेड लिनु अघि नै आफ्नो अकाउन्टको गणितीय <strong>Risk</strong> र पोजिसन साइज गणना गर्नेछु।</li>
+    <li>बजारमा आफ्नो सावाँ पूँजी जोगाउन कडा र प्राविधिक <strong>Stop Loss</strong> अनिवार्य राख्नेछु।</li>
+    <li>प्रत्येक ट्रेडको साना-ठूला प्राविधिक र मनोवैज्ञानिक विवरण <strong>Journal</strong> मा नियमित लेख्नेछु।</li>
+    <li>बजारको क्षणिक लोभ, डर वा अन्य हल्ला र <strong>Emotion</strong> होइन, केवल आफ्नो कडा <strong>Process</strong> पछ्याउनेछु।</li>
+    <li>बजारमा नाफा कमाउनु भन्दा पहिले आफ्नो अमूल्य सावाँ पूँजी (<strong>Capital</strong>) जोगाउनेछु।</li>
+    <li>बजारका उतारचढाव र आफ्ना गल्तीहरूबाट पाठ सिक्दै एक विद्यार्थी झैँ <strong>निरन्तर सिकिरहनेछु</strong>।</li>
+  </ul>
+</div>
+
+<!-- FINAL CHECKLIST MESSAGE -->
+<div class="final-msg">
+  <div class="fm-block">
+    <p>नेपाल स्टक एक्सचेन्ज (NEPSE) वा विश्वको कुनै पनि वित्तीय बजारमा दीर्घकालीन र वास्तविक सफलता कुनै जादुई सूचक (Secret Indicator), भाइबरका VIP Group, कसैको गोप्य Tips वा Magic Formula बाट विल्कुलै प्राप्त हुँदैन। बजारमा सफलता त केवल सही र प्राविधिक निर्णयहरूलाई बिनाकुनै विचलितता बारम्बार दोहोर्&zwj;याउन सक्ने कडा र कठोर अनुशासनबाट मात्र आउँछ।</p>
+  </div>
+  <div class="fm-block">
+    <p>यो Complete Trader Checklist को वास्तविक उद्देश्य तपाईंलाई बजारमा केवल उत्कृष्ट र सही Trade खोज्न मद्दत गर्नु मात्र होइन, बल्कि तपाईंलाई बजारका ९०% गलत, हचुवा र आत्मघाती ट्रेडहरूबाट जोगाएर तपाईंको सावाँ पूँजीको रक्षा गर्नु पनि हो। यसलाई आफ्नो दैनिक ट्रेडिङको वर्कबुक र मार्गदर्शक बनाउनुहोस्।</p>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

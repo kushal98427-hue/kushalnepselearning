@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 49: Sector Rotation कसरी बुझ्ने? — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 27px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 21px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 49</div>
+  <h1 class="chapter-title">Sector Rotation कसरी बुझ्ने?</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>सुजनले एउटा Hydropower कम्पनीको share किनेको थियो। Chart राम्रो थियो। Volume पनि बढिरहेको थियो। उसलाई लाग्यो, <strong>“अब यो share धेरै माथि जान्छ।”</strong> तर दुई हप्तासम्म share खासै बढेन। त्यसै समयमा उसको साथीले एउटा Bank को share किनेको थियो। त्यो share भने लगातार बढिरहेको थियो। सुजन अचम्ममा पर्यो। उसले दुवै chart हेर्‍यो। दुवै नराम्रा थिएनन्। तर किन एउटा बढ्यो र अर्को बढेन?</p>
+
+<p>पछि उसले एउटा महत्वपूर्ण कुरा सिक्यो। त्यो समय बजारमा Bank sector मा पैसा प्रवेश गरिरहेको थियो। ठूला लगानीकर्ता र trader हरूको ध्यान Bank sector मा थियो। Hydropower sector भने कमजोर अवस्थामा थियो। त्यस दिन सुजनले बुझ्यो—<strong>“सही stock छान्नु मात्र पर्याप्त हुँदैन। सही sector पनि छान्नुपर्छ।”</strong> यही Sector Rotation को आधारभूत विचार हो।</p>
+
+<!-- VISUAL 1: Sujan Hydropower flat vs friend Bank rising -->
+<div class="visual-block">
+  <div class="visual-title">सुजन (Hydropower) vs साथी (Bank) — उही समय, फरक sector</div>
+  <svg viewBox="0 0 820 470" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="470" fill="#fffdf5"/>
+
+    <text x="410" y="34" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">दुवै chart राम्रा — फरक पैसा कुन sector मा छ भन्नेमा</text>
+
+    <!-- LEFT: Sujan Hydropower -->
+    <rect x="25" y="56" width="375" height="36" fill="#ef5350" rx="5"/>
+    <text x="212" y="81" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#fff">✗ सुजन — Hydropower (flat)</text>
+
+    <rect x="25" y="98" width="375" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="42" y="124" font-family="sans-serif" font-size="14" font-weight="700" fill="#c62828">Hydropower Sector कमजोर</text>
+    <!-- flat/sideways line -->
+    <path d="M 50 230 L 100 220 L 150 235 L 200 222 L 250 238 L 300 225 L 375 232" stroke="#111" stroke-width="3" fill="none"/>
+    <circle cx="50" cy="230" r="6" fill="#fff" stroke="#c8a800" stroke-width="2.5"/>
+    <text x="60" y="265" font-family="sans-serif" font-size="13" fill="#555">किनेपछि 2 हप्ता खासै बढेन</text>
+
+    <line x1="250" y1="238" x2="212" y2="320" stroke="#c8a800" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="50" y="320" width="325" height="42" rx="9" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="212" y="347" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c62828">sector बाट पैसा बाहिर → share सुस्त</text>
+
+    <!-- RIGHT: friend Bank -->
+    <rect x="420" y="56" width="375" height="36" fill="#26a69a" rx="5"/>
+    <text x="607" y="81" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#fff">✓ साथी — Bank (बढ्दै)</text>
+
+    <rect x="420" y="98" width="375" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="437" y="124" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">Bank Sector बलियो</text>
+    <!-- rising line -->
+    <path d="M 445 240 L 495 220 L 545 225 L 595 195 L 645 200 L 695 165 L 770 140" stroke="#111" stroke-width="3" fill="none"/>
+    <circle cx="445" cy="240" r="6" fill="#fff" stroke="#00897b" stroke-width="2.5"/>
+    <text x="455" y="275" font-family="sans-serif" font-size="13" fill="#555">लगातार बढिरह्यो</text>
+
+    <line x1="645" y1="200" x2="607" y2="320" stroke="#00897b" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="445" y="320" width="325" height="42" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="607" y="347" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">sector मा पैसा प्रवेश → share बढ्यो</text>
+
+    <!-- bottom -->
+    <rect x="25" y="378" width="770" height="76" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="410" y="408" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#111">सही stock छान्नु मात्र पर्याप्त छैन — सही sector पनि छान्नुपर्छ</text>
+    <text x="410" y="436" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#111">पैसा जुन sector मा छ, त्यही sector का share बढ्छन्</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले सुजनको पाठ देखाउँछ — दुवै chart राम्रा थिए, तर परिणाम फरक भयो। बायाँ (सुजन — Hydropower): chart राम्रो, Volume बढ्दै, तर sector कमजोर थियो — पैसा Hydropower बाट बाहिर गइरहेको थियो, त्यसैले share 2 हप्ता खासै बढेन। दायाँ (साथी — Bank): त्यही समय Bank sector मा पैसा प्रवेश गरिरहेको थियो, ठूला लगानीकर्ताको ध्यान Bank मा थियो — share लगातार बढ्यो। मुख्य पाठ — सही stock छान्नु मात्र पर्याप्त छैन, सही sector पनि छान्नुपर्छ। पैसा जुन sector मा छ, त्यही sector का share बढ्छन्। यही Sector Rotation को आधारभूत विचार हो।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>धेरै Beginner trader हरू एउटा stock मा मात्र ध्यान दिन्छन्। उनीहरू सोच्छन्: <strong>“यो stock राम्रो छ भने बढिहाल्छ।”</strong> तर वास्तविक बजारमा धेरै पटक stock को प्रदर्शन sector सँग जोडिएको हुन्छ। यदि कुनै sector मा पैसा प्रवेश गरिरहेको छ भने त्यस sector का धेरै stock हरू बलियो हुन सक्छन्। यदि कुनै sector बाट पैसा बाहिर निस्किरहेको छ भने राम्रो कम्पनीको stock पनि सुस्त हुन सक्छ। त्यसैले trader ले केवल stock होइन, sector को दिशा पनि बुझ्नुपर्छ।</p>
+
+<p>Sector Rotation बुझ्न सकेपछि बलियो sector चिन्न सकिन्छ, कमजोर sector टाढा राख्न सकिन्छ, राम्रो setup छान्न सजिलो हुन्छ, FOMO कम हुन्छ, Trade को probability सुधारिन्छ, र Market मा पैसा कहाँ जाँदैछ भन्ने बुझ्न सकिन्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Sector Rotation भनेको बजारमा पैसा एक sector बाट अर्को sector मा सर्ने प्रक्रिया हो। सरल उदाहरण: एउटा बजारमा १०० जना ग्राहक छन्। एक दिन सबैजना जुत्ता पसलमा जान्छन्। अर्को दिन सबैजना कपडा पसलमा जान्छन्। पसल फरक भए पनि ग्राहकको पैसा एउटै हो।</p>
+
+<p>Share market मा पनि यस्तै हुन्छ। कहिले Bank sector सक्रिय हुन्छ, कहिले Hydropower, कहिले Insurance, कहिले Finance, कहिले Microfinance, त कहिले Hotel and Tourism। पैसा सधैं सबै sector मा बराबर जाँदैन। धेरै समय पैसा एक sector बाट अर्को sector तर्फ सर्छ। यसैलाई Sector Rotation भनिन्छ।</p>
+
+<!-- VISUAL 2: money flow concept (customers analogy) -->
+<div class="visual-block">
+  <div class="visual-title">Sector Rotation भनेको — उही पैसा, फरक sector</div>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="320" fill="#fffdf5"/>
+
+    <text x="410" y="34" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">१०० ग्राहक — आज जुत्ता पसल, भोलि कपडा पसल</text>
+
+    <!-- day 1 -->
+    <rect x="50" y="60" width="300" height="180" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="200" y="92" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">आज</text>
+    <text x="200" y="130" text-anchor="middle" font-family="sans-serif" font-size="32">👟</text>
+    <text x="200" y="165" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">जुत्ता पसल भरिभराउ</text>
+    <text x="200" y="195" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">पैसा यहाँ → यही sector</text>
+    <text x="200" y="218" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">का share बढ्छन्</text>
+
+    <!-- arrow money moves -->
+    <line x1="360" y1="150" x2="455" y2="150" stroke="#c8a800" stroke-width="3" marker-end="url(#a49m)"/>
+    <text x="407" y="138" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c8a800">पैसा सर्‍यो</text>
+    <defs><marker id="a49m" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#c8a800"/></marker></defs>
+
+    <!-- day 2 -->
+    <rect x="465" y="60" width="300" height="180" rx="12" fill="#e8f0fe" stroke="#2962ff" stroke-width="2"/>
+    <text x="615" y="92" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#1a56cc">भोलि</text>
+    <text x="615" y="130" text-anchor="middle" font-family="sans-serif" font-size="32">👕</text>
+    <text x="615" y="165" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">कपडा पसल भरिभराउ</text>
+    <text x="615" y="195" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">पैसा यहाँ → यही sector</text>
+    <text x="615" y="218" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">का share बढ्छन्</text>
+
+    <rect x="50" y="256" width="715" height="50" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="407" y="287" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#111">पसल फरक भए पनि ग्राहकको पैसा एउटै — share market मा पनि यस्तै</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो सरल analogy ले Sector Rotation बुझाउँछ। कल्पना गर्नुहोस् — बजारमा १०० ग्राहक छन्। आज सबैजना जुत्ता पसलमा भीड गर्छन् (त्यो sector सक्रिय), भोलि सबैजना कपडा पसलमा जान्छन् (पैसा सर्‍यो)। पसल फरक भए पनि ग्राहकको पैसा एउटै हो — कहाँ खर्च हुन्छ भन्ने मात्र बदलिन्छ। Share market मा पनि ठ्याक्कै यस्तै — कहिले Bank sector सक्रिय, कहिले Hydropower, कहिले Insurance, Finance, Microfinance वा Hotel। पैसा सधैं सबै sector मा बराबर जाँदैन; एक sector बाट अर्कोमा सर्छ। पैसा जुन sector मा प्रवेश गर्छ, त्यही sector का धेरै share बढ्छन्। यही प्रक्रिया नै Sector Rotation हो।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Sector Rotation बुझ्नका लागि सबैभन्दा पहिले sector भनेको के हो भनेर बुझ्नुपर्छ। Sector भनेको समान प्रकारका व्यवसायहरूको समूह हो।</p>
+
+<p>उदाहरण:</p>
+
+<ul>
+  <li><strong>Banking Sector:</strong> Commercial Bank हरू</li>
+  <li><strong>Hydropower Sector:</strong> जलविद्युत कम्पनीहरू</li>
+  <li><strong>Insurance Sector:</strong> Life र Non-Life Insurance कम्पनीहरू</li>
+  <li><strong>Finance Sector:</strong> Finance कम्पनीहरू</li>
+  <li><strong>Microfinance Sector:</strong> Microfinance कम्पनीहरू</li>
+  <li><strong>Hotel and Tourism Sector:</strong> Hotel र Tourism सम्बन्धी कम्पनीहरू</li>
+  <li><strong>Manufacturing Sector:</strong> उत्पादन गर्ने कम्पनीहरू</li>
+  <li><strong>Trading Sector:</strong> व्यापार गर्ने कम्पनीहरू</li>
+</ul>
+
+<p>जब कुनै sector मा buying interest बढ्छ, त्यस sector का धेरै stock हरू एकसाथ चल्न थाल्छन्। यही sector strength हो।</p>
+
+<p><strong>Sector Rotation किन हुन्छ?</strong></p>
+
+<p>Sector Rotation को मुख्य कारण पैसा हो। Market मा रहेको पैसा सधैं अवसर खोजिरहेको हुन्छ। जब एउटा sector धेरै बढिसकेको हुन्छ, trader हरू profit booking गर्न सक्छन्। त्यसपछि पैसा अर्को sector मा जान सक्छ।</p>
+
+<p>उदाहरण: पहिले Bank sector धेरै बढ्यो। पछि Bank मा profit booking सुरु भयो। त्यसपछि पैसा Hydropower sector मा प्रवेश गर्न थाल्यो। केही समयपछि Hydropower धेरै बढ्यो। त्यसपछि पैसा Insurance तर्फ सर्न थाल्यो। यस्तो cycle बारम्बार हुन सक्छ।</p>
+
+<!-- VISUAL 3: Sector Rotation cycle wheel -->
+<div class="visual-block">
+  <div class="visual-title">Sector Rotation Cycle — पैसा घुम्दै जान्छ</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <text x="380" y="34" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">एक sector बढ्छ → profit booking → पैसा अर्को sector मा</text>
+
+    <!-- center -->
+    <circle cx="380" cy="225" r="62" fill="#f0e6c0" stroke="#c9b97a" stroke-width="2"/>
+    <text x="380" y="218" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#111">पैसा (₹)</text>
+    <text x="380" y="240" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">घुम्दै</text>
+
+    <!-- 4 sector nodes around -->
+    <!-- Bank top -->
+    <rect x="300" y="70" width="160" height="56" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="2"/>
+    <text x="380" y="95" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1a56cc">Bank</text>
+    <text x="380" y="116" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">पहिले बढ्यो</text>
+
+    <!-- Hydropower right -->
+    <rect x="555" y="195" width="160" height="56" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="635" y="220" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#2e7d32">Hydropower</text>
+    <text x="635" y="241" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">त्यसपछि</text>
+
+    <!-- Insurance bottom -->
+    <rect x="300" y="324" width="160" height="56" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="2"/>
+    <text x="380" y="349" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#c8a800">Insurance</text>
+    <text x="380" y="370" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">अनि</text>
+
+    <!-- Finance/others left -->
+    <rect x="45" y="195" width="160" height="56" rx="10" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <text x="125" y="220" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#c62828">Finance / अन्य</text>
+    <text x="125" y="241" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">फेरि cycle</text>
+
+    <!-- curved arrows clockwise -->
+    <path d="M 462 110 Q 600 130 620 192" stroke="#c8a800" stroke-width="3" fill="none" marker-end="url(#a49w)"/>
+    <path d="M 620 254 Q 580 330 462 350" stroke="#c8a800" stroke-width="3" fill="none" marker-end="url(#a49w)"/>
+    <path d="M 298 350 Q 160 330 138 254" stroke="#c8a800" stroke-width="3" fill="none" marker-end="url(#a49w)"/>
+    <path d="M 140 192 Q 160 130 298 110" stroke="#c8a800" stroke-width="3" fill="none" marker-end="url(#a49w)"/>
+    <defs><marker id="a49w" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#c8a800"/></marker></defs>
+
+    <text x="380" y="406" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">यो निश्चित नियम होइन — अनुमान होइन, chart र data हेर्नुहोस्</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो wheel ले Sector Rotation को cycle देखाउँछ। केन्द्रमा पैसा (₹) — जुन सधैं अवसर खोज्दै घुमिरहन्छ। उदाहरण क्रम: पहिले Bank sector धेरै बढ्यो → profit booking सुरु भयो → पैसा Hydropower मा प्रवेश गर्‍यो → Hydropower बढ्यो → अनि पैसा Insurance तर्फ सर्‍यो → फेरि Finance/अन्य sector। यो cycle बारम्बार दोहोरिन्छ। मुख्य कारण — एउटा sector धेरै बढिसकेपछि trader हरू profit book गर्छन्, अनि पैसा कम बढेको वा नयाँ अवसर भएको sector मा जान्छ। तर सावधानी — यो कुनै निश्चित नियम होइन; क्रम जहिले उस्तै हुँदैन। त्यसैले अनुमान होइन, हरेक पटक chart र data हेरेर पैसा कहाँ प्रवेश गरिरहेको छ भनेर पहिचान गर्नुपर्छ।
+</div>
+
+<p><strong>Strong Sector कसरी चिन्ने?</strong></p>
+
+<p>Beginner ले sector बलियो छ कि छैन भनेर कसरी थाहा पाउने?</p>
+
+<ul>
+  <li>पहिलो संकेत: Sector Index लगातार माथि जाँदै छ।</li>
+  <li>दोस्रो संकेत: त्यस sector का धेरै stock हरू बढिरहेका छन्।</li>
+  <li>तेस्रो संकेत: Volume बढिरहेको छ।</li>
+  <li>चौथो संकेत: Breakout हरू सफल भइरहेका छन्।</li>
+  <li>पाँचौँ संकेत: Pullback पछि stock फेरि माथि गइरहेका छन्।</li>
+</ul>
+
+<p>यदि केवल एउटा stock बढिरहेको छ भने त्यो sector strength नहुन सक्छ। तर sector का धेरै stock हरू बलियो छन् भने sector strength हुन सक्छ।</p>
+
+<!-- VISUAL 5: sector participation - many stocks vs one -->
+<div class="visual-block">
+  <div class="visual-title">Sector Strength = धेरै stock एकसाथ बढ्नु (एउटा होइन)</div>
+  <svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="340" fill="#fffdf5"/>
+
+    <text x="410" y="34" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">एउटा stock बढ्नु ≠ sector strength</text>
+
+    <!-- LEFT: only one stock -->
+    <rect x="25" y="56" width="375" height="36" fill="#ef5350" rx="5"/>
+    <text x="212" y="81" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#fff">✗ केवल 1 stock बढ्यो</text>
+
+    <rect x="25" y="98" width="375" height="180" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- one up, rest flat/down -->
+    <rect x="55" y="140" width="45" height="110" fill="#26a69a"/>
+    <rect x="120" y="210" width="45" height="40" fill="#ef5350"/>
+    <rect x="185" y="205" width="45" height="45" fill="#ef5350"/>
+    <rect x="250" y="215" width="45" height="35" fill="#ef5350"/>
+    <rect x="315" y="208" width="45" height="42" fill="#ef5350"/>
+    <text x="77" y="132" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#2e7d32">↑</text>
+    <text x="212" y="270" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c62828">बाँकी कमजोर → sector strength होइन</text>
+
+    <!-- RIGHT: many stocks -->
+    <rect x="420" y="56" width="375" height="36" fill="#26a69a" rx="5"/>
+    <text x="607" y="81" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#fff">✓ धेरै stock एकसाथ बढे</text>
+
+    <rect x="420" y="98" width="375" height="180" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <rect x="450" y="160" width="45" height="90" fill="#26a69a"/>
+    <rect x="515" y="145" width="45" height="105" fill="#26a69a"/>
+    <rect x="580" y="135" width="45" height="115" fill="#26a69a"/>
+    <rect x="645" y="155" width="45" height="95" fill="#26a69a"/>
+    <rect x="710" y="148" width="45" height="102" fill="#26a69a"/>
+    <text x="607" y="270" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#2e7d32">sector participation → साँचो strength</text>
+
+    <rect x="25" y="294" width="770" height="38" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="410" y="319" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#111">sector का धेरै stock बलियो हुँदा मात्र sector strength मानिन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले एउटा महत्वपूर्ण भेद देखाउँछ — एउटा stock बढ्नु र sector बलियो हुनु फरक हो। बायाँ: sector मा केवल 1 stock बढ्यो (हरियो), बाँकी सबै कमजोर (रातो) — यो sector strength होइन, एक्लो move मात्र हो। यस्तो stock पछ्याउँदा फस्न सकिन्छ। दायाँ: sector का धेरै stock एकसाथ बढिरहेका छन् (सबै हरियो) — यो साँचो sector participation हो, यही नै sector strength हो। मुख्य पाठ — sector बलियो छ भन्न एउटा stock पुग्दैन; धेरै stock एकसाथ बलियो हुनुपर्छ। त्यसैले sector जाँच्दा "यो sector का अरू कति stock बढिरहेका छन्?" भनेर हेर्नुपर्छ।
+</div>
+
+<p><strong>Weak Sector कसरी चिन्ने?</strong></p>
+
+<p>यदि Sector Index लगातार घटिरहेको छ, धेरै stock कमजोर छन्, Breakout fail भइरहेका छन्, Volume घटिरहेको छ, र Pullback पछि stock recover गर्न सकिरहेका छैनन् भने sector कमजोर हुन सक्छ। यस्तो अवस्थामा trader ले अतिरिक्त सावधानी अपनाउनुपर्छ।</p>
+
+<!-- VISUAL 4: Strong vs Weak Sector 5 signs -->
+<div class="visual-block">
+  <div class="visual-title">Strong Sector vs Weak Sector — 5 संकेत</div>
+  <svg viewBox="0 0 820 350" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="350" fill="#fffdf5"/>
+
+    <text x="410" y="34" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">यी 5 संकेत हेरेर sector बलियो/कमजोर छुट्याउने</text>
+
+    <!-- STRONG -->
+    <rect x="25" y="56" width="375" height="278" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="212" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">✓ Strong Sector</text>
+    <line x1="50" y1="100" x2="375" y2="100" stroke="#26a69a" stroke-width="0.7"/>
+    <text x="50" y="132" font-family="sans-serif" font-size="13.5" fill="#111">1. Sector Index लगातार ↑</text>
+    <text x="50" y="170" font-family="sans-serif" font-size="13.5" fill="#111">2. धेरै stock बढिरहेका</text>
+    <text x="50" y="208" font-family="sans-serif" font-size="13.5" fill="#111">3. Volume बढिरहेको</text>
+    <text x="50" y="246" font-family="sans-serif" font-size="13.5" fill="#111">4. Breakout सफल हुँदै</text>
+    <text x="50" y="284" font-family="sans-serif" font-size="13.5" fill="#111">5. Pullback पछि फेरि ↑</text>
+    <text x="212" y="318" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#2e7d32">→ यहाँ अवसर खोज्ने</text>
+
+    <!-- WEAK -->
+    <rect x="420" y="56" width="375" height="278" rx="10" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <text x="607" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c62828">✗ Weak Sector</text>
+    <line x1="445" y1="100" x2="770" y2="100" stroke="#ef5350" stroke-width="0.7"/>
+    <text x="445" y="132" font-family="sans-serif" font-size="13.5" fill="#111">1. Sector Index लगातार ↓</text>
+    <text x="445" y="170" font-family="sans-serif" font-size="13.5" fill="#111">2. धेरै stock कमजोर</text>
+    <text x="445" y="208" font-family="sans-serif" font-size="13.5" fill="#111">3. Volume घट्दै</text>
+    <text x="445" y="246" font-family="sans-serif" font-size="13.5" fill="#111">4. Breakout fail हुँदै</text>
+    <text x="445" y="284" font-family="sans-serif" font-size="13.5" fill="#111">5. Pullback पछि recover छैन</text>
+    <text x="607" y="318" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c62828">→ यहाँ अतिरिक्त सावधानी</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Strong र Weak sector छुट्याउने 5 संकेत सँगै देखाउँछ। <strong>Strong Sector</strong>: (1) Sector Index लगातार माथि, (2) धेरै stock बढिरहेका, (3) Volume बढिरहेको, (4) Breakout सफल हुँदै, (5) Pullback पछि stock फेरि माथि — यहाँ अवसर खोज्ने। <strong>Weak Sector</strong>: (1) Sector Index लगातार घट्दै, (2) धेरै stock कमजोर, (3) Volume घट्दै, (4) Breakout fail हुँदै, (5) Pullback पछि recover हुन सकिरहेका छैनन् — यहाँ अतिरिक्त सावधानी। यी 5 संकेत मिलेर sector को असली अवस्था बताउँछन्। एउटा संकेत मात्र पुग्दैन — धेरै संकेत मिल्दा मात्र निष्कर्ष बलियो हुन्छ।
+</div>
+
+<p><strong>Stock भन्दा Sector किन महत्वपूर्ण हुन्छ?</strong></p>
+
+<p>मानौं: ABC Bank को chart राम्रो छ। तर Banking Sector नै कमजोर छ। अब अर्को उदाहरण: XYZ Bank को chart सामान्य छ। तर Banking Sector धेरै बलियो छ। धेरै अवस्थामा बलियो sector को stock ले बढी सहयोग पाउन सक्छ। त्यसैले stock analysis भन्दा पहिले sector analysis उपयोगी हुन्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Sector Rotation धेरै पटक देख्न सकिन्छ। विशेष गरी Bank, Hydropower, Insurance, Finance, र Microfinance बीचमा पैसा घुम्ने प्रवृत्ति देखिन्छ। यद्यपि कुनै निश्चित नियम हुँदैन। त्यसैले trader ले अनुमान होइन, chart र data हेर्नुपर्छ। Sector Index हरू नियमित हेर्ने बानी बनाउनुपर्छ।</p>
+
+<p>धेरै सफल trader हरूले NEPSE Index, Sector Index, र Stock को यही क्रम प्रयोग गर्छन्। यसले market को ठूलो तस्वीर बुझ्न मद्दत गर्छ।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>मानिसलाई आफूले मन पराएको stock मा भावनात्मक लगाव हुन सक्छ। उसले भन्न सक्छ: <strong>“मलाई यो कम्पनी मन पर्छ।” “यो stock अवश्य बढ्छ।”</strong> तर market ले भावना होइन, पैसा पछ्याउँछ। यदि पैसा अर्को sector मा गइरहेको छ भने तपाईंको मनपर्ने stock लामो समयसम्म सुस्त रहन सक्छ। त्यसैले disciplined trader ले आफ्नो राय भन्दा market को व्यवहारलाई महत्व दिन्छ। उसले सोध्छ: <strong>“पैसा कहाँ जाँदैछ?”</strong> नकि: <strong>“मलाई कुन stock मन पर्छ?”</strong></p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>Sector नहेरी stock किन्नु, एउटा stock मात्र हेर्नु, कमजोर sector मा Breakout chase गर्नु, Sector Index को trend नहेर्नु, केवल social media hype मा विश्वास गर्नु, पैसा कहाँ सर्दैछ भन्ने नबुझ्नु, profit booking पछि sector कमजोर भएको नदेख्नु, sector rotation को संकेत बेवास्ता गर्नु, sector strength बिना trade गर्नु, र NEPSE Index र Sector Index बीचको सम्बन्ध नहेर्नु।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ बलियो stock पनि कमजोर sector मा फस्न सक्छ</div>
+  <p style="margin-bottom:0;">Chart राम्रो, Volume बढ्दै, Breakout पनि आयो — तर यदि त्यो stock को sector आफैं कमजोर छ भने share लामो समय सुस्त रहन सक्छ वा fail हुन सक्छ। यो सुजनको कथा हो — उसको Hydropower share को chart राम्रो थियो, तर sector बाट पैसा बाहिर गइरहेको थियो, त्यसैले 2 हप्ता बढेन। त्यसैबेला साथीको Bank share (बलियो sector) लगातार बढ्यो। पैसा भावना पछ्याउँदैन — पैसा अवसर पछ्याउँछ। तपाईंलाई मन पर्ने कम्पनी भए पनि, पैसा अर्को sector मा छ भने त्यो share संघर्ष गर्छ। त्यसैले trade लिनुअघि सोध्नुहोस्: <strong>"यो stock को sector मा पैसा प्रवेश गरिरहेको छ कि बाहिर गइरहेको छ?"</strong></p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Share हेर्नुअघि Sector Index हेर्नुहोस्। Sector को trend पहिचान गर्नुहोस्। बलियो sector मा अवसर खोज्नुहोस्। कमजोर sector मा अतिरिक्त सावधानी अपनाउनुहोस्। Volume सधैं जाँच गर्नुहोस्। Sector का धेरै stock हरू कस्तो छन् हेर्नुहोस्। केवल एउटा stock बढेको आधारमा sector बलियो ठान्नु हुँदैन। NEPSE Index र Sector Index दुवै हेर्नुहोस्। Breakout सफल भइरहेको sector लाई ध्यान दिनुहोस्। पैसा कहाँ प्रवेश गरिरहेको छ भन्ने बुझ्ने प्रयास गर्नुहोस्।</p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:0;">Banking Sector: Sector Index Uptrend मा, धेरै Bank stock हरू बढिरहेका, र Volume राम्रो। ABC Bank ले Breakout गर्‍यो। यस अवस्थामा setup को probability राम्रो हुन सक्छ।</p>
+</div>
+
+<p><strong>Scenario 2</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:0;">Hydropower Sector: Sector Index Downtrend मा, धेरै stock कमजोर, र Volume घट्दो। XYZ Hydropower ले Breakout गर्‍यो। तर sector कमजोर भएकाले Breakout fail हुन सक्ने जोखिम बढी हुन सक्छ।</p>
+</div>
+
+<p><strong>Scenario 3</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:0;">Insurance Sector मा लगातार पैसा प्रवेश भइरहेको छ। धेरै Insurance stock हरू Higher High बनाइरहेका छन्। यस्तो अवस्थामा trader ले Insurance watchlist तयार गर्न सक्छ। यसको अर्थ सिधै trade लिनु होइन। यसको अर्थ sector मा अवसर खोज्नु हो।</p>
+</div>
+
+<!-- VISUAL 6: Strong breakout in strong vs weak sector -->
+<div class="visual-block">
+  <div class="visual-title">उही Breakout — Strong Sector vs Weak Sector (Scenario 1 vs 2)</div>
+  <svg viewBox="0 0 820 430" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="430" fill="#fffdf5"/>
+
+    <text x="410" y="34" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#111">Breakout उही — Sector context ले परिणाम फरक</text>
+
+    <!-- LEFT: strong sector -->
+    <rect x="25" y="56" width="375" height="36" fill="#26a69a" rx="5"/>
+    <text x="212" y="81" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">Scenario 1: Banking Sector ↑</text>
+
+    <rect x="25" y="98" width="375" height="235" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="42" y1="180" x2="385" y2="180" stroke="#c8a800" stroke-width="1.4" stroke-dasharray="5,3"/>
+    <text x="46" y="174" font-family="sans-serif" font-size="12" font-weight="700" fill="#c8a800">Resistance</text>
+    <g stroke-width="1.5">
+      <line x1="70" y1="250" x2="70" y2="275" stroke="#26a69a"/><rect x="62" y="253" width="16" height="18" fill="#26a69a"/>
+      <line x1="115" y1="232" x2="115" y2="256" stroke="#26a69a"/><rect x="107" y="234" width="16" height="20" fill="#26a69a"/>
+      <line x1="160" y1="212" x2="160" y2="236" stroke="#26a69a"/><rect x="152" y="214" width="16" height="20" fill="#26a69a"/>
+      <line x1="205" y1="190" x2="205" y2="214" stroke="#26a69a"/><rect x="197" y="192" width="16" height="20" fill="#26a69a"/>
+      <line x1="250" y1="152" x2="250" y2="184" stroke="#00897b"/><rect x="241" y="155" width="18" height="28" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+      <line x1="298" y1="135" x2="298" y2="158" stroke="#26a69a"/><rect x="290" y="137" width="16" height="20" fill="#26a69a"/>
+      <line x1="343" y1="118" x2="343" y2="140" stroke="#26a69a"/><rect x="335" y="120" width="16" height="20" fill="#26a69a"/>
+    </g>
+    <circle cx="250" cy="155" r="7" fill="#fff" stroke="#00897b" stroke-width="2.5"/>
+
+    <line x1="250" y1="155" x2="212" y2="295" stroke="#00897b" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="50" y="295" width="325" height="34" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="212" y="318" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#2e7d32">sector बलियो → Breakout टिक्यो</text>
+
+    <!-- RIGHT: weak sector -->
+    <rect x="420" y="56" width="375" height="36" fill="#ef5350" rx="5"/>
+    <text x="607" y="81" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">Scenario 2: Hydropower ↓</text>
+
+    <rect x="420" y="98" width="375" height="235" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="437" y1="165" x2="780" y2="165" stroke="#c8a800" stroke-width="1.4" stroke-dasharray="5,3"/>
+    <text x="441" y="159" font-family="sans-serif" font-size="12" font-weight="700" fill="#c8a800">Resistance</text>
+    <g stroke-width="1.5">
+      <line x1="465" y1="245" x2="465" y2="268" stroke="#26a69a"/><rect x="457" y="247" width="16" height="18" fill="#26a69a"/>
+      <line x1="510" y1="225" x2="510" y2="248" stroke="#26a69a"/><rect x="502" y="227" width="16" height="20" fill="#26a69a"/>
+      <line x1="555" y1="205" x2="555" y2="228" stroke="#26a69a"/><rect x="547" y="207" width="16" height="20" fill="#26a69a"/>
+      <line x1="600" y1="142" x2="600" y2="170" stroke="#00897b"/><rect x="591" y="145" width="18" height="22" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+      <line x1="645" y1="155" x2="645" y2="188" stroke="#ef5350"/><rect x="637" y="157" width="16" height="26" fill="#ef5350"/>
+      <line x1="690" y1="180" x2="690" y2="218" stroke="#ef5350"/><rect x="682" y="183" width="16" height="32" fill="#ef5350"/>
+      <line x1="735" y1="208" x2="735" y2="245" stroke="#ef5350"/><rect x="727" y="211" width="16" height="32" fill="#ef5350"/>
+    </g>
+    <circle cx="600" cy="145" r="7" fill="#fff" stroke="#c8a800" stroke-width="2.5"/>
+
+    <line x1="600" y1="145" x2="607" y2="295" stroke="#c8a800" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="445" y="295" width="325" height="34" rx="9" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="607" y="318" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#c62828">sector कमजोर → Breakout fail जोखिम</text>
+
+    <rect x="25" y="348" width="770" height="64" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="410" y="376" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#111">stock को chart उस्तै भए पनि — sector ले probability तय गर्छ</text>
+    <text x="410" y="400" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111">बलियो sector को stock ले बढी सहयोग पाउँछ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Scenario 1 र 2 सँगै देखाउँछ — उही Breakout, फरक sector context। बायाँ (Scenario 1 — Banking Sector बलियो): Sector Index uptrend मा, धेरै Bank stock बढिरहेका, Volume राम्रो — ABC Bank को Breakout Resistance तोडेर माथि टिक्यो, probability राम्रो। दायाँ (Scenario 2 — Hydropower कमजोर): Sector Index downtrend मा, धेरै stock कमजोर, Volume घट्दो — XYZ Hydropower को उही Breakout आयो तर sector ले साथ नदिँदा fail भयो (रातो candle हरू तल फर्के)। मुख्य पाठ — stock को chart उस्तै भए पनि, sector ले trade को probability तय गर्छ। बलियो sector को stock ले बढी सहयोग पाउँछ; कमजोर sector मा राम्रो Breakout पनि fail हुने जोखिम बढी।
+</div>
+
+<h2 class="section-heading">NEPSE का प्रमुख Sector</h2>
+
+<table>
+  <thead>
+    <tr><th>Sector</th><th>कम्पनीहरू</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Banking</td><td>Commercial Bank हरू</td></tr>
+    <tr><td>Hydropower</td><td>जलविद्युत कम्पनीहरू</td></tr>
+    <tr><td>Insurance</td><td>Life र Non-Life Insurance</td></tr>
+    <tr><td>Finance</td><td>Finance कम्पनीहरू</td></tr>
+    <tr><td>Microfinance</td><td>Microfinance कम्पनीहरू</td></tr>
+    <tr><td>Hotel & Tourism</td><td>Hotel र Tourism कम्पनीहरू</td></tr>
+    <tr><td>Manufacturing</td><td>उत्पादन गर्ने कम्पनीहरू</td></tr>
+    <tr><td>Trading</td><td>व्यापार गर्ने कम्पनीहरू</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Strong Sector vs Weak Sector</h2>
+
+<table>
+  <thead>
+    <tr><th>संकेत</th><th>Strong Sector</th><th>Weak Sector</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Sector Index</td><td>लगातार माथि</td><td>लगातार तल</td></tr>
+    <tr><td>धेरै stock</td><td>बढिरहेका</td><td>कमजोर</td></tr>
+    <tr><td>Volume</td><td>बढिरहेको</td><td>घट्दै</td></tr>
+    <tr><td>Breakout</td><td>सफल हुँदै</td><td>fail हुँदै</td></tr>
+    <tr><td>Pullback पछि</td><td>फेरि माथि</td><td>recover छैन</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Sector Analysis Checklist</div>
+  <ul>
+    <li>NEPSE Index कस्तो छ?</li>
+    <li>Sector Index Uptrend मा छ?</li>
+    <li>Sector Index Downtrend मा छ?</li>
+    <li>Volume बढिरहेको छ?</li>
+    <li>Sector का धेरै stock बलियो छन्?</li>
+    <li>Breakout हरू सफल भइरहेका छन्?</li>
+    <li>Pullback पछि recovery भइरहेको छ?</li>
+    <li>पैसा sector मा प्रवेश गरिरहेको संकेत छ?</li>
+    <li>Social media hype मात्र होइन?</li>
+    <li>Sector strength स्पष्ट छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1</div>
+  <p>आज NEPSE का ५ वटा sector छान्नुहोस्। लेख्नुहोस्: Trend, Volume, Strong वा Weak।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2</div>
+  <p>पछिल्ला २० दिनमा कुन sector राम्रो चलेको छ भनेर chart हेरेर note बनाउनुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3</div>
+  <p>एउटा watchlist बनाउनुहोस्। Strong Sector: त्यस sector का Top 5 stock:</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4</div>
+  <p>आफ्नो पछिल्ला ५ trade हेर्नुहोस्। Sector बलियो थियो कि कमजोर? के त्यसले result मा असर गरेको थियो?</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p style="margin-bottom:0;">धेरै trader हरू stock छान्न सिक्छन्। Professional trader हरू stock छान्नुअघि sector छान्छन्। यदि sector बलियो छ भने राम्रो अवसर भेटिने सम्भावना बढ्छ। यदि sector कमजोर छ भने उत्कृष्ट chart पनि संघर्ष गर्न सक्छ। Market मा पैसा कहाँ गइरहेको छ भन्ने बुझ्नु, Sector Rotation बुझ्नुको मुख्य उद्देश्य हो।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 49 Summary</div>
+  <p style="margin-bottom:0;">Sector Rotation भनेको बजारको पैसा एक sector बाट अर्को sector तर्फ सर्ने प्रक्रिया हो। Trader ले केवल stock होइन, sector पनि विश्लेषण गर्नुपर्छ। बलियो sector चिन्नका लागि Sector Index, Trend, Volume, Sector participation, र Breakout success हेर्नुपर्छ। NEPSE मा धेरै पटक sector अनुसार momentum परिवर्तन हुन सक्छ। त्यसैले विश्लेषणको सही क्रम NEPSE Index → Sector Index → Stock हो। यसले trader लाई राम्रो अवसर छान्न र कमजोर क्षेत्रबाट बच्न मद्दत गर्छ।</p>
+</div>
+
+<div class="closing-quote">
+  सही stock खोज्नु महत्वपूर्ण छ,<br>
+  तर त्यो stock सही sector मा छ कि छैन<br>
+  भन्ने बुझ्नु अझ महत्वपूर्ण हुन्छ।
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 44: Profit Booking Strategy — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 22px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 44</div>
+  <h1 class="chapter-title">Profit Booking Strategy</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>रोशनले एउटा stock Rs. 500 मा किनेको थियो। Setup राम्रो थियो। Breakout पछि Retest आएको थियो। Volume पनि ठीक थियो। Stop Loss Rs. 475 मा थियो। केही दिनपछि stock Rs. 560 पुग्यो। रोशनको profit राम्रो थियो। तर उसले sell गरेन। उसलाई लाग्यो—<strong>“अझै माथि जान्छ।”</strong></p>
+
+<p>Stock Rs. 580 पुग्यो। अब उसको मन झन् लोभी भयो। उसले सोच्यो—<strong>“Rs. 600 पुगेपछि बेच्ने।”</strong> तर price Rs. 600 पुग्न सकेन। उल्टै Rs. 550 मा आयो। रोशनले भन्यो—<strong>“अलि correction हो।”</strong> त्यसपछि Rs. 520 आयो। अब profit धेरै घटिसकेको थियो। अन्त्यमा price Rs. 500 नजिक आयो। रोशनले त्यहीँ बेच्यो। राम्रो profit भएको trade break-even जस्तै भयो।</p>
+
+<p>अर्कोतर्फ, संगीतालाई पनि त्यही stockमा profit आएको थियो। तर उनले Entry अघि नै Profit Booking Strategy बनाएकी थिइन्। Target 1 Rs. 550, Target 2 Rs. 580, र बाँकी quantity trailing stopमा राख्ने plan थियो। Price Rs. 550 पुग्दा उनले केही quantity sell गरिन्। Price Rs. 580 नजिक पुग्दा अर्को भाग book गरिन्। बाँकी quantityमा trailing stop राखिन्। Price फर्किँदा पनि उनको profit सुरक्षित रह्यो।</p>
+
+<p>दुवैले राम्रो Entry गरेका थिए। फरक केवल Exit Strategy मा थियो।</p>
+
+<p>Trading मा Entry धेरैलाई रोमाञ्चक लाग्छ। तर पैसा वास्तवमा Exit गर्दा मात्र वास्तविक हुन्छ। Profit screen मा देखिनु र profit bank account मा आउनु फरक कुरा हो। Profit Booking Strategy बिना trader कहिले लोभमा profit गुमाउँछ, कहिले डरमा धेरै छिटो sell गर्छ, कहिले target नआए पनि hold गर्छ, कहिले target आएर पनि exit गर्दैन।</p>
+
+<p>Profit Booking Strategy भनेको trade profitमा गएपछि कसरी, कहाँ, कति, र किन sell गर्ने भन्ने predefined plan हो। यो plan नहुँदा profit पनि emotionको खेल बन्छ।</p>
+
+<!-- VISUAL 1: Roshan vs Sangita -->
+<div class="visual-block">
+  <div class="visual-title">रोशन (No Plan) vs संगीता (Plan) — एउटै stock, फरक Exit</div>
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">एउटै Entry Rs. 500, उही profit move — फरक केवल Exit Strategy मा</text>
+
+    <!-- LEFT: ROSHAN no plan -->
+    <rect x="20" y="40" width="355" height="30" fill="#ef5350" rx="4"/>
+    <text x="197" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ रोशन — "अझै जाला" (No Plan)</text>
+
+    <rect x="20" y="74" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- price path: 500 up to 580 then back to 500 -->
+    <line x1="40" y1="240" x2="355" y2="240" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="44" y="236" font-family="sans-serif" font-size="8" fill="#111">Entry 500</text>
+    <path d="M 45 240 L 90 215 L 130 190 L 170 165 L 200 150 L 230 165 L 270 195 L 310 225 L 350 242" stroke="#ef5350" stroke-width="2.5" fill="none"/>
+    <!-- peak marker 580 -->
+    <circle cx="200" cy="150" r="5" fill="#fff" stroke="#c8a800" stroke-width="2"/>
+    <!-- final sell near 500 -->
+    <circle cx="350" cy="242" r="5" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+
+    <!-- bubbles -->
+    <line x1="200" y1="150" x2="240" y2="110" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="170" y="92" width="170" height="32" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+      <text x="255" y="105" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c8a800">Rs. 580 — "Rs.600 पुगे बेच्ने"</text>
+      <text x="255" y="118" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">तर sell गरेन (greed)</text>
+    </g>
+    <line x1="350" y1="242" x2="300" y2="270" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="150" y="262" width="200" height="30" rx="6" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.1"/>
+      <text x="250" y="281" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Rs. 500 नजिक बेच्यो — break-even</text>
+    </g>
+    <text x="40" y="160" font-family="sans-serif" font-size="8" fill="#c8a800">580</text>
+
+    <!-- RIGHT: SANGITA plan -->
+    <rect x="385" y="40" width="355" height="30" fill="#26a69a" rx="4"/>
+    <text x="562" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✓ संगीता — T1/T2 + Trailing (Plan)</text>
+
+    <rect x="385" y="74" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="405" y1="240" x2="720" y2="240" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="409" y="236" font-family="sans-serif" font-size="8" fill="#111">Entry 500</text>
+    <!-- T1 line 550 -->
+    <line x1="405" y1="185" x2="720" y2="185" stroke="#26a69a" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="690" y="182" font-family="sans-serif" font-size="8" fill="#2e7d32">T1 550</text>
+    <!-- T2 line 580 -->
+    <line x1="405" y1="150" x2="720" y2="150" stroke="#26a69a" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="690" y="147" font-family="sans-serif" font-size="8" fill="#2e7d32">T2 580</text>
+    <!-- same price path -->
+    <path d="M 410 240 L 455 215 L 495 190 L 535 165 L 565 150 L 595 165 L 635 195 L 675 225 L 710 242" stroke="#26a69a" stroke-width="2.5" fill="none"/>
+    <!-- sell markers at T1 and T2 -->
+    <circle cx="495" cy="190" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+    <circle cx="565" cy="150" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+
+    <!-- bubbles -->
+    <line x1="495" y1="190" x2="460" y2="110" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="410" y="92" width="150" height="30" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="485" y="111" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">T1 Rs.550 → 50% sell</text>
+    </g>
+    <line x1="565" y1="150" x2="610" y2="110" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="560" y="92" width="170" height="30" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="645" y="111" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">T2 Rs.580 → 25% + trailing</text>
+    </g>
+    <line x1="710" y1="242" x2="660" y2="270" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="500" y="262" width="230" height="30" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="615" y="281" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">price फर्किँदा पनि profit सुरक्षित ✓</text>
+    </g>
+
+    <!-- bottom -->
+    <rect x="20" y="308" width="720" height="44" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="6"/>
+    <text x="380" y="330" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">Profit screen मा देखिनु र bank मा आउनु फरक कुरा हो</text>
+    <text x="380" y="347" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">रोशन ले profit emotion लाई छोड्यो, संगीता ले plan ले book गरिन्</text>
+    <text x="380" y="372" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">पैसा Entry ले होइन, Exit ले वास्तविक हुन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले chapter को मूल देखाउँछ — दुवै ले राम्रो Entry (Rs. 500) गरे, उही profit move (580 सम्म) आयो, फरक केवल Exit मा थियो। रोशन (बायाँ): plan थिएन, "अझै जाला" भन्दै Rs. 580 मा पनि बेचेन, "Rs. 600 पुगे बेच्ने" भन्यो — तर price फर्केर Rs. 500 नजिक आयो, राम्रो profit break-even मा बदलियो। संगीता (दायाँ): Entry अघि नै plan बनाएकी थिइन् — Rs. 550 (T1) मा 50% sell, Rs. 580 (T2) मा 25% sell + बाँकी trailing stop। price फर्किँदा पनि उनको profit सुरक्षित रह्यो। मुख्य पाठ — profit screen मा देखिनु र bank मा आउनु फरक कुरा हो। पैसा Entry ले होइन, Exit ले वास्तविक बनाउँछ।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>धेरै trader Entry खोज्न धेरै मेहनत गर्छन्। तर Exit र Profit Booking को plan कमजोर हुन्छ। उनीहरूलाई कुन stock किन्नु राम्रो भनेर थाहा हुन्छ, तर profit आएको बेला के गर्ने भन्ने थाहा हुँदैन। यही कारण धेरै राम्रो trade पनि average resultमा बदलिन्छ।</p>
+
+<p>Profit Booking Strategy महत्वपूर्ण छ किनकि market सधैं तपाईंको targetसम्म सिधै जाँदैन। Price माथि जाँदा pullback आउन सक्छ। Resistanceमा seller आउन सक्छन्। Sector अचानक कमजोर हुन सक्छ। NEPSE index resistanceबाट reject हुन सक्छ। News आएपछि profit booking आउन सक्छ। यदि traderसँग plan छैन भने उसले emotion अनुसार निर्णय गर्छ।</p>
+
+<p>Profit Booking ले तीन कुरा गर्छ:</p>
+
+<ul>
+  <li>पहिलो, profit protect गर्छ।</li>
+  <li>दोस्रो, greed control गर्छ।</li>
+  <li>तेस्रो, trade managementलाई systematic बनाउँछ।</li>
+</ul>
+
+<p>Profit bookingको मतलब हरेक profit छिटो बेच्नु होइन। धेरै छिटो बेच्दा ठूलो move miss हुन सक्छ। Profit bookingको मतलब हो—chart structure, target, Risk-Reward, market context, and trade plan अनुसार profit manage गर्नु।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि trading मा पैसा entryले मात्र बन्दैन; exitले सुरक्षित हुन्छ। राम्रो trader profitलाई random रूपमा छोड्दैन। ऊ पहिले नै plan बनाउँछ—कहाँ partial exit गर्ने, कहाँ full exit गर्ने, कहाँ trailing stop राख्ने, कहाँ setup weak भयो भने profit protect गर्ने, र कहाँ hold गर्ने।</p>
+
+<p>Profit Booking Strategy disciplineको भाग हो। यसले traderलाई <strong>“अझै जाला”</strong> र <strong>“अब गुम्छ”</strong> बीचको भावनात्मक संघर्षबाट बाहिर निकाल्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Profit Booking Strategy भनेको trade profitमा गएपछि sell गर्ने plan हो। यसमा traderले पहिले नै तय गर्छ:</p>
+
+<ul>
+  <li>Target कहाँ छ?</li>
+  <li>Target 1 मा कति quantity sell गर्ने?</li>
+  <li>Target 2 मा कति sell गर्ने?</li>
+  <li>कति quantity hold गर्ने?</li>
+  <li>Trailing Stop कहाँ राख्ने?</li>
+  <li>Price reversal आए के गर्ने?</li>
+  <li>Market कमजोर भए के गर्ने?</li>
+  <li>Profit घट्न थाले कहाँ exit गर्ने?</li>
+</ul>
+
+<p>Profit booking तीन तरिकाले गर्न सकिन्छ:</p>
+
+<ul>
+  <li><strong>Full Profit Booking:</strong> सबै quantity एकै targetमा sell गर्ने।</li>
+  <li><strong>Partial Profit Booking:</strong> केही quantity targetमा sell गर्ने, बाँकी hold गर्ने।</li>
+  <li><strong>Trailing Stop Strategy:</strong> price माथि जाँदै गर्दा Stop Loss पनि माथि सार्दै profit protect गर्ने।</li>
+</ul>
+
+<p>सरल उदाहरण:</p>
+
+<ul>
+  <li>Entry: Rs. 500</li>
+  <li>Stop Loss: Rs. 475</li>
+  <li>Target 1: Rs. 550</li>
+  <li>Target 2: Rs. 580</li>
+  <li>Final Exit: trailing stop वा resistance rejection</li>
+</ul>
+
+<p>यदि price Rs. 550 पुग्यो भने 50% quantity sell।<br>
+Rs. 580 पुग्यो भने 25% sell।<br>
+बाँकी 25% trailing stopमा hold।</p>
+
+<p>यो केवल उदाहरण हो। वास्तविक strategy traderको system, timeframe, stock volatility, market condition, and Risk-Reward अनुसार फरक हुन सक्छ।</p>
+
+<p>सरल भाषामा, Profit Booking Strategy भनेको profit आएको बेला greed र fear होइन, plan अनुसार sell गर्ने system हो।</p>
+
+<!-- VISUAL 2: 3 methods -->
+<div class="visual-block">
+  <div class="visual-title">Profit Booking का 3 तरिका — कुन कहिले?</div>
+  <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="300" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Profit आएपछि exit गर्ने 3 मुख्य तरिका</text>
+
+    <!-- Method 1: Full -->
+    <rect x="30" y="48" width="225" height="200" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.5"/>
+    <text x="142" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#1a56cc">1. Full Exit</text>
+    <!-- mini chart -->
+    <line x1="55" y1="155" x2="230" y2="155" stroke="#e8dfc8" stroke-width="1"/>
+    <path d="M 60 145 L 100 125 L 140 105 L 175 92" stroke="#2962ff" stroke-width="2" fill="none"/>
+    <circle cx="175" cy="92" r="6" fill="#2962ff"/>
+    <text x="175" y="84" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#1a56cc">सबै sell</text>
+    <text x="142" y="185" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">सबै quantity एकै</text>
+    <text x="142" y="200" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">target मा sell</text>
+    <text x="142" y="222" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">Range trade, weak</text>
+    <text x="142" y="236" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">trend मा उपयुक्त</text>
+
+    <!-- Method 2: Partial -->
+    <rect x="268" y="48" width="225" height="200" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="380" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">2. Partial Exit</text>
+    <line x1="293" y1="155" x2="468" y2="155" stroke="#e8dfc8" stroke-width="1"/>
+    <path d="M 298 145 L 335 125 L 375 108 L 415 92 L 450 85" stroke="#26a69a" stroke-width="2" fill="none"/>
+    <circle cx="335" cy="125" r="5" fill="#26a69a"/>
+    <circle cx="415" cy="92" r="5" fill="#26a69a"/>
+    <text x="335" y="118" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#2e7d32">T1</text>
+    <text x="415" y="85" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#2e7d32">T2</text>
+    <text x="380" y="185" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">केही target मा sell,</text>
+    <text x="380" y="200" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">बाँकी hold</text>
+    <text x="380" y="222" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">मनोवैज्ञानिक शान्ति +</text>
+    <text x="380" y="236" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">upside participation</text>
+
+    <!-- Method 3: Trailing -->
+    <rect x="506" y="48" width="225" height="200" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="618" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#c8a800">3. Trailing Stop</text>
+    <line x1="531" y1="155" x2="706" y2="155" stroke="#e8dfc8" stroke-width="1"/>
+    <path d="M 536 148 L 570 130 L 605 112 L 640 95 L 680 82" stroke="#c8a800" stroke-width="2" fill="none"/>
+    <!-- stepping stop line -->
+    <path d="M 555 152 L 590 152 L 590 135 L 625 135 L 625 118 L 665 118" stroke="#ef5350" stroke-width="1.3" fill="none" stroke-dasharray="3,2"/>
+    <text x="618" y="185" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">SL माथि सार्दै</text>
+    <text x="618" y="200" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">profit protect</text>
+    <text x="618" y="222" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">Strong trend मा</text>
+    <text x="618" y="236" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">big move समात्न</text>
+
+    <!-- bottom -->
+    <rect x="30" y="260" width="701" height="32" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="380" y="280" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#111">कुन तरिका? — setup, market condition, trend strength र psychology अनुसार</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले profit book गर्ने 3 मुख्य तरिका देखाउँछ। (1) <strong>Full Exit</strong>: सबै quantity एकै target मा sell — range trade वा weak trend मा उपयुक्त (जहाँ धेरै माथि जाने सम्भावना कम)। (2) <strong>Partial Exit</strong>: केही target मा sell, बाँकी hold — यसले मनोवैज्ञानिक शान्ति (केही profit सुरक्षित) र upside participation (अझै माथि गए benefit) दुवै दिन्छ। (3) <strong>Trailing Stop</strong>: price माथि जाँदै गर्दा Stop Loss पनि माथि सार्दै — strong trend मा big move समात्न उपयुक्त। कुन तरिका प्रयोग गर्ने भन्ने setup, market condition, trend strength र trader को psychology अनुसार तय हुन्छ। एउटै trade मा तीनै mix पनि गर्न सकिन्छ।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Profit Booking Strategy बनाउन पहिले tradeको nature बुझ्नुपर्छ। सबै trade एउटै प्रकारका हुँदैनन्। Range trade, Breakout trade, Pullback trade, Support Bounce trade, Trend Continuation trade—सबैमा exit logic फरक हुन सक्छ।</p>
+
+<p>Range Trading मा profit booking सामान्यतया range high नजिक हुन्छ। यदि stock range low नजिक buy गरिएको छ भने range high target हुन सक्छ। Range high नजिक price पुगेपछि greed गरेर <strong>“अब Breakout हुन्छ”</strong> भन्दै hold गर्नु risky हुन सक्छ, जबसम्म strong Breakout confirmation आएको छैन।</p>
+
+<p>Breakout Trading मा profit booking next Resistance, measured move, or Risk-Reward target अनुसार गर्न सकिन्छ। Breakout strong छ, sector supportive छ, and Volume healthy छ भने trader partial book गरेर बाँकी trailing stopमा राख्न सक्छ। तर Breakout कमजोर भयो, upper wick आयो, Volume climax जस्तो भयो भने profit protect गर्नुपर्छ।</p>
+
+<p>Pullback Trading मा target प्रायः previous high वा next Resistance हुन्छ। यदि Pullback support नजिक Entry भयो र price previous high पुग्यो भने केही profit booking गर्न सकिन्छ। यदि price previous high strong Volume सहित break गर्छ भने बाँकी quantity hold गर्न सकिन्छ।</p>
+
+<p>Support Bounce Setup मा profit booking सावधानीपूर्वक गर्नुपर्छ, किनकि support bounce कहिलेकाहीँ केवल relief bounce हुन सक्छ। Target nearest Resistance हुन सक्छ। यदि broader trend weak छ भने full or larger partial booking targetमा गर्नु राम्रो हुन सक्छ।</p>
+
+<p>Trend Continuation Setup मा traderले partial booking र trailing stop प्रयोग गर्न सक्छ। Strong trendमा सबै quantity चाँडै sell गर्दा big move miss हुन सक्छ। तर केही profit book गरेर बाँकी trendलाई चल्न दिनु balanced approach हुन सक्छ।</p>
+
+<p>Profit Booking को पहिलो principle हो—Target chart structureबाट आउनुपर्छ। Target मनको इच्छा होइन। <strong>“मलाई 20% चाहिन्छ”</strong> target होइन। Next Resistance, previous swing high, range high, measured move, psychological level, or Risk-Reward targetले target define गर्नुपर्छ।</p>
+
+<p>दोस्रो principle हो—Profit Booking Entry अघि plan हुनुपर्छ। Trade profitमा गएपछि plan बनाउँदा greed active हुन्छ। Trader target बढाउँदै जान्छ। Profit घट्न थालेपछि fear active हुन्छ। त्यसैले plan Entry अघि नै लेख्नुपर्छ।</p>
+
+<p>तेस्रो principle हो—Partial Profit Booking। Partial Exit ले traderलाई मनोवैज्ञानिक सुरक्षा दिन्छ। केही profit book भएपछि बाँकी positionमा pressure कम हुन्छ। यदि price अझै माथि गयो भने participation रहन्छ। यदि price फर्कियो भने profitको केही भाग सुरक्षित हुन्छ।</p>
+
+<p>तर partial profit booking पनि random हुनु हुँदैन। उदाहरण:</p>
+
+<ul>
+  <li>Target 1 मा 30% sell</li>
+  <li>Target 2 मा 30% sell</li>
+  <li>बाकी 40% trailing stop</li>
+</ul>
+
+<p>वा</p>
+
+<ul>
+  <li>1:2 Risk-Reward मा 50% sell</li>
+  <li>Next Resistanceमा 25% sell</li>
+  <li>बाकी trailing stop</li>
+</ul>
+
+<p>कुन model प्रयोग गर्ने भन्ने traderको strategyमा निर्भर हुन्छ।</p>
+
+<!-- VISUAL 3: Partial Profit Booking Model chart -->
+<div class="visual-block">
+  <div class="visual-title">Partial Profit Booking Model — Trade Management Chart (Scenario 1)</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Entry 500 • SL 475 • T1 550 (50%) • T2 575 (25%) • बाँकी 25% trailing</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="55" width="560" height="290" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y labels -->
+    <text x="608" y="100" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 575</text>
+    <text x="608" y="135" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 550</text>
+    <text x="608" y="245" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+    <text x="608" y="300" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 475</text>
+
+    <!-- T2 line -->
+    <line x1="40" y1="100" x2="600" y2="100" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <!-- T1 line -->
+    <line x1="40" y1="135" x2="600" y2="135" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <!-- Entry line -->
+    <line x1="40" y1="245" x2="600" y2="245" stroke="#111" stroke-width="1.5"/>
+    <!-- SL line -->
+    <line x1="40" y1="300" x2="600" y2="300" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+    <!-- rising candles -->
+    <line x1="65" y1="240" x2="65" y2="262" stroke="#26a69a" stroke-width="1"/><rect x="61" y="243" width="8" height="16" fill="#26a69a"/>
+    <circle cx="65" cy="245" r="4" fill="#fff" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="100" y1="218" x2="100" y2="245" stroke="#26a69a" stroke-width="1"/><rect x="96" y="221" width="8" height="20" fill="#26a69a"/>
+    <line x1="135" y1="195" x2="135" y2="222" stroke="#26a69a" stroke-width="1"/><rect x="131" y="198" width="8" height="20" fill="#26a69a"/>
+    <line x1="170" y1="170" x2="170" y2="198" stroke="#26a69a" stroke-width="1"/><rect x="166" y="173" width="8" height="20" fill="#26a69a"/>
+    <line x1="205" y1="148" x2="205" y2="172" stroke="#26a69a" stroke-width="1"/><rect x="201" y="151" width="8" height="18" fill="#26a69a"/>
+    <!-- reaches T1 550 -->
+    <line x1="240" y1="130" x2="240" y2="150" stroke="#26a69a" stroke-width="1.5"/><rect x="235" y="133" width="10" height="16" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <line x1="280" y1="120" x2="280" y2="138" stroke="#26a69a" stroke-width="1"/><rect x="276" y="123" width="8" height="14" fill="#26a69a"/>
+    <!-- reaches T2 575 -->
+    <line x1="320" y1="95" x2="320" y2="118" stroke="#26a69a" stroke-width="1.5"/><rect x="315" y="98" width="10" height="16" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <!-- pullback but trailing holds -->
+    <line x1="360" y1="105" x2="360" y2="128" stroke="#ef5350" stroke-width="1"/><rect x="356" y="108" width="8" height="16" fill="#ef5350"/>
+    <line x1="400" y1="115" x2="400" y2="140" stroke="#ef5350" stroke-width="1"/><rect x="396" y="118" width="8" height="16" fill="#ef5350"/>
+
+    <!-- sell markers -->
+    <circle cx="240" cy="133" r="6" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="320" cy="98" r="6" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+
+    <!-- ===== BUBBLES ===== -->
+    <line x1="240" y1="135" x2="240" y2="365" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="120" y="352" width="240" height="38" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="240" y="370" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">T1 Rs. 550 → 50% sell</text>
+      <text x="240" y="384" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">+ बाँकीको SL break-even मा सार्ने</text>
+    </g>
+
+    <line x1="320" y1="98" x2="430" y2="75" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="430" y="58" width="200" height="36" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="530" y="74" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">T2 Rs. 575 → 25% sell</text>
+      <text x="530" y="87" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">बाँकी 25% trailing stop</text>
+    </g>
+
+    <!-- SL bubble -->
+    <line x1="450" y1="300" x2="490" y2="320" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="430" y="318" width="200" height="32" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="530" y="338" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">SL 475 (Risk 25) — सुरुमा</text>
+    </g>
+
+    <!-- bottom note -->
+    <text x="320" y="408" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#111">price Rs. 525 तल फर्के बाँकी exit — profit protect + upside participation दुवै</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले partial profit booking model लाई trade management को रूपमा देखाउँछ (Scenario 1)। Entry Rs. 500, SL Rs. 475 (Risk Rs. 25)। Price माथि जाँदै गयो: <strong>T1 Rs. 550</strong> पुग्दा 50% quantity sell — साथै बाँकीको Stop Loss break-even (Entry) मा सार्ने, अब trade risk-free। <strong>T2 Rs. 575</strong> पुग्दा अर्को 25% sell। बाँकी 25% trailing stop मा — strong trend भए अझै profit। Price Rs. 525 तल फर्के बाँकी पनि exit। यो model ले दुई फाइदा दिन्छ — केही profit पक्का सुरक्षित (psychological शान्ति) र अझै माथि गए participation। यसरी एउटै trade मा partial exit + trailing + break-even तीनै मिलाएर balanced profit management हुन्छ।
+</div>
+
+<p>चौथो principle हो—Trailing Stop। यदि trade trendमा जान थाल्यो भने Stop Lossलाई break-even वा profit zoneमा सार्न सकिन्छ। तर trailing stop धेरै tight भयो भने normal pullbackमा exit हुन्छ। धेरै loose भयो भने profit धेरै फिर्ता जान सक्छ। Trailing stop structure अनुसार हुनुपर्छ—higher low, moving average, previous candle low, swing low, or support zone।</p>
+
+<!-- VISUAL 6 moved here conceptually: Trailing Stop mechanic -->
+<div class="visual-block">
+  <div class="visual-title">Trailing Stop कसरी काम गर्छ? — Higher Low सँगै SL माथि</div>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="360" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Price माथि जाँदै गर्दा Stop Loss पनि माथि सार्दै — profit lock</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="50" width="560" height="270" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- price uptrend with higher lows -->
+    <path d="M 60 290 L 110 250 L 150 270 L 200 220 L 240 240 L 290 185 L 330 205 L 380 150 L 420 170 L 470 115" stroke="#26a69a" stroke-width="2.5" fill="none"/>
+
+    <!-- higher low markers -->
+    <circle cx="150" cy="270" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+    <circle cx="240" cy="240" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+    <circle cx="330" cy="205" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+    <circle cx="420" cy="170" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+
+    <!-- stepping trailing stop line (below each higher low) -->
+    <path d="M 60 305 L 175 305 L 175 285 L 265 285 L 265 255 L 355 255 L 355 220 L 445 220 L 445 185 L 470 185" stroke="#ef5350" stroke-width="1.6" fill="none" stroke-dasharray="5,3"/>
+
+    <!-- HL labels -->
+    <text x="150" y="288" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HL1</text>
+    <text x="240" y="258" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HL2</text>
+    <text x="330" y="223" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HL3</text>
+    <text x="420" y="188" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HL4</text>
+
+    <!-- ===== BUBBLES ===== -->
+    <g>
+      <rect x="430" y="70" width="155" height="50" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="507" y="88" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Price बढ्दै (Higher</text>
+      <text x="507" y="102" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Lows बन्दै)</text>
+      <text x="507" y="115" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">trend जारी</text>
+    </g>
+
+    <line x1="265" y1="285" x2="180" y2="335" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="60" y="328" width="240" height="28" rx="6" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="180" y="346" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c62828">SL हरेक नयाँ HL तल सार्दै (माथि)</text>
+    </g>
+
+    <line x1="445" y1="185" x2="500" y2="200" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="370" y="305" width="225" height="48" rx="7" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1.2"/>
+      <text x="482" y="322" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#111">SL hit भयो भने अब profit मा exit</text>
+      <text x="482" y="336" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">(loss मा होइन) — profit locked</text>
+      <text x="482" y="348" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">trend सकिएसम्म ride</text>
+    </g>
+
+    <!-- caution note -->
+    <rect x="440" y="128" width="150" height="46" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+    <text x="515" y="145" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c8a800">धेरै tight → noise मा exit</text>
+    <text x="515" y="160" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c8a800">धेरै loose → profit फिर्ता</text>
+    <text x="515" y="172" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#111">structure अनुसार राख्ने</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Trailing Stop को mechanic देखाउँछ। Uptrend मा price हरेक पटक अघिल्लो भन्दा माथिल्लो "Higher Low" (HL1, HL2, HL3, HL4) बनाउँदै जान्छ। Trailing stop को idea — Stop Loss लाई हरेक नयाँ Higher Low तल सार्दै माथि लैजाने (रातो stepping line)। यसले के गर्छ भने — जति trend माथि जान्छ, त्यति तपाईंको profit "lock" हुँदै जान्छ। यदि कुनै बेला SL hit भयो भने अब तपाईं loss मा होइन, profit मा exit गर्नुहुन्छ। यसले strong trend लाई सकिएसम्म ride गर्न दिन्छ। तर सावधानी — trailing stop धेरै tight राखे normal pullback (noise) ले exit गराउँछ, धेरै loose राखे profit धेरै फिर्ता जान्छ। त्यसैले structure (higher low / swing low / MA) अनुसार राख्ने।
+</div>
+
+<p>पाँचौँ principle हो—Break-even Stop। Price target 1 पुगेर partial profit book भएपछि बाँकी quantityको Stop Loss Entry price वा slightly profit zoneमा ल्याउन सकिन्छ। यसले tradeलाई risk-free जस्तो बनाउँछ। तर break-even stop धेरै चाँडै ल्याउँदा normal pullbackमा बाहिरिन सकिन्छ। त्यसैले setup, volatility, and timeframe अनुसार प्रयोग गर्नुपर्छ।</p>
+
+<p>छैटौँ principle हो—Resistance reaction पढ्नु। Price target नजिक पुगेपछि candle behavior हेर्नुपर्छ। Upper wick, high Volume with weak close, bearish reversal candle, sector weakness, or NEPSE index rejection देखिए profit booking राम्रो हुन सक्छ। यदि price target नजिक strong close र Volume सहित break गर्छ भने बाँकी hold गर्न सकिन्छ।</p>
+
+<p>सातौँ principle हो—Time-based Exit। यदि trade धेरै दिन profit zoneमा रहेर पनि अगाडि बढिरहेको छैन, Volume घट्दैछ, and market कमजोर हुँदैछ भने profit book गर्न सकिन्छ। हरेक trade targetसम्म जानैपर्छ भन्ने छैन।</p>
+
+<p>आठौँ principle हो—Market Context Exit। तपाईंको stock profitमा छ, तर NEPSE index major resistanceबाट reject भयो, sector कमजोर भयो, and stockमा weak candle आयो भने profit protect गर्नु बुद्धिमानी हुन सक्छ। Profit booking केवल stock chartबाट होइन, index र sector contextबाट पनि प्रभावित हुन सक्छ।</p>
+
+<p>नवौँ principle हो—Profitलाई lossमा बदल्न नदिनु। यदि trade significant profitमा गएको छ, target नजिक पुगेको छ, and then price sharply reverses, traderले protect plan प्रयोग गर्नुपर्छ। <strong>“फेरि माथि जान्छ”</strong> भन्दै profitलाई lossमा बदल्नु खराब trade management हो।</p>
+
+<!-- VISUAL 4: Profit Lost Due to No Plan -->
+<div class="visual-block">
+  <div class="visual-title">Plan नभए Profit कसरी हराउँछ? (Scenario 4)</div>
+  <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="380" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Entry 500 → Rs. 580 profit → plan नभई hold → Rs. 500 फिर्ता (profit हरायो)</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="55" width="560" height="270" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y labels -->
+    <text x="608" y="95" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 580</text>
+    <text x="608" y="135" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 560</text>
+    <text x="608" y="255" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+
+    <!-- entry line -->
+    <line x1="40" y1="255" x2="600" y2="255" stroke="#111" stroke-width="1.3" stroke-dasharray="3,2"/>
+    <!-- peak zone -->
+    <line x1="40" y1="90" x2="600" y2="90" stroke="#c8a800" stroke-width="1" stroke-dasharray="4,2"/>
+
+    <!-- candles up then down (round trip) -->
+    <line x1="65" y1="250" x2="65" y2="270" stroke="#26a69a" stroke-width="1"/><rect x="61" y="253" width="8" height="14" fill="#26a69a"/>
+    <circle cx="65" cy="255" r="4" fill="#fff" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="100" y1="225" x2="100" y2="252" stroke="#26a69a" stroke-width="1"/><rect x="96" y="228" width="8" height="20" fill="#26a69a"/>
+    <line x1="135" y1="195" x2="135" y2="227" stroke="#26a69a" stroke-width="1"/><rect x="131" y="198" width="8" height="22" fill="#26a69a"/>
+    <line x1="170" y1="160" x2="170" y2="197" stroke="#26a69a" stroke-width="1"/><rect x="166" y="163" width="8" height="24" fill="#26a69a"/>
+    <line x1="205" y1="125" x2="205" y2="162" stroke="#26a69a" stroke-width="1"/><rect x="201" y="128" width="8" height="24" fill="#26a69a"/>
+    <!-- peak 580 -->
+    <line x1="240" y1="88" x2="240" y2="125" stroke="#26a69a" stroke-width="1"/><rect x="236" y="91" width="8" height="22" fill="#26a69a"/>
+    <circle cx="240" cy="91" r="5" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+    <!-- reversal down all the way back -->
+    <line x1="280" y1="100" x2="280" y2="135" stroke="#ef5350" stroke-width="1"/><rect x="276" y="103" width="8" height="24" fill="#ef5350"/>
+    <line x1="320" y1="125" x2="320" y2="165" stroke="#ef5350" stroke-width="1"/><rect x="316" y="128" width="8" height="28" fill="#ef5350"/>
+    <line x1="360" y1="155" x2="360" y2="195" stroke="#ef5350" stroke-width="1"/><rect x="356" y="158" width="8" height="28" fill="#ef5350"/>
+    <line x1="400" y1="185" x2="400" y2="225" stroke="#ef5350" stroke-width="1"/><rect x="396" y="188" width="8" height="28" fill="#ef5350"/>
+    <line x1="440" y1="215" x2="440" y2="252" stroke="#ef5350" stroke-width="1"/><rect x="436" y="218" width="8" height="28" fill="#ef5350"/>
+    <line x1="480" y1="240" x2="480" y2="262" stroke="#ef5350" stroke-width="1"/><rect x="476" y="248" width="8" height="14" fill="#ef5350"/>
+    <circle cx="480" cy="255" r="5" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+
+    <!-- ===== BUBBLES ===== -->
+    <line x1="240" y1="91" x2="290" y2="68" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="245" y="52" width="230" height="34" rx="7" fill="#fff8dc" stroke="#c8a800" stroke-width="1.2"/>
+      <text x="360" y="68" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">Rs. 580 — "Rs.600 पुगे बेच्ने"</text>
+      <text x="360" y="81" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">target थिएन, greed ले hold</text>
+    </g>
+
+    <text x="290" y="150" font-family="sans-serif" font-size="8" font-style="italic" fill="#ef5350">"अलि correction हो"</text>
+    <text x="370" y="210" font-family="sans-serif" font-size="8" font-style="italic" fill="#ef5350">"अझै hold"</text>
+
+    <line x1="480" y1="255" x2="430" y2="300" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="280" y="298" width="260" height="34" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="410" y="317" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Rs. 500 फिर्ता — profit हरायो (break-even)</text>
+    </g>
+
+    <!-- bottom lesson -->
+    <rect x="40" y="342" width="560" height="32" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="320" y="362" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#111">Lesson: Profit plan नभए greed ले profit खाइदिन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले रोशनको गल्ती (Scenario 4) विस्तारमा देखाउँछ — plan नभए profit कसरी हराउँछ। Entry Rs. 500 बाट price राम्रोसँग बढेर Rs. 580 पुग्यो (राम्रो profit)। तर trader ले target बनाएको थिएन — "Rs. 600 पुगे बेच्ने" भन्दै greed मा hold गर्‍यो। Price त्यहाँबाट फर्कन थाल्यो: "अलि correction हो", "अझै hold" भन्दै हरेक खस्दो candle मा बहाना बनायो। अन्त्यमा price Rs. 500 (Entry) नजिक फिर्ता — राम्रो profit break-even मा बदलियो। यो round-trip (माथि गएर फेरि उतै फर्कने) सबैभन्दा निराशाजनक trade हो। Lesson — profit booking plan नभए greed ले देखिएको profit खाइदिन्छ। Target र partial exit पहिले नै तय गर्नुपर्छ।
+</div>
+
+<p>दशौँ principle हो—Profit booking पछि regret नगर्नु। यदि तपाईंले plan अनुसार profit book गर्नुभयो र price अझै माथि गयो भने पछुताउनु हुँदैन। तपाईंले discipline follow गर्नुभयो। Trading मा perfect top sell गर्न खोज्नु अवास्तविक हो। Consistent profit booking top catching होइन, process following हो।</p>
+
+<p>Profit Booking Strategy को professional process:</p>
+
+<ul>
+  <li>Trade अघि target define गर्नु।</li>
+  <li>Partial exit levels लेख्नु।</li>
+  <li>Trailing stop rule तय गर्नु।</li>
+  <li>Resistance reaction monitor गर्नु।</li>
+  <li>Market र sector context हेर्नु।</li>
+  <li>Profit targetमा emotion होइन, plan follow गर्नु।</li>
+  <li>Profit booking journalमा लेख्नु।</li>
+  <li>पछि review गर्नु—exit धेरै छिटो भयो कि ठीक भयो?</li>
+</ul>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Profit Booking Strategy अझै महत्वपूर्ण छ, किनकि यहाँ धेरै stock sector rallyमा छिटो बढ्छन् र अचानक profit booking आउन सक्छ। Social media hype, operator-style movement, low liquidity, circuit behavior, and sector rotationले price movement तीव्र बनाउन सक्छ।</p>
+
+<p>NEPSE मा धेरै retail trader profit देख्दा लोभी हुन्छन्। 10% profit हुँदा 20% चाहिन्छ। 20% हुँदा 30% चाहिन्छ। तर जब correction आउँछ, profit हराउँदै जान्छ। Plan नभएका trader profit सुरक्षित गर्न सक्दैनन्।</p>
+
+<p>NEPSE मा target राख्दा nearby Resistance, previous high, all-time high, sector condition, and NEPSE index level हेर्नुपर्छ। यदि stock target नजिक पुगेको छ तर NEPSE index major Resistanceमा छ भने profit booking सोच्नुपर्छ।</p>
+
+<p>Sector rallyमा profit booking धेरै महत्वपूर्ण हुन्छ। जब sector धेरै दिन चलिसकेको हुन्छ, late buyers आउन थाल्छन्, Volume high हुन्छ, and upper wick देखिन थाल्छ, त्यहाँ partial profit protect राम्रो हुन सक्छ। Strong sectorमा पनि सबै stock endless चल्दैनन्।</p>
+
+<p>NEPSE मा low liquidity stockमा profit booking ढिलो गर्दा exit कठिन हुन सक्छ। Paper profit धेरै देखिए पनि sell गर्दा buyer नपाउन सकिन्छ। त्यसैले low liquidity stockमा target नजिक gradual exit practical हुन सक्छ।</p>
+
+<p>NEPSE मा TMS execution discipline चाहिन्छ। Target पुग्दा order राख्न ढिलो भयो भने price फर्किन सक्छ। Quantity, price, and order type सावधानीपूर्वक राख्नुपर्छ। Partial sell गरेपछि EDIS, WACC, settlement, and broker receivable/payable पनि ध्यान दिनुपर्छ।</p>
+
+<p>Profit booking गर्दा broker commission, tax, DP charge, CGT, WACC, and settlementको असर net profitमा पर्छ। Gross profit हेरेर मात्र खुशी हुनु अधुरो हो। Net profit calculation गर्नुपर्छ। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Profit आएको tradeमा psychology अत्यन्त जटिल हुन्छ। Loss tradeमा डर हुन्छ। Profit tradeमा लोभ, डर, पछुतो, आशा सबै हुन्छन्।</p>
+
+<p>Profit हुँदा traderको मन भन्छ—<strong>“अझै जाला।”</strong> यही greedले profit booking रोक्छ। Price फर्किएपछि मन भन्छ—<strong>“अलि bounce आयो भने बेच्ने।”</strong> Price अझै घट्छ। अन्त्यमा profit गुम्छ।</p>
+
+<p>कहिलेकाहीँ उल्टो हुन्छ। Traderले profit देख्नेबित्तिकै डरले sell गर्छ। Rs. 10 profit देखेर sell गर्छ, जबकि risk Rs. 20 थियो र target Rs. 60 थियो। यसरी winning trade सानो हुन्छ, losing trade ठूलो हुन्छ। Long-term result कमजोर हुन्छ।</p>
+
+<p>Profit Booking Strategy ले greed र fear दुवैलाई balance गर्छ। Partial exitले fear कम गर्छ। Trailing stopले greedलाई structured बनाउँछ। Predefined targetले confusion हटाउँछ।</p>
+
+<p>Profit booking पछि regret common हुन्छ। तपाईं Rs. 550 मा बेच्नुहुन्छ, price Rs. 600 जान्छ। मन दुख्छ। तर प्रश्न हो—के तपाईंले plan follow गर्नुभयो? यदि plan follow गर्नुभयो भने यो regret होइन, discipline हो। Marketको every rupee capture गर्न सम्भव छैन।</p>
+
+<p>Profit bookingमा ego पनि हुन्छ। Trader topमा sell गर्न चाहन्छ। Perfect exit खोज्दा धेरै पटक good exit miss हुन्छ। Professional trader perfect exit खोज्दैन; good exit र repeatable process खोज्छ।</p>
+
+<p>Profit Booking Psychology को मुख्य rule हो—<strong>“Profit देखिनु पर्याप्त छैन; profit सुरक्षित गर्न plan चाहिन्छ।”</strong></p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Profit Booking plan Entry अघि नबनाउनु। Profit आएपछि emotionले decision लिन्छ।</p>
+
+<p>दोस्रो गल्ती हो—Target नभई hold गर्नु। <strong>“अझै जाला”</strong> मात्र strategy होइन।</p>
+
+<p>तेस्रो गल्ती हो—Profit धेरै छिटो book गर्नु। Winning tradeलाई grow हुन नदिँदा Risk-Reward कमजोर हुन्छ।</p>
+
+<p>चौथो गल्ती हो—Profit target आएपछि पनि greed गर्नु। Resistance reaction ignore गर्दा profit गुम्न सक्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Partial Profit Booking नगर्नु। सबै hold वा सबै sell मात्र सोच्दा flexibility घट्छ।</p>
+
+<p>छैटौँ गल्ती हो—Trailing Stop नराख्नु। Trend follow गर्दा profit protect plan चाहिन्छ।</p>
+
+<p>सातौँ गल्ती हो—Market र sector weakness ignore गर्नु। Stock profitमा भए पनि context कमजोर हुँदा reversal आउन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Paper profitलाई real profit सम्झिनु। Sell नगरेसम्म profit final हुँदैन।</p>
+
+<p>नवौँ गल्ती हो—Profitलाई lossमा बदलिन दिनु। Significant profitपछि exit plan नहुनु खतरनाक हुन्छ।</p>
+
+<p>दशौँ गल्ती हो—Profit booking पछि price अझै गयो भनेर पछुताउनु। Plan follow गर्नु गलत होइन।</p>
+
+<p>एघारौँ गल्ती हो—Low liquidity stockमा exit ढिलो गर्नु। Sell गर्न buyer नपाउन सकिन्छ।</p>
+
+<p>बाह्रौँ गल्ती हो—Net profit calculation नगर्नु। Cost र taxपछि actual profit कम हुन सक्छ।</p>
+
+<!-- VISUAL 5: Too Early vs Too Late -->
+<div class="visual-block">
+  <div class="visual-title">Too Early (डर) vs Too Late (लोभ) — दुवै गल्ती (Scenario 5 vs 4)</div>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="360" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Profit booking डर ले होइन, लोभ ले पनि होइन — plan ले</text>
+
+    <!-- LEFT: Too Early (fear) -->
+    <rect x="20" y="40" width="355" height="28" fill="#c8a800" rx="4"/>
+    <text x="197" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">✗ Too Early — डरले बेच्यो</text>
+
+    <rect x="20" y="72" width="355" height="200" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- entry, SL, target lines -->
+    <line x1="40" y1="200" x2="355" y2="200" stroke="#111" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="44" y="196" font-family="sans-serif" font-size="8" fill="#111">Entry 500</text>
+    <line x1="40" y1="100" x2="355" y2="100" stroke="#26a69a" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="44" y="96" font-family="sans-serif" font-size="8" fill="#2e7d32">Target 560</text>
+    <line x1="40" y1="230" x2="355" y2="230" stroke="#ef5350" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="44" y="244" font-family="sans-serif" font-size="8" fill="#c62828">SL 480 (Risk 20)</text>
+    <!-- sell too early at 515 -->
+    <path d="M 60 200 L 100 188 L 140 178 L 175 175" stroke="#26a69a" stroke-width="2" fill="none"/>
+    <circle cx="175" cy="175" r="5" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+    <!-- price continues up (missed) -->
+    <path d="M 175 175 L 220 150 L 270 120 L 320 100" stroke="#26a69a" stroke-width="1.5" fill="none" stroke-dasharray="3,2" opacity="0.5"/>
+    <line x1="40" y1="178" x2="355" y2="178" stroke="#c8a800" stroke-width="0.7" stroke-dasharray="2,2"/>
+    <text x="44" y="174" font-family="sans-serif" font-size="8" fill="#c8a800">515</text>
+
+    <line x1="175" y1="175" x2="230" y2="225" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="120" y="222" width="225" height="42" rx="7" fill="#fff8dc" stroke="#c8a800" stroke-width="1.2"/>
+      <text x="232" y="240" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">Rs. 515 मा डरले sell (profit 15)</text>
+      <text x="232" y="256" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">profit (15) < risk (20) — RR बिग्रियो</text>
+    </g>
+
+    <!-- RIGHT: Too Late (greed) -->
+    <rect x="385" y="40" width="355" height="28" fill="#ef5350" rx="4"/>
+    <text x="562" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">✗ Too Late — लोभले holdगर्‍यो</text>
+
+    <rect x="385" y="72" width="355" height="200" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="405" y1="200" x2="720" y2="200" stroke="#111" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="409" y="196" font-family="sans-serif" font-size="8" fill="#111">Entry 500</text>
+    <line x1="405" y1="95" x2="720" y2="95" stroke="#c8a800" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="409" y="91" font-family="sans-serif" font-size="8" fill="#c8a800">peak 580</text>
+    <!-- up to peak then back -->
+    <path d="M 420 200 L 460 170 L 500 135 L 540 105 L 565 98 L 600 130 L 650 170 L 700 200" stroke="#ef5350" stroke-width="2" fill="none"/>
+    <circle cx="565" cy="98" r="5" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="700" cy="200" r="5" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+
+    <line x1="565" y1="98" x2="610" y2="78" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="500" y="60" width="200" height="30" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+      <text x="600" y="79" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c8a800">580 मा "अझै जाला" — बेचेन</text>
+    </g>
+    <line x1="700" y1="200" x2="650" y2="240" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="480" y="232" width="245" height="32" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="602" y="252" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Entry मा फिर्ता — पूरा profit हरायो</text>
+    </g>
+
+    <!-- bottom lesson -->
+    <rect x="20" y="282" width="720" height="58" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="6"/>
+    <text x="380" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">दुवै extreme गलत — डरले धेरै छिटो (winning trade सानो), लोभले धेरै ढिलो (profit गयो)</text>
+    <text x="380" y="324" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">समाधान: predefined target + partial exit + trailing — emotion होइन, plan</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले profit booking का दुई विपरीत गल्ती सँगै देखाउँछ। बायाँ (Too Early — डर): trader ले Rs. 515 मा (profit Rs. 15 मात्र) डरले sell गर्‍यो, जबकि risk Rs. 20 र target Rs. 60 थियो — profit risk भन्दा सानो भयो, अनि price अझै माथि गयो (move miss)। यसरी winning trade सानो हुन्छ। दायाँ (Too Late — लोभ): trader ले Rs. 580 मा "अझै जाला" भनेर बेचेन, price Entry मा फिर्ता — पूरा profit हरायो (रोशनको कथा)। दुवै extreme गलत — डरले धेरै छिटो बेच्दा Risk-Reward बिग्रिन्छ, लोभले धेरै ढिलो गर्दा profit हराउँछ। समाधान — predefined target + partial exit + trailing stop। Profit booking emotion ले होइन, plan ले गर्ने।
+</div>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Profit screen मा देखिनु real profit होइन; Profit Booking plan बिना profit हराउन सक्छ</div>
+  <p style="margin-bottom:0;">Screen मा देखिएको green number लाई धेरै trader आफ्नो "कमाइ" सम्झन्छन् — तर त्यो <strong>paper profit</strong> मात्र हो, sell नगरेसम्म वास्तविक होइन। जबसम्म तपाईंले book गर्नुहुन्न, त्यो profit market को हो, तपाईंको होइन। Plan बिना profit emotion को खेल बन्छ: price बढ्दा "अझै जाला" भन्ने greed ले रोक्छ, price फर्कँदा "bounce आउला" भन्ने hope ले बेच्न दिँदैन — अनि देखिएको profit बिस्तारै break-even वा loss मा बदलिन्छ (रोशनको कथा)। समाधान सरल छ — Entry <strong>अघि नै</strong> Target 1, Target 2, partial exit %, र trailing/protective rule लेख्ने। Profit booking plan ले paper profit लाई real, bank मा आउने profit मा बदल्छ। "अझै जाला" भन्ने अनुमान strategy होइन।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Profit Booking Strategy का लागि यी rules प्रयोग गर्नुहोस्:</p>
+
+<ul>
+  <li>Entry गर्नु अघि Target 1, Target 2, र Final Exit plan बनाउनुहोस्।</li>
+  <li>Target chart structureमा आधारित राख्नुहोस्, मनको इच्छा अनुसार होइन।</li>
+  <li>Next Resistance, previous high, range high, measured move, and Risk-Reward level हेर्नुहोस्।</li>
+  <li>Target 1 मा partial profit booking विचार गर्नुहोस्।</li>
+  <li>Target पुगेपछि candle reaction र Volume पढ्नुहोस्।</li>
+  <li>Upper wick, weak close, and high Volume rejection आए profit protect गर्नुहोस्।</li>
+  <li>Strong breakout target माथि sustain भयो भने बाँकी quantity trailing stopमा राख्न सकिन्छ।</li>
+  <li>Profit आएपछि Stop Loss gradually trail गर्नुहोस्।</li>
+  <li>Partial bookingपछि बाँकी quantityको risk reduce गर्नुहोस्।</li>
+  <li>Profitलाई lossमा बदलिन नदिन protective exit rule राख्नुहोस्।</li>
+  <li>NEPSE index र sector weakness देखिए profit management tight गर्नुहोस्।</li>
+  <li>Low liquidity stockमा target नजिक gradual exit गर्नुहोस्।</li>
+  <li>Profit bookingपछि regret नगर्नुहोस्, journal review गर्नुहोस्।</li>
+  <li>Net profit costपछि calculate गर्नुहोस्।</li>
+  <li>Plan बिना <strong>“अझै जाला”</strong> भन्दै hold नगर्नुहोस्।</li>
+  <li>Profit booking पनि trading discipline हो, डर होइन।</li>
+</ul>
+
+<p>Profit Booking को मुख्य rule हो—<strong>Profit आउँदा लोभले होइन, planले exit गर्नुपर्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Partial Profit Booking Model</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 500<br>Stop Loss: Rs. 475<br>Risk: Rs. 25<br>Target 1: Rs. 550<br>Target 2: Rs. 575<br>Final Exit: Trailing Stop</p>
+  <p style="margin-bottom:6px;"><strong>Plan:</strong></p>
+  <p style="margin-bottom:6px;">Rs. 550 मा 50% quantity sell<br>Rs. 575 मा 25% sell<br>Remaining 25% trailing stopमा hold<br>Price Rs. 525 तल फर्के बाँकी exit</p>
+  <p style="margin-bottom:0;">यो model traderलाई profit protect र upside participation दुवै दिन सक्छ।</p>
+</div>
+
+<p><strong>Scenario 2: Full Profit Booking in Range Trade</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Range Low: Rs. 400<br>Range High: Rs. 460<br>Entry: Rs. 410<br>Stop Loss: Rs. 395<br>Target: Rs. 455–460</p>
+  <p style="margin-bottom:0;">Range tradeमा range high target zone हो। यदि Breakout confirmation छैन भने trader range high नजिक full या major profit book गर्न सक्छ। <strong>“अब breakout हुन्छ”</strong> भनेर blind hold गर्नु risky हुन सक्छ।</p>
+</div>
+
+<p><strong>Scenario 3: Trend Continuation Profit Management</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 600<br>Stop Loss: Rs. 570<br>Target 1: Rs. 660</p>
+  <p style="margin-bottom:0;">Trend strong छ। Sector supportive छ। Price Rs. 660 strong Volume सहित break गर्छ। Trader 40% profit book गर्छ र बाँकी 60% higher low trailing stopमा राख्छ। यसले trend continue भए benefit दिन्छ।</p>
+</div>
+
+<p><strong>Scenario 4: Profit Lost Due to No Plan</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 500<br>Price Rs. 580 पुग्यो। Traderले target बनाएको थिएन। <strong>“Rs. 600 पुग्छ”</strong> भन्दै hold गर्‍यो। Price Rs. 540, Rs. 520, Rs. 500 फर्कियो। Profit हरायो।</p>
+  <p style="margin-bottom:0;"><strong>Lesson:</strong> Profit plan नभए greedले profit खाइदिन्छ।</p>
+</div>
+
+<p><strong>Scenario 5: Too Early Profit Booking</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 500<br>Stop Loss: Rs. 480<br>Target: Rs. 560<br>Price Rs. 515 पुग्दा trader डरले sell गर्छ। Profit Rs. 15। Risk Rs. 20 थियो। Winning trade riskभन्दा सानो भयो। यदि यस्तो बारम्बार भयो भने Risk-Reward बिग्रिन्छ।</p>
+  <p style="margin-bottom:0;"><strong>Lesson:</strong> Profit booking डरबाट होइन, planबाट हुनुपर्छ।</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>तरिका</th>
+      <th>उपयुक्त कहिले</th>
+      <th>फाइदा</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Full Exit</strong></td>
+      <td>सबै एकै targetमा sell</td>
+      <td>Range trade, weak trend</td>
+      <td>Simple, profit पक्का</td>
+    </tr>
+    <tr>
+      <td><strong>Partial Exit</strong></td>
+      <td>केही sell, बाँकी hold</td>
+      <td>धेरै setup मा</td>
+      <td>शान्ति + participation</td>
+    </tr>
+    <tr>
+      <td><strong>Trailing Stop</strong></td>
+      <td>SL माथि सार्दै</td>
+      <td>Strong trend</td>
+      <td>Big move समात्ने</td>
+    </tr>
+    <tr>
+      <td><strong>Hybrid</strong></td>
+      <td>Partial + trailing mix</td>
+      <td>Breakout/trend continuation</td>
+      <td>Balanced, flexible</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Profit Booking Strategy Checklist</div>
+
+  <div class="checklist-sub">Before Entry:</div>
+  <ul>
+    <li>Target 1 कहाँ छ?</li>
+    <li>Target 2 कहाँ छ?</li>
+    <li>Final target वा trailing plan के हो?</li>
+    <li>Target chart structureमा आधारित छ?</li>
+    <li>Next Resistance कहाँ छ?</li>
+    <li>Risk-Reward targetसँग मिल्छ?</li>
+    <li>Partial profit booking गर्ने?</li>
+    <li>कति quantity कुन targetमा sell गर्ने?</li>
+    <li>Stop Loss profitमा कसरी trail गर्ने?</li>
+  </ul>
+
+  <div class="checklist-sub">During Trade:</div>
+  <ul>
+    <li>Price Target 1 नजिक पुग्यो?</li>
+    <li>Candle close strong छ कि weak?</li>
+    <li>Upper wick warning छ?</li>
+    <li>Volume healthy छ कि climax?</li>
+    <li>Sector अझै strong छ?</li>
+    <li>NEPSE index supportive छ?</li>
+    <li>Price Resistance break गरेर sustain भयो?</li>
+    <li>Pullback normal छ कि reversal warning?</li>
+  </ul>
+
+  <div class="checklist-sub">Profit Protection:</div>
+  <ul>
+    <li>Partial profit book भयो?</li>
+    <li>Remaining quantityको Stop Loss adjust भयो?</li>
+    <li>Profit lossमा बदलिन नदिने rule छ?</li>
+    <li>Trailing Stop कहाँ छ?</li>
+    <li>Market अचानक weak भए exit plan छ?</li>
+    <li>Low liquidity stockमा gradual exit गर्नुपर्छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Psychology Check:</div>
+  <ul>
+    <li>म लोभमा target ignore गर्दैछु?</li>
+    <li>म डरमा धेरै छिटो sell गर्दैछु?</li>
+    <li>म perfect top खोज्दैछु?</li>
+    <li>Profit bookingपछि पछुताउने डर छ?</li>
+    <li>म plan follow गर्दैछु कि emotion?</li>
+  </ul>
+
+  <div class="checklist-sub">After Exit:</div>
+  <ul>
+    <li>Gross profit कति?</li>
+    <li>Net profit costपछि कति?</li>
+    <li>Exit plan अनुसार भयो?</li>
+    <li>Exit धेरै छिटो भयो कि ठीक?</li>
+    <li>Journalमा lesson लेखियो?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Mark Targets in 10 Charts</div>
+  <p>कुनै 10 वटा old trades वा chart examples छान्नुहोस्। प्रत्येकमा Entry पछि possible Target 1, Target 2, and trailing stop mark गर्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Build 5 Profit Booking Plans</div>
+  <p>तलको formatमा 5 वटा paper trade profit booking plan बनाउनुहोस्:</p>
+  <ul>
+    <li>Stock Name:</li>
+    <li>Entry:</li>
+    <li>Stop Loss:</li>
+    <li>Risk:</li>
+    <li>Target 1:</li>
+    <li>Target 2:</li>
+    <li>Final Exit Plan:</li>
+    <li>Partial Exit Percentage:</li>
+    <li>Trailing Stop Rule:</li>
+    <li>Profit Protection Rule:</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Review 5 Profit Trades</div>
+  <p>आफ्नो पुरानो 5 profit trades review गर्नुहोस्:</p>
+  <ul>
+    <li>Profit booking plan पहिले थियो?</li>
+    <li>Targetमा sell गर्नुभयो?</li>
+    <li>धेरै छिटो बेच्नुभयो?</li>
+    <li>धेरै ढिलो बेच्नुभयो?</li>
+    <li>Profit घटेर गयो?</li>
+    <li>Partial exit गरेको भए result राम्रो हुन्थ्यो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Compare 3 Models</div>
+  <p>तीनवटा Profit Booking model compare गर्नुहोस्:</p>
+  <ul>
+    <li>Model A: Full exit at Target 1</li>
+    <li>Model B: 50% at Target 1, 50% at Target 2</li>
+    <li>Model C: 50% at Target 1, remaining trailing stop</li>
+  </ul>
+  <p style="margin-bottom:0;">कुन model तपाईंको psychology र trading styleसँग मिल्छ लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Write Your Profit Booking Rule</div>
+  <p>आफ्नो personal Profit Booking Rule लेख्नुहोस्:</p>
+  <ul>
+    <li>Target 1 मा म ____% quantity sell गर्छु।</li>
+    <li>Target 2 मा म ____% quantity sell गर्छु।</li>
+    <li>बाँकी quantityको trailing stop rule: ______</li>
+    <li>Profit lossमा नबदलिने rule: ______</li>
+    <li>Range trade profit booking rule: ______</li>
+    <li>Trend trade profit booking rule: ______</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Profit Booking Strategy बिना trading अधुरो छ। राम्रो Entry गरे पनि Exit plan छैन भने profit emotionको हातमा जान्छ।</p>
+  <p>Profit booking डर होइन। Profit booking discipline हो। Partial profit bookingले तपाईंलाई मनोवैज्ञानिक शान्ति दिन्छ। Trailing stopले राम्रो trendमा बस्ने मौका दिन्छ। Targetले लोभ नियन्त्रण गर्छ।</p>
+  <p>Profit देखेर लोभ बढ्नु स्वाभाविक हो। Profit घट्दा डर लाग्नु पनि स्वाभाविक हो। तर professional trader emotionलाई planले manage गर्छ।</p>
+  <p style="margin-bottom:0;">याद राख्नुहोस्—Marketले दिएको profit सधैं तपाईंको हुँदैन। तपाईंले plan अनुसार book गरेपछि मात्र त्यो profit वास्तविक हुन्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 44 Summary</div>
+  <p>Profit Booking Strategy भनेको trade profitमा गएपछि कसरी exit गर्ने भन्ने predefined plan हो। यसमा Target 1, Target 2, Partial Exit, Trailing Stop, Final Exit, and Profit Protection rule समावेश हुन सक्छन्।</p>
+  <p>Profit Booking का मुख्य modelहरू Full Exit, Partial Exit, Trailing Stop, and Hybrid Model हुन्। कुन model प्रयोग गर्ने भन्ने trade setup, market condition, trend strength, liquidity, and trader psychologyमा निर्भर हुन्छ।</p>
+  <p>Target chart structureमा आधारित हुनुपर्छ। Next Resistance, previous high, range high, measured move, and Risk-Reward levelबाट target तय गर्नुपर्छ। Dream target वा greed target खतरनाक हुन्छ।</p>
+  <p>NEPSE मा Profit Booking गर्दा index, sector, liquidity, social media hype, upper wick, climax volume, TMS execution, WACC, EDIS, settlement, broker cost, tax, DP charge, and net profit ध्यान दिनुपर्छ। Low liquidity stockमा profit booking ढिलो गर्दा exit कठिन हुन सक्छ।</p>
+  <p>Profit bookingको मुख्य psychological challenge greed र fear हुन्। धेरै छिटो sell गर्दा winning trade सानो हुन्छ। धेरै ढिलो hold गर्दा profit हराउन सक्छ। Plan-based partial exit र trailing stopले balance दिन सक्छ।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Entryले opportunity दिन्छ, तर Profit Booking Strategyले त्यस opportunityलाई वास्तविक परिणाममा बदल्छ। Profit आएको बेला plan नभए greed र fearले profit खोस्न सक्छन्।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader profit देखेर अन्धो लोभी हुँदैन र सानो हरियो अंक देखेर डराएर भाग्दैन;<br>
+  ऊ आफ्नो plan अनुसार profit सुरक्षित गर्छ, केही भागलाई बढ्न दिन्छ,<br>
+  र अन्त्यमा disciplineलाई<br>
+  profitभन्दा ठूलो मान्छ।
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 19: Breakout के हो? — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 28px 0; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-caption { font-size: 13px; color: #555; font-style: italic; margin-top: 10px; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 19: CHART READING MASTERY</div>
+  <h1 class="chapter-title">Breakout के हो?</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>अनिलले एउटा stock धेरै हप्तादेखि Rs. 500 नजिक अड्किएको देखिरहेको थियो। Price बारम्बार Rs. 500 पुग्थ्यो, तर त्यहाँबाट तल फर्किन्थ्यो। उसले chart मा Rs. 500 लाई Resistance zone भनेर mark गर्‍यो। केही समयपछि एक दिन price Rs. 500 माथि गयो र Rs. 515 मा close भयो। Volume पनि पहिलेको भन्दा बढेको देखियो।</p>
+
+<p>अनिल उत्साहित भयो। उसले सोच्यो, <strong>“अब Breakout भयो, share चल्छ।”</strong> उसले Entry गर्‍यो। तर अर्को दिन price फेरि Rs. 500 तल आयो। केही दिनमा price Rs. 470 पुग्यो। अनिल confused भयो—<strong>“Breakout भएको होइन र?”</strong></p>
+
+<p>त्यो अनुभवले अनिललाई एउटा ठूलो lesson दियो—Resistance माथि price जानु मात्र Breakout होइन। Breakout valid हुन price level, close, Volume, market context, sector strength, sustain, Retest, and Risk-Reward सबै जाँच्नुपर्छ।</p>
+
+<p>Breakout trading धेरै आकर्षक strategy हो, किनकि Breakout पछि price strong move दिन सक्छ। तर यही strategy मा beginner सबैभन्दा धेरै फस्छन्। किनकि उनीहरू Breakout र Fake Breakout बीचको फरक बुझ्दैनन्।</p>
+
+<p>Breakout भनेको price पहिले रोकिएको महत्वपूर्ण level, range, base, Resistance, or pattern माथि strong रूपमा निस्कनु हो। तर professional trader का लागि Breakout केवल level cross गर्नु होइन; Breakout भनेको <strong>buyer ले supply zone absorb गरेर price लाई नयाँ area मा sustain गराउन सक्ने strength देखाउनु</strong> हो।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Breakout trading trader का लागि अत्यन्त महत्वपूर्ण concept हो। धेरै strong trend, sector rally, and momentum move Breakout बाट सुरु हुन सक्छन्। यदि तपाईंले सही Breakout चिन्नुभयो भने राम्रो Risk-Reward भएको trade पाउन सक्नुहुन्छ। तर यदि तपाईंले Fake Breakout लाई real सम्झनुभयो भने तपाईं late buyer बनेर फस्न सक्नुहुन्छ।</p>
+
+<p>Beginner ले सामान्यतया price Resistance माथि जाँदा तुरुन्त buy गर्छन्। तर उनीहरूले सोध्दैनन्—Volume कस्तो छ? Candle close कहाँ भयो? Breakout level माथि sustain भयो? Market supportive छ? Sector strong छ? Price धेरै भागिसकेको छ? Stop Loss कहाँ राख्ने? Risk-Reward मिल्छ?</p>
+
+<p>Breakout बुझ्नु केवल Entry technique होइन। यो market psychology बुझ्ने विषय हो। Resistance zone मा पहिले seller बलियो थिए। यदि price त्यो zone माथि निस्कन्छ भने buyer ले seller को supply absorb गरेको हुन सक्छ। तर यदि price माथि गएर टिक्न सकेन भने त्यो breakout trap हुन सक्छ।</p>
+
+<p>यो chapter ले तपाईंलाई Breakout को वास्तविक अर्थ, valid Breakout का संकेत, weak Breakout का warning, Volume को भूमिका, Retest को महत्व, Stop Loss placement, Risk-Reward, NEPSE context, and trader psychology सिकाउँछ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Breakout भनेको price कुनै महत्वपूर्ण Resistance, range high, base, trendline, वा chart pattern माथि निस्कनु हो। यदि price पहिले Rs. 500 माथि जान सकिरहेको थिएन र पछि strong रूपमा Rs. 500 माथि close भयो भने त्यसलाई Breakout भन्न सकिन्छ।</p>
+
+<p>तर Breakout confirm हुन केही कुरा हेर्नुपर्छ:</p>
+
+<ul>
+  <li>Price important level माथि गएको हुनुपर्छ।</li>
+  <li>Candle close level माथि हुनुपर्छ।</li>
+  <li>Volume support हुनुपर्छ।</li>
+  <li>Price धेरै overextended हुनु हुँदैन।</li>
+  <li>Market र sector supportive हुनुपर्छ।</li>
+  <li>Stop Loss define गर्न सकिनुपर्छ।</li>
+  <li>Risk-Reward राम्रो हुनुपर्छ।</li>
+  <li>Breakout पछि price level माथि sustain हुनुपर्छ।</li>
+</ul>
+
+<!-- VISUAL 1: Breakout Evidence Framework - 8 criteria as ledger -->
+<div class="visual-block">
+  <div class="visual-title">Valid Breakout को 8-Point Evidence Framework</div>
+  <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Breakout = Entry decision होइन — Evidence completion test हो</text>
+
+    <!-- Header row -->
+    <rect x="40" y="48" width="640" height="32" fill="#c9b97a"/>
+    <text x="80" y="68" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#111">#</text>
+    <text x="155" y="68" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#111">Evidence Criteria</text>
+    <text x="450" y="68" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#111">के देखाउँछ?</text>
+
+    <!-- Row 1: Level meaningful -->
+    <rect x="40" y="80" width="640" height="38" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="99" r="13" fill="#4caf50"/>
+    <text x="80" y="104" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">1</text>
+    <text x="105" y="96" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Level meaningful छ?</text>
+    <text x="105" y="111" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(लामो समयदेखि रोकिएको Resistance)</text>
+    <text x="450" y="103" font-family="sans-serif" font-size="11" fill="#111">Important level = strong Breakout potential</text>
+
+    <!-- Row 2: Close above -->
+    <rect x="40" y="118" width="640" height="38" fill="#fdf6e3" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="137" r="13" fill="#4caf50"/>
+    <text x="80" y="142" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">2</text>
+    <text x="105" y="134" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Close level माथि भयो?</text>
+    <text x="105" y="149" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(intraday spike होइन, close confirmation)</text>
+    <text x="450" y="141" font-family="sans-serif" font-size="11" fill="#111">Buyer ले session control राखे</text>
+
+    <!-- Row 3: Volume -->
+    <rect x="40" y="156" width="640" height="38" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="175" r="13" fill="#4caf50"/>
+    <text x="80" y="180" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">3</text>
+    <text x="105" y="172" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Volume average भन्दा बढी छ?</text>
+    <text x="105" y="187" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(buyer ले seller को supply absorb गरे)</text>
+    <text x="450" y="179" font-family="sans-serif" font-size="11" fill="#111">Genuine demand को proof</text>
+
+    <!-- Row 4: Candle quality -->
+    <rect x="40" y="194" width="640" height="38" fill="#fdf6e3" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="213" r="13" fill="#4caf50"/>
+    <text x="80" y="218" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">4</text>
+    <text x="105" y="210" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Candle quality राम्रो छ?</text>
+    <text x="105" y="225" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(strong body, close high नजिक, सानो wick)</text>
+    <text x="450" y="217" font-family="sans-serif" font-size="11" fill="#111">Conviction without rejection</text>
+
+    <!-- Row 5: Market context -->
+    <rect x="40" y="232" width="640" height="38" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="251" r="13" fill="#4caf50"/>
+    <text x="80" y="256" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">5</text>
+    <text x="105" y="248" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">NEPSE index + Sector supportive?</text>
+    <text x="105" y="263" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(macro tailwind, headwind होइन)</text>
+    <text x="450" y="255" font-family="sans-serif" font-size="11" fill="#111">Follow-through को chance बढी</text>
+
+    <!-- Row 6: Not overextended -->
+    <rect x="40" y="270" width="640" height="38" fill="#fdf6e3" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="289" r="13" fill="#4caf50"/>
+    <text x="80" y="294" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">6</text>
+    <text x="105" y="286" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Price overextended छैन?</text>
+    <text x="105" y="301" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(fresh base breakout हो, late-stage chase होइन)</text>
+    <text x="450" y="293" font-family="sans-serif" font-size="11" fill="#111">Healthy R/R सम्भव</text>
+
+    <!-- Row 7: Risk-Reward -->
+    <rect x="40" y="308" width="640" height="38" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="327" r="13" fill="#4caf50"/>
+    <text x="80" y="332" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">7</text>
+    <text x="105" y="324" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Risk-Reward मिल्छ?</text>
+    <text x="105" y="339" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(SL define + target गणना)</text>
+    <text x="450" y="331" font-family="sans-serif" font-size="11" fill="#111">Trade quality measurable</text>
+
+    <!-- Row 8: Sustain & Retest -->
+    <rect x="40" y="346" width="640" height="38" fill="#fdf6e3" stroke="#c9b97a" stroke-width="0.6"/>
+    <circle cx="80" cy="365" r="13" fill="#4caf50"/>
+    <text x="80" y="370" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">8</text>
+    <text x="105" y="362" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">Sustain / Retest behavior?</text>
+    <text x="105" y="377" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(price level माथि टिक्यो, Retest मा buyer आए)</text>
+    <text x="450" y="369" font-family="sans-serif" font-size="11" fill="#111">पुरानो Resistance नयाँ Support</text>
+  </svg>
+  <div class="visual-caption">8 मध्ये ज्यादा check ✓ भए Breakout valid; 3-4 भन्दा कम check भए evidence अधुरो — wait गर्ने वा skip गर्ने।</div>
+</div>
+
+<p>Breakout पछि price सीधै माथि जान पनि सक्छ। कहिलेकाहीँ Breakout पछि price फेरि पुरानो Resistance zone मा फर्किन्छ। यदि त्यहाँ buyer आए र price फेरि माथि गयो भने त्यसलाई <strong>Retest</strong> भनिन्छ। पुरानो Resistance नयाँ Support बन्न सक्छ।</p>
+
+<p>सरल भाषामा, Breakout भनेको बजारले पुरानो रोकावट तोडेर नयाँ क्षेत्रतर्फ जान खोज्नु हो। तर सबै Breakout successful हुँदैनन्। केही Breakout Fake Breakout हुन्छन्।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Breakout को आधार Resistance मा हुन्छ। कुनै price zone मा seller बारम्बार सक्रिय थिए भने त्यो zone Resistance हुन्छ। त्यहाँ price पुग्दा supply आउँथ्यो। जब buyer पर्याप्त बलियो हुन्छन् र त्यो supply absorb गर्छन्, price Resistance माथि निस्कन सक्छ। यही Breakout हो।</p>
+
+<p>Valid Breakout चिन्न पहिलो कुरा हो—<strong>level को महत्व।</strong> कमजोर level break भयो भने त्यसको अर्थ धेरै बलियो नहुन सक्छ। तर लामो समयदेखि price रोकिएको Resistance, range high, base top, weekly level, or major swing high break भयो भने त्यसको महत्व बढी हुन सक्छ।</p>
+
+<p>दोस्रो कुरा हो—<strong>close confirmation।</strong> Price intraday Resistance माथि गयो तर close फेरि Resistance तल भयो भने सावधानी चाहिन्छ। Strong Breakout मा price level माथि close हुनु महत्वपूर्ण हुन्छ। Close high नजिक भयो भने buyer control बलियो हुन सक्छ। Close level नजिक वा तल भयो भने supply अझै बलियो हुन सक्छ।</p>
+
+<p>तेस्रो कुरा हो—<strong>Volume।</strong> Breakout मा Volume buyer participation को प्रमाण हो। Resistance मा धेरै seller हुन्छन्। यदि buyer ले त्यो supply absorb गर्न चाहन्छन् भने Volume बढ्नुपर्छ। Breakout candle मा Volume average भन्दा राम्रो छ भने Breakout meaningful हुन सक्छ। तर Volume spike मात्र enough होइन। Volume spike + weak close + upper wick भने distribution वा trap पनि हुन सक्छ।</p>
+
+<p>चौथो कुरा हो—<strong>candle quality।</strong> Strong Breakout candle मा body राम्रो हुन्छ, close high नजिक हुन्छ, wick कम हुन्छ, and Volume support हुन्छ। Weak Breakout candle मा माथि wick लामो हुन्छ, close कमजोर हुन्छ, and price level माथि टिक्दैन।</p>
+
+<!-- VISUAL 2: Strong vs Weak Breakout Candle - direct comparison -->
+<div class="visual-block">
+  <div class="visual-title">Strong Breakout Candle vs Weak Breakout Candle</div>
+  <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="320" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">एउटै Resistance, दुई फरक quality को Breakout candle</text>
+
+    <!-- LEFT: Strong Breakout -->
+    <rect x="40" y="50" width="320" height="34" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="4"/>
+    <text x="200" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#2e7d32">✓ STRONG Breakout</text>
+
+    <!-- Resistance line left -->
+    <line x1="60" y1="170" x2="340" y2="170" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="345" y="174" text-anchor="end" font-family="sans-serif" font-size="9" fill="#555">Resistance</text>
+
+    <!-- Strong breakout candle (big green body, small wick, close near high) -->
+    <line x1="190" y1="110" x2="190" y2="185" stroke="#4caf50" stroke-width="1.5"/>
+    <rect x="176" y="115" width="28" height="55" fill="#4caf50" stroke="#2e7d32" stroke-width="1.2"/>
+    <!-- Close marker near top -->
+    <line x1="207" y1="118" x2="225" y2="118" stroke="#2e7d32" stroke-width="2"/>
+    <text x="230" y="122" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Close</text>
+
+    <!-- Volume bar (large) -->
+    <rect x="176" y="220" width="28" height="55" fill="#4caf50"/>
+    <text x="190" y="290" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">↑ Volume</text>
+
+    <!-- Annotations for strong -->
+    <text x="100" y="125" font-family="sans-serif" font-size="9" fill="#111">• Body ठूलो</text>
+    <text x="100" y="140" font-family="sans-serif" font-size="9" fill="#111">• Wick सानो</text>
+    <text x="100" y="155" font-family="sans-serif" font-size="9" fill="#111">• Close high नजिक</text>
+    <text x="100" y="170" font-family="sans-serif" font-size="9" fill="#111">• Volume bigh</text>
+
+    <!-- RIGHT: Weak Breakout -->
+    <rect x="380" y="50" width="320" height="34" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="4"/>
+    <text x="540" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#e53935">✗ WEAK / Fake Breakout</text>
+
+    <!-- Resistance line right -->
+    <line x1="400" y1="170" x2="680" y2="170" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="685" y="174" font-family="sans-serif" font-size="9" fill="#555">Resistance</text>
+
+    <!-- Weak breakout candle (long upper wick, small body, close back near/below resistance) -->
+    <line x1="530" y1="95" x2="530" y2="195" stroke="#888" stroke-width="2"/>
+    <!-- Small body, mostly red, close around resistance -->
+    <rect x="516" y="160" width="28" height="20" fill="#e53935" stroke="#b71c1c" stroke-width="1.2"/>
+    <!-- Close marker near resistance line -->
+    <line x1="547" y1="172" x2="565" y2="172" stroke="#b71c1c" stroke-width="2"/>
+    <text x="570" y="176" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">Close</text>
+
+    <!-- High annotation - way above body -->
+    <text x="530" y="88" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">High ↑ (rejected)</text>
+
+    <!-- Volume bar (could be high but with wrong context) -->
+    <rect x="516" y="225" width="28" height="50" fill="#e53935"/>
+    <text x="530" y="290" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#e53935">↑ Vol (trap)</text>
+
+    <!-- Annotations for weak -->
+    <text x="440" y="115" font-family="sans-serif" font-size="9" fill="#111">• Upper wick लामो</text>
+    <text x="440" y="130" font-family="sans-serif" font-size="9" fill="#111">• Body सानो</text>
+    <text x="440" y="145" font-family="sans-serif" font-size="9" fill="#111">• Close level नजिक/तल</text>
+    <text x="440" y="160" font-family="sans-serif" font-size="9" fill="#111">• Vol high तर weak close</text>
+  </svg>
+  <div class="visual-caption">एउटै resistance, उस्तै volume — तर candle structure ले Breakout को quality पूरै फरक बनाउँछ; close position र wick size नै निर्णायक हो।</div>
+</div>
+
+<p>पाँचौँ कुरा हो—<strong>market context।</strong> Breakout individual stock मा देखिन्छ, तर market कमजोर छ भने follow-through नआउन सक्छ। NEPSE index Resistance नजिक reject हुँदैछ भने individual Breakout fail हुन सक्छ। Sector कमजोर छ भने stock को Breakout टिक्न गाह्रो हुन सक्छ। Strong market + strong sector + strong stock Breakout बढी meaningful हुन सक्छ।</p>
+
+<p>छैटौँ कुरा हो—<strong>location and extension।</strong> यदि price base बाट fresh Breakout गर्दैछ भने entry quality राम्रो हुन सक्छ। तर price पहिले नै धेरै बढिसकेको छ र पछि Resistance माथि spike गरेको छ भने late Breakout risk हुन्छ। Overextended Breakout मा Stop Loss टाढा हुन्छ र Risk-Reward खराब हुन्छ।</p>
+
+<!-- VISUAL 3: Fresh Base Breakout vs Overextended Breakout (R/R comparison) -->
+<div class="visual-block">
+  <div class="visual-title">Fresh Base Breakout vs Overextended Breakout — Risk-Reward फरक</div>
+  <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="360" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Breakout देखेमा 'Location' को महत्व — कहाँबाट हुँदैछ?</text>
+
+    <!-- LEFT: Fresh base breakout -->
+    <rect x="40" y="50" width="320" height="34" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="4"/>
+    <text x="200" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">✓ Fresh Base Breakout</text>
+
+    <!-- Resistance line at top of base (left) -->
+    <line x1="60" y1="180" x2="350" y2="180" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+
+    <!-- Long flat base candles -->
+    <line x1="80" y1="185" x2="80" y2="215" stroke="#888" stroke-width="1"/>
+    <rect x="73" y="188" width="14" height="22" fill="#4caf50"/>
+    <line x1="105" y1="183" x2="105" y2="218" stroke="#888" stroke-width="1"/>
+    <rect x="98" y="187" width="14" height="25" fill="#e53935"/>
+    <line x1="130" y1="185" x2="130" y2="215" stroke="#888" stroke-width="1"/>
+    <rect x="123" y="188" width="14" height="20" fill="#4caf50"/>
+    <line x1="155" y1="183" x2="155" y2="216" stroke="#888" stroke-width="1"/>
+    <rect x="148" y="188" width="14" height="22" fill="#e53935"/>
+    <line x1="180" y1="184" x2="180" y2="213" stroke="#888" stroke-width="1"/>
+    <rect x="173" y="188" width="14" height="20" fill="#4caf50"/>
+    <line x1="205" y1="184" x2="205" y2="212" stroke="#888" stroke-width="1"/>
+    <rect x="198" y="188" width="14" height="18" fill="#e53935"/>
+
+    <!-- Breakout candle -->
+    <line x1="240" y1="140" x2="240" y2="190" stroke="#4caf50" stroke-width="1.5"/>
+    <rect x="228" y="145" width="24" height="35" fill="#4caf50" stroke="#2e7d32" stroke-width="1.2"/>
+
+    <!-- Continuation -->
+    <line x1="275" y1="120" x2="275" y2="150" stroke="#4caf50" stroke-width="1"/>
+    <rect x="268" y="125" width="14" height="22" fill="#4caf50"/>
+    <line x1="305" y1="100" x2="305" y2="130" stroke="#4caf50" stroke-width="1"/>
+    <rect x="298" y="105" width="14" height="22" fill="#4caf50"/>
+
+    <!-- SL line -->
+    <line x1="60" y1="220" x2="350" y2="220" stroke="#e53935" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="50" y="224" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">SL</text>
+
+    <!-- Risk-Reward arrows -->
+    <line x1="335" y1="220" x2="335" y2="180" stroke="#e53935" stroke-width="1.5" marker-end="url(#arr19A)"/>
+    <text x="343" y="205" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">Risk</text>
+
+    <line x1="335" y1="180" x2="335" y2="100" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr19B)"/>
+    <text x="343" y="140" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Reward</text>
+
+    <!-- Result -->
+    <rect x="60" y="240" width="290" height="36" fill="#eaf6ea" stroke="#4caf50" stroke-width="1" rx="3"/>
+    <text x="205" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Risk सानो + Reward ठूलो</text>
+    <text x="205" y="271" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">→ R/R राम्रो (1:3+)</text>
+
+    <!-- RIGHT: Overextended breakout -->
+    <rect x="380" y="50" width="320" height="34" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="4"/>
+    <text x="540" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#e53935">✗ Overextended Breakout</text>
+
+    <!-- Stock already running up - rising trend before breakout -->
+    <line x1="400" y1="290" x2="400" y2="310" stroke="#888" stroke-width="1"/>
+    <rect x="394" y="293" width="12" height="15" fill="#4caf50"/>
+    <line x1="420" y1="275" x2="420" y2="295" stroke="#888" stroke-width="1"/>
+    <rect x="414" y="278" width="12" height="14" fill="#4caf50"/>
+    <line x1="440" y1="255" x2="440" y2="280" stroke="#888" stroke-width="1"/>
+    <rect x="434" y="258" width="12" height="20" fill="#4caf50"/>
+    <line x1="460" y1="235" x2="460" y2="260" stroke="#888" stroke-width="1"/>
+    <rect x="454" y="238" width="12" height="20" fill="#4caf50"/>
+    <line x1="480" y1="215" x2="480" y2="240" stroke="#888" stroke-width="1"/>
+    <rect x="474" y="218" width="12" height="20" fill="#4caf50"/>
+    <line x1="500" y1="195" x2="500" y2="220" stroke="#888" stroke-width="1"/>
+    <rect x="494" y="198" width="12" height="20" fill="#4caf50"/>
+    <line x1="520" y1="175" x2="520" y2="200" stroke="#888" stroke-width="1"/>
+    <rect x="514" y="178" width="12" height="20" fill="#4caf50"/>
+
+    <!-- Resistance line near top (right) -->
+    <line x1="400" y1="155" x2="690" y2="155" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="400" y="148" font-family="sans-serif" font-size="9" fill="#555">Resistance (already at top!)</text>
+
+    <!-- Small breakout candle at the very top -->
+    <line x1="545" y1="135" x2="545" y2="165" stroke="#4caf50" stroke-width="1"/>
+    <rect x="538" y="138" width="14" height="20" fill="#4caf50" stroke="#2e7d32"/>
+
+    <!-- A few more candles trying to continue (showing exhaustion) -->
+    <line x1="575" y1="138" x2="575" y2="160" stroke="#888" stroke-width="1"/>
+    <rect x="568" y="142" width="14" height="14" fill="#fff8dc" stroke="#c8a800"/>
+    <line x1="605" y1="135" x2="605" y2="155" stroke="#888" stroke-width="1"/>
+    <rect x="598" y="138" width="14" height="14" fill="#e53935"/>
+
+    <!-- SL line - has to be FAR below at base -->
+    <line x1="400" y1="310" x2="690" y2="310" stroke="#e53935" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="395" y="314" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">SL (टाढा)</text>
+
+    <!-- Next resistance / limited upside -->
+    <line x1="400" y1="115" x2="690" y2="115" stroke="#c8a800" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="690" y="108" text-anchor="end" font-family="sans-serif" font-size="9" fill="#c8a800">Next Resistance (नजिक)</text>
+
+    <!-- Risk-Reward arrows -->
+    <line x1="670" y1="310" x2="670" y2="155" stroke="#e53935" stroke-width="2" marker-end="url(#arr19A)"/>
+    <text x="678" y="240" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">Risk ठूलो</text>
+
+    <line x1="670" y1="155" x2="670" y2="115" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr19B)"/>
+    <text x="678" y="138" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Reward सानो</text>
+
+    <!-- Result -->
+    <rect x="400" y="325" width="290" height="22" fill="#ffe5e0" stroke="#e53935" stroke-width="1" rx="3"/>
+    <text x="545" y="340" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#e53935">Risk ठूलो + Reward सानो → R/R खराब</text>
+
+    <defs>
+      <marker id="arr19A" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#e53935"/>
+      </marker>
+      <marker id="arr19B" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#4caf50"/>
+      </marker>
+    </defs>
+  </svg>
+  <div class="visual-caption">एउटै "breakout" — तर base बाट fresh निस्केको हो कि लामो rally पछि spike हो? Location ले Risk-Reward को quality निर्धारण गर्छ।</div>
+</div>
+
+<p>सातौँ कुरा हो—<strong>Retest।</strong> Breakout पछि price पुरानो Resistance zone मा फर्किन्छ। यदि त्यहाँ seller कम हुन्छन् र buyer फेरि आउँछन् भने पुरानो Resistance नयाँ Support बन्न सक्छ। Retest entry कहिलेकाहीँ safer हुन सक्छ, किनकि risk define गर्न सजिलो हुन्छ। तर सबै Breakout Retest गर्दैनन्। कहिलेकाहीँ price सीधै माथि जान सक्छ। Trader ले chase गर्ने कि wait गर्ने भन्ने निर्णय Risk-Reward र plan अनुसार गर्नुपर्छ।</p>
+
+<!-- VISUAL 4: Entry Decision Flow - Immediate vs Wait for Retest -->
+<div class="visual-block">
+  <div class="visual-title">Breakout आयो — Entry कहिले? Decision Flow</div>
+  <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="380" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Breakout candle देखेर तुरुन्त किन्ने कि Retest पर्खिने?</text>
+
+    <!-- Start node -->
+    <rect x="280" y="50" width="160" height="44" fill="#f0e6c0" stroke="#c9b97a" stroke-width="2" rx="22"/>
+    <text x="360" y="69" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#111">Breakout देखियो</text>
+    <text x="360" y="84" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(close + volume confirmed)</text>
+
+    <!-- Arrow down -->
+    <line x1="360" y1="94" x2="360" y2="115" stroke="#111" stroke-width="1.5" marker-end="url(#arr19F)"/>
+
+    <!-- Decision diamond: Risk-Reward मिल्छ? -->
+    <polygon points="360,120 460,165 360,210 260,165" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="360" y="160" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">Risk-Reward</text>
+    <text x="360" y="175" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">मिल्छ?</text>
+
+    <!-- NO branch left -->
+    <line x1="260" y1="165" x2="160" y2="165" stroke="#e53935" stroke-width="1.5" marker-end="url(#arr19FR)"/>
+    <text x="210" y="158" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#e53935">NO</text>
+
+    <rect x="50" y="145" width="115" height="44" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="6"/>
+    <text x="107" y="164" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#e53935">SKIP</text>
+    <text x="107" y="180" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Chase नगर्ने</text>
+
+    <!-- YES branch down -->
+    <line x1="360" y1="210" x2="360" y2="235" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr19FG)"/>
+    <text x="375" y="225" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">YES</text>
+
+    <!-- Second decision: Price overextended? -->
+    <polygon points="360,240 460,285 360,330 260,285" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="360" y="280" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">Price धेरै</text>
+    <text x="360" y="295" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">overextended?</text>
+
+    <!-- YES - go wait for retest (right branch) -->
+    <line x1="460" y1="285" x2="555" y2="285" stroke="#c8a800" stroke-width="1.5" marker-end="url(#arr19FY)"/>
+    <text x="505" y="278" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#c8a800">YES</text>
+
+    <rect x="555" y="263" width="120" height="44" fill="#fff8dc" stroke="#c8a800" stroke-width="2" rx="6"/>
+    <text x="615" y="282" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#c8a800">WAIT for Retest</text>
+    <text x="615" y="298" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Better R/R चाहिन्छ</text>
+
+    <!-- NO - immediate entry (left branch / down) -->
+    <line x1="260" y1="285" x2="165" y2="285" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr19FG)"/>
+    <text x="210" y="278" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">NO</text>
+
+    <rect x="45" y="263" width="120" height="44" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="6"/>
+    <text x="105" y="282" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">Immediate Entry</text>
+    <text x="105" y="298" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">SL define + Size</text>
+
+    <!-- Bottom note -->
+    <rect x="40" y="330" width="640" height="40" fill="#fdf6e3" stroke="#c9b97a" stroke-width="1" rx="3"/>
+    <text x="360" y="349" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#111">हरेक "YES" को साथ Stop Loss र Position Size अनिवार्य</text>
+    <text x="360" y="362" text-anchor="middle" font-family="sans-serif" font-size="10" font-style="italic" fill="#555">Entry चाहे immediate होस् वा Retest — risk plan पहिले define भएको हुनुपर्छ</text>
+
+    <defs>
+      <marker id="arr19F" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#111"/>
+      </marker>
+      <marker id="arr19FR" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#e53935"/>
+      </marker>
+      <marker id="arr19FG" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#4caf50"/>
+      </marker>
+      <marker id="arr19FY" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#c8a800"/>
+      </marker>
+    </defs>
+  </svg>
+  <div class="visual-caption">हरेक Breakout मा "तुरुन्त किन्नुपर्छ" भन्ने pressure हुन्छ — तर Risk-Reward र Location अनुसार Wait पनि सबल strategy हो; Missed move ≠ loss।</div>
+</div>
+
+<p>आठौँ कुरा हो—<strong>Stop Loss placement।</strong> Breakout trade मा Stop Loss कहाँ राख्ने भन्ने धेरै महत्वपूर्ण छ। केही trader Breakout candle को low तल राख्छन्। केही trader base support वा recent Higher Low तल राख्छन्। Stop Loss धेरै tight राख्दा normal Retest मा hit हुन सक्छ। धेरै wide राख्दा risk धेरै हुन्छ। त्यसैले structure-based Stop Loss र Position Sizing जोडेर सोच्नुपर्छ।</p>
+
+<!-- VISUAL 5: Stop Loss Placement Options in Breakout Trade -->
+<div class="visual-block">
+  <div class="visual-title">Breakout Trade मा Stop Loss कहाँ राख्ने? — 3 Options</div>
+  <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="340" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">SL placement मा trade-off: सानो SL = धेरै Retest risk, ठूलो SL = धेरै capital risk</text>
+
+    <!-- Reference price levels - shared chart -->
+    <!-- Resistance/Breakout level -->
+    <line x1="60" y1="120" x2="500" y2="120" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="65" y="115" font-family="sans-serif" font-size="9" fill="#555">Breakout Level</text>
+
+    <!-- Base candles -->
+    <line x1="100" y1="130" x2="100" y2="170" stroke="#888" stroke-width="1"/>
+    <rect x="93" y="135" width="14" height="30" fill="#4caf50"/>
+    <line x1="130" y1="125" x2="130" y2="175" stroke="#888" stroke-width="1"/>
+    <rect x="123" y="130" width="14" height="40" fill="#e53935"/>
+    <line x1="160" y1="130" x2="160" y2="170" stroke="#888" stroke-width="1"/>
+    <rect x="153" y="135" width="14" height="30" fill="#4caf50"/>
+    <line x1="190" y1="128" x2="190" y2="172" stroke="#888" stroke-width="1"/>
+    <rect x="183" y="133" width="14" height="33" fill="#e53935"/>
+
+    <!-- Breakout candle -->
+    <line x1="225" y1="80" x2="225" y2="135" stroke="#4caf50" stroke-width="1.5"/>
+    <rect x="215" y="85" width="20" height="40" fill="#4caf50" stroke="#2e7d32" stroke-width="1"/>
+
+    <!-- Entry point marker -->
+    <circle cx="225" cy="85" r="5" fill="#111" stroke="#fff" stroke-width="1.5"/>
+    <text x="225" y="68" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#111">Entry</text>
+
+    <!-- After breakout candles -->
+    <line x1="265" y1="70" x2="265" y2="100" stroke="#888" stroke-width="1"/>
+    <rect x="258" y="75" width="14" height="22" fill="#4caf50"/>
+    <line x1="295" y1="65" x2="295" y2="90" stroke="#888" stroke-width="1"/>
+    <rect x="288" y="68" width="14" height="20" fill="#4caf50"/>
+
+    <!-- THREE SL OPTIONS - colored lines -->
+    <!-- Option A: TIGHT - just below breakout candle low -->
+    <line x1="60" y1="135" x2="500" y2="135" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="495" y="132" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">SL-A: Tight</text>
+
+    <!-- Option B: MEDIUM - below recent HL -->
+    <line x1="60" y1="175" x2="500" y2="175" stroke="#c8a800" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="495" y="172" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">SL-B: Medium</text>
+
+    <!-- Option C: WIDE - below base support -->
+    <line x1="60" y1="200" x2="500" y2="200" stroke="#e53935" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="495" y="197" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">SL-C: Wide</text>
+
+    <!-- Three explanation cards on the right -->
+    <!-- Card A: TIGHT SL -->
+    <rect x="40" y="225" width="210" height="95" fill="#eaf6ea" stroke="#4caf50" stroke-width="1.5" rx="4"/>
+    <text x="50" y="244" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">A. Tight SL</text>
+    <text x="50" y="259" font-family="sans-serif" font-size="9" fill="#111">📍 Breakout candle low तल</text>
+    <text x="50" y="275" font-family="sans-serif" font-size="9" font-weight="700" fill="#111">✓ Pro: Risk सानो, R/R राम्रो</text>
+    <text x="50" y="290" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">✗ Con: Normal Retest मा</text>
+    <text x="50" y="303" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">    SL hit हुन सक्छ</text>
+    <text x="50" y="316" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">For: Confident trader</text>
+
+    <!-- Card B: MEDIUM SL -->
+    <rect x="255" y="225" width="210" height="95" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5" rx="4"/>
+    <text x="265" y="244" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#c8a800">B. Medium SL</text>
+    <text x="265" y="259" font-family="sans-serif" font-size="9" fill="#111">📍 Recent Higher Low तल</text>
+    <text x="265" y="275" font-family="sans-serif" font-size="9" font-weight="700" fill="#111">✓ Pro: Structure-based</text>
+    <text x="265" y="288" font-family="sans-serif" font-size="9" font-weight="700" fill="#111">✓ Retest tolerable</text>
+    <text x="265" y="303" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">~ Balanced approach</text>
+    <text x="265" y="316" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">For: Most setups</text>
+
+    <!-- Card C: WIDE SL -->
+    <rect x="470" y="225" width="210" height="95" fill="#ffe5e0" stroke="#e53935" stroke-width="1.5" rx="4"/>
+    <text x="480" y="244" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#e53935">C. Wide SL</text>
+    <text x="480" y="259" font-family="sans-serif" font-size="9" fill="#111">📍 Base support तल</text>
+    <text x="480" y="275" font-family="sans-serif" font-size="9" font-weight="700" fill="#111">✓ Pro: Volatility absorb</text>
+    <text x="480" y="290" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">✗ Con: Position Size सानो</text>
+    <text x="480" y="303" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">    Capital risk बढी</text>
+    <text x="480" y="316" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">For: High-conviction setup</text>
+  </svg>
+  <div class="visual-caption">कुनै एउटा "सही" SL छैन — हरेक option मा trade-off हुन्छ; Position Size SL distance अनुसार adjust गर्नुपर्छ, ताकि per-trade risk सधैं नियन्त्रणमा रहोस्।</div>
+</div>
+
+<p>नवौँ कुरा हो—<strong>Breakout failure।</strong> यदि Breakout पछि price फेरि level तल close हुन्छ, Volume selling आउँछ, and next candle weak हुन्छ भने Breakout fail हुन सक्छ। यस्तो अवस्थामा ego लगाउनु हुँदैन। Failed Breakout मा trapped buyers seller बन्न सक्छन्, जसले price तल धकेल्न सक्छ।</p>
+
+<p>Breakout trading को professional approach यस्तो हुन्छ:</p>
+
+<ul>
+  <li>पहिले level identify गर्नु।</li>
+  <li>त्यसपछि price level नजिक कसरी व्यवहार गर्छ हेर्नु।</li>
+  <li>Volume compression वा base formation छ कि छैन हेर्नु।</li>
+  <li>Breakout candle को close र Volume जाँच्नु।</li>
+  <li>Market र sector context मिल्छ कि छैन हेर्नु।</li>
+  <li>Risk-Reward calculate गर्नु।</li>
+  <li>Entry immediate गर्ने कि Retest पर्खिने निर्णय गर्नु।</li>
+  <li>Stop Loss र Position Size पहिले define गर्नु।</li>
+  <li>Trade चलेपछि plan अनुसार manage गर्नु।</li>
+</ul>
+
+<p>Breakout मा excitement धेरै हुन्छ, तर <strong>excitement decision होइन।</strong> Breakout trader को सबैभन्दा ठूलो शक्ति patience र confirmation हो।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Breakout trading धेरै लोकप्रिय छ। धेरै trader Resistance Breakout, base Breakout, sector Breakout, and volume Breakout खोज्छन्। तर NEPSE मा Fake Breakout पनि धेरै देखिन्छ, विशेष गरी low liquidity stock, social media hype भएका stock, and sector rally को अन्तिम चरणमा।</p>
+
+<p>NEPSE मा Breakout हेर्दा पहिले NEPSE index को अवस्था हेर्नुपर्छ। यदि index itself Resistance माथि Breakout गर्दैछ, Volume राम्रो छ, and market breadth बलियो छ भने individual Breakout को chance राम्रो हुन सक्छ। यदि index weak छ वा major Resistance नजिक reject हुँदैछ भने individual stock Breakout मा सावधानी चाहिन्छ।</p>
+
+<p>Sector context अत्यन्त महत्वपूर्ण छ। यदि Hydropower sector बलियो Breakout मा छ भने Hydropower stock हरूमा momentum आउन सक्छ। यदि Insurance sector weak छ भने त्यही sector को individual Breakout कमजोर हुन सक्छ। Strong sector भित्र strong stock Breakout खोज्नु practical approach हो।</p>
+
+<p>NEPSE मा Breakout भन्दा पहिले धेरै stock base बनाउँछन्। Price लामो समय range मा बस्छ, Volume सुक्छ, discussion कम हुन्छ, अनि एक दिन strong candle र Volume सहित Breakout हुन्छ। यस्तो base Breakout राम्रो setup हुन सक्छ, यदि market context supportive छ र Risk-Reward मिल्छ।</p>
+
+<p>तर NEPSE मा operator trap पनि सम्भव छ। Price Resistance माथि लगिन्छ, social media मा चर्चा बढ्छ, retail buyer प्रवेश गर्छन्, अनि price फेरि level तल आउँछ। Upper wick, weak close, sudden Volume spike, and next-day selling यस्ता trap का warning हुन सक्छन्।</p>
+
+<p>NEPSE मा circuit movement हुँदा Breakout मा Entry गर्न गाह्रो हुन सक्छ। Price तेजीले माथि जान्छ, तर proper Entry, Stop Loss, and Risk-Reward मिल्दैन। Beginner circuit chase गरेर late buyer बन्न सक्छन्। Breakout हो भन्दैमा कुनै पनि price मा किन्नु professional trading होइन।</p>
+
+<p>TMS execution पनि practical issue हो। Breakout day मा price fast move हुन सक्छ। हतारमा गलत price वा quantity हाल्ने गल्ती हुन सक्छ। Order execute भयो कि pending छ check गर्नुपर्छ। Breakout trading मा excitement भन्दा process important हुन्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Breakout psychology धेरै शक्तिशाली हुन्छ। Resistance zone मा पहिले seller बलियो थिए। जब price Resistance माथि जान्छ, buyer उत्साहित हुन्छन्। पहिले wait गरिरहेका trader Entry गर्न थाल्छन्। पुराना short-term seller घबराउन सक्छन्। पहिले Resistance मा फसेका holder break-even वा profit मा बेच्न आउन सक्छन्। यही battle ले Breakout को quality निर्धारण गर्छ।</p>
+
+<p>Real Breakout मा buyer supply absorb गर्न सक्षम हुन्छन्। Price level माथि sustain हुन्छ। Pullback आए पनि buyer defend गर्छन्। Volume healthy हुन्छ। Market support गर्छ।</p>
+
+<p>Fake Breakout मा buyer सुरुमा उत्साहित हुन्छन्, तर follow-through आउँदैन। Seller माथि सक्रिय हुन्छन्। Price फेरि range भित्र फर्किन्छ। अब Breakout मा किनेका trader trapped हुन्छन्। उनीहरूको Stop Loss hit हुँदा selling pressure बढ्न सक्छ।</p>
+
+<p>Beginner को मन Breakout मा धेरै emotional हुन्छ। उसलाई लाग्छ, <strong>“अब move छुट्यो भने म पछि पर्छु।”</strong> यही FOMO ले ऊ level माथि धेरै late Entry गर्छ। यदि price तुरुन्त माथि गएन भने ऊ डराउँछ। यदि price Retest मा आयो भने उसले panic sell गर्छ। यदि price Fake Breakout भयो भने ऊ hold गर्छ, किनकि उसलाई आफ्नो Entry गलत भएको स्वीकार्न गाह्रो हुन्छ।</p>
+
+<p>Professional trader Breakout मा पनि शान्त हुन्छ। ऊ पहिले नै level mark गरेर बसेको हुन्छ। Breakout आएपछि ऊ checklist प्रयोग गर्छ। Volume, close, market, sector, Stop Loss, Risk-Reward सबै हेर्छ। यदि entry missed भयो भने ऊ chase गर्दैन। उसलाई थाहा छ—<strong>missed move loss होइन।</strong></p>
+
+<p>Breakout मा greed पनि आउँछ। Trader profit मा गएपछि plan अनुसार partial exit नगरी <strong>“अझै जान्छ”</strong> भन्छ। तर Breakout trade मा पनि pullback आउन सक्छ। त्यसैले profit management plan चाहिन्छ।</p>
+
+<p>Breakout trading को psychology lesson हो—<strong>Breakout excitement होइन, evidence हो।</strong> Evidence पूरा छैन भने wait। Evidence पूरा छ भने risk define। Evidence fail भयो भने exit।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Resistance माथि price जानु मात्र Breakout मान्नु। Close confirmation चाहिन्छ।</p>
+
+<p>दोस्रो गल्ती हो—Volume नहेरी Breakout trade गर्नु। Volume बिना Breakout weak हुन सक्छ।</p>
+
+<p>तेस्रो गल्ती हो—Upper wick भएको weak candle मा Entry गर्नु। Price माथि गयो तर close कमजोर भयो भने seller pressure हुन सक्छ।</p>
+
+<p>चौथो गल्ती हो—Market र sector नहेर्नु। Weak NEPSE वा weak sector मा Breakout fail हुन सक्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Late Entry गर्नु। Price धेरै भागिसकेपछि chase गर्दा Stop Loss टाढा र Risk-Reward खराब हुन्छ।</p>
+
+<p>छैटौँ गल्ती हो—Retest को possibility नबुझ्नु। Breakout पछि price level test गर्न फर्किन सक्छ। Tight Stop Loss सामान्य Retest मा hit हुन सक्छ।</p>
+
+<p>सातौँ गल्ती हो—Stop Loss नराख्नु। Breakout fail भयो भने loss छिटो बढ्न सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Fake Breakout मा ego लगाउनु। Breakout fail भएपछि hold गर्नु dangerous हुन्छ।</p>
+
+<p>नवौँ गल्ती हो—Low liquidity stock मा Breakout signal trust गर्नु। Thin volume मा price level cross गर्नु meaningful नहुन सक्छ।</p>
+
+<p>दशौँ गल्ती हो—Social media hype लाई Breakout confirmation मान्नु। Chart, Volume, close, and market context नै confirmation हुन्।</p>
+
+<p>एघारौँ गल्ती हो—Breakout day मा quantity धेरै राख्नु। Volatility धेरै हुन सक्छ; Position Sizing अनिवार्य छ।</p>
+
+<p>बाह्रौँ गल्ती हो—Target plan नहुनु। Breakout trade profit मा गएपछि कहाँ partial exit, कहाँ trailing Stop, कहाँ final exit भन्ने plan चाहिन्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Resistance माथि price गएको मात्र Breakout होइन</div>
+  <p style="margin-bottom:0;">Price एक मिनेटको लागि Resistance माथि गयो र फेरि तल आयो — त्यो <strong>level touch</strong> हो, Breakout होइन। Breakout valid हुन: candle <strong>close</strong> level माथि हुनुपर्छ, Volume average भन्दा बढी हुनुपर्छ, candle quality strong हुनुपर्छ, र अर्को दिन/candle ले sustain गर्नुपर्छ। यी मध्ये कुनै एक मिलेन भने त्यो Breakout होइन — त्यो potential trap हो।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Breakout trade गर्दा यी rules अपनाउनुहोस्:</p>
+
+<ul>
+  <li>पहिले important Resistance वा range high mark गर्नुहोस्।</li>
+  <li>Breakout level meaningful छ कि छैन जाँच्नुहोस्।</li>
+  <li>Price level माथि close भयो कि छैन हेर्नुहोस्।</li>
+  <li>Breakout candle को body, wick, and close quality पढ्नुहोस्।</li>
+  <li>Volume average भन्दा राम्रो छ कि छैन हेर्नुहोस्।</li>
+  <li>NEPSE index supportive छ कि छैन हेर्नुहोस्।</li>
+  <li>Sector strength confirm गर्नुहोस्।</li>
+  <li>Price धेरै overextended छ कि छैन जाँच्नुहोस्।</li>
+  <li>Risk-Reward नमिले Breakout chase नगर्नुहोस्।</li>
+  <li>Entry immediate गर्ने कि Retest पर्खिने plan बनाउनुहोस्।</li>
+  <li>Stop Loss structure अनुसार define गर्नुहोस्।</li>
+  <li>Position Size Stop Loss distance अनुसार मिलाउनुहोस्।</li>
+  <li>Breakout fail भयो भने ego नलगाउनुहोस्।</li>
+  <li>Upper wick + weak close + next day selling = caution।</li>
+  <li>Low liquidity Breakout मा सावधानी अपनाउनुहोस्।</li>
+  <li>Social media hype भन्दा chart evidenceलाई प्राथमिकता दिनुहोस्।</li>
+  <li>Trade entry अघि exit plan बनाउनुहोस्।</li>
+  <li>Profit आएपछि partial exit वा trailing rule प्रयोग गर्ने योजना बनाउनुहोस्।</li>
+</ul>
+
+<p>Breakout को मुख्य rule हो—<strong>Breakout देखेर उत्साहित हुनु स्वाभाविक हो, तर Entry केवल evidence र risk plan पूरा भएपछि मात्र गर्नुपर्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Valid Breakout</strong></p>
+<p>एउटा stock 2 महिनादेखि Rs. 500 Resistance तल base बनाइरहेको छ। Price बारम्बार Rs. 500 नजिक reject भएको छ। Volume बिस्तारै सुक्दै गएको छ। एक दिन price Rs. 500 माथि strong green candle सहित Rs. 520 मा close हुन्छ। Volume average भन्दा धेरै छ। Candle close high नजिक छ। Sector पनि बलियो छ। NEPSE index stable छ।</p>
+<p>यो possible valid Breakout setup हो। Trader ले Entry गर्ने हो भने Stop Loss कहाँ राख्ने, Risk-Reward कति छ, Position Size कति राख्ने, and Retest आउन सक्छ कि छैन भनेर plan गर्नुपर्छ।</p>
+
+<p><strong>Scenario 2: Fake Breakout</strong></p>
+<p>Stock Rs. 700 Resistance नजिक थियो। एक दिन price Rs. 725 सम्म गयो, तर close Rs. 695 मा भयो। Candle मा लामो upper wick छ। Volume अचानक धेरै छ। Social media मा stock को चर्चा धेरै छ। अर्को दिन price Rs. 680 मा खुल्छ र selling आउँछ।</p>
+<p>यो Fake Breakout को सम्भावना हो। Resistance माथि price गएको थियो, तर close टिकेन। Buyer trapped हुन सक्छन्। यस्तो अवस्थामा beginner late entry गर्छन्, professional trader caution लिन्छ।</p>
+
+<p><strong>Scenario 3: Breakout with Retest</strong></p>
+<p>Stock Rs. 350 Resistance माथि Rs. 365 मा close भयो। Volume राम्रो थियो। अर्को दुई दिन price Rs. 350–355 zone मा फर्कियो। Selling Volume कम थियो। Price Rs. 350 तल close भएन। त्यसपछि buyer फेरि आए र price Rs. 375 पुग्यो।</p>
+<p>यहाँ पुरानो Resistance future Support बनेको देखिन्छ। Retest entry ले Stop Loss define गर्न सजिलो बनाउन सक्छ। तर Retest पनि guarantee होइन; buyer reaction चाहिन्छ।</p>
+
+<p><strong>Scenario 4: Overextended Breakout</strong></p>
+<p>Stock Rs. 400 बाट Rs. 520 सम्म पहिले नै धेरै छिटो बढिसकेको छ। त्यसपछि Rs. 525 Resistance माथि सानो Breakout देखिन्छ। Volume spike छ, तर price धेरै overextended छ। Stop Loss Rs. 480 राख्नुपर्छ भने risk धेरै हुन्छ। Target नजिक अर्को Resistance Rs. 550 छ। Risk-Reward कमजोर छ। यस्तो Breakout avoid गर्न सकिन्छ।</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:18%;">Feature</th>
+      <th style="width:27%;">Valid Breakout ✓</th>
+      <th style="width:27%;">Weak Breakout ⚠</th>
+      <th style="width:28%;">Fake Breakout ✗</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Candle Close</strong></td>
+      <td>Level माथि, high नजिक</td>
+      <td>Level नजिक</td>
+      <td>Level तल वा बीच</td>
+    </tr>
+    <tr>
+      <td><strong>Upper Wick</strong></td>
+      <td>सानो वा छैन</td>
+      <td>मध्यम</td>
+      <td>लामो (rejection)</td>
+    </tr>
+    <tr>
+      <td><strong>Body</strong></td>
+      <td>ठूलो, solid</td>
+      <td>सानो</td>
+      <td>धेरै सानो</td>
+    </tr>
+    <tr>
+      <td><strong>Volume</strong></td>
+      <td>Average भन्दा बढी</td>
+      <td>Average</td>
+      <td>Spike but weak close</td>
+    </tr>
+    <tr>
+      <td><strong>Market Context</strong></td>
+      <td>Index/sector supportive</td>
+      <td>Mixed</td>
+      <td>Weak / overextended</td>
+    </tr>
+    <tr>
+      <td><strong>Next Day</strong></td>
+      <td>Sustain / healthy Retest</td>
+      <td>Sideways</td>
+      <td>Price level तल आउँछ</td>
+    </tr>
+    <tr>
+      <td><strong>Trader Action</strong></td>
+      <td>Plan अनुसार Entry + SL</td>
+      <td>Wait, confirmation</td>
+      <td>Skip / Exit fast</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Breakout Trading Checklist</div>
+
+  <div class="checklist-sub">Breakout अघि:</div>
+  <ul>
+    <li>Resistance वा range high clear छ?</li>
+    <li>Level धेरै पटक test भएको छ?</li>
+    <li>Base वा consolidation बनेको छ?</li>
+    <li>Volume compression देखिएको छ?</li>
+    <li>Stock trend strong छ?</li>
+    <li>Sector supportive छ?</li>
+    <li>NEPSE index supportive छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Breakout candle मा:</div>
+  <ul>
+    <li>Price level माथि गएको छ?</li>
+    <li>Candle close level माथि भयो?</li>
+    <li>Close high नजिक छ?</li>
+    <li>Body strong छ?</li>
+    <li>Upper wick धेरै ठूलो त छैन?</li>
+    <li>Volume average भन्दा राम्रो छ?</li>
+    <li>Candle overextended zone मा बनेको त छैन?</li>
+  </ul>
+
+  <div class="checklist-sub">Entry अघि:</div>
+  <ul>
+    <li>Entry immediate गर्ने कि Retest पर्खिने?</li>
+    <li>Stop Loss कहाँ राख्ने?</li>
+    <li>Stop Loss distance धेरै त छैन?</li>
+    <li>Position Size calculated छ?</li>
+    <li>Risk-Reward कम्तीमा acceptable छ?</li>
+    <li>Liquidity पर्याप्त छ?</li>
+    <li>Order हतारमा राखिएको त छैन?</li>
+    <li>यो trade FOMO हो कि plan?</li>
+  </ul>
+
+  <div class="checklist-sub">Breakout पछि:</div>
+  <ul>
+    <li>Price level माथि sustain भयो?</li>
+    <li>Retest आयो भने buyer आए?</li>
+    <li>Price फेरि range भित्र close भयो?</li>
+    <li>Selling Volume बढ्यो?</li>
+    <li>Fake Breakout warning छ?</li>
+    <li>Profit booking plan छ?</li>
+    <li>Trailing Stop plan छ?</li>
+    <li>Trade journal मा record गरिएको छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: 10 Stock Resistance Mapping</div>
+  <p>कुनै 10 वटा NEPSE stock को chart खोल्नुहोस् र Resistance level mark गर्नुहोस्। प्रत्येक chart मा लेख्नुहोस्:</p>
+  <ul>
+    <li>Resistance कहाँ छ?</li>
+    <li>Price त्यहाँ कति पटक reject भएको छ?</li>
+    <li>Volume behavior कस्तो छ?</li>
+    <li>Breakout आएको छ कि अझै पर्खिनुपर्ने छ?</li>
+    <li>Breakout आए Stop Loss कहाँ हुन सक्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Find 5 Successful Breakouts</div>
+  <p>5 वटा successful Breakout example खोज्नुहोस्। प्रत्येकमा mark गर्नुहोस्:</p>
+  <ul>
+    <li>Resistance level</li>
+    <li>Breakout candle</li>
+    <li>Volume</li>
+    <li>Close position</li>
+    <li>Retest आएको थियो कि थिएन</li>
+    <li>Target area</li>
+    <li>Stop Loss area</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Find 5 Fake Breakouts</div>
+  <p>5 वटा Fake Breakout example खोज्नुहोस्। प्रत्येकमा लेख्नुहोस्:</p>
+  <ul>
+    <li>Price level माथि गयो?</li>
+    <li>Close कहाँ भयो?</li>
+    <li>Upper wick थियो?</li>
+    <li>Volume spike थियो?</li>
+    <li>अर्को candle कस्तो आयो?</li>
+    <li>Beginner कहाँ फस्न सक्थे?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Paper Trade One Breakout Setup</div>
+  <p>एउटा Breakout setup paper trade गर्नुहोस्। Real पैसा नहालेर notebook मा लेख्नुहोस्:</p>
+  <ul>
+    <li>Entry price</li>
+    <li>Stop Loss</li>
+    <li>Target</li>
+    <li>Risk per share</li>
+    <li>Position Size</li>
+    <li>Risk-Reward</li>
+    <li>Reason for trade</li>
+    <li>Invalid condition</li>
+    <li>Result after 5–10 trading days</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Past Breakout Trade Review</div>
+  <p>आफ्नो पुरानो कुनै Breakout trade review गर्नुहोस्:</p>
+  <ul>
+    <li>Breakout valid थियो कि weak?</li>
+    <li>Volume थियो?</li>
+    <li>Close strong थियो?</li>
+    <li>म FOMO मा थिएँ?</li>
+    <li>Stop Loss थियो?</li>
+    <li>Breakout fail हुँदा मैले exit गरें कि hold गरें?</li>
+    <li>अब त्यही setup आए म के फरक गर्छु?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Breakout trading आकर्षक हुन्छ, तर यही ठाउँमा धेरै beginner trap मा पर्छन्। Breakout देख्नेबित्तिकै किन्नु professional trading होइन। Breakout evidence पूरा भएपछि risk define गरेर trade गर्नु professional trading हो।</p>
+  <p>Resistance माथि price जानु पहिलो संकेत हो। Close confirmation, Volume, candle quality, market context, sector strength, sustain, Retest behavior, and Risk-Rewardले Breakout को quality निर्धारण गर्छन्।</p>
+  <p>Real Breakout मा buyer supply absorb गर्छन्। Fake Breakout मा price माथि गएर टिक्न सक्दैन र trapped buyers पछि seller बन्न सक्छन्। यही कारण Breakout failure लाई हल्का रूपमा लिनु हुँदैन।</p>
+  <p style="margin-bottom:0;">Breakout मा missed move लाई loss नसम्झनुहोस्। तपाईंको capital बच्यो भने अर्को setup आउँछ। तर FOMO मा किनेको Fake Breakoutले capital र confidence दुवै घटाउन सक्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 19 Summary</div>
+  <p>Breakout भनेको price पहिले रोकिएको महत्वपूर्ण Resistance, range high, base, trendline, वा chart pattern माथि निस्कनु हो। तर price level माथि जानु मात्र Breakout होइन। Valid Breakout का लागि close confirmation, Volume, candle quality, market context, sector strength, sustain, Stop Loss, and Risk-Reward आवश्यक हुन्छ।</p>
+  <p>Breakout buyer strength र supply absorption को संकेत हुन सक्छ। Resistance zone मा seller active हुन्छन्। यदि buyer त्यो supply absorb गरेर price level माथि sustain गराउन सक्छन् भने Breakout meaningful हुन सक्छ। यदि price माथि गएर टिक्न सकेन भने Fake Breakout हुन सक्छ।</p>
+  <p>NEPSE मा Breakout trading गर्दा index, sector, stock structure, Volume, liquidity, social media hype, and operator trap को सम्भावना ध्यान दिनुपर्छ। Low liquidity stock मा Breakout signal misleading हुन सक्छ। Sector strength बिना individual Breakout कमजोर हुन सक्छ।</p>
+  <p>Breakout trade मा Entry भन्दा पहिले Stop Loss र Position Size define गर्नुपर्छ। Breakout पछि Retest आउन सक्छ। Retest मा buyer reaction आए पुरानो Resistance नयाँ Support बन्न सक्छ। तर Retest पनि blind buy signal होइन।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Breakout उत्साहको विषय होइन, evidence को विषय हो। Breakout trade लिनु अघि level, close, Volume, context, and risk सबै जाँच्नुहोस्। Fake Breakout बाट बच्नु Breakout trading को आधा सफलता हो।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader Breakout देखेर दौडिँदैन;<br>
+  ऊ Breakout को शक्ति, Volume, close, Retest,<br>
+  market context, र आफ्नो risk पढेर<br>
+  मात्र कदम चाल्छ।
+</div>
+
+</div>
+</body>
+</html>

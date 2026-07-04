@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 2: NEPSE कसरी चल्छ? — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.chart-placeholder { background: #fffdf5; border: 2px dashed #c9b97a; border-radius: 4px; padding: 40px 24px; margin: 24px 0; text-align: center; color: #555; font-style: italic; font-size: 14.5px; }
+.chart-placeholder::before { content: "📊"; display: block; font-size: 24px; margin-bottom: 10px; font-style: normal; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 30px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 2: FOUNDATION</div>
+  <h1 class="chapter-title">NEPSE कसरी चल्छ?</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>बिहान market खुल्नु अघि एकजना beginner trader ले आफ्नो मोबाइल खोलेर TMS login गर्छ। उसले अघिल्लो दिन Facebook group मा धेरै चर्चा भएको एउटा share हेर्छ। सबैले लेखिरहेका छन्, <strong>“आज त upper circuit जान्छ।”</strong> उसको मनमा excitement आउँछ। Market खुल्नेबित्तिकै price माथि जान थाल्छ। उसले हतारमा buy order राख्छ।</p>
+
+<p>तर केही समयपछि price माथि जान छोड्छ। धेरै seller आउन थाल्छन्। Price बिस्तारै घट्न थाल्छ। उसले सोच्छ, <strong>“अलि बेरमा फर्किन्छ होला।”</strong> दिनको अन्त्यसम्म price रातो हुन्छ। उसलाई अचम्म लाग्छ—<strong>“सबैले त बढ्छ भनेका थिए, अनि कसरी घट्यो?”</strong></p>
+
+<p>त्यो trader ले एउटा महत्वपूर्ण कुरा बुझेको थिएन—NEPSE कसैको हल्ला अनुसार चल्दैन। NEPSE demand, supply, order, buyer, seller, liquidity, market sentiment, sector movement, policy expectation, interest rate, news, psychology, र capital flow को संयुक्त असरबाट चल्छ।</p>
+
+<p>NEPSE बुझ्नु भनेको केवल index number हेर्नु होइन। NEPSE कसरी चल्छ भन्ने कुरा बुझ्नु भनेको बजारभित्र पैसा, डर, लोभ, order, Volume, र sentiment कसरी काम गर्छ भन्ने कुरा बुझ्नु हो।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>NEPSE कसरी चल्छ भन्ने कुरा नबुझी individual stock मा trade गर्नु अँध्यारो कोठामा बाटो खोज्नु जस्तै हो। धेरै trader हरू सिधै stock chart हेर्छन्, तर overall market कस्तो छ भनेर हेर्दैनन्। यही कारणले राम्रो देखिएको stock पनि fail हुन सक्छ।</p>
+
+<p>कुनै पनि stock एक्लै चल्दैन। त्यो stock NEPSE को वातावरणभित्र चल्छ। यदि overall NEPSE कमजोर छ, sector कमजोर छ, market मा liquidity कम छ, investor sentiment डराएको छ भने राम्रो chart setup पनि कमजोर हुन सक्छ। त्यसैले trader ले stock हेर्नुअघि market बुझ्नुपर्छ।</p>
+
+<p>यो chapter ले NEPSE को basic working system, buyer-seller mechanism, index movement, sector behavior, order matching, market sentiment, Volume, liquidity, र practical trading context बुझाउँछ। यो ज्ञान बिना Breakout, Pullback, Support, Resistance, Sector Rotation, र Market Cycle बुझ्न गाह्रो हुन्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>NEPSE अर्थात् <strong>Nepal Stock Exchange</strong> नेपालको secondary share market हो, जहाँ listed company का share किनबेच हुन्छन्। कुनै company को share एकपटक public मा issue भएर listed भएपछि investor र trader हरूले broker मार्फत त्यो share किन्न र बेच्न सक्छन्।</p>
+
+<p>NEPSE मा price buyer र seller को order बाट बन्ने गर्छ। कसैले कुनै share किन्न चाहन्छ भने उसले buy order राख्छ। कसैले बेच्न चाहन्छ भने sell order राख्छ। जब buyer र seller को price मिल्छ, transaction हुन्छ। यही transaction हरूको आधारमा share को current price देखिन्छ।</p>
+
+<p>यदि धेरै buyer उच्च price मा किन्न तयार छन् र seller कम छन् भने price माथि जान सक्छ। यदि धेरै seller share बेच्न चाहन्छन् तर buyer कमजोर छन् भने price तल जान सक्छ। यही demand र supply को basic rule ले NEPSE मा price movement बनाउँछ।</p>
+
+<p>NEPSE index भनेको बजारको overall direction देखाउने एउटा मापक हो। Index बढ्नुको अर्थ धेरै वा ठूला weight भएका company हरूको price बढिरहेको हुन सक्छ। Index घट्नुको अर्थ बजारमा selling pressure बढी हुन सक्छ। तर index हरियो हुँदैमा सबै stock बढ्छन् भन्ने होइन, index रातो हुँदैमा सबै stock घट्छन् भन्ने पनि होइन।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>NEPSE लाई राम्रोसँग बुझ्न तीन तहमा हेर्नुपर्छ—<strong>market level, sector level, र stock level।</strong></p>
+
+<p><strong>पहिलो तह market level हो।</strong> यहाँ trader ले NEPSE index कस्तो छ भनेर हेर्छ। Index uptrend मा छ कि downtrend मा? Recent high break गरेको छ कि lower high बनाइरहेको छ? Major support बाट bounce भएको छ कि breakdown भएको छ? Volume बढेको छ कि घटेको छ? Market मा confidence छ कि डर छ? यी प्रश्नले overall trading environment बुझ्न मद्दत गर्छ।</p>
+
+<p><strong>दोस्रो तह sector level हो।</strong> NEPSE मा सबै sector एकैपटक चल्दैनन्। कहिले Banking sector बलियो देखिन्छ, कहिले Hydropower, कहिले Insurance, कहिले Microfinance, कहिले Development Bank वा Finance group चल्छ। Trader ले कुन sector मा पैसा प्रवेश गरिरहेको छ भनेर हेर्नुपर्छ। यदि sector नै कमजोर छ भने त्यो sector को individual stock मा Breakout आए पनि risk बढी हुन सक्छ।</p>
+
+<p><strong>तेस्रो तह stock level हो।</strong> यहाँ trader ले individual company को chart हेर्छ। Trend, Support, Resistance, Volume, Breakout, Pullback, RSI, Moving Average, Candlestick behavior, liquidity, र risk-reward हेरेर trade setup खोज्छ। तर stock level decision market र sector context सँग जोडिनुपर्छ।</p>
+
+<p>NEPSE मा order matching system मार्फत trade execute हुन्छ। Buyer ले एउटा price मा buy order राख्छ, seller ले sell order राख्छ। जब दुवैको price मिल्छ, transaction हुन्छ। यो प्रक्रिया बाहिरबाट सजिलो देखिए पनि trader का लागि यसको practical अर्थ गहिरो हुन्छ। यदि कुनै stock मा buyer धेरै छन् तर seller कम छन् भने price छिटो माथि जान सक्छ। यदि seller धेरै छन् तर buyer कमजोर छन् भने price छिटो तल जान सक्छ।</p>
+
+<p>यही कारणले liquidity महत्वपूर्ण हुन्छ। Liquidity भनेको कुनै share सजिलै किन्न-बेच्न सकिने अवस्था हो। धेरै Volume हुने, धेरै buyer-seller हुने stock मा Entry र Exit तुलनात्मक रूपमा सजिलो हुन सक्छ। तर कम Volume भएको stock मा price देख्दा आकर्षक भए पनि exit गर्न गाह्रो हुन सक्छ। Beginner ले कहिलेकाहीँ low volume stock मा फसेर पछि बेच्न buyer नपाउने समस्या भोग्न सक्छ।</p>
+
+<p>Volume NEPSE चल्ने ऊर्जा जस्तै हो। Price बढ्दै छ तर Volume छैन भने त्यो movement कमजोर हुन सक्छ। Price Resistance break गर्दैछ र Volume पनि बढेको छ भने त्यो movement मा participation आएको संकेत हुन सक्छ। Price घट्दै छ र Volume धेरै छ भने selling pressure बलियो हुन सक्छ। Price घट्दै छ तर Volume सुक्दै गएको छ भने seller कमजोर हुँदै गएको संकेत पनि हुन सक्छ। तर Volume लाई सधैं price structure सँगै पढ्नुपर्छ।</p>
+
+<p>NEPSE मा market sentiment पनि धेरै महत्वपूर्ण हुन्छ। Bullish sentiment हुँदा मानिसहरू positive news लाई धेरै महत्व दिन्छन् र negative news लाई ignore गर्छन्। Bearish sentiment हुँदा राम्रो news आए पनि price धेरै नबढ्न सक्छ। यही कारणले trader ले news मात्र होइन, price ले news लाई कसरी react गर्‍यो भनेर हेर्नुपर्छ।</p>
+
+<p>NEPSE मा price movement कहिलेकाहीँ वास्तविक demand-supply बाट हुन्छ, कहिलेकाहीँ short-term operator activity, hype, rumor, र retail emotion बाट पनि हुन्छ। त्यसैले केवल <strong>“सबैले किन्दैछन्”</strong> भनेर किन्नु खतरनाक हुन सक्छ। सबैभन्दा ठूलो भीड कहिलेकाहीँ top नजिक देखिन्छ, र सबैभन्दा धेरै डर कहिलेकाहीँ bottom नजिक देखिन्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा listed company हरू विभिन्न sector मा विभाजित हुन्छन्। हरेक sector को आफ्नै behavior हुन्छ। Banking sector धेरै ठूला company र market weight भएको sector हुन सक्छ। Hydropower मा project, debt, generation, policy, र sentiment को असर पर्न सक्छ। Insurance मा regulatory changes, premium growth, reserve, capital requirement जस्ता कुराले असर गर्न सक्छ। Microfinance मा growth, dividend expectation, regulation, र sentiment को असर बलियो देखिन सक्छ।</p>
+
+<p>Trader का लागि sector बुझ्नु धेरै उपयोगी हुन्छ। यदि NEPSE index सामान्य छ तर कुनै sector लगातार बलियो Volume सहित माथि गइरहेको छ भने त्यहाँ trading opportunity हुन सक्छ। तर यदि sector कमजोर छ भने individual stock मा आएको सानो green candle लाई ठूलो opportunity सम्झिनु गल्ती हुन सक्छ।</p>
+
+<p>NEPSE मा market hours, trading process, settlement, broker payment, EDIS, WACC, tax, fee, र official system हरू समयसँगै परिवर्तन हुन सक्छन्। त्यसैले कुनै पनि practical transaction अघि updated information official source बाट verify गर्नु आवश्यक हुन्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<p>NEPSE मा धेरै beginner हरूले practical गल्ती गर्छन्। कसैले buy order राख्दा quantity गलत हाल्छन्। कसैले price गलत हाल्छन्। कसैले order pending छ कि executed भयो भनेर बुझ्दैनन्। कसैले share sell गरेपछि EDIS गर्न बिर्सिन्छन्। कसैले WACC update नगरी बेच्दा tax calculation मा confusion गर्छन्। कसैले broker settlement ढिलो हुँदा panic गर्छन्। यी सबै कुरा NEPSE को वास्तविक practical learning हुन्।</p>
+
+<p>त्यसैले NEPSE कसरी चल्छ भन्ने chapter केवल index theory होइन। यो TMS देखि settlement सम्म, chart देखि psychology सम्म, order देखि Volume सम्म, र sector देखि stock selection सम्म जोडिएको विषय हो।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>NEPSE चल्ने तरिका नबुझेको trader प्रायः भीडको पछि लाग्छ। Market हरियो देख्यो भने उसलाई लाग्छ, <strong>“अब त सबै share बढ्छ।”</strong> Market रातो देख्यो भने उसलाई लाग्छ, <strong>“अब सबै सकियो।”</strong> तर बजार यति सरल हुँदैन।</p>
+
+<p>Trader को मन market color बाट धेरै प्रभावित हुन्छ। हरियो candle देख्दा लोभ बढ्छ। रातो candle देख्दा डर बढ्छ। Index बढ्दा overconfidence आउँछ। Index घट्दा panic आउँछ। यही emotion ले trader लाई plan भन्दा बाहिर निर्णय गराउँछ।</p>
+
+<p>NEPSE मा धेरै मानिसहरू price बढेपछि मात्र interest देखाउँछन्। जब price तल हुन्छ, Volume सुक्छ, discussion कम हुन्छ, मानिसहरू डराउँछन्। तर जब price धेरै माथि पुग्छ, social media मा चर्चा बढ्छ, screenshot आउँछ, र FOMO बढ्छ। यही बेला beginner late entry मा फस्न सक्छ।</p>
+
+<p>राम्रो trader ले market हरियो छ भनेर मात्र किन्दैन। ऊ सोध्छ—यो rise healthy हो कि overextended? Volume support छ कि छैन? Sector पनि बलियो छ कि केवल एक-दुई stock चल्दैछन्? Resistance नजिक छ कि breakout भइसकेको छ? Risk-Reward अझै मिल्छ कि अब chase गर्नु परिरहेको छ?</p>
+
+<p>राम्रो trader ले market रातो छ भनेर मात्र डराउँदैन। ऊ सोध्छ—यो normal pullback हो कि trend breakdown? Major support बचिरहेको छ कि छैन? Volume panic selling जस्तो छ कि सामान्य correction? Strong stock हरू पनि घटिरहेका छन् कि weak stock मात्र घटिरहेका छन्? Cash मा बस्ने समय हो कि watchlist बनाउने समय?</p>
+
+<p>NEPSE बुझ्नु भनेको emotion कम गर्नु हो। जब तपाईंलाई market कसरी चल्छ भन्ने थाहा हुन्छ, तपाईं हरेक candle मा डराउनुहुन्न र हरेक green move मा लोभिनुहुन्न।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>NEPSE मा beginner trader ले गर्ने पहिलो गल्ती हो—index नहेरी stock किन्नु। कुनै stock को chart राम्रो देखियो भन्दैमा market condition ignore गर्नु खतरनाक हुन्छ। यदि overall NEPSE bearish phase मा छ भने breakout fail हुने सम्भावना बढ्न सक्छ।</p>
+
+<p>दोस्रो गल्ती हो—sector नबुझी stock छान्नु। यदि sector मा पैसा आएको छैन भने individual stock को move कमजोर हुन सक्छ। Strong sector भित्र strong stock खोज्नु धेरै practical approach हो।</p>
+
+<p>तेस्रो गल्ती हो—Volume नहेरी price movement मा विश्वास गर्नु। Price बढ्दै छ तर Volume कमजोर छ भने त्यो move टिकाउ नहुन सक्छ। Price breakout भएको देखिए पनि Volume confirmation छैन भने fake breakout को risk बढ्छ।</p>
+
+<p>चौथो गल्ती हो—low liquidity stock मा ठूलो capital लगाउनु। Chart मा profit देखिए पनि exit गर्न buyer नपाएपछि समस्या आउन सक्छ। Low volume stock मा price manipulate भएको जस्तो movement पनि देखिन सक्छ।</p>
+
+<p>पाँचौँ गल्ती हो—market sentiment लाई reality सम्झिनु। Bull market मा सबैलाई आफू expert लाग्न सक्छ। Bear market मा सबैलाई market कहिल्यै नबढ्ने जस्तो लाग्न सक्छ। दुवै अवस्था emotion-driven हुन्छन्।</p>
+
+<p>छैटौँ गल्ती हो—TMS र practical process नबुझी trade गर्नु। Order executed भयो कि pending छ, sell गरेपछि EDIS गर्नुपर्छ कि पर्दैन, WACC update भएको छ कि छैन, settlement कहिले हुन्छ—यी कुरा नबुझ्दा unnecessary stress आउन सक्छ।</p>
+
+<p>सातौँ गल्ती हो—news आएपछि late entry गर्नु। धेरै पटक news आउँदासम्म price already move भइसकेको हुन्छ। Trader ले news होइन, news पछि price behavior हेर्नुपर्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ NEPSE मा गर्ने Practical गल्तीहरू</div>
+  <ul style="margin:8px 0 0 24px;">
+    <li>NEPSE index नहेरी सिधै stock trade गर्नु</li>
+    <li>Sector strength ignore गरेर stock छान्नु</li>
+    <li>Volume confirmation बिना breakout मा hop गर्नु</li>
+    <li>Low liquidity stock मा ठूलो position लिनु</li>
+    <li>TMS मा order price/quantity confusion गर्नु</li>
+    <li>Share बेचेपछि EDIS गर्न बिर्सिनु</li>
+    <li>News पछि late entry गरेर operator trap मा फस्नु</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>NEPSE मा trade गर्दा यी practical rules मनमा राख्नुहोस्:</p>
+
+<ul>
+  <li>Stock किन्नुअघि NEPSE index को direction हेर्नुहोस्।</li>
+  <li>Index पछि sector strength जाँच्नुहोस्।</li>
+  <li>Sector बलियो भए मात्र त्यो sector भित्र strong stock खोज्नुहोस्।</li>
+  <li>Price movement लाई Volume सँगै पढ्नुहोस्।</li>
+  <li>Breakout मा Entry गर्नुअघि Resistance, Volume, Retest, र Risk-Reward हेर्नुहोस्।</li>
+  <li>Low liquidity stock मा ठूलो position नलिनुहोस्।</li>
+  <li>Market हरियो छ भन्दैमा chase नगर्नुहोस्।</li>
+  <li>Market रातो छ भन्दैमा panic sell नगर्नुहोस्।</li>
+  <li>TMS मा order राख्दा price र quantity ध्यान दिएर राख्नुहोस्।</li>
+  <li>Order executed भयो कि pending छ, confirm गर्नुहोस्।</li>
+  <li>Share बेचिसकेपछि EDIS र WACC सम्बन्धी process verify गर्नुहोस्।</li>
+  <li>Broker, SEBON, NEPSE, CDSC, र official notice सम्बन्धी updated नियम verify गर्नुहोस्।</li>
+  <li>News भन्दा price reaction लाई बढी महत्व दिनुहोस्।</li>
+  <li>NEPSE + Sector + Stock तीनै पक्ष मिल्दा मात्र setup बलियो हुन्छ।</li>
+</ul>
+
+<p>NEPSE मा trade लिनुअघि तपाईंको सोच यस्तो हुनुपर्छ—<strong>“के market ले मेरो trade लाई support गरिरहेको छ?”</strong> यदि market, sector, र stock एकै direction मा छैनन् भने trade को risk बढ्न सक्छ।</p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p>मानौं, NEPSE index पछिल्लो 2 हप्तादेखि लगातार lower high र lower low बनाइरहेको छ। Market मा selling pressure देखिन्छ। Banking sector कमजोर छ। धेरै Banking stock हरू Moving Average भन्दा तल छन्। Volume पनि selling day मा बढी देखिन्छ।</p>
+
+<p>यस्तो अवस्थामा एउटा Banking stock ले सानो green candle बनायो। Beginner trader ले सोच्छ, <strong>“अब यो बढ्छ।”</strong> ऊ Entry गर्छ। तर अर्को दिन stock फेरि घट्छ, किनकि overall market र sector दुवै कमजोर थिए।</p>
+
+<p>अब अर्को अवस्था सोचौं। NEPSE index major support बाट bounce भएको छ। Sector rotation मा Hydropower sector बलियो देखिन थालेको छ। धेरै Hydropower stock हरूले resistance नजिक base बनाइरहेका छन्। एउटा stock ले राम्रो Volume सहित resistance break गर्छ, अनि retest मा Volume कम हुन्छ। Risk-Reward पनि मिल्छ। यस्तो setup पहिलेको भन्दा बलियो हुन सक्छ, किनकि market, sector, र stock तीनै पक्ष मिलिरहेका छन्।</p>
+
+<p>तर यहाँ पनि profit guarantee हुँदैन। Stop Loss चाहिन्छ। Position Sizing चाहिन्छ। Exit plan चाहिन्छ। राम्रो setup भनेको risk-free setup होइन; राम्रो setup भनेको risk defined भएको setup हो।</p>
+
+<div class="chart-placeholder">
+  Chart Placeholder: NEPSE index → Sector index → Individual stock —<br>
+  तीन तहको market analysis देखाउने top-down diagram
+</div>
+
+<div class="chart-placeholder">
+  Chart Placeholder: Weak market मा fail भएको breakout vs.<br>
+  Strong market + strong sector मा successful breakout — comparison chart
+</div>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">NEPSE Trade लिनुअघि Market Context Checklist:</div>
+  <ul>
+    <li>NEPSE index uptrend, downtrend, कि sideways छ?</li>
+    <li>Index major Support नजिक छ कि Resistance नजिक?</li>
+    <li>Index मा recent Breakout वा Breakdown भएको छ?</li>
+    <li>Market को Volume healthy छ कि कमजोर?</li>
+    <li>आजको move broad-based छ कि केही stock मात्र चलिरहेका छन्?</li>
+    <li>कुन sector बलियो छ?</li>
+    <li>म किन्न लागेको stock को sector बलियो छ कि कमजोर?</li>
+    <li>Stock आफ्नो sector भन्दा बलियो छ कि कमजोर?</li>
+    <li>Stock मा liquidity पर्याप्त छ?</li>
+    <li>Breakout मा Volume आएको छ?</li>
+    <li>Entry chase जस्तो त छैन?</li>
+    <li>Stop Loss कहाँ राख्ने स्पष्ट छ?</li>
+    <li>Risk-Reward मिलेको छ?</li>
+    <li>मैले TMS मा सही price र quantity राखेको छु?</li>
+    <li>Trade पछि EDIS/WACC/settlement process बुझिएको छ?</li>
+    <li>यो decision chart र process बाट आएको हो कि हल्ला र FOMO बाट?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: NEPSE Index Observation</div>
+  <p>आजको वा पछिल्लो trading day को NEPSE chart खोल्नुहोस् र यी कुरा notebook मा लेख्नुहोस्:</p>
+  <ul>
+    <li>NEPSE index पछिल्लो 1 महिनामा uptrend, downtrend, कि sideways छ?</li>
+    <li>Index major Support नजिक छ कि Resistance नजिक?</li>
+    <li>Last 5 trading days मा green candle बढी छन् कि red candle?</li>
+    <li>Volume बढ्दा index माथि गएको छ कि तल?</li>
+    <li>Market मा confidence देखिन्छ कि confusion?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Sector Comparison</div>
+  <p>कुनै 3 वटा sector छान्नुहोस् र तुलना गर्नुहोस्:</p>
+  <ul>
+    <li>कुन sector पछिल्लो समयमा बलियो देखिन्छ?</li>
+    <li>कुन sector कमजोर देखिन्छ?</li>
+    <li>कुन sector मा Volume बढेको देखिन्छ?</li>
+    <li>कुन sector का धेरै stock हरू resistance नजिक छन्?</li>
+    <li>कुन sector मा breakout attempt देखिन्छ?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Three-Tier Stock Analysis</div>
+  <p>एउटा stock छान्नुहोस् र तीन तहमा analysis गर्नुहोस्:</p>
+  <ul>
+    <li>NEPSE index condition</li>
+    <li>Sector condition</li>
+    <li>Individual stock condition</li>
+  </ul>
+  <p>त्यसपछि लेख्नुहोस्—<strong>“यो stock अहिले trade गर्न योग्य छ, wait गर्नुपर्छ, कि avoid गर्नुपर्छ?”</strong></p>
+  <p style="margin-bottom:0;">यस exercise को उद्देश्य buy/sell decision होइन; market context बुझ्ने practice हो।</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>NEPSE बुझ्नु भनेको index number याद गर्नु होइन। NEPSE बुझ्नु भनेको बजारमा पैसा कुन direction मा बगिरहेको छ, कुन sector बलियो छ, कुन stock मा participation छ, र भीड कहाँ emotional भइरहेको छ भन्ने कुरा बुझ्नु हो।</p>
+  <p>राम्रो trader सिधै stock मा हामफाल्दैन। ऊ पहिले market हेर्छ, त्यसपछि sector हेर्छ, अनि मात्र stock हेर्छ। यो तीन तहको process ले weak setup बाट बचाउँछ।</p>
+  <p>Market कमजोर छ भने cash मा बस्नु कमजोरी होइन। Sector confirm छैन भने wait गर्नु आलस्य होइन। Breakout आए पनि Risk-Reward नमिले trade छोड्नु डर होइन। यो सबै capital protection को भाग हो।</p>
+  <p style="margin-bottom:0;">NEPSE मा टिक्ने trader त्यो होइन जसले हरेक दिन trade गर्छ। टिक्ने trader त्यो हो जसले market condition अनुसार trade गर्ने, wait गर्ने, र avoid गर्ने निर्णय छुट्याउन सक्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 2 Summary</div>
+  <p>NEPSE नेपालको secondary share market हो, जहाँ listed company का share broker मार्फत किनबेच हुन्छन्। Price buyer र seller को order, demand-supply, Volume, liquidity, market sentiment, sector movement, news, policy expectation, र psychology बाट चल्छ।</p>
+  <p>NEPSE बुझ्न तीन तहको analysis आवश्यक हुन्छ—market level, sector level, र stock level। Market कमजोर हुँदा राम्रो stock पनि fail हुन सक्छ। Sector कमजोर हुँदा individual breakout कमजोर हुन सक्छ। Stock बलियो भए पनि risk-reward नमिले trade लिनु बुद्धिमानी हुँदैन।</p>
+  <p>Volume, liquidity, order behavior, TMS process, EDIS, WACC, settlement, र official rule हरू NEPSE को practical reality हुन्। यी कुरा नबुझी trading गर्दा unnecessary mistake हुन सक्छ।</p>
+  <p>Trader को काम market predict गर्नु होइन; market context बुझेर defined risk सहित decision लिनु हो। NEPSE + Sector + Stock alignment भएको setup तुलनात्मक रूपमा बलियो हुन्छ, तर कुनै setup ले profit guarantee गर्दैन।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—कुनै stock किन्नुअघि पूरा बजारको वातावरण बुझ्नुहोस्। Market context बिना stock analysis अधुरो हुन्छ।</p>
+</div>
+
+<div class="closing-quote">
+  NEPSE बुझ्ने trader भीडको पछि लाग्दैन; ऊ बजारको direction, sector को शक्ति, र आफ्नो risk देखेर निर्णय गर्छ।
+</div>
+
+</div>
+</body>
+</html>

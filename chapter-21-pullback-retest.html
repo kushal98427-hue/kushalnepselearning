@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 21: Pullback र Retest — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 28px 0; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-caption { font-size: 13px; color: #555; font-style: italic; margin-top: 10px; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 21: CHART READING MASTERY</div>
+  <h1 class="chapter-title">Pullback र Retest</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>किरणले एउटा stock मा Breakout देख्यो। Price Rs. 500 Resistance माथि Rs. 520 मा close भएको थियो। Volume पनि राम्रो थियो। ऊ excited भयो, तर Entry गर्न ढिलो भइसकेको जस्तो लाग्यो। अर्को दिन price Rs. 535 पुग्यो। उसलाई FOMO भयो। <strong>“अब त भाग्यो,”</strong> भनेर उसले Rs. 535 मा Entry गर्‍यो।</p>
+
+<p>तर केही दिनपछि price फेरि Rs. 505 नजिक आयो। किरण डरायो। उसले सोच्यो, <strong>“Breakout fail भयो कि?”</strong> डरले उसले sell गर्‍यो। केही दिनपछि त्यही stock Rs. 560 पुग्यो। किरण झन् दुखी भयो—<strong>“मैले बेचेपछि किन बढ्यो?”</strong></p>
+
+<p>किरणले Breakout त देखेको थियो, तर Pullback र Retest बुझेन। Breakout पछि price पुरानो Resistance zone मा फर्किन सक्छ। यदि त्यहाँ buyer आउँछन् र price फेरि माथि जान्छ भने त्यो healthy Retest हुन सक्छ। सबै गिरावट weakness होइन। कहिलेकाहीँ price माथि जानुअघि पुरानो level test गर्न फर्किन्छ।</p>
+
+<p><strong>Pullback</strong> भनेको चलिरहेको trend भित्र आउने temporary correction हो। Uptrend मा price केही तल आउँछ, तर trend पूर्ण रूपमा बिग्रिएको हुँदैन। <strong>Retest</strong> भनेको price पहिले break गरेको important level मा फेरि फर्केर त्यो level hold गर्छ कि गर्दैन भनेर परीक्षण गर्नु हो।</p>
+
+<p>धेरै beginner Pullback र breakdown छुट्याउन सक्दैनन्। Breakout पछि price अलि फर्कियो भने डराएर बेचिदिन्छन्। कहिले Pullback लाई opportunity नबुझी miss गर्छन्। कहिले कमजोर गिरावटलाई Pullback सम्झेर फस्छन्। यही कारण Pullback र Retest बुझ्नु trader का लागि अत्यन्त महत्वपूर्ण छ।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Pullback र Retest trading का practical concept हुन्। राम्रो trader सधैं Breakout candle मा chase गर्दैन। कहिलेकाहीँ ऊ Pullback पर्खिन्छ। किनकि Pullback ले better Entry, नजिक Stop Loss, र राम्रो Risk-Reward दिन सक्छ।</p>
+
+<p>Breakout मा Entry गर्दा price धेरै माथि गइसकेको हुन सक्छ। Stop Loss टाढा हुन सक्छ। Risk-Reward कमजोर हुन सक्छ। तर Breakout पछि Retest आयो र buyer reaction देखियो भने Entry अझ structured हुन सक्छ। पुरानो Resistance नयाँ Support बनेको छ कि छैन भनेर Retest ले देखाउँछ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि Pullback बुझ्ने trader FOMO बाट बच्न सक्छ। Retest बुझ्ने trader Breakout पछि healthy correction देखेर panic हुँदैन। तर साथै, कमजोर Pullback र failed Retest चिन्न पनि सिक्नुपर्छ। सबै Pullback buy गर्ने ठाउँ होइन। सबै Retest सफल हुँदैन।</p>
+
+<p>Pullback र Retest सही रूपमा बुझ्दा trader ले तीन कुरा सुधार गर्न सक्छ—<strong>Entry quality, Stop Loss placement, र Risk-Reward।</strong> यही तीन कुराले trading result मा ठूलो फरक पार्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Pullback भनेको price कुनै direction मा चलिरहेको बेला उल्टो दिशामा आउने छोटो correction हो। यदि stock uptrend मा छ र price केही दिन तल आउँछ भने त्यो Pullback हुन सक्छ। यदि trend intact छ, Volume controlled छ, र price important support zone माथि छ भने Pullback healthy हुन सक्छ।</p>
+
+<p>Retest भनेको price पहिले break गरेको level मा फर्केर फेरि test गर्नु हो। उदाहरणका लागि, कुनै stock Rs. 500 Resistance माथि Breakout भयो। केही दिनपछि price फेरि Rs. 500–510 zone मा फर्कियो। यदि त्यहाँ buyer आए र price फेरि माथि गयो भने त्यो successful Retest हुन सक्छ।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:8px;"><strong>Pullback</strong> = trend भित्र temporary correction</p>
+  <p style="margin-bottom:0;"><strong>Retest</strong> = break गरेको level फेरि test गर्नु</p>
+</div>
+
+<p>Uptrend मा Pullback opportunity हुन सक्छ, यदि structure healthy छ। Breakout पछि Retest opportunity हुन सक्छ, यदि पुरानो Resistance नयाँ Support बनेको छ। तर यदि price support तोड्दै तल गयो, Volume selling बढ्यो, र trend structure बिग्रियो भने त्यो Pullback होइन, weakness हुन सक्छ।</p>
+
+<p>सरल भाषामा, Pullback र Retest trader लाई chase नगरी better Entry खोज्ने मौका दिन्छन्।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Pullback बुझ्न trend structure पहिले बुझ्नुपर्छ। यदि stock HH/HL बनाउँदै uptrend मा छ भने price कहिलेकाहीँ previous high, moving average, support zone, or breakout level नजिक फर्किन सक्छ। यो normal Pullback हुन सक्छ। Uptrend मा price सीधा माथि मात्र जाँदैन। माथि गएपछि केही profit booking, short-term selling, वा pause आउन सक्छ।</p>
+
+<p><strong>Healthy Pullback</strong> का केही संकेत हुन्छन्। Price controlled रूपमा तल आउँछ। Selling Volume धेरै aggressive हुँदैन। Price important Support वा last Higher Low भन्दा माथि रहन्छ। Candle हरूमा panic selling देखिँदैन। Pullback depth धेरै गहिरो हुँदैन। Buyer उचित zone मा फेरि आउँछन्।</p>
+
+<p><strong>Weak Pullback</strong> भने फरक हुन्छ। Price तेज रूपमा तल आउँछ। Volume selling बढ्छ। Last Higher Low break हुन्छ। Support zone बच्दैन। Bounce आए पनि weak हुन्छ। यस्तो अवस्थामा “Pullback buy” भनेर किन्नु risky हुन्छ।</p>
+
+<!-- VISUAL 1: Healthy Pullback vs Weak Pullback - side by side -->
+<div class="visual-block">
+  <div class="visual-title">Healthy Pullback vs Weak Pullback — Same Looking, फरक Outcome</div>
+  <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="360" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">पहिलो दृष्टिमा दुवै "गिरावट" — तर structure ले निर्णय गर्छ</text>
+
+    <!-- LEFT: HEALTHY PULLBACK -->
+    <rect x="40" y="50" width="320" height="34" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="4"/>
+    <text x="200" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#2e7d32">✓ Healthy Pullback</text>
+
+    <!-- Y-axis labels -->
+    <text x="50" y="110" text-anchor="end" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 380</text>
+    <text x="50" y="170" text-anchor="end" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 350</text>
+    <text x="50" y="220" text-anchor="end" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 320</text>
+
+    <!-- HL reference line -->
+    <line x1="60" y1="170" x2="340" y2="170" stroke="#4caf50" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="335" y="167" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">HL Support</text>
+
+    <!-- Uptrend zigzag with healthy pullback -->
+    <path d="M 75 240 L 100 200 L 120 215 L 145 175 L 165 195 L 190 145 L 215 165 L 240 110 L 270 140 L 300 165 L 325 130"
+          stroke="#4caf50" stroke-width="2.2" fill="none"/>
+
+    <!-- Mark HHs and HLs -->
+    <circle cx="100" cy="200" r="3" fill="#4caf50"/>
+    <circle cx="145" cy="175" r="3" fill="#4caf50"/>
+    <circle cx="190" cy="145" r="3" fill="#4caf50"/>
+    <circle cx="240" cy="110" r="4" fill="#4caf50" stroke="#fff" stroke-width="1"/>
+    <text x="240" y="100" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HH</text>
+
+    <!-- The pullback - lands above last HL -->
+    <circle cx="300" cy="165" r="5" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="300" y="184" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c8a800">Pullback</text>
+
+    <!-- Continuation up -->
+    <circle cx="325" cy="130" r="3" fill="#4caf50"/>
+
+    <!-- Annotation -->
+    <text x="200" y="265" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">✓ HL Support बच्यो</text>
+    <text x="200" y="280" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Pullback shallow, Volume घट्यो</text>
+
+    <!-- Volume bars (declining during pullback) -->
+    <rect x="75" y="310" width="10" height="20" fill="#c9b97a"/>
+    <rect x="100" y="305" width="10" height="25" fill="#c9b97a"/>
+    <rect x="145" y="308" width="10" height="22" fill="#c9b97a"/>
+    <rect x="190" y="303" width="10" height="27" fill="#c9b97a"/>
+    <rect x="240" y="300" width="10" height="30" fill="#c9b97a"/>
+    <!-- Pullback volume - lower! -->
+    <rect x="270" y="318" width="10" height="12" fill="#c9b97a"/>
+    <rect x="300" y="320" width="10" height="10" fill="#c9b97a"/>
+    <rect x="325" y="310" width="10" height="20" fill="#4caf50"/>
+
+    <text x="200" y="295" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">Volume ↓ during pullback</text>
+
+    <!-- Divider -->
+    <line x1="370" y1="50" x2="370" y2="335" stroke="#c9b97a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+    <!-- RIGHT: WEAK PULLBACK -->
+    <rect x="380" y="50" width="320" height="34" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="4"/>
+    <text x="540" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#e53935">✗ Weak Pullback (Breakdown)</text>
+
+    <!-- Y-axis labels -->
+    <text x="390" y="100" text-anchor="end" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 600</text>
+    <text x="390" y="160" text-anchor="end" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 550</text>
+    <text x="390" y="220" text-anchor="end" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 500</text>
+
+    <!-- HL reference line - this gets broken -->
+    <line x1="400" y1="160" x2="680" y2="160" stroke="#e53935" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="675" y="157" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">HL Support (broken)</text>
+
+    <!-- Uptrend then breakdown -->
+    <path d="M 410 220 L 435 190 L 455 200 L 480 160 L 500 175 L 525 130 L 545 155 L 565 100 L 590 145 L 620 200 L 650 230"
+          stroke="#4caf50" stroke-width="2.2" fill="none"/>
+
+    <!-- After HL break - red continuation -->
+    <path d="M 620 200 L 650 230 L 680 260"
+          stroke="#e53935" stroke-width="2.5" fill="none"/>
+
+    <!-- Mark HH -->
+    <circle cx="565" cy="100" r="4" fill="#4caf50" stroke="#fff" stroke-width="1"/>
+    <text x="565" y="90" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HH</text>
+
+    <!-- The pullback that broke HL -->
+    <circle cx="620" cy="200" r="5" fill="#ffe5e0" stroke="#e53935" stroke-width="2"/>
+    <text x="640" y="195" font-family="sans-serif" font-size="8" font-weight="700" fill="#e53935">HL Break!</text>
+
+    <!-- Failed bounce -->
+    <circle cx="650" cy="230" r="3" fill="#e53935"/>
+
+    <!-- Annotation -->
+    <text x="540" y="265" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#e53935">✗ HL Support Break</text>
+    <text x="540" y="280" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Selling fast, Volume बढ्यो</text>
+
+    <!-- Volume bars - INCREASING during pullback (warning!) -->
+    <rect x="410" y="310" width="10" height="20" fill="#c9b97a"/>
+    <rect x="435" y="305" width="10" height="25" fill="#c9b97a"/>
+    <rect x="480" y="303" width="10" height="27" fill="#c9b97a"/>
+    <rect x="525" y="300" width="10" height="30" fill="#c9b97a"/>
+    <rect x="565" y="300" width="10" height="30" fill="#c9b97a"/>
+    <!-- Pullback volume - HIGH (warning!) -->
+    <rect x="590" y="285" width="10" height="45" fill="#e53935"/>
+    <rect x="620" y="280" width="10" height="50" fill="#e53935"/>
+    <rect x="650" y="282" width="10" height="48" fill="#e53935"/>
+
+    <text x="540" y="295" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">Volume ↑ during pullback (warning!)</text>
+  </svg>
+  <div class="visual-caption">"Stock घट्यो" मात्र हेरेर निर्णय नगर्ने — Last HL bachyo कि break भयो? Volume घट्यो कि बढ्यो? यी दुई कुराले Pullback लाई "opportunity" वा "trap" बनाउँछन्।</div>
+</div>
+
+<p>Retest को logic Breakout सँग जोडिएको हुन्छ। Resistance zone मा पहिले seller बलियो थिए। जब price Resistance break गरेर माथि जान्छ, पुरानो Resistance future Support बन्न सक्छ। तर यो केवल theory हो। Retest ले यो theory real हो कि होइन जाँच गर्छ।</p>
+
+<p><strong>Successful Retest</strong> मा price पुरानो Breakout zone नजिक फर्किन्छ, तर त्यहाँ seller धेरै शक्तिशाली देखिँदैनन्। Volume घट्न सक्छ। Candle मा lower wick वा strong close आउन सक्छ। Buyer फेरि active हुन्छन्। Price level माथि hold हुन्छ। त्यसपछि continuation move आउन सक्छ।</p>
+
+<p><strong>Failed Retest</strong> मा price Breakout level नजिक फर्किएर टिक्न सक्दैन। Level तल close हुन्छ। Selling Volume बढ्छ। Buyer कमजोर देखिन्छन्। Price फेरि range भित्र फर्किन्छ। यस्तो अवस्थामा Breakout fail भएको हुन सक्छ। Trader ले ego राख्नु हुँदैन।</p>
+
+<!-- VISUAL 2: Successful Retest vs Failed Retest -->
+<div class="visual-block">
+  <div class="visual-title">Successful Retest vs Failed Retest — Same Breakout Setup, फरक Outcome</div>
+  <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="320" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">पुरानो Resistance Support बन्यो कि होइन — Retest candle ले बताउँछ</text>
+
+    <!-- LEFT: SUCCESSFUL RETEST -->
+    <rect x="40" y="50" width="320" height="34" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="4"/>
+    <text x="200" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#2e7d32">✓ Successful Retest</text>
+
+    <!-- Resistance/Support line at Rs.700 -->
+    <line x1="60" y1="170" x2="340" y2="170" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="335" y="167" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#111">Rs. 700</text>
+
+    <!-- Breakout candle - strong -->
+    <line x1="90" y1="120" x2="90" y2="180" stroke="#4caf50" stroke-width="1.5"/>
+    <rect x="80" y="125" width="20" height="50" fill="#4caf50" stroke="#2e7d32" stroke-width="1.2"/>
+    <text x="90" y="115" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">Breakout</text>
+
+    <!-- Continuation candles -->
+    <line x1="120" y1="115" x2="120" y2="135" stroke="#888" stroke-width="1"/>
+    <rect x="113" y="118" width="14" height="14" fill="#4caf50"/>
+
+    <line x1="150" y1="100" x2="150" y2="125" stroke="#888" stroke-width="1"/>
+    <rect x="143" y="105" width="14" height="18" fill="#4caf50"/>
+
+    <!-- Pullback to retest -->
+    <line x1="180" y1="115" x2="180" y2="145" stroke="#888" stroke-width="1"/>
+    <rect x="173" y="118" width="14" height="22" fill="#e53935"/>
+
+    <line x1="210" y1="135" x2="210" y2="165" stroke="#888" stroke-width="1"/>
+    <rect x="203" y="140" width="14" height="22" fill="#e53935"/>
+
+    <!-- THE RETEST CANDLE - lower wick at the level -->
+    <line x1="240" y1="135" x2="240" y2="180" stroke="#888" stroke-width="1.5"/>
+    <rect x="230" y="138" width="20" height="22" fill="#4caf50" stroke="#2e7d32" stroke-width="1"/>
+    <circle cx="240" cy="178" r="4" fill="#4caf50" stroke="#fff" stroke-width="1"/>
+    <text x="240" y="200" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Lower wick</text>
+    <text x="240" y="213" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">Buyer आए</text>
+
+    <!-- Continuation up -->
+    <line x1="275" y1="110" x2="275" y2="140" stroke="#888" stroke-width="1"/>
+    <rect x="268" y="115" width="14" height="22" fill="#4caf50"/>
+
+    <line x1="305" y1="85" x2="305" y2="115" stroke="#888" stroke-width="1"/>
+    <rect x="298" y="90" width="14" height="22" fill="#4caf50"/>
+
+    <line x1="335" y1="65" x2="335" y2="95" stroke="#888" stroke-width="1"/>
+    <rect x="328" y="70" width="14" height="22" fill="#4caf50"/>
+
+    <!-- Result box -->
+    <rect x="55" y="240" width="290" height="60" fill="#eaf6ea" stroke="#4caf50" stroke-width="1.5" rx="3"/>
+    <text x="200" y="258" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">पुरानो Resistance = नयाँ Support</text>
+    <text x="65" y="275" font-family="sans-serif" font-size="9" fill="#111">• Lower wick at level</text>
+    <text x="65" y="288" font-family="sans-serif" font-size="9" fill="#111">• Selling volume कम</text>
+    <text x="200" y="275" font-family="sans-serif" font-size="9" fill="#111">• Strong green close</text>
+    <text x="200" y="288" font-family="sans-serif" font-size="9" fill="#111">• Continuation upward</text>
+
+    <!-- Divider -->
+    <line x1="370" y1="50" x2="370" y2="305" stroke="#c9b97a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+    <!-- RIGHT: FAILED RETEST -->
+    <rect x="380" y="50" width="320" height="34" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="4"/>
+    <text x="540" y="73" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#e53935">✗ Failed Retest</text>
+
+    <!-- Resistance line at Rs.800 -->
+    <line x1="400" y1="135" x2="680" y2="135" stroke="#c9b97a" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="675" y="132" text-anchor="end" font-family="sans-serif" font-size="9" font-weight="700" fill="#111">Rs. 800</text>
+
+    <!-- Weak breakout with upper wick -->
+    <line x1="425" y1="90" x2="425" y2="150" stroke="#888" stroke-width="1.5"/>
+    <rect x="415" y="120" width="20" height="20" fill="#e53935" stroke="#b71c1c" stroke-width="1"/>
+    <text x="425" y="84" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#e53935">Weak BO</text>
+
+    <!-- Falling candles -->
+    <line x1="460" y1="140" x2="460" y2="170" stroke="#888" stroke-width="1"/>
+    <rect x="453" y="145" width="14" height="22" fill="#e53935"/>
+
+    <line x1="495" y1="160" x2="495" y2="195" stroke="#888" stroke-width="1"/>
+    <rect x="488" y="165" width="14" height="25" fill="#e53935"/>
+
+    <!-- Attempt to come back to level (the retest from below) -->
+    <line x1="535" y1="140" x2="535" y2="180" stroke="#888" stroke-width="1"/>
+    <rect x="525" y="145" width="20" height="30" fill="#4caf50"/>
+
+    <!-- REJECTED at the level - upper wick -->
+    <line x1="565" y1="125" x2="565" y2="170" stroke="#888" stroke-width="1.5"/>
+    <rect x="555" y="148" width="20" height="20" fill="#e53935" stroke="#b71c1c" stroke-width="1"/>
+    <circle cx="565" cy="125" r="4" fill="#e53935" stroke="#fff" stroke-width="1"/>
+    <text x="565" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">Reject!</text>
+
+    <!-- Continuation down -->
+    <line x1="600" y1="170" x2="600" y2="205" stroke="#888" stroke-width="1"/>
+    <rect x="593" y="175" width="14" height="25" fill="#e53935"/>
+
+    <line x1="635" y1="195" x2="635" y2="225" stroke="#888" stroke-width="1"/>
+    <rect x="628" y="200" width="14" height="22" fill="#e53935"/>
+
+    <line x1="665" y1="215" x2="665" y2="245" stroke="#888" stroke-width="1"/>
+    <rect x="658" y="220" width="14" height="22" fill="#e53935"/>
+
+    <!-- Result box -->
+    <rect x="395" y="240" width="290" height="60" fill="#ffe5e0" stroke="#e53935" stroke-width="1.5" rx="3"/>
+    <text x="540" y="258" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#e53935">पुरानो level अब फेरि Resistance</text>
+    <text x="405" y="275" font-family="sans-serif" font-size="9" fill="#111">• Upper wick at level</text>
+    <text x="405" y="288" font-family="sans-serif" font-size="9" fill="#111">• Selling volume बढ्यो</text>
+    <text x="540" y="275" font-family="sans-serif" font-size="9" fill="#111">• Red close तल level</text>
+    <text x="540" y="288" font-family="sans-serif" font-size="9" fill="#111">• Trapped buyers fall</text>
+  </svg>
+  <div class="visual-caption">Retest = theory test — "पुरानो Resistance Support बन्छ" साँचो हुन सक्छ, तर चाहिन्छ buyer reaction; lower wick/strong close = success, upper wick/red close = failure।</div>
+</div>
+
+<p>Pullback र Retest मा Entry timing धेरै महत्वपूर्ण छ। केवल price level मा आयो भन्दैमा buy गर्नु हुँदैन। Reaction चाहिन्छ। उदाहरणका लागि, price Rs. 500 Breakout level मा फर्कियो। त्यहाँ lower wick बन्यो, next candle high break भयो, Volume buyer sideमा आयो, and market/sector supportive छ भने Entry विचार गर्न सकिन्छ। तर price Rs. 500 तल strong red candle सहित close भयो भने wait गर्नुपर्छ।</p>
+
+<p>Stop Loss placement Pullback/Retest मा बढी logical हुन सक्छ। यदि successful Retest मा Entry गरियो भने Stop Loss Retest low वा structure support तल राख्न सकिन्छ। Pullback trade मा Stop Loss last swing low वा support zone तल राख्न सकिन्छ। यसले risk define गर्न मद्दत गर्छ।</p>
+
+<p>Risk-Reward पनि Pullback/Retest मा राम्रो हुन सक्छ, किनकि Entry level support नजिक हुन्छ। Breakout chase गर्दा Stop Loss टाढा हुन सक्छ। Pullback Entry ले risk घटाउन सक्छ, तर मौका miss हुन पनि सक्छ। कहिलेकाहीँ strong stock Breakout पछि Retest नगरी सीधै माथि जान सक्छ। Trader ले यसलाई स्वीकार्नुपर्छ। <strong>Missed move loss होइन।</strong></p>
+
+<p>Pullback र Retest मा Volume reading अत्यन्त महत्वपूर्ण छ। Breakout मा Volume धेरै आएको थियो, Pullback मा Volume घटिरहेको छ भने selling pressure कमजोर हुन सक्छ। Retest मा Volume low छ र buyer candle आएपछि Volume बढ्छ भने continuation signal हुन सक्छ। तर Pullback मा selling Volume बढिरहेको छ भने caution चाहिन्छ।</p>
+
+<p>Pullback र Retest लाई timeframe अनुसार पनि पढ्नुपर्छ। Daily chart मा Pullback देखिए पनि Weekly chart मा candle अझै strong हुन सक्छ। Daily Retest Weekly Breakout zone मा आएको हुन सक्छ। Monthly Resistance नजिक Pullback trade गर्नु riskपूर्ण हुन सक्छ। त्यसैले Higher Timeframe context जोड्नु आवश्यक छ।</p>
+
+<p>Pullback को अर्को महत्वपूर्ण concept हो—<strong>deep Pullback vs shallow Pullback।</strong> Strong trend मा Pullback shallow हुन सक्छ, price धेरै तल आउँदैन। Weak trend मा Pullback गहिरो हुन सक्छ। धेरै गहिरो Pullback ले trend weakness देखाउन सक्छ। Trader ले Pullback को depth र speed दुवै पढ्नुपर्छ।</p>
+
+<!-- VISUAL 3: Pullback Depth Spectrum - Shallow / Medium / Deep -->
+<div class="visual-block">
+  <div class="visual-title">Pullback Depth Spectrum — Trend Strength को Indicator</div>
+  <svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="330" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Pullback कति गहिरो छ? Trend को strength बुझ्ने एउटा practical तरिका</text>
+
+    <!-- THREE COLUMNS -->
+    <!-- Column 1: SHALLOW -->
+    <text x="120" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">Shallow Pullback</text>
+    <text x="120" y="75" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(~10-20% of move)</text>
+
+    <!-- High point -->
+    <line x1="40" y1="90" x2="200" y2="90" stroke="#4caf50" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="200" y="87" text-anchor="end" font-family="sans-serif" font-size="8" fill="#555">Rally High</text>
+
+    <!-- Uptrend with small pullback -->
+    <path d="M 50 200 L 75 175 L 90 185 L 110 150 L 125 165 L 145 120 L 165 130 L 185 95 L 200 105 L 195 100"
+          stroke="#4caf50" stroke-width="2.2" fill="none"/>
+
+    <!-- Shallow pullback area -->
+    <rect x="155" y="130" width="35" height="35" fill="#eaf6ea" stroke="#4caf50" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="172" y="180" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#2e7d32">↓ shallow</text>
+
+    <!-- Strength label -->
+    <rect x="40" y="200" width="160" height="60" fill="#eaf6ea" stroke="#4caf50" stroke-width="1.5" rx="4"/>
+    <text x="120" y="220" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">STRONG Trend</text>
+    <text x="120" y="237" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Buyer aggressive</text>
+    <text x="120" y="252" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Profit booking मात्र</text>
+
+    <text x="120" y="285" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Action: Continuation buy</text>
+    <text x="120" y="300" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">if buyer reaction confirms</text>
+
+    <!-- Column 2: MEDIUM -->
+    <text x="360" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#c8a800">Medium Pullback</text>
+    <text x="360" y="75" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(~30-50% of move)</text>
+
+    <line x1="280" y1="90" x2="440" y2="90" stroke="#4caf50" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="440" y="87" text-anchor="end" font-family="sans-serif" font-size="8" fill="#555">Rally High</text>
+
+    <!-- Uptrend with medium pullback -->
+    <path d="M 290 200 L 315 175 L 330 185 L 350 150 L 365 165 L 385 120 L 405 175 L 415 165 L 425 130"
+          stroke="#4caf50" stroke-width="2.2" fill="none"/>
+
+    <!-- Medium pullback area -->
+    <rect x="385" y="120" width="30" height="60" fill="#fff8dc" stroke="#c8a800" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="400" y="195" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#c8a800">↓ medium</text>
+
+    <!-- Strength label -->
+    <rect x="280" y="200" width="160" height="60" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5" rx="4"/>
+    <text x="360" y="220" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#c8a800">NORMAL Trend</text>
+    <text x="360" y="237" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Healthy correction</text>
+    <text x="360" y="252" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">HL near previous level</text>
+
+    <text x="360" y="285" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">Action: Wait for HL + reaction</text>
+    <text x="360" y="300" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Volume + candle confirm</text>
+
+    <!-- Column 3: DEEP -->
+    <text x="600" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#e53935">Deep Pullback</text>
+    <text x="600" y="75" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(60%+ of move)</text>
+
+    <line x1="520" y1="90" x2="680" y2="90" stroke="#4caf50" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="680" y="87" text-anchor="end" font-family="sans-serif" font-size="8" fill="#555">Rally High</text>
+
+    <!-- Uptrend with DEEP pullback -->
+    <path d="M 530 200 L 555 175 L 570 185 L 590 150 L 605 165 L 625 120 L 645 180 L 655 175 L 665 190"
+          stroke="#4caf50" stroke-width="2.2" fill="none"/>
+
+    <!-- After: continuation downward (breakdown risk) -->
+    <path d="M 665 190 L 680 200"
+          stroke="#e53935" stroke-width="2.2" fill="none"/>
+
+    <!-- Deep pullback area -->
+    <rect x="625" y="120" width="35" height="85" fill="#ffe5e0" stroke="#e53935" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="643" y="218" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e53935">↓ deep</text>
+
+    <!-- Strength label -->
+    <rect x="520" y="200" width="160" height="60" fill="#ffe5e0" stroke="#e53935" stroke-width="1.5" rx="4"/>
+    <text x="600" y="220" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#e53935">WEAK Trend</text>
+    <text x="600" y="237" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Buyer commitment लो</text>
+    <text x="600" y="252" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">HL break risk बढी</text>
+
+    <text x="600" y="285" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e53935">Action: Pullback होइन, sus</text>
+    <text x="600" y="300" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Skip; wait for new structure</text>
+  </svg>
+  <div class="visual-caption">Pullback depth nai trend strength को honest indicator हो — shallow = aggressive buyer, deep = weakening commitment; "अब त सस्तो" भन्ने तर्क मा deep pullback buy गर्ने beginner trap हो।</div>
+</div>
+
+<p>Pullback trade लिनुअघि सोध्नुपर्ने मुख्य प्रश्नहरू:</p>
+
+<ul>
+  <li>Trend अझै intact छ?</li>
+  <li>Last Higher Low बचेको छ?</li>
+  <li>Pullback मा Volume घटेको छ?</li>
+  <li>Support zone नजिक price आएको छ?</li>
+  <li>Buyer reaction देखिएको छ?</li>
+  <li>Market र sector supportive छन्?</li>
+  <li>Stop Loss कहाँ छ?</li>
+  <li>Risk-Reward मिल्छ?</li>
+  <li>यो Pullback हो कि breakdown को सुरुवात?</li>
+</ul>
+
+<!-- VISUAL 4: Entry Decision Framework - 'Level मात्र enough छैन' -->
+<div class="visual-block">
+  <div class="visual-title">Entry Decision Framework — "Level आउनु" Alone = Buy होइन</div>
+  <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="340" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Pullback / Retest मा Entry: 3-Layer Confirmation Process</text>
+
+    <!-- Step 1 -->
+    <rect x="270" y="50" width="180" height="50" fill="#f0e6c0" stroke="#c9b97a" stroke-width="2" rx="6"/>
+    <text x="360" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">Layer 1: Level Touch</text>
+    <text x="360" y="88" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Price planned zone मा आयो</text>
+
+    <!-- Arrow -->
+    <line x1="360" y1="100" x2="360" y2="120" stroke="#111" stroke-width="1.5" marker-end="url(#arr21F)"/>
+
+    <!-- Decision diamond 1 -->
+    <polygon points="360,125 470,170 360,215 250,170" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="360" y="165" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">Buyer reaction</text>
+    <text x="360" y="180" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">देखियो?</text>
+    <text x="360" y="200" text-anchor="middle" font-family="sans-serif" font-size="9" font-style="italic" fill="#555">(wick / strong close)</text>
+
+    <!-- NO branch left - SKIP -->
+    <line x1="250" y1="170" x2="155" y2="170" stroke="#e53935" stroke-width="1.5" marker-end="url(#arr21FR)"/>
+    <text x="202" y="163" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#e53935">NO</text>
+
+    <rect x="50" y="148" width="100" height="46" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="5"/>
+    <text x="100" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#e53935">WAIT</text>
+    <text x="100" y="184" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Level alone insufficient</text>
+
+    <!-- YES branch down -->
+    <line x1="360" y1="215" x2="360" y2="235" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr21FG)"/>
+    <text x="375" y="225" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">YES</text>
+
+    <!-- Decision diamond 2 -->
+    <polygon points="360,240 470,275 360,310 250,275" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="360" y="270" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">Volume + Context</text>
+    <text x="360" y="285" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#111">मिल्छ?</text>
+
+    <!-- NO branch left - WAIT MORE -->
+    <line x1="250" y1="275" x2="155" y2="275" stroke="#c8a800" stroke-width="1.5" marker-end="url(#arr21FY)"/>
+    <text x="200" y="268" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#c8a800">NO</text>
+
+    <rect x="50" y="253" width="100" height="46" fill="#fff8dc" stroke="#c8a800" stroke-width="2" rx="5"/>
+    <text x="100" y="273" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#c8a800">WAIT</text>
+    <text x="100" y="289" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Half confirmation</text>
+
+    <!-- YES - ENTRY -->
+    <line x1="470" y1="275" x2="555" y2="275" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arr21FG)"/>
+    <text x="510" y="268" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">YES</text>
+
+    <rect x="555" y="253" width="120" height="46" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="5"/>
+    <text x="615" y="273" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">ENTRY</text>
+    <text x="615" y="289" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">+ SL + Size define</text>
+
+    <defs>
+      <marker id="arr21F" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#111"/>
+      </marker>
+      <marker id="arr21FR" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#e53935"/>
+      </marker>
+      <marker id="arr21FG" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#4caf50"/>
+      </marker>
+      <marker id="arr21FY" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M 0 0 L 7 4 L 0 8 z" fill="#c8a800"/>
+      </marker>
+    </defs>
+  </svg>
+  <div class="visual-caption">Beginner Layer 1 (level touch) मा नै buy गर्छ; Professional Layer 2 (buyer reaction) र Layer 3 (Volume + context) confirm भएपछि मात्र entry गर्छ।</div>
+</div>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Pullback र Retest धेरै उपयोगी हुन्छन्, किनकि धेरै stock Breakout पछि तुरुन्त chase गर्दा trader late buyer बन्न सक्छ। नेपाली बजारमा social media hype, sector momentum, and sudden price move का कारण Breakout day मा Entry महँगो हुन सक्छ। यस्तो अवस्थामा Retest पर्खिनु disciplined approach हुन सक्छ।</p>
+
+<p>NEPSE मा strong sector rally हुँदा केही stock Breakout पछि Retest नै नगरी चल्न सक्छन्। यस्तो अवस्थामा trader लाई miss भएको जस्तो लाग्न सक्छ। तर प्रत्येक missed move chase गर्नु हुँदैन। आफ्नो system Retest entry हो भने Retest नआएको trade छोड्नु पनि discipline हो।</p>
+
+<p>NEPSE मा Fake Breakout पछि failed Retest पनि देखिन्छ। Price Resistance माथि गएको हुन्छ, तर फेरि level तल आउँछ। पछि पुरानो Breakout level माथि फर्किन खोज्दा reject हुन्छ। यस्तो अवस्थामा त्यो level फेरि Resistance बन्न सक्छ। Beginner यसलाई Pullback opportunity सम्झेर किन्न सक्छन्, तर वास्तवमा Breakout fail भइसकेको हुन सक्छ।</p>
+
+<p>NEPSE index र sector context यहाँ धेरै महत्वपूर्ण छ। यदि NEPSE index itself Pullback मा छ तर major support माथि छ, sector strong छ, and stock Retest मा buyer reaction देखाउँदैछ भने setup meaningful हुन सक्छ। तर NEPSE index breakdown हुँदैछ, sector weak छ, and stock Retest fail गर्दैछ भने सावधानी चाहिन्छ।</p>
+
+<p>NEPSE मा low liquidity stock मा Pullback र Retest signal misleading हुन सक्छ। Price अचानक level मा आउँछ, buyer/seller depth weak हुन्छ, and candle irregular हुन्छ। यस्तो अवस्थामा Stop Loss execute गर्न कठिन हुन सक्छ। Liquidity confirm नगरी Retest trade लिनु riskपूर्ण हुन सक्छ।</p>
+
+<p>Broker cost, tax, DP charge, and transaction fees swing trades मा net result असर गर्न सक्छन्। Pullback trade गर्दा Target र Risk-Reward calculate गर्दा यी cost पनि practical रूपमा ध्यान दिनुपर्छ। यी rates/rules समयसँगै बदलिन सक्छन्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Pullback र Retest trader psychology को गहिरो परीक्षा हुन्। Breakout आएपछि trader लाई FOMO हुन्छ। Price माथि भाग्दा उसलाई लाग्छ, <strong>“अब chance सकियो।”</strong> तर experienced trader जान्दछ—धेरै move मा Pullback आउन सक्छ। यदि Pullback आएन भने पनि capital बच्यो। यदि आयो भने better Entry मिल्न सक्छ।</p>
+
+<p>Pullback आउँदा beginner डराउँछ। उसलाई लाग्छ Breakout fail भयो। तर professional trader Pullback को quality पढ्छ। Volume घटिरहेको छ? Level hold भइरहेको छ? Candle reaction कस्तो छ? Market context ठीक छ? यदि उत्तर positive छ भने Pullback डर होइन, opportunity हुन सक्छ।</p>
+
+<p>तर Pullback को नाममा hope गर्नु पनि खतरनाक छ। यदि price support तोडेर तल गइरहेको छ, Volume selling बढेको छ, and structure बिग्रिएको छ भने <strong>“यो त Pullback हो”</strong> भनेर hold गर्नु ego हो। Professional trader Pullback र breakdown बीच फरक छुट्याउँछ।</p>
+
+<p>Retest मा धेरै trader बेचैन हुन्छन्। Breakout मा buy गरेका trader Retest आउँदा डराउँछन्। Entry missed गरेका trader Retest मा किन्न चाहन्छन् तर price अलि तल आउँदा अझ तल आउला भनेर पर्खिन्छन्। अनि price फेरि माथि जान्छ। Retest trading मा plan पहिले हुनुपर्छ, emotion पछि होइन।</p>
+
+<!-- VISUAL 5: Beginner vs Professional Reaction to Pullback -->
+<div class="visual-block">
+  <div class="visual-title">Pullback आउँदा — Beginner vs Professional को मनोविज्ञान</div>
+  <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="320" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">एउटै Pullback, दुई फरक प्रतिक्रिया — Outcome पनि फरक</text>
+
+    <!-- Divider -->
+    <line x1="360" y1="50" x2="360" y2="305" stroke="#c9b97a" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+    <!-- LEFT: Beginner -->
+    <rect x="40" y="55" width="300" height="38" fill="#ffe5e0" stroke="#e53935" stroke-width="2" rx="6"/>
+    <text x="190" y="79" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#e53935">Beginner Reaction</text>
+
+    <!-- Beginner thought process -->
+    <text x="55" y="115" font-family="sans-serif" font-size="11" font-weight="700" fill="#e53935">Pullback देखेर:</text>
+    <text x="55" y="135" font-family="sans-serif" font-size="10" fill="#111">😰 "Breakout fail भयो कि?"</text>
+    <text x="55" y="153" font-family="sans-serif" font-size="10" fill="#111">😨 "अझ तल जाला, बेच्छु"</text>
+    <text x="55" y="171" font-family="sans-serif" font-size="10" fill="#111">🏃 Panic exit at low</text>
+
+    <text x="55" y="195" font-family="sans-serif" font-size="11" font-weight="700" fill="#e53935">Pullback नआएमा:</text>
+    <text x="55" y="215" font-family="sans-serif" font-size="10" fill="#111">😩 "Missed गरेँ"</text>
+    <text x="55" y="233" font-family="sans-serif" font-size="10" fill="#111">🤯 FOMO — chase late entry</text>
+
+    <rect x="50" y="248" width="280" height="38" fill="#e53935" rx="4"/>
+    <text x="190" y="263" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">Result: Buy high, Sell low</text>
+    <text x="190" y="278" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">Emotion-driven, capital घट्छ</text>
+
+    <!-- RIGHT: Professional -->
+    <rect x="380" y="55" width="300" height="38" fill="#eaf6ea" stroke="#4caf50" stroke-width="2" rx="6"/>
+    <text x="530" y="79" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#2e7d32">Professional Reaction</text>
+
+    <!-- Professional thought process -->
+    <text x="395" y="115" font-family="sans-serif" font-size="11" font-weight="700" fill="#2e7d32">Pullback देखेर:</text>
+    <text x="395" y="135" font-family="sans-serif" font-size="10" fill="#111">🔍 "Structure intact छ?"</text>
+    <text x="395" y="153" font-family="sans-serif" font-size="10" fill="#111">📊 "Volume + HL जाँच"</text>
+    <text x="395" y="171" font-family="sans-serif" font-size="10" fill="#111">⏳ Wait for buyer reaction</text>
+
+    <text x="395" y="195" font-family="sans-serif" font-size="11" font-weight="700" fill="#2e7d32">Pullback नआएमा:</text>
+    <text x="395" y="215" font-family="sans-serif" font-size="10" fill="#111">😌 "Capital बच्यो, अर्को आउँछ"</text>
+    <text x="395" y="233" font-family="sans-serif" font-size="10" fill="#111">📝 Watchlist update — no chase</text>
+
+    <rect x="390" y="248" width="280" height="38" fill="#4caf50" rx="4"/>
+    <text x="530" y="263" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#fff">Result: Structured entry / pass</text>
+    <text x="530" y="278" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">Evidence-driven, capital safe</text>
+  </svg>
+  <div class="visual-caption">Pullback मा सही action गर्ने skill technique होइन, मनोविज्ञान हो — "Missed move ≠ loss" बुझ्ने trader नै FOMO बाट बच्न सक्छ।</div>
+</div>
+
+<p>Pullback ले trader लाई patience सिकाउँछ। Retest ले trader लाई evidence खोज्न सिकाउँछ। यी दुवैले FOMO कम गर्छन्। राम्रो trader price को पछि दौडिँदैन; price आफ्नो planned zone मा आएपछि मात्र निर्णय गर्छ।</p>
+
+<p>Pullback trading को psychological rule हो—<strong>“म सस्तो लागेर किन्दिनँ, structure healthy भएर मात्र किन्दछु।”</strong></p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Breakout पछि हरेक गिरावटलाई Pullback मान्नु। यदि structure बिग्रिएको छ भने त्यो Pullback होइन, breakdown हुन सक्छ।</p>
+
+<p>दोस्रो गल्ती हो—Retest level मा blind buy गर्नु। Level मा price आएको मात्र enough होइन। Buyer reaction चाहिन्छ।</p>
+
+<p>तेस्रो गल्ती हो—Pullback मा Volume नहेर्नु। Healthy Pullback मा selling Volume controlled हुन सक्छ। Heavy selling warning हो।</p>
+
+<p>चौथो गल्ती हो—Failed Retest नचिन्नु। Breakout level तल close भयो भने सावधानी चाहिन्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Breakout chase गरेर Pullback मा panic sell गर्नु। Breakout entry plan बिना भए Retest देख्दा डर लाग्छ।</p>
+
+<p>छैटौँ गल्ती हो—Retest पर्खिँदा plan नहुनु। Price zone मा आउँदा के गर्ने? कुन candle चाहिन्छ? Stop Loss कहाँ? यी कुरा पहिले clear हुनुपर्छ।</p>
+
+<p>सातौँ गल्ती हो—Pullback धेरै deep भए पनि buy गर्नु। Deep Pullback ले trend weakness देखाउन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Market र sector ignore गर्नु। Strong stock पनि weak market मा Pullback बाट breakdown हुन सक्छ।</p>
+
+<p>नवौँ गल्ती हो—Stop Loss टाढा राख्नु। Pullback trade मा Stop Loss structure अनुसार हुनुपर्छ, तर risk धेरै भए position size घटाउनुपर्छ।</p>
+
+<p>दशौँ गल्ती हो—Missed move chase गर्नु। Retest नआए trade छुट्यो भने पनि FOMO मा late Entry गर्नु हुँदैन।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Healthy Pullback र Breakdown फरक हुन्</div>
+  <p style="margin-bottom:0;"><strong>Healthy Pullback:</strong> Last HL bachyo, Volume घट्यो, candle मा buyer reaction (lower wick), structure intact। <strong>Breakdown:</strong> Last HL break, Volume selling बढ्यो, bounce weak, structure LH/LL तर्फ बदलियो। यी दुई बीच फरक नछुट्याउँदा "Pullback buy" गर्ने beginner ले failing trend मा position लिन्छ — sस्तो लागेकोलाई structure quality सम्झने भ्रम छोड्नुहोस्।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p><strong>Pullback trade rules:</strong></p>
+
+<ul>
+  <li>पहिले trend clear uptrend मा छ कि छैन हेर्नुहोस्।</li>
+  <li>Price HH/HL structure मा छ कि छैन जाँच्नुहोस्।</li>
+  <li>Pullback important support, Moving Average, or previous breakout level नजिक छ कि हेर्नुहोस्।</li>
+  <li>Pullback मा selling Volume controlled छ कि छैन हेर्नुहोस्।</li>
+  <li>Buyer reaction बिना blind buy नगर्नुहोस्।</li>
+  <li>Last Higher Low break भयो भने caution लिनुहोस्।</li>
+  <li>Deep Pullback मा trend weakness जाँच्नुहोस्।</li>
+  <li>Stop Loss structure तल राख्नुहोस्।</li>
+  <li>Risk-Reward मिल्छ कि छैन calculate गर्नुहोस्।</li>
+</ul>
+
+<p><strong>Retest trade rules:</strong></p>
+
+<ul>
+  <li>Breakout level clear हुनुपर्छ।</li>
+  <li>Breakout candle strong close र Volume सहित हुनुपर्छ।</li>
+  <li>Price पुरानो Resistance zone मा फर्किँदा seller कमजोर छन् कि छैनन् हेर्नुहोस्।</li>
+  <li>Retest मा lower wick, strong close, or buyer candle खोज्नुहोस्।</li>
+  <li>Retest level तल strong close भयो भने caution।</li>
+  <li>Retest successful नभएसम्म heavy position नलिनुहोस्।</li>
+  <li>NEPSE index र sector supportive छन् कि छैनन् जाँच्नुहोस्।</li>
+  <li>Retest entry मा Stop Loss Retest low वा structure support तल define गर्नुहोस्।</li>
+  <li>Retest नआए trade chase नगर्नुहोस्।</li>
+</ul>
+
+<p><strong>General rule:</strong></p>
+
+<ul>
+  <li>Pullback opportunity हो, तर केवल healthy trend मा।</li>
+  <li>Retest confirmation हो, तर केवल buyer reaction आएपछि।</li>
+  <li>Price सस्तो आयो भनेर होइन, structure बच्यो भनेर trade गर्नुहोस्।</li>
+</ul>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Healthy Pullback</strong></p>
+<p>एउटा stock Rs. 300 बाट Rs. 380 सम्म uptrend मा गएको छ। बीचमा Higher High र Higher Low बनाइरहेको छ। Price Rs. 380 बाट Rs. 350 मा फर्किन्छ। Pullback मा Volume घटेको छ। Rs. 350 नजिक previous support छ। Candle मा lower wick देखिन्छ र अर्को दिन price Rs. 360 माथि close हुन्छ। Sector पनि strong छ।</p>
+<p>यो healthy Pullback हुन सक्छ। Trader ले Stop Loss Rs. 340 वा structure support तल राखेर Risk-Reward जाँच्न सक्छ।</p>
+
+<p><strong>Scenario 2: Weak Pullback</strong></p>
+<p>Stock Rs. 500 बाट Rs. 600 पुगेको थियो। Price Rs. 560 मा फर्कियो। Beginner ले Pullback सोच्यो। तर selling Volume धेरै थियो। Price last Higher Low Rs. 550 तल close भयो। अर्को bounce weak भयो र Rs. 570 भन्दा माथि जान सकेन। यो healthy Pullback होइन, trend weakness हुन सक्छ।</p>
+
+<p><strong>Scenario 3: Successful Retest</strong></p>
+<p>Stock Rs. 700 Resistance माथि Rs. 730 मा strong Volume सहित close भयो। केही दिनपछि price Rs. 705–710 zone मा फर्कियो। Selling Volume कम थियो। Candle मा lower wick बन्यो। अर्को दिन strong green close आयो। पुरानो Resistance नयाँ Support बनेको देखियो। यो successful Retest setup हुन सक्छ।</p>
+
+<p><strong>Scenario 4: Failed Retest</strong></p>
+<p>Stock Rs. 800 Resistance माथि Rs. 820 पुगेको थियो। Breakout candle मा upper wick थियो। अर्को दिन price Rs. 790 मा close भयो। केही दिनपछि price फेरि Rs. 800 माथि जान खोज्यो, तर reject भयो। अब पुरानो Breakout level support होइन, resistance जस्तो देखियो। यो failed Retest हो। Beginner यसलाई buy opportunity सम्झेर फस्न सक्छन्।</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%;">Type</th>
+      <th style="width:26%;">Key Signal</th>
+      <th style="width:26%;">Volume Behavior</th>
+      <th style="width:26%;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="color:#2e7d32;">Healthy Pullback</strong></td>
+      <td>HL bachyo, shallow depth</td>
+      <td>Selling volume घट्दै</td>
+      <td>Buyer reaction पर्ख + Entry</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#e53935;">Weak Pullback</strong></td>
+      <td>HL break, deep correction</td>
+      <td>Selling volume बढ्दै</td>
+      <td>Skip — structure broken</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#2e7d32;">Successful Retest</strong></td>
+      <td>Lower wick + strong close at level</td>
+      <td>Low selling volume</td>
+      <td>SL Retest low तल → Entry</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#e53935;">Failed Retest</strong></td>
+      <td>Close तल level + Upper wick</td>
+      <td>Selling volume बढ्यो</td>
+      <td>Exit, ego नलगाउने</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Pullback र Retest Trading Checklist</div>
+
+  <div class="checklist-sub">Pullback check:</div>
+  <ul>
+    <li>Stock uptrend मा छ?</li>
+    <li>HH/HL structure clear छ?</li>
+    <li>Pullback previous support वा Moving Average नजिक छ?</li>
+    <li>Selling Volume घटेको छ?</li>
+    <li>Candle मा buyer reaction छ?</li>
+    <li>Last Higher Low बचेको छ?</li>
+    <li>Pullback धेरै deep त छैन?</li>
+    <li>NEPSE index supportive छ?</li>
+    <li>Sector supportive छ?</li>
+    <li>Stop Loss कहाँ छ?</li>
+    <li>Risk-Reward मिल्छ?</li>
+    <li>यो Pullback हो कि breakdown?</li>
+  </ul>
+
+  <div class="checklist-sub">Retest check:</div>
+  <ul>
+    <li>Breakout level clear थियो?</li>
+    <li>Breakout candle strong थियो?</li>
+    <li>Breakout मा Volume आएको थियो?</li>
+    <li>Price पुरानो Resistance zone मा फर्किएको छ?</li>
+    <li>Retest मा seller कमजोर देखिन्छन्?</li>
+    <li>Buyer reaction देखिएको छ?</li>
+    <li>Price level तल close भएको छैन?</li>
+    <li>Retest successful छ कि fail?</li>
+    <li>Entry गर्दा chase हुँदैन?</li>
+    <li>Stop Loss Retest low तल राख्न मिल्छ?</li>
+    <li>Position Size risk अनुसार छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Avoid check:</div>
+  <ul>
+    <li>Price support तल strong close भयो?</li>
+    <li>Selling Volume high छ?</li>
+    <li>Market कमजोर छ?</li>
+    <li>Sector कमजोर छ?</li>
+    <li>Structure LH/LL मा बदलिँदैछ?</li>
+    <li>म केवल सस्तो लागेर किन्दैछु?</li>
+    <li>म missed Breakout को regret मा Entry गर्दैछु?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: 10 Stock Pullback Audit</div>
+  <p>कुनै 10 वटा NEPSE stock को chart खोल्नुहोस्। प्रत्येकमा identify गर्नुहोस्:</p>
+  <ul>
+    <li>Stock uptrend मा छ कि छैन?</li>
+    <li>Last Higher Low कहाँ छ?</li>
+    <li>Pullback healthy देखिन्छ कि weak?</li>
+    <li>Pullback मा Volume कस्तो छ?</li>
+    <li>Buyer reaction आएको छ कि छैन?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Find 5 Successful Retests</div>
+  <p>5 वटा successful Retest example खोज्नुहोस्। प्रत्येकमा mark गर्नुहोस्:</p>
+  <ul>
+    <li>Breakout level</li>
+    <li>Breakout candle</li>
+    <li>Retest zone</li>
+    <li>Retest candle</li>
+    <li>Buyer reaction</li>
+    <li>Stop Loss area</li>
+    <li>Continuation move</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Find 5 Failed Retests</div>
+  <p>5 वटा failed Retest example खोज्नुहोस्। प्रत्येकमा लेख्नुहोस्:</p>
+  <ul>
+    <li>Breakout कहाँ भयो?</li>
+    <li>Price level तल फर्कियो?</li>
+    <li>Retest मा reject भयो?</li>
+    <li>Volume कस्तो थियो?</li>
+    <li>Beginner कहाँ फस्न सक्थे?</li>
+    <li>Exit कहाँ हुनुपर्ने थियो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Past Trade Pullback/Retest Review</div>
+  <p>आफ्नो पुरानो trade review गर्नुहोस्:</p>
+  <ul>
+    <li>मैले Breakout chase गरेको थिएँ कि Pullback पर्खेको थिएँ?</li>
+    <li>Price Retest मा आउँदा मैले panic sell गरें?</li>
+    <li>मैले Pullback र breakdown छुट्याउन सकेँ?</li>
+    <li>Stop Loss structure अनुसार थियो?</li>
+    <li>अब त्यही setup आए म के फरक गर्छु?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Paper Trade One Retest Setup</div>
+  <p>एक paper trade बनाउनुहोस्:</p>
+  <ul>
+    <li>Stock name</li>
+    <li>Breakout level</li>
+    <li>Retest zone</li>
+    <li>Entry trigger</li>
+    <li>Stop Loss</li>
+    <li>Target</li>
+    <li>Risk-Reward</li>
+    <li>Invalid condition</li>
+  </ul>
+  <p style="margin-bottom:0;">यो अभ्यास real money प्रयोग नगरी Pullback/Retest plan बनाउने skill विकास गर्नका लागि हो।</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Pullback trader लाई FOMO बाट बचाउने tool हो। Retest trader लाई Breakout को quality जाँच्ने मौका हो। तर दुवैलाई blind buy signal मान्नु हुँदैन।</p>
+  <p>Healthy Pullback मा trend structure बचिरहेको हुन्छ। Weak Pullback मा structure बिग्रिन थाल्छ। Successful Retest मा पुरानो Resistance नयाँ Support बन्छ। Failed Retest मा Breakout buyer trapped हुन सक्छन्।</p>
+  <p>Professional trader price माथि भाग्दा हतार गर्दैन। ऊ सोध्छ—<strong>“के better Entry Pullback मा आउन सक्छ?”</strong> तर यदि Pullback आएन भने पनि ऊ पछुतोले chase गर्दैन।</p>
+  <p style="margin-bottom:0;">Pullback र Retest को असली शक्ति Entry सस्तो बनाउनु मात्र होइन; risk स्पष्ट बनाउनु हो। Risk स्पष्ट नभएको trade राम्रो देखिए पनि अधुरो हुन्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 21 Summary</div>
+  <p>Pullback भनेको चलिरहेको trend भित्र आउने temporary correction हो। Retest भनेको price पहिले break गरेको important level मा फर्केर त्यो level hold गर्छ कि गर्दैन भनेर जाँच्नु हो।</p>
+  <p>Healthy Pullback मा trend structure बचिरहेको हुन्छ, selling Volume controlled हुन्छ, Support वा Higher Low बच्न सक्छ, र buyer reaction देखिन्छ। Weak Pullback मा selling Volume बढ्छ, support break हुन्छ, and structure कमजोर हुन्छ।</p>
+  <p>Successful Retest मा पुरानो Resistance नयाँ Support बन्न सक्छ। Price Breakout level नजिक फर्किन्छ, seller कमजोर देखिन्छन्, buyer reaction आउँछ, and price फेरि माथि जान सक्छ। Failed Retest मा price level तल फर्किन्छ, buyer कमजोर हुन्छन्, and Breakout fail हुन सक्छ।</p>
+  <p>NEPSE मा Pullback र Retest trading गर्दा index, sector, stock structure, Volume, liquidity, and market sentiment सबै हेर्नुपर्छ। Social media hype भएको Breakout पछि Retest नबुझ्दा trader panic वा FOMO मा फस्न सक्छ।</p>
+  <p>Pullback र Retest ले better Entry, नजिक Stop Loss, and राम्रो Risk-Reward दिन सक्छन्। तर कुनै पनि setup guarantee होइन। Stop Loss, Position Sizing, and confirmation अनिवार्य छन्।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Breakout chase नगर्नुहोस्। Pullback र Retest लाई patient trader को अवसरका रूपमा हेर्नुहोस्, तर healthy structure र buyer reaction बिना blind Entry नगर्नुहोस्।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader price भाग्दा पछाडि दौडिँदैन;<br>
+  ऊ price आफ्नो planned zone मा फर्किन्छ कि फर्किँदैन हेर्छ,<br>
+  अनि त्यहाँ buyer को वास्तविक शक्ति देखिएपछि<br>
+  मात्र निर्णय गर्छ।
+</div>
+
+</div>
+</body>
+</html>

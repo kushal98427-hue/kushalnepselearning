@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 45: Partial Exit, Trailing Stop, Final Exit — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 26px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 20px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 45</div>
+  <h1 class="chapter-title">Partial Exit, Trailing Stop, Final Exit</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>नविनले एउटा stock Rs. 400 मा किनेको थियो। Stop Loss Rs. 375 थियो। Target Rs. 460 थियो। केही दिनपछि price Rs. 450 पुग्यो। उसको profit राम्रो थियो। तर उसले केही बेचेन। उसलाई लाग्यो—<strong>“अझै माथि जान्छ।”</strong> Price Rs. 470 पुग्यो। अब उसले सोचे—<strong>“Rs. 500 पुगेपछि बेच्ने।”</strong> तर price Rs. 500 पुग्न सकेन। उल्टै Rs. 440 मा फर्कियो। नविनले फेरि hold गर्‍यो। अन्त्यमा price Rs. 405 सम्म आयो। उसको ठूलो profit almost हरायो।</p>
+
+<p>नविनको Entry राम्रो थियो। Setup पनि ठीक थियो। तर trade management कमजोर थियो। उसले profit आएपछि के गर्ने भन्ने plan बनाएको थिएन।</p>
+
+<p>अर्कोतर्फ, मन्दिराले त्यस्तै trade लिएकी थिइन्। उनको Entry Rs. 400 थियो। Stop Loss Rs. 375। उनले पहिले नै plan बनाइन्:</p>
+
+<ul>
+  <li>Target 1 Rs. 440 मा 40% sell गर्ने।</li>
+  <li>Target 2 Rs. 465 मा 30% sell गर्ने।</li>
+  <li>बाँकी 30% quantity trailing stopमा राख्ने।</li>
+  <li>यदि price last Higher Low तल आयो भने final exit गर्ने।</li>
+</ul>
+
+<p>Price Rs. 440 पुग्दा उनले केही profit book गरिन्। Rs. 465 नजिक अर्को भाग sell गरिन्। बाँकी quantity trendसँग राखिन्। Price पछि फर्कियो, तर trailing stopले बाँकी profit पनि protect गर्‍यो। उनको trade perfect top मा sell भएन, तर overall profit राम्रो भयो।</p>
+
+<p>Trading मा Entry एउटा ढोका हो। Exit यात्रा पूरा गर्ने बाटो हो। Partial Exit, Trailing Stop, र Final Exit यी तीन कुरा नबुझे trader कहिले धेरै छिटो बेचेर ठूलो move miss गर्छ, कहिले धेरै ढिलो बेचेर profit गुमाउँछ, कहिले Stop Loss बिना profitलाई lossमा बदल्न दिन्छ।</p>
+
+<p>यो chapter trade management को practical heart हो। Profit आएपछि कति बेच्ने, कति hold गर्ने, Stop Loss कहाँ trail गर्ने, र अन्तिम exit कहिले गर्ने भन्ने स्पष्ट planले traderलाई emotionबाट बचाउँछ।</p>
+
+<!-- VISUAL 1: Navin vs Mandira -->
+<div class="visual-block">
+  <div class="visual-title">नविन (No Plan) vs मन्दिरा (Exit Plan) — एउटै trade, फरक management</div>
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="400" fill="#fffdf5"/>
+
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">एउटै Entry Rs. 400, उही profit move — फरक केवल Exit management मा</text>
+
+    <!-- LEFT: NAVIN -->
+    <rect x="20" y="40" width="355" height="28" fill="#ef5350" rx="4"/>
+    <text x="197" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ नविन — "अझै जाला" (No Plan)</text>
+
+    <rect x="20" y="72" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="40" y1="245" x2="355" y2="245" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="44" y="241" font-family="sans-serif" font-size="8" fill="#111">Entry 400</text>
+    <path d="M 45 245 L 90 215 L 130 185 L 165 168 L 195 155 L 225 172 L 270 205 L 315 232 L 350 247" stroke="#ef5350" stroke-width="2.5" fill="none"/>
+    <circle cx="195" cy="155" r="5" fill="#fff" stroke="#c8a800" stroke-width="2"/>
+    <circle cx="350" cy="247" r="5" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+
+    <line x1="195" y1="155" x2="240" y2="110" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="165" y="92" width="180" height="32" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+      <text x="255" y="105" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c8a800">Rs. 470 — "Rs.500 पुगे बेच्ने"</text>
+      <text x="255" y="118" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">केही बेचेन (greed)</text>
+    </g>
+    <line x1="350" y1="247" x2="300" y2="272" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="150" y="264" width="200" height="28" rx="6" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.1"/>
+      <text x="250" y="282" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Rs. 405 फिर्ता — profit हरायो</text>
+    </g>
+
+    <!-- RIGHT: MANDIRA -->
+    <rect x="385" y="40" width="355" height="28" fill="#26a69a" rx="4"/>
+    <text x="562" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✓ मन्दिरा — T1 40%/T2 30%/Trailing</text>
+
+    <rect x="385" y="72" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="405" y1="245" x2="720" y2="245" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="409" y="241" font-family="sans-serif" font-size="8" fill="#111">Entry 400</text>
+    <line x1="405" y1="190" x2="720" y2="190" stroke="#26a69a" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="690" y="187" font-family="sans-serif" font-size="8" fill="#2e7d32">T1 440</text>
+    <line x1="405" y1="158" x2="720" y2="158" stroke="#26a69a" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="690" y="155" font-family="sans-serif" font-size="8" fill="#2e7d32">T2 465</text>
+    <path d="M 410 245 L 455 215 L 500 190 L 540 168 L 565 158 L 595 172 L 640 200 L 685 222 L 710 235" stroke="#26a69a" stroke-width="2.5" fill="none"/>
+    <circle cx="500" cy="190" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+    <circle cx="565" cy="158" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+    <!-- trailing exit marker -->
+    <circle cx="685" cy="222" r="5" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+
+    <line x1="500" y1="190" x2="455" y2="110" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="408" y="92" width="155" height="30" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="485" y="111" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">T1 Rs.440 → 40% sell</text>
+    </g>
+    <line x1="565" y1="158" x2="610" y2="110" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="565" y="92" width="170" height="30" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="650" y="111" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">T2 Rs.465 → 30% + trailing</text>
+    </g>
+    <line x1="685" y1="222" x2="640" y2="270" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="480" y="262" width="255" height="30" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="607" y="281" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">trailing stop ले बाँकी profit protect ✓</text>
+    </g>
+
+    <rect x="20" y="306" width="720" height="50" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="6"/>
+    <text x="380" y="328" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">Entry ढोका हो, Exit यात्रा पूरा गर्ने बाटो — perfect top होइन, राम्रो overall profit</text>
+    <text x="380" y="346" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">नविन को profit emotion ले खायो, मन्दिरा को plan ले बचायो</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले chapter को मूल देखाउँछ — दुवैको Entry (Rs. 400), Setup राम्रो, उही profit move (470 सम्म) थियो। फरक trade management मा। नविन (बायाँ): plan थिएन, "अझै जाला" भन्दै Rs. 470 मा बेचेन, "Rs. 500 पुगे बेच्ने" भन्यो — price फर्केर Rs. 405 आयो, ठूलो profit लगभग हरायो। मन्दिरा (दायाँ): Entry अघि नै plan — T1 Rs. 440 मा 40% sell, T2 Rs. 465 मा 30% sell, बाँकी 30% trailing stop (last Higher Low तल)। Price फर्किँदा trailing ले बाँकी profit पनि protect गर्‍यो। उनको trade perfect top मा बेचिएन, तर overall profit राम्रो। मुख्य पाठ — Entry एउटा ढोका हो, Exit यात्रा पूरा गर्ने बाटो; profit emotion ले होइन, plan ले बचाउँछ।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>धेरै traderलाई Entry सिक्न सजिलो लाग्छ। तर trade profitमा गएपछि management गर्न गाह्रो हुन्छ। Profit देख्दा लोभ आउँछ। Profit घट्दा डर आउँछ। Target नजिक पुग्दा confusion हुन्छ। Price अझै माथि गए regret हुन्छ। Price फर्किए regret हुन्छ। यस्तो अवस्थामा predefined exit system नभए traderको निर्णय emotional हुन्छ।</p>
+
+<p>Partial Exit, Trailing Stop, र Final Exit ले यो समस्या घटाउँछन्।</p>
+
+<p>Partial Exit ले profitको केही भाग सुरक्षित गर्छ। यसले traderलाई psychological relief दिन्छ। केही profit book भएपछि बाँकी positionमा pressure कम हुन्छ।</p>
+
+<p>Trailing Stop ले trend चलिरहेसम्म tradeमा बस्न सहयोग गर्छ। यसले profit protect गर्दै priceलाई बढ्ने room दिन्छ।</p>
+
+<p>Final Exit ले tradeको अन्तिम निर्णय clear गर्छ। कहिले पूरा बाहिरिने? Trend कमजोर हुँदा? Target पूरा हुँदा? Support break हुँदा? Sector कमजोर हुँदा? यी कुरा पहिले नै तय गर्नुपर्छ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि राम्रो Entry खराब Exitका कारण कमजोर result बन्न सक्छ। त्यस्तै average Entry राम्रो trade managementका कारण ठीक result दिन सक्छ। Trading मा पैसा कमाउने system केवल buy signalमा होइन, exit managementमा पनि हुन्छ।</p>
+
+<p>Trader को goal perfect top मा sell गर्नु होइन। Goal हो—risk control गर्दै, profit protect गर्दै, tradeलाई plan अनुसार manage गर्नु।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Partial Exit भनेको आफ्नो total quantityको केही भाग मात्र sell गर्नु हो। उदाहरणका लागि, तपाईंले 100 shares किन्नुभयो। Target 1 मा 50 shares sell गर्नुभयो। बाँकी 50 shares hold गर्नुभयो। यो Partial Exit हो।</p>
+
+<p>Trailing Stop भनेको price तपाईंको पक्षमा जाँदै गर्दा Stop Loss पनि माथि सार्दै जानु हो। यसले profit protect गर्न मद्दत गर्छ। उदाहरणका लागि, Entry Rs. 500 थियो। Price Rs. 560 पुग्यो। अब Stop Loss Rs. 475 बाट Rs. 530 मा सार्न सकिन्छ, यदि chart structureले support गर्छ भने।</p>
+
+<p>Final Exit भनेको बाँकी सबै quantity sell गरेर trade पूर्ण रूपमा बन्द गर्नु हो। Final Exit target पूरा भएपछि, trend कमजोर भएपछि, trailing stop hit भएपछि, market context बिग्रिएपछि, वा setup invalid भएपछि गर्न सकिन्छ।</p>
+
+<p>सरल रूपमा:</p>
+
+<ul>
+  <li>Partial Exit = केही profit सुरक्षित गर्ने।</li>
+  <li>Trailing Stop = बाँकी positionलाई trendसँग राख्दै profit protect गर्ने।</li>
+  <li>Final Exit = trade पूर्ण रूपमा बन्द गर्ने।</li>
+</ul>
+
+<p>यी तीन कुरा मिलेर trade management system बन्छ।</p>
+
+<!-- VISUAL 2: 3 concepts defined -->
+<div class="visual-block">
+  <div class="visual-title">तीन Exit Concept — एकसाथ कसरी काम गर्छन्</div>
+  <svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="290" fill="#fffdf5"/>
+
+    <text x="380" y="26" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">तीन मिलेर एउटा Trade Management System बन्छ</text>
+
+    <!-- 1 Partial -->
+    <rect x="30" y="48" width="225" height="195" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="142" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">1. Partial Exit</text>
+    <!-- mini: 100 shares split -->
+    <rect x="55" y="88" width="175" height="26" rx="4" fill="#26a69a" fill-opacity="0.3"/>
+    <rect x="55" y="88" width="87" height="26" rx="4" fill="#26a69a"/>
+    <text x="98" y="105" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#fff">50 sell</text>
+    <text x="186" y="105" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">50 hold</text>
+    <text x="142" y="138" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">quantity को केही भाग</text>
+    <text x="142" y="153" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">sell, बाँकी hold</text>
+    <text x="142" y="178" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">= केही profit सुरक्षित</text>
+    <text x="142" y="200" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">डर घटाउँछ,</text>
+    <text x="142" y="214" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">psychological relief</text>
+
+    <!-- 2 Trailing -->
+    <rect x="268" y="48" width="225" height="195" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="1.5"/>
+    <text x="380" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#c8a800">2. Trailing Stop</text>
+    <!-- mini chart -->
+    <path d="M 295 130 L 325 115 L 360 98 L 400 82 L 440 70" stroke="#c8a800" stroke-width="2" fill="none"/>
+    <path d="M 310 128 L 340 128 L 340 112 L 380 112 L 380 95 L 420 95" stroke="#ef5350" stroke-width="1.3" fill="none" stroke-dasharray="3,2"/>
+    <text x="380" y="150" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">price माथि → SL पनि</text>
+    <text x="380" y="165" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">माथि सार्दै</text>
+    <text x="380" y="190" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">= profit protect + room</text>
+    <text x="380" y="212" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">लोभलाई नियम दिन्छ,</text>
+    <text x="380" y="226" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">trend सँग बस्न दिन्छ</text>
+
+    <!-- 3 Final -->
+    <rect x="506" y="48" width="225" height="195" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.5"/>
+    <text x="618" y="72" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#1a56cc">3. Final Exit</text>
+    <!-- mini: close all -->
+    <rect x="535" y="88" width="166" height="26" rx="4" fill="#2962ff" fill-opacity="0.25"/>
+    <text x="618" y="105" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#1a56cc">सबै बाँकी sell ✓</text>
+    <text x="618" y="138" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">trade पूर्ण रूपमा</text>
+    <text x="618" y="153" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">बन्द</text>
+    <text x="618" y="178" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#1a56cc">= trade लाई closure</text>
+    <text x="618" y="200" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">target / trend break /</text>
+    <text x="618" y="214" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">trailing hit हुँदा</text>
+
+    <rect x="30" y="255" width="701" height="30" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="380" y="274" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#111">Partial ले डर घटाउँछ • Trailing ले लोभलाई नियम दिन्छ • Final ले closure दिन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले तीन exit concept परिभाषित गर्छ। (1) <strong>Partial Exit</strong>: total quantity को केही भाग sell, बाँकी hold (जस्तै 100 मध्ये 50 sell, 50 hold) — केही profit सुरक्षित, यसले डर घटाउँछ र psychological relief दिन्छ। (2) <strong>Trailing Stop</strong>: price माथि जाँदै गर्दा Stop Loss पनि माथि सार्दै — profit protect गर्दै price लाई बढ्ने room दिन्छ, लोभलाई नियम दिन्छ। (3) <strong>Final Exit</strong>: बाँकी सबै quantity sell गरेर trade पूर्ण बन्द — target पूरा, trend break, वा trailing hit हुँदा। यी तीन मिलेर एउटा trade management system बन्छ — डर, लोभ र confusion तीनैलाई नियममा राख्ने।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Partial Exit को मुख्य उद्देश्य profit सुरक्षित गर्नु र psychology control गर्नु हो। जब trade profitमा जान्छ, traderको मन अस्थिर हुन सक्छ। <strong>“सबै sell गरूँ कि hold गरूँ?”</strong> भन्ने confusion आउँछ। Partial Exit ले बीचको बाटो दिन्छ। केही sell गरेर profit सुरक्षित गर्ने, बाँकी hold गरेर potential upside लिन दिने।</p>
+
+<p>Partial Exit का धेरै model हुन सक्छन्।</p>
+
+<ul>
+  <li>पहिलो model: 50% at Target 1, 50% at Target 2</li>
+  <li>दोस्रो model: 40% at Target 1, 30% at Target 2, 30% trailing</li>
+  <li>तेस्रो model: 30% at 1:2 Risk-Reward, 30% at next Resistance, 40% trend follow</li>
+  <li>चौथो model: Range tradeमा 70–100% range high नजिक sell</li>
+  <li>पाँचौँ model: Strong trendमा सानो partial booking, बाँकी trailing</li>
+</ul>
+
+<p>कुन model प्रयोग गर्ने भन्ने setupको natureमा निर्भर हुन्छ। Range tradeमा price range high नजिक पुग्दा ठूलो portion book गर्नु practical हुन सक्छ। Trend continuation tradeमा केही book गरेर बाँकी trendसँग राख्न सकिन्छ। Support bounce tradeमा broader trend कमजोर भए target नजिक बढी book गर्न सकिन्छ।</p>
+
+<p>Partial Exit गर्दा एउटा गल्ती हुन्छ—धेरै छिटो धेरै बेच्नु। यदि trader Target 1 आउनुअघि नै डरले 80% sell गर्छ भने winning trade सानो हुन्छ। अर्को गल्ती—partial exit कहिल्यै नगर्नु। सबै hold गर्दा profit हराउन सक्छ। Balance चाहिन्छ।</p>
+
+<p>Trailing Stop को काम profit protect गर्दै trendलाई space दिनु हो। Price माथि जाँदैछ भने पुरानो Stop Lossलाई त्यहीँ राखिरहनु आवश्यक नहुन सक्छ। तर Stop Loss माथि सार्दा structure हेर्नुपर्छ। Trailing Stop random हुनु हुँदैन।</p>
+
+<p>Trailing Stop राख्ने common methods:</p>
+
+<ul>
+  <li>Last Higher Low तल</li>
+  <li>Previous swing low तल</li>
+  <li>20 MA वा 50 MA तल, यदि trendमा price त्यसलाई respect गरिरहेको छ भने</li>
+  <li>Short-term support तल</li>
+  <li>Previous candle low तल, short-term traderका लागि</li>
+  <li>Breakout level तल, यदि price breakoutपछि sustain भएको छ</li>
+  <li>ATR वा volatility-based stop, advanced traderका लागि</li>
+</ul>
+
+<p>Beginnerका लागि structure-based trailing stop बढी practical हुन्छ। यदि stock Higher High र Higher Low बनाउँदैछ भने प्रत्येक नयाँ Higher Low बनेपछि Stop Lossलाई पुरानो Higher Lowबाट नयाँ Higher Low तल सार्न सकिन्छ। यसले trendलाई room दिन्छ।</p>
+
+<!-- VISUAL 4 (HL trailing model) placed here -->
+<div class="visual-block">
+  <div class="visual-title">Higher Low based Trailing Stop Model (Scenario 3)</div>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="360" fill="#fffdf5"/>
+
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">हरेक नयाँ Higher Low बनेपछि Stop Loss त्यसको तल सार्ने</text>
+
+    <rect x="40" y="50" width="560" height="270" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- Y labels -->
+    <text x="608" y="95" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 740</text>
+    <text x="608" y="150" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 700</text>
+    <text x="608" y="200" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 660</text>
+    <text x="608" y="285" font-family="Roboto, sans-serif" font-size="9" fill="#555">Rs. 600</text>
+
+    <!-- entry -->
+    <line x1="40" y1="280" x2="600" y2="280" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="44" y="276" font-family="sans-serif" font-size="8" fill="#111">Entry 600</text>
+
+    <!-- price uptrend with HLs -->
+    <path d="M 60 280 L 100 245 L 140 200 L 175 220 L 215 150 L 255 175 L 295 110 L 335 135 L 375 95" stroke="#26a69a" stroke-width="2.5" fill="none"/>
+    <!-- HL markers -->
+    <circle cx="175" cy="220" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+    <circle cx="255" cy="175" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+    <circle cx="335" cy="135" r="5" fill="#26a69a" stroke="#00897b" stroke-width="1.2"/>
+    <text x="175" y="238" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HL 670</text>
+    <text x="255" y="193" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">HL 710</text>
+
+    <!-- stepping trailing stop -->
+    <path d="M 60 295 L 190 295 L 190 232 L 270 232 L 270 187 L 375 187" stroke="#ef5350" stroke-width="1.6" fill="none" stroke-dasharray="5,3"/>
+
+    <!-- T1 partial sell at 660 -->
+    <line x1="40" y1="200" x2="600" y2="200" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="4,2"/>
+    <circle cx="140" cy="200" r="6" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+
+    <!-- bubbles -->
+    <line x1="140" y1="200" x2="180" y2="120" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="100" y="100" width="170" height="32" rx="7" fill="#fff8dc" stroke="#c8a800" stroke-width="1.1"/>
+      <text x="185" y="116" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">T1 Rs.660 → 40 shares sell</text>
+      <text x="185" y="128" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">बाँकी trailing मा</text>
+    </g>
+
+    <line x1="270" y1="232" x2="330" y2="300" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="230" y="298" width="260" height="44" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.1"/>
+      <text x="360" y="316" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c62828">SL: HL 670 तल → फेरि HL 710 तल सार्दै</text>
+      <text x="360" y="330" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">हरेक नयाँ HL सँगै profit lock हुँदै</text>
+    </g>
+
+    <line x1="375" y1="187" x2="450" y2="160" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="450" y="135" width="135" height="48" rx="7" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.1"/>
+      <text x="517" y="153" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">Final Exit:</text>
+      <text x="517" y="167" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">trailing stop hit</text>
+      <text x="517" y="178" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">हुँदा बाँकी sell</text>
+    </g>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Higher Low based trailing stop को practical model देखाउँछ (Scenario 3)। Entry Rs. 600। Price माथि जाँदै हरेक पटक नयाँ Higher Low बनाउँछ — HL 670, HL 710। Trailing rule सरल — हरेक नयाँ HL बनेपछि Stop Loss त्यसको तल सार्ने (रातो stepping line)। पहिले SL HL 670 तल, अनि price अझै माथि गएर HL 710 बनेपछि SL HL 710 तल। साथै T1 Rs. 660 मा 40 shares partial sell। यसरी जति trend माथि जान्छ, त्यति profit "lock" हुँदै जान्छ। अन्त्यमा price फर्केर trailing stop hit भयो भने बाँकी quantity profit मा final exit। यो method ले strong trend लाई room दिन्छ तर profit uncontrolled गुम्न दिँदैन।
+</div>
+
+<p>Trailing Stop धेरै tight राख्दा normal pullbackमा exit हुन्छ। धेरै loose राख्दा profit धेरै फिर्ता जान सक्छ। त्यसैले setupको timeframe बुझ्नुपर्छ। Short-term tradeमा trailing tight हुन सक्छ। Swing tradeमा trailing wider हुन सक्छ। Long trend tradeमा 20/50 MA वा swing structure प्रयोग हुन सक्छ।</p>
+
+<p>Final Exit सबैभन्दा स्पष्ट हुनुपर्छ। Final Exitका common कारण:</p>
+
+<ul>
+  <li>Target पूरा भयो।</li>
+  <li>Price major Resistanceमा reject भयो।</li>
+  <li>Trailing Stop hit भयो।</li>
+  <li>Last Higher Low break भयो।</li>
+  <li>Breakout level तल price फर्कियो।</li>
+  <li>Sector momentum कमजोर भयो।</li>
+  <li>NEPSE index major breakdownमा गयो।</li>
+  <li>Volume climax + weak close आयो।</li>
+  <li>Profit protection rule trigger भयो।</li>
+  <li>Time-based exit rule पूरा भयो।</li>
+</ul>
+
+<p>Final Exit गर्दा traderले perfect top खोज्नु हुँदैन। धेरै पटक perfect topको प्रतीक्षामा good exit miss हुन्छ। Final Exit भनेको planned exit हो, perfect exit होइन।</p>
+
+<p>Partial Exit, Trailing Stop, and Final Exit लाई trade setupसँग जोडेर बुझ्नुपर्छ।</p>
+
+<p><strong>Breakout Trade मा:</strong></p>
+<ul>
+  <li>Target 1: next minor resistance</li>
+  <li>Target 2: measured move or higher resistance</li>
+  <li>Trailing Stop: breakout level, higher low, or 20 MA</li>
+  <li>Final Exit: breakout failure, trailing stop hit, or climax reversal</li>
+</ul>
+
+<p><strong>Pullback Trade मा:</strong></p>
+<ul>
+  <li>Target 1: previous high</li>
+  <li>Target 2: next resistance</li>
+  <li>Trailing Stop: new higher low</li>
+  <li>Final Exit: trend structure break</li>
+</ul>
+
+<p><strong>Range Trade मा:</strong></p>
+<ul>
+  <li>Target: range high</li>
+  <li>Partial/Full Exit: range high नजिक</li>
+  <li>Trailing Stop: धेरै आवश्यक नहुन सक्छ, unless breakout confirmation आउँछ</li>
+  <li>Final Exit: range high rejection or target completion</li>
+</ul>
+
+<p><strong>Support Bounce Trade मा:</strong></p>
+<ul>
+  <li>Target 1: nearest resistance</li>
+  <li>Target 2: range high or previous swing</li>
+  <li>Trailing Stop: bounce low पछि new support</li>
+  <li>Final Exit: support bounce failure or resistance rejection</li>
+</ul>
+
+<p><strong>Trend Continuation Trade मा:</strong></p>
+<ul>
+  <li>Partial Exit: first resistance or 1:2 RR</li>
+  <li>Trailing Stop: higher lows or moving average</li>
+  <li>Final Exit: trend structure break or major reversal</li>
+</ul>
+
+<!-- VISUAL 5: Setup-specific exit map -->
+<div class="visual-block">
+  <div class="visual-title">Setup अनुसार Exit Plan — Chapter-aware Decision Map</div>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="360" fill="#fffdf5"/>
+
+    <text x="380" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">हरेक setup को exit logic फरक — एउटै नियम सबैमा लाग्दैन</text>
+
+    <!-- 5 rows -->
+    <!-- header -->
+    <rect x="30" y="40" width="160" height="28" fill="#c9b97a" rx="3"/>
+    <text x="110" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#111">Setup</text>
+    <rect x="194" y="40" width="180" height="28" fill="#c9b97a" rx="3"/>
+    <text x="284" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#111">Target</text>
+    <rect x="378" y="40" width="180" height="28" fill="#c9b97a" rx="3"/>
+    <text x="468" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#111">Trailing Stop</text>
+    <rect x="562" y="40" width="168" height="28" fill="#c9b97a" rx="3"/>
+    <text x="646" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#111">Final Exit</text>
+
+    <!-- Breakout -->
+    <rect x="30" y="72" width="160" height="52" fill="#eaf6ea" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="110" y="102" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Breakout</text>
+    <rect x="194" y="72" width="180" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="284" y="93" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">next resistance →</text>
+    <text x="284" y="106" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">measured move</text>
+    <rect x="378" y="72" width="180" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="468" y="93" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">breakout level / HL /</text>
+    <text x="468" y="106" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">20 MA</text>
+    <rect x="562" y="72" width="168" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="646" y="93" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">breakout failure /</text>
+    <text x="646" y="106" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">climax reversal</text>
+
+    <!-- Pullback -->
+    <rect x="30" y="124" width="160" height="48" fill="#e8f0fe" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="110" y="152" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#1a56cc">Pullback</text>
+    <rect x="194" y="124" width="180" height="48" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="284" y="145" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">previous high →</text>
+    <text x="284" y="158" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">next resistance</text>
+    <rect x="378" y="124" width="180" height="48" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="468" y="151" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">new higher low</text>
+    <rect x="562" y="124" width="168" height="48" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="646" y="151" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">trend structure break</text>
+
+    <!-- Range -->
+    <rect x="30" y="172" width="160" height="48" fill="#fff8dc" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="110" y="200" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#c8a800">Range</text>
+    <rect x="194" y="172" width="180" height="48" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="284" y="199" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">range high</text>
+    <rect x="378" y="172" width="180" height="48" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="468" y="193" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">धेरै आवश्यक छैन</text>
+    <text x="468" y="206" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#555">(breakout confirm बाहेक)</text>
+    <rect x="562" y="172" width="168" height="48" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="646" y="193" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">range high rejection /</text>
+    <text x="646" y="206" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">target completion</text>
+
+    <!-- Support Bounce -->
+    <rect x="30" y="220" width="160" height="52" fill="#eaf6ea" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="110" y="243" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Support</text>
+    <text x="110" y="256" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Bounce</text>
+    <rect x="194" y="220" width="180" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="284" y="241" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">nearest resistance →</text>
+    <text x="284" y="254" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">range high / prev swing</text>
+    <rect x="378" y="220" width="180" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="468" y="247" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">bounce low पछि new support</text>
+    <rect x="562" y="220" width="168" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="646" y="241" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">bounce failure /</text>
+    <text x="646" y="254" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">resistance rejection</text>
+
+    <!-- Trend Continuation -->
+    <rect x="30" y="272" width="160" height="52" fill="#e8f0fe" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="110" y="295" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#1a56cc">Trend</text>
+    <text x="110" y="308" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#1a56cc">Continuation</text>
+    <rect x="194" y="272" width="180" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="284" y="299" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">first resistance / 1:2 RR</text>
+    <rect x="378" y="272" width="180" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="468" y="299" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">higher lows / MA</text>
+    <rect x="562" y="272" width="168" height="52" fill="#fffdf5" stroke="#c9b97a" stroke-width="0.5"/>
+    <text x="646" y="293" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">trend structure break /</text>
+    <text x="646" y="306" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">major reversal</text>
+
+    <rect x="30" y="332" width="700" height="22" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="3"/>
+    <text x="380" y="348" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#111">Exit logic setup को nature अनुसार — Range मा book गर्ने, Trend मा trail गर्ने</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो map ले देखाउँछ कि exit plan setup को प्रकार अनुसार फरक हुन्छ — एउटै नियम सबैमा लाग्दैन। <strong>Breakout</strong>: target next resistance/measured move, trailing breakout level/HL/20 MA, final exit breakout failure वा climax। <strong>Pullback</strong>: target previous high/next resistance, trailing new higher low, final exit trend break। <strong>Range</strong>: target range high, trailing धेरै आवश्यक छैन (breakout confirm बाहेक), final exit range high rejection। <strong>Support Bounce</strong>: target nearest resistance, trailing bounce low पछि new support, final exit bounce failure। <strong>Trend Continuation</strong>: partial first resistance/1:2 RR, trailing higher lows/MA, final exit trend structure break। मुख्य कुरा — Range trade मा book गर्ने (endless hold होइन), trend trade मा trail गरेर ride गर्ने।
+</div>
+
+<p>Partial Exit र Trailing Stopको सम्बन्ध गहिरो छ। Partial Exit गरेपछि बाँकी positionमा trailing stop राख्दा trader मनोवैज्ञानिक रूपमा शान्त हुन्छ। किनकि केही profit already booked छ। अब बाँकी positionलाई trendसँग चल्न दिन सकिन्छ।</p>
+
+<p>तर trailing stopलाई profit guarantee मान्नु हुँदैन। Price gap-down, circuit, low liquidity, or sharp fallमा trailing stop desired levelमा execute नहुन सक्छ। NEPSEमा manual execution भएकाले trailing stop alert र discipline आवश्यक हुन्छ।</p>
+
+<p>Trade management plan Entry अघि नै लेख्नुपर्छ। यस्तो format practical हुन सक्छ:</p>
+
+<div class="content-box">
+  <p style="margin-bottom:4px;">Entry:</p>
+  <p style="margin-bottom:4px;">Stop Loss:</p>
+  <p style="margin-bottom:4px;">Target 1:</p>
+  <p style="margin-bottom:4px;">Target 1 मा sell quantity:</p>
+  <p style="margin-bottom:4px;">Target 2:</p>
+  <p style="margin-bottom:4px;">Target 2 मा sell quantity:</p>
+  <p style="margin-bottom:4px;">Trailing Stop Rule:</p>
+  <p style="margin-bottom:4px;">Final Exit Condition:</p>
+  <p style="margin-bottom:4px;">Profit Protection Rule:</p>
+  <p style="margin-bottom:0;">Invalidation:</p>
+</div>
+
+<p>यसरी plan लिखित भयो भने profit आएपछि emotion कम हुन्छ।</p>
+
+<!-- VISUAL 3: Partial Exit + Trailing full mgmt chart -->
+<div class="visual-block">
+  <div class="visual-title">Partial Exit + Trailing Stop — पूरा Trade Management (Scenario 1)</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Entry 500 • SL 475 • T1 550 (40sh) • T2 575 (30sh) • 30sh trailing</text>
+
+    <rect x="40" y="55" width="560" height="290" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="608" y="100" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 590</text>
+    <text x="608" y="130" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 575</text>
+    <text x="608" y="160" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 550</text>
+    <text x="608" y="255" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+    <text x="608" y="305" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 475</text>
+
+    <line x1="40" y1="130" x2="600" y2="130" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="5,3"/>
+    <line x1="40" y1="160" x2="600" y2="160" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="5,3"/>
+    <line x1="40" y1="255" x2="600" y2="255" stroke="#111" stroke-width="1.4"/>
+    <line x1="40" y1="305" x2="600" y2="305" stroke="#ef5350" stroke-width="1.4" stroke-dasharray="5,3"/>
+
+    <!-- candles up, then HL, then break -->
+    <line x1="65" y1="250" x2="65" y2="270" stroke="#26a69a" stroke-width="1"/><rect x="61" y="253" width="8" height="14" fill="#26a69a"/>
+    <circle cx="65" cy="255" r="4" fill="#fff" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="100" y1="220" x2="100" y2="252" stroke="#26a69a" stroke-width="1"/><rect x="96" y="223" width="8" height="20" fill="#26a69a"/>
+    <line x1="135" y1="195" x2="135" y2="222" stroke="#26a69a" stroke-width="1"/><rect x="131" y="198" width="8" height="20" fill="#26a69a"/>
+    <line x1="170" y1="170" x2="170" y2="197" stroke="#26a69a" stroke-width="1"/><rect x="166" y="173" width="8" height="20" fill="#26a69a"/>
+    <!-- T1 550 -->
+    <line x1="205" y1="155" x2="205" y2="172" stroke="#26a69a" stroke-width="1.5"/><rect x="200" y="158" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="205" cy="158" r="5" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+    <!-- pullback (higher low ~535) -->
+    <line x1="240" y1="160" x2="240" y2="185" stroke="#ef5350" stroke-width="1"/><rect x="236" y="163" width="8" height="18" fill="#ef5350"/>
+    <circle cx="240" cy="183" r="4" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <text x="240" y="200" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#2e7d32">HL</text>
+    <!-- up to T2 575 -->
+    <line x1="280" y1="135" x2="280" y2="160" stroke="#26a69a" stroke-width="1"/><rect x="276" y="138" width="8" height="18" fill="#26a69a"/>
+    <line x1="320" y1="125" x2="320" y2="142" stroke="#26a69a" stroke-width="1.5"/><rect x="315" y="128" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="320" cy="128" r="5" fill="#c8a800" stroke="#fff" stroke-width="1.5"/>
+    <!-- peak 590 then break HL -->
+    <line x1="360" y1="100" x2="360" y2="125" stroke="#26a69a" stroke-width="1"/><rect x="356" y="103" width="8" height="16" fill="#26a69a"/>
+    <line x1="400" y1="118" x2="400" y2="155" stroke="#ef5350" stroke-width="1"/><rect x="396" y="121" width="8" height="22" fill="#ef5350"/>
+    <line x1="440" y1="150" x2="440" y2="195" stroke="#ef5350" stroke-width="1"/><rect x="436" y="153" width="8" height="28" fill="#ef5350"/>
+    <circle cx="440" cy="183" r="5" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+
+    <!-- bubbles -->
+    <line x1="205" y1="158" x2="160" y2="368" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="60" y="352" width="200" height="38" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="160" y="370" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">T1 Rs.550 → 40 shares sell</text>
+      <text x="160" y="384" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">SL break-even मा सार्ने</text>
+    </g>
+
+    <line x1="320" y1="128" x2="430" y2="78" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="430" y="60" width="200" height="36" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="530" y="76" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">T2 Rs.575 → 30 shares sell</text>
+      <text x="530" y="89" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">बाँकी 30 trailing (HL तल)</text>
+    </g>
+
+    <line x1="440" y1="183" x2="500" y2="360" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="370" y="352" width="260" height="38" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="500" y="370" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">price last HL तल → Final Exit (बाँकी 30)</text>
+      <text x="500" y="384" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#111">trade पूर्ण बन्द, profit secured</text>
+    </g>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Scenario 1 लाई पूरा trade management को रूपमा देखाउँछ। Entry Rs. 500, SL Rs. 475, 100 shares। Price माथि जाँदा: <strong>T1 Rs. 550</strong> पुग्दा 40 shares sell + बाँकीको SL break-even मा सार्ने (अब risk-free)। एउटा pullback मा Higher Low (HL) बन्यो — trend स्वस्थ। <strong>T2 Rs. 575</strong> पुग्दा 30 shares sell, बाँकी 30 trailing stop मा (last HL तल)। Price Rs. 590 सम्म गयो अनि फर्केर last Higher Low तल आयो — त्यहाँ <strong>Final Exit</strong>, बाँकी 30 shares profit मा बेच्यो। यसरी एउटै trade मा Partial Exit + Break-even Stop + Trailing + Final Exit सबै मिलेर काम गरे — perfect top मा बेचिएन तर profit राम्रोसँग secured, र emotion को ठाउँमा plan ले निर्णय गर्‍यो।
+</div>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Partial Exit, Trailing Stop, र Final Exit धेरै practical छन्, किनकि price movement कहिलेकाहीँ तेज हुन्छ। Sector rallyमा stock केही दिनमै राम्रो profit दिन सक्छ, तर त्यति नै छिटो correction पनि आउन सक्छ। Plan नभए traderले profit सुरक्षित गर्न सक्दैन।</p>
+
+<p>NEPSE मा low liquidity stockमा partial exit अझ उपयोगी हुन सक्छ। यदि तपाईंले धेरै quantity राख्नुभएको छ भने एकैचोटि sell गर्न कठिन हुन सक्छ। Target नजिक क्रमशः sell गर्नु practical हुन सक्छ। तर low liquidity stockमा position size पहिले नै सानो राख्नु राम्रो हुन्छ।</p>
+
+<p>NEPSE मा TMSमा automatic trailing stop सहज रूपमा उपलब्ध नहुन सक्छ। त्यसैले traderले manual trailing stop follow गर्नुपर्छ। Price alert, daily close review, and journal discipline चाहिन्छ। <strong>“Trailing stop मनमा छ”</strong> मात्र पर्याप्त छैन।</p>
+
+<p>NEPSE मा sector rotationले final exitमा ठूलो भूमिका खेल्छ। Stock अझै ठीक देखिए पनि sector index कमजोर हुन थाल्यो, leading stockमा upper wick आयो, and NEPSE index resistanceबाट reject भयो भने profit protect गर्नुपर्छ। Individual stock profitमा छ भन्दैमा broader signal ignore गर्नु हुँदैन।</p>
+
+<p>NEPSE मा circuit movement हुँदा partial exit miss हुन सक्छ। Price target पुगेर अचानक sellers बढ्न सक्छन्। Low liquidity र circuit stockमा greed गरेर hold गर्दा exit कठिन हुन सक्छ। त्यसैले target नजिक sell plan practical हुनुपर्छ।</p>
+
+<p>Profit book गरेपछि EDIS, WACC, settlement, broker receivable, tax, DP charge, and net profit calculation ध्यान दिनुपर्छ। Partial Exit गर्दा धेरै sell transactions हुन सक्छन्, त्यसैले costको impact बुझ्नुपर्छ। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Partial Exit traderको psychologyलाई धेरै सहज बनाउँछ। सबै sell गर्दा पछुतो हुन्छ—<strong>“अझै माथि गयो।”</strong> केही पनि sell नगर्दा डर हुन्छ—<strong>“Profit हराउँछ कि?”</strong> Partial Exit बीचको practical बाटो हो।</p>
+
+<p>तर Partial Exit पछि पनि regret आउन सक्छ। तपाईंले 50% sell गर्नुभयो, price अझै माथि गयो। मन दुख्न सक्छ। तर याद गर्नुहोस्—बाँकी 50% अझै hold छ। Partial Exitको उद्देश्य perfect decision होइन, balanced decision हो।</p>
+
+<p>Trailing Stop ले greedलाई structure दिन्छ। Traderले सोच्छ—<strong>“Trend चलुन्जेल hold गर्छु, तर trend break भए exit।”</strong> यसले “अझै जाला” भन्ने अन्धो आशालाई नियममा बदल्छ।</p>
+
+<p>Final Exit सबैभन्दा emotional हुन्छ। Trade पूर्ण रूपमा बन्द गर्दा traderलाई डर हुन्छ—<strong>“बेचेपछि अझै गयो भने?”</strong> तर trading मा हर moveको सबै profit लिन सकिँदैन। Final Exit plan अनुसार भयो भने त्यो success हो, चाहे price पछि अझै माथि जाओस्।</p>
+
+<p>Profitमा भएको tradeमा traderले आफ्नो identity जोड्न थाल्छ। <strong>“यो मेरो best trade हो।” “यो धेरै जान्छ।” “म यसमा सही छु।”</strong> यही attachmentले exit कठिन बनाउँछ। Professional trader tradeसँग प्रेम गर्दैन। ऊ planसँग loyal हुन्छ।</p>
+
+<p>Trailing Stop hit भएपछि trader कहिलेकाहीँ रिसाउँछ, विशेष गरी price फेरि माथि गयो भने। तर यो normal हो। Trailing Stopको काम top catch गर्नु होइन; profit protect गर्नु हो।</p>
+
+<p>Psychological rule:</p>
+
+<ul>
+  <li>Partial Exit ले डर घटाउँछ।</li>
+  <li>Trailing Stop ले लोभलाई नियम दिन्छ।</li>
+  <li>Final Exit ले tradeलाई closure दिन्छ।</li>
+</ul>
+
+<p>Profit managementको असली लडाइँ chartमा मात्र होइन, traderको मनमा हुन्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Partial Exit plan नहुनु। सबै sell कि सबै hold भन्ने confusion आउँछ।</p>
+
+<p>दोस्रो गल्ती हो—Target 1 अघि नै डरले partial sell गर्नु। Winning trade सानो हुन सक्छ।</p>
+
+<p>तेस्रो गल्ती हो—Target आएपछि पनि केही नबेच्नु। Profit हराउन सक्छ।</p>
+
+<p>चौथो गल्ती हो—Trailing Stop random राख्नु। Structure बिना Stop Loss सार्नु गलत हुन्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Trailing Stop धेरै tight राख्नु। Normal pullbackमा exit हुन सक्छ।</p>
+
+<p>छैटौँ गल्ती हो—Trailing Stop धेरै loose राख्नु। Profit धेरै फिर्ता जान सक्छ।</p>
+
+<p>सातौँ गल्ती हो—Final Exit condition नहुनु। Trade indefinite holdमा बदलिन्छ।</p>
+
+<p>आठौँ गल्ती हो—Profit आएपछि Stop Loss adjust नगर्नु। Significant profitपछि risk reduce गर्नुपर्छ।</p>
+
+<p>नवौँ गल्ती हो—NEPSE index र sector weakness ignore गर्नु। Profit trade अचानक reverse हुन सक्छ।</p>
+
+<p>दशौँ गल्ती हो—Partial Exit पछि बाँकी positionलाई बिना plan hold गर्नु।</p>
+
+<p>एघारौँ गल्ती हो—Profit bookingपछि regret गर्नु। Plan follow गर्नु पछुतोको कारण होइन।</p>
+
+<p>बाह्रौँ गल्ती हो—Net profit calculation नगर्नु। Multiple partial exitsमा cost impact बुझ्नुपर्छ।</p>
+
+<!-- VISUAL 6: Too Tight vs Structure-based Trailing -->
+<div class="visual-block">
+  <div class="visual-title">Trailing Stop — Too Tight vs Structure-based (Scenario 5)</div>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="360" fill="#fffdf5"/>
+
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Trailing stop लाई candle noise को room दिनुपर्छ — नत्र राम्रो trade छुट्छ</text>
+
+    <!-- LEFT: Too tight -->
+    <rect x="20" y="40" width="355" height="28" fill="#ef5350" rx="4"/>
+    <text x="197" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ Too Tight (SL Rs. 545)</text>
+
+    <rect x="20" y="72" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="40" y1="240" x2="355" y2="240" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="44" y="236" font-family="sans-serif" font-size="8" fill="#111">Entry 500</text>
+    <!-- price reaches 550 -->
+    <path d="M 50 240 L 90 210 L 130 175 L 165 162" stroke="#26a69a" stroke-width="2" fill="none"/>
+    <!-- tight stop just below -->
+    <line x1="40" y1="172" x2="250" y2="172" stroke="#ef5350" stroke-width="1.3" stroke-dasharray="4,2"/>
+    <text x="44" y="168" font-family="sans-serif" font-size="8" fill="#c62828">SL 545 (tight)</text>
+    <!-- normal pullback hits it -->
+    <path d="M 165 162 L 195 178 L 210 175" stroke="#ef5350" stroke-width="2" fill="none"/>
+    <circle cx="200" cy="178" r="5" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+    <!-- price runs away after stopout -->
+    <path d="M 210 175 L 250 145 L 295 110 L 340 90" stroke="#26a69a" stroke-width="1.5" fill="none" stroke-dasharray="3,2" opacity="0.5"/>
+
+    <line x1="200" y1="178" x2="250" y2="258" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="60" y="252" width="290" height="40" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="205" y="270" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">normal pullback (Rs.542) ले stop out</text>
+      <text x="205" y="284" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">अनि price Rs. 590 गयो — move छुट्यो</text>
+    </g>
+
+    <!-- RIGHT: Structure-based -->
+    <rect x="385" y="40" width="355" height="28" fill="#26a69a" rx="4"/>
+    <text x="562" y="59" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✓ Structure-based (HL तल)</text>
+
+    <rect x="385" y="72" width="355" height="225" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="405" y1="240" x2="720" y2="240" stroke="#111" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="409" y="236" font-family="sans-serif" font-size="8" fill="#111">Entry 500</text>
+    <!-- price to 550 -->
+    <path d="M 415 240 L 455 210 L 495 175 L 525 162" stroke="#26a69a" stroke-width="2" fill="none"/>
+    <!-- wider stop below HL -->
+    <line x1="405" y1="200" x2="720" y2="200" stroke="#ef5350" stroke-width="1.3" stroke-dasharray="4,2"/>
+    <text x="409" y="196" font-family="sans-serif" font-size="8" fill="#c62828">SL HL तल (room दिएको)</text>
+    <!-- pullback survives -->
+    <path d="M 525 162 L 555 185 L 575 180 L 615 145 L 660 110 L 700 90" stroke="#26a69a" stroke-width="2" fill="none"/>
+    <circle cx="560" cy="187" r="4" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <text x="560" y="202" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" fill="#2e7d32">Rs.542</text>
+
+    <line x1="560" y1="187" x2="500" y2="262" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="430" y="252" width="290" height="40" rx="7" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.2"/>
+      <text x="575" y="270" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">pullback (Rs.542) ले stop hit गरेन</text>
+      <text x="575" y="284" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">price Rs. 590 सम्म ride भयो ✓</text>
+    </g>
+
+    <rect x="20" y="306" width="720" height="44" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="6"/>
+    <text x="380" y="328" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">एउटै pullback (Rs.542) — tight stop ले बाहिर निकाल्यो, structure stop ले राख्यो</text>
+    <text x="380" y="345" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#111">Swing trade मा candle noise लाई room दिनुपर्छ — trailing structure अनुसार</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो दुई chart ले trailing stop को सबैभन्दा सामान्य गल्ती देखाउँछ (Scenario 5)। दुवैमा Entry Rs. 500, price Rs. 550 पुग्यो, अनि normal pullback मा Rs. 542 आयो। बायाँ (Too Tight): trader ले SL Rs. 545 राख्यो — एकदम नजिक। सानो normal pullback (Rs. 542) ले नै stop out गर्‍यो, अनि price Rs. 590 सम्म गयो — राम्रो move छुट्यो। दायाँ (Structure-based): SL last Higher Low तल राख्यो (room दिएर) — उही Rs. 542 pullback ले stop hit गरेन, price Rs. 590 सम्म ride भयो। एउटै pullback, फरक नतिजा। मुख्य पाठ — swing trade मा candle noise (सामान्य pullback) लाई room दिनुपर्छ; trailing stop random नजिक होइन, structure (HL/swing low/MA) अनुसार राख्ने।
+</div>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Profit आएपछि Exit Plan छैन भने trade अझै incomplete छ</div>
+  <p style="margin-bottom:0;">धेरै trader सोच्छन् राम्रो Entry भेट्नु नै trade को मुख्य काम हो — तर यो आधा कथा मात्र हो। Entry ले trade सुरु गर्छ; Exit ले result तय गर्छ। Profit screen मा देखिए पनि, Partial Exit, Trailing Stop र Final Exit को लिखित plan नभएसम्म त्यो trade अधुरो छ। Plan बिना profit आउँदा trader लोभ ("अझै जाला") र डर ("अब गुम्छ") बीच फस्छ — अनि या त धेरै छिटो बेचेर winning trade सानो बनाउँछ, या धेरै ढिलो गरेर profit गुमाउँछ (नविन को कथा)। समाधान — Entry <strong>अघि नै</strong> Target 1, Target 2, partial %, trailing rule र final exit condition लेख्ने। राम्रो Entry खराब Exit ले बिगार्न सक्छ; average Entry राम्रो management ले बचाउन सक्छ। Trade plan exit सहित मात्र पूरा हुन्छ।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Partial Exit, Trailing Stop, र Final Exit का लागि यी rules प्रयोग गर्नुहोस्:</p>
+
+<ul>
+  <li>Entry अघि Exit Plan लेख्नुहोस्।</li>
+  <li>Target 1, Target 2, र Final Exit condition define गर्नुहोस्।</li>
+  <li>Target 1 मा कति quantity sell गर्ने पहिले तय गर्नुहोस्।</li>
+  <li>Partial Exit random होइन, level-based हुनुपर्छ।</li>
+  <li>Target chart structureबाट तय गर्नुहोस्।</li>
+  <li>Significant profit आएपछि risk reduce गर्ने plan राख्नुहोस्।</li>
+  <li>Trailing Stop structure-based हुनुपर्छ।</li>
+  <li>Last Higher Low, swing low, support zone, वा Moving Average अनुसार trail गर्न सकिन्छ।</li>
+  <li>Trailing Stop धेरै tight वा धेरै loose नबनाउनुहोस्।</li>
+  <li>Final Exit condition स्पष्ट राख्नुहोस्।</li>
+  <li>Trend कमजोर भए profit protect गर्नुहोस्।</li>
+  <li>Sector र NEPSE index weakness आए exit plan review गर्नुहोस्।</li>
+  <li>Low liquidity stockमा gradual profit booking विचार गर्नुहोस्।</li>
+  <li>Partial Exitपछि बाँकी positionको plan update गर्नुहोस्।</li>
+  <li>Profit bookingपछि regret नगर्नुहोस्।</li>
+  <li>Trade complete भएपछि journal review गर्नुहोस्।</li>
+  <li>Net profit costपछि calculate गर्नुहोस्।</li>
+</ul>
+
+<p>यो chapterको मुख्य rule हो—<strong>Profit manage गर्न पहिले plan चाहिन्छ, पछि emotion होइन।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Partial Exit + Trailing Stop</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 500<br>Stop Loss: Rs. 475<br>Risk: Rs. 25<br>Target 1: Rs. 550<br>Target 2: Rs. 575<br>Quantity: 100 shares</p>
+  <p style="margin-bottom:6px;"><strong>Plan:</strong></p>
+  <p style="margin-bottom:6px;">Rs. 550 मा 40 shares sell<br>Rs. 575 मा 30 shares sell<br>Remaining 30 shares trailing stopमा hold<br>Trailing Stop: last Higher Low तल</p>
+  <p style="margin-bottom:0;">यदि price Rs. 590 पुगेर Rs. 560 तल last HL break गर्छ भने final exit गर्न सकिन्छ।</p>
+</div>
+
+<p><strong>Scenario 2: Range Trade Full Exit</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 405<br>Range Low: Rs. 400<br>Stop Loss: Rs. 390<br>Range High: Rs. 460<br>Quantity: 100 shares</p>
+  <p style="margin-bottom:6px;"><strong>Plan:</strong></p>
+  <p style="margin-bottom:6px;">Rs. 450–460 zoneमा 70–100% exit<br>यदि Rs. 460 माथि strong Volume Breakout आयो भने सानो quantity hold गर्न सकिन्छ<br>यदि upper wick र weak close आयो भने full exit</p>
+  <p style="margin-bottom:0;">Range tradeमा range high target हो। Trend trade जस्तो endless hold गर्नुपर्दैन।</p>
+</div>
+
+<p><strong>Scenario 3: Trend Continuation Trailing</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 600<br>Stop Loss: Rs. 570<br>Target 1: Rs. 660<br>Quantity: 100 shares</p>
+  <p style="margin-bottom:0;">Price Rs. 660 पुग्दा 40 shares sell।<br>Price Rs. 700 पुग्दा नयाँ Higher Low Rs. 670 बन्छ।<br>Trailing Stop Rs. 665 तल सारिन्छ।<br>Price Rs. 740 पुग्छ, नयाँ HL Rs. 710।<br>Trailing Stop Rs. 705 तल सारिन्छ।<br>Final Exit trailing stop hit हुँदा।</p>
+</div>
+
+<p><strong>Scenario 4: No Partial Exit Mistake</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:0;">Entry Rs. 500। Price Rs. 580 पुग्यो। Traderले केही book गरेन। Price Rs. 520 फर्कियो। Profit धेरै घट्यो। Trader अब confuse भयो। यदि Target 1 र Target 2 plan भएको भए profit secure हुन्थ्यो।</p>
+</div>
+
+<p><strong>Scenario 5: Too Tight Trailing Stop</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:0;">Entry Rs. 500। Price Rs. 550 पुग्यो। Traderले Stop Loss Rs. 545 राख्यो। Stock normal pullbackमा Rs. 542 आएर फेरि Rs. 590 गयो। Trader बाहिरियो। Trailing Stop too tight थियो। Swing tradeमा candle noiseलाई room दिनुपर्छ।</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>तरिका</th>
+      <th>उपयुक्त कहिले</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Conservative</strong></td><td>100% at Target 1 (Full Exit)</td><td>Range trade, weak market</td></tr>
+    <tr><td><strong>Balanced</strong></td><td>50% at T1, 50% at T2</td><td>धेरै सामान्य setup</td></tr>
+    <tr><td><strong>Aggressive</strong></td><td>40% at T1, 30% at T2, 30% trailing</td><td>Breakout, momentum</td></tr>
+    <tr><td><strong>Trend-following</strong></td><td>सानो partial, बाँकी trailing</td><td>Strong trend continuation</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Partial Exit, Trailing Stop, Final Exit Checklist</div>
+
+  <div class="checklist-sub">Before Entry:</div>
+  <ul>
+    <li>Target 1 कहाँ छ?</li>
+    <li>Target 2 कहाँ छ?</li>
+    <li>Final Exit condition के हो?</li>
+    <li>Target chart structureमा आधारित छ?</li>
+    <li>Partial Exit percentage clear छ?</li>
+    <li>Trailing Stop rule clear छ?</li>
+    <li>Profit Protection rule छ?</li>
+  </ul>
+
+  <div class="checklist-sub">During Trade:</div>
+  <ul>
+    <li>Price Target 1 पुग्यो?</li>
+    <li>Target 1 मा planned quantity sell भयो?</li>
+    <li>Target 2 पुग्यो?</li>
+    <li>बाँकी positionको Stop Loss update भयो?</li>
+    <li>Price Higher Low बनाइरहेको छ?</li>
+    <li>Trend अझै healthy छ?</li>
+    <li>Volume support छ?</li>
+    <li>Candle weak signal दिँदैछ?</li>
+    <li>Sector strong छ?</li>
+    <li>NEPSE index supportive छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Trailing Stop Check:</div>
+  <ul>
+    <li>Trailing Stop structure-based छ?</li>
+    <li>Last Higher Low कहाँ छ?</li>
+    <li>Previous swing low कहाँ छ?</li>
+    <li>Moving Average support छ?</li>
+    <li>Stop धेरै tight छैन?</li>
+    <li>Stop धेरै loose छैन?</li>
+    <li>Stop hit भए final exit गर्ने discipline छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Final Exit Check:</div>
+  <ul>
+    <li>Target पूरा भयो?</li>
+    <li>Major Resistance reject भयो?</li>
+    <li>Last Higher Low break भयो?</li>
+    <li>Trailing Stop hit भयो?</li>
+    <li>Breakout level तल price फर्कियो?</li>
+    <li>Sector momentum सकियो?</li>
+    <li>NEPSE index weak भयो?</li>
+    <li>Profitलाई lossमा बदलिन नदिने rule trigger भयो?</li>
+  </ul>
+
+  <div class="checklist-sub">After Exit:</div>
+  <ul>
+    <li>Exit plan अनुसार भयो?</li>
+    <li>Net profit calculate भयो?</li>
+    <li>EDIS/WACC process पूरा गर्नुपर्ने छ?</li>
+    <li>Journalमा exit reason लेखियो?</li>
+    <li>Exitपछि regret नगर्ने discipline छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Mark Exits in 5 Uptrend Charts</div>
+  <p>कुनै 5 वटा पुराना uptrend chart खोल्नुहोस्। प्रत्येकमा entry point कल्पना गर्नुहोस् र mark गर्नुहोस्:</p>
+  <ul>
+    <li>Target 1</li>
+    <li>Target 2</li>
+    <li>Partial Exit point</li>
+    <li>Higher Low based Trailing Stop</li>
+    <li>Final Exit</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Build an Exit Plan</div>
+  <p>तलको tradeका लागि exit plan बनाउनुहोस्:</p>
+  <ul>
+    <li>Entry: Rs. 500</li>
+    <li>Stop Loss: Rs. 475</li>
+    <li>Quantity: 100 shares</li>
+    <li>Target 1: Rs. 550</li>
+    <li>Target 2: Rs. 580</li>
+  </ul>
+  <p style="margin-bottom:0;">Target 1 मा कति sell गर्ने?<br>Target 2 मा कति sell गर्ने?<br>बाँकीको trailing stop कहाँ राख्ने?<br>Final Exit condition के?</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Review 5 Profit Trades</div>
+  <p>आफ्नो पछिल्ला 5 profit trades review गर्नुहोस्:</p>
+  <ul>
+    <li>Partial Exit गरेको थिएँ?</li>
+    <li>Trailing Stop थियो?</li>
+    <li>Final Exit plan थियो?</li>
+    <li>Profit धेरै छिटो book भयो?</li>
+    <li>Profit धेरै ढिलो book भयो?</li>
+    <li>Plan भएको भए result सुधारिन्थ्यो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Compare 3 Exit Models</div>
+  <p>तीन exit model compare गर्नुहोस्:</p>
+  <ul>
+    <li>Model A: 100% sell at Target 1</li>
+    <li>Model B: 50% sell at Target 1, 50% at Target 2</li>
+    <li>Model C: 40% sell at Target 1, 30% at Target 2, 30% trailing</li>
+  </ul>
+  <p style="margin-bottom:0;">कुन model तपाईंको psychology, capital, and trading styleसँग मिल्छ लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Write Your Personal Exit Rule</div>
+  <p>आफ्नो Personal Exit Rule लेख्नुहोस्:</p>
+  <ul>
+    <li>Target 1 मा sell: ____%</li>
+    <li>Target 2 मा sell: ____%</li>
+    <li>Trailing Stop method: ______</li>
+    <li>Final Exit condition: ______</li>
+    <li>Range trade exit rule: ______</li>
+    <li>Trend trade exit rule: ______</li>
+    <li>Low liquidity stock exit rule: ______</li>
+    <li>Profit lossमा नबदलिने rule: ______</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Partial Exit, Trailing Stop, र Final Exit traderको profit management system हुन्। Entry राम्रो भए पनि exit कमजोर भयो भने result कमजोर हुन्छ।</p>
+  <p>Partial Exit ले profit सुरक्षित गर्छ। Trailing Stop ले trendलाई room दिँदै profit protect गर्छ। Final Exit ले tradeलाई complete decision दिन्छ।</p>
+  <p>Profit managementको goal perfect top बेच्नु होइन। Goal हो—planned profit secure गर्नु, बाँकी moveको opportunity राख्नु, र profitलाई uncontrolled रूपमा गुम्न नदिनु।</p>
+  <p style="margin-bottom:0;">Profit आएपछि plan नभएको trader लोभ र डरको बीच फस्छ। Plan भएको trader शान्त भएर trade manage गर्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 45 Summary</div>
+  <p>Partial Exit भनेको total positionको केही भाग sell गरेर profit सुरक्षित गर्ने method हो। यसले traderको psychologyलाई शान्त बनाउँछ र बाँकी positionलाई trendसँग चल्न दिने मौका दिन्छ।</p>
+  <p>Trailing Stop भनेको price आफ्नो पक्षमा जाँदा Stop Lossलाई structure अनुसार माथि सार्दै profit protect गर्ने method हो। Last Higher Low, swing low, support zone, Moving Average, or breakout level trailing stopका आधार हुन सक्छन्।</p>
+  <p>Final Exit भनेको trade पूर्ण रूपमा बन्द गर्ने decision हो। Target पूरा हुनु, trailing stop hit हुनु, trend structure break हुनु, major Resistance rejection, sector weakness, NEPSE index weakness, or profit protection rule trigger हुनु final exitका कारण हुन सक्छन्।</p>
+  <p>NEPSE मा partial exit र trailing stop manual disciplineसँग जोडिन्छन्। TMS execution, liquidity, circuit risk, sector rotation, EDIS, WACC, broker settlement, transaction cost, and net profit calculation ध्यान दिनुपर्छ।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Profit आएपछि सबै बेच्ने कि सबै hold गर्ने भन्ने confusionमा बस्नु हुँदैन। Partial Exit, Trailing Stop, र Final Exit को लिखित planले profitलाई protect गर्छ र trade managementलाई professional बनाउँछ।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader profitलाई भाग्यमा छोड्दैन;<br>
+  ऊ केही सुरक्षित गर्छ, केहीलाई बढ्न दिन्छ,<br>
+  र trend कमजोर हुँदा शान्त भएर<br>
+  अन्तिम exit गर्छ।
+</div>
+
+</div>
+</body>
+</html>

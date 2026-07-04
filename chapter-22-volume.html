@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 22: Volume बिना chart अधुरो किन हुन्छ? — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 22: CHART READING MASTERY</div>
+  <h1 class="chapter-title">Volume बिना chart अधुरो किन हुन्छ?</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>निश्चलले एउटा stock को chart हेर्दै थियो। Price लगातार माथि गइरहेको थियो। Candle हरू हरिया थिए। उसलाई लाग्यो, <strong>“यो त strong trend रहेछ।”</strong> उसले Entry गर्‍यो। तर केही दिनपछि price चल्न छोड्यो। त्यसपछि बिस्तारै तल आउन थाल्यो। उसले chart फेरि हेर्दा एउटा कुरा छुटेको थाहा पायो—price बढिरहेको थियो, तर Volume घटिरहेको थियो।</p>
+
+<p>अर्को stock मा price धेरै दिनदेखि sideways थियो। Candle साना थिए। कसैले खासै चर्चा गरेको थिएन। तर अचानक एक दिन price Resistance माथि गयो र Volume धेरै बढ्यो। त्यो move पछि stock राम्रोसँग चल्यो। निश्चलले बुझ्यो—price मात्र हेरेर chart पढ्नु अधुरो रहेछ। Volume ले price movement को पछाडि कति participation छ भन्ने देखाउँछ।</p>
+
+<p>Price ले market कहाँ गइरहेको छ देखाउँछ। Volume ले त्यो move मा कति शक्ति छ भन्ने देखाउँछ। Price शरीर हो भने Volume त्यसको धड्कन हो। धड्कन नहेरी शरीर स्वस्थ छ कि छैन भन्न सकिँदैन। त्यस्तै Volume नहेरी price movement strong छ कि weak, real छ कि fake, accumulation हो कि distribution, demand छ कि केवल spike—यी कुरा बुझ्न गाह्रो हुन्छ।</p>
+
+<p>धेरै beginner candle को रंग र price direction मात्र हेर्छन्। तर serious trader price र Volume सँगै पढ्छ। किनकि Volume बिना chart केवल आधा कथा हो।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Volume trading को अत्यन्त महत्वपूर्ण भाग हो। Breakout real हो कि fake, Pullback healthy छ कि breakdown सुरु हुँदैछ, Support मा buyer आएका छन् कि छैनन्, Resistance मा seller बलियो छन् कि छैनन्, trend मा participation छ कि छैन—यी धेरै कुरा Volume ले बुझ्न मद्दत गर्छ।</p>
+
+<p>यदि price बढ्दैछ तर Volume कमजोर छ भने move कमजोर हुन सक्छ। यदि price Resistance break गर्दैछ र Volume strong छ भने buyer participation आएको हुन सक्छ। यदि price घट्दैछ र Volume धेरै छ भने selling pressure बलियो हुन सक्छ। यदि price घट्दैछ तर Volume घट्दैछ भने seller कमजोर हुँदै गएको संकेत हुन सक्छ। तर Volume लाई सधैं price, level, candle, trend, and market context सँग जोडेर पढ्नुपर्छ।</p>
+
+<p>यो chapter महत्वपूर्ण छ किनकि धेरै trader price मात्र हेरेर गलत decision गर्छन्। उनीहरू हरियो candle देखेर buy गर्छन्, तर Volume कमजोर छ। उनीहरू Breakout देख्छन्, तर participation छैन। उनीहरू Support bounce देख्छन्, तर buyer Volume छैन। उनीहरू panic sell गर्छन्, तर fall मा Volume छैन। यस्तो अवस्थामा chart को आधा information मात्र प्रयोग भएको हुन्छ।</p>
+
+<p>Volume बुझ्ने trader market को movement भित्रको शक्ति पढ्न थाल्छ। यसले trader लाई fake move, weak rally, strong accumulation, panic selling, exhaustion, and possible operator activity को संकेत बुझ्न मद्दत गर्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Volume भनेको कुनै निश्चित समयभित्र कति share किनबेच भयो भन्ने संख्या हो। यदि Daily chart हेर्दै हुनुहुन्छ भने त्यो दिन कति share trade भयो भन्ने Volume देखिन्छ। Weekly chart मा एक हप्ताको Volume देखिन्छ। Monthly chart मा एक महिनाको Volume देखिन्छ।</p>
+
+<p>Volume ले बजारमा participation कति छ भन्ने देखाउँछ। धेरै Volume मतलब धेरै activity। कम Volume मतलब कम activity।</p>
+
+<p>Price बढ्दा Volume बढ्यो भने त्यो move मा buyer participation आएको संकेत हुन सक्छ। Price बढ्दा Volume घट्यो भने move कमजोर हुन सक्छ। Price घट्दा Volume बढ्यो भने seller pressure बलियो हुन सक्छ। Price घट्दा Volume घट्यो भने selling pressure कमजोर हुन सक्छ।</p>
+
+<!-- VISUAL 1: 4 Quadrant Price-Volume Relationship (FOUNDATIONAL) -->
+<div class="visual-block">
+  <div class="visual-title">Price + Volume — 4 मुख्य Combinations</div>
+  <svg viewBox="0 0 720 540" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="540" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Volume reading को आधार — Price direction × Volume direction</text>
+
+    <!-- QUADRANT 1: TOP-LEFT - Price UP + Volume UP = STRONG -->
+    <rect x="30" y="45" width="330" height="220" fill="#fffdf5" stroke="#26a69a" stroke-width="2" rx="6"/>
+    <rect x="30" y="45" width="330" height="32" fill="#26a69a"/>
+    <text x="195" y="66" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">✓ Price ↑ + Volume ↑ = STRONG MOVE</text>
+
+    <!-- Mini chart - rising candles with rising volume -->
+    <!-- Y-axis grid lines -->
+    <line x1="50" y1="100" x2="320" y2="100" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="50" y1="130" x2="320" y2="130" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="50" y1="160" x2="320" y2="160" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="50" y1="190" x2="320" y2="190" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 6 rising green candles -->
+    <line x1="70" y1="185" x2="70" y2="205" stroke="#26a69a" stroke-width="1"/>
+    <rect x="65" y="188" width="10" height="14" fill="#26a69a"/>
+
+    <line x1="105" y1="170" x2="105" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="100" y="173" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="140" y1="155" x2="140" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="135" y="158" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="175" y1="135" x2="175" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="170" y="138" width="10" height="22" fill="#26a69a"/>
+
+    <line x1="210" y1="115" x2="210" y2="148" stroke="#26a69a" stroke-width="1"/>
+    <rect x="205" y="118" width="10" height="25" fill="#26a69a"/>
+
+    <line x1="245" y1="95" x2="245" y2="130" stroke="#26a69a" stroke-width="1"/>
+    <rect x="240" y="98" width="10" height="28" fill="#26a69a"/>
+
+    <!-- Separator -->
+    <line x1="50" y1="215" x2="320" y2="215" stroke="#c9b97a" stroke-width="0.8"/>
+
+    <!-- Volume bars - rising -->
+    <rect x="65" y="248" width="10" height="10" fill="#26a69a"/>
+    <rect x="100" y="245" width="10" height="13" fill="#26a69a"/>
+    <rect x="135" y="241" width="10" height="17" fill="#26a69a"/>
+    <rect x="170" y="237" width="10" height="21" fill="#26a69a"/>
+    <rect x="205" y="232" width="10" height="26" fill="#26a69a"/>
+    <rect x="240" y="225" width="10" height="33" fill="#26a69a"/>
+
+    <text x="40" y="222" font-family="Roboto, sans-serif" font-size="9" fill="#555">Vol</text>
+
+    <!-- Interpretation -->
+    <text x="285" y="160" font-family="sans-serif" font-size="10" font-weight="700" fill="#26a69a">अर्थ:</text>
+    <text x="285" y="175" font-family="sans-serif" font-size="9" fill="#111">Buyer देखिए</text>
+    <text x="285" y="188" font-family="sans-serif" font-size="9" fill="#111">Genuine demand</text>
+    <text x="285" y="201" font-family="sans-serif" font-size="9" fill="#111">Healthy trend</text>
+
+    <!-- QUADRANT 2: TOP-RIGHT - Price UP + Volume DOWN = WEAK -->
+    <rect x="370" y="45" width="320" height="220" fill="#fffdf5" stroke="#c8a800" stroke-width="2" rx="6"/>
+    <rect x="370" y="45" width="320" height="32" fill="#c8a800"/>
+    <text x="530" y="66" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">⚠ Price ↑ + Volume ↓ = WEAK MOVE</text>
+
+    <!-- Y-axis grid -->
+    <line x1="390" y1="100" x2="660" y2="100" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="390" y1="130" x2="660" y2="130" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="390" y1="160" x2="660" y2="160" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="390" y1="190" x2="660" y2="190" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 6 rising candles (price still up) -->
+    <line x1="410" y1="185" x2="410" y2="205" stroke="#26a69a" stroke-width="1"/>
+    <rect x="405" y="188" width="10" height="14" fill="#26a69a"/>
+
+    <line x1="445" y1="170" x2="445" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="440" y="173" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="480" y1="155" x2="480" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="475" y="158" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="515" y1="135" x2="515" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="510" y="138" width="10" height="22" fill="#26a69a"/>
+
+    <line x1="550" y1="115" x2="550" y2="148" stroke="#26a69a" stroke-width="1"/>
+    <rect x="545" y="118" width="10" height="25" fill="#26a69a"/>
+
+    <line x1="585" y1="95" x2="585" y2="130" stroke="#26a69a" stroke-width="1"/>
+    <rect x="580" y="98" width="10" height="28" fill="#26a69a"/>
+
+    <!-- Separator -->
+    <line x1="390" y1="215" x2="660" y2="215" stroke="#c9b97a" stroke-width="0.8"/>
+
+    <!-- Volume bars - DECLINING -->
+    <rect x="405" y="225" width="10" height="33" fill="#26a69a"/>
+    <rect x="440" y="232" width="10" height="26" fill="#26a69a"/>
+    <rect x="475" y="237" width="10" height="21" fill="#26a69a"/>
+    <rect x="510" y="243" width="10" height="15" fill="#26a69a"/>
+    <rect x="545" y="247" width="10" height="11" fill="#26a69a"/>
+    <rect x="580" y="250" width="10" height="8" fill="#26a69a"/>
+
+    <text x="380" y="222" font-family="Roboto, sans-serif" font-size="9" fill="#555">Vol</text>
+
+    <!-- Interpretation -->
+    <text x="615" y="160" font-family="sans-serif" font-size="10" font-weight="700" fill="#c8a800">अर्थ:</text>
+    <text x="615" y="175" font-family="sans-serif" font-size="9" fill="#111">Buyer घट्दै</text>
+    <text x="615" y="188" font-family="sans-serif" font-size="9" fill="#111">Participation कम</text>
+    <text x="615" y="201" font-family="sans-serif" font-size="9" fill="#111">Rally exhausted</text>
+
+    <!-- QUADRANT 3: BOTTOM-LEFT - Price DOWN + Volume UP = STRONG SELL -->
+    <rect x="30" y="285" width="330" height="220" fill="#fffdf5" stroke="#ef5350" stroke-width="2" rx="6"/>
+    <rect x="30" y="285" width="330" height="32" fill="#ef5350"/>
+    <text x="195" y="306" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">✗ Price ↓ + Volume ↑ = STRONG SELL</text>
+
+    <!-- Y-axis grid -->
+    <line x1="50" y1="340" x2="320" y2="340" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="50" y1="370" x2="320" y2="370" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="50" y1="400" x2="320" y2="400" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="50" y1="430" x2="320" y2="430" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 6 falling red candles -->
+    <line x1="70" y1="335" x2="70" y2="355" stroke="#ef5350" stroke-width="1"/>
+    <rect x="65" y="338" width="10" height="14" fill="#ef5350"/>
+
+    <line x1="105" y1="350" x2="105" y2="375" stroke="#ef5350" stroke-width="1"/>
+    <rect x="100" y="353" width="10" height="19" fill="#ef5350"/>
+
+    <line x1="140" y1="370" x2="140" y2="395" stroke="#ef5350" stroke-width="1"/>
+    <rect x="135" y="373" width="10" height="20" fill="#ef5350"/>
+
+    <line x1="175" y1="385" x2="175" y2="415" stroke="#ef5350" stroke-width="1"/>
+    <rect x="170" y="388" width="10" height="25" fill="#ef5350"/>
+
+    <line x1="210" y1="405" x2="210" y2="438" stroke="#ef5350" stroke-width="1"/>
+    <rect x="205" y="408" width="10" height="28" fill="#ef5350"/>
+
+    <line x1="245" y1="425" x2="245" y2="455" stroke="#ef5350" stroke-width="1"/>
+    <rect x="240" y="428" width="10" height="25" fill="#ef5350"/>
+
+    <!-- Separator -->
+    <line x1="50" y1="465" x2="320" y2="465" stroke="#c9b97a" stroke-width="0.8"/>
+
+    <!-- Volume bars - rising (heavy selling) -->
+    <rect x="65" y="488" width="10" height="10" fill="#ef5350"/>
+    <rect x="100" y="485" width="10" height="13" fill="#ef5350"/>
+    <rect x="135" y="481" width="10" height="17" fill="#ef5350"/>
+    <rect x="170" y="477" width="10" height="21" fill="#ef5350"/>
+    <rect x="205" y="472" width="10" height="26" fill="#ef5350"/>
+    <rect x="240" y="465" width="10" height="33" fill="#ef5350"/>
+
+    <text x="40" y="473" font-family="Roboto, sans-serif" font-size="9" fill="#555">Vol</text>
+
+    <!-- Interpretation -->
+    <text x="285" y="400" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef5350">अर्थ:</text>
+    <text x="285" y="415" font-family="sans-serif" font-size="9" fill="#111">Heavy selling</text>
+    <text x="285" y="428" font-family="sans-serif" font-size="9" fill="#111">Panic / exit</text>
+    <text x="285" y="441" font-family="sans-serif" font-size="9" fill="#111">Real breakdown</text>
+
+    <!-- QUADRANT 4: BOTTOM-RIGHT - Price DOWN + Volume DOWN = WEAK SELL -->
+    <rect x="370" y="285" width="320" height="220" fill="#fffdf5" stroke="#c8a800" stroke-width="2" rx="6"/>
+    <rect x="370" y="285" width="320" height="32" fill="#c8a800"/>
+    <text x="530" y="306" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#fff">⚠ Price ↓ + Volume ↓ = WEAK SELL</text>
+
+    <!-- Y-axis grid -->
+    <line x1="390" y1="340" x2="660" y2="340" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="390" y1="370" x2="660" y2="370" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="390" y1="400" x2="660" y2="400" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="390" y1="430" x2="660" y2="430" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- 6 falling red candles (price still down) -->
+    <line x1="410" y1="335" x2="410" y2="355" stroke="#ef5350" stroke-width="1"/>
+    <rect x="405" y="338" width="10" height="14" fill="#ef5350"/>
+
+    <line x1="445" y1="350" x2="445" y2="375" stroke="#ef5350" stroke-width="1"/>
+    <rect x="440" y="353" width="10" height="19" fill="#ef5350"/>
+
+    <line x1="480" y1="370" x2="480" y2="395" stroke="#ef5350" stroke-width="1"/>
+    <rect x="475" y="373" width="10" height="20" fill="#ef5350"/>
+
+    <line x1="515" y1="385" x2="515" y2="415" stroke="#ef5350" stroke-width="1"/>
+    <rect x="510" y="388" width="10" height="25" fill="#ef5350"/>
+
+    <line x1="550" y1="405" x2="550" y2="438" stroke="#ef5350" stroke-width="1"/>
+    <rect x="545" y="408" width="10" height="28" fill="#ef5350"/>
+
+    <line x1="585" y1="425" x2="585" y2="455" stroke="#ef5350" stroke-width="1"/>
+    <rect x="580" y="428" width="10" height="25" fill="#ef5350"/>
+
+    <!-- Separator -->
+    <line x1="390" y1="465" x2="660" y2="465" stroke="#c9b97a" stroke-width="0.8"/>
+
+    <!-- Volume bars - DECLINING -->
+    <rect x="405" y="465" width="10" height="33" fill="#ef5350"/>
+    <rect x="440" y="472" width="10" height="26" fill="#ef5350"/>
+    <rect x="475" y="477" width="10" height="21" fill="#ef5350"/>
+    <rect x="510" y="483" width="10" height="15" fill="#ef5350"/>
+    <rect x="545" y="487" width="10" height="11" fill="#ef5350"/>
+    <rect x="580" y="490" width="10" height="8" fill="#ef5350"/>
+
+    <text x="380" y="473" font-family="Roboto, sans-serif" font-size="9" fill="#555">Vol</text>
+
+    <!-- Interpretation -->
+    <text x="615" y="400" font-family="sans-serif" font-size="10" font-weight="700" fill="#c8a800">अर्थ:</text>
+    <text x="615" y="415" font-family="sans-serif" font-size="9" fill="#111">Selling घट्दै</text>
+    <text x="615" y="428" font-family="sans-serif" font-size="9" fill="#111">Seller थाक्दै</text>
+    <text x="615" y="441" font-family="sans-serif" font-size="9" fill="#111">Bottom search</text>
+
+    <!-- Bottom legend -->
+    <text x="360" y="528" text-anchor="middle" font-family="sans-serif" font-size="10" font-style="italic" fill="#555">Price (मूल्य) + Volume (कारोबार) मिलाएर पढ्दा बजार को असली message स्पष्ट हुन्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+माथिको चार chart मा एउटै कुरा देखाइएको छ — price र Volume सँगै कस्तो छ। पहिलो box मा price माथि गयो र Volume पनि बढ्यो — यो real strong move हो। दोस्रो box मा price माथि गयो तर Volume घट्यो — यो rally weak हुँदै गएको संकेत हो। तेस्रो box मा price घट्यो र Volume बढ्यो — heavy selling, चौथो box मा price घट्यो तर Volume पनि घट्यो — selling कमजोर हुँदै गएको हुन सक्छ।
+</div>
+
+<p>तर Volume को अर्थ सधैं एउटै हुँदैन। High Volume सधैं bullish हुँदैन। Low Volume सधैं bearish हुँदैन। Volume को meaning price कहाँ छ, candle कस्तो छ, Support/Resistance कहाँ छ, trend कस्तो छ, र close कहाँ भयो भन्ने कुरामा निर्भर हुन्छ।</p>
+
+<div class="content-box">
+  <p style="margin-bottom:8px;"><strong>Price</strong> = direction (दिशा)</p>
+  <p style="margin-bottom:8px;"><strong>Volume</strong> = participation (सहभागिता)</p>
+  <p style="margin-bottom:0;"><strong>Price + Volume</strong> = movement को quality (गुणस्तर)</p>
+</div>
+
+<p>Volume बिना price movement हेर्नु भनेको आवाज बिना फिल्म हेर्नु जस्तै हो। दृश्य देखिन्छ, तर भावना र शक्ति पूरा बुझिँदैन।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Volume पढ्दा पहिलो कुरा हो—average सँग तुलना। कुनै दिन Volume धेरै छ कि कम भन्ने कुरा एक्लै थाहा हुँदैन। त्यसलाई अघिल्ला दिनहरूको average Volume सँग तुलना गर्नुपर्छ। यदि stock मा सामान्यतया 50,000 कित्ता trade हुन्छ तर आज 2,00,000 कित्ता trade भयो भने त्यो activity असामान्य हुन सक्छ। तर कुनै stock मा दैनिक 5,00,000 कित्ता trade हुन्छ भने 2,00,000 कम activity हुन सक्छ।</p>
+
+<p>दोस्रो कुरा हो—Volume र price direction। Price बढिरहेको छ र Volume पनि बढिरहेको छ भने demand participation आएको हुन सक्छ। यदि trend को सुरुवाती चरणमा यस्तो देखियो भने move healthy हुन सक्छ। तर यदि लामो rally पछि धेरै ठूलो Volume आयो र candle मा upper wick बन्यो भने त्यो buying climax वा profit booking warning पनि हुन सक्छ। त्यसैले Volume high छ भन्दैमा तुरुन्त bullish निष्कर्ष निकाल्नु गलत हो।</p>
+
+<p>तेस्रो कुरा हो—Breakout Volume। Resistance Breakout मा Volume धेरै महत्वपूर्ण हुन्छ। Resistance मा seller हुन्छन्। Buyer ले त्यो supply absorb गर्न सक्नुपर्छ। यदि Breakout strong Volume, strong body, and high close सहित भयो भने Breakout meaningful हुन सक्छ। यदि Breakout Volume कमजोर छ भने move मा participation कमजोर हुन सक्छ। यदि Volume high छ तर close कमजोर र upper wick लामो छ भने Fake Breakout risk हुन्छ।</p>
+
+<p>चौथो कुरा हो—Pullback Volume। Healthy uptrend मा Pullback आउँदा Volume घट्नु राम्रो संकेत हुन सक्छ। यसको अर्थ selling pressure aggressive छैन भन्ने हुन सक्छ। यदि price support नजिक आउँदा Volume घट्छ र buyer candle मा Volume बढ्छ भने Pullback healthy हुन सक्छ। तर Pullback मा selling Volume बढ्दैछ, red candle ठूलो छन्, and support break हुँदैछ भने caution चाहिन्छ।</p>
+
+<p>पाँचौँ कुरा हो—Support र Resistance मा Volume। Support नजिक price आयो र Volume बढेर lower wick बन्यो भने त्यहाँ buyer activity हुन सक्छ। Resistance नजिक price आयो र Volume बढेर upper wick बन्यो भने seller activity हुन सक्छ। Volume level मा कस्तो reaction आएको छ भन्ने कुरा धेरै महत्वपूर्ण छ।</p>
+
+<p>छैटौँ कुरा हो—Volume dry-up। जब price लामो समय base मा हुन्छ र Volume बिस्तारै घट्छ, त्यसले supply कम हुँदै गएको संकेत दिन सक्छ। यस्तो अवस्थामा यदि price Resistance माथि strong Volume सहित Breakout गर्छ भने move महत्वपूर्ण हुन सक्छ। तर dry Volume सबै stock मा bullish हुँदैन। कहिलेकाहीँ यो केवल interest नभएको dead stock पनि हुन सक्छ। त्यसैले base quality, sector context, and price structure चाहिन्छ।</p>
+
+<p>सातौँ कुरा हो—Climax Volume। धेरै ठूलो Volume अचानक आउँदा trader ले सावधानी लिनुपर्छ। यदि price लामो rally पछि धेरै high Volume मा upper wick बनाउँछ भने late buying र distribution को सम्भावना हुन सक्छ। यदि price लामो fall पछि high Volume मा lower wick बनाउँछ भने panic selling र possible absorption हुन सक्छ। तर confirmation चाहिन्छ।</p>
+
+<p>आठौँ कुरा हो—Volume divergence। Price नयाँ high बनाउँदैछ तर Volume घट्दैछ भने move कमजोर हुन सक्छ। Price नयाँ low बनाउँदैछ तर Volume घट्दैछ भने selling कमजोर हुँदै गएको संकेत हुन सक्छ। यस्ता signal लाई trend, Support/Resistance, and candle behavior सँग जोडेर पढ्नुपर्छ।</p>
+
+<!-- VISUAL 2: Volume Divergence (Hidden Weakness) -->
+<div class="visual-block">
+  <div class="visual-title">Volume Divergence — Hidden Weakness Signal</div>
+  <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Price नयाँ High बन्दैछ, तर Volume घट्दै — Trend exhaustion warning</text>
+
+    <!-- Chart border -->
+    <rect x="40" y="40" width="630" height="310" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis price labels (RIGHT side) -->
+    <text x="678" y="75" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 720</text>
+    <text x="678" y="125" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 700</text>
+    <text x="678" y="175" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 680</text>
+    <text x="678" y="225" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 660</text>
+
+    <!-- Horizontal grid lines -->
+    <line x1="40" y1="75" x2="670" y2="75" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="125" x2="670" y2="125" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="175" x2="670" y2="175" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="225" x2="670" y2="225" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="260" x2="670" y2="260" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Candles - making 3 higher highs but with decreasing volume -->
+    <!-- HH1 around Rs 690 -->
+    <line x1="65" y1="220" x2="65" y2="245" stroke="#26a69a" stroke-width="1"/>
+    <rect x="60" y="222" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="90" y1="200" x2="90" y2="225" stroke="#26a69a" stroke-width="1"/>
+    <rect x="85" y="202" width="10" height="20" fill="#26a69a"/>
+
+    <line x1="115" y1="180" x2="115" y2="208" stroke="#26a69a" stroke-width="1"/>
+    <rect x="110" y="182" width="10" height="24" fill="#26a69a"/>
+
+    <line x1="140" y1="155" x2="140" y2="185" stroke="#26a69a" stroke-width="1"/>
+    <rect x="135" y="158" width="10" height="25" fill="#26a69a"/>
+
+    <!-- HH1 peak -->
+    <line x1="165" y1="135" x2="165" y2="165" stroke="#26a69a" stroke-width="1"/>
+    <rect x="160" y="138" width="10" height="25" fill="#26a69a"/>
+    <circle cx="165" cy="135" r="4" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <text x="165" y="125" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">HH 1</text>
+
+    <!-- Pullback -->
+    <line x1="190" y1="148" x2="190" y2="178" stroke="#ef5350" stroke-width="1"/>
+    <rect x="185" y="152" width="10" height="22" fill="#ef5350"/>
+
+    <line x1="215" y1="160" x2="215" y2="190" stroke="#ef5350" stroke-width="1"/>
+    <rect x="210" y="165" width="10" height="22" fill="#ef5350"/>
+
+    <line x1="240" y1="172" x2="240" y2="195" stroke="#ef5350" stroke-width="1"/>
+    <rect x="235" y="175" width="10" height="18" fill="#ef5350"/>
+
+    <!-- Rise to HH2 -->
+    <line x1="265" y1="150" x2="265" y2="180" stroke="#26a69a" stroke-width="1"/>
+    <rect x="260" y="153" width="10" height="25" fill="#26a69a"/>
+
+    <line x1="290" y1="125" x2="290" y2="155" stroke="#26a69a" stroke-width="1"/>
+    <rect x="285" y="128" width="10" height="25" fill="#26a69a"/>
+
+    <line x1="315" y1="110" x2="315" y2="140" stroke="#26a69a" stroke-width="1"/>
+    <rect x="310" y="113" width="10" height="25" fill="#26a69a"/>
+
+    <!-- HH2 peak (higher than HH1) -->
+    <line x1="340" y1="100" x2="340" y2="125" stroke="#26a69a" stroke-width="1"/>
+    <rect x="335" y="103" width="10" height="20" fill="#26a69a"/>
+    <circle cx="340" cy="100" r="4" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <text x="340" y="90" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">HH 2</text>
+
+    <!-- Pullback 2 -->
+    <line x1="365" y1="115" x2="365" y2="145" stroke="#ef5350" stroke-width="1"/>
+    <rect x="360" y="118" width="10" height="25" fill="#ef5350"/>
+
+    <line x1="390" y1="130" x2="390" y2="160" stroke="#ef5350" stroke-width="1"/>
+    <rect x="385" y="135" width="10" height="22" fill="#ef5350"/>
+
+    <line x1="415" y1="145" x2="415" y2="170" stroke="#ef5350" stroke-width="1"/>
+    <rect x="410" y="148" width="10" height="18" fill="#ef5350"/>
+
+    <!-- Rise to HH3 -->
+    <line x1="440" y1="125" x2="440" y2="155" stroke="#26a69a" stroke-width="1"/>
+    <rect x="435" y="128" width="10" height="25" fill="#26a69a"/>
+
+    <line x1="465" y1="105" x2="465" y2="135" stroke="#26a69a" stroke-width="1"/>
+    <rect x="460" y="108" width="10" height="25" fill="#26a69a"/>
+
+    <line x1="490" y1="90" x2="490" y2="115" stroke="#26a69a" stroke-width="1"/>
+    <rect x="485" y="93" width="10" height="22" fill="#26a69a"/>
+
+    <!-- HH3 peak (highest, but weak candle) -->
+    <line x1="515" y1="75" x2="515" y2="105" stroke="#26a69a" stroke-width="1"/>
+    <rect x="510" y="92" width="10" height="13" fill="#26a69a"/>
+    <circle cx="515" cy="75" r="4" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <text x="515" y="65" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">HH 3</text>
+
+    <!-- After HH3 - reversal starts -->
+    <line x1="540" y1="95" x2="540" y2="130" stroke="#ef5350" stroke-width="1"/>
+    <rect x="535" y="98" width="10" height="30" fill="#ef5350"/>
+
+    <line x1="565" y1="115" x2="565" y2="150" stroke="#ef5350" stroke-width="1"/>
+    <rect x="560" y="120" width="10" height="28" fill="#ef5350"/>
+
+    <line x1="590" y1="135" x2="590" y2="170" stroke="#ef5350" stroke-width="1"/>
+    <rect x="585" y="140" width="10" height="28" fill="#ef5350"/>
+
+    <line x1="615" y1="155" x2="615" y2="195" stroke="#ef5350" stroke-width="1"/>
+    <rect x="610" y="160" width="10" height="32" fill="#ef5350"/>
+
+    <line x1="640" y1="178" x2="640" y2="215" stroke="#ef5350" stroke-width="1"/>
+    <rect x="635" y="182" width="10" height="30" fill="#ef5350"/>
+
+    <!-- Trend line connecting HHs (showing rising price) -->
+    <line x1="165" y1="135" x2="340" y2="100" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="340" y1="100" x2="515" y2="75" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+    <!-- Volume bars (DIVERGING - getting smaller despite higher highs) -->
+    <text x="48" y="278" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#555">Volume (कारोबार)</text>
+
+    <!-- Volume bars - showing diverging pattern -->
+    <rect x="60" y="320" width="10" height="20" fill="#26a69a"/>
+    <rect x="85" y="315" width="10" height="25" fill="#26a69a"/>
+    <rect x="110" y="305" width="10" height="35" fill="#26a69a"/>
+    <rect x="135" y="295" width="10" height="45" fill="#26a69a"/>
+    <!-- HH1 volume - HIGH -->
+    <rect x="160" y="288" width="10" height="52" fill="#26a69a"/>
+
+    <!-- pullback -->
+    <rect x="185" y="320" width="10" height="20" fill="#ef5350"/>
+    <rect x="210" y="325" width="10" height="15" fill="#ef5350"/>
+    <rect x="235" y="328" width="10" height="12" fill="#ef5350"/>
+
+    <!-- HH2 attempt - lower volume -->
+    <rect x="260" y="315" width="10" height="25" fill="#26a69a"/>
+    <rect x="285" y="310" width="10" height="30" fill="#26a69a"/>
+    <rect x="310" y="305" width="10" height="35" fill="#26a69a"/>
+    <!-- HH2 volume - LOWER than HH1 -->
+    <rect x="335" y="305" width="10" height="35" fill="#26a69a"/>
+
+    <!-- pullback 2 -->
+    <rect x="360" y="320" width="10" height="20" fill="#ef5350"/>
+    <rect x="385" y="325" width="10" height="15" fill="#ef5350"/>
+    <rect x="410" y="328" width="10" height="12" fill="#ef5350"/>
+
+    <!-- HH3 attempt - LOWEST volume -->
+    <rect x="435" y="320" width="10" height="20" fill="#26a69a"/>
+    <rect x="460" y="318" width="10" height="22" fill="#26a69a"/>
+    <rect x="485" y="318" width="10" height="22" fill="#26a69a"/>
+    <!-- HH3 volume - VERY LOW (divergence!) -->
+    <rect x="510" y="320" width="10" height="20" fill="#26a69a"/>
+
+    <!-- reversal volume picks up -->
+    <rect x="535" y="305" width="10" height="35" fill="#ef5350"/>
+    <rect x="560" y="298" width="10" height="42" fill="#ef5350"/>
+    <rect x="585" y="295" width="10" height="45" fill="#ef5350"/>
+    <rect x="610" y="290" width="10" height="50" fill="#ef5350"/>
+    <rect x="635" y="285" width="10" height="55" fill="#ef5350"/>
+
+    <!-- DIVERGENCE TREND LINE on volume - DECLINING -->
+    <line x1="165" y1="288" x2="340" y2="305" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="340" y1="305" x2="515" y2="320" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+    <!-- X-axis day labels -->
+    <text x="65" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 1</text>
+    <text x="165" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 5</text>
+    <text x="340" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 12</text>
+    <text x="515" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 19</text>
+    <text x="640" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 25</text>
+
+    <!-- Annotation arrows -->
+    <text x="240" y="115" font-family="sans-serif" font-size="10" font-weight="700" fill="#26a69a">↗ Price: Higher Highs</text>
+    <text x="240" y="295" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef5350">↘ Volume: Lower Highs (DIVERGENCE)</text>
+
+    <!-- Bottom legend -->
+    <rect x="40" y="380" width="630" height="30" fill="#ffe5e0" stroke="#ef5350" stroke-width="1" rx="3"/>
+    <text x="355" y="400" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#ef5350">Result: Price reversal — trend reversal आउने warning अग्रिम मिल्यो</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा stock को price 3 पटक नयाँ High (HH1, HH2, HH3) बनायो, तर हरेक पटक Volume घट्दै गयो। यसको मतलब price त माथि गयो, तर buyer हरूको सहभागिता कम हुँदै थियो। यो "Volume Divergence" हो — बजार थाक्दै गएको लुकेको संकेत। यस्तो pattern देखेपछि चनाखो trader new high मा FOMO buy नगरी exit वा caution लिन्छ।
+</div>
+
+<p>नवौँ कुरा हो—Volume र liquidity को सम्बन्ध। Volume धेरै भएको stock मा Entry/Exit तुलनात्मक रूपमा सहज हुन सक्छ। Low Volume stock मा price movement misleading हुन सक्छ। Chart राम्रो देखिए पनि sell गर्दा buyer नपाउन सकिन्छ। Active trader का लागि liquidity Volume जत्तिकै important छ।</p>
+
+<p>दशौँ कुरा हो—Volume alone is not signal। Volume spike देखियो भन्दैमा buy गर्नु हुँदैन। Volume घट्यो भन्दैमा sell गर्नु हुँदैन। Volume केवल evidence हो। Decision price structure, level, trend, market context, and risk-rewardसँग जोडेर लिनुपर्छ।</p>
+
+<p>Volume पढ्ने professional approach यस्तो हुन्छ:</p>
+
+<ul>
+  <li>Price कहाँ छ?</li>
+  <li>Trend कस्तो छ?</li>
+  <li>Support/Resistance कहाँ छ?</li>
+  <li>Candle body र close कस्तो छ?</li>
+  <li>Volume normal भन्दा धेरै छ कि कम?</li>
+  <li>Volume buyer side मा देखिन्छ कि seller side मा?</li>
+  <li>Move continuation हो कि exhaustion?</li>
+  <li>Risk कहाँ define हुन्छ?</li>
+</ul>
+
+<p>Volume को असली मूल्य तब आउँछ जब trader price र Volume बीचको सम्बन्ध पढ्न थाल्छ। Price बढ्यो तर Volume छैन—सावधानी। Price break भयो र Volume आयो—ध्यान। Price माथि गयो तर close कमजोर र Volume धेरै—warning। Price तल गयो तर Volume घट्दैछ—selling कमजोर हुन सक्छ। Price support मा आयो, lower wick र Volume—buyer interest हुन सक्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Volume reading धेरै महत्वपूर्ण छ, किनकि यहाँ liquidity सबै stock मा समान हुँदैन। केही stock मा धेरै buyer-seller हुन्छन्, केही stock मा धेरै कम activity हुन्छ। Low liquidity stock मा price move धेरै देखिए पनि वास्तविक participation कमजोर हुन सक्छ। यस्तो stock मा Volume नहेरी trade गर्नु खतरनाक हुन सक्छ।</p>
+
+<p>NEPSE मा sector rally आउँदा Volume अचानक बढ्न सक्छ। यदि पूरा sector मा Volume बढ्दैछ र धेरै stock Resistance break गर्दैछन् भने sector rotation को संकेत हुन सक्छ। तर यदि sector धेरै दिन चलिसकेको छ र अन्तिममा धेरै high Volume सहित long upper wick देखिन्छ भने profit booking वा distribution warning हुन सक्छ।</p>
+
+<p>NEPSE index को Volume पनि market health बुझ्न उपयोगी हुन सक्छ। Index बढ्दैछ तर turnover/Volume कमजोर छ भने rally कमजोर हुन सक्छ। Index बढ्दैछ र broad participation छ भने confidence बढी हुन सक्छ। Index घट्दैछ र selling Volume धेरै छ भने market pressure बलियो हुन सक्छ। तर index Volume पनि एक्लै final signal होइन; market breadth, sector, and price structure हेर्नुपर्छ।</p>
+
+<p>NEPSE मा fake breakout चिन्न Volume महत्वपूर्ण छ। Breakout मा Volume high छ तर candle weak close भयो भने सावधानी चाहिन्छ। Volume high भएकोले मात्र Breakout real हुँदैन। Price level माथि sustain हुनुपर्छ।</p>
+
+<p>NEPSE मा operator-style movement बुझ्न Volume मद्दत गर्न सक्छ। अचानक Volume spike, price push, upper wick, social media hype, and next-day selling देखिए trap को सम्भावना हुन सक्छ। तर सबै high Volume move operator activity हो भनेर निष्कर्ष निकाल्नु गलत हुन्छ। Trader ले evidence जोडेर मात्र सोच्नुपर्छ।</p>
+
+<p>NEPSE मा trading cost, broker commission, tax, DP charge, settlement, and liquidity net result मा असर गर्छन्। Frequent Volume-based trading गर्दा cost पनि ध्यान दिनुपर्छ। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले updated information official source बाट verify गर्नुपर्छ।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Volume market psychology को participation meter हो। Price बढ्दा धेरै Volume आउनु भनेको धेरै trader/investor त्यो move मा सहभागी हुँदैछन् भन्ने हुन सक्छ। तर participation किन आएको हो भन्ने बुझ्नुपर्छ—accumulation हो, breakout buying हो, FOMO buying हो, वा distribution?</p>
+
+<p>High Volume मा धेरै emotion हुन्छ। Bullish excitement, panic selling, profit booking, stop loss trigger, institutional participation, operator activity—सबै high Volume मा देखिन सक्छन्। त्यसैले high Volume देख्दा trader उत्साहित मात्र होइन, सचेत पनि हुनुपर्छ।</p>
+
+<p>Low Volume मा बजार चुपचाप हुन्छ। कहिलेकाहीँ यो lack of interest हो। कहिलेकाहीँ supply dry-up हो। कहिलेकाहीँ base बनिरहेको संकेत हो। Beginner low Volume देखेर ignore गर्छन्, तर professional trader हेर्छ—price stable छ? seller कम छन्? accumulation हुन सक्छ? sector बिस्तारै जाग्दैछ?</p>
+
+<p>Volume ले crowd behavior पनि देखाउँछ। Price लामो समय बढिसकेपछि अचानक बहुत धेरै Volume आउँछ भने late crowd प्रवेश गरिरहेको हुन सक्छ। Smart money profit book गर्दै हुन सक्छ। यो सधैं सत्य होइन, तर warning हो। त्यसैले climax Volume नजिक FOMO entry dangerous हुन सक्छ।</p>
+
+<p>Price लामो समय घटेपछि high Volume र lower wick आउँछ भने panic selling पछि buyer absorb गरेको हुन सक्छ। Crowd डराएर बेच्दै हुन्छ, strong buyer absorb गर्दै हुन सक्छन्। तर confirmation बिना buy गर्नु हुँदैन।</p>
+
+<p>Volume reading ले trader लाई भीडको emotion पढ्न सिकाउँछ। कहाँ crowd excited छ? कहाँ panic छ? कहाँ participation घट्दैछ? कहाँ supply absorb हुँदैछ? यही सोचले traderलाई candle को रंगभन्दा गहिरो स्तरमा market बुझ्न मद्दत गर्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Volume ignore गर्नु। Price मात्र हेरेर trading decision लिनु chart को आधा information प्रयोग गर्नु हो।</p>
+
+<p>दोस्रो गल्ती हो—High Volume सधैं bullish मान्नु। High Volume weak close, upper wick, or Resistance नजिक आयो भने selling pressure पनि हुन सक्छ।</p>
+
+<p>तेस्रो गल्ती हो—Low Volume सधैं weak मान्नु। Low Volume pullback healthy हुन सक्छ, वा base मा supply dry-up देखाउन सक्छ। Context चाहिन्छ।</p>
+
+<p>चौथो गल्ती हो—Breakout मा Volume confirmation नहेर्नु। Volume बिना Breakout कमजोर हुन सक्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Pullback मा selling Volume नहेर्नु। Heavy selling भएको Pullback healthy नहुन सक्छ।</p>
+
+<p>छैटौँ गल्ती हो—Climax Volume मा FOMO Entry गर्नु। धेरै दिनको rally पछि huge Volume + upper wick dangerous हुन सक्छ।</p>
+
+<p>सातौँ गल्ती हो—Low liquidity stock मा chart signal trust गर्नु। Volume कमजोर भएको stock मा price movement misleading हुन सक्छ।</p>
+
+<p>आठौँ गल्ती हो—Volume spike देखेर तुरुन्त buy गर्नु। Volume spike को meaning candle, level, and close अनुसार फरक हुन्छ।</p>
+
+<p>नवौँ गल्ती हो—Average Volume तुलना नगर्नु। Volume धेरै कि कम भन्ने थाहा पाउन historical average सँग तुलना गर्नुपर्छ।</p>
+
+<p>दशौँ गल्ती हो—Volume लाई final signal मान्नु। Volume evidence हो, decision होइन। Price structure, level, trend, and risk management चाहिन्छ।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ High Volume सधैं bullish हुँदैन, Low Volume सधैं bearish हुँदैन</div>
+  <p style="margin-bottom:0;"><strong>High Volume + Strong Close + Body ठूलो</strong> = real buying (राम्रो)। तर <strong>High Volume + Weak Close + Upper Wick</strong> = seller absorbed buyers (खतरा)। त्यस्तै <strong>Low Volume in Pullback</strong> = healthy correction हो, तर <strong>Low Volume rally</strong> = participation बिनाको कमजोर move हो। Volume को meaning सधैं candle close र level सँग जोडेर मात्र निस्कन्छ।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Volume पढ्दा यी rules अपनाउनुहोस्:</p>
+
+<ul>
+  <li>Price movement सँग Volume सधैं जोडेर हेर्नुहोस्।</li>
+  <li>Volume लाई अघिल्ला 10–20 दिनको average सँग तुलना गर्नुहोस्।</li>
+  <li>Breakout मा strong Volume खोज्नुहोस्, तर candle close पनि हेर्नुहोस्।</li>
+  <li>High Volume + weak close + upper wick = caution।</li>
+  <li>Uptrend Pullback मा Volume घट्नु healthy संकेत हुन सक्छ।</li>
+  <li>Pullback मा heavy selling Volume आए caution लिनुहोस्।</li>
+  <li>Support नजिक high Volume + lower wick buyer interest हुन सक्छ।</li>
+  <li>Resistance नजिक high Volume + upper wick seller pressure हुन सक्छ।</li>
+  <li>Volume dry-up भएको base watchlist मा राख्न सकिन्छ, तर Breakout confirmation पर्खिनुपर्छ।</li>
+  <li>Climax Volume पछि FOMO नगर्नुहोस्।</li>
+  <li>Low liquidity stock मा position size सानो राख्नुहोस् वा avoid गर्नुहोस्।</li>
+  <li>Volume spike देखेर blind Entry नगर्नुहोस्।</li>
+  <li>Volume divergence लाई level र trend सँग confirm गर्नुहोस्।</li>
+  <li>Market, sector, and stock तीनैको Volume behavior हेर्नुहोस्।</li>
+  <li>Volume reading पछि पनि Stop Loss र Risk-Reward अनिवार्य जाँच्नुहोस्।</li>
+</ul>
+
+<p>Volume को मुख्य rule हो—<strong>Price ले दिशा देखाउँछ, Volume ले त्यो दिशाको विश्वसनीयता जाँच्न मद्दत गर्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Strong Breakout with Volume</strong></p>
+<p>एउटा stock Rs. 500 Resistance तल 2 महिनादेखि base बनाइरहेको छ। Volume बिस्तारै घट्दै गएको थियो। एक दिन price Rs. 500 माथि strong green candle सहित Rs. 520 मा close भयो। Volume average भन्दा 3 गुणा बढी छ। Close high नजिक छ। Sector पनि strong छ। यो Breakout Volume को राम्रो उदाहरण हुन सक्छ। Trader ले Stop Loss, Retest, and Risk-Reward जाँचेर trade plan बनाउन सक्छ।</p>
+
+<!-- VISUAL 3: Strong Breakout with Volume (Scenario 1 - Rs.500) -->
+<div class="visual-block">
+  <div class="visual-title">Strong Breakout — Volume Spike + Strong Close (Rs. 500 Example)</div>
+  <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Base + Volume Dry-up + Breakout Spike — Valid Breakout को signature</text>
+
+    <!-- Chart border -->
+    <rect x="40" y="40" width="630" height="310" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis price labels (RIGHT side) -->
+    <text x="678" y="75" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 530</text>
+    <text x="678" y="115" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 520</text>
+    <text x="678" y="155" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 510</text>
+    <text x="678" y="195" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+    <text x="678" y="225" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 490</text>
+    <text x="678" y="255" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 480</text>
+
+    <!-- Horizontal grid lines -->
+    <line x1="40" y1="75" x2="670" y2="75" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="115" x2="670" y2="115" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="155" x2="670" y2="155" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="225" x2="670" y2="225" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="255" x2="670" y2="255" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- Resistance line at Rs.500 (y=195) -->
+    <line x1="40" y1="195" x2="670" y2="195" stroke="#ef5350" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="50" y="190" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#ef5350">Resistance Rs. 500 (रोकान)</text>
+
+    <!-- Volume separator -->
+    <line x1="40" y1="265" x2="670" y2="265" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Base candles - flat around Rs.485-495 with declining volume -->
+    <!-- Candle 1 -->
+    <line x1="60" y1="210" x2="60" y2="240" stroke="#26a69a" stroke-width="1"/>
+    <rect x="55" y="215" width="10" height="20" fill="#26a69a"/>
+
+    <!-- Candle 2 -->
+    <line x1="85" y1="205" x2="85" y2="235" stroke="#ef5350" stroke-width="1"/>
+    <rect x="80" y="210" width="10" height="22" fill="#ef5350"/>
+
+    <!-- Candle 3 -->
+    <line x1="110" y1="210" x2="110" y2="240" stroke="#26a69a" stroke-width="1"/>
+    <rect x="105" y="215" width="10" height="20" fill="#26a69a"/>
+
+    <!-- Candle 4 -->
+    <line x1="135" y1="205" x2="135" y2="235" stroke="#ef5350" stroke-width="1"/>
+    <rect x="130" y="210" width="10" height="22" fill="#ef5350"/>
+
+    <!-- Candle 5 - tighter -->
+    <line x1="160" y1="208" x2="160" y2="230" stroke="#26a69a" stroke-width="1"/>
+    <rect x="155" y="212" width="10" height="15" fill="#26a69a"/>
+
+    <!-- Candle 6 - tighter -->
+    <line x1="185" y1="205" x2="185" y2="228" stroke="#ef5350" stroke-width="1"/>
+    <rect x="180" y="210" width="10" height="15" fill="#ef5350"/>
+
+    <!-- Candle 7 - even tighter -->
+    <line x1="210" y1="207" x2="210" y2="225" stroke="#26a69a" stroke-width="1"/>
+    <rect x="205" y="210" width="10" height="12" fill="#26a69a"/>
+
+    <!-- Candle 8 - very tight (compression) -->
+    <line x1="235" y1="206" x2="235" y2="222" stroke="#ef5350" stroke-width="1"/>
+    <rect x="230" y="210" width="10" height="10" fill="#ef5350"/>
+
+    <!-- Candle 9 - very tight -->
+    <line x1="260" y1="207" x2="260" y2="220" stroke="#26a69a" stroke-width="1"/>
+    <rect x="255" y="210" width="10" height="8" fill="#26a69a"/>
+
+    <!-- Candle 10 - very tight -->
+    <line x1="285" y1="205" x2="285" y2="218" stroke="#ef5350" stroke-width="1"/>
+    <rect x="280" y="208" width="10" height="8" fill="#ef5350"/>
+
+    <!-- THE BREAKOUT CANDLE - large green, closing way above Rs.500 -->
+    <line x1="315" y1="105" x2="315" y2="205" stroke="#26a69a" stroke-width="2"/>
+    <rect x="306" y="110" width="18" height="85" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+
+    <!-- Breakout candle annotation -->
+    <rect x="298" y="98" width="34" height="105" fill="none" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="3,2" rx="3"/>
+    <text x="315" y="92" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#26a69a">⚡ BREAKOUT</text>
+    <text x="315" y="80" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">Close Rs. 520</text>
+
+    <!-- Continuation candles -->
+    <line x1="350" y1="105" x2="350" y2="125" stroke="#26a69a" stroke-width="1"/>
+    <rect x="345" y="108" width="10" height="14" fill="#26a69a"/>
+
+    <line x1="375" y1="95" x2="375" y2="118" stroke="#26a69a" stroke-width="1"/>
+    <rect x="370" y="98" width="10" height="16" fill="#26a69a"/>
+
+    <!-- Retest candle - back to old resistance (now support) -->
+    <line x1="400" y1="105" x2="400" y2="200" stroke="#ef5350" stroke-width="1"/>
+    <rect x="395" y="115" width="10" height="25" fill="#ef5350"/>
+
+    <line x1="425" y1="115" x2="425" y2="195" stroke="#26a69a" stroke-width="1"/>
+    <rect x="420" y="118" width="10" height="22" fill="#26a69a"/>
+
+    <!-- Retest annotation -->
+    <text x="412" y="220" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c8a800">Retest (फेरि परीक्षण)</text>
+
+    <!-- Continuation upward -->
+    <line x1="450" y1="95" x2="450" y2="118" stroke="#26a69a" stroke-width="1"/>
+    <rect x="445" y="98" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="475" y1="80" x2="475" y2="100" stroke="#26a69a" stroke-width="1"/>
+    <rect x="470" y="82" width="10" height="16" fill="#26a69a"/>
+
+    <line x1="500" y1="70" x2="500" y2="90" stroke="#26a69a" stroke-width="1"/>
+    <rect x="495" y="72" width="10" height="15" fill="#26a69a"/>
+
+    <!-- Entry & SL & Target markers -->
+    <!-- Entry at breakout retest -->
+    <text x="55" y="135" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">Entry (किन्ने ठाउँ)</text>
+    <line x1="170" y1="125" x2="320" y2="125" stroke="#26a69a" stroke-width="1" stroke-dasharray="3,2"/>
+    <polygon points="315,121 322,125 315,129" fill="#26a69a"/>
+
+    <!-- SL line -->
+    <line x1="40" y1="245" x2="510" y2="245" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="50" y="260" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#ef5350">SL (घाटा रोक्ने सीमा) — Rs. 485</text>
+
+    <!-- Target line -->
+    <line x1="40" y1="70" x2="510" y2="70" stroke="#26a69a" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="50" y="65" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">Target (लक्ष्य) — Rs. 530+</text>
+
+    <!-- Volume bars -->
+    <text x="48" y="280" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#555">Volume (कारोबार)</text>
+
+    <!-- Base period - declining volume -->
+    <rect x="55" y="318" width="10" height="22" fill="#26a69a"/>
+    <rect x="80" y="320" width="10" height="20" fill="#ef5350"/>
+    <rect x="105" y="322" width="10" height="18" fill="#26a69a"/>
+    <rect x="130" y="324" width="10" height="16" fill="#ef5350"/>
+    <rect x="155" y="326" width="10" height="14" fill="#26a69a"/>
+    <rect x="180" y="328" width="10" height="12" fill="#ef5350"/>
+    <rect x="205" y="330" width="10" height="10" fill="#26a69a"/>
+    <rect x="230" y="332" width="10" height="8" fill="#ef5350"/>
+    <rect x="255" y="333" width="10" height="7" fill="#26a69a"/>
+    <rect x="280" y="333" width="10" height="7" fill="#ef5350"/>
+
+    <!-- BREAKOUT VOLUME - HUGE SPIKE -->
+    <rect x="306" y="278" width="18" height="62" fill="#26a69a"/>
+
+    <!-- Volume spike annotation -->
+    <text x="315" y="273" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#26a69a">3× average!</text>
+
+    <!-- Continuation volume -->
+    <rect x="345" y="310" width="10" height="30" fill="#26a69a"/>
+    <rect x="370" y="305" width="10" height="35" fill="#26a69a"/>
+    <rect x="395" y="318" width="10" height="22" fill="#ef5350"/>
+    <rect x="420" y="315" width="10" height="25" fill="#26a69a"/>
+    <rect x="445" y="305" width="10" height="35" fill="#26a69a"/>
+    <rect x="470" y="300" width="10" height="40" fill="#26a69a"/>
+    <rect x="495" y="298" width="10" height="42" fill="#26a69a"/>
+
+    <!-- Avg line on volume -->
+    <line x1="40" y1="318" x2="295" y2="318" stroke="#c8a800" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="298" y="320" font-family="sans-serif" font-size="8" fill="#c8a800">Avg</text>
+
+    <!-- X-axis day labels -->
+    <text x="60" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 1</text>
+    <text x="160" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 5</text>
+    <text x="260" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 10</text>
+    <text x="315" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#26a69a">BO Day</text>
+    <text x="425" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 15</text>
+    <text x="500" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 19</text>
+
+    <!-- Bottom result -->
+    <rect x="40" y="380" width="630" height="30" fill="#eaf6ea" stroke="#26a69a" stroke-width="1" rx="3"/>
+    <text x="355" y="400" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#26a69a">Result: Base + Volume dry + 3× Volume + Strong close + Retest hold = Valid Breakout ✓</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा Rs. 500 Resistance तल 2 महिनासम्म stock base मा थियो र Volume बिस्तारै घटिरहेको थियो। अनि एक दिन strong green candle ले Rs. 500 भन्दा माथि close भयो — साथमा Volume पनि average भन्दा 3 गुणा spike भयो। यो genuine buyer participation को संकेत हो। यस्तो combination (base + volume drying + volume spike + strong close) मा Breakout valid मानिन्छ — Entry, SL Rs. 485 तल, र Target Rs. 530+ राख्न सकिन्छ।
+</div>
+
+<p><strong>Scenario 2: Weak Rally with Low Volume</strong></p>
+<p>Stock Rs. 400 बाट Rs. 460 सम्म बढेको छ, तर प्रत्येक rise मा Volume घट्दैछ। Candle body पनि साना हुँदैछन्। Rs. 460 नजिक Resistance छ। यस्तो move कमजोर हुन सक्छ। Price बढ्दैछ, तर participation घट्दैछ। यहाँ FOMO entry risky हुन सक्छ।</p>
+
+<p><strong>Scenario 3: Climax Volume at Resistance</strong></p>
+<p>Stock पहिले नै Rs. 300 बाट Rs. 430 पुगिसकेको छ। Rs. 430 Resistance नजिक अचानक धेरै high Volume आउँछ। Candle को माथि लामो wick छ र close Rs. 410 मा हुन्छ। Beginner ले Volume देखेर buy गर्छ, तर professional trader seller pressure र exhaustion warning देख्न सक्छ।</p>
+
+<!-- VISUAL 4: Climax Volume at Resistance (Scenario 3) -->
+<div class="visual-block">
+  <div class="visual-title">Climax Volume — Long Rally पछि "Distribution" Warning</div>
+  <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="720" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="360" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Rally को अन्त्यमा huge Volume + Upper Wick = Smart Money exit सङ्केत</text>
+
+    <!-- Chart border -->
+    <rect x="40" y="40" width="630" height="310" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="678" y="75" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 450</text>
+    <text x="678" y="115" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 430</text>
+    <text x="678" y="155" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 410</text>
+    <text x="678" y="195" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 380</text>
+    <text x="678" y="235" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 350</text>
+
+    <!-- Grid -->
+    <line x1="40" y1="75" x2="670" y2="75" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="115" x2="670" y2="115" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="155" x2="670" y2="155" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="195" x2="670" y2="195" stroke="#e8dfc8" stroke-width="0.5"/>
+    <line x1="40" y1="235" x2="670" y2="235" stroke="#e8dfc8" stroke-width="0.5"/>
+
+    <!-- Resistance at Rs.430 -->
+    <line x1="40" y1="115" x2="670" y2="115" stroke="#ef5350" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="50" y="110" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#ef5350">Resistance Rs. 430 (रोकान)</text>
+
+    <!-- Volume separator -->
+    <line x1="40" y1="265" x2="670" y2="265" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Long rally candles from Rs.300 (y=275) to Rs.430 (y=115) -->
+    <!-- Rally phase - 11 green candles climbing -->
+    <line x1="55" y1="240" x2="55" y2="260" stroke="#26a69a" stroke-width="1"/>
+    <rect x="50" y="243" width="10" height="14" fill="#26a69a"/>
+
+    <line x1="80" y1="225" x2="80" y2="248" stroke="#26a69a" stroke-width="1"/>
+    <rect x="75" y="228" width="10" height="17" fill="#26a69a"/>
+
+    <line x1="105" y1="210" x2="105" y2="233" stroke="#26a69a" stroke-width="1"/>
+    <rect x="100" y="213" width="10" height="17" fill="#26a69a"/>
+
+    <line x1="130" y1="218" x2="130" y2="240" stroke="#ef5350" stroke-width="1"/>
+    <rect x="125" y="220" width="10" height="17" fill="#ef5350"/>
+
+    <line x1="155" y1="200" x2="155" y2="224" stroke="#26a69a" stroke-width="1"/>
+    <rect x="150" y="203" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="180" y1="183" x2="180" y2="207" stroke="#26a69a" stroke-width="1"/>
+    <rect x="175" y="186" width="10" height="18" fill="#26a69a"/>
+
+    <line x1="205" y1="170" x2="205" y2="193" stroke="#26a69a" stroke-width="1"/>
+    <rect x="200" y="173" width="10" height="17" fill="#26a69a"/>
+
+    <line x1="230" y1="178" x2="230" y2="198" stroke="#ef5350" stroke-width="1"/>
+    <rect x="225" y="180" width="10" height="15" fill="#ef5350"/>
+
+    <line x1="255" y1="160" x2="255" y2="182" stroke="#26a69a" stroke-width="1"/>
+    <rect x="250" y="163" width="10" height="17" fill="#26a69a"/>
+
+    <line x1="280" y1="148" x2="280" y2="170" stroke="#26a69a" stroke-width="1"/>
+    <rect x="275" y="150" width="10" height="17" fill="#26a69a"/>
+
+    <line x1="305" y1="135" x2="305" y2="155" stroke="#26a69a" stroke-width="1"/>
+    <rect x="300" y="138" width="10" height="15" fill="#26a69a"/>
+
+    <line x1="330" y1="125" x2="330" y2="145" stroke="#26a69a" stroke-width="1"/>
+    <rect x="325" y="128" width="10" height="14" fill="#26a69a"/>
+
+    <line x1="355" y1="118" x2="355" y2="135" stroke="#26a69a" stroke-width="1"/>
+    <rect x="350" y="120" width="10" height="13" fill="#26a69a"/>
+
+    <!-- THE CLIMAX CANDLE - long upper wick to Rs.450, close at Rs.410 -->
+    <line x1="385" y1="65" x2="385" y2="170" stroke="#888" stroke-width="2"/>
+    <!-- Body: red, close at Rs.410 (y=155), open near Rs.428 (y=120) -->
+    <rect x="375" y="120" width="20" height="35" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+
+    <!-- Climax annotation -->
+    <rect x="368" y="58" width="34" height="115" fill="none" stroke="#ef5350" stroke-width="1.5" stroke-dasharray="3,2" rx="3"/>
+    <text x="385" y="55" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#ef5350">⚠ CLIMAX</text>
+    <text x="385" y="42" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">High Rs. 450</text>
+
+    <text x="405" y="80" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">↑ Upper Wick</text>
+    <text x="405" y="93" font-family="sans-serif" font-size="9" fill="#111">(seller ले reject)</text>
+
+    <text x="405" y="145" font-family="sans-serif" font-size="9" font-weight="700" fill="#ef5350">Close Rs. 410</text>
+    <text x="405" y="158" font-family="sans-serif" font-size="9" fill="#111">(Resistance तल!)</text>
+
+    <!-- Reversal candles - falling -->
+    <line x1="430" y1="148" x2="430" y2="185" stroke="#ef5350" stroke-width="1"/>
+    <rect x="425" y="150" width="10" height="33" fill="#ef5350"/>
+
+    <line x1="455" y1="178" x2="455" y2="218" stroke="#ef5350" stroke-width="1"/>
+    <rect x="450" y="180" width="10" height="36" fill="#ef5350"/>
+
+    <line x1="480" y1="208" x2="480" y2="245" stroke="#ef5350" stroke-width="1"/>
+    <rect x="475" y="210" width="10" height="33" fill="#ef5350"/>
+
+    <line x1="505" y1="225" x2="505" y2="255" stroke="#ef5350" stroke-width="1"/>
+    <rect x="500" y="228" width="10" height="25" fill="#ef5350"/>
+
+    <line x1="530" y1="218" x2="530" y2="248" stroke="#26a69a" stroke-width="1"/>
+    <rect x="525" y="222" width="10" height="20" fill="#26a69a"/>
+
+    <line x1="555" y1="232" x2="555" y2="258" stroke="#ef5350" stroke-width="1"/>
+    <rect x="550" y="235" width="10" height="20" fill="#ef5350"/>
+
+    <line x1="580" y1="245" x2="580" y2="262" stroke="#ef5350" stroke-width="1"/>
+    <rect x="575" y="247" width="10" height="13" fill="#ef5350"/>
+
+    <!-- Rally direction arrow -->
+    <line x1="55" y1="250" x2="350" y2="125" stroke="#26a69a" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="180" y="148" font-family="sans-serif" font-size="10" font-style="italic" fill="#26a69a">Rally: Rs. 300 → Rs. 430</text>
+
+    <!-- Volume bars -->
+    <text x="48" y="280" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#555">Volume (कारोबार)</text>
+
+    <!-- Rally volume - moderate -->
+    <rect x="50" y="318" width="10" height="22" fill="#26a69a"/>
+    <rect x="75" y="315" width="10" height="25" fill="#26a69a"/>
+    <rect x="100" y="318" width="10" height="22" fill="#26a69a"/>
+    <rect x="125" y="320" width="10" height="20" fill="#ef5350"/>
+    <rect x="150" y="316" width="10" height="24" fill="#26a69a"/>
+    <rect x="175" y="313" width="10" height="27" fill="#26a69a"/>
+    <rect x="200" y="312" width="10" height="28" fill="#26a69a"/>
+    <rect x="225" y="320" width="10" height="20" fill="#ef5350"/>
+    <rect x="250" y="310" width="10" height="30" fill="#26a69a"/>
+    <rect x="275" y="308" width="10" height="32" fill="#26a69a"/>
+    <rect x="300" y="312" width="10" height="28" fill="#26a69a"/>
+    <rect x="325" y="316" width="10" height="24" fill="#26a69a"/>
+    <rect x="350" y="320" width="10" height="20" fill="#26a69a"/>
+
+    <!-- CLIMAX VOLUME - HUGE -->
+    <rect x="375" y="270" width="20" height="70" fill="#ef5350"/>
+    <text x="385" y="265" text-anchor="middle" font-family="Roboto, sans-serif" font-size="10" font-weight="700" fill="#ef5350">CLIMAX!</text>
+
+    <!-- Distribution volume - heavy selling -->
+    <rect x="425" y="285" width="10" height="55" fill="#ef5350"/>
+    <rect x="450" y="280" width="10" height="60" fill="#ef5350"/>
+    <rect x="475" y="285" width="10" height="55" fill="#ef5350"/>
+    <rect x="500" y="295" width="10" height="45" fill="#ef5350"/>
+    <rect x="525" y="315" width="10" height="25" fill="#26a69a"/>
+    <rect x="550" y="305" width="10" height="35" fill="#ef5350"/>
+    <rect x="575" y="312" width="10" height="28" fill="#ef5350"/>
+
+    <!-- Avg volume line -->
+    <line x1="40" y1="316" x2="365" y2="316" stroke="#c8a800" stroke-width="1" stroke-dasharray="2,2"/>
+
+    <!-- X-axis day labels -->
+    <text x="55" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 1</text>
+    <text x="180" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 8</text>
+    <text x="330" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 14</text>
+    <text x="385" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" font-weight="700" fill="#ef5350">Climax</text>
+    <text x="510" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 20</text>
+    <text x="585" y="365" text-anchor="middle" font-family="Roboto, sans-serif" font-size="9" fill="#555">Day 24</text>
+
+    <!-- Beginner vs Pro reaction box -->
+    <rect x="40" y="380" width="310" height="30" fill="#ffe5e0" stroke="#ef5350" stroke-width="1" rx="3"/>
+    <text x="195" y="400" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#ef5350">Beginner: "Volume धेरै! Buy!" → फस्छ</text>
+
+    <rect x="360" y="380" width="310" height="30" fill="#eaf6ea" stroke="#26a69a" stroke-width="1" rx="3"/>
+    <text x="515" y="400" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#26a69a">Pro: "Upper wick + weak close → Exit"</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart मा stock लामो rally पछि Rs. 430 Resistance नजिक पुग्यो। Climax day मा Volume average भन्दा कैयौँ गुणा बढी आयो, तर candle मा माथि लामो wick बन्यो र close Rs. 410 मा भयो — Resistance भन्दा तल। यो "Distribution" को signature हो — Smart money ले retail FOMO buyer हरूलाई share बेचेर निस्किरहेका छन्। यस्तो combination देखेमा Entry होइन, Exit सोच्नुपर्छ।
+</div>
+
+<p><strong>Scenario 4: Healthy Pullback Volume</strong></p>
+<p>Stock uptrend मा छ। Price Rs. 600 बाट Rs. 560 मा Pullback आयो। Pullback मा Volume घटिरहेको छ। Rs. 560 Support नजिक lower wick बन्यो। अर्को दिन Volume बढेर green candle आयो। यो healthy Pullback setup हुन सक्छ, यदि trend र market context supportive छ।</p>
+
+<p><strong>Scenario 5: Heavy Selling Breakdown</strong></p>
+<p>Stock Rs. 700 Support मा बारम्बार bounce हुँदै थियो। एक दिन ठूलो red candle Rs. 700 तल close भयो। Volume धेरै high छ। Close low नजिक छ। यो selling pressure र breakdown warning हुन सक्छ। <strong>“सस्तो भयो”</strong> भनेर buy गर्नु risky हुन सक्छ।</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:30%;">Price + Volume Situation</th>
+      <th style="width:35%;">Possible Meaning</th>
+      <th style="width:35%;">Trader Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="color:#26a69a;">Price ↑ + Volume ↑</strong></td>
+      <td>Genuine buyer participation</td>
+      <td>Trend continuation possible</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#c8a800;">Price ↑ + Volume ↓</strong></td>
+      <td>Weak rally, participation घट्दै</td>
+      <td>Caution — exhaustion risk</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#ef5350;">Price ↓ + Volume ↑</strong></td>
+      <td>Heavy selling, panic / breakdown</td>
+      <td>"सस्तो" भन्दैमा buy नगर्ने</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#c8a800;">Price ↓ + Volume ↓</strong></td>
+      <td>Selling exhausted, possible bottom</td>
+      <td>Confirmation पर्ख</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#26a69a;">Breakout + Volume 2-3×</strong></td>
+      <td>Real Breakout signature</td>
+      <td>Plan अनुसार Entry + SL</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#ef5350;">Resistance + Climax Vol + Wick</strong></td>
+      <td>Distribution / exhaustion</td>
+      <td>Exit, FOMO Entry avoid</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#26a69a;">Support + High Vol + Lower Wick</strong></td>
+      <td>Buyer absorption</td>
+      <td>Watch for confirmation</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#c8a800;">Base + Volume Dry-up</strong></td>
+      <td>Supply exhausted, potential setup</td>
+      <td>Watchlist + Breakout पर्ख</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Volume Reading Checklist</div>
+  <ul>
+    <li>आजको Volume normal भन्दा धेरै छ कि कम?</li>
+    <li>Volume अघिल्ला 10–20 दिनको average सँग तुलना गर्दा कस्तो छ?</li>
+    <li>Price बढ्दा Volume बढेको छ कि घटेको?</li>
+    <li>Price घट्दा Volume बढेको छ कि घटेको?</li>
+    <li>Breakout मा Volume आएको छ?</li>
+    <li>Breakout candle close strong छ कि weak?</li>
+    <li>Resistance नजिक high Volume + upper wick छ?</li>
+    <li>Support नजिक high Volume + lower wick छ?</li>
+    <li>Pullback मा Volume घटेको छ?</li>
+    <li>Pullback मा selling Volume heavy छ?</li>
+    <li>Base मा Volume dry-up भएको छ?</li>
+    <li>अचानक Volume spike आएको छ? किन?</li>
+    <li>Stock liquid छ?</li>
+    <li>Volume real participation हो कि low liquidity spike?</li>
+    <li>Sector मा पनि Volume बढेको छ?</li>
+    <li>NEPSE index Volume supportive छ?</li>
+    <li>Volume signal Risk-Reward सँग मिल्छ?</li>
+    <li>Stop Loss कहाँ छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: 10 Stock Volume Audit (20-Day Review)</div>
+  <p>कुनै 10 वटा NEPSE stock को Daily chart खोल्नुहोस्। प्रत्येक stock मा पछिल्लो 20 दिनको Volume हेर्नुहोस् र लेख्नुहोस्:</p>
+  <ul>
+    <li>कुन दिन Volume असामान्य रूपमा धेरै थियो?</li>
+    <li>त्यो दिन price बढेको थियो कि घटेको?</li>
+    <li>Candle close strong थियो कि weak?</li>
+    <li>Wick थियो कि थिएन?</li>
+    <li>त्यसपछि price के भयो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: 5 Breakout Volume Analysis</div>
+  <p>5 वटा Breakout chart खोज्नुहोस्। प्रत्येकमा लेख्नुहोस्:</p>
+  <ul>
+    <li>Breakout level कहाँ थियो?</li>
+    <li>Breakout candle मा Volume कस्तो थियो?</li>
+    <li>Close high नजिक थियो?</li>
+    <li>Breakout sustain भयो?</li>
+    <li>Retest आयो?</li>
+    <li>Volume ले Breakout support गर्‍यो कि गरेन?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: 5 Fake Breakout Volume Patterns</div>
+  <p>5 वटा Fake Breakout chart खोज्नुहोस्। प्रत्येकमा Volume analyze गर्नुहोस्:</p>
+  <ul>
+    <li>Volume spike थियो?</li>
+    <li>Candle मा upper wick थियो?</li>
+    <li>Close कमजोर थियो?</li>
+    <li>Next day selling Volume आयो?</li>
+    <li>Beginner कहाँ फस्न सक्थे?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: 5 Healthy Pullback Volume Examples</div>
+  <p>5 वटा healthy Pullback example खोज्नुहोस्। प्रत्येकमा लेख्नुहोस्:</p>
+  <ul>
+    <li>Trend up थियो?</li>
+    <li>Pullback मा Volume घटेको थियो?</li>
+    <li>Support नजिक buyer Volume आएको थियो?</li>
+    <li>Stop Loss कहाँ राख्न सकिन्थ्यो?</li>
+    <li>Risk-Reward कस्तो थियो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Past Trade Volume Review</div>
+  <p>आफ्नो पुरानो कुनै trade review गर्नुहोस्:</p>
+  <ul>
+    <li>Entry गर्दा Volume हेरेको थिएँ?</li>
+    <li>Price बढ्दै थियो तर Volume घट्दै थियो?</li>
+    <li>Breakout मा Volume थियो?</li>
+    <li>Pullback मा selling Volume धेरै थियो?</li>
+    <li>Volume हेरेको भए decision फरक हुन्थ्यो?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Volume बिना chart पढ्नु अधुरो हुन्छ। Price कहाँ गयो भन्ने कुरा सबैले देख्छन्, तर त्यो move मा कति शक्ति थियो भन्ने कुरा Volume ले देखाउँछ।</p>
+  <p>हरियो candle मात्र हेरेर buy नगर्नुहोस्। रातो candle मात्र हेरेर panic नगर्नुहोस्। Price र Volume सँगै पढ्नुहोस्। Breakout मा Volume चाहिन्छ, Pullback मा selling Volume controlled हुनुपर्छ, Resistance नजिक climax Volume सावधानीको संकेत हुन सक्छ।</p>
+  <p>Volume trader को आँखामा depth थप्छ। यसले तपाईंलाई weak move, strong move, fake breakout, healthy pullback, panic selling, and possible accumulation/distribution पढ्न मद्दत गर्छ।</p>
+  <p style="margin-bottom:0;">तर Volume पनि guarantee होइन। Volume evidence हो। Evidence लाई price structure, Support/Resistance, Trend, candle close, market context, and Risk Management सँग जोडेर मात्र decision लिनुहोस्।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 22 Summary</div>
+  <p>Volume भनेको कुनै समयावधिमा कति share किनबेच भयो भन्ने हो। Volume ले market participation देखाउँछ। Price direction देखाउँछ, Volume movement को strength र quality जाँच्न मद्दत गर्छ।</p>
+  <p>Price बढ्दा Volume बढ्नु buyer participation को संकेत हुन सक्छ। Price बढ्दा Volume घट्नु weak rally को संकेत हुन सक्छ। Price घट्दा Volume बढ्नु selling pressure को संकेत हुन सक्छ। Price घट्दा Volume घट्नु selling pressure कमजोर हुँदै गएको संकेत हुन सक्छ। तर यी सबै कुरा context अनुसार मात्र अर्थपूर्ण हुन्छन्।</p>
+  <p>Breakout मा Volume धेरै महत्वपूर्ण हुन्छ, तर high Volume सधैं bullish हुँदैन। High Volume + weak close + upper wick Resistance नजिक आयो भने caution चाहिन्छ। Pullback मा Volume घट्नु healthy हुन सक्छ, तर heavy selling Volume warning हो।</p>
+  <p>NEPSE मा Volume reading गर्दा liquidity, sector rotation, index condition, social media hype, operator-style movement, and low volume stock को risk ध्यान दिनुपर्छ। Low liquidity stock मा Volume signal misleading हुन सक्छ।</p>
+  <p>Volume लाई कहिल्यै एक्लै final signal बनाउनु हुँदैन। Price, candle, Support/Resistance, Trend, market context, sector strength, Stop Loss, and Risk-Reward सबै जोडेर decision गर्नुपर्छ।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Chart पढ्दा price मात्र नहेर्नुहोस्। Price कहाँ गयो र Volume ले त्यो moveलाई कति समर्थन गर्‍यो भन्ने कुरा सँगै पढ्नुहोस्।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader price को दिशा मात्र होइन,<br>
+  त्यो दिशामा कति शक्ति, कति सहभागिता,<br>
+  र कति विश्वास छ भन्ने कुरा<br>
+  Volume बाट पढ्न सिक्छ।
+</div>
+
+</div>
+</body>
+</html>

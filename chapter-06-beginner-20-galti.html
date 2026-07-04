@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 6: Beginner ले सुरुमा गर्ने 20 गल्ती — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.chart-placeholder { background: #fffdf5; border: 2px dashed #c9b97a; border-radius: 4px; padding: 40px 24px; margin: 24px 0; text-align: center; color: #555; font-style: italic; font-size: 14.5px; }
+.chart-placeholder::before { content: "📊"; display: block; font-size: 24px; margin-bottom: 10px; font-style: normal; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 30px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+.mistake-item { background: #fffdf5; border: 1px solid #c9b97a; border-left: 4px solid #c9b97a; border-radius: 4px; padding: 20px 24px; margin: 18px 0; position: relative; }
+.mistake-number { display: inline-block; background: #c9b97a; color: #111111; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 13px; padding: 3px 10px; border-radius: 3px; margin-bottom: 10px; letter-spacing: 0.05em; }
+.mistake-title { font-weight: 700; font-size: 17px; color: #111111; margin-bottom: 10px; line-height: 1.4; }
+.mistake-item p { margin-bottom: 10px; }
+.mistake-item p:last-child { margin-bottom: 0; }
+@media (max-width: 768px) { .container { padding: 32px 24px 60px; } .chapter-title { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 6: FOUNDATION</div>
+  <h1 class="chapter-title">Beginner ले सुरुमा गर्ने 20 गल्ती</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>अमितले share market सुरु गर्दा उसको मनमा ठूलो सपना थियो। उसले सोच्यो, <strong>“अलिकति पैसा हाल्छु, बजार बुझ्दै जान्छु, नाफा कमाउँदै जान्छु।”</strong> सुरुमा उसले IPO apply गर्‍यो। केही share परे। Listing पछि थोरै profit भयो। उसको confidence बढ्यो।</p>
+
+<p>त्यसपछि उसले secondary market मा trade गर्न सुरु गर्‍यो। पहिलो share उसले साथीको tips मा किन्यो। दोस्रो share Facebook group मा धेरै चर्चा भएकोले किन्यो। तेस्रो share price धेरै बढिरहेको देखेर FOMO मा किन्यो। केही trade मा profit पनि भयो, तर एक trade मा price घट्न थालेपछि उसले Stop Loss काटेन। उसले सोच्यो, <strong>“अलि पर्खिन्छु, फर्किन्छ होला।”</strong> Price अझ घट्यो। उसले average down गर्‍यो। केही हप्तापछि उसको capital को ठूलो भाग एउटै कमजोर share मा फस्यो।</p>
+
+<p>अमितको समस्या केवल ज्ञानको कमी थिएन। उसको समस्या थियो—beginner गल्तीहरूलाई सानो ठान्नु। सेयर बजारमा सुरुका गल्तीहरू सामान्य लाग्छन्, तर यिनै गल्ती दोहोरिँदै गएपछि capital बिस्तारै कमजोर हुँदै जान्छ। बजारले beginner लाई एकैचोटि ठूलो सजाय नदिन पनि सक्छ, तर गलत बानी बन्यो भने त्यो बानीले पछि ठूलो loss दिन सक्छ।</p>
+
+<p>यो chapter त्यही कारण महत्वपूर्ण छ। यदि तपाईंले सुरुमा हुने सामान्य गल्तीहरू पहिल्यै चिन्नुभयो भने, तपाईं धेरै महँगो lesson सस्तोमा सिक्न सक्नुहुन्छ।</p>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>सेयर बजारमा beginner ले पैसा गुमाउने कारण केवल market खराब हुनु होइन। धेरै पटक बजार ठीक हुन्छ, तर निर्णय गलत हुन्छ। Setup कमजोर हुन्छ, Risk Management हुँदैन, Stop Loss हुँदैन, Position Sizing मिल्दैन, अनि trader emotion मा चल्छ।</p>
+
+<p>Beginner को सबैभन्दा ठूलो खतरा हो—उनीहरूलाई आफ्नो गल्ती गल्ती जस्तो लाग्दैन। Tips मा share किन्नु सामान्य लाग्छ। Stop Loss नराख्नु सामान्य लाग्छ। Loss मा hold गर्नु सामान्य लाग्छ। Profit छिटो बेच्नु सामान्य लाग्छ। Price घटेपछि average down गर्नु सामान्य लाग्छ। तर trading मा यिनै <strong>“सामान्य”</strong> बानीहरू capital नष्ट गर्ने कारण बन्छन्।</p>
+
+<p>यो chapter ले सुरुमा हुने 20 मुख्य गल्तीहरू स्पष्ट रूपमा देखाउँछ। उद्देश्य डर देखाउनु होइन, जागरुक बनाउनु हो। गल्ती चिन्ने trader गल्तीबाट टाढा रहन सक्छ। गल्ती नचिन्ने trader भने एउटै mistake बारम्बार दोहोर्‍याउँछ र बजारलाई दोष दिन थाल्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Beginner गल्ती भनेको त्यो गल्ती हो जुन धेरै नयाँ trader वा investor ले बजारमा प्रवेश गरेपछि गर्छन्। यी गल्तीहरू प्रायः ज्ञानको कमी, अनुभवको कमी, हतार, लोभ, डर, ego, FOMO, र discipline को कमीबाट आउँछन्।</p>
+
+<p>सुरुमा हुने गल्तीहरू दुई प्रकारका हुन्छन्। पहिलो, <strong>knowledge mistake</strong>—जस्तै NEPSE, Broker, TMS, Demat, EDIS, WACC, Support, Resistance, Volume, Stop Loss नबुझ्नु। दोस्रो, <strong>behavior mistake</strong>—जस्तै tips मा trade गर्नु, overtrading गर्नु, loss accept नगर्नु, revenge trading गर्नु, profit मा greed गर्नु, र plan बिना market मा पस्नु।</p>
+
+<p>राम्रो कुरा के हो भने यी गल्तीहरूबाट बच्न सकिन्छ। Beginner ले सुरुमै सही नियम बनाए, Trading Journal राखे, risk कम राखे, र market लाई learning field का रूपमा लिए भने उनीहरूले धेरै ठूलो loss बाट बच्न सक्छन्।</p>
+
+<p>सेयर बजारमा सुरुवातमा तपाईंको लक्ष्य धेरै पैसा कमाउनु होइन। सुरुवातमा तपाईंको लक्ष्य हो—ठूलो गल्ती नगर्नु, capital बचाउनु, बजार बुझ्नु, र सही बानी बनाउनु।</p>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Beginner ले गर्ने गल्तीहरू सतहमा फरक देखिए पनि जरा एउटै हुन्छ—<strong>plan बिना decision</strong>। जब trader सँग plan हुँदैन, उसले बजारको हरेक आवाजलाई signal ठान्छ। कसैले share को नाम भन्यो भने किन्न मन लाग्छ। Price बढ्यो भने छुट्छ कि भन्ने डर लाग्छ। Price घट्यो भने सस्तो भयो जस्तो लाग्छ। Profit आयो भने तुरुन्त बेच्न मन लाग्छ। Loss आयो भने hold गर्न मन लाग्छ।</p>
+
+<p>Trading मा सबैभन्दा खतरनाक अवस्था हो—<strong>Entry छ, तर Exit छैन।</strong> धेरै beginner share किन्छन्, तर गलत भए के गर्ने भन्ने सोच्दैनन्। <strong>“बढे बेचौंला, घटे hold गरौंला”</strong> trading plan होइन। Trading plan मा Entry level, Stop Loss, Target, Risk-Reward, Position Size, market condition, sector condition, र trade invalid हुने अवस्था स्पष्ट हुनुपर्छ।</p>
+
+<p>Beginner ले अर्को ठूलो गल्ती गर्छन्—profit लाई skill सम्झिन्छन्। Bull market मा weak decision ले पनि profit दिन सक्छ। तर त्यो skill होइन, market condition को सहयोग हुन सक्छ। यदि trader ले bull market को lucky profit लाई आफ्नो क्षमता सम्झियो भने bear market मा उसले ठूलो loss गर्न सक्छ। त्यसैले सुरुको profit ले overconfidence ल्याउन दिनु हुँदैन।</p>
+
+<p>Loss ले पनि beginner लाई गलत बाटोमा लैजान सक्छ। Loss भएपछि केही trader डराएर market छोड्छन्। केही trader loss recover गर्न revenge trading गर्छन्। केही trader average down गरेर अझ फस्छन्। केही trader chart हेर्न छोडेर <strong>“कहिले फर्किन्छ?”</strong> भनेर hope मा बस्छन्। Loss बाट सिक्ने trader बलियो हुन्छ। Loss बाट भाग्ने trader कमजोर हुन्छ।</p>
+
+<p>Beginner ले बुझ्नुपर्ने कुरा हो—सबैभन्दा महँगो शिक्षा त्यही हो जुन capital गुमाएर मात्र सिकिन्छ। यदि तपाईंले अरूको गल्तीबाट सिक्नुभयो भने तपाईंले आफ्नो पैसा बचाउन सक्नुहुन्छ। यही chapter को मुख्य उद्देश्य त्यही हो।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा beginner गल्तीहरू धेरै practical रूपमा देखिन्छन्। IPO बाट सुरु गरेका धेरै लगानीकर्ता secondary market मा आउँदा price volatility देखेर अलमलिन्छन्। IPO मा apply गरेर पर्खिनु र secondary market मा live price movement manage गर्नु बिल्कुल फरक कुरा हो।</p>
+
+<p>NEPSE मा social media influence धेरै देखिन्छ। Facebook group, YouTube video, Telegram/Viber group, साथीभाइको tips, broker room discussion, र market rumor ले beginner लाई छिटो decision गर्न बाध्य पार्न सक्छ। तर बजारमा सबैभन्दा ठूलो खतरा कहिलेकाहीँ गलत information होइन, आधा information हुन्छ। आधा information ले confidence दिन्छ, तर पूरा risk देखाउँदैन।</p>
+
+<p>NEPSE मा sector rotation पनि beginner ले नबुझ्दा mistake हुन्छ। कुनै एक sector केही दिन चलेपछि beginner late entry गर्छ। Sector move अन्तिम चरणमा पुगिसकेको हुन सक्छ, Volume climax हुन सक्छ, operator distribution भइरहेको हुन सक्छ, तर beginner लाई त्यो <strong>“strong momentum”</strong> जस्तो लाग्छ। त्यही बेला फस्ने सम्भावना बढ्छ।</p>
+
+<p>TMS, EDIS, WACC, broker settlement, tax, fee, DP charge, र official process नबुझ्दा पनि beginner problem मा पर्न सक्छन्। कसैले share बेचेर EDIS गर्दैनन्। कसैले WACC update गर्दैनन्। कसैले actual net profit calculation नगरी आफू profit मा छु भन्छन्। कसैले broker payment ढिलो हुँदा panic गर्छन्। यी सबै गल्ती trading education कै हिस्सा हुन्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Beginner गल्तीहरूको मूल कारण psychology हो। बजारमा नयाँ हुँदा मनमा excitement हुन्छ। <strong>“म पनि कमाउँछु”, “यो मौका छुटाउनु हुँदैन”, “अरूले कमाइरहेका छन्”, “म ढिलो भएँ कि?”</strong>—यस्ता विचारले FOMO जन्माउँछ।</p>
+
+<p>FOMO ले trader लाई plan बिना Entry गराउँछ। Greed ले profit भएको trade मा पनि exit गर्न दिँदैन। Fear ले राम्रो setup मा पनि Entry गर्न डराउँछ। Ego ले Stop Loss काट्न दिँदैन। Hope ले कमजोर share hold गराउँछ। Revenge emotion ले loss recover गर्न weak trade लिन लगाउँछ।</p>
+
+<p>Beginner को अर्को psychological problem हो—confirmation खोज्नु। उसले share किनिसकेपछि केवल positive news खोज्छ। YouTube मा positive video खोज्छ। Facebook मा आफ्नो stock को चर्चा खोज्छ। कसैले negative कुरा भन्यो भने ignore गर्छ। यसलाई objective analysis होइन, emotional protection भन्न सकिन्छ।</p>
+
+<p>राम्रो trader ले आफ्नो गल्ती छिटो स्वीकार्छ। Beginner trader भने गल्ती स्वीकार्न ढिलो गर्छ। बजारमा ढिलो स्वीकारिएको गल्ती महँगो हुन्छ। Small loss स्वीकार्न नसक्दा big loss बन्न सक्छ। Wrong Entry स्वीकार्न नसक्दा capital block हुन सक्छ। Weak stock छोड्न नसक्दा opportunity cost बढ्न सक्छ।</p>
+
+<p>Trading psychology को पहिलो lesson यही हो—<strong>गल्ती गर्नु ठूलो समस्या होइन, गल्तीलाई defend गर्नु ठूलो समस्या हो।</strong></p>
+
+<h2 class="section-heading">Common Mistakes — 20 Beginner Mistakes</h2>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ नयाँ trader ले बजारमा प्रवेश गर्दा गर्ने 20 मुख्य गल्तीहरू</div>
+  <p style="margin-bottom:0;">तल दिइएका हरेक गल्ती सुरुमा सानो देखिन्छ, तर दोहोरिँदै गए capital नष्ट गर्न पर्याप्त हुन्छ। आफ्नो trading behavior यिनै 20 गल्तीसँग तुलना गर्दै हेर्नुहोस्।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 01</span>
+  <div class="mistake-title">साथीको tips मा share किन्नु</div>
+  <p>धेरै beginner ले आफ्नै analysis भन्दा अरूको कुरा छिटो विश्वास गर्छन्। साथी, Facebook group, YouTube video, broker room, वा social media post को आधारमा share किन्नु सजिलो लाग्छ। तर tips दिने व्यक्तिको capital, risk capacity, entry price, exit plan, र intention तपाईंलाई थाहा नहुन सक्छ।</p>
+  <p>Tips बाट Entry गर्दा तपाईंको plan हुँदैन। Price घटेपछि तपाईंलाई थाहा हुँदैन—Stop Loss काट्ने कि hold गर्ने। त्यसैले tips सुन्न सकिन्छ, तर final decision आफ्नै analysis बाट हुनुपर्छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 02</span>
+  <div class="mistake-title">FOMO मा late Entry गर्नु</div>
+  <p>Price धेरै बढिसकेपछि <strong>“अब छुट्छ”</strong> भन्ने डरले Entry गर्नु FOMO हो। FOMO entry प्रायः Resistance नजिक, overextended move पछि, वा Volume climax नजिक हुन्छ। यस्तो Entry मा Stop Loss टाढा हुन्छ र Risk-Reward कमजोर हुन्छ।</p>
+  <p>राम्रो trader move छुटे पनि अर्को setup पर्खिन तयार हुन्छ। बजारमा opportunity सकिँदैन, तर capital सकिन सक्छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 03</span>
+  <div class="mistake-title">Stop Loss नराख्नु</div>
+  <p>Stop Loss बिना trade गर्नु seatbelt बिना तेज गाडी चलाउनु जस्तै हो। Beginner लाई लाग्छ Stop Loss राख्यो भने loss confirm हुन्छ। तर Stop Loss ले ठूलो loss बाट बचाउँछ।</p>
+  <p>Stop Loss market ले तपाईंलाई सधैं सही बनाउँछ भनेर होइन, तपाईं गलत हुँदा damage सीमित राख्नका लागि हो।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 04</span>
+  <div class="mistake-title">Loss मा hold गरिरहनु</div>
+  <p>धेरै beginner profit हुँदा छिटो बेच्छन्, तर loss हुँदा hold गरिरहन्छन्। कारण हो—loss accept गर्न गाह्रो हुन्छ। तर trading मा loss accept गर्नु कमजोरी होइन, business discipline हो।</p>
+  <p>यदि trade को reason समाप्त भयो, support break भयो, Stop Loss hit भयो भने hold गर्नु discipline होइन, hope हो।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 05</span>
+  <div class="mistake-title">Profit छिटो बेच्नु</div>
+  <p>Profit देख्नेबित्तिकै बेच्नु पनि गल्ती हुन सक्छ। यदि trade plan मा Target बाँकी छ, trend healthy छ, Volume support छ, र market context ठीक छ भने अत्यधिक डरले छिटो exit गर्दा राम्रो trade को reward कम हुन्छ।</p>
+  <p>Profit booking चाहिन्छ, तर डरको कारण exit र plan अनुसार exit फरक कुरा हुन्।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 06</span>
+  <div class="mistake-title">Average Down गलत तरिकाले गर्नु</div>
+  <p>Price घटेपछि <strong>“average घटाउँछु”</strong> भन्दै थप किन्ने बानी खतरनाक हुन सक्छ। यदि stock weak trend मा छ, support break भएको छ, sector कमजोर छ, र original thesis गलत भएको छ भने average down गर्दा loss बढ्छ।</p>
+  <p>Average down investing strategy मा पनि careful analysis चाहिन्छ। Trading मा Stop Loss hit भएपछि average down गर्नु प्रायः dangerous हुन्छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 07</span>
+  <div class="mistake-title">Trading र Investing मिसाउनु</div>
+  <p>Short-term trade का लागि share किनेपछि price घट्दा <strong>“अब long-term राख्छु”</strong> भन्नु beginner को ठूलो गल्ती हो। Trade र Investment को reason अलग हुन्छ।</p>
+  <p>Trading मा setup, Stop Loss, Risk-Reward, timing मुख्य हुन्छ। Investing मा company quality, valuation, growth, dividend, financial strength मुख्य हुन्छ। Loss भएपछि trade लाई investment बनाउनु discipline होइन।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 08</span>
+  <div class="mistake-title">NEPSE index नहेरी stock किन्नु</div>
+  <p>Individual stock राम्रो देखिए पनि overall NEPSE कमजोर छ भने trade fail हुन सक्छ। Market context trader का लागि मौसम जस्तै हो। मौसम खराब छ भने राम्रो गाडी पनि सावधानीपूर्वक चलाउनुपर्छ।</p>
+  <p>Stock हेर्नुअघि market हेर्नु, market पछि sector हेर्नु, sector पछि stock हेर्नु राम्रो बानी हो।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 09</span>
+  <div class="mistake-title">Sector Rotation नबुझ्नु</div>
+  <p>NEPSE मा सबै sector एकैपटक चल्दैनन्। Beginner ले कहिलेकाहीँ चलिसकेको sector मा late entry गर्छन्। Sector rotation बुझ्न नसक्दा उनीहरू move को अन्तिम भागमा फस्छन्।</p>
+  <p>Strong sector भित्र strong stock खोज्नु राम्रो approach हो, तर sector already overextended छ कि छैन हेर्नु पनि आवश्यक छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 10</span>
+  <div class="mistake-title">Volume ignore गर्नु</div>
+  <p>Price बढ्दै छ तर Volume कमजोर छ भने move weak हुन सक्छ। Price घट्दै छ तर Volume heavy छ भने selling pressure बलियो हुन सक्छ। Volume बिना chart reading अधुरो हुन्छ।</p>
+  <p>Beginner हरू प्रायः candle color मात्र हेर्छन्। Serious trader price र Volume सँगै पढ्छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 11</span>
+  <div class="mistake-title">Risk-Reward नहेरी trade गर्नु</div>
+  <p>कुनै trade मा Rs. 10 कमाउने सम्भावना छ तर Rs. 30 गुमाउने risk छ भने त्यो राम्रो setup होइन। Beginner ले <strong>“बढ्छ कि घट्छ?”</strong> मात्र सोच्छ। Trader ले <strong>“गलत भए कति loss, सही भए कति reward?”</strong> सोच्छ।</p>
+  <p>Risk-Reward नहेरी trade गर्नु long-term consistency का लागि खतरनाक छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 12</span>
+  <div class="mistake-title">Position Sizing नबुझ्नु</div>
+  <p>एकै trade मा धेरै capital हाल्नु beginner को common mistake हो। Setup राम्रो देखिए पनि market uncertain हुन्छ। ठूलो position ले emotional pressure बढाउँछ।</p>
+  <p>Position Sizing ले तपाईंलाई survive गर्न मद्दत गर्छ। राम्रो trader ले trade idea भन्दा पहिले risk size सोच्दछ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 13</span>
+  <div class="mistake-title">Overtrading गर्नु</div>
+  <p>हरेक दिन trade गर्नुपर्छ भन्ने सोच गलत हो। Market मा हरेक दिन high-quality setup आउँदैन। Beginner ले boredom, excitement, वा loss recover गर्ने चाहनामा धेरै trade गर्छन्।</p>
+  <p>Overtrading ले brokerage cost, tax impact, emotional fatigue, र mistake बढाउँछ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 14</span>
+  <div class="mistake-title">Revenge Trading गर्नु</div>
+  <p>Loss भएपछि तुरुन्त अर्को trade गरेर loss recover गर्न खोज्नु revenge trading हो। यो trading होइन, emotion reaction हो।</p>
+  <p>Loss पछि break लिनु, journal लेख्नु, mistake review गर्नु, अनि clear setup नआएसम्म wait गर्नु राम्रो discipline हो।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 15</span>
+  <div class="mistake-title">News पछि late Entry गर्नु</div>
+  <p>News public भएपछि धेरै पटक price already move भइसकेको हुन्छ। Beginner ले news सुनेर late entry गर्छ, तर smart money ले पहिले नै position लिएको हुन सक्छ।</p>
+  <p>Trader ले news भन्दा price reaction हेर्नुपर्छ। News आएपछि price sustain भयो कि profit booking आयो? Volume कस्तो छ? Support/Resistance कहाँ छ? यी कुरा महत्वपूर्ण छन्।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 16</span>
+  <div class="mistake-title">Low Liquidity Stock मा फस्नु</div>
+  <p>कम Volume भएको stock मा price छिटो बढेको देखिन सक्छ, तर बेच्ने बेला buyer नपाउन सकिन्छ। Beginner लाई paper profit देखिन्छ, तर real exit गाह्रो हुन सक्छ।</p>
+  <p>Liquidity बिना trade लिनु exit risk लिनु हो।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 17</span>
+  <div class="mistake-title">TMS, EDIS, WACC नबुझ्नु</div>
+  <p>Chart सिकेर मात्र पुग्दैन। TMS मा order राख्न, sell पछि EDIS गर्न, WACC update गर्न, settlement बुझ्न, net profit calculate गर्न जान्नुपर्छ।</p>
+  <p>Operational mistake ले राम्रो trade पनि stress मा बदल्न सक्छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 18</span>
+  <div class="mistake-title">Trading Journal नराख्नु</div>
+  <p>Journal बिना trader ले आफ्नो गल्ती देख्दैन। उसलाई लाग्छ market गलत थियो, तर वास्तविक गल्ती Entry, Stop Loss, Position Size, FOMO, वा psychology मा हुन सक्छ।</p>
+  <p>Trading Journal trader को ऐना हो। ऐना नहेर्ने trader आफ्नो कमजोरी देख्दैन।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 19</span>
+  <div class="mistake-title">Bull Market मा आफूलाई expert ठान्नु</div>
+  <p>Bull market मा धेरै share बढ्छन्। Beginner ले केही trade मा profit गरेपछि आफूलाई expert ठान्न सक्छ। तर bull market को profit सधैं skill होइन।</p>
+  <p>Real skill bear market, sideways market, correction, fake breakout, र losing streak मा देखिन्छ।</p>
+</div>
+
+<div class="mistake-item">
+  <span class="mistake-number">MISTAKE 20</span>
+  <div class="mistake-title">Capital Protection बिर्सनु</div>
+  <p>Beginner को ध्यान धेरैजसो <strong>“कति कमाउने?”</strong> मा हुन्छ। Professional trader को पहिलो प्रश्न हुन्छ—<strong>“कति बचाउने?”</strong> Capital बच्यो भने opportunity फेरि आउँछ। Capital गयो भने राम्रो setup आए पनि trade गर्न सकिँदैन।</p>
+  <p>Capital protection trading journey को पहिलो धर्म हो।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Beginner ले सुरुमा यी rules अपनाउनुपर्छ:</p>
+
+<ul>
+  <li>पहिलो लक्ष्य धेरै पैसा कमाउनु होइन, ठूलो गल्ती नगर्नु हो।</li>
+  <li>कुनै पनि trade tips को आधारमा नलिनुहोस्।</li>
+  <li>Entry अघि Stop Loss र Exit plan स्पष्ट गर्नुहोस्।</li>
+  <li>एकै trade मा धेरै capital नराख्नुहोस्।</li>
+  <li>NEPSE index, sector, र stock तीनै कुरा हेर्नुहोस्।</li>
+  <li>Volume बिना Breakout मा विश्वास नगर्नुहोस्।</li>
+  <li>Loss भएपछि revenge trading नगर्नुहोस्।</li>
+  <li>Profit भएपछि overconfidence नलिनुहोस्।</li>
+  <li>Trade र Investment अलग राख्नुहोस्।</li>
+  <li>Trading Journal अनिवार्य राख्नुहोस्।</li>
+  <li>Low liquidity stock मा सावधान हुनुहोस्।</li>
+  <li>TMS मा order राख्दा double-check गर्नुहोस्।</li>
+  <li>Sell पछि EDIS/WACC process verify गर्नुहोस्।</li>
+  <li>News आएपछि price reaction हेर्नुहोस्।</li>
+  <li>Market मा cash मा बस्नु पनि strategy हो।</li>
+  <li>Move छुट्यो भने chase नगर्नुहोस्।</li>
+  <li>गलत trade सानो loss मा काट्नु सिक्नुहोस्।</li>
+  <li>Capital protection लाई profit भन्दा पहिले राख्नुहोस्।</li>
+</ul>
+
+<p>यी rules simple छन्, तर सजिलो छैनन्। सेयर बजारमा कठिन कुरा knowledge पाउनु होइन; knowledge अनुसार discipline राख्नु हो।</p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p>मानौं, सपना नामकी beginner trader सँग Rs. 1,00,000 capital छ। उनले social media मा चर्चा भएको stock Rs. 500 मा किनिन्। उनले Rs. 80,000 एउटै stock मा हालिन्। Stop Loss राखिनन्। Price Rs. 470 आयो। उनले सोचिन्, <strong>“फर्किन्छ होला।”</strong> Price Rs. 440 भयो। उनले average down गरिन्। अब capital को झन् ठूलो भाग त्यही stock मा फस्यो।</p>
+
+<p>केही दिनपछि NEPSE कमजोर भयो। Sector पनि कमजोर भयो। Price Rs. 400 पुग्यो। अब सपना panic मा छिन्। बेच्दा ठूलो loss, hold गर्दा uncertainty। यहाँ गल्ती एउटै थिएन। धेरै गल्ती एकैपटक जोडिएका थिए—tips मा Entry, Position Sizing गल्ती, Stop Loss नहुनु, market/sector नहेर्नु, average down गर्नु, र plan बिना hold गर्नु।</p>
+
+<p>अब disciplined beginner अर्जुनलाई हेरौं। अर्जुनसँग पनि Rs. 1,00,000 capital छ। उसले कुनै पनि trade मा आफ्नो total capital को सानो भाग मात्र risk गर्ने नियम बनाएको छ। उसले stock किन्नुअघि NEPSE index, sector, stock chart, Volume, Support, Resistance, Stop Loss, र Risk-Reward हेर्छ। Setup clear छैन भने trade गर्दैन। Loss आयो भने journal लेख्छ। Profit आयो भने plan अनुसार manage गर्छ।</p>
+
+<p>अर्जुनले सुरुमै ठूलो पैसा नकमाउन सक्छ। तर उसले ठूलो गल्ती पनि गर्दैन। यही फरक लामो समयमा ठूलो हुन्छ।</p>
+
+<div class="chart-placeholder">
+  Chart Placeholder: FOMO Entry → Price Fall → Average Down → Bigger Loss<br>
+  Beginner mistake को flow diagram
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:50%;">Beginner Mistake</th>
+      <th style="width:50%;">Correct Trading Habit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tips मा share किन्नु</td>
+      <td>आफ्नै analysis बाट Entry decide गर्नु</td>
+    </tr>
+    <tr>
+      <td>FOMO मा late Entry</td>
+      <td>Setup पर्खिनु; chase नगर्नु</td>
+    </tr>
+    <tr>
+      <td>Stop Loss नराख्नु</td>
+      <td>Entry अघि Stop Loss define गर्नु</td>
+    </tr>
+    <tr>
+      <td>Loss मा hold; Profit छिटो बेच्नु</td>
+      <td>Loss काट्ने, profit run गर्न दिने discipline</td>
+    </tr>
+    <tr>
+      <td>Plan बिना average down</td>
+      <td>Original thesis valid छ कि छैन verify गर्नु</td>
+    </tr>
+    <tr>
+      <td>Trading र Investing मिसाउनु</td>
+      <td>Entry अघि नै trade/investment label गर्नु</td>
+    </tr>
+    <tr>
+      <td>Index र sector ignore गर्नु</td>
+      <td>NEPSE → Sector → Stock top-down analysis</td>
+    </tr>
+    <tr>
+      <td>Volume ignore</td>
+      <td>Price र Volume सँगै पढ्ने</td>
+    </tr>
+    <tr>
+      <td>Risk-Reward नहेर्नु</td>
+      <td>हरेक trade मा R:R पहिले calculate</td>
+    </tr>
+    <tr>
+      <td>एकै trade मा ठूलो capital</td>
+      <td>Position Sizing, defined risk per trade</td>
+    </tr>
+    <tr>
+      <td>Overtrading, Revenge Trading</td>
+      <td>Quality setup पर्खिनु; break लिनु</td>
+    </tr>
+    <tr>
+      <td>Journal नराख्नु</td>
+      <td>हरेक trade journal मा record गर्नु</td>
+    </tr>
+    <tr>
+      <td>Bull market मा overconfidence</td>
+      <td>Profit लाई luck हो कि skill छुट्याउनु</td>
+    </tr>
+    <tr>
+      <td>Capital protection बिर्सनु</td>
+      <td>Capital बचाउनु पहिलो priority राख्नु</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">कुनै trade लिनुअघि आफैंलाई सोध्नुहोस्:</div>
+  <ul>
+    <li>यो trade मेरो analysis बाट आएको हो कि tips बाट?</li>
+    <li>मैले NEPSE index हेरेको छु?</li>
+    <li>मैले sector condition हेरेको छु?</li>
+    <li>Stock को Trend स्पष्ट छ?</li>
+    <li>Support र Resistance कहाँ छन्?</li>
+    <li>Entry chase जस्तो त छैन?</li>
+    <li>Volume confirmation छ?</li>
+    <li>Stop Loss कहाँ छ?</li>
+    <li>Risk-Reward मिलेको छ?</li>
+    <li>Position size मेरो capital अनुसार safe छ?</li>
+    <li>यो trade गलत भयो भने कति loss हुन्छ?</li>
+    <li>म loss स्वीकार्न तयार छु?</li>
+    <li>यो trade plan अनुसार हो कि FOMO अनुसार?</li>
+    <li>मैले यो trade journal मा लेख्नेछु?</li>
+    <li>Sell भयो भने EDIS/WACC process गर्न सम्झेको छु?</li>
+  </ul>
+</div>
+
+<p>यदि यी प्रश्नको उत्तर स्पष्ट छैन भने trade रोक्नु राम्रो हुन्छ। अस्पष्ट trade भन्दा clear wait राम्रो हुन्छ।</p>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Self-Audit of 20 Mistakes</div>
+  <p>आफ्नो notebook मा 20 गल्तीहरूको list बनाउनुहोस् र प्रत्येक गल्ती अगाडि यी तीनमध्ये एउटा चिन्ह लगाउनुहोस्:</p>
+  <ul>
+    <li>✅ मैले यो गल्ती गरिसकेको छु</li>
+    <li>⚠️ म यो गल्ती गर्न सक्ने जोखिममा छु</li>
+    <li>🛡️ म यो गल्तीबाट अहिले सुरक्षित छु</li>
+  </ul>
+  <p style="margin-bottom:0;">यसले तपाईंलाई आफ्नो कमजोरी देखाउँछ।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: Past Trade Review</div>
+  <p>आफ्नो पुरानो 3 वटा trade review गर्नुहोस्। प्रत्येक trade का लागि लेख्नुहोस्:</p>
+  <ul>
+    <li>Entry को कारण के थियो?</li>
+    <li>Stop Loss थियो कि थिएन?</li>
+    <li>Position size कति थियो?</li>
+    <li>NEPSE index र sector हेरेको थियो?</li>
+    <li>Volume हेरेको थियो?</li>
+    <li>Trade profit भयो कि loss?</li>
+    <li>Profit/loss भन्दा बढी, decision सही थियो कि गलत?</li>
+    <li>त्यहाँ माथिका 20 गल्तीमध्ये कुन गल्ती भएको थियो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Build Your Protection Rules</div>
+  <p>आजबाट आफ्नो लागि 5 वटा beginner protection rules लेख्नुहोस्। उदाहरण:</p>
+  <ul>
+    <li>Stop Loss बिना trade गर्दिनँ।</li>
+    <li>Tips मा share किन्दिनँ।</li>
+    <li>एकै trade मा धेरै capital हाल्दिनँ।</li>
+    <li>NEPSE + Sector + Stock नहेरी Entry गर्दिनँ।</li>
+    <li>हरेक trade journal मा लेख्छु।</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: FOMO Recognition Practice</div>
+  <p>कुनै एउटा stock को chart खोल्नुहोस् जुन पछिल्लो समयमा धेरै बढेको छ। अब हेर्नुहोस्:</p>
+  <ul>
+    <li>के यो FOMO entry zone मा छ?</li>
+    <li>Resistance नजिक छ?</li>
+    <li>Volume climax जस्तो छ?</li>
+    <li>Risk-Reward अझै मिल्छ?</li>
+    <li>तपाईं trade लिन चाहनुहुन्छ कि wait गर्नुहुन्छ?</li>
+  </ul>
+  <p style="margin-bottom:0;">यो exercise को उद्देश्य Entry गर्नु होइन, FOMO लाई चिन्नु हो।</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Beginner हुनु समस्या होइन। Beginner भएर आफूलाई expert ठान्नु समस्या हो। बजारले नयाँ मानिसलाई सधैं मौका दिन्छ, तर लापरवाह मानिसलाई लामो समय टिक्न दिँदैन।</p>
+  <p>सुरुमा तपाईंको सबैभन्दा ठूलो achievement धेरै profit कमाउनु होइन। सबैभन्दा ठूलो achievement हो—capital सुरक्षित राख्दै सिक्नु। यदि तपाईंले पहिलो वर्षमा ठूलो गल्ती नगरी, journal राखेर, risk control गरेर, र market behavior बुझेर टिक्नुभयो भने तपाईं धेरै trader भन्दा अगाडि हुनुहुन्छ।</p>
+  <p>गल्तीबाट डराउनु पर्दैन। तर एउटै गल्ती दोहोर्‍याउनु हुँदैन। Trading Journal, checklist, Stop Loss, Position Sizing, र patience यी सबै तपाईंलाई गल्ती दोहोरिन नदिन बनाइएका tools हुन्।</p>
+  <p style="margin-bottom:0;">Market मा पैसा कमाउनुभन्दा पहिले market मा बाँच्न सिक्नुहोस्। बाँचेपछि मात्र skill बढ्छ, confidence बढ्छ, र opportunity प्रयोग गर्न सकिन्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 6 Summary</div>
+  <p>Beginner ले सुरुमा गर्ने गल्तीहरू सामान्य देखिए पनि trading journey मा गहिरो असर पार्छन्। Tips मा share किन्नु, FOMO entry, Stop Loss नराख्नु, loss hold गर्नु, profit छिटो बेच्नु, गलत average down, Trading र Investing मिसाउनु, NEPSE index/sector नहेर्नु, Volume ignore गर्नु, Risk-Reward नहेर्नु, Position Sizing नबुझ्नु, overtrading, revenge trading, news पछि late entry, low liquidity stock मा फस्नु, TMS/EDIS/WACC नबुझ्नु, journal नराख्नु, bull market मा overconfidence, र capital protection बिर्सनु beginner का मुख्य गल्ती हुन्।</p>
+  <p>यी गल्तीबाट बच्ने उपाय simple छ, तर discipline चाहिन्छ। Trade अघि plan बनाउनु, Stop Loss राख्नु, risk define गर्नु, market र sector हेर्नु, Volume पढ्नु, Position Size मिलाउनु, journal राख्नु, र emotional decision बाट बच्नु आवश्यक छ।</p>
+  <p>NEPSE मा practical system पनि बुझ्नुपर्छ। Broker, TMS, Demat, MeroShare, EDIS, WACC, fee, tax, settlement, र official rule verify नगर्दा operational mistake हुन सक्छ। Trading मा system clarity पनि Risk Management हो।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Beginner को लक्ष्य सुरुमा धेरै कमाउनु होइन, ठूलो गल्ती नगरी सिक्नु हो। Capital बच्यो भने बजारमा मौका सधैं आउँछ।</p>
+</div>
+
+<div class="closing-quote">
+  सेयर बजारमा सफल यात्रा ठूलो नाफाबाट होइन,<br>
+  सुरुका साना गल्तीहरू समयमै चिन्न र रोक्न सक्ने अनुशासनबाट सुरु हुन्छ।
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 80: Full Trading Case Study — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+.sub-heading { font-family: 'Roboto', sans-serif; font-size: 17px; font-weight: 700; color: #111; margin: 26px 0 12px; }
+.sub-heading2 { font-family: 'Roboto', sans-serif; font-size: 15.5px; font-weight: 700; color: #111; margin: 20px 0 10px; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+blockquote { background: #fffdf5; border-left: 4px solid #c9b97a; border-radius: 0 4px 4px 0; padding: 16px 22px; margin: 20px 0; font-size: 15px; font-style: italic; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul, ol { margin: 14px 0 14px 28px; }
+ul li, ol li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 13.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "\2610"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "\1F4CC"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 25px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 20px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li, ol li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 80</div>
+  <h1 class="chapter-title">Full Trading Case Study</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>अहिलेसम्मका अध्यायहरूमा हामीले प्राविधिक विश्लेषण र ट्रेडिङका धेरै महत्वपूर्ण र शक्तिशाली अवधारणाहरू (Concepts) अलग-अलग रूपमा गहिराइबाट सिक्यौँ। हामीले बुझ्यौँ:</p>
+<ul>
+  <li>बजारको दिशा देखाउने ट्रेन्ड (Trend)</li>
+  <li>माग र आपूर्ति कडा हुने बिन्दुहरू&mdash;सपोर्ट (Support) र रजिcorporateस्टेन्स (Resistance)</li>
+  <li>मूल्यको विस्फोट अर्थात् ब्रेकआउट (Breakout)</li>
+  <li>संस्थागत लगानीकर्ताको पदचाप देखाउने भोल्युम (Volume)</li>
+  <li>सावाँ पूँजी रक्षा गर्ने जोखिम व्यवस्थापन (Risk Management)</li>
+  <li>समग्र बजारको वातावरण (Market Environment)</li>
+  <li>र दिमागलाई स्थिर राख्ने ट्रेडर मनोविज्ञान (Psychology)</li>
+</ul>
+
+<p>तर यी सबै कडा सिद्धान्तहरू पढिसकेपछि पनि हरेक नयाँ ट्रेडरको मनमा एउटा कडा र अल्झाउने प्रश्न अझै बाँकी नै रहन्छ:</p>
+
+<blockquote><strong>&ldquo;यी सबै अलग-अलग सिद्धान्तहरूलाई मैले वास्तविक बजारमा एउटै कडा निर्णय प्रणालीमा कसरी जोड्ने?&rdquo;</strong></blockquote>
+
+<p>धेरैजसो सिकारु लगानीकर्ता (Beginner) हरूको मुख्य समस्या यहीँ निर हुन्छ। उनीहरूले किताब पढेर वा भिडियो हेरेर प्रत्येक कन्सेप्ट त राम्रोसँग बुझ्छन्, तर जब वास्तविक बजारको प्रत्यक्ष चार्ट (Live Chart) अगाडि आउँछ, तब उनीहरू सबै कुरा मिक्स भएर अलमलमा पर्छन्। उनीहरूलाई ब्रेकआउट के हो भन्ने थाहा छ, स्टप लस कहाँ राख्नुपर्छ भन्ने पनि कण्ठ छ। तर नेप्सेको लाइभ मार्केटमा ट्रेड लिने बेला <strong>&ldquo;अब ठ्याक्कै कुन चरणबाट सुरु गरेर कसरी निर्णय लिने?&rdquo;</strong> भन्ने कडा अलमलताले उनीहरूलाई सताउँछ।</p>
+
+<p>त्यसैले, यो अध्याय कुनै नयाँ सिद्धान्त सिकाउनका लागि होइन। यस अध्यायमा हामी यी सबै छरिएका प्राविधिक टुक्राहरूलाई एक ठाउँमा जोडेर एउटा व्यावसायिक र पूर्ण ट्रेडिङ प्रक्रिया (<strong>Full Trading Process</strong>) को सन्तुलित केस स्टडी हेर्नेछौँ, ताकि तपाईं बजारमा एउटा परिपक्व र व्यवस्थित निर्णय लिन सक्ने बन्नुहोस्।</p>
+
+<div class="visual-block">
+  <div class="visual-title">छरिएका Concept &#8594; एउटै निर्णय प्रणाली</div>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="320" fill="#fffdf5"/>
+    <text x="410" y="42" text-anchor="middle" font-family="Roboto, sans-serif" font-size="27" font-weight="700" fill="#111">टुक्रा-टुक्रा ज्ञान &#8594; एउटा Process</text>
+    <rect x="40" y="64" width="150" height="34" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/><text x="115" y="86" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#1a56cc">Trend</text>
+    <rect x="40" y="106" width="150" height="34" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/><text x="115" y="128" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#1a56cc">Support/Resist.</text>
+    <rect x="40" y="148" width="150" height="34" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/><text x="115" y="170" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#1a56cc">Breakout</text>
+    <rect x="40" y="190" width="150" height="34" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/><text x="115" y="212" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#1a56cc">Volume</text>
+    <rect x="40" y="232" width="150" height="34" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/><text x="115" y="254" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#1a56cc">Risk Mgmt</text>
+    <rect x="40" y="274" width="150" height="34" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/><text x="115" y="296" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#1a56cc">Psychology</text>
+    <path d="M 200 180 Q 320 180 360 180" fill="none" stroke="#c9b97a" stroke-width="2.5"/>
+    <polygon points="370,180 358,174 358,186" fill="#c9b97a"/>
+    <rect x="390" y="120" width="390" height="120" rx="14" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <text x="585" y="160" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#2e7d32">Full Trading Process</text>
+    <text x="585" y="190" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">सबै टुक्रा एउटै मालामा</text>
+    <text x="585" y="216" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">&#8594; परिपक्व, व्यवस्थित निर्णय</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले यो अन्तिम अध्यायको मुख्य उद्देश्य देखाउँछ। बायाँ — अहिलेसम्म सिकेका सबै प्राविधिक अवधारणाहरू (Trend, Support/Resistance, Breakout, Volume, Risk Management, Psychology) अहिले छरिएका टुक्रा-टुक्रा रूपमा छन्। धेरै Beginner को समस्या यही हो — प्रत्येक concept अलग-अलग बुझ्छन्, तर live chart अगाडि सबै मिक्स भएर अलमलमा पर्छन्, "कुन चरणबाट सुरु गर्ने?" थाहा हुँदैन। दायाँ — यो अध्यायले ती सबै छरिएका टुक्रालाई एउटै मालामा उनेर एउटा <strong>Full Trading Process</strong> बनाउँछ। मुख्य पाठ — यो chapter कुनै नयाँ सिद्धान्त होइन; यो सबै सिकेका कुरालाई एउटै व्यावसायिक निर्णय प्रणालीमा जोडेर तपाईंलाई परिपक्व र व्यवस्थित ट्रेडर बनाउने पूर्ण केस स्टडी हो।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>ट्रेडिङको संसारमा एउटा कडा सत्य जहिले पनि मनन गर्नुपर्छ: <strong>ट्रेडिङ कुनै एउटा एक्लो कन्सेप्ट वा जादुई सूचक (Indicator) विल्कुलै होइन, ट्रेडिङ त एक कडा र क्रमिक प्रक्रिया (Process) हो।</strong></p>
+
+<p>बजारमा 90% भन्दा बढी असफल हुने मानिसहरू केवल एउटै जादुई रणनीतिको सेटअप (Setup) सिकेर रातारात बजारबाट धनी हुन खोज्छन्। तर बजारका वास्तविक व्यावसायिक ट्रेडर (Professional Trader) हरूले कहिल्यै पनि कुनै एउटा मात्र इन्डिकेटर वा हल्लाका भरमा पैसा फ्याक्दैनन्। उनीहरूले निर्णय गर्दा:</p>
+<ol>
+  <li>समग्र बजारको अवस्था (Market)</li>
+  <li>बलियो समूह (Sector)</li>
+  <li>उत्कृष्ट कम्पनी (Stock)</li>
+  <li>उचित खरिद बिन्दु (Entry)</li>
+  <li>गणितीय जोखिम (Risk)</li>
+  <li>र निस्कने सुरक्षित योजना (Exit)</li>
+</ol>
+<p>यी सबै कडा चरणहरूलाई एउटै बलियो साङ्लोमा बाँधेर मात्र आफ्नो पूँजी बजारमा उतार्छन्। यो अध्यायले तपाईंलाई त्यही पूर्ण र व्यावसायिक तस्वीर (The Complete Picture) छर्लङ्ग पार्नेछ, जसले तपाईंलाई एउटा अन्धाधुन्ध अनुमान लगाउने खेलाडीबाट रूपान्तरण गरेर एक प्रणालीबद्ध व्यावसायिक ट्रेडर बनाउनेछ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<div class="sub-heading">सफल ट्रेडका 6 अनिवार्य चरणहरू (The 6 Pillars of a Professional Trade)</div>
+<p>बजारमा लिइने कुनै पनि व्यवस्थित र व्यावसायिक ट्रेड सधैँ यी 6 वटा मुख्य चरणहरू पार गरेर मात्र अगाडि बढ्नुपर्छ। यदि तपाईंले यी मध्ये एउटा मात्र चरण पनि स्किप गर्नुभयो भने, तपाईंको ट्रेडिङ प्राविधिक विश्लेषण नभएर सिधै एउटा अन्धधुन्ध जुवा (Gambling) मा परिणत हुनेछ:</p>
+<ul>
+  <li><strong>Step 1: Market Analysis (समग्र बजारको दिशा)</strong> &mdash; नेप्से सूचकको मुख्य ट्रेन्ड कता छ भनी पहिचान गर्ने।</li>
+  <li><strong>Step 2: Sector Analysis (बलियो समूहको छनोट)</strong> &mdash; बजारका विभिन्न क्षेत्रहरू मध्ये कुन क्षेत्रमा स्मार्ट मनी (Smart Money) को आकर्षण छ भनी हेर्ने।</li>
+  <li><strong>Step 3: Stock Selection (उत्कृष्ट स्टकको छनोट)</strong> &mdash; सोही बलियो क्षेत्र भित्रबाट सबैभन्दा कडा प्राविधिक संरचना भएको कम्पनी छान्ने।</li>
+  <li><strong>Step 4: Trade Planning (ट्रेडको कडा योजना)</strong> &mdash; चार्टमा स्पष्ट सेटअप पहिचान गरी खरिद, स्टप लस र टार्गेटको बिन्दु पहिल्यै तय गर्ने।</li>
+  <li><strong>Step 5: Execution (बिनाभावना योजनाको कार्यान्वयन)</strong> &mdash; बजारमा आफ्नो नियम म्याच हुनासाथ बिनाकुनै डर वा लोभ अर्डर प्रविष्ट गर्ने।</li>
+  <li><strong>Step 6: Review (ट्रेडको कडा जर्नल समीक्षा)</strong> &mdash; ट्रेड सकिएपछि आफ्नो गल्ती र सफलताको प्राविधिक मूल्यांकन गर्ने।</li>
+</ul>
+
+<div class="visual-block">
+  <div class="visual-title">सफल ट्रेडका 6 खम्बा — एउटा पनि छुटे जुवा</div>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="320" fill="#fffdf5"/>
+    <text x="410" y="42" text-anchor="middle" font-family="Roboto, sans-serif" font-size="27" font-weight="700" fill="#111">6 चरण क्रमैसँग — तब मात्र Trade</text>
+    <rect x="60" y="64" width="700" height="40" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.4"/>
+    <circle cx="90" cy="84" r="15" fill="#2962ff"/><text x="90" y="90" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">1</text>
+    <text x="120" y="90" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#1a56cc">Market — नेप्से ट्रेन्ड कता?</text>
+    <rect x="60" y="106" width="700" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.4"/>
+    <circle cx="90" cy="126" r="15" fill="#26a69a"/><text x="90" y="132" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">2</text>
+    <text x="120" y="132" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Sector — Smart Money कुन समूहमा?</text>
+    <rect x="60" y="148" width="700" height="40" rx="8" fill="#fff8dc" stroke="#c8a800" stroke-width="1.4"/>
+    <circle cx="90" cy="168" r="15" fill="#c8a800"/><text x="90" y="174" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">3</text>
+    <text x="120" y="174" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c8a800">Stock — सबैभन्दा कडा कम्पनी छान्ने</text>
+    <rect x="60" y="190" width="700" height="40" rx="8" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.4"/>
+    <circle cx="90" cy="210" r="15" fill="#8b5cf6"/><text x="90" y="216" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">4</text>
+    <text x="120" y="216" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#6d28d9">Trade Plan — Entry/SL/Target तय</text>
+    <rect x="60" y="232" width="700" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.4"/>
+    <circle cx="90" cy="252" r="15" fill="#26a69a"/><text x="90" y="258" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">5</text>
+    <text x="120" y="258" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">Execution — बिनाभावना अर्डर</text>
+    <rect x="60" y="274" width="700" height="40" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+    <circle cx="90" cy="294" r="15" fill="#ef5350"/><text x="90" y="300" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff">6</text>
+    <text x="120" y="300" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c62828">Review — Journal कडा समीक्षा</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले व्यावसायिक ट्रेडका 6 अनिवार्य खम्बा क्रमैसँग देखाउँछ। <strong>1. Market</strong>: सबैभन्दा पहिले नेप्से सूचकको मुख्य ट्रेन्ड कता छ पहिचान गर्ने। <strong>2. Sector</strong>: कुन समूहमा Smart Money को आकर्षण/भोल्युम छ हेर्ने। <strong>3. Stock</strong>: सोही बलियो समूहभित्रबाट सबैभन्दा कडा प्राविधिक संरचना भएको कम्पनी छान्ने। <strong>4. Trade Plan</strong>: स्पष्ट सेटअप पहिचान गरी Entry, Stop Loss, Target पहिल्यै तय गर्ने। <strong>5. Execution</strong>: नियम म्याच हुनासाथ बिनाडर/लोभ अर्डर प्रविष्ट गर्ने। <strong>6. Review</strong>: ट्रेड सकिएपछि Journal मा गल्ती/सफलताको कडा समीक्षा। मुख्य पाठ — यी 6 चरण क्रमैसँग पार गरेर मात्र ट्रेड लिनुपर्छ; एउटा मात्र चरण स्किप गरे ट्रेडिङ प्राविधिक विश्लेषण नभई सिधै जुवा (Gambling) बन्छ।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<div class="sub-heading">Step 1: Market Analysis (Market First Rule)</div>
+<p>ट्रेडिङको पहिलो र आधारभूत नियम हो&mdash;<strong>पहिले समग्र बजारको दिशा हेर्नुहोस्।</strong> नेपालको सन्दर्भमा सबैभन्दा पहिले हामीले नेप्से (NEPSE) सूचकको दैनिक चार्ट विश्लेषण गर्नुपर्छ र आफैलाई यो कडा प्रश्न सोध्नुपर्छ:</p>
+
+<blockquote><strong>&ldquo;हाल समग्र नेप्से बजार बुलिस (Bullish) छ, साइडवेज (Sideways) छ कि बियरिस (Bearish) छ?&rdquo;</strong></blockquote>
+
+<p>यदि समग्र नेप्से सूचक नै कडा बियरिस ट्रेन्डमा छ र निरन्तर ओरालो लागिरहेको छ भने, तपाईंले जतिसुकै उत्कृष्ट प्राविधिक चार्ट भएको स्टक छाने पनि बजारको भारी सेलिङ प्रेसरका कारण त्यो स्टक असफल हुने सम्भावना अत्यधिक कडा हुन्छ। त्यसैले जहिले पनि बजारको मुख्य बहाव अनुकूल चल्न सिक्नुहोस्।</p>
+
+<div class="sub-heading">Step 2: Sector Analysis (सियर क्षेत्रको शक्ति मापन)</div>
+<p>मानौँ, तपाईंको पहिलो चरणको विश्लेषणबाट समग्र नेप्से बजार बुलिस वा बलियो अवस्थामा रहेको पुष्टि भयो। अब दोस्रो चरणमा हामी यो कडा प्रश्न सोध्छौँ: <strong>&ldquo;अहिले बजारका धेरै क्षेत्रहरू मध्ये कुन विशेष सेक्टर सबैभन्दा बढी बलियो देखिन्छ?&rdquo;</strong></p>
+<p>नेप्सेमा विभिन्न उप-सूचकहरू छन्, जस्तै:</p>
+<ul>
+  <li>वाणिज्य बैंक (Banking)</li>
+  <li>जलविद्युत (Hydropower)</li>
+  <li>निर्जीवन र जीवन बीमा (Insurance)</li>
+  <li>लघुवित्त (Microfinance)</li>
+</ul>
+<p>याद राख्नुहोस्, बुलिस बजारमा पनि सबै सेक्टरहरू एकै समयमा र एउटै गतिमा कहिल्यै पनि कुद्दैनन्। स्मार्ट मनी र संस्थागत खरिदकर्ताहरूको पूँजी जहिले पनि चक्रिय रूपमा (Sector Rotation) एउटा बलियो सेक्टरबाट अर्को सेक्टरमा सर्ने गर्छ। त्यसैले, हामीले हाम्रो सावाँ पैसा त्यही सेक्टरमा मात्र लगाउनुपर्छ जहाँ भोल्युम र ट्रेडरहरूको आकर्षण (Market Interest) सबैभन्दा उच्च छ।</p>
+
+<div class="sub-heading">Step 3: Stock Selection (Relative Strength को पहिचान)</div>
+<p>आफ्नो रोजाइको बलियो सेक्टर (जस्तै: हाइड्रोपावर वा माइक्रोफाइनान्स) निश्चित गरिसकेपछि, तेस्रो चरणमा हामी त्यो सेक्टर भित्र छिरेर ट्रेडिङका लागि उत्कृष्ट स्टक छनोट गर्छौँ। यस समयमा चार्टमा यी 4 वटा कडा प्राविधिक पक्षहरू जाँच गर्नुपर्छ:</p>
+<ul>
+  <li><strong>Relative Strength (सापेक्षिक शक्ति):</strong> सेक्टर इन्डेक्स घट्दा पनि कुन स्टक घटेको छैन वा सेक्टर बढ्दा कुन स्टक सबैभन्दा तीव्र गतिमा माथि गइरहेको छ?</li>
+  <li><strong>Volume (कारोबार रकम):</strong> कुन स्टकमा पछिल्ला दिनहरूमा अस्वाभाविक रूपमा ठूलो भोल्युम आइरहेको छ?</li>
+  <li><strong>Structure (चार्टको बनोट):</strong> कुन कम्पनीको चार्टमा स्पष्ट हायर हाई र हायर लो को बुलिस संरचना बनेको छ?</li>
+  <li><strong>Liquidity (तरलता):</strong> के सो स्टकमा दैनिक पर्याप्त मात्रामा सेयर किनबेच हुन्छ, ताकि मलाई चाहिएको बेला सजिलै छिर्न र निस्कन सकियोस्?</li>
+</ul>
+<p>हाम्रो एकमात्र उद्देश्य हुन्छ: <strong>&ldquo;यस बलियो सेक्टर भित्रको सबैभन्दा लिडर र प्राविधिक रूपमा कडा स्टक कुन हो?&rdquo;</strong> त्यसैलाई मात्र आफ्नो सूचीमा राख्ने।</p>
+
+<div class="visual-block">
+  <div class="visual-title">Top-Down Approach — Market &#8594; Sector &#8594; Stock (Chart 80.1)</div>
+  <svg viewBox="0 0 820 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="330" fill="#fffdf5"/>
+    <text x="410" y="42" text-anchor="middle" font-family="Roboto, sans-serif" font-size="27" font-weight="700" fill="#111">माथिबाट तल — फनेल जस्तो फिल्टर</text>
+    <polygon points="110,70 710,70 600,140 220,140" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.8"/>
+    <text x="410" y="112" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#1a56cc">1. MARKET (NEPSE) — बुलिस छ?</text>
+    <polygon points="220,150 600,150 520,220 300,220" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+    <text x="410" y="192" text-anchor="middle" font-family="Roboto, sans-serif" font-size="18" font-weight="700" fill="#2e7d32">2. SECTOR — कुन समूह बलियो?</text>
+    <polygon points="300,230 520,230 470,300 350,300" fill="#fff8dc" stroke="#c8a800" stroke-width="1.8"/>
+    <text x="410" y="272" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#c8a800">3. STOCK — Leader</text>
+    <line x1="760" y1="90" x2="760" y2="280" stroke="#c9b97a" stroke-width="2"/>
+    <polygon points="760,288 754,276 766,276" fill="#c9b97a"/>
+    <text x="792" y="190" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555" transform="rotate(90 792 190)">संकुचित हुँदै</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले व्यावसायिक ट्रेडरको "Top-Down Approach" देखाउँछ (Chart 80.1) — फनेल जस्तो माथिबाट तल संकुचित हुने फिल्टर। सबैभन्दा माथि चौडा भाग — <strong>1. MARKET</strong>: पहिले सिङ्गो नेप्से सूचक बुलिस छ कि हेर्ने; बजार नै बियरिस भए कुनै स्टक छाने पनि असफल हुन्छ। बीच — <strong>2. SECTOR</strong>: बुलिस बजारभित्र पनि सबै समूह सँगै कुद्दैनन्; Smart Money/Volume कुन सेक्टरमा छ छान्ने (Sector Rotation)। तल साँघुरो भाग — <strong>3. STOCK</strong>: सोही बलियो सेक्टरभित्रको सबैभन्दा Leader (Relative Strength, Volume, Structure, Liquidity मिलेको) एकल स्टक छान्ने। मुख्य पाठ — पैसा सिधै स्टकबाट होइन, माथिबाट तल (Market→Sector→Stock) प्रवाह हुने कडा क्रममा फिल्टर गरेर मात्र लगाउनुपर्छ। नेप्सेका 90% मानिस यो उल्टो गर्छन् — हल्ला सुनेर सिधै स्टक किन्छन्, त्यसैले फस्छन्।
+</div>
+
+<div class="sub-heading">Step 4: Setup Identification (स्पष्ट सेटअपको खोजी)</div>
+<p>उत्कृष्ट कम्पनी छानिसकेपछि हामी सिधै बजारमा खरिद अर्डर हाल्दैनौँ। हामी चार्टमा एउटा स्पष्ट प्राविधिक आकृति वा <strong>Setup</strong> बन्ने प्रतीक्षा गर्छौँ। व्यावसायिक ट्रेडिङमा प्रयोग हुने केही प्रमुख सेटअपहरू यस्ता हुन्छन्:</p>
+<ul>
+  <li><strong>Base Breakout Setup:</strong> मूल्य लामो समयसम्म एउटा साँघुरो दायरामा बसेर च्यानल तोडी माथि जानु।</li>
+  <li><strong>Pullback Setup:</strong> बलियो अपट्रेन्डमा रहेको स्टक थोरै घटेर आफ्नो महत्वपूर्ण सपोर्ट वा मुभिङ एभरेज नजिक आउनु।</li>
+</ul>
+<p>याद राख्नुहोस्, सेटअप चार्टमा स्पष्ट रूपमा आँखाले देखिने र प्रमाणले पुष्टि हुने हुनुपर्छ, तपाईंको मनको कल्पना वा आशाको भरमा सेटअप जबरजस्ती बनाउनु विल्कुलै गलत हो।</p>
+
+<div class="sub-heading">Step 5: Entry Planning (पूर्वनिर्धारित खरिद योजना)</div>
+<p>चार्टमा सेटअप परिपक्व हुँदै गर्दा, ट्रेड लिनु भन्दा अगाडि नै एउटा ट्रेडरको दिमागमा यी 3 वटा मुख्य बिन्दुहरू गणितीय रूपमा स्पष्ट रूपमा तय भइसकेको हुनुपर्छ:</p>
+<ol>
+  <li><strong>मेरो निश्चित खरिद विन्दु (Entry Point) कहाँ हो?</strong></li>
+  <li><strong>यदि यो ट्रेड गलत साबित भएमा मेरो स्टप लस (Stop Loss) को बिन्दु कहाँ हो?</strong></li>
+  <li><strong>मेरो अपेक्षित नाफा सुरक्षित गर्ने लक्ष्य (Target Point) कहाँ हो?</strong></li>
+</ol>
+<p>व्यावसायिक ट्रेडिङको कडा नियम नै यही हो&mdash;<strong>ट्रेड लिइसकेपछि सोच्ने होइन, ट्रेड लिनु भन्दा अगाडि नै सबै योजना बनाएर बस्ने हो।</strong></p>
+
+<div class="sub-heading">Step 6: Risk Calculation (जोखिमको गणितीय मापन)</div>
+<p>ट्रेडमा प्रवेश गर्नु अघि प्रति सेयर कति रुपैयाँ जोखिम छ, त्यसको सीधा प्राविधिक गणना गर्नुपर्छ। आउनुहोस् यसलाई सरल गणितीय सुत्रबाट बुझौँ:</p>
+<p>मानौँ, तपाईंले छानिएको स्टकको:</p>
+<ul>
+  <li>खरिद बिन्दु (Entry) = <strong>रु. 500</strong></li>
+  <li>प्राविधिक स्टप लस (Stop Loss) = <strong>रु. 480</strong></li>
+</ul>
+<p>यहाँ तपाईंको प्रति सेयर सिधै जोखिम (Risk Per Share) रु. 500 &minus; रु. 480 = <strong>रु. 20</strong> भयो। यदि तपाईं आफ्नो कुल ट्रेडिङ पूँजीको एउटा ट्रेडमा अधिकतम रु. 2,000 मात्र जोखिम लिन चाहनुहुन्छ भने, यही गणितका आधारमा तपाईंको सुरक्षित पोजिसन साइज (Position Size) रु. 2,000 &divide; रु. 20 = <strong>100 कित्ता</strong> निर्धारण हुन्छ।</p>
+
+<div class="visual-block">
+  <div class="visual-title">Risk Management Model — कति कित्ता? गणितले तय (Chart 80.3)</div>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="320" fill="#fffdf5"/>
+    <text x="410" y="42" text-anchor="middle" font-family="Roboto, sans-serif" font-size="27" font-weight="700" fill="#111">लोभले होइन — गणितले कित्ता तय गर्छ</text>
+    <rect x="50" y="64" width="340" height="50" rx="9" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.4"/>
+    <text x="220" y="86" text-anchor="middle" font-family="sans-serif" font-size="15.5" fill="#111">Entry रु.500, Stop Loss रु.480</text>
+    <text x="220" y="106" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1a56cc">Risk/Share = रु.20</text>
+    <rect x="430" y="64" width="340" height="50" rx="9" fill="#fff8dc" stroke="#c8a800" stroke-width="1.4"/>
+    <text x="600" y="86" text-anchor="middle" font-family="sans-serif" font-size="15.5" fill="#111">अधिकतम ट्रेड जोखिम</text>
+    <text x="600" y="106" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#c8a800">रु.2,000</text>
+    <line x1="410" y1="120" x2="410" y2="150" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="220" y1="120" x2="220" y2="135" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="600" y1="120" x2="600" y2="135" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="220" y1="135" x2="600" y2="135" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="410" y1="135" x2="410" y2="150" stroke="#c9b97a" stroke-width="2"/>
+    <rect x="210" y="152" width="400" height="60" rx="10" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+    <text x="410" y="178" text-anchor="middle" font-family="sans-serif" font-size="15.5" fill="#111">रु.2,000 &divide; रु.20 =</text>
+    <text x="410" y="200" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#2e7d32">100 कित्ता (Position Size)</text>
+    <rect x="150" y="240" width="520" height="56" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="1.4"/>
+    <text x="410" y="266" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c8a800">कति कित्ता किन्ने — लोभले होइन</text>
+    <text x="410" y="288" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">जोखिम व्यवस्थापनको गणितले तय गर्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Position Sizing Model देखाउँछ (Chart 80.3) — कति कित्ता किन्ने भन्ने वैज्ञानिक गणना। बायाँ माथि — Entry रु.500 र Stop Loss रु.480 भएमा प्रति सेयर जोखिम (Risk/Share) = रु.500 &minus; रु.480 = रु.20। दायाँ माथि — तपाईंले एक ट्रेडमा अधिकतम रु.2,000 मात्र जोखिम लिने नियम बनाउनुभयो। बीच — सुरक्षित कित्ता संख्या = कुल ट्रेड जोखिम &divide; प्रति सेयर जोखिम = रु.2,000 &divide; रु.20 = <strong>100 कित्ता</strong>। मुख्य पाठ — बजारमा कति कित्ता किन्ने भन्ने कुरा तपाईंको मनको लोभ ("धेरै किनूँ, धेरै कमाउँला") ले होइन, यो कडा गणितीय जोखिम व्यवस्थापनको नियमले तय गर्नुपर्छ। यही सुत्रले हरेक ट्रेडमा तपाईंको घाटालाई पूर्वनिर्धारित सानो सीमाभित्र राख्छ र सावाँ पूँजीलाई सुरक्षित बनाउँछ।
+</div>
+
+<p>तपाईंले बजारमा कति कित्ता किन्ने भन्ने कुरा तपाईंको लोभले होइन, तपाईंको यो गणितीय जोखिम व्यवस्थापनको नियमले तय गर्नुपर्छ।</p>
+
+<div class="sub-heading">Step 7: Trade Execution (बिनाभावना अर्डर कार्यान्वयन)</div>
+<p>जब चार्टमा मूल्यले तपाईंको पूर्वनिर्धारित खरिद विन्दुलाई छुन्छ र भोल्युमले पुष्टि गर्छ, तब बिनाकुनै डर, अलमलता वा भावना तुरुन्तै आफ्नो ट्रेड एक्जिक्युट (Execute) गर्नुहोस्। यदि बजारमा तपाईंको सेटअप बनेको छैन भने कम्प्युटर बन्द गरेर बस्नुहोस्, तर नियम बाहिर गएर कहिल्यै पनि जबरजस्ती ट्रेड नलिनुहोस्।</p>
+
+<div class="sub-heading">Step 8: Trade Management (ट्रेडको कुशल व्यवस्थापन)</div>
+<p>बजारमा सेयर खरिद गरिसकेपछि अब मनमा कडा डर पालेर बस्ने होइन। बजारको चाल अनुसार आफ्नो ट्रेडलाई पूर्वनिर्धारित योजना अनुसार व्यवस्थापन गर्दै अगाडि बढ्नुपर्छ:</p>
+<ul>
+  <li>मूल्य माथि जान थालेपछि आफ्नो जोखिम कम गर्न स्टप लसलाई माथि सार्ने (<strong>Trailing Stop Loss</strong>)।</li>
+  <li>पहिलो टार्गेट क्षेत्रमा पुगेपछि आफ्नो केही प्रतिशत नाफा बुक गर्ने (<strong>Partial Profit Booking</strong>)।</li>
+</ul>
+<p>ट्रेड म्यानेजमेन्ट जहिले पनि बजारको गति र तपाईंको लिखित नियम अनुसार चल्नुपर्छ, तपाईंको क्षणिक मानसिक आवेग अनुसार होइन।</p>
+
+<div class="sub-heading">Step 9: Exit (सुरक्षित र अनुशासित निकास)</div>
+<p>ट्रेडिङमा भनाइ नै छ&mdash;<strong>"खरिदले तपाईंलाई ट्रेडर बनाउन सक्छ, तर केवल सही एक्जिट (Exit) ले मात्र तपाईंलाई नाफादार र सफल ट्रेडर बनाउँछ।"</strong> बजारमा धेरैजसो नयाँ ट्रेडरहरू निकै उत्कृष्ट ठाउँमा खरिद गरेर नाफामा गए पनि कडा लोभका कारण सही समयमा निस्कन नसक्दा अन्ततः ठूलो घाटामा पर्छन्। त्यसैले, चार्टले आफ्नो एक्जिट संकेत देउनासाथ वा टार्गेट हिट हुनासाथ बजारबाट अनुशासित रूपमा बाहिरिनुहोस्।</p>
+
+<div class="sub-heading">Step 10: Review (ट्रेदिङ जर्नलको कडा समीक्षा)</div>
+<p>ट्रेड पूर्ण रूपमा बन्द भइसकेपछि (चाहे नाफामा होस् वा घाटामा), आफ्नो कम्प्युटर स्क्रिन बन्द गरेर भाग्ने होइन। शान्त दिमागले आफ्नो ट्रेदिङ जर्नल (Trading Journal) खोल्नुहोस् र यी प्रश्नहरूको इमानदार जवाफ लेख्नुहोस्:</p>
+<ul>
+  <li>मैले यो ट्रेडमा छिर्नुको मुख्य प्राविधिक कारण के थियो?</li>
+  <li>यो ट्रेडमा कुन कुरा सही भयो र कुन प्राविधिक निर्णय गलत भयो?</li>
+  <li>के मैले आफ्नो पूर्वनिर्धारित नियम र रिस्क म्यानेजमेन्ट पूर्ण रूपमा पालना गरेँ?</li>
+</ul>
+<p>याद राख्नुहोस्, बजारमा एउटा ट्रेडरको वास्तविक सुधार र प्रगतिको इन्जिन नै उसको यही दैनिक आत्म-समीक्षा र जर्नल लेख्ने बानी हो।</p>
+
+<h2 class="section-heading">Complete Case Study Example</h2>
+
+<p>आउनुहोस्, यी सबै सैद्धान्तिक चरणहरूलाई नेप्सेको एउटा पूर्ण व्यावहारिक र काल्पनिक ट्रेडिङ केस स्टडीको उदाहरणबाट सरल भाषामा बुझौँ:</p>
+
+<div class="sub-heading2">1. Market Environment (NEPSE):</div>
+<p>हामीले नेप्से सूचकको डेली चार्ट विश्लेषण गर्दा बजारले स्पष्ट रूपमा उच्च विन्दु र उच्च निम्न विन्दुहरू बनाउँदै अगाडि बढेको देख्यौँ। यसले प्राविधिक रूपमा यो पुष्टि गर्छ कि समग्र बजारको वातावरण पूर्ण रूपमा सुरक्षित र बुलिस (Bullish) छ।</p>
+
+<div class="sub-heading2">2. Sector Selection:</div>
+<p>सबै उप-सूचकहरूको चार्ट तुलना गर्दा हामीले देख्यौँ कि <strong>जलविद्युत समूह (Hydropower Sector)</strong> को इन्डेक्सले नेप्से सूचकको तुलनामा धेरै कडा र बलियो प्रदर्शन गरिरहेको छ (Outperforming the Market) र यसमा दैनिक कारोबार रकम (Volume) पनि अस्वाभाविक रूपमा उच्च छ।</p>
+
+<div class="sub-heading2">3. Stock Identification:</div>
+<p>सोही बलियो हाइड्रोपावर सेक्टर भित्रका 20 वटा कम्पनीहरूको चार्ट स्क्रिनिङ गर्दा, हामीले एउटा विशेष हाइड्रोपावर कम्पनीको चार्ट फेला पार्&zwj;यौँ। सो कम्पनीको सेयर मूल्य विगत 3 महिनादेखि एउटा बलियो तेर्सो च्यानल अर्थात् बलियो आधार विन्दु (<strong>Base Formation</strong>) बनाएर बसिरहेको छ र अहिले आफ्नो कडा रजिस्ट्रटेन्स विन्दुको एकदमै नजिक कडा भोल्युमका साथ आइपुगेको छ।</p>
+
+<div class="sub-heading2">4. Setup &amp; Technical Plan:</div>
+<ul>
+  <li><strong>Setup:</strong> चार्टमा लामो अवधिको कडा 'Base Breakout' को स्पष्ट प्राविधिक सेटअप बन्ने सम्भावना छ।</li>
+  <li><strong>Entry Plan:</strong> यदि मूल्यले आगामी दिनमा सो कडा रजिस्ट्रटेन्स विन्दुलाई भारी भोल्युमका साथ तोडेर माथि बन्द (Close) दिन्छ भने मात्र Confirmation पछि खरिद गर्ने।</li>
+  <li><strong>Stop Loss Plan:</strong> यदि ब्रेकआउट असफल भएमा सोही प्राविधिक बेस (Base) को तल्लो सुरक्षित विन्दु भन्दा 2% तल स्टप लस राख्ने।</li>
+  <li><strong>Target:</strong> प्राविधिक रूपमा उपलब्ध कम्तीमा 1:2 को आकर्षक रिस्क-रिवार्ड रेसियो (Risk-Reward Ratio) अनुसारको टार्गेट सेट गर्ने।</li>
+</ul>
+
+<div class="visual-block">
+  <div class="visual-title">Base Breakout Trade — Entry, SL, Target (Chart 80.2)</div>
+  <svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="340" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="27" font-weight="700" fill="#111">Base तोड्यो + भोल्युम — योजनाबद्ध Trade</text>
+    <rect x="60" y="56" width="700" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="60" y1="120" x2="760" y2="120" stroke="#c8a800" stroke-width="2.2" stroke-dasharray="7,4"/>
+    <line x1="60" y1="100" x2="760" y2="100" stroke="#26a69a" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <line x1="60" y1="158" x2="760" y2="158" stroke="#ef5350" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <!-- base candles -->
+    <g stroke="#00897b" stroke-width="1.6"><line x1="100" y1="150" x2="100" y2="132"/></g><rect x="91" y="132" width="18" height="18" fill="#26a69a"/>
+    <g stroke="#c62828" stroke-width="1.6"><line x1="140" y1="130" x2="140" y2="126"/><line x1="140" y1="148" x2="140" y2="154"/></g><rect x="131" y="130" width="18" height="18" fill="#ef5350"/>
+    <g stroke="#00897b" stroke-width="1.6"><line x1="180" y1="152" x2="180" y2="134"/></g><rect x="171" y="134" width="18" height="18" fill="#26a69a"/>
+    <g stroke="#c62828" stroke-width="1.6"><line x1="220" y1="132" x2="220" y2="128"/><line x1="220" y1="146" x2="220" y2="152"/></g><rect x="211" y="132" width="18" height="14" fill="#ef5350"/>
+    <g stroke="#00897b" stroke-width="1.6"><line x1="260" y1="150" x2="260" y2="130"/></g><rect x="251" y="130" width="18" height="20" fill="#26a69a"/>
+    <!-- breakout candle -->
+    <g stroke="#00897b" stroke-width="1.8"><line x1="305" y1="130" x2="305" y2="78"/></g><rect x="295" y="78" width="20" height="52" fill="#26a69a"/>
+    <!-- continuation up to target -->
+    <g stroke="#00897b" stroke-width="1.6"><line x1="350" y1="80" x2="350" y2="62"/></g><rect x="341" y="62" width="18" height="18" fill="#26a69a"/>
+    <g stroke="#00897b" stroke-width="1.6"><line x1="390" y1="64" x2="390" y2="48"/></g><rect x="381" y="48" width="18" height="16" fill="#26a69a"/>
+    <!-- volume spike -->
+    <rect x="91" y="250" width="18" height="10" fill="#26a69a" opacity="0.5"/>
+    <rect x="171" y="252" width="18" height="8" fill="#26a69a" opacity="0.5"/>
+    <rect x="251" y="248" width="18" height="12" fill="#26a69a" opacity="0.5"/>
+    <rect x="295" y="226" width="20" height="34" fill="#26a69a" opacity="0.7"/>
+    <rect x="341" y="238" width="18" height="22" fill="#26a69a" opacity="0.6"/>
+    <!-- labels in boxes away -->
+    <rect x="440" y="86" width="150" height="26" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.3"/>
+    <text x="515" y="105" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c8a800">Resistance (Base)</text>
+    <line x1="305" y1="100" x2="440" y2="99" stroke="#c8a800" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="610" y="88" width="140" height="24" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+    <text x="680" y="106" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">Entry (Breakout)</text>
+    <rect x="610" y="146" width="140" height="24" rx="6" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="680" y="164" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c62828">Stop Loss (Base तल)</text>
+    <rect x="610" y="42" width="140" height="24" rx="6" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/>
+    <text x="680" y="60" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#1a56cc">Target (1:2)</text>
+    <text x="410" y="298" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#111">3 महिने Base &#8594; भोल्युमसँग Breakout &#8594; Entry/SL/Target तय</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले पूर्ण Base Breakout Trade देखाउँछ entry/SL/target सहित (Chart 80.2)। पहेँलो धर्के रेखा <strong>Resistance (Base)</strong> हो — सुरुमा क्यान्डलहरू 3 महिनादेखि साँघुरो तेर्सो दायरामा (Base Formation) घुमिरहेका थिए, भोल्युम सामान्य। अन्ततः एउटा ठूलो हरियो क्यान्डलले <strong>भारी भोल्युमसँग (तल अग्लो volume bar) Resistance तोडेर</strong> माथि Close दियो — यही Confirmation पछि <strong>Entry</strong> (हरियो रेखा) लिइन्छ। <strong>Stop Loss</strong> (रातो रेखा) Base को तल्लो सुरक्षित विन्दुभन्दा 2% तल राखिन्छ — ब्रेकआउट असफल भए सानो घाटामा निस्कन। <strong>Target</strong> (नीलो रेखा) कम्तीमा 1:2 Risk-Reward अनुसार माथि सेट गरिन्छ। मुख्य पाठ — ट्रेड लिनु अघि नै तीनै बिन्दु (Entry, SL, Target) गणितीय रूपमा तय भइसकेका हुन्छन्; ट्रेड लिएपछि सोच्ने होइन, पहिल्यै योजना बनाउने हो। (क्यान्डल क्षेत्र सफा — सबै label किनारका box मा।)
+</div>
+
+<div class="sub-heading2">5. Execution &amp; Live Market Action:</div>
+<p>केही दिनपछि, बजारमा सो हाइड्रोपावरको मूल्यले आफ्नो रजिस्ट्रटेन्सलाई तोड्दै भारी भोल्युम (विगतको 20 दिनको औसत भोल्युम भन्दा कति गुणा बढी) का साथ माथि ब्रेकआउट दिन्छ। हाम्रो पूर्वनिर्धारित योजना अनुसार ट्रेड ट्रिगर (Trigger) हुन्छ र हामी बिनाकुनै डर आफ्नो पोजिसन साइज अनुसार सेयर अकाउन्टमा खरिद गर्छौँ।</p>
+
+<div class="sub-heading2">6. Trade Management &amp; Profit Exit:</div>
+<p>खरिद गरे लगत्तै अर्को हप्ता मूल्य तीव्र गतिमा हाम्रो दिशामा माथितिर बढ्न थाल्छ। ट्रेडर आफ्नो मनको लोभ वा डरका आधारमा हतारिएर तुरुन्तै बाहिरिदैन। ऊ आफ्नो लिखित योजनामा अडिग रहन्छ। जब मूल्यले पहिलो प्राविधिक प्रतिफलको क्षेत्र (Target Area) लाई छुन्छ, ऊ आफ्नो पोर्टफोलियोको 50% सेयरको नाफा सुरक्षित रूपमा बुक गर्छ (<strong>Partial Profit Book</strong>) र बाँकी 50% सेयरको स्टप लसलाई माथि सार्दै (<strong>Trailing Stop</strong>) अझ ठूलो नाफाका लागि ट्रेडलाई गुड्न दिन्छ।</p>
+
+<div class="sub-heading2">7. Trading Journal Review:</div>
+<p>ट्रेड पूर्ण रूपमा क्लोज भएपछि ट्रेडरले आफ्नो जर्नलमा डायरी लेख्छ: "यो ट्रेड पूर्ण रूपमा सफल रह्यो। यो सफलताको मुख्य कारण समग्र बजारको बुलिस वातावरण र सेक्टरको कडा बल (Relative Strength) थियो। आगामी दिनमा ब्रेकआउट पछिको पहिलो सानो रिटेस्टमा अझ बढी परिपक्वताका साथ पोजिसन थप्न सकिने ठाउँ चार्टमा देखियो।"</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>नेपाल स्टक एक्सचेन्ज (NEPSE) का 90% भन्दा बढी नयाँ र साधारण ट्रेडरहरू बजारमा प्रवेश गर्दा जहिले पनि विल्कुलै उल्टो र आत्मघाती बाटो अपनाउने गर्छन्। उनीहरू फेसबुक, भाइबर वा क्लबहाउसका ग्रुपहरूमा कसैले एउटा स्टकको नाम सिफारिस गरेको सुन्नासाथ सिधै सो कम्पनीको सेयर किन्न टिएमएस (TMS) मा अर्डर प्रविष्ट गर्छन्। उनीहरूलाई:</p>
+<ul>
+  <li>समग्र नेप्से बजारको दिशा र अवस्था के छ, थाहा हुँदैन।</li>
+  <li>बजारमा कुन सेक्टर बलियो छ वा स्मार्ट मनी कता जाँदैछ, मतलब हुँदैन।</li>
+</ul>
+<p>यस्तो विल्कुलै उल्टो र जग बिनाको एप्रोचले गर्दा नै बजारमा मानिसहरू बारम्बार कडा नोक्सानीको सिकार बन्छन्। यसको विपरीत, बजारमा लामो समय टिकेर सम्पत्ति कमाउने वास्तविक व्यावसायिक एप्रोच जहिले पनि माथिबाट तलतिर प्रवाह हुने कडा प्राविधिक नियममा आधारित हुन्छ।</p>
+
+<p>जब तपाईं यो कडा र वैज्ञानिक प्रणालीलाई आफ्नो ट्रेडिङको मूल मन्त्र बनाउनुहुन्छ, तब मात्र तपाईं बजारको हरेक उतारचढावमा आफ्नो पूँजी जोगाउँदै निरन्तर नाफा कमाउन सक्ने परिपक्व ट्रेडर बन्नुहुन्छ।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>ट्रेडिङको संसारमा तपाईंसँग जतिसुकै विश्वकै उत्कृष्ट प्राविधिक ज्ञान वा महँगो सफ्टवेयर भए पनि, यदि तपाईंको आफ्नो मन र भावनाहरू नियन्त्रणमा छैनन् भने तपाईंको असफलता निश्चित छ। ट्रेडिङको सबैभन्दा ठूलो र घातक शत्रु भनेकै मानिसको आफ्नै <strong>भावना (Emotion)</strong> हो।</p>
+
+<p>जब बजारमा लाइभ प्राइस तल-माथि चल्छ, तब यही भावनाले ट्रेडरलाई:</p>
+<ul>
+  <li>FOMO (सकिएला कि भन्ने डर) मा परेर बिनाकुनै सेटअप <strong>हतार-हतार गलत र महँगो मूल्यमा Entry गराउँछ</strong>।</li>
+  <li>कडा लोभ वा अहङ्कारका कारण टार्गेट आउँदा पनि नाफा बुक गर्न नदिएर <strong>ढिलो Exit गराउँछ वा स्टप लस तोड्न लगाउँछ</strong>।</li>
+</ul>
+<p>यो पूर्ण केस स्टडी सिकाउनुको एक मात्र वास्तविक मनोवैज्ञानिक उद्देश्य के हो भने&mdash;तपाईंको बजारको हरेक निर्णय जहिले पनि एउटा कडा लिखित <strong>प्रणाली (System)</strong> मा आधारित हुनुपर्छ, तपाईंको क्षणिक मनको भावना, आशा वा डरमा विल्कुलै होइन। जब ट्रेडिङ एउटा बोरिङ र नियमबद्ध व्यावसायिक काम जस्तो बन्छ, सम्झिनुहोस् तपाईं सही बाटोमा हुनुहुन्छ।</p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<ul>
+  <li><strong>समग्र बजार (NEPSE Trend) को दिशा नहेरी:</strong> अन्धाधुन्ध सिधै जुनसुकै <strong>स्टक खरिद गर्न हतारिनु</strong>।</li>
+  <li><strong>सेक्टर रोटेसन (Sector Rotation) लाई पूर्ण बेवास्ता गर्नु:</strong> मरेको र भोल्युम नभएको <strong>कमजोर सेक्टरमा पूँजी फसाउनु</strong>।</li>
+  <li><strong>चार्टमा कुनै स्पष्ट प्राविधिक Setup बिना नै:</strong> केवल आफ्नो मनको भित्री इच्छा वा 'लाग्छ' को भरमा <strong>बजारमा Entry गर्नु</strong>।</li>
+  <li><strong>ट्रेड लिनु भन्दा अगाडि चार्टमा स्पष्ट:</strong> र गणितीय <strong>Stop Loss को बिन्दु तय नगर्नु</strong>।</li>
+  <li><strong>पोजिसन साइजिङको नियम पालना नगरी:</strong> आफ्नो प्रति ट्रेडको <strong>Risk Calculation विल्कुलै नगर्नु</strong>।</li>
+  <li><strong>मूल्य हत्तपत्त माथि कुद्न थालेपछि FOMO को सिकार भएर:</strong> रजिस्ट्रटेन्सको उच्चतम विन्दुमा <strong>Aggressive Buy गर्नु</strong>।</li>
+  <li><strong>ट्रेड सकिएपछि आफ्नो गल्ती र सफलताको विवरण:</strong> ट्रेदिङ <strong>Journal मा कडा रूपमा लिपिबद्ध नगर्नु</strong>।</li>
+  <li><strong>लाइभ मार्केट चलिरहेको बेला मानसिक आवेगमा आएर:</strong> आफ्नो पूर्व-निर्धारित <strong>Trading Plan बारम्बार परिवर्तन गर्नु</strong>।</li>
+  <li><strong>मूल्य आफ्नो टार्गेट विन्दुमा पुग्दा पनि:</strong> कडा लोभका कारण <strong>Profit Book गर्न अस्विकार गर्नु</strong>।</li>
+  <li><strong>ट्रेड आफ्नो विपरित दिशामा गइरहँदा पनि:</strong> केवल झुटा आशा (Hope) मा डुबेर <strong>घाटाको ट्रेड होल्ड गरिरहनु</strong>।</li>
+</ul>
+
+<div class="warning-box">
+  <div class="warning-title">&#9888;&#65039; Warning Box</div>
+  <p style="margin-bottom:0;">सेयर बजारमा लिइने कुनै पनि एउटा एक्लो नाफादार ट्रेडले तपाईंलाई कहिल्यै पनि रातारात एक सफल व्यावसायिक ट्रेडर बनाउन सक्दैन। ठिक त्यसै गरी, तपाईंको नियम भित्र रहेर भएको कुनै एउटा साना प्राविधिक असफल ट्रेडले तपाईंलाई बजारमा असफल ट्रेडर पनि साबित गर्दैन। ट्रेडिङ करियरको दीर्घकालीन र वास्तविक सफलता केवल र केवल एउटा अनुशासित र वैज्ञानिक प्रक्रिया (Process) लाई बिनाकुनै विचलितता वर्षौँसम्म बारम्बार दोहोर्&zwj;याउने दृढ बानीबाट मात्र सम्भव छ।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<ul>
+  <li><strong>सुरुवात जहिले पनि बजारबाट:</strong> आफ्नो ट्रेडिङ स्क्रिन खोल्नासाथ <strong>नेप्से सूचकको मुख्य ट्रेन्ड र वातावरण विश्लेषण गर्नुहोस्</strong>।</li>
+  <li><strong>बलियो सेक्टरको पहिचान:</strong> बजारको प्रवाह अनुकूल चल्नका लागि <strong>सधैँ Relative Strength र कडा Volume भएको Sector Analysis गर्नुहोस्</strong>।</li>
+  <li><strong>लिडर स्टकको छनोट:</strong> आफ्नो Watchlist मा सधैँ सोही बलियो समूह भित्रको <strong>सबैभन्दा बलियो प्राविधिक बनोट भएको Strong Stock मात्र राख्नुहोस्</strong>।</li>
+  <li><strong>धैर्यताका साथ सेटअपको प्रतीक्षा:</strong> चार्टमा मूल्यले आफ्नो <strong>Setup र ब्रेकआउट Confirmation नदिएसम्म हतार नगर्नुहोस्</strong>।</li>
+  <li><strong>जोखिमको पूर्व-गणित:</strong> एमएस् (TMS) मा अर्डर प्रविष्ट गर्नु भन्दा अगाडि नै <strong>आफ्नो प्रति ट्रेडको Risk र Position Size गणना गर्नुहोस्</strong>।</li>
+  <li><strong>स्टप लसको कठोर सम्मान:</strong> चार्टमा मूल्यले आफ्नो प्राविधिक विन्दु तोड्नासाथ <strong>बिनाकुनै भावना तुरुन्तै Stop Loss नियम पालना गर्नुहोस्</strong>।</li>
+  <li><strong>योजनाबद्ध एक्जिट र नाफा सुरक्षित:</strong> बजारमा आफ्नो टार्गेट क्षेत्र वा ट्रेलिङ स्टप हिट हुनासाथ <strong>Plan अनुसार अनुशासित Exit हुनुहोस्</strong>।</li>
+  <li><strong>दैनिक जर्नल लेखन अनिवार्य:</strong> आफ्नो प्रत्येक ट्रेडको प्राविधिक र मनोवैज्ञानिक कारण <strong>नियमित रूपमा ट्रेदिङ Journal मा लेख्नुहोस्</strong>।</li>
+  <li><strong>भावनाहरू माथि प्रणालीको नियन्त्रण:</strong> बजारको क्षणिक हल्ला, लोभ र डरबाट टाढा रही <strong>आफ्नो Emotion नियन्त्रणमा राख्नुहोस्</strong>।</li>
+  <li><strong>प्रक्रियामा पूर्ण निष्ठा र विश्वास:</strong> बजारको नतिजा भन्दा पनि आफ्नो <strong>व्यावसायिक र अनुशासित Process मा पूर्ण विश्वास राख्नुहोस्</strong>।</li>
+</ul>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<div class="sub-heading">Scenario 1: हचुवा र भावनाको भरमा चल्ने ट्रेडर (The Random Trader)</div>
+<div class="content-box">
+  <p>एकजना नयाँ लगानीकर्ताले सामाजिक सञ्जालमा एउटा जलविद्युत कम्पनीको बारेमा निकै कडा चर्चा सुने। उनले नेप्सेको समग्र बजारको वातावरण हेरेनन्, न त हाइड्रोपावर सेक्टरको प्राविधिक अवस्था नै जाँचे। उनले सिधै टिएमएस (TMS) खोलेर आफ्नो खाताको सबै पैसा हालेर सो सेयर एग्रेसिभ रूपमा खरिद गरे। उनलाई न त आफ्नो स्टप लस कहाँ राख्ने थाहा थियो, न त जोखिमको गणित नै थाहा थियो।</p>
+  <p style="margin-bottom:0;">खरिद गरेको दुई दिनपछि समग्र बजारमा भारी गिरावट आयो र सो स्टकको मूल्य तीव्र गतिमा 25% ले घट्यो। डर र अन्योलताका कारण उनले बजारको सबैभन्दा तल्लो विन्दुमा आएर आफ्नो ठूलो घाटामा सेयर बेचेर बाहिरिए। किन किनेको र किन बेचेको भन्ने कुराको उनीसँग कुनै प्राविधिक जवाफ थिएन।</p>
+</div>
+
+<div class="sub-heading">Scenario 2: प्रणाली र प्रक्रियामा चल्ने ट्रेडर (The Process-Based Trader)</div>
+<div class="content-box">
+  <p>अर्का एकजना अनुशासित ट्रेडरले सबैभन्दा पहिले नेप्से सूचकको हायर हाई र हायर लो को बुलिस संरचना हेरे। त्यसपछि उनले सेक्टर विश्लेषण गर्दा डेभलपमेन्ट बैंक सेक्टरमा स्मार्ट मनीको कडा खरिददारी र ठूलो भोल्युम आएको स्पष्ट देखे। उनले सोही सेक्टर भित्रबाट सबैभन्दा बलियो चार्ट स्ट्रक्चर भएको एउटा उत्कृष्ट बैंक छनोट गरे। चार्टमा मूल्यले एउटा कडा 'कप एण्ड ह्यान्डल' (Cup and Handle) प्याटर्नको ब्रेकआउट दिएको स्पष्ट सेटअप उनले भेट्टाए।</p>
+  <p style="margin-bottom:0;">ट्रेड लिनु अघि नै उनले आफ्नो गणितीय जोखिम गणना गरेर कुल पूँजीको केवल 2% मात्र रिस्क हुने गरी सुरक्षित कित्ता निर्धारण गरे। ट्रेड सफल होस् या असफल, उनको यो निर्णय पूर्ण रूपमा एक वैज्ञानिक र व्यावसायिक प्रक्रियामा आधारित थियो, जसले गर्दा उनको मनमा कुनै डर वा अलमलता थिएन।</p>
+</div>
+
+<div class="sub-heading">Scenario 3: दीर्घकालीन र वास्तविक विजेता (The Long-Term Winner)</div>
+<div class="content-box">
+  <p>बजारमा लामो समयदेखि टिकेका एक सफल व्यावसायिक ट्रेडरले विगत 5 वर्षमा सयौँ ट्रेडहरू लिइसकेका छन्। उनी स्पष्ट रूपमा स्वीकार गर्छन् कि उनका सबै 100 वटा ट्रेडहरूमा नाफा विल्कुलै भएको थिएन; उनका पनि धेरै ट्रेडहरूमा नियम अनुसार साना-साना प्राविधिक स्टप लसहरू हिट भएका थिए।</p>
+  <p style="margin-bottom:0;">तर, उनले जतिसुकै कठिन समयमा पनि आफ्नो <strong>मार्केट &rarr; सेक्टर &rarr; स्टक &rarr; सेटअप &rarr; रिस्क</strong> को कडा प्रक्रियालाई कहिल्यै पनि मर्न दिएनन्। यही कडा अनुशासन र प्रक्रियामा आधारित ट्रेडिङ बानीका कारण बजारको उतारचढावका बीच पनि उनी लामो समयसम्म टिकिरहे र बजारबाट निरन्तर रूपमा कडा सम्पत्ति निर्माण गर्न सफल भइरहे।</p>
+</div>
+
+<h2 class="section-heading">Table 80.1: Complete Trading Decision Flow</h2>
+
+<table>
+  <thead>
+    <tr><th>Step</th><th>चरण</th><th>मुख्य चेक</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Market Analysis</td><td>NEPSE ट्रेन्ड बुलिस/बियरिस?</td></tr>
+    <tr><td>2</td><td>Sector Analysis</td><td>कुन सेक्टर बलियो, Volume उच्च?</td></tr>
+    <tr><td>3</td><td>Stock Selection</td><td>Relative Strength Leader स्टक</td></tr>
+    <tr><td>4</td><td>Setup Identification</td><td>स्पष्ट Breakout/Pullback Setup</td></tr>
+    <tr><td>5</td><td>Entry Planning</td><td>Entry/SL/Target पहिल्यै तय</td></tr>
+    <tr><td>6</td><td>Risk Calculation</td><td>Position Size गणना</td></tr>
+    <tr><td>7</td><td>Execution</td><td>बिनाभावना अर्डर</td></tr>
+    <tr><td>8</td><td>Trade Management</td><td>Trailing Stop, Partial Book</td></tr>
+    <tr><td>9</td><td>Exit</td><td>Target/संकेतमा अनुशासित निकास</td></tr>
+    <tr><td>10</td><td>Review</td><td>Journal कडा समीक्षा</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 80.2: Random Trading vs Process-Based Trading</h2>
+
+<table>
+  <thead>
+    <tr><th>पक्ष</th><th>Random Trading</th><th>Process-Based Trading</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>सुरुवात</td><td>हल्ला सुनेर सिधै स्टक</td><td>Market &rarr; Sector &rarr; Stock</td></tr>
+    <tr><td>Setup</td><td>'लाग्छ' को भरमा</td><td>स्पष्ट चार्ट प्रमाण</td></tr>
+    <tr><td>Risk/SL</td><td>केही गणना छैन</td><td>पहिल्यै तय, गणितीय</td></tr>
+    <tr><td>आधार</td><td>भावना/FOMO</td><td>लिखित System</td></tr>
+    <tr><td>दीर्घकालीन नतिजा</td><td>बारम्बार नोक्सानी</td><td>टिक्छ, सम्पत्ति बढ्छ</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 80.3: Trade Review Template</h2>
+
+<table>
+  <thead>
+    <tr><th>समीक्षा बुँदा</th><th>के लेख्ने</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>खरिदको प्राविधिक कारण</td><td>किन छिरेँ? (Setup/Breakout)</td></tr>
+    <tr><td>वास्तविक Risk-Reward</td><td>योजना vs प्राप्त अनुपात</td></tr>
+    <tr><td>भावनाको अवस्था</td><td>शान्त थिएँ कि FOMO मा?</td></tr>
+    <tr><td>नियम पालना?</td><td>Yes / No</td></tr>
+    <tr><td>अर्को पटक सुधार</td><td>के फरक गर्ने?</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Full Trade निर्णय Checklist</div>
+  <ul>
+    <li>के मैले आजको ट्रेड सोच्नु भन्दा अगाडि समग्र नेप्से सूचक (NEPSE Index) को मुख्य ट्रेन्ड र बजारको वातावरणको पूर्ण विश्लेषण गरेको छु?</li>
+    <li>के यो स्टक बजारको हालको सबैभन्दा बलियो, सक्रिय र कडा कारोबार रकम भएको समूह (Strong Sector) भित्र पर्दछ?</li>
+    <li>के यस कम्पनीको चार्टमा सापेक्षिक शक्ति (Relative Strength) र स्पष्ट हायर हाई को बुलिस प्राविधिक बनोट दुरुस्त छ?</li>
+    <li>के चार्टमा मूल्यले कुनै स्पष्ट प्राविधिक आकृति वा प्याटर्नको आधारमा वास्तविक र परिपक्व सेटअप (Clear Setup) बनाएको छ?</li>
+    <li>के मैले सेयर किन्नु भन्दा अगाडि नै चार्टको प्राविधिक सपोर्ट र नियम अनुसार आफ्नो निश्चित खरिद विन्दु (Entry) तय गरेको छु?</li>
+    <li>यदि यो ट्रेड मेरो विश्लेषण विपरित गएमा म बिनाकुनै जिद्दी तुरुन्तै बाहिरिनका लागि मेरो कडा स्टप लस (Stop Loss) को विन्दु पहिल्यै निश्चित छ?</li>
+    <li>के मैले आफ्नो खाताको कुल ट्रेडिङ पूँजीको जोखिम वहन गर्ने क्षमता अनुसार पोजिसन साइज (Position Size) को सही गणितीय गणना गरेको छु?</li>
+    <li>मूल्य मेरो पक्षमा वा मेरो विपरित दिशामा जाँदा कडा लोभ वा डर नमानी कुन ठाउँमा कसरी नाफा वा घाटा काटेर निस्कने भन्ने मेरो निकास योजना (Exit Plan) पूर्ण रूपमा तयार छ?</li>
+    <li>के म यो ट्रेड पूर्ण रूपमा बन्द भइसकेपछि यसको प्रत्येक साना प्राविधिक र मनोवैज्ञानिक सिकाइहरू आफ्नो ट्रेदिङ जर्नलमा इमानदारीपूर्वक अपडेट गर्न प्रतिबद्ध छु?</li>
+    <li>के मेरो यो ट्रेडिङ निर्णय मेरो क्षणिक मनको भावना, कसैको सिफारिस वा सामाजिक सञ्जालको हल्लामा नभई पूर्ण रूपमा मेरो लिखित प्रणाली र प्रक्रिया (Process) मा आधारित छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">&#x1F4DD; Exercise 1</div>
+  <p>तपाईंले विगतमा लिनुभएको वा गर्नुभएको कुनै पनि एउटा पछिल्लो रियल ट्रेडलाई लिनुहोस्। अब सो ट्रेडलाई यस अध्यायमा सिकाइएको व्यावसायिक प्रणाली: <strong>मार्केट &rarr; सेक्टर &rarr; स्टक &rarr; सेटअप &rarr; रिस्क &rarr; एक्जिट</strong> को मोडेलमा राखेर पूर्ण रूपमा पुनः विश्लेषण गर्नुहोस् र आफूले कुन चरणमा गल्ती गर्नुभएको थियो, त्यसको कडा समीक्षा डायरीमा लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">&#x1F4DD; Exercise 2</div>
+  <p>एक सेतो कागज वा आफ्नो ट्रेडिङ डायरीमा आजैदेखि लाइभ मार्केटमा अनिवार्य रूपमा पालना गर्ने गरी आफ्नो व्यक्तिगत कडा चरणबद्ध ट्रेडिङ निर्णय प्रक्रिया (<strong>My Written Personal Trading Process</strong>) बुँदागत रूपमा लिपिबद्ध गर्नुहोस् र आफ्नो कम्प्युटर टेबल अगाडि टाँस्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">&#x1F4DD; Exercise 3</div>
+  <p>आफ्ना आगामी वा विगतका पछिल्ला 5 वटा ट्रेडहरूको पाना पल्टाउनुहोस् र इमानदारीपूर्वक जाँच्नुहोस् कि ती 5 मध्ये कति वटा ट्रेडहरूमा तपाईंले यो व्यावसायिक प्रक्रिया पूर्ण रूपमा पालना गर्नुभएको थियो र कति वटा ट्रेडहरू केवल भावना वा FOMO को आवेगमा लिइएका थिए?</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">&#x1F4DD; Exercise 4</div>
+  <p>आफ्नो ट्रेडिङ जर्नल वा एक्सल सिटको विन्दुमा आजैदेखि एउटा नयाँ कडा कोठा (Column) थप्नुहोस्, जसको शीर्षक राख्नुहोस्:</p>
+  <blockquote style="margin-top:10px;"><strong>&ldquo;के मैले यो ट्रेड लिँदा सम्पूर्ण व्यावसायिक प्रक्रिया पूर्ण रूपमा पालना गरेँ? (Process Followed? - Yes / No)&rdquo;</strong></blockquote>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p style="margin-bottom:0;">सेयर बजारको दैनिक र व्यस्त चलखेल भित्र छिर्ने 90% भन्दा बढी साधारण मानिसहरू जतिबेला पनि केवल आफ्नो स्क्रिनमा "नाफा" (Profit) कति भयो भनेर मात्र खोजिरहेका हुन्छन्। तर, बजारको कडा चक्र र उतारचढाव बुझेका एक वास्तविक व्यावसायिक ट्रेडरले भने कहिल्यै पनि सिधै नाफाको पछि लाग्दैनन्, उनीहरू जतिबेला पनि केवल आफ्नो अनुशासित <strong>प्रक्रिया (Process)</strong> को मात्र कडा पालना गरिरहेका हुन्छन्। किनकि वित्तीय बजारको एउटा कडा सत्य के हो भने&mdash;बजार भित्र भोलि मूल्य कता जान्छ र मलाई ठ्याक्कै कति नाफा हुन्छ भन्ने कुरा ट्रेडरको प्रत्यक्ष नियन्त्रणमा विल्कुलै हुँदैन। तर, बजारमा कुन नियम अनुसार छिर्ने, कति जोखिम लिने र कसरी अनुशासित भएर निस्कने भन्ने कुरा अर्थात् तपाईंको आफ्नो <strong>Process</strong> पूर्ण रूपमा तपाईंको आफ्नै नियन्त्रण भित्र हुने कुरा हो। यदि तपाईंले आफ्नो नियन्त्रणमा भएको प्रक्रियालाई सधैँ कडा र अनुशासित राख्नुभयो भने, बजारको नतिजा र पोर्टफोलियोको नाफा समयसँगै कडा रूपमा आफैं सुधारिँदै र बढ्दै जानेछ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">&#x1F4DA; Chapter 80 Summary</div>
+  <p>यस महत्वपूर्ण र पूर्ण व्यावहारिक अध्यायमा हामीले अहिलेसम्म सिकेका प्राविधिक विश्लेषणका कडा सिद्धान्तहरूलाई कसरी एउटै मालामा उनेर एउटा व्यावसायिक र प्रणालीबद्ध ट्रेडिङ निर्णय प्रणाली (Professional Trading System) निर्माण गरिन्छ भन्ने कुरा एउटा विस्तृत केस स्टडी मार्फत बुझ्यौँ।</p>
+  <p>हामीले गहिराइबाट सिक्यौँ:</p>
+  <ul style="margin-top:6px;">
+    <li>समग्र बजारको वातावरण र दिशा पहिचान गर्ने <strong>Market Analysis</strong> को सर्वोच्च महत्व।</li>
+    <li>स्मार्ट मनी र संस्थागत खरिदकर्ताहरूको चक्र बुझ्नका लागि गरिने <strong>Sector Analysis</strong> को प्राविधिक विधि।</li>
+    <li>बलियो समूह भित्रबाट सबैभन्दा कडा सापेक्षिक शक्ति भएको लिडर कम्पनी छान्ने <strong>Stock Selection</strong> को नियम।</li>
+    <li>चार्टमा कल्पित आशाको भरमा नभई तथ्यका आधारमा स्पष्ट आकृति पहिचान गर्ने <strong>Setup Identification</strong> को कला।</li>
+    <li>ट्रेड लिनु अघि नै खरिद, स्टप लस र टार्गेटको विन्दु गणितीय रूपमा तय गर्ने <strong>Risk &amp; Entry Planning</strong> को गणित।</li>
+    <li>बजारमा आफ्नो नियम म्याच हुनासाथ बिनाकुनै डर वा भावना अर्डर कार्यान्वयन गर्ने <strong>Execution</strong> को अनुशासन।</li>
+    <li>मूल्य आफ्नो दिशामा जाँदा नाफा सुरक्षित गर्दै ट्रेलिङ स्टप प्रयोग गर्ने र अनुशासित रूपमा बाहिरिने <strong>Exit</strong> को महत्व।</li>
+    <li>आफ्नो करियरको निरन्तर सुधारका लागि प्रत्येक ट्रेडको विवरण डायरीमा लेख्ने <strong>Review &amp; Journaling</strong> को बानी।</li>
+  </ul>
+  <p style="margin-bottom:0;">ट्रेदिङको संसारमा दीर्घकालीन सफलता र वित्तीय स्वतन्त्रता कुनै एउटा जादुई इन्डिकेटर, कसैको गोप्य टिप वा कुनै सर्टकट फर्मुलाबाट विल्कुलै प्राप्त हुँदैन। यो त केवल यस अध्यायमा सिकाइएको अनुशासित र वैज्ञानिक प्रक्रियालाई बिनाकुनै आलस्य बजारमा बारम्बार, प्रत्येक दिन र प्रत्येक ट्रेडमा दोहोर्&zwj;याउन सक्ने तपाईंको भित्री क्षमता र अनुशासनबाट मात्र आउने गर्छ। यस अध्यायको समाप्तिसँगै हामीले यस पुस्तकको सबैभन्दा महत्वपूर्ण प्राविधिक र प्रक्रियागत खण्ड पूर्ण रूपमा पुरा गरेका छौँ। अब यसपछि आउने <strong>Chapter 81</strong> मा, हामी ट्रेडिङ करियरको अर्को एउटा निकै नै कडा, संवेदनशील र जीवन उपयोगी खण्डमा प्रवेश गर्नेछौँ, जसको शीर्षक रहेको छ: <strong>Trading for a Living: Full Reality र Roadmap</strong>। जहाँ हामी कुनै रङ्गीन भ्रम बिना, एउटा ट्रेडरले आफ्नो पूर्णकालीन जीवन ट्रेडिङकै कमाइबाट मात्र धान्नका लागि कति पूँजी चाहिन्छ, बजारको वास्तविक कडा सत्य के हो र त्यसको सही रोडम्याप कसरी बनाइन्छ भन्ने कुरा पूर्ण रूपमा उदाङ्गो पारेर हेर्नेछौँ।</p>
+</div>
+
+<div class="closing-quote">
+  सफल Trader ने भविष्य देख्दैन, उसले प्रक्रिया पछ्याउँछ।<br>
+  Market ले कसैलाई निश्चित Profit दिने वाचा गर्दैन, तर राम्रो प्रक्रिया अपनाउनेलाई समयसँगै राम्रो निर्णय गर्ने क्षमता अवश्य दिन्छ।<br>
+  यही क्षमता नै Beginner र Professional बीचको वास्तविक फरक हो।
+</div>
+
+</div>
+</body>
+</html>

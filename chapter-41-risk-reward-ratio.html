@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 41: Risk-Reward Ratio — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul { margin: 14px 0 14px 28px; }
+ul li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 15px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-sub { font-weight: 700; color: #111; font-size: 14px; margin: 14px 0 8px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 22px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 41</div>
+  <h1 class="chapter-title">Risk-Reward Ratio</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>मनोजले एउटा trade लियो। Entry Rs. 500 मा थियो। Stop Loss Rs. 480 मा थियो। Target Rs. 520 थियो। उसलाई setup ठीकै लागेको थियो। केही दिनपछि price Rs. 520 पुग्यो र उसले profit book गर्‍यो। उसले Rs. 20 profit कमायो।</p>
+
+<p>अर्को trade मा पनि उसले Entry Rs. 500 मा गर्‍यो। Stop Loss Rs. 480 थियो। यसपटक trade fail भयो र उसले Rs. 20 loss खायो।</p>
+
+<p>दुई tradeपछि उसको result zero जस्तै भयो। एउटा win, एउटा loss। तर transaction cost जोड्दा ऊ net loss मा गयो।</p>
+
+<p>त्यही बेला उसको साथी प्रकाशले अर्कै trade लिएको थियो। Entry Rs. 500, Stop Loss Rs. 480, तर Target Rs. 560 थियो। Risk Rs. 20, Reward Rs. 60। उसको trade पनि कहिलेकाहीँ fail हुन्थ्यो, तर जब win हुन्थ्यो, lossभन्दा ठूलो profit आउँथ्यो। प्रकाशले 10 tradeमा केवल 4 trade जित्दा पनि overall profit बनाउन सक्थ्यो, किनकि उसको average reward average riskभन्दा ठूलो थियो।</p>
+
+<p>मनोजले त्यसदिन एउटा गहिरो कुरा बुझ्यो—Trading मा सही direction मात्र पर्याप्त हुँदैन। तपाईं कति risk लिएर कति reward खोज्दै हुनुहुन्छ भन्ने कुरा अझै महत्वपूर्ण हुन्छ।</p>
+
+<p>Risk-Reward Ratio भनेको कुनै tradeमा सम्भावित loss र सम्भावित profitको तुलना हो। यदि तपाईं Rs. 10 risk लिएर Rs. 30 reward खोज्दै हुनुहुन्छ भने Risk-Reward 1:3 भयो। यदि Rs. 20 risk लिएर Rs. 20 reward मात्र खोज्दै हुनुहुन्छ भने Risk-Reward 1:1 भयो।</p>
+
+<p>Trading मा सधैं सबै trade win हुँदैनन्। त्यसैले traderले यस्तो setup खोज्नुपर्छ जहाँ गलत हुँदा loss सानो होस् र सही हुँदा profit lossभन्दा ठूलो होस्। यही Risk-Reward Ratio को असली शक्ति हो।</p>
+
+<!-- VISUAL 1: Manoj 1:1 vs Prakash 1:3 -->
+<div class="visual-block">
+  <div class="visual-title">मनोज (1:1) vs प्रकाश (1:3) — किन Risk-Reward ले जिताउँछ (Good vs Bad)</div>
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">एउटै Entry Rs. 500, एउटै Risk Rs. 20 — फरक Target ले सबै बदल्छ</text>
+
+    <!-- LEFT: MANOJ 1:1 -->
+    <rect x="20" y="42" width="355" height="30" fill="#ef5350" rx="4"/>
+    <text x="197" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ मनोज — Target Rs. 520 (1:1)</text>
+
+    <rect x="20" y="76" width="355" height="180" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- vertical scale -->
+    <!-- target line -->
+    <line x1="40" y1="110" x2="355" y2="110" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <!-- entry -->
+    <line x1="40" y1="165" x2="355" y2="165" stroke="#111" stroke-width="1.5"/>
+    <!-- SL -->
+    <line x1="40" y1="220" x2="355" y2="220" stroke="#ef5350" stroke-width="1.4" stroke-dasharray="4,2"/>
+
+    <!-- reward bar (small) -->
+    <rect x="120" y="110" width="40" height="55" fill="#26a69a" fill-opacity="0.5"/>
+    <text x="140" y="142" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">+20</text>
+    <!-- risk bar (equal) -->
+    <rect x="120" y="165" width="40" height="55" fill="#ef5350" fill-opacity="0.5"/>
+    <text x="140" y="197" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">−20</text>
+
+    <text x="250" y="112" font-family="sans-serif" font-size="9" fill="#2e7d32">Target 520 (+Rs.20)</text>
+    <text x="250" y="168" font-family="sans-serif" font-size="9" fill="#111">Entry 500</text>
+    <text x="250" y="222" font-family="sans-serif" font-size="9" fill="#c62828">SL 480 (−Rs.20)</text>
+
+    <!-- result -->
+    <rect x="35" y="232" width="320" height="20" fill="#ffe5e0" rx="3"/>
+    <text x="195" y="246" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#c62828">Reward = Risk → 1 win + 1 loss = zero (cost पछि loss)</text>
+
+    <!-- RIGHT: PRAKASH 1:3 -->
+    <rect x="385" y="42" width="355" height="30" fill="#26a69a" rx="4"/>
+    <text x="562" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✓ प्रकाश — Target Rs. 560 (1:3)</text>
+
+    <rect x="385" y="76" width="355" height="180" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- target line (higher) -->
+    <line x1="405" y1="92" x2="720" y2="92" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <!-- entry -->
+    <line x1="405" y1="180" x2="720" y2="180" stroke="#111" stroke-width="1.5"/>
+    <!-- SL -->
+    <line x1="405" y1="208" x2="720" y2="208" stroke="#ef5350" stroke-width="1.4" stroke-dasharray="4,2"/>
+
+    <!-- reward bar (big) -->
+    <rect x="485" y="92" width="40" height="88" fill="#26a69a" fill-opacity="0.6"/>
+    <text x="505" y="140" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">+60</text>
+    <!-- risk bar (small) -->
+    <rect x="485" y="180" width="40" height="28" fill="#ef5350" fill-opacity="0.5"/>
+    <text x="505" y="199" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c62828">−20</text>
+
+    <text x="615" y="94" font-family="sans-serif" font-size="9" fill="#2e7d32">Target 560 (+Rs.60)</text>
+    <text x="615" y="183" font-family="sans-serif" font-size="9" fill="#111">Entry 500</text>
+    <text x="615" y="211" font-family="sans-serif" font-size="9" fill="#c62828">SL 480 (−Rs.20)</text>
+
+    <rect x="400" y="232" width="320" height="20" fill="#eaf6ea" rx="3"/>
+    <text x="560" y="246" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">Reward 3× Risk → 4 win पनि profit बनाउँछ</text>
+
+    <!-- bottom comparison -->
+    <rect x="20" y="270" width="720" height="60" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="6"/>
+    <text x="380" y="292" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#111">10 trade मा: प्रकाश 4 मात्र जिते पनि profit, मनोज 5 जिते पनि cost ले खान्छ</text>
+    <text x="380" y="312" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#111">किनकि प्रकाश को जित (Rs.60) हार (Rs.20) भन्दा 3× ठूलो</text>
+    <text x="380" y="326" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#555">सही direction मात्र होइन — कति risk मा कति reward, त्यो महत्वपूर्ण</text>
+
+    <!-- bottom line -->
+    <rect x="20" y="340" width="720" height="34" fill="#fff8dc" stroke="#c8a800" stroke-width="1" rx="5"/>
+    <text x="380" y="362" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#111">गलत हुँदा सानो गुमाउने, सही हुँदा ठूलो कमाउने setup खोज्ने = Risk-Reward को शक्ति</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले chapter को मूल देखाउँछ। दुवै trader ले Entry Rs. 500, SL Rs. 480 (Risk Rs. 20) मा trade लिए। फरक केवल Target मा। मनोज (बायाँ): Target Rs. 520 — reward Rs. 20 = risk सँग बराबर (1:1)। एक जित एक हार = zero, transaction cost जोड्दा net loss। प्रकाश (दायाँ): Target Rs. 560 — reward Rs. 60 = risk को 3× (1:3)। उसको trade कहिलेकाहीँ fail हुन्थ्यो, तर जित (Rs. 60) हार (Rs. 20) भन्दा 3× ठूलो भएकाले 10 trade मा 4 मात्र जिते पनि overall profit। मुख्य पाठ — trading मा सही direction मात्र पर्याप्त छैन; कति risk लिएर कति reward खोज्ने भन्ने अझ महत्वपूर्ण।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Risk-Reward Ratio trading को core concept हो। धेरै beginner केवल <strong>“यो stock बढ्छ कि घट्छ?”</strong> भन्ने प्रश्न सोच्छन्। तर professional trader सोच्छ—<strong>“यदि म गलत भए कति गुमाउँछु? यदि म सही भए कति कमाउँछु? यो trade लिन योग्य छ कि छैन?”</strong></p>
+
+<p>Trading मा तपाईंको win rate 100% हुँदैन। तपाईंले केही trade जित्नुहुन्छ, केही trade हार्नुहुन्छ। यदि तपाईंका winning trade साना छन् र losing trade ठूला छन् भने high win rate भए पनि account घट्न सक्छ। तर यदि तपाईंका winning trade losing tradeभन्दा ठूलो छन् भने moderate win rate भए पनि account बढ्न सक्छ।</p>
+
+<p>Risk-Reward Ratio महत्वपूर्ण छ किनकि यसले traderलाई random tradeबाट बचाउँछ। Chart राम्रो देखिन्छ भन्दैमा trade लिनु हुँदैन। यदि Stop Loss Rs. 30 तल छ तर target Rs. 20 माथि मात्र छ भने setup राम्रो देखिए पनि trade कमजोर हुन सक्छ। Risk-Reward नमिले trade avoid गर्नु professional decision हो।</p>
+
+<p>यो chapter ले तपाईंलाई Risk-Reward Ratio कसरी calculate गर्ने, minimum acceptable ratio कसरी सोच्ने, NEPSE मा realistic target कसरी राख्ने, false high targetबाट कसरी बच्ने, Stop Loss र Position Sizeसँग Risk-Reward कसरी जोड्ने, र trading psychologyमा यसको भूमिका के हो भन्ने कुरा सिकाउँछ।</p>
+
+<p>Risk-Reward Ratio को उद्देश्य ठूलो सपना देखाउनु होइन। यसको उद्देश्य realistic trade plan बनाउनु हो। Target मनले होइन, chart structure अनुसार राख्नुपर्छ। Stop Loss डरले होइन, structure अनुसार राख्नुपर्छ। अनि यी दुवैको comparison गरेर मात्र trade लिनुपर्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Risk-Reward Ratio भनेको कुनै tradeमा तपाईंले लिने risk र खोज्ने rewardको तुलना हो।</p>
+
+<ul>
+  <li>Risk = Entry price र Stop Loss बीचको फरक</li>
+  <li>Reward = Entry price र Target price बीचको फरक</li>
+</ul>
+
+<p>Formula:</p>
+
+<p><strong>Risk-Reward Ratio = Risk : Reward</strong></p>
+
+<p>उदाहरण:</p>
+
+<ul>
+  <li>Entry: Rs. 500</li>
+  <li>Stop Loss: Rs. 480</li>
+  <li>Target: Rs. 560</li>
+</ul>
+
+<p>Risk = Rs. 500 - Rs. 480 = Rs. 20<br>
+Reward = Rs. 560 - Rs. 500 = Rs. 60<br>
+Risk-Reward = 20 : 60 = 1 : 3</p>
+
+<p>यसको अर्थ तपाईं Rs. 1 risk लिएर Rs. 3 reward खोज्दै हुनुहुन्छ।</p>
+
+<p>अर्को उदाहरण:</p>
+
+<ul>
+  <li>Entry: Rs. 500</li>
+  <li>Stop Loss: Rs. 470</li>
+  <li>Target: Rs. 530</li>
+</ul>
+
+<p>Risk = Rs. 30<br>
+Reward = Rs. 30<br>
+Risk-Reward = 1 : 1</p>
+
+<p>1:1 Risk-Reward मा तपाईं जित्दा जति कमाउनुहुन्छ, हार्दा त्यति नै गुमाउनुहुन्छ। Transaction cost जोड्दा net result अझ कमजोर हुन सक्छ।</p>
+
+<p>सरल भाषामा, Risk-Reward Ratio ले सोध्छ—<strong>“यो trade मा जोखिमको तुलनामा अवसर पर्याप्त छ कि छैन?”</strong></p>
+
+<!-- VISUAL 2: What is RR - anatomy -->
+<div class="visual-block">
+  <div class="visual-title">Risk-Reward भनेको के? — Buy Trade को Anatomy</div>
+  <svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="350" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Risk = Entry−SL • Reward = Target−Entry • Ratio = Risk : Reward</text>
+
+    <!-- price ladder -->
+    <rect x="290" y="50" width="180" height="250" fill="#fffdf5" stroke="#c9b97a" stroke-width="1" rx="4"/>
+    <!-- reward zone (green) -->
+    <rect x="290" y="65" width="180" height="100" fill="#26a69a" fill-opacity="0.12"/>
+    <!-- risk zone (red) -->
+    <rect x="290" y="200" width="180" height="55" fill="#ef5350" fill-opacity="0.12"/>
+
+    <!-- Target line -->
+    <line x1="290" y1="65" x2="470" y2="65" stroke="#26a69a" stroke-width="2" stroke-dasharray="5,3"/>
+    <!-- Entry line -->
+    <line x1="290" y1="200" x2="470" y2="200" stroke="#111" stroke-width="2"/>
+    <circle cx="380" cy="200" r="6" fill="#fff" stroke="#111" stroke-width="2"/>
+    <!-- SL line -->
+    <line x1="290" y1="255" x2="470" y2="255" stroke="#ef5350" stroke-width="2" stroke-dasharray="5,3"/>
+
+    <!-- reward arrow (entry to target) -->
+    <line x1="330" y1="200" x2="330" y2="65" stroke="#26a69a" stroke-width="1.5"/>
+    <polygon points="330,65 326,75 334,75" fill="#26a69a"/>
+    <!-- risk arrow (entry to SL) -->
+    <line x1="430" y1="200" x2="430" y2="255" stroke="#ef5350" stroke-width="1.5"/>
+    <polygon points="430,255 426,245 434,245" fill="#ef5350"/>
+
+    <!-- ===== CALLOUT BUBBLES ===== -->
+    <!-- Target bubble -->
+    <line x1="290" y1="65" x2="250" y2="65" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="40" y="46" width="210" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="145" y="64" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Target Rs. 560</text>
+      <text x="145" y="79" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">कहाँ profit book / seller आउँछ</text>
+    </g>
+
+    <!-- Reward bubble -->
+    <g>
+      <rect x="40" y="110" width="210" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="145" y="128" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Reward = Rs. 60</text>
+      <text x="145" y="143" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">(560 − 500) सम्भावित profit</text>
+    </g>
+    <line x1="250" y1="130" x2="330" y2="130" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+    <!-- Entry bubble -->
+    <line x1="470" y1="200" x2="510" y2="200" stroke="#111" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="510" y="181" width="210" height="38" rx="8" fill="#fffdf5" stroke="#111" stroke-width="1.3"/>
+      <text x="615" y="199" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#111">Entry Rs. 500</text>
+      <text x="615" y="213" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">यहाँ stock किनेको</text>
+    </g>
+
+    <!-- Risk bubble -->
+    <g>
+      <rect x="510" y="228" width="210" height="40" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+      <text x="615" y="246" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#c62828">Risk = Rs. 20</text>
+      <text x="615" y="261" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">(500 − 480) सम्भावित loss</text>
+    </g>
+    <line x1="470" y1="248" x2="510" y2="248" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+    <!-- SL bubble -->
+    <line x1="290" y1="255" x2="250" y2="255" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="40" y="236" width="210" height="38" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+      <text x="145" y="254" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#c62828">Stop Loss Rs. 480</text>
+      <text x="145" y="268" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">idea गलत भएको level</text>
+    </g>
+
+    <!-- ratio result -->
+    <rect x="240" y="312" width="280" height="32" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1.3" rx="6"/>
+    <text x="380" y="333" text-anchor="middle" font-family="Roboto, sans-serif" font-size="14" font-weight="700" fill="#111">Risk : Reward = 20 : 60 = 1 : 3</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो diagram ले Risk-Reward शून्यबाट देखाउँछ। बीचको कालो line मा तपाईंले stock किन्नुभयो (Entry Rs. 500)। माथि हरियो Target (Rs. 560) — जहाँ profit book गर्ने वा seller आउने अपेक्षा। तल रातो Stop Loss (Rs. 480) — जहाँ idea गलत साबित हुन्छ। अब दुई दूरी नाप्नुस्: <strong>Reward</strong> = Target − Entry = Rs. 60 (हरियो तीर, माथि)। <strong>Risk</strong> = Entry − SL = Rs. 20 (रातो तीर, तल)। यी दुई को तुलना नै Risk-Reward Ratio: 20 : 60 = <strong>1 : 3</strong> — मतलब Rs. 1 जोखिममा Rs. 3 अवसर। यो ratio ले सोध्छ — जोखिमको तुलनामा अवसर पर्याप्त छ?
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<p>Risk-Reward Ratio calculate गर्न पहिले Entry, Stop Loss, र Target तीनै clear हुनुपर्छ। यदि यी तीन कुरा clear छैनन् भने trade incomplete छ। धेरै beginner Entry गर्छन्, Stop Loss पछि सोच्ने, Target अझै पछि सोच्ने। यो गलत process हो। Professional trader Entry भन्दा पहिले risk र reward देख्छ।</p>
+
+<p>पहिलो step हो Entry Price। Entry exact number हुन सक्छ वा Entry Zone हुन सक्छ। उदाहरणका लागि Rs. 500–505 Entry Zone। Risk-Reward calculate गर्दा conservative price प्रयोग गर्नु राम्रो हुन्छ। यदि Entry range छ भने average Entry सोच्न सकिन्छ, तर actual executed price अनुसार final calculation गर्नुपर्छ।</p>
+
+<p>दोस्रो step हो Stop Loss। Stop Loss structure-based हुनुपर्छ। Support तल, Pullback low तल, Breakout level तल, Range low तल, Retest low तल आदि। Stop Loss मनले नजिक ल्याएर Risk-Reward राम्रो देखाउनु खतरनाक छ। यदि Stop Loss unrealistic छ भने Risk-Reward calculation fake हुन्छ।</p>
+
+<p>तेस्रो step हो Target। Target पनि realistic हुनुपर्छ। Target next Resistance, previous high, range high, measured move, trend channel, or Risk-Reward targetमा आधारित हुन सक्छ। <strong>“मलाई 20% चाहिन्छ”</strong> भनेर target राख्नु professional होइन। Price को अगाडि कहाँ seller आउन सक्छन्? कहाँ resistance छ? कहाँ profit booking आउन सक्छ? Target यिनै आधारमा सोच्नुपर्छ।</p>
+
+<p>Risk-Reward Ratio को गलत प्रयोग धेरै हुन्छ। Trader पहिले stock किन्न मन बनाउँछ। त्यसपछि Stop Loss धेरै नजिक राख्छ र Target धेरै टाढा राख्छ। Paperमा Risk-Reward 1:4 देखिन्छ। तर वास्तविक chartमा Stop Loss noiseमा छ र Target unrealistic छ। यस्तो calculation self-deception हो।</p>
+
+<p>Good Risk-Reward realistic हुनुपर्छ। यदि stock Rs. 500 मा छ, Stop Loss Rs. 480 छ, Target Rs. 700 राख्नुभयो भने Risk-Reward 1:10 जस्तो देखिन्छ। तर बीचमा Rs. 530, Rs. 560, Rs. 600 मा strong Resistance छन् भने Rs. 700 target practical नहुन सक्छ। Risk-Reward calculation chart structureसँग मिल्नुपर्छ।</p>
+
+<p>Risk-Reward र win rate सँगै बुझ्नुपर्छ। यदि तपाईंको average Risk-Reward 1:2 छ भने तपाईंले सबै trade जित्नुपर्दैन। यदि 10 tradeमा 4 trade win र 6 trade loss भए पनि, winning tradeले losing trade cover गर्न सक्छ, यदि discipline ठीक छ भने।</p>
+
+<p>Simple example:</p>
+
+<ul>
+  <li>10 trades</li>
+  <li>Risk per trade: Rs. 1,000</li>
+  <li>Reward per winning trade: Rs. 2,000</li>
+  <li>Win: 4 trades = Rs. 8,000 profit</li>
+  <li>Loss: 6 trades = Rs. 6,000 loss</li>
+  <li>Net = Rs. 2,000 profit before costs</li>
+</ul>
+
+<p>तर यदि Risk-Reward 1:1 छ भने 50% भन्दा बढी win rate चाहिन्छ, transaction costपछि अझ बढी। यही कारण Risk-Reward trading performanceको backbone हो।</p>
+
+<!-- VISUAL 3: Win rate + RR math -->
+<div class="visual-block">
+  <div class="visual-title">10 Trade को गणित — 4 मात्र जिते पनि किन Profit? (1:2 RR)</div>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="360" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="24" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Risk Rs. 1,000 • Reward Rs. 2,000 (1:2) • 10 trade मा 4 win, 6 loss</text>
+
+    <!-- 10 trade boxes -->
+    <text x="40" y="60" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#2e7d32">जितेका 4 trade (हरेक +Rs. 2,000):</text>
+    <!-- 4 win bars (tall green) -->
+    <rect x="45" y="70" width="60" height="80" fill="#26a69a" rx="3"/>
+    <text x="75" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#fff">+2000</text>
+    <rect x="115" y="70" width="60" height="80" fill="#26a69a" rx="3"/>
+    <text x="145" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#fff">+2000</text>
+    <rect x="185" y="70" width="60" height="80" fill="#26a69a" rx="3"/>
+    <text x="215" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#fff">+2000</text>
+    <rect x="255" y="70" width="60" height="80" fill="#26a69a" rx="3"/>
+    <text x="285" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#fff">+2000</text>
+    <!-- total win -->
+    <rect x="330" y="70" width="120" height="80" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.5" rx="4"/>
+    <text x="390" y="105" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">जम्मा जित</text>
+    <text x="390" y="128" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#2e7d32">+Rs. 8,000</text>
+
+    <text x="40" y="185" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#c62828">हारेका 6 trade (हरेक −Rs. 1,000):</text>
+    <!-- 6 loss bars (short red) -->
+    <rect x="45" y="195" width="38" height="40" fill="#ef5350" rx="3"/>
+    <text x="64" y="219" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#fff">−1000</text>
+    <rect x="91" y="195" width="38" height="40" fill="#ef5350" rx="3"/>
+    <text x="110" y="219" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#fff">−1000</text>
+    <rect x="137" y="195" width="38" height="40" fill="#ef5350" rx="3"/>
+    <text x="156" y="219" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#fff">−1000</text>
+    <rect x="183" y="195" width="38" height="40" fill="#ef5350" rx="3"/>
+    <text x="202" y="219" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#fff">−1000</text>
+    <rect x="229" y="195" width="38" height="40" fill="#ef5350" rx="3"/>
+    <text x="248" y="219" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#fff">−1000</text>
+    <rect x="275" y="195" width="38" height="40" fill="#ef5350" rx="3"/>
+    <text x="294" y="219" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="700" fill="#fff">−1000</text>
+    <!-- total loss -->
+    <rect x="330" y="195" width="120" height="40" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.5" rx="4"/>
+    <text x="390" y="212" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#111">जम्मा हार</text>
+    <text x="390" y="228" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#c62828">−Rs. 6,000</text>
+
+    <!-- net result -->
+    <rect x="480" y="100" width="250" height="120" fill="#f0e6c0" stroke="#c9b97a" stroke-width="2" rx="8"/>
+    <text x="605" y="128" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#111">Net नतिजा:</text>
+    <text x="605" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#111">8,000 − 6,000</text>
+    <text x="605" y="188" text-anchor="middle" font-family="Roboto, sans-serif" font-size="22" font-weight="700" fill="#2e7d32">+Rs. 2,000</text>
+    <text x="605" y="208" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#555">profit! (cost अघि)</text>
+
+    <!-- key insight -->
+    <rect x="40" y="258" width="690" height="44" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3" rx="6"/>
+    <text x="385" y="280" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#2e7d32">केवल 40% trade जिते पनि profit — किनकि जित हार भन्दा 2× ठूलो</text>
+    <text x="385" y="296" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">राम्रो Risk-Reward भए सबै trade जित्नु पर्दैन</text>
+
+    <!-- contrast note -->
+    <rect x="40" y="312" width="690" height="34" fill="#fff8dc" stroke="#c8a800" stroke-width="1" rx="5"/>
+    <text x="385" y="334" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#111">तुलना: 1:1 RR भए 50%+ win rate चाहिन्छ (cost पछि अझ बढी) — त्यसैले RR नै backbone</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले Risk-Reward को सबैभन्दा शक्तिशाली सत्य देखाउँछ — राम्रो RR भए सबै trade जित्नु पर्दैन। उदाहरण: Risk Rs. 1,000, Reward Rs. 2,000 (1:2)। 10 trade मा केवल 4 जित्यो, 6 हार्‍यो (40% win rate मात्र!)। जित: 4 × Rs. 2,000 = +Rs. 8,000। हार: 6 × Rs. 1,000 = −Rs. 6,000। Net = +Rs. 2,000 profit! किन? किनकि हरेक जित (Rs. 2,000) हरेक हार (Rs. 1,000) भन्दा 2× ठूलो। तुलनामा, 1:1 RR भए 50% भन्दा बढी win rate चाहिन्छ (transaction cost पछि अझ बढी)। यही कारण Risk-Reward trading performance को backbone हो — win rate होइन, जित-हार को size अनुपात।
+</div>
+
+<p>Risk-Reward Ratio setup selectionमा filterको रूपमा प्रयोग गर्नुपर्छ। यदि setup राम्रो देखिन्छ तर Risk-Reward 1:1 भन्दा कम छ भने trade avoid गर्न सकिन्छ। धेरै swing trader कम्तीमा 1:1.5 वा 1:2 खोज्छन्। तर यो fixed law होइन। Strategy, win rate, market condition, and setup quality अनुसार फरक हुन सक्छ। Beginnerका लागि poor Risk-Reward trade avoid गर्नु राम्रो हुन्छ।</p>
+
+<p>Risk-Reward मा multiple target approach पनि प्रयोग गर्न सकिन्छ। उदाहरण:</p>
+
+<ul>
+  <li>Entry: Rs. 500</li>
+  <li>Stop Loss: Rs. 480</li>
+  <li>Risk: Rs. 20</li>
+  <li>Target 1: Rs. 540 = 1:2</li>
+  <li>Target 2: Rs. 560 = 1:3</li>
+</ul>
+
+<p>Traderले Target 1 मा partial profit book गर्न सक्छ र बाँकी quantity trailing stopमा राख्न सक्छ। यसले profit protect र upside participation दुवै दिन सक्छ। तर partial exit rule पहिले बनाइएको हुनुपर्छ।</p>
+
+<p>Breakout tradeमा Risk-Reward calculate गर्दा Stop Loss breakout level तल र Target next Resistanceसम्म राख्न सकिन्छ। यदि Breakout already धेरै माथि भइसकेको छ भने risk बढ्छ र reward घट्छ। यही कारण late Breakout chase poor Risk-Reward बनाउँछ।</p>
+
+<p>Pullback tradeमा Risk-Reward धेरै राम्रो हुन सक्छ, किनकि Entry support नजिक हुन्छ र Stop Loss support तल। Target previous high वा next Resistance हुन सक्छ। तर Pullback healthy हुनुपर्छ। Weak Pullbackमा राम्रो Risk-Reward देखिए पनि setup fail हुन सक्छ।</p>
+
+<!-- VISUAL 4: Good RR Pullback chart -->
+<div class="visual-block">
+  <div class="visual-title">Good Risk-Reward Pullback Trade — 1:3 (Scenario 1)</div>
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="420" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Entry Rs. 500 • SL Rs. 480 (Risk 20) • Target Rs. 560 (Reward 60) = 1:3</text>
+
+    <!-- Chart area -->
+    <rect x="40" y="60" width="560" height="280" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+
+    <!-- Y-axis -->
+    <text x="608" y="95" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 560</text>
+    <text x="608" y="200" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 500</text>
+    <text x="608" y="235" font-family="Roboto, sans-serif" font-size="10" fill="#555">Rs. 480</text>
+
+    <!-- Target zone (green) -->
+    <rect x="40" y="60" width="560" height="30" fill="#26a69a" fill-opacity="0.10"/>
+    <line x1="40" y1="90" x2="600" y2="90" stroke="#26a69a" stroke-width="1.6" stroke-dasharray="5,3"/>
+    <!-- Entry line -->
+    <line x1="40" y1="200" x2="600" y2="200" stroke="#111" stroke-width="1.3"/>
+    <!-- SL zone (red) -->
+    <line x1="40" y1="235" x2="600" y2="235" stroke="#ef5350" stroke-width="1.6" stroke-dasharray="5,3"/>
+    <rect x="40" y="235" width="560" height="20" fill="#ef5350" fill-opacity="0.08"/>
+
+    <!-- uptrend + pullback + entry + rally -->
+    <line x1="60" y1="270" x2="60" y2="292" stroke="#26a69a" stroke-width="1"/><rect x="56" y="273" width="8" height="16" fill="#26a69a"/>
+    <line x1="86" y1="250" x2="86" y2="273" stroke="#26a69a" stroke-width="1"/><rect x="82" y="253" width="8" height="16" fill="#26a69a"/>
+    <line x1="112" y1="225" x2="112" y2="250" stroke="#26a69a" stroke-width="1"/><rect x="108" y="228" width="8" height="18" fill="#26a69a"/>
+    <!-- swing high then pullback -->
+    <line x1="138" y1="195" x2="138" y2="218" stroke="#26a69a" stroke-width="1"/><rect x="134" y="198" width="8" height="16" fill="#26a69a"/>
+    <line x1="164" y1="205" x2="164" y2="228" stroke="#ef5350" stroke-width="1"/><rect x="160" y="208" width="8" height="16" fill="#ef5350"/>
+    <!-- pullback low near support, buyer reaction -->
+    <line x1="190" y1="210" x2="190" y2="240" stroke="#888" stroke-width="1.5"/><rect x="185" y="213" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <!-- entry candle Rs.500 -->
+    <line x1="216" y1="190" x2="216" y2="212" stroke="#26a69a" stroke-width="1.5"/><rect x="211" y="193" width="10" height="16" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="216" cy="196" r="5" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <!-- rally to target -->
+    <line x1="246" y1="175" x2="246" y2="195" stroke="#26a69a" stroke-width="1"/><rect x="242" y="178" width="8" height="14" fill="#26a69a"/>
+    <line x1="276" y1="158" x2="276" y2="178" stroke="#26a69a" stroke-width="1"/><rect x="272" y="161" width="8" height="14" fill="#26a69a"/>
+    <line x1="306" y1="140" x2="306" y2="160" stroke="#26a69a" stroke-width="1"/><rect x="302" y="143" width="8" height="14" fill="#26a69a"/>
+    <line x1="336" y1="125" x2="336" y2="145" stroke="#26a69a" stroke-width="1"/><rect x="332" y="128" width="8" height="14" fill="#26a69a"/>
+    <line x1="366" y1="110" x2="366" y2="130" stroke="#26a69a" stroke-width="1"/><rect x="362" y="113" width="8" height="14" fill="#26a69a"/>
+    <line x1="396" y1="98" x2="396" y2="116" stroke="#26a69a" stroke-width="1"/><rect x="392" y="100" width="8" height="14" fill="#26a69a"/>
+    <line x1="426" y1="90" x2="426" y2="108" stroke="#26a69a" stroke-width="1"/><rect x="422" y="92" width="8" height="13" fill="#26a69a"/>
+
+    <!-- reward/risk brackets -->
+    <line x1="470" y1="90" x2="470" y2="200" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="465" y1="90" x2="475" y2="90" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="465" y1="200" x2="475" y2="200" stroke="#26a69a" stroke-width="1.5"/>
+    <line x1="500" y1="200" x2="500" y2="235" stroke="#ef5350" stroke-width="1.5"/>
+    <line x1="495" y1="200" x2="505" y2="200" stroke="#ef5350" stroke-width="1.5"/>
+    <line x1="495" y1="235" x2="505" y2="235" stroke="#ef5350" stroke-width="1.5"/>
+
+    <!-- ===== CALLOUT BUBBLES ===== -->
+    <!-- Target bubble -->
+    <line x1="426" y1="95" x2="540" y2="100" stroke="#26a69a" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="540" y="82" width="180" height="36" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="630" y="98" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">Target Rs. 560 (Reward 60)</text>
+      <text x="630" y="112" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">next resistance / previous high</text>
+    </g>
+
+    <!-- Entry bubble -->
+    <line x1="216" y1="190" x2="216" y2="370" stroke="#26a69a" stroke-width="0.9" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="100" y="372" width="235" height="40" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+      <text x="217" y="390" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#2e7d32">Entry Rs. 500 (pullback bounce)</text>
+      <text x="217" y="404" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#111">support नजिक entry = SL नजिक = राम्रो RR</text>
+    </g>
+
+    <!-- SL bubble -->
+    <line x1="500" y1="235" x2="540" y2="250" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="540" y="232" width="180" height="36" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+      <text x="630" y="248" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#c62828">SL Rs. 480 (Risk 20)</text>
+      <text x="630" y="262" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#555">support तल, structure-based</text>
+    </g>
+
+    <text x="455" y="148" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Reward 60</text>
+    <text x="508" y="222" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Risk 20</text>
+
+    <!-- bottom RR -->
+    <rect x="40" y="350" width="60" height="0" fill="none"/>
+    <rect x="360" y="350" width="388" height="0" fill="none"/>
+  </svg>
+  <div style="margin-top:8px; padding:8px 14px; background:#eaf6ea; border:1px solid #26a69a; border-radius:4px; font-size:12px; font-weight:700; color:#2e7d32;">Risk 20 : Reward 60 = 1:3 — strong trend + healthy pullback + volume + strong sector भए trade योग्य</div>
+</div>
+<div class="visual-explanation">
+यो chart ले राम्रो Risk-Reward कस्तो हुन्छ देखाउँछ। Stock uptrend मा थियो, pullback आएर support नजिक buyer reaction (lower wick) देखियो, अनि Entry Rs. 500 मा भयो। यहाँ entry support को नजिक भएकाले Stop Loss पनि नजिक (Rs. 480, support तल) राख्न मिल्यो — Risk केवल Rs. 20। Target माथिको next resistance / previous high Rs. 560 — Reward Rs. 60। दायाँ ब्र्याकेटहरूले देखाउँछन्: Reward (60) Risk (20) भन्दा 3× ठूलो = 1:3। यही pullback setup को सुन्दरता हो — support नजिक entry गर्दा SL नजिक हुन्छ र reward ठूलो हुन्छ। तर pullback healthy हुनुपर्छ, volume र sector पनि supportive।
+</div>
+
+<p>Support Bounce setupमा Risk-Reward support नजिक Entry गर्दा राम्रो हुन्छ। तर if target range high धेरै नजिक छैन भने मात्र। यदि support र resistance बीचको distance कम छ भने tradeको reward पर्याप्त नहुन सक्छ।</p>
+
+<p>Range Trading setupमा Risk-Reward clear हुन्छ—Entry range low नजिक, Stop Loss range low तल, Target range high। यदि Entry range middleमा भयो भने Risk-Reward बिग्रिन्छ। यही कारण range middle avoid गरिन्छ।</p>
+
+<p>Base Breakout setupमा target range height वा next Resistance अनुसार सोच्न सकिन्छ। तर measured move guarantee होइन। Target realistic resistanceबाट adjust गर्नुपर्छ।</p>
+
+<p>Trend Continuation setupमा Risk-Reward calculate गर्दा previous high, next Resistance, and trailing potential हेर्नुपर्छ। Strong trendमा reward extended हुन सक्छ, तर entry overextended भए risk पनि बढ्छ।</p>
+
+<p>Risk-Reward Ratio र Position Sizing मिलेर काम गर्छन्। Risk per share Stop Loss distanceबाट आउँछ। Reward Targetबाट आउँछ। Quantity allowed riskबाट आउँछ। यदि Risk-Reward राम्रो छैन भने quantity बढाएर trade राम्रो बनाइँदैन। Poor tradeमा ठूलो quantity झन् खतरनाक हुन्छ।</p>
+
+<p>Transaction cost पनि Risk-Rewardमा जोड्नुपर्छ। NEPSEमा broker commission, tax, DP charge, and other chargesले net reward घटाउँछ र net risk बढाउँछ। विशेषगरी short-term small target tradesमा costको impact धेरै हुन्छ। Gross 1:1.5 trade netमा 1:1.2 जस्तो हुन सक्छ। त्यसैले practical traderले net result सोच्नुपर्छ।</p>
+
+<p>Risk-Reward Ratio को professional process:</p>
+
+<ul>
+  <li>Entry define गर्नु।</li>
+  <li>Stop Loss define गर्नु।</li>
+  <li>Target define गर्नु।</li>
+  <li>Risk per share calculate गर्नु।</li>
+  <li>Reward per share calculate गर्नु।</li>
+  <li>Risk-Reward Ratio calculate गर्नु।</li>
+  <li>Target realistic छ कि छैन जाँच्नु।</li>
+  <li>Stop Loss structure-based छ कि छैन जाँच्नु।</li>
+  <li>Transaction costपछि reward meaningful छ कि छैन हेर्नु।</li>
+  <li>Risk-Reward acceptable नभए trade avoid गर्नु।</li>
+</ul>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>NEPSE मा Risk-Reward Ratio अझै practical रूपमा महत्वपूर्ण छ, किनकि transaction cost, liquidity, price movement style, circuit, sector rotation, and manual executionले trade outcomeमा असर गर्छ।</p>
+
+<p>NEPSE मा धेरै trader target सुनेर trade गर्छन्—<strong>“यो stock 20% जान्छ।”</strong> तर उनीहरू Stop Loss कहाँ हो र Risk-Reward कति हो सोच्दैनन्। यदि Entry धेरै late छ, Stop Loss टाढा छ, and target realistic छैन भने trade risky हुन्छ।</p>
+
+<p>NEPSE मा Resistance levels धेरै important हुन्छन्। कुनै stock Rs. 500मा Entry छ, Stop Loss Rs. 470 छ, तर next strong Resistance Rs. 525मा छ भने reward Rs. 25 र risk Rs. 30 भयो। यो Risk-Reward कमजोर छ। Chart राम्रो देखिए पनि trade avoid गर्न सकिन्छ।</p>
+
+<p>NEPSE मा low liquidity stockमा target theoretically टाढा देखिन सक्छ, तर exit गर्न buyer नपाउन सक्छ। Risk-Reward paperमा राम्रो, executionमा खराब हुन सक्छ। त्यसैले liquidity पनि Risk-Rewardको हिस्सा हो।</p>
+
+<p>NEPSE मा circuit movementले reward आकर्षक देखाउन सक्छ। तर circuit stockमा Entry late भयो भने Stop Loss practical हुँदैन र exit risk धेरै हुन्छ। High reward देखेर low execution risk ignore गर्नु खतरनाक हुन्छ।</p>
+
+<p>NEPSE index र sector contextले target achieve हुने probability असर गर्छ। Strong sectorमा 1:2 target realistic हुन सक्छ। Weak sectorमा same target unrealistic हुन सक्छ। त्यसैले Risk-Reward केवल numbers होइन; context-adjusted probability पनि हो।</p>
+
+<p>NEPSEमा costको impact स्पष्ट बुझ्नुपर्छ। Broker commission, SEBON/other charges, DP charge, CGT, WACC, EDIS, settlement rules आदि net profit/lossमा जोडिन्छन्। यी rate/rule समयसँगै परिवर्तन हुन सक्छन्, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</p>
+
+<div class="warning-box">
+  <p style="margin-bottom:0;"><strong>यो rate/rule समयसँगै परिवर्तन हुन सक्छ, त्यसैले लगानी गर्नु अघि SEBON, NEPSE, CDSC, broker वा official source बाट verify गर्नुहोस्।</strong></p>
+</div>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>Risk-Reward Ratio traderलाई disciplined बनाउने psychological tool हो। जब traderलाई stock किन्न मन लाग्छ, Risk-Reward सोध्छ—<strong>“यदि गलत भए कति? यदि सही भए कति?”</strong> यो प्रश्नले FOMO कम गर्छ।</p>
+
+<p>Beginner प्रायः reward मात्र देख्छ। <strong>“यो stock 20% जान सक्छ।”</strong> तर professional trader पहिले risk देख्छ। <strong>“यदि trade fail भयो भने कति loss?”</strong> Reward देख्नु सजिलो छ। Risk स्वीकार्नु कठिन छ। तर tradingमा risk नदेख्ने trader लामो समय टिक्दैन।</p>
+
+<p>Risk-Rewardले greed पनि control गर्छ। Traderले unrealistic target राखेर trade justify गर्न सक्छ। <strong>“यो Rs. 500बाट Rs. 700 जान्छ”</strong> भनेर risk-reward राम्रो देखाउँछ। तर यदि chartमा strong resistance Rs. 540मै छ भने यो self-deception हो। Target realistic हुनुपर्छ।</p>
+
+<p>Risk-Rewardले fear पनि control गर्छ। यदि tradeमा risk Rs. 10 र reward Rs. 30 छ, setup clear छ, and position size सही छ भने trader calm हुन सक्छ। Loss आए पनि controlled छ। Win आए राम्रो reward छ। यो सोचले emotional pressure घटाउँछ।</p>
+
+<p>Risk-Rewardले missed tradeको regret पनि कम गर्छ। यदि stock राम्रो थियो तर Entry late भएर Risk-Reward खराब भयो भने professional trader avoid गर्छ। पछि stock बढे पनि ऊ process मान्छ। किनकि उसको काम हर move समात्नु होइन; good risk-reward setup मात्र लिनु हो।</p>
+
+<p>Risk-Reward psychology को मुख्य rule हो—<strong>“म profitको कल्पनाले trade गर्दिनँ; risk र rewardको वास्तविक तुलना गरेर trade गर्छु।”</strong></p>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<p>पहिलो गल्ती हो—Risk-Reward calculate नगरी trade गर्नु। Entry मात्र थाहा भएर trade अधुरो हुन्छ।</p>
+
+<p>दोस्रो गल्ती हो—Stop Loss unrealistically नजिक राख्नु। Risk कम देखाउन Stop Loss noise areaमा राख्नु गलत हो।</p>
+
+<p>तेस्रो गल्ती हो—Target unrealistically टाढा राख्नु। Reward धेरै देखाउन dream target राख्नु खतरनाक छ।</p>
+
+<p>चौथो गल्ती हो—Next Resistance ignore गर्नु। Target राख्दा chartका resistance zones हेर्नुपर्छ।</p>
+
+<p>पाँचौँ गल्ती हो—Late Entry गर्नु। Price धेरै बढेपछि Entry गर्दा Risk-Reward बिग्रिन्छ।</p>
+
+<p>छैटौँ गल्ती हो—Poor Risk-Reward tradeमा quantity बढाउनु। Quantity बढाएर खराब trade राम्रो हुँदैन।</p>
+
+<p>सातौँ गल्ती हो—Transaction cost ignore गर्नु। Small target tradesमा costले result कमजोर बनाउँछ।</p>
+
+<p>आठौँ गल्ती हो—1:1 trade लगातार लिनु। Costपछि net performance कमजोर हुन सक्छ।</p>
+
+<p>नवौँ गल्ती हो—Risk-Reward मात्र हेरेर setup quality ignore गर्नु। 1:3 देखिए पनि setup weak छ भने trade खतरनाक हुन्छ।</p>
+
+<p>दशौँ गल्ती हो—Probability ignore गर्नु। High Risk-Reward target realistic probabilityसँग मिल्नुपर्छ।</p>
+
+<p>एघारौँ गल्ती हो—Target पुगेपछि greed गर्नु। Plan अनुसार profit management चाहिन्छ।</p>
+
+<p>बाह्रौँ गल्ती हो—Stop Loss hit भएपछि Risk-Reward बदल्नु। Trade चलिसकेपछि rules बदल्नु discipline break हो।</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Dream target राखेर Risk-Reward राम्रो देखाउनु self-deception हो; target chart structureमा आधारित हुनुपर्छ</div>
+  <p style="margin-bottom:0;">Risk-Reward राम्रो बनाउने दुई गलत बाटा छन्, र दुवै आत्मधोका हुन्। पहिलो — Stop Loss लाई मनले entry नजिक सारेर risk सानो देखाउनु (तर त्यो noise area मा भएकाले normal volatility ले hit गर्छ)। दोस्रो — Target लाई chart मा कुनै आधार नभई धेरै टाढा राखेर reward ठूलो देखाउनु (तर बीचमा strong resistance छ भने त्यहाँ पुग्दैन)। Paper मा 1:10 देखिए पनि वास्तविक chart मा त्यो fake हुन्छ। साँचो Risk-Reward का लागि — Stop Loss structure (support/level/swing low) तल राख्ने, र Target realistic resistance/previous high/range high मा राख्ने। Trading मा आफैँलाई धोका दिने calculation ले account लाई धोका दिन्छ। ईमानदार number राख्नुस्।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<p>Risk-Reward Ratio का लागि यी rules प्रयोग गर्नुहोस्:</p>
+
+<ul>
+  <li>Entry गर्नु अघि Entry, Stop Loss, Target तीनै define गर्नुहोस्।</li>
+  <li>Risk = Entry - Stop Loss calculate गर्नुहोस्।</li>
+  <li>Reward = Target - Entry calculate गर्नुहोस्।</li>
+  <li>Risk-Reward Ratio स्पष्ट लेख्नुहोस्।</li>
+  <li>Stop Loss structure-based हुनुपर्छ।</li>
+  <li>Target realistic Resistance वा price structureमा आधारित हुनुपर्छ।</li>
+  <li>Risk-Reward कम्तीमा acceptable नभए trade avoid गर्नुहोस्।</li>
+  <li>Late Entryले Risk-Reward बिगार्छ, chase नगर्नुहोस्।</li>
+  <li>Target अगाडि strong Resistance छ कि छैन जाँच्नुहोस्।</li>
+  <li>Gross reward होइन, transaction costपछि net reward सोच्नुहोस्।</li>
+  <li>Risk-Reward राम्रो देखिए पनि setup quality weak छ भने trade नगर्नुहोस्।</li>
+  <li>High Risk-Reward target probabilityसँग मिल्छ कि छैन हेर्नुहोस्।</li>
+  <li>Partial target र trailing stop plan पहिले बनाउनुहोस्।</li>
+  <li>Stop Loss वा target trade पछि emotion अनुसार बदल्नु हुँदैन।</li>
+  <li>Trade journalमा planned Risk-Reward र actual result लेख्नुहोस्।</li>
+</ul>
+
+<p>Risk-Reward को मुख्य rule हो—<strong>Risk भन्दा reward ठूलो हुनुपर्छ, तर reward realistic पनि हुनुपर्छ।</strong></p>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: Good Risk-Reward Pullback Trade</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 500</p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 480</p>
+  <p style="margin-bottom:6px;">Target: Rs. 560</p>
+  <p style="margin-bottom:6px;">Risk = Rs. 20<br>Reward = Rs. 60<br><strong>Risk-Reward = 1:3</strong></p>
+  <p style="margin-bottom:0;">यदि setup strong trendमा healthy Pullback हो, Volume supportive छ, and sector strong छ भने यो trade विचार गर्न योग्य हुन सक्छ।</p>
+</div>
+
+<p><strong>Scenario 2: Poor Risk-Reward Breakout Chase</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 650</p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 600</p>
+  <p style="margin-bottom:6px;">Target: Rs. 700</p>
+  <p style="margin-bottom:6px;">Risk = Rs. 50<br>Reward = Rs. 50<br><strong>Risk-Reward = 1:1</strong></p>
+  <p style="margin-bottom:0;">Stock strong हुन सक्छ, तर Entry late छ। Stop Loss टाढा छ। Target next Resistance नजिक छ। Transaction costपछि net Risk-Reward कमजोर हुन्छ। Trade avoid गर्न सकिन्छ।</p>
+</div>
+
+<p><strong>Scenario 3: Fake Good Risk-Reward</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 500</p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 495</p>
+  <p style="margin-bottom:6px;">Target: Rs. 550</p>
+  <p style="margin-bottom:6px;">Paper Risk = Rs. 5<br>Reward = Rs. 50<br><strong>Risk-Reward = 1:10</strong></p>
+  <p style="margin-bottom:0;">तर actual support Rs. 480मा छ। Rs. 495 Stop Loss random र too tight छ। Normal volatilityले hit गर्न सक्छ। यो real 1:10 होइन; fake calculation हो।</p>
+</div>
+
+<p><strong>Scenario 4: Unrealistic Target</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Entry: Rs. 400</p>
+  <p style="margin-bottom:6px;">Stop Loss: Rs. 380</p>
+  <p style="margin-bottom:6px;">Target: Rs. 500</p>
+  <p style="margin-bottom:6px;">Risk = Rs. 20<br>Reward = Rs. 100<br><strong>Risk-Reward = 1:5</strong></p>
+  <p style="margin-bottom:0;">तर chartमा strong Resistance Rs. 430, Rs. 450, Rs. 470मा छ। Sector weak छ। Stock low liquidity छ। Rs. 500 target unrealistic हुन सक्छ। Practical target Rs. 430 भए Risk-Reward 1:1.5 मात्र हुन्छ।</p>
+</div>
+
+<p><strong>Scenario 5: Range Trade Risk-Reward</strong></p>
+<div class="content-box">
+  <p style="margin-bottom:6px;">Range Low: Rs. 300<br>Range High: Rs. 360</p>
+  <p style="margin-bottom:6px;">Entry: Rs. 310<br>Stop Loss: Rs. 295<br>Target: Rs. 355</p>
+  <p style="margin-bottom:6px;">Risk = Rs. 15<br>Reward = Rs. 45<br><strong>Risk-Reward = 1:3</strong></p>
+  <p style="margin-bottom:0;">Range low नजिक buyer reaction आएको छ भने setup राम्रो हुन सक्छ। तर यदि Entry Rs. 335मा भयो भने Risk Rs. 40, Reward Rs. 20 मात्र हुन्छ। Same stock, different entry, different quality.</p>
+</div>
+
+<!-- VISUAL 5: Poor RR Late Breakout vs Fake RR -->
+<div class="visual-block">
+  <div class="visual-title">Risk-Reward कसरी बिग्रिन्छ — Late Chase vs Fake SL (Scenario 2 & 3)</div>
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="400" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">दुई आत्मधोका — Late Entry ले reward घटाउँछ, Fake tight SL ले risk लुकाउँछ</text>
+
+    <!-- LEFT: Late Breakout Chase -->
+    <rect x="20" y="40" width="355" height="30" fill="#ef5350" rx="4"/>
+    <text x="197" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ Late Breakout Chase (1:1)</text>
+
+    <rect x="20" y="74" width="355" height="220" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- target near -->
+    <line x1="40" y1="100" x2="355" y2="100" stroke="#26a69a" stroke-width="1.3" stroke-dasharray="4,2"/>
+    <text x="45" y="96" font-family="sans-serif" font-size="8" fill="#2e7d32">Target Rs.700 (next resistance नजिक)</text>
+    <!-- late entry high -->
+    <line x1="40" y1="150" x2="355" y2="150" stroke="#111" stroke-width="1.3"/>
+    <!-- SL far -->
+    <line x1="40" y1="220" x2="355" y2="220" stroke="#ef5350" stroke-width="1.3" stroke-dasharray="4,2"/>
+
+    <!-- rising candles already extended -->
+    <line x1="55" y1="245" x2="55" y2="265" stroke="#26a69a" stroke-width="1"/><rect x="51" y="248" width="8" height="14" fill="#26a69a"/>
+    <line x1="80" y1="225" x2="80" y2="248" stroke="#26a69a" stroke-width="1"/><rect x="76" y="228" width="8" height="16" fill="#26a69a"/>
+    <line x1="105" y1="205" x2="105" y2="228" stroke="#26a69a" stroke-width="1"/><rect x="101" y="208" width="8" height="16" fill="#26a69a"/>
+    <line x1="130" y1="185" x2="130" y2="208" stroke="#26a69a" stroke-width="1"/><rect x="126" y="188" width="8" height="16" fill="#26a69a"/>
+    <line x1="155" y1="168" x2="155" y2="188" stroke="#26a69a" stroke-width="1"/><rect x="151" y="171" width="8" height="14" fill="#26a69a"/>
+    <!-- late entry candle -->
+    <line x1="185" y1="148" x2="185" y2="168" stroke="#26a69a" stroke-width="1.5"/><rect x="180" y="151" width="10" height="14" fill="#26a69a" stroke="#00897b" stroke-width="1"/>
+    <circle cx="185" cy="151" r="5" fill="#fff" stroke="#ef5350" stroke-width="2"/>
+
+    <!-- risk/reward brackets - both equal -->
+    <line x1="240" y1="100" x2="240" y2="150" stroke="#26a69a" stroke-width="1.4"/>
+    <text x="250" y="128" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Reward 50</text>
+    <line x1="320" y1="150" x2="320" y2="220" stroke="#ef5350" stroke-width="1.4"/>
+    <text x="278" y="190" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Risk 50</text>
+
+    <!-- bubble -->
+    <line x1="185" y1="165" x2="120" y2="280" stroke="#ef5350" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="30" y="258" width="320" height="30" rx="6" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+      <text x="190" y="277" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Late entry → Risk बढ्यो, reward घट्यो = 1:1</text>
+    </g>
+
+    <!-- RIGHT: Fake RR -->
+    <rect x="385" y="40" width="355" height="30" fill="#c8a800" rx="4"/>
+    <text x="562" y="60" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ Fake "1:10" (tight fake SL)</text>
+
+    <rect x="385" y="74" width="355" height="220" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- target -->
+    <line x1="405" y1="95" x2="720" y2="95" stroke="#26a69a" stroke-width="1.3" stroke-dasharray="4,2"/>
+    <text x="410" y="91" font-family="sans-serif" font-size="8" fill="#2e7d32">Target Rs.550</text>
+    <!-- entry -->
+    <line x1="405" y1="160" x2="720" y2="160" stroke="#111" stroke-width="1.3"/>
+    <text x="410" y="156" font-family="sans-serif" font-size="8" fill="#111">Entry Rs.500</text>
+    <!-- fake tight SL -->
+    <line x1="405" y1="172" x2="720" y2="172" stroke="#ef5350" stroke-width="1.3" stroke-dasharray="4,2"/>
+    <text x="600" y="170" font-family="sans-serif" font-size="8" font-weight="700" fill="#ef5350">Fake SL Rs.495</text>
+    <!-- REAL support far below -->
+    <line x1="405" y1="240" x2="720" y2="240" stroke="#26a69a" stroke-width="1.3" stroke-dasharray="6,2"/>
+    <text x="560" y="255" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#2e7d32">Real support Rs.480 (यहाँ SL हुनुपर्थ्यो)</text>
+
+    <!-- candles with wicks dipping below fake SL -->
+    <line x1="430" y1="150" x2="430" y2="175" stroke="#26a69a" stroke-width="1"/><rect x="426" y="153" width="8" height="14" fill="#26a69a"/>
+    <circle cx="430" cy="160" r="4" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <line x1="460" y1="155" x2="460" y2="195" stroke="#888" stroke-width="1.5"/><rect x="456" y="158" width="8" height="16" fill="#ef5350"/>
+    <line x1="490" y1="158" x2="490" y2="205" stroke="#888" stroke-width="1.5"/><rect x="486" y="161" width="8" height="18" fill="#ef5350"/>
+    <line x1="520" y1="160" x2="520" y2="200" stroke="#888" stroke-width="1.5"/><rect x="516" y="163" width="8" height="16" fill="#26a69a"/>
+
+    <!-- bubble -->
+    <line x1="490" y1="195" x2="560" y2="285" stroke="#c8a800" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <g>
+      <rect x="400" y="262" width="335" height="30" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.2"/>
+      <text x="567" y="281" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c8a800">Fake SL noise मा — wick ले hit, "1:10" काल्पनिक</text>
+    </g>
+
+    <!-- bottom lesson -->
+    <rect x="20" y="304" width="720" height="44" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="6"/>
+    <text x="380" y="326" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#111">दुवै case मा Risk-Reward कागजमा छल — वास्तविक chart मा खराब</text>
+    <text x="380" y="343" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#111">समाधान: समयमै entry (chase होइन) + SL real structure तल (नजिक sarera fake होइन)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो दुई chart ले Risk-Reward बिग्रिने दुई सामान्य आत्मधोका देखाउँछन्। बायाँ (Late Breakout Chase): price पहिले नै धेरै माथि गइसकेपछि late entry गर्‍यो — अब SL टाढा (Risk 50) र target/next resistance नजिक (Reward 50) = 1:1, कमजोर। दायाँ (Fake "1:10"): trader ले SL लाई entry नजिक Rs. 495 राखेर risk सानो (Rs. 5) देखायो, paper मा 1:10। तर real support त Rs. 480 मा थियो — Rs. 495 noise area मा भएकाले wick ले सजिलै hit गर्छ। त्यो 1:10 काल्पनिक हो। समाधान — समयमै entry गर्ने (chase नगर्ने) र SL real structure तल राख्ने (मनले नजिक नसार्ने)। ईमानदार number राख्दा मात्र Risk-Reward साँचो हुन्छ।
+</div>
+
+<!-- VISUAL 6: Range Low vs Range Middle entry RR -->
+<div class="visual-block">
+  <div class="visual-title">एउटै Stock, फरक Entry — Range Low vs Range Middle (Scenario 5)</div>
+  <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="760" height="380" fill="#fffdf5"/>
+
+    <!-- Title -->
+    <text x="380" y="22" text-anchor="middle" font-family="Roboto, sans-serif" font-size="13" font-weight="700" fill="#111">Range Rs. 300–360 — entry location ले Risk-Reward बनाउँछ वा बिगार्छ</text>
+
+    <!-- LEFT: Range Low entry (GOOD) -->
+    <rect x="20" y="42" width="355" height="30" fill="#26a69a" rx="4"/>
+    <text x="197" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✓ Range Low Entry Rs. 310 (1:3)</text>
+
+    <rect x="20" y="76" width="355" height="230" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <!-- range high -->
+    <line x1="40" y1="105" x2="355" y2="105" stroke="#ef5350" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <text x="45" y="101" font-family="sans-serif" font-size="8" fill="#c62828">Range High 360 (Target 355)</text>
+    <!-- range low -->
+    <line x1="40" y1="250" x2="355" y2="250" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <text x="45" y="246" font-family="sans-serif" font-size="8" fill="#2e7d32">Range Low 300</text>
+    <!-- entry near low -->
+    <line x1="40" y1="235" x2="355" y2="235" stroke="#111" stroke-width="1.3"/>
+    <!-- SL below low -->
+    <line x1="40" y1="265" x2="355" y2="265" stroke="#ef5350" stroke-width="1.3" stroke-dasharray="3,2"/>
+    <text x="250" y="262" font-family="sans-serif" font-size="8" fill="#c62828">SL 295</text>
+
+    <!-- entry marker near low -->
+    <circle cx="120" cy="235" r="6" fill="#fff" stroke="#26a69a" stroke-width="2"/>
+    <text x="120" y="226" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#2e7d32">Entry 310</text>
+
+    <!-- reward bracket (big) -->
+    <line x1="200" y1="105" x2="200" y2="235" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="208" y="175" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Reward 45</text>
+    <!-- risk bracket (small) -->
+    <line x1="290" y1="235" x2="290" y2="265" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="245" y="255" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Risk 15</text>
+
+    <rect x="35" y="278" width="320" height="22" fill="#eaf6ea" rx="3"/>
+    <text x="195" y="293" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#2e7d32">Risk 15 : Reward 45 = 1:3 ✓</text>
+
+    <!-- RIGHT: Range Middle entry (BAD) -->
+    <rect x="385" y="42" width="355" height="30" fill="#ef5350" rx="4"/>
+    <text x="562" y="62" text-anchor="middle" font-family="Roboto, sans-serif" font-size="12" font-weight="700" fill="#fff">✗ Range Middle Entry Rs. 335</text>
+
+    <rect x="385" y="76" width="355" height="230" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="405" y1="105" x2="720" y2="105" stroke="#ef5350" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <text x="410" y="101" font-family="sans-serif" font-size="8" fill="#c62828">Range High 360 (Target 355)</text>
+    <line x1="405" y1="250" x2="720" y2="250" stroke="#26a69a" stroke-width="1.4" stroke-dasharray="4,2"/>
+    <text x="410" y="246" font-family="sans-serif" font-size="8" fill="#2e7d32">Range Low 300</text>
+    <!-- entry in MIDDLE -->
+    <line x1="405" y1="160" x2="720" y2="160" stroke="#111" stroke-width="1.3"/>
+    <line x1="405" y1="265" x2="720" y2="265" stroke="#ef5350" stroke-width="1.3" stroke-dasharray="3,2"/>
+    <text x="615" y="262" font-family="sans-serif" font-size="8" fill="#c62828">SL 295</text>
+
+    <circle cx="485" cy="160" r="6" fill="#fff" stroke="#ef5350" stroke-width="2"/>
+    <text x="485" y="151" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="#c62828">Entry 335 (middle!)</text>
+
+    <!-- reward bracket (small) -->
+    <line x1="565" y1="105" x2="565" y2="160" stroke="#26a69a" stroke-width="1.5"/>
+    <text x="573" y="135" font-family="sans-serif" font-size="9" font-weight="700" fill="#2e7d32">Reward 20</text>
+    <!-- risk bracket (big) -->
+    <line x1="655" y1="160" x2="655" y2="265" stroke="#ef5350" stroke-width="1.5"/>
+    <text x="610" y="218" font-family="sans-serif" font-size="9" font-weight="700" fill="#c62828">Risk 40</text>
+
+    <rect x="400" y="278" width="320" height="22" fill="#ffe5e0" rx="3"/>
+    <text x="560" y="293" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#c62828">Risk 40 : Reward 20 = 1:0.5 ✗</text>
+
+    <!-- bottom -->
+    <rect x="20" y="318" width="720" height="30" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="5"/>
+    <text x="380" y="338" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#111">एउटै stock, एउटै target/SL — तर entry location ले RR उल्टो बनायो (range middle avoid)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले देखाउँछ — एउटै stock मा पनि entry कहाँ गर्‍यो त्यसले Risk-Reward बनाउँछ वा बिगार्छ। Stock range Rs. 300–360 मा छ। बायाँ (राम्रो): Entry range low नजिक Rs. 310, SL Rs. 295 (range low तल), Target range high Rs. 355। Risk केवल Rs. 15, Reward Rs. 45 = 1:3 — उत्कृष्ट। दायाँ (खराब): उही stock मा Entry range middle Rs. 335 मा गर्‍यो। SL उही Rs. 295 (अब टाढा = Risk Rs. 40), Target उही Rs. 355 (अब नजिक = Reward Rs. 20)। Risk-Reward 1:0.5 — उल्टो भयो! एउटै stock, एउटै target र SL, तर entry location ले सबै बदल्यो। यही कारण range middle avoid गरिन्छ — location ले Risk-Reward को गुणस्तर तय गर्छ।
+</div>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Risk-Reward Ratio Checklist</div>
+
+  <div class="checklist-sub">Before Trade:</div>
+  <ul>
+    <li>Entry price clear छ?</li>
+    <li>Stop Loss clear छ?</li>
+    <li>Target clear छ?</li>
+    <li>Stop Loss structure-based छ?</li>
+    <li>Target realistic resistanceमा आधारित छ?</li>
+    <li>Risk per share calculate गरिएको छ?</li>
+    <li>Reward per share calculate गरिएको छ?</li>
+    <li>Risk-Reward Ratio कति छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Quality Check:</div>
+  <ul>
+    <li>Risk-Reward कम्तीमा acceptable छ?</li>
+    <li>Target अगाडि major Resistance छ?</li>
+    <li>Entry late chase त होइन?</li>
+    <li>Stop Loss too tight छैन?</li>
+    <li>Stop Loss too wide छैन?</li>
+    <li>Target dream target त होइन?</li>
+    <li>Setup quality Risk-Rewardसँग मिल्छ?</li>
+    <li>Market र sector target support गर्छन्?</li>
+  </ul>
+
+  <div class="checklist-sub">NEPSE Practical Check:</div>
+  <ul>
+    <li>Liquidity पर्याप्त छ?</li>
+    <li>Exit target priceमा practical छ?</li>
+    <li>Transaction costपछि reward meaningful छ?</li>
+    <li>Stock circuit riskमा छैन?</li>
+    <li>Broker cost, tax, DP charge, and other charges ध्यानमा राखिएको छ?</li>
+  </ul>
+
+  <div class="checklist-sub">Psychology Check:</div>
+  <ul>
+    <li>म reward देखेर risk ignore गर्दैछु?</li>
+    <li>म risk कम देखाउन Stop Loss नजिक राख्दैछु?</li>
+    <li>म target टाढा राखेर trade justify गर्दैछु?</li>
+    <li>Risk-Reward खराब भए पनि trade लिन मन लागेको छ?</li>
+    <li>Trade छुट्यो भने पनि discipline राख्न सक्छु?</li>
+  </ul>
+
+  <div class="checklist-sub">Final Decision:</div>
+  <ul>
+    <li>Risk-Reward good + setup strong = Trade विचार गर्न सकिन्छ।</li>
+    <li>Risk-Reward average + setup strong = smaller size / wait।</li>
+    <li>Risk-Reward poor = Avoid।</li>
+    <li>Risk-Reward fake calculation = Avoid।</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1: Calculate 10 Risk-Rewards</div>
+  <p>10 वटा hypothetical trades बनाउनुहोस्। प्रत्येकमा Entry, Stop Loss, Target राखेर Risk-Reward calculate गर्नुहोस्।</p>
+  <p style="margin-bottom:0;">Format:<br>Entry:<br>Stop Loss:<br>Risk:<br>Target:<br>Reward:<br>Risk-Reward:<br>Trade / Avoid:</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2: 5 Watchlist Stocks</div>
+  <p>आफ्नो watchlistबाट 5 वटा stock छान्नुहोस्। प्रत्येकमा possible setup अनुसार लेख्नुहोस्:</p>
+  <ul>
+    <li>Entry Zone</li>
+    <li>Stop Loss Zone</li>
+    <li>Target 1</li>
+    <li>Target 2</li>
+    <li>Risk-Reward</li>
+    <li>Target realistic छ कि छैन?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3: Review 5 Successful Trades</div>
+  <p>5 वटा पुराना successful trade review गर्नुहोस्। प्रत्येकमा planned Risk-Reward के थियो? Actual profit planned targetसम्म आयो कि पहिले exit गर्नुभयो? किन?</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4: Review 5 Loss Trades</div>
+  <p>5 वटा loss trade review गर्नुहोस्:</p>
+  <ul>
+    <li>Risk-Reward trade अघि calculate गरिएको थियो?</li>
+    <li>Stop Loss realistic थियो?</li>
+    <li>Target realistic थियो?</li>
+    <li>Entry late थियो?</li>
+    <li>Risk-Reward राम्रो भएको भए trade लिनुहुन्थ्यो?</li>
+  </ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 5: Write Your Rules</div>
+  <p>एउटा rule लेख्नुहोस्:</p>
+  <p style="margin-bottom:8px;">“म ___ भन्दा कम Risk-Reward भएको trade सामान्यतया लिँदिनँ, जबसम्म setup अत्यन्त strong र win probability high छैन।”</p>
+  <p style="margin-bottom:8px;">“म target chart structureमा आधारित राख्छु, मनको इच्छा अनुसार होइन।”</p>
+  <p style="margin-bottom:0;">“म Stop Loss नजिक राखेर fake Risk-Reward बनाउँदिनँ।”</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p>Risk-Reward Ratio traderको profit imaginationलाई reality test गर्ने tool हो। Chart राम्रो देखिन्छ भन्ने मात्र पर्याप्त छैन। Risk कति छ? Reward कति छ? Target realistic छ? Stop Loss logical छ? यी प्रश्नले tradeको वास्तविक quality देखाउँछन्।</p>
+  <p>Good trader प्रत्येक tradeमा सही हुन खोज्दैन। Good trader गलत हुँदा सानो गुमाउन र सही हुँदा राम्रो कमाउन खोज्छ। यही Risk-Reward को power हो।</p>
+  <p>Risk-Reward राम्रो देखाउन Stop Loss नजिक सार्नु वा target टाढा बनाउनु आत्मधोका हो। Trading मा ईमानदार calculation चाहिन्छ। गलत calculationले accountलाई धोका दिन्छ।</p>
+  <p style="margin-bottom:0;">यदि Risk-Reward नमिले trade छोड्नुहोस्। Marketमा अर्को setup आउँछ। Poor Risk-Reward tradeमा capital risk गर्नु professional होइन।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 41 Summary</div>
+  <p>Risk-Reward Ratio भनेको tradeमा सम्भावित loss र सम्भावित profitको तुलना हो। Risk Entry र Stop Loss बीचको फरक हो। Reward Entry र Target बीचको फरक हो। Risk-Reward ले traderलाई trade लिन योग्य छ कि छैन भनेर मूल्यांकन गर्न मद्दत गर्छ।</p>
+  <p>Risk-Reward राम्रो हुनका लागि Stop Loss realistic र structure-based हुनुपर्छ। Target पनि chart structure, Resistance, range, measured move, or market contextमा आधारित हुनुपर्छ। Stop Loss unrealistically नजिक र target unrealistically टाढा राखेर calculation राम्रो देखाउनु गलत हो।</p>
+  <p>Trading मा सबै trade win हुँदैनन्। राम्रो Risk-Reward ले moderate win rate भए पनि traderलाई profit सम्भावना दिन सक्छ। Poor Risk-Rewardमा high win rate चाहिन्छ र transaction costले result कमजोर बनाउन सक्छ।</p>
+  <p>NEPSE मा Risk-Reward calculate गर्दा liquidity, sector context, NEPSE index, next Resistance, transaction cost, circuit risk, and practical exit possibility ध्यान दिनुपर्छ। Gross target होइन, net result सोच्नुपर्छ।</p>
+  <p>Risk-Reward Ratio setup selectionको महत्वपूर्ण filter हो। Risk-Reward मिलेन भने setup राम्रो देखिए पनि trade avoid गर्न सकिन्छ। Trade लिनुअघि Entry, Stop Loss, Target, Position Size, and Invalidation सबै स्पष्ट हुनुपर्छ।</p>
+  <p style="margin-bottom:0;">यो chapter को मुख्य lesson यही हो—Stock बढ्छ कि घट्छ भन्ने अनुमानभन्दा पहिले, गलत भए कति गुम्छ र सही भए कति कमाउन सकिन्छ भन्ने स्पष्ट हिसाब गर्नुहोस्।</p>
+</div>
+
+<div class="closing-quote">
+  सफल trader rewardको सपना देखेर risk बिर्सिँदैन;<br>
+  ऊ पहिले riskलाई नाप्छ, rewardलाई realistic बनाउँछ,<br>
+  अनि मात्र trade योग्य छ कि छैन<br>
+  निर्णय गर्छ।
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 74: IPO पर्यो, Sell गर्ने कि Hold गर्ने? — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+.sub-heading { font-family: 'Roboto', sans-serif; font-size: 17px; font-weight: 700; color: #111; margin: 26px 0 12px; }
+.sub-heading2 { font-family: 'Roboto', sans-serif; font-size: 15.5px; font-weight: 700; color: #111; margin: 20px 0 10px; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+blockquote { background: #fffdf5; border-left: 4px solid #c9b97a; border-radius: 0 4px 4px 0; padding: 16px 22px; margin: 20px 0; font-size: 15px; font-style: italic; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul, ol { margin: 14px 0 14px 28px; }
+ul li, ol li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 13.5px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 25px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 20px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li, ol li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 74</div>
+  <h1 class="chapter-title">IPO पर्यो, Sell गर्ने कि Hold गर्ने?</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>लामो समयदेखि प्रत्येक कम्पनीको आईपीओ (IPO) मा रु. १,००० को दरले लगातार १० कित्ता आवेदन दिँदै आएका अनिललाई अन्ततः एउटा हाइड्रोपावर कम्पनीको आईपीओ हात पर्‍यो। सिडिएससी (CDSC) को वेबसाइटमा 'Allotted: 10' देख्दा उसको खुसीको सीमा रहेन।</p>
+
+<p>नेपाल स्टक एक्सचेन्ज (NEPSE) मा सो सेयर सूचीकृत (Listing) भएको केही दिनमै त्यसको मूल्य लगातार सकारात्मक सर्किट (Positive Circuit) हान्दै ओरालोबाट उकालोतर्फ तीव्र गतिमा बढ्न थाल्यो। टिएमएस (TMS) को स्क्रिनमा उसको सानो पोर्टफोलियो निकै सुन्दर हरियो रङमा चमक बिखेरिरहेको देखिन्थ्यो। रु. १,००० को लगानी हेर्दाहेर्दै रु. ४,००० र रु. ५,००० को आकार ग्रहण गरिरहेको थियो।</p>
+
+<p>अब अनिलको मनमा एउटा कडा र स्वभाविक प्रश्नले डेरा जमाउन थाल्यो: “यो बढेको मूल्यमै अहिले सबै सेयर बेचूँ कि अझै धेरै माथि जान्छ भनेर Hold गरूँ?”</p>
+
+<p>उसले आफ्ना सेयर बजारमा लगानी गर्ने विभिन्न साथीहरूसँग यसबारे राय माग्यो, तर विडम्बना, सबैले सर्वथा फरक-फरक र विरोधाभासपूर्ण सल्लाह दिए:</p>
+<ul>
+  <li>एउटा नजिकको ट्रेडर साथीले भन्यो: “अरे अनिल, स्क्रिनमा नाफा देखिनेबित्तिकै तुरुन्त बेचिदेऊ, खल्तीको नाफा मात्र वास्तविक नाफा हो!”</li>
+  <li>अफिसको अर्को साथीले सल्लाह दियो: “हैन-हैन, यो कम्पनीको भविष्य र प्रोजेक्ट निकै ठूलो छ, यो त भविष्यमा धेरै माथि जान्छ, नबेच!”</li>
+  <li>चिया पसलमा भेटिएका अग्रज लगानीकर्ताले ठोकुवा गरे: “कम्पनीले छिट्टै Bonus र Right Share ल्याउँदै छ, बोनस खानु पर्छ, नबेच!”</li>
+  <li>फेसबुकको एउटा पपुलर ग्रुपका एड्मिनले लेखे: “आईपीओ परेको सेयर त भगवानको प्रसाद हो, यसलाई त जहिले पनि वर्षौँसम्म Hold गर्ने हो, बेच्ने मूर्खता नगर!”</li>
+</ul>
+
+<p>सबैका उत्तर र तर्कहरू यति धेरै फरक र आ-आफ्नै ठाउँमा अकाट्य थिए कि अनिल झन् ठूलो मानसिक अन्योल र असमञ्जसको चक्रव्यूहमा फस्यो। तर, ती सबै फरक सल्लाहहरूको केन्द्रमा रहेको वास्तविक र मूल प्रश्न भने एउटै मात्र थियो: <strong>आईपीओ परेको सेयरलाई आखिर कुन विन्दुमा र कुन आधारमा Sell गर्ने कि Hold गर्ने?</strong></p>
+
+<!-- VISUAL 1: Anil's IPO listing rise + 4 conflicting advices -->
+<div class="visual-block">
+  <div class="visual-title">अनिलको अलमल्ल — IPO बढ्यो, चार फरक सल्लाह</div>
+  <svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="380" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">IPO पर्‍यो → Listing मा सर्किट → के गर्ने?</text>
+
+    <!-- rising circuit chart -->
+    <rect x="40" y="62" width="330" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <polyline points="70,235 130,200 190,165 250,120 320,82" fill="none" stroke="#26a69a" stroke-width="3.4"/>
+    <circle cx="70" cy="235" r="7" fill="#fff" stroke="#2962ff" stroke-width="3"/>
+    <circle cx="320" cy="82" r="7" fill="#26a69a"/>
+    <text x="70" y="255" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#1a56cc">रु.१,०००</text>
+    <text x="320" y="74" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#2e7d32">रु.५,०००</text>
+    <text x="205" y="150" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#555">सर्किट हान्दै 🟢</text>
+
+    <!-- 4 advices -->
+    <rect x="390" y="60" width="395" height="48" rx="9" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="587" y="80" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c62828">"तुरुन्त बेचिदेऊ!" — ट्रेडर साथी</text>
+    <text x="587" y="99" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">खल्तीको नाफा मात्र वास्तविक</text>
+
+    <rect x="390" y="116" width="395" height="48" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+    <text x="587" y="136" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#2e7d32">"नबेच, भविष्य ठूलो छ!" — अफिस साथी</text>
+    <text x="587" y="155" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">प्रोजेक्ट धेरै माथि जान्छ</text>
+
+    <rect x="390" y="172" width="395" height="48" rx="9" fill="#fff8dc" stroke="#c8a800" stroke-width="1.3"/>
+    <text x="587" y="192" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c8a800">"बोनस खानु पर्छ, नबेच!" — अग्रज</text>
+    <text x="587" y="211" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">Bonus + Right आउँदै</text>
+
+    <rect x="390" y="228" width="395" height="48" rx="9" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/>
+    <text x="587" y="248" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#1a56cc">"प्रसाद हो, वर्षौँ Hold!" — FB एड्मिन</text>
+    <text x="587" y="267" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555">बेच्ने मूर्खता नगर</text>
+
+    <rect x="110" y="296" width="600" height="62" rx="10" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1.4"/>
+    <text x="410" y="324" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#111">मूल प्रश्न एउटै:</text>
+    <text x="410" y="348" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">कुन विन्दुमा, कुन आधारमा Sell कि Hold?</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले अनिलको अलमल्ल देखाउँछ। बायाँ — उसलाई IPO पर्‍यो, Listing पछि सेयरले लगातार सकारात्मक सर्किट हान्दै रु.१,००० बाट रु.५,००० पुग्यो, पोर्टफोलियो हरियो भयो। दायाँ — साथीहरूले चार पूरै फरक, विरोधाभासी सल्लाह दिए: ट्रेडर साथी "तुरुन्त बेचिदेऊ, खल्तीको नाफा मात्र वास्तविक"; अफिस साथी "नबेच, भविष्य ठूलो छ"; अग्रज "बोनस खानु पर्छ, नबेच"; FB एड्मिन "प्रसाद हो, वर्षौँ Hold गर"। सबै आ-आफ्नो ठाउँमा अकाट्य थिए, जसले अनिललाई झन् अन्योलमा पार्‍यो। तल — मुख्य पाठ: यी सबै सल्लाहको केन्द्रमा रहेको वास्तविक प्रश्न एउटै हो — IPO परेको सेयरलाई <strong>कुन विन्दुमा र कुन आधारमा Sell कि Hold गर्ने?</strong> यो chapter ले हल्लाको होइन, तथ्य र योजनाको आधारमा यो निर्णय गर्न सिकाउँछ।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>नेपालको वित्तीय परिवेशमा ९०% भन्दा बढी मानिसहरूको सेयर बजार (Share Market) को पहिलो पाइला वा यात्रा नै आईपीओ (IPO) को आवेदनबाट सुरु हुने गर्छ। नेपालमा आईपीओ एउटा ठूलो उत्सव र संस्कृतिको रूपमा स्थापित भइसकेको छ। लाखौँ लगानीकर्ताहरूको दैनिक दिनचर्या नै:</p>
+<ul>
+  <li>नयाँ आईपीओ कहिले खुल्छ भनी भर्नु</li>
+  <li>सिडिएससीको मेरोसेयर (MeroShare) मा नतिजा (Result) हेर्नु</li>
+  <li>र बजारमा सेयर कति मूल्यमा सूचीकृत (Listing) हुन्छ भनी पर्खनु</li>
+</ul>
+<p>मा नै नियमित रूपमा घुमिरहेको हुन्छ। तर एउटा अत्यन्तै महत्वपूर्ण, प्राविधिक र रणनीतिक कुरामा धेरैजसो मानिसहरूले कहिल्यै गहिरिएर सोच्दैनन्: <strong>आईपीओ परेर डिम्याटमा आइसकेपछि, त्यसलाई व्यवस्थापन कसरी गर्ने?</strong></p>
+
+<p>किनकि, आईपीओ पर्नु भनेको बजारमा तपाईंको केवल एउटा भाग्यमानी प्रवेश (Entry) मात्र हो। तर, सूचीकरण पछि त्यसलाई कडा अनुशासनका साथ <strong>Sell वा Hold गर्ने निर्णय लिनु नै बजारको वास्तविक खेल हो</strong>, जसले तपाईंलाई एक सिकारु र व्यावसायिक लगानीकर्ताको रूपमा वर्गीकरण गर्छ।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>सेयर बजारमा <strong>"आईपीओ परेको सेयरलाई सधैँ वर्षौँसम्म Hold नै गरेर राख्नुपर्छ"</strong> भन्ने कुनै पनि कानुनी वा प्राविधिक नियम छैन।</p>
+
+<p>र, <strong>"आईपीओ परेको सेयर बजार खुल्नेबित्तिकै वा पहिलो हप्तामै तुरुन्त बेचेर निस्कनुपर्छ"</strong> भन्ने नियम पनि बजारको इतिहासमा कतै लेखिएको छैन।</p>
+
+<p>तपाईंको अन्तिम निर्णय पूर्ण रूपमा निम्न ४ वटा मुख्य प्राविधिक र वित्तीय स्तम्भहरूमा आधारित र निर्भर हुनुपर्छ:</p>
+<ul>
+  <li><strong>Company Quality:</strong> कम्पनीको आन्तरिक वित्तीय अवस्था र जग कत्तिको बलियो छ?</li>
+  <li><strong>Valuation:</strong> सूचीकरण पछि सेयरको मूल्य त्यसको वास्तविक वित्तीय धरातल भन्दा अत्यधिक महँगो (Overvalued) भएको छ कि सस्तो छ?</li>
+  <li><strong>Growth Potential:</strong> भविष्यमा कम्पनीको व्यवसाय र नाफा विस्तार हुने सम्भावना कस्तो छ?</li>
+  <li><strong>Your Goal:</strong> बजारमा तपाईंको आफ्नो व्यक्तिगत आर्थिक उद्देश्य वा योजना के हो?</li>
+</ul>
+
+<!-- VISUAL 2: 4 pillars of IPO sell/hold decision -->
+<div class="visual-block">
+  <div class="visual-title">निर्णयका ४ स्तम्भ — कुनै एउटा सूत्र छैन</div>
+  <svg viewBox="0 0 820 250" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="250" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">Sell कि Hold? — ४ कुरामा भर पर्छ</text>
+
+    <rect x="35" y="64" width="180" height="160" rx="12" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.8"/>
+    <text x="125" y="100" text-anchor="middle" font-family="sans-serif" font-size="30">🏛️</text>
+    <text x="125" y="134" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1a56cc">Company Quality</text>
+    <text x="125" y="162" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">कम्पनीको जग</text>
+    <text x="125" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">कत्तिको बलियो?</text>
+
+    <rect x="225" y="64" width="180" height="160" rx="12" fill="#fff8dc" stroke="#c8a800" stroke-width="1.8"/>
+    <text x="315" y="100" text-anchor="middle" font-family="sans-serif" font-size="30">⚖️</text>
+    <text x="315" y="134" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#c8a800">Valuation</text>
+    <text x="315" y="162" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">मूल्य महँगो</text>
+    <text x="315" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">(Overvalued)?</text>
+
+    <rect x="415" y="64" width="180" height="160" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+    <text x="505" y="100" text-anchor="middle" font-family="sans-serif" font-size="30">🌱</text>
+    <text x="505" y="134" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#2e7d32">Growth Potential</text>
+    <text x="505" y="162" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">भविष्यमा विस्तार</text>
+    <text x="505" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">सम्भावना?</text>
+
+    <rect x="605" y="64" width="180" height="160" rx="12" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.8"/>
+    <text x="695" y="100" text-anchor="middle" font-family="sans-serif" font-size="30">🎯</text>
+    <text x="695" y="134" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#6d28d9">Your Goal</text>
+    <text x="695" y="162" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">तपाईंको आफ्नो</text>
+    <text x="695" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">उद्देश्य के?</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले IPO Sell कि Hold निर्णयका ४ मुख्य स्तम्भ देखाउँछ — कुनै एउटै सूत्र छैन, यी चारैमा भर पर्छ। <strong>Company Quality 🏛️</strong>: कम्पनीको आन्तरिक वित्तीय अवस्था र जग कत्तिको बलियो छ? <strong>Valuation ⚖️</strong>: Listing पछि मूल्य वास्तविक वित्तीय धरातल भन्दा अत्यधिक महँगो (Overvalued) भयो कि सस्तो छ? <strong>Growth Potential 🌱</strong>: भविष्यमा कम्पनीको व्यवसाय र नाफा विस्तार हुने सम्भावना कस्तो छ? <strong>Your Goal 🎯</strong>: बजारमा तपाईंको आफ्नो व्यक्तिगत आर्थिक उद्देश्य के हो (Listing Gain कि Long-term)? मुख्य पाठ — "IPO सधैँ Hold गर्नुपर्छ" वा "तुरुन्तै बेच्नुपर्छ" भन्ने कुनै नियम छैन; निर्णय यी चार स्तम्भको सन्तुलित विश्लेषणबाट मात्र निस्कन्छ।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<div class="sub-heading">पहिलो र आधारभूत प्रश्न: "तपाईं आईपीओ किन भर्नुहुन्थ्यो?"</div>
+<p>यो एउटा यस्तो आधारभूत प्रश्न हो, जसको उत्तर स्पष्ट नभई लिइने कुनै पनि निर्णय वित्तीय रूपमा सही हुन सक्दैन। यदि तपाईंले आईपीओको आवेदन दिँदा तपाईंको मनको भित्री उत्तर:</p>
+<ul>
+  <li><strong>"केवल Listing Gain (सूचीकृत हुनासाथ आउने सुरुवाती नाफा) लिनका लागि हो।"</strong> भन्ने थियो भने, तपाईंको बिक्री गर्ने निर्णय र रणनीति विल्कुलै फरक हुन्छ।</li>
+  <li><strong>"दीर्घकालीन लगानी (Long-term Investment) गरेर वर्षौँसम्म सम्पत्ति निर्माण गर्नका लागि हो।"</strong> भन्ने थियो भने, तपाईंको सोच्ने र होल्ड गर्ने रणनीति पूर्ण रूपमा फरक हुन्छ।</li>
+</ul>
+
+<div class="sub-heading">१. Listing Gain Strategy (सुरुवाती नाफा लिने रणनीति)</div>
+<p>बजारमा केही रणनीतिक कारोबारी वा लगानीकर्ताहरूको उद्देश्य सुरुदेखि नै एकदमै स्पष्ट र पारदर्शी हुन्छ। उनीहरू आईपीओ केवल पहिलो केही दिन वा हप्तामा आउने तीव्र मूल्य वृद्धिको फाइदा (Listing Gain) उठाउनका लागि मात्र भर्छन्।</p>
+<p>यदि सूचीकरण पछि सेयरको मूल्य लगातार सर्किट हान्दै एउटा राम्रो उचाइमा पुग्छ र बजारमा खरिदकर्ताहरूको चाप (Demand) घट्न थाल्छ भने, उनीहरू:</p>
+<ul>
+  <li>आफ्नो नाफा (Profit) बुक गर्छन्।</li>
+  <li>पूँजीलाई नगदमा बदल्छन्।</li>
+  <li>र सो पूँजीलाई बजारको अर्को नयाँ अवसर वा आईपीओमा लगाउनका लागि तयार राख्छन्।</li>
+</ul>
+<p>यदि तपाईंको सुरुको योजना नै यही थियो भने, मूल्य अत्यधिक माथि पुगेको बेला सेयर बेचेर निस्कनु प्राविधिक रूपमा विल्कुलै गलत होइन।</p>
+
+<div class="sub-heading">२. Long-term Investing Strategy (दीर्घकालीन लगानी रणनीति)</div>
+<p>अर्कोतर्फ, केही परिपक्व र अनुभवी इन्भेस्टरहरू आईपीओलाई केवल सानो नाफा कमाउने चिठ्ठाको रूपमा नहेरी, बरु एउटा उत्कृष्ट र उदाउँदो व्यवसायमा सुरुवाती चरणमै सस्तो मूल्यमा स्वामित्व (Ownership) प्राप्त गर्ने एउटा सुनौलो अवसरको रूपमा हेर्छन्।</p>
+<p>उनीहरू सेयरको दैनिक मूल्यको उतारचढाव भन्दा माथि उठेर कम्पनीका यी तीन पक्षहरूलाई गहिराइमा अध्ययन गर्छन्:</p>
+<ul>
+  <li><strong>कम्पनीको दीर्घकालीन भविष्य र सेवाको माग</strong></li>
+  <li><strong>प्रतिसेयर आम्दानी (EPS) र खुद नाफाको वृद्धिदर (Earnings Growth)</strong></li>
+  <li><strong>आफ्नो क्षेत्रमा कम्पनीको भौतिक विस्तार र क्षमता (Expansion Potential)</strong></li>
+</ul>
+<p>यस्ता दृष्टिकोण भएका लगानीकर्ताहरू केवल सुरुवाती महिनाको Listing Price वा बजारको हल्ला हेरेर आफ्नो सेयर हतार-हतार बेच्ने निर्णय कदापि गर्दैनन्।</p>
+
+<!-- VISUAL 3: Listing Gain vs Long-term Holding (covers Chart 74.2) -->
+<div class="visual-block">
+  <div class="visual-title">Listing Gain vs Long-term Hold — दुई फरक यात्रा (Chart 74.2)</div>
+  <svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="340" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">दुई फरक उद्देश्य → दुई फरक रणनीति</text>
+
+    <rect x="60" y="58" width="700" height="210" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="60" y1="248" x2="760" y2="248" stroke="#999" stroke-width="1"/>
+    <line x1="60" y1="58" x2="60" y2="248" stroke="#999" stroke-width="1"/>
+
+    <!-- listing gain: rise then exit early -->
+    <polyline points="80,235 160,180 240,120 300,95" fill="none" stroke="#c8a800" stroke-width="3.2"/>
+    <circle cx="300" cy="95" r="8" fill="#fff" stroke="#c8a800" stroke-width="3.2"/>
+    <line x1="300" y1="95" x2="300" y2="60" stroke="#c8a800" stroke-width="1.4" stroke-dasharray="4,3"/>
+
+    <!-- long-term: dips then big compounding rise -->
+    <path d="M 80 235 Q 200 150 300 160 Q 380 168 460 140 Q 560 100 720 70" fill="none" stroke="#26a69a" stroke-width="3.4"/>
+    <circle cx="720" cy="70" r="8" fill="#26a69a"/>
+
+    <!-- labels away from lines -->
+    <rect x="180" y="64" width="240" height="26" rx="7" fill="#fff8dc" stroke="#c8a800" stroke-width="1.3"/>
+    <text x="300" y="83" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c8a800">Listing Gain → चाँडै Exit</text>
+    <rect x="500" y="266" width="260" height="26" rx="7" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+    <text x="630" y="285" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#2e7d32">Long-term Hold → Compounding</text>
+
+    <text x="150" y="300" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">समय (छोटो) →</text>
+    <text x="620" y="316" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">समय (वर्षौँ) → ठूलो प्रतिफल</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले दुई फरक IPO रणनीतिको यात्रा देखाउँछ (Chart 74.2)। पहेँलो रेखा (<strong>Listing Gain</strong>): यो लगानीकर्ताको उद्देश्य सुरुदेखि स्पष्ट छ — Listing पछिको सुरुवाती तीव्र मूल्य वृद्धिको फाइदा लिने। मूल्य राम्रो उचाइमा पुग्दा र माग घट्न थाल्दा नाफा बुक गरेर चाँडै Exit हुन्छ, पूँजी अर्को अवसरका लागि तयार राख्छ। हरियो रेखा (<strong>Long-term Hold</strong>): यो लगानीकर्ताले बलियो Fundamental भएको कम्पनीमा सुरुमै सस्तो स्वामित्व पायो; बीचमा साना उतारचढाव आए पनि बेचेन, वर्षौँसम्म Hold गर्‍यो — समयसँगै Compounding ले मूल्य धेरै माथि पुग्यो। मुख्य पाठ — दुवै सही हुन सक्छन्, तर उद्देश्य फरक छ। Listing Gain को लागि चाँडै बेच्नु गलत होइन; तर बलियो कम्पनीमा Long-term लक्ष्य भए सानो नाफामा बेच्दा भविष्यको ठूलो प्रतिफल गुम्छ। पहिले आफ्नो उद्देश्य स्पष्ट पार्नुपर्छ।
+</div>
+
+<div class="sub-heading">सबै IPO राम्रो हुँदैनन् (The Harsh Reality)</div>
+<p>यो एउटा यस्तो तीतो सत्य हो, जुन हरेक नयाँ लगानीकर्ताले आफ्नो दिमागमा कडा रूपमा अंकित गर्नुपर्छ। धेरैजसो Beginner हरूमा एउटा ठूलो भ्रम हुन्छ: <strong>“आईपीओमा रु. १०० मा पाइने सेयर भनेको जहिले पनि र जुनसुकै अवस्थामा पनि एउटा उत्कृष्ट लगानी हो।”</strong></p>
+<p>तर बजारको यथार्थ विल्कुलै फरक छ। <strong>आईपीओ भनेको केवल कम्पनीले बजारबाट पूँजी संकलन गर्ने र सेयर वितरण गर्ने एउटा 'माध्यम' वा प्रकृया मात्र हो।</strong> आईपीओ जारी गर्दैमा कुनै कम्पनी रातारात उत्कृष्ट र नाफामूलक बन्न सक्दैन। कम्पनी भित्रबाट वास्तवमै बलियो छ कि वित्तीय रूपमा खोक्रो र ऋणले थिचिएको छ भन्ने प्रश्न पूर्ण रूपमा अलग र गम्भीर अध्ययनको विषय हो।</p>
+
+<div class="sub-heading">निर्णय लिनुअघि अनिवार्य रूपमा हेर्नुपर्ने ५ मुख्य कुराहरू</div>
+<p>आईपीओ परेको सेयर बेच्ने कि राख्ने भन्ने द्विविधा हुँदा निम्न पाँचवटा वित्तीय र प्राविधिक सूचकहरूको कडा विश्लेषण गर्नुपर्छ:</p>
+
+<!-- VISUAL 4: IPO Evaluation 5 core pillars (ASCII tree -> SVG) -->
+<div class="visual-block">
+  <div class="visual-title">IPO मूल्याङ्कनका ५ मुख्य स्तम्भ</div>
+  <svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="340" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">निर्णय अघि ५ कुरा जाँच्ने</text>
+
+    <rect x="290" y="58" width="240" height="44" rx="10" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1.8"/>
+    <text x="410" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#111">IPO Core Pillars</text>
+
+    <line x1="410" y1="102" x2="410" y2="118" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="410" y1="118" x2="410" y2="130" stroke="#c9b97a" stroke-width="2"/>
+
+    <!-- 5 rows -->
+    <rect x="120" y="130" width="580" height="36" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.4"/>
+    <text x="148" y="154" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1a56cc">१.</text>
+    <text x="410" y="154" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">कम्पनीको व्यवसाय — माग र भविष्यको Growth</text>
+
+    <rect x="120" y="172" width="580" height="36" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.4"/>
+    <text x="148" y="196" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#2e7d32">२.</text>
+    <text x="410" y="196" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">नाफाको अवस्था — लगातार नाफा कि घाटा?</text>
+
+    <rect x="120" y="214" width="580" height="36" rx="8" fill="#fff8dc" stroke="#c8a800" stroke-width="1.4"/>
+    <text x="148" y="238" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#c8a800">३.</text>
+    <text x="410" y="238" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">समूहको शक्ति — Sector बलियो कि कमजोर?</text>
+
+    <rect x="120" y="256" width="580" height="36" rx="8" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.4"/>
+    <text x="148" y="280" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#6d28d9">४.</text>
+    <text x="410" y="280" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">मूल्याङ्कन — P/E, Book Value (महँगो छ?)</text>
+
+    <rect x="120" y="298" width="580" height="36" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+    <text x="148" y="322" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#c62828">५.</text>
+    <text x="410" y="322" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#111">व्यक्तिगत लक्ष्य — Trader कि Investor?</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले IPO सेयर बेच्ने कि राख्ने निर्णय अघि जाँच्नुपर्ने ५ मुख्य स्तम्भ देखाउँछ। <strong>१. कम्पनीको व्यवसाय</strong>: के काम गर्छ, उत्पादन/सेवाको माग कस्तो छ, आगामी ५-१० वर्षमा Growth सम्भावना छ? <strong>२. नाफाको अवस्था</strong>: लगातार नाफा कमाउँछ कि घाटा (Net Loss) मा छ, नाफाको ग्राफ माथि जाँदै छ? <strong>३. समूहको शक्ति</strong>: कम्पनी आबद्ध Sector वर्तमान बजार चक्रमा बलियो/रोजाइमा छ कि ओरालो लागिरहेको कमजोर समूह हो? <strong>४. मूल्याङ्कन</strong>: लगातार सर्किट लागेपछि मूल्य Book Value र EPS को तुलनामा अत्यधिक महँगो (Overvalued) भयो, P/E औसत भन्दा निकै माथि पुग्यो? <strong>५. व्यक्तिगत लक्ष्य</strong>: तपाईं छोटो अवधिको Trader हो कि लामो समय राख्ने Investor हो? मुख्य पाठ — यी ५ स्तम्भको कडा विश्लेषणपछि मात्र Sell/Hold को सही, तथ्यमा आधारित निर्णय निस्कन्छ।
+</div>
+
+<div class="sub-heading2">१. कम्पनीको व्यवसाय (Core Business)</div>
+<p>कम्पनीले वास्तवमा के काम गर्छ? यसको उत्पादन वा सेवाको बजारमा कत्तिको कडा माग छ? के आगामी ५ वा १० वर्षमा यो व्यवसाय अझ ठूलो र प्रविधिमैत्री भएर विस्तार हुने ग्रोथ (Growth) को सम्भावना देखिन्छ?</p>
+
+<div class="sub-heading2">२. नाफाको अवस्था (Profitability)</div>
+<p>कम्पनीको रेटिङ र वित्तीय विवरण अनुसार यसले लगातार नाफा कमाइरहेको छ कि यो ठूलो नोक्सानी (Net Loss) मा चलिरहेको छ? के यसको नाफाको ग्राफ प्रत्येक वर्ष माथितिर गइरहेको छ?</p>
+
+<div class="sub-heading2">३. समूह वा सेक्टर (Sector Evaluation)</div>
+<p>यो कम्पनी नेप्सेको कुन समूह (Sector) मा दर्ता भएको छ? के वर्तमान बजारको चक्र (Market Cycle) मा त्यो सेक्टर अत्यधिक बलियो र लगानीकर्ताहरूको रोजाइमा परेको समूह हो कि ओरालो लागिरहेको कमजोर समूह हो?</p>
+
+<div class="sub-heading2">४. मूल्याङ्कन (Valuation)</div>
+<p>सूचीकरण पछि र लगातार सर्किट लागेपछि, के सो कम्पनीको प्रतिसेयर मूल्य त्यसको वास्तविक किताबि मूल्य (Book Value) र प्रतिसेयर आम्दानीको तुलनामा अत्यधिक महँगो (Overvalued) भइसकेको छ? के यसको P/E Ratio बजारको औषत भन्दा निकै माथि पुगिसक्यो?</p>
+
+<div class="sub-heading2">५. तपाईंको आफ्नो व्यक्तिगत लक्ष्य (Your Financial Goal)</div>
+<p>सबैभन्दा सर्वोपरि कुरा—बजारमा तपाईंको आफ्नो हैसियत र रणनीति के हो? तपाईं छोटो अवधिको उतारचढावबाट फाइदा उठाउने <strong>Trader</strong> हो कि लामो समयसम्म सेयर राखेर ढुक्क बस्ने <strong>Investor</strong> हो?</p>
+
+<div class="sub-heading">एउटा सामान्य र घातक मनोवैज्ञानिक गल्ती</div>
+<p>नेप्सेका धेरै मानिसहरूले गर्ने एउटा निकै नै साझा र खतरनाक मनोवैज्ञानिक गल्ती के हो भने, उनीहरू सोच्छन्: “यो मलाई आईपीओ परेको सेयर हो, यसमा मेरो जम्मा रु. १,००० मात्र लगानी छ, त्यसैले म यसलाई जीवनभर कहिल्यै पनि बेच्ने छैन र बालबच्चाका लागि राखिदिनेछु।”</p>
+<p>यो सोच प्राविधिक रूपमा निकै आत्मघाती हुन सक्छ। किनकि <strong>कम्पनीको आईपीओ पर्नु र त्यो कम्पनी भविष्यको बहुमूल्य हीरा (Multi-bagger) हुनु विल्कुलै फरक कुरा हुन्।</strong> यदि कम्पनीको वित्तीय अवस्था पूरै खस्कँदै गइरहेको छ र मूल्य अत्यधिक ओरालो लाग्ने निश्चित छ भने, केवल आईपीओ परेको हुनाले मात्र त्यसलाई समातेर बस्नु आफ्नो पूँजीको मूल्यलाई आफ्नै हातले नष्ट गर्नु सरह हो।</p>
+
+<div class="sub-heading">अर्को सामान्य र हतारको गल्ती</div>
+<p>कतिपय मानिसहरू भने बजार सूचीकृत भएको पहिलो वा दोस्रो दिनमै, बिनाकुनै प्राविधिक वा वित्तीय विश्लेषण, हतार-हतार आफ्नो १० कित्ता सेयर बेचेर चिया-नास्ताको खर्च निकाल्छन्।</p>
+<p>बजारको कमजोर कम्पनीको हकमा यो निर्णय सही होला, तर यदि कम्पनीको व्यवस्थापन, व्यवसाय र नाफा कमाउने क्षमता अभूतपूर्व र उत्कृष्ट छ भने, उनीहरूले एउटा भविष्यको विशाल वृक्ष बन्ने क्षमता भएको विजेता कम्पनीलाई धेरै चाँडै कौडीको भाउमा बेचेर फ्याँकिरहेका हुन सक्छन्। त्यसैले बजारमा हतारमा होइन, जहिले पनि योजनाबद्ध निर्णय लिनुपर्छ।</p>
+
+<!-- VISUAL 5: Typical IPO price journey (covers Chart 74.1) -->
+<div class="visual-block">
+  <div class="visual-title">सामान्य IPO मूल्य यात्रा — Pump → Correction → स्थिर (Chart 74.1)</div>
+  <svg viewBox="0 0 820 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="330" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">धेरै IPO को मूल्य यात्रा यस्तो हुन्छ</text>
+
+    <rect x="60" y="58" width="700" height="200" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="60" y1="240" x2="760" y2="240" stroke="#999" stroke-width="1"/>
+    <line x1="60" y1="58" x2="60" y2="240" stroke="#999" stroke-width="1"/>
+
+    <!-- pump phase (green steep up) -->
+    <polyline points="80,225 140,180 200,120 260,80" fill="none" stroke="#26a69a" stroke-width="3.4"/>
+    <!-- correction phase (red down) -->
+    <polyline points="260,80 320,120 380,165 440,185" fill="none" stroke="#ef5350" stroke-width="3.4"/>
+    <!-- stabilize phase (grey/green flat to slight up) -->
+    <polyline points="440,185 520,180 600,178 680,170 730,165" fill="none" stroke="#888" stroke-width="3"/>
+
+    <!-- phase labels in boxes -->
+    <rect x="95" y="66" width="180" height="24" rx="6" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.2"/>
+    <text x="185" y="84" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#2e7d32">सर्किट/Pump चरण</text>
+
+    <rect x="300" y="210" width="180" height="24" rx="6" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.2"/>
+    <text x="390" y="228" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#c62828">पहिलो Correction</text>
+
+    <rect x="560" y="200" width="190" height="24" rx="6" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1.2"/>
+    <text x="655" y="218" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#111">वास्तविक मूल्यमा स्थिर</text>
+
+    <text x="410" y="290" text-anchor="middle" font-family="sans-serif" font-size="14.5" fill="#555">सुरुको तीव्र वृद्धि सधैँ टिक्दैन — कम्पनीको वास्तविक क्षमताले अन्तिम मूल्य तय गर्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले नेप्सेमा धेरै IPO को सामान्य मूल्य यात्रा देखाउँछ (Chart 74.1) — तीन चरणमा। <strong>सर्किट/Pump चरण</strong> (हरियो, तीव्र उकालो): Listing पछि पहिलो केही दिन लगातार सकारात्मक सर्किट हान्दै मूल्य तीव्र गतिमा बढ्छ — उत्साह र मागको चाप। <strong>पहिलो Correction</strong> (रातो, ओरालो): मूल्य अत्यधिक महँगो भएपछि माग घट्छ, बिक्रीकर्ता बढ्छन्, पहिलो ठूलो गिरावट आउँछ। <strong>वास्तविक मूल्यमा स्थिर</strong> (खैरो, समतल): अन्ततः मूल्य कम्पनीको वास्तविक वित्तीय क्षमता अनुसारको धरातलमा स्थिर हुन्छ वा दीर्घकालीन यात्रा तय गर्छ। मुख्य पाठ — सुरुको तीव्र सर्किट वृद्धि सधैँ टिक्दैन; त्यो उत्साह र मागले आएको अस्थायी Pump मात्र हुनसक्छ। अन्तिम मूल्य कम्पनीको वास्तविक गुणस्तर र Valuation ले तय गर्छ — त्यसैले सर्किटको लोभमा होइन, तथ्यमा निर्णय गर्नुपर्छ।
+</div>
+
+<div class="sub-heading">Bonus (बोनस सेयर) को ठूलो भ्रम</div>
+<p>नेपालको सेयर बजारमा एउटा निकै नै लोकप्रिय र सतही सोच व्याप्त छ: “यो कम्पनीले त हरेक वर्ष बोनस सेयर (Bonus Share) दिन्छ, त्यसैले यसलाई कहिल्यै बेच्नु हुँदैन, Hold नै गर्नुपर्छ।”</p>
+<p>तर वित्तीय विज्ञान र गणितको नियम अनुसार, <strong>बोनस सेयर आफैँमा कुनै बाहिरबाट आउने अतिरिक्त सम्पत्ति वा सित्तैको उपहार होइन।</strong> जब कम्पनीले बोनस सेयर वितरण गर्छ, त्यसको भोलिपल्टै नेप्सेको नियम अनुसार सोही अनुपातमा सेयरको बजार मूल्य पनि समायोजन (Price Adjustment) भएर तल झर्छ।</p>
+<ul>
+  <li><strong>उदाहरण:</strong> यदि कुनै सेयरको मूल्य रु. १,००० छ र त्यसले १०% बोनस सेयर दिन्छ भने, बुक क्लोज पछि त्यसको मूल्य समायोजन भएर प्रतिसेयर रु. ९०९ को आसपासमा झर्छ।</li>
+</ul>
+
+<!-- VISUAL 6: Bonus share price adjustment math -->
+<div class="visual-block">
+  <div class="visual-title">बोनस भ्रम — कुल सम्पत्ति उही रहन्छ</div>
+  <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="300" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">१०% बोनस → मूल्य रु.१,००० बाट रु.९०९</text>
+
+    <!-- before -->
+    <rect x="50" y="66" width="300" height="150" rx="12" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.8"/>
+    <text x="200" y="98" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#1a56cc">बोनस अघि</text>
+    <text x="200" y="130" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">१०० कित्ता × रु.१,०००</text>
+    <text x="200" y="160" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#1a56cc">= रु.१,००,०००</text>
+    <text x="200" y="192" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">कुल सम्पत्ति</text>
+
+    <text x="410" y="148" text-anchor="middle" font-family="Roboto, sans-serif" font-size="30" font-weight="700" fill="#c9b97a">→</text>
+
+    <!-- after -->
+    <rect x="470" y="66" width="300" height="150" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+    <text x="620" y="98" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">बोनस पछि (१०%)</text>
+    <text x="620" y="130" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">११० कित्ता × रु.९०९</text>
+    <text x="620" y="160" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#2e7d32">≈ रु.१,००,०००</text>
+    <text x="620" y="192" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555">कुल सम्पत्ति (उही!)</text>
+
+    <rect x="160" y="240" width="500" height="44" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="1.4"/>
+    <text x="410" y="268" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#c8a800">कित्ता बढ्यो, मूल्य घट्यो → कुल मूल्य उही (सित्तैको होइन)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले बोनस सेयरको ठूलो भ्रम चिर्छ। बायाँ (<strong>बोनस अघि</strong>): १०० कित्ता × रु.१,००० = कुल सम्पत्ति रु.१,००,०००। दायाँ (<strong>बोनस पछि — १०%</strong>): कित्ता बढेर ११० भयो, तर नेप्सेको नियम अनुसार मूल्य पनि समायोजन भएर रु.९०९ मा झर्‍यो; ११० × रु.९०९ ≈ रु.१,००,००० — कुल सम्पत्ति उही! मुख्य पाठ — बोनस सेयर बाहिरबाट आउने अतिरिक्त सम्पत्ति वा सित्तैको उपहार होइन; कित्ता बढ्छ तर मूल्य सोही अनुपातमा घट्छ, कुल पोर्टफोलियो मूल्य गणितीय रूपमा उही रहन्छ। त्यसैले केवल "बोनस दिन्छ" भन्ने एउटै सतही भ्रमको आधारमा कुनै कम्पनीलाई सधैँ Hold गर्ने निर्णय गर्नु परिपक्व मानिँदैन — कम्पनीको वास्तविक गुणस्तर हेर्नुपर्छ।
+</div>
+
+<p>तपाईंको कुल सम्पत्तिको मूल्य (Total Portfolio Value) सुरुमा जति थियो, गणितीय रूपमा समायोजन पछि पनि त्यति नै रहन्छ। त्यसैले केवल "बोनस दिन्छ" भन्ने एउटै मात्र सतही भ्रमको आधारमा मात्र कुनै कम्पनीलाई सधैँका लागि होल्ड गर्ने निर्णय गर्नु पर्याप्त र परिपक्व मानिँदैन।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>हाम्रो नेपाल स्टक एक्सचेन्ज (NEPSE) को सन्दर्भमा आईपीओ संस्कृति निकै नै लोकप्रिय र भावनात्मक रूपमा जोडिएको विषय हो। कतिपय अवस्थामा त एउटै घरका ५-७ जना सदस्यहरूको नाममा आईपीओ भर्ने गरिन्छ। तर नेप्सेमा आईपीओ व्यवस्थापनको एउटा ठूलो कमजोरी के देखिन्छ भने, यहाँ आईपीओ सूचीकृत भएपछि "अब यसलाई बेच्ने कि राख्ने?" भन्ने अन्तिम र महत्वपूर्ण निर्णय प्रायः:</p>
+<ul>
+  <li>फेसबुकका विभिन्न अनधिकृत कमेन्टहरू (Facebook Comments)</li>
+  <li>युट्युबका सतही भिडियो थम्बनेलहरू (YouTube Videos)</li>
+  <li>र भाइबर वा टेलिग्रामका अज्ञात "Tips" ग्रुपहरूको बजार हल्ला</li>
+</ul>
+<p>का आधारमा हतारमा लिइन्छ। जबकि एक सचेत र अनुशासित लगानीकर्ताले यस्ता सामाजिक सञ्जालका प्रायोजित हल्लाहरूबाट पूर्ण रूपमा टाढा रहेर केवल कम्पनीको वास्तविक वित्तीय प्रतिवेदन (Prospectus/Financial Report) र आफ्नो व्यक्तिगत आर्थिक उद्देश्यको विश्लेषणबाट मात्र आफ्नो निर्णय लिनुपर्छ।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>आईपीओ परेको सेयरको पछाडि मानव मस्तिष्कको एउटा निकै कडा र गहिरो मनोवैज्ञानिक पक्षले काम गरिरहेको हुन्छ। किनकि यो सेयर बजारको प्रत्यक्ष प्रतिष्पर्धाबाट महँगोमा किनेको नभई, बरु केवल रु. १०० को अंकित मूल्यमा एउटा ठूलो भाग्य वा उपहारको रूपमा प्राप्त भएको अनुभव हुन्छ।</p>
+
+<p>यस मानसिक स्थितिलाई व्यवहारिक अर्थशास्त्र र ट्रेडिङ मनोविज्ञान (Trading Psychology) को भाषामा <strong>"Endowment Effect"</strong> (स्वामित्वको भ्रम) भनिन्छ। यस मनोवैज्ञानिक प्रभावका कारण:</p>
+
+<blockquote>“मानिसहरू आफूले सित्तैमा वा निकै कम मूल्यमा भाग्यवश प्राप्त गरेको कुनै पनि वस्तुको मूल्य, त्यसको वास्तविक बजार मूल्य वा वित्तीय धरातल भन्दा कयौँ गुणा बढी सोच्ने र त्यसैसँग भावनात्मक रूपमा टाँसिने (Attach हुने) गल्ती गर्छन्।”</blockquote>
+
+<p>त्यसैले आईपीओ परेको सेयरलाई आफ्नो सन्तान जस्तो ठानेर भावनात्मक रूपमा बाँधिने होइन; बजारमा जहिले पनि भावना (Emotion) लाई त्यागेर केवल ठोस तथ्य र वित्तीय प्रमाण (Facts &amp; Evidence) का आधारमा मात्र निर्णय लिनुपर्छ।</p>
+
+<!-- VISUAL 7: IPO Decision Flow Model (covers Chart 74.3) -->
+<div class="visual-block">
+  <div class="visual-title">IPO Decision Flow — उद्देश्य → गुणस्तर → Valuation → निर्णय (Chart 74.3)</div>
+  <svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="360" fill="#fffdf5"/>
+    <text x="410" y="40" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">अर्डर अघि दिमागमा खेलाउने मार्गचित्र</text>
+
+    <!-- step 1 -->
+    <rect x="280" y="56" width="260" height="44" rx="10" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="1.7"/>
+    <text x="410" y="84" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#6d28d9">उद्देश्य के? (Goal)</text>
+    <line x1="410" y1="100" x2="410" y2="116" stroke="#c9b97a" stroke-width="2"/>
+
+    <!-- step 2 -->
+    <rect x="280" y="116" width="260" height="44" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.7"/>
+    <text x="410" y="144" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1a56cc">कम्पनी Quality कस्तो?</text>
+    <line x1="410" y1="160" x2="410" y2="176" stroke="#c9b97a" stroke-width="2"/>
+
+    <!-- step 3 -->
+    <rect x="280" y="176" width="260" height="44" rx="10" fill="#fff8dc" stroke="#c8a800" stroke-width="1.7"/>
+    <text x="410" y="204" text-anchor="middle" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#c8a800">Valuation महँगो कि सस्तो?</text>
+    <line x1="410" y1="220" x2="410" y2="236" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="200" y1="236" x2="620" y2="236" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="200" y1="236" x2="200" y2="252" stroke="#c9b97a" stroke-width="2"/>
+    <line x1="620" y1="236" x2="620" y2="252" stroke="#c9b97a" stroke-width="2"/>
+
+    <!-- outcomes -->
+    <rect x="60" y="252" width="280" height="90" rx="12" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.8"/>
+    <text x="200" y="282" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c62828">कमजोर / महँगो / Listing Gain</text>
+    <text x="200" y="312" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">→ SELL (नाफा बुक)</text>
+    <text x="200" y="332" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">हल्ला होइन, तथ्य</text>
+
+    <rect x="480" y="252" width="280" height="90" rx="12" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.8"/>
+    <text x="620" y="282" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">बलियो / उचित / Long-term</text>
+    <text x="620" y="312" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#111">→ HOLD (धैर्य)</text>
+    <text x="620" y="332" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">Growth Story मा भरोसा</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो flowchart ले IPO Decision Flow Model देखाउँछ (Chart 74.3) — डिम्याटमा सेयर आएपछि अर्डर थिच्नु अघि दिमागमा खेलाउने क्रमिक मार्गचित्र। माथिबाट: <strong>उद्देश्य के? (Goal)</strong> — Listing Gain कि Long-term? → <strong>कम्पनी Quality कस्तो?</strong> — जग बलियो कि कमजोर? → <strong>Valuation महँगो कि सस्तो?</strong> — मूल्य वास्तविक धरातल भन्दा माथि छ? यी प्रश्नको उत्तर अनुसार दुई बाटो: यदि <strong>कमजोर कम्पनी / अत्यधिक महँगो / Listing Gain उद्देश्य</strong> हो (बायाँ, रातो) → SELL गरेर नाफा बुक गर्ने; यदि <strong>बलियो कम्पनी / उचित मूल्य / Long-term उद्देश्य</strong> हो (दायाँ, हरियो) → धैर्यका साथ HOLD गर्ने। मुख्य पाठ — निर्णय Social Media को हल्ला वा Endowment Effect (स्वामित्वको भावनात्मक भ्रम) ले होइन, यो क्रमिक तथ्यपरक प्रश्नहरूको उत्तरले मात्र निर्धारण हुनुपर्छ।
+</div>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<ul>
+  <li><strong>आईपीओ भएकाले मात्र होल्ड गर्नु:</strong> कम्पनी भित्रबाट जतिसुकै खराब र ऋणमा डुबेको भए पनि केवल "आईपीओ परेको" भन्ने एउटै बहकावमा परेर त्यसलाई जीवनभर <strong>Hold</strong> गरिरहनु।</li>
+  <li><strong>आईपीओ भएकाले मात्र सेल गर्नु:</strong> कम्पनी देशकै नम्बर एक र भविष्यको 'Blue-chip' बन्ने पूर्ण क्षमता भएको हुँदाहुँदै पनि केवल "आईपीओको १० कित्ता त हो नि" भनेर पहिलो दिनमै <strong>Sell</strong> गरेर फ्याँक्नु।</li>
+  <li><strong>कम्पनीको विश्लेषण नगर्नु:</strong> सेयर बेच्नु वा राख्नु अघि कम्पनीको प्रबन्धपत्र, नेटवर्थ र त्रैमासिक नाफा-नोक्सानको <strong>Company Analysis</strong> कत्ति पनि नगर्नु।</li>
+  <li><strong>बोनसको भ्रममा बस्नु:</strong> बोनस सेयर पछि मूल्य समायोजन (Price Adjustment) हुन्छ भन्ने गणितीय सत्यलाई भुलेर केवल <strong>बोनसको भ्रममा</strong> अन्धो भई बस्नु।</li>
+  <li><strong>Social Media को अन्धो अनुसरण:</strong> आफ्नै अध्ययन र योजनामा विश्वास नगरी फेसबुक वा युट्युबका <strong>हल्लाखोरहरूको पछि लागेर</strong> आफ्नो अमूल्य सेयरको फैसला गर्नु।</li>
+  <li><strong>उद्देश्य वा Goal स्पष्ट नराख्नु:</strong> आफू बजारमा केवल तत्कालिन फाइदा लिन आएको हो कि दीर्घकालीन सम्पत्ति निर्माण गर्न, सो <strong>Goal स्पष्ट नराख्नु</strong>।</li>
+  <li><strong>Valuation लाई Ignore गर्नु:</strong> लगातार सर्किट लागेर मूल्य प्रतिसेयर रु. २,००० पुग्दा पनि कम्पनीको नेटवर्थ जम्मा रु. १०० छ भन्ने <strong>Valuation को प्राविधिक यथार्थलाई पूर्ण रूपमा नजरअन्दाज गर्नु</strong>।</li>
+  <li><strong>बजारको समग्र अवस्था नहेर्नु:</strong> समग्र नेप्से सूचक बुल रनमा छ कि बियरिस ट्रेन्डको सुरुवाती मोडमा छ भन्ने <strong>Market Condition लाई ध्यान नदिनु</strong>।</li>
+  <li><strong>जोखिमको मूल्याङ्कन नगर्नु:</strong> बजारको उतारचढाव र सेक्टरमा आउने ठूलो गिरावटको वित्तीय <strong>Risk लाई कहिल्यै नबुझ्नु</strong>।</li>
+  <li><strong>कुनै स्पष्ट Exit Plan नबनाउनु:</strong> यदि मूल्य घट्न थाल्यो भने म कुन विन्दुमा पुगेपछि आफ्नो नाफा सुरक्षित गरेर बाहिरिनेछु भन्ने कुनै स्पष्ट र लिखित <strong>Exit Plan तयार नपार्नु</strong>।</li>
+</ul>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Warning Box</div>
+  <p style="margin-bottom:0;">सेयर बजारमा आईपीओ (IPO) पर्नु भनेको केवल न्यूनतम मूल्यमा सेयर प्राप्त गर्ने एउटा प्राविधिक ढोका मात्र हो, यो भविष्यमा सधैँ र सधैँ नाफा नै भइरहने कुनै कानुनी वा वित्तीय ग्यारेन्टी विल्कुलै होइन। र आईपीओ परेको सेयरलाई सधैँका लागि आँखा चिम्लेर होल्ड गर्नु नै बजारको एकमात्र सही निर्णय पनि होइन। तपाईंको निकासको अन्तिम निर्णय जहिले पनि कम्पनीको त्रैमासिक वित्तीय विवरण, बजारको मूल्याङ्कन (Valuation) र तपाईंको आफ्नो व्यक्तिगत आर्थिक उद्देश्यका आधारमा मात्र निर्देशित हुनुपर्छ।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<ul>
+  <li><strong>उद्देश्यको स्पष्टता:</strong> आईपीओ भर्नु भन्दा पहिले नै यसबाट म 'Listing Gain' लिनेछु कि 'Long-term Invest' गर्नेछु भन्ने उद्देश्य स्पष्ट ऐना जस्तै सफा राख्नुहोस्।</li>
+  <li><strong>Prospectus को अध्ययन:</strong> आईपीओ परेको कम्पनीको वित्तीय विवरण, प्रबन्धपत्र र क्रेडिट रेटिङको ग्रेड अनिवार्य रूपमा अध्ययन गर्नुहोस्।</li>
+  <li><strong>Sector Analysis को प्रयोग:</strong> सो कम्पनी आबद्ध भएको समग्र सेक्टरको हालको बजार प्रवृत्ति र आगामी व्यावसायिक सम्भावनाको प्राविधिक विश्लेषण गर्नुहोस्।</li>
+  <li><strong>Valuation को जाँच:</strong> कम्पनीको प्रतिसेयर नेटवर्थ (Book Value) र बजार मूल्य बीचको अनुपात (P/B Ratio) र P/E Ratio को कडा जाँच गर्नुहोस्।</li>
+  <li><strong>बोनसको गणित बुझ्नुहोस्:</strong> केवल बोनस पाइन्छ भन्ने भ्रममा नपरी बोनस पछि हुने मूल्य समायोजनको गणितीय वास्तविकतालाई सधैँ ध्यानमा राख्नुहोस्।</li>
+  <li><strong>हल्लाबाट पूर्ण दूरी:</strong> सामाजिक सञ्जाल, अनलाइन ग्रुप वा बजारका विभिन्न हल्लाखोरहरूले फैलाउने "यो सेयर त यति पुग्छ" भन्ने हल्ला र टिप्सहरूबाट पूर्ण रूपमा टाढा रहनुहोस्।</li>
+  <li><strong>Goal अनुसारको कडा कदम:</strong> बजारको दैनिक स्क्रिनको उतारचढावमा नबगी आफ्नो पूर्व-निर्धारित वित्तीय उद्देश्य (Goal) अनुसार मात्र दृढ कदम चाल्नुहोस्।</li>
+  <li><strong>Risk को गहिरो बुझाइ:</strong> कम्पनीको ऋण, प्रोजेक्टको अवस्था र बजारको मन्दीले पोर्टफोलियोमा पार्न सक्ने नकारात्मक प्रभाव र जोखिमलाई सधैँ दिमागमा राख्नुहोस्।</li>
+  <li><strong>Journal मा Exit को कारण:</strong> तपाईंले आफ्नो आईपीओ परेको सेयर जुन दिन र जुन मूल्यमा बेच्नुहुन्छ, सो बेच्नुको स्पष्ट कारण आफ्नो जर्नलमा दर्ता गर्नुहोस्।</li>
+  <li><strong>Emotion भन्दा Plan सर्वोपरि:</strong> आईपीओ परेको सेयरसँग कुनै पनि प्रकारको भावनात्मक सामीप्यता (Endowment Effect) नराखी केवल आफ्नो पूर्व-रणनीतिक योजना (Plan) लाई मात्र महत्व दिनुहोस्।</li>
+</ul>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<div class="sub-heading">Scenario 1: Listing Gain Approach (योजनाबद्ध सुरुवाती नाफा)</div>
+<div class="content-box">
+  <p>राजले नेप्सेमा भर्खरै सूचीकृत भएको एउटा नयाँ फाइनान्स कम्पनीको आईपीओ केवल 'Listing Gain' लिने स्पष्ट उद्देश्यका साथ भरेका थिए। कम्पनीको वित्तीय जग मध्यम खालको मात्र थियो। सूचीकरण भएको पहिलो १० दिनसम्म सो सेयरको मूल्य लगातार १०% का दरले बढेर रु. १०० बाट रु. २५० पुग्यो। ११ औँ दिनमा बजारमा खरिदकर्ताको चाप घट्न थाल्यो र मार्केट डेप्थ (Market Depth) मा बिक्रीकर्ताहरू देखा पर्न थाले।</p>
+  <p style="margin-bottom:0;">राजले आफ्नो पूर्वनिर्धारित योजना अनुसार कुनै लोभ वा द्विविधा नगरी रु. २५० कै मूल्यमा आफ्नो सम्पूर्ण १० कित्ता सेयर बेचेर रु. १,५०० को खुद नाफा सुरक्षित गर्‍यो र सो पूँजी अर्को अवसरका लागि सुरक्षित राख्यो। यो उसको योजनाबद्ध र सफल ट्रेडिङ निकास थियो।</p>
+</div>
+
+<div class="sub-heading">Scenario 2: Long-term Investor (दीर्घकालीन र परिपक्व लगानी)</div>
+<div class="content-box">
+  <p>सुनितालाई नेपालको एउटा अत्यन्तै प्रतिष्ठित र ठूलो प्रोजेक्ट भएको क्लिन इनर्जी (Clean Energy) हाइड्रोपावर कम्पनीको आईपीओ पर्‍यो। उनले सेयर बेच्नु वा राख्नु अघि कम्पनीको Prospectus अध्ययन गरिन्, जहाँ कम्पनीको व्यवस्थापन टिम निकै अनुभवी थियो, कम्पनीको ऋण तिर्ने क्षमता उच्च थियो र आगामी ३ वर्षभित्र यसको उत्पादन क्षमता दोब्बर हुने स्पष्ट मार्गचित्र थियो।</p>
+  <p style="margin-bottom:0;">सूचीकरण पछि पहिलो केही हप्तामै मूल्य बढेर रु. ४०० पुग्दा पनि सुनिताले बजारको छोटो अवधिको नाफाको लोभमा परेर सेयर बेचिनन्। उनले कम्पनीको दीर्घकालीन 'Growth Story' मा विश्वास राखिन् र त्यसलाई आफ्नो डिम्याट खातामा वर्षौँसम्मका लागि ढुक्कसँग सुरक्षित (Hold) गरेर राखिन्, जसले उनलाई भविष्यमा उत्कृष्ट प्रतिफल दियो।</p>
+</div>
+
+<div class="sub-heading">Scenario 3: Emotional Decision (भावना र भ्रमको सिकार)</div>
+<div class="content-box">
+  <p>कृष्णलाई बजारको एउटा निकै कमजोर, ऋणात्मक नेटवर्थ भएको र साख खस्किएको कम्पनीको आईपीओ पर्‍यो। सूचीकरण पछि बजारको कडा बुल रनका कारण सो कम्पनीको सेयर मूल्य पनि बढेर प्रतिसेयर रु. ८०० सम्म पुग्यो। कृष्णका प्राविधिक साथीहरूले उसलाई यो कमजोर कम्पनीको मूल्य वास्तविक धरातल भन्दा निकै महँगो भइसकेकाले अहिल्यै बेचेर निस्कन सल्लाह दिए।</p>
+  <p style="margin-bottom:0;">तर कृष्णले केवल भावनामा बगेर ढिपी गर्‍यो, “धत्! म त बेच्दिनँ, आईपीओ परेको भाग्यमानी सेयर हो यो, यसलाई त म कहिल्यै बेच्दिनँ, यसले भविष्यमा बोनस दिन्छ र धनी बनाउँछ।” केही महिनापछि बजारको चक्र उल्टियो र सो कमजोर कम्पनीको वित्तीय पोल खुल्न थाल्यो। मूल्य रु. ८०० बाट लगातार घटेर प्रतिसेयर रु. १२० मा थच्चियो। कृष्णले तथ्य भन्दा भावना र भ्रमको पछि लाग्दा हातमा आइसकेको ठूलो नाफालाई आफ्नै आँखा अगाडि माटोमा मिलायो।</p>
+</div>
+
+<h2 class="section-heading">Table 74.1: Sell vs Hold Decision Framework</h2>
+
+<table>
+  <thead>
+    <tr><th>सूचक</th><th>Sell (बेच्ने) सही</th><th>Hold (राख्ने) सही</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Net Worth</td><td>ऋणात्मक / कमजोर</td><td>सकारात्मक / बलियो</td></tr>
+    <tr><td>P/E Ratio</td><td>औसत भन्दा निकै महँगो</td><td>उचित / आकर्षक</td></tr>
+    <tr><td>उद्योगको भविष्य</td><td>ओरालो / कमजोर Sector</td><td>उदाउँदो / बलियो Sector</td></tr>
+    <tr><td>उद्देश्य</td><td>Listing Gain</td><td>Long-term Wealth</td></tr>
+    <tr><td>Market Sentiment</td><td>Overheated / बियरिस मोड</td><td>स्वस्थ / बुल चक्र</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 74.2: IPO Evaluation Checklist</h2>
+
+<table>
+  <thead>
+    <tr><th>सूचक</th><th>के हेर्ने</th><th>आदर्श मापदण्ड</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>EPS</td><td>प्रतिसेयर आम्दानी</td><td>सकारात्मक, बढ्दो</td></tr>
+    <tr><td>Book Value</td><td>प्रतिसेयर नेटवर्थ</td><td>अंकित मूल्य भन्दा माथि</td></tr>
+    <tr><td>Credit Rating</td><td>रेटिङ ग्रेड</td><td>उच्च ग्रेड (बलियो)</td></tr>
+    <tr><td>Promoter Background</td><td>प्रवर्द्धकको पृष्ठभूमि</td><td>अनुभवी, स्वच्छ</td></tr>
+    <tr><td>Use of IPO Proceeds</td><td>संकलित पूँजीको प्रयोग</td><td>उत्पादनशील विस्तार</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 74.3: Emotional Decision vs Planned Decision</h2>
+
+<table>
+  <thead>
+    <tr><th>पक्ष</th><th>Emotional Decision</th><th>Planned Decision</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>आधार</td><td>Endowment Effect, बोनस भ्रम</td><td>Fundamental + Goal अध्ययन</td></tr>
+    <tr><td>प्रभाव</td><td>हल्ला/भावनाले निर्देशित</td><td>तथ्य/योजनाले निर्देशित</td></tr>
+    <tr><td>Valuation</td><td>बेवास्ता</td><td>कडा जाँच</td></tr>
+    <tr><td>दीर्घकालीन नतिजा</td><td>नाफा गुम्छ / पूँजी डुब्छ</td><td>स्थिर, बढ्दो पोर्टफोलियो</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">IPO Sell/Hold अघि सोध्ने Checklist</div>
+  <ul>
+    <li>मैले यो आईपीओ वास्तवमा कुन मुख्य उद्देश्य (Listing Gain वा Long-term Invest) का लागि भरेको थिएँ?</li>
+    <li>मेरो बजारमा आफ्नो व्यक्तिगत आर्थिक उद्देश्य वा योजना (Goal) अहिले स्पष्ट छ?</li>
+    <li>के मैले सो कम्पनीले गर्ने वास्तविक व्यवसाय र त्यसको भविष्यको मागलाई राम्ररी बुझेको छु?</li>
+    <li>सो कम्पनी आबद्ध भएको समग्र सेक्टर (Sector) को हालको बजार सेन्टिमेन्ट मैले अध्ययन गरेको छु?</li>
+    <li>सूचीकरण पछि लगातार बढेको हालको बजार मूल्य कम्पनीको वास्तविक Book Value को तुलनामा अत्यधिक महँगो (Overvalued) त छैन?</li>
+    <li>के म समग्र नेप्से सूचकको वर्तमान वातावरण र प्रवृत्तिको अवस्थासँग पूर्ण रूपमा सचेत छु?</li>
+    <li>मेरो मनमा बोनस सेयर आफैँमा कुनै अतिरिक्त उपहार होइन र यसपछि मूल्य समायोजन हुन्छ भन्ने गणितीय सत्य स्पष्ट छ?</li>
+    <li>मेरो यो सेयर राख्ने वा बेच्ने निर्णय फेसबुक वा युट्युब जस्ता Social Media को हल्लाबाट प्रभावित त छैन?</li>
+    <li>के मैले यो कम्पनी होल्ड गर्दा भविष्यमा हुन सक्ने व्यावसायिक जोखिम (Business Risk) लाई गम्भीरतापूर्वक बुझेको छु?</li>
+    <li>यदि म यो सेयर बेच्दै छु वा राख्दै छु भने, के मेरो सो निर्णयको स्पष्ट र लिखित Exit Plan मेरो दिमागमा तयार छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1</div>
+  <p>तपाईंले आफ्नो विगतको सेयर बजारको यात्रामा आफूलाई परेको वा आफ्नै पैसाले खरिद गरेको कुनै एउटा विशिष्ट आईपीओ (IPO) कम्पनीलाई सम्झनुहोस्। सूचीकरण पछि तपाईंले त्यसलाई कुन सोच वा कारणका आधारमा Hold वा Sell गर्नुभएको थियो र तपाईंको सो निर्णयको अन्तिम परिणाम वित्तीय रूपमा कस्तो रह्यो, सोको इमानदार विवरण आफ्नो डायरीमा लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2</div>
+  <p>नेप्से बजारमा सूचीकृत हुने नयाँ आईपीओ कम्पनीहरूको गुणस्तर र बजार मूल्याङ्कन द्रुत गतिमा आफैँले जाँच्नका लागि आजको यस अध्यायको सिकाईका आधारमा आफ्नै एउटा कडा र लिखित "IPO Evaluation Checklist" को खाका तयार पार्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3</div>
+  <p>हालै मात्र नेप्से बजारमा नयाँ सूचीकृत भएको वा सूचीकरणको तयारीमा रहेको कुनै पनि एउटा आईपीओ कम्पनीको Prospectus वा वित्तीय विवरण डाउनलोड गर्नुहोस् र त्यसको मुख्य व्यवसाय, प्रतिसेयर आम्दानी, नेटवर्थ र आगामी Growth Potential को आफ्नै शब्दमा गहिरो विश्लेषण गर्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4</div>
+  <p>“यदि आज वा भोलि मेरो मेरोसेयरको खातामा एउटा नयाँ आईपीओ पर्‍यो भने, म सामाजिक सञ्जालको हल्लामा नलागी कुन-कुन बुँदागत तथ्यका आधारमा त्यसलाई Sell वा Hold गर्ने अन्तिम निर्णय लिनेछु?” भन्ने विषयमा आफ्नो स्पष्ट योजना र कार्यविधि (Action Plan) नोटको रूपमा आफ्नो जर्नलमा लेख्नुहोस्।</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p style="margin-bottom:0;">सेयर बजारमा भाग्यको सहाराले वा चिठ्ठा प्रथाबाट आईपीओ (IPO) को १० कित्ता सेयर हात पार्नु केवल एउटा सुरुवात वा भाग्यको खेल मात्र हुन सक्छ। तर, सो सेयर खातामा आइसकेपछि बजारको चरम उतारचढाव र हल्लाको बीचमा पनि बिनाकुनै विचलित मानसिकता, कडा अनुशासनका साथ सही समयमा सही निर्णय (Sell वा Hold) लिन सक्नु नै वास्तविक व्यावसायिक सीप र कौशलताको कुरा हो। वित्तीय बजारमा दीर्घकालीन र वास्तविक सफलता केवल धेरै संख्यामा आईपीओ प्राप्त गर्नुबाट कहिल्यै आउँदैन; वास्तविक सफलता त प्राप्त भएको प्रत्येक आईपीओलाई स्पष्ट योजना, धैर्यता र तर्कसंगत सोचका साथ कुशलतापूर्वक व्यवस्थापन (Portfolio Management) गर्न जान्नुबाट मात्र आउँछ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 74 Summary</div>
+  <p>यस Chapter मा हामीले नेपालको प्रत्येक घर-घरको कथा र कौतुहलतासँग जोडिएको विषय अर्थात् “मलाई एउटा नयाँ र बहुप्रतीक्षित IPO पर्यो, अब टिएमएसमा मूल्य बढेको बेला यसलाई Sell गरेर नाफा बुक गर्ने कि भविष्यका लागि कडा धैर्यताका साथ डिम्याटमै Hold गरेर राख्ने?” भन्ने गम्भीर प्रश्नको प्राविधिक र मनोवैज्ञानिक चिरफार गर्‍यौँ।</p>
+  <p>हामीले स्पष्ट रूपमा सिक्यौँ:</p>
+  <ul style="margin-top:6px;">
+    <li>आईपीओ सूचीकरण पछि बजारको हल्लामा नबगी सही निर्णय कसरी गर्ने भन्ने कला।</li>
+    <li>छोटो अवधिको 'Listing Gain Strategy' र दीर्घकालीन 'Long-term Investing Strategy' बीचको गहिरो रणनीतिक भिन्नता।</li>
+    <li>नेपालको बजारमा बोनस सेयर (Bonus Share) वितरणलाई लिएर व्याप्त रहेको ठूलो भ्रम र त्यसको वास्तविक गणितीय मूल्य समायोजनको यथार्थ।</li>
+    <li>आईपीओ पर्नेबित्तिकै त्यो आँखा चिम्लेर सधैँका लागि राम्रो कम्पनी हुँदैन भन्ने तीतो वास्तविकता र Company Analysis को सर्वोपरि महत्व।</li>
+    <li>आफू बजारमा ट्रेडर हो कि इन्भेस्टर हो, सो कुरा छुट्याएर आफ्नो व्यक्तिगत लक्ष्यमा आधारित निर्णय (Goal-based Decision Making) को आवश्यकता।</li>
+  </ul>
+  <p style="margin-bottom:0;">याद राख्नुहोस्, बजारमा आईपीओ पर्नु भनेको तपाईंको वित्तीय यात्राको एउटा सानो सुरुवात मात्र हो। सो सेयरको वास्तविक र दीर्घकालीन मूल्य तपाईंको डिम्याट खातामा अंकित अङ्कले होइन, बरु त्यसपछि तपाईंले लिने कडा, अनुशासित र तर्कसंगत निर्णयले मात्र निर्धारण गर्दछ। अब यसपछि आउने यस पुस्तकको अर्को अत्यन्तै महत्वपूर्ण, भ्रम निवारक र उत्तिकै रोचक <strong>Chapter 75</strong> मा, हामी नेप्से बजारको अर्को एउटा निकै नै साझा र धेरै लगानीकर्ताहरू अलमलिने वित्तीय प्रश्नको सामना गर्नेछौँ: “मेरो डिम्याटमा भएको कम्पनीले बोनस सेयर दिएपछि बजारमा त्यसको मूल्य ह्वात्तै घट्यो, के म यस प्रक्रियाबाट साँच्चै नै ठूलो <strong>Loss (घाटा)</strong> मा परेँ कि यो केवल बजारको एउटा सामान्य प्राविधिक नियम मात्र हो?”</p>
+</div>
+
+<div class="closing-quote">
+  IPO हात पर्नु अवसर हो, तर अवसरलाई परिणाममा बदल्ने काम तपाईंको निर्णयले गर्छ।<br>
+  सफल Investor त्यो होइन जसले धेरै IPO पाउँछ,<br>
+  सफल Investor त्यो हो जसले प्रत्येक IPO लाई<br>
+  स्पष्ट योजना, धैर्यता र तर्कसंगत सोचका साथ व्यवस्थापन गर्न जान्दछ।
+</div>
+
+</div>
+</body>
+</html>

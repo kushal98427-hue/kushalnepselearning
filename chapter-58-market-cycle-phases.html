@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 58: Accumulation, Markup, Distribution र Markdown — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111111; line-height: 1.85; }
+.container { max-width: 900px; margin: 0 auto; background: #fdf6e3; padding: 50px 60px 80px; }
+.section-heading { background: #f0e6c0; color: #111111; padding: 13px 22px; font-size: 19px; font-weight: 700; margin: 36px 0 20px; border-radius: 3px; border-left: 4px solid #c9b97a; }
+.sub-heading { font-family: 'Roboto', sans-serif; font-size: 17px; font-weight: 700; color: #111; margin: 26px 0 12px; }
+p { font-size: 15.5px; line-height: 1.9; margin-bottom: 16px; color: #111111; text-align: justify; }
+strong { font-weight: 700; color: #111111; }
+.content-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.callout-quote { background: #fffdf5; border-left: 4px solid #c9b97a; border-radius: 0 4px 4px 0; padding: 18px 24px; margin: 22px 0; font-size: 15px; }
+.warning-box { background: #fff8dc; border: 1px solid #e0c84a; border-left: 4px solid #c8a800; border-radius: 4px; padding: 20px 24px; margin: 22px 0; }
+.warning-title { font-weight: 700; color: #111111; font-size: 16px; margin-bottom: 10px; }
+ul, ol { margin: 14px 0 14px 28px; }
+ul li, ol li { margin-bottom: 10px; font-size: 15px; line-height: 1.75; color: #111111; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: #fffdf5; }
+th { background: #c9b97a; color: #111111; padding: 12px 16px; text-align: left; font-size: 14.5px; font-weight: 700; }
+td { padding: 12px 16px; border: 1px solid #c9b97a; font-size: 14px; color: #111111; vertical-align: top; }
+tr:nth-child(even) { background: #fdf6e3; }
+.checklist-box { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 4px; padding: 24px; margin: 22px 0; }
+.checklist-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 14px; }
+.checklist-box ul { list-style: none; margin-left: 0; }
+.checklist-box li { padding-left: 30px; position: relative; margin-bottom: 9px; }
+.checklist-box li::before { content: "☐"; position: absolute; left: 0; color: #111111; font-size: 18px; }
+.exercise-box { background: #fffdf5; border: 1px dashed #c9b97a; border-radius: 4px; padding: 22px 26px; margin: 22px 0; }
+.exercise-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; }
+.trader-note { background: #fffdf5; border: 2px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 32px 0; position: relative; }
+.trader-note::before { content: "📌"; position: absolute; top: -14px; left: 24px; background: #fdf6e3; padding: 0 10px; font-size: 20px; }
+.trader-note-title { font-weight: 700; color: #111111; font-size: 17px; margin-bottom: 12px; margin-top: 6px; }
+.summary-box { background: #f0e6c0; border-top: 3px solid #c9b97a; border-radius: 4px; padding: 28px; margin: 40px 0; }
+.summary-title { font-weight: 700; color: #111111; font-size: 19px; margin-bottom: 14px; }
+.closing-quote { text-align: center; font-style: italic; font-size: 17px; color: #111111; font-weight: 600; padding: 40px 20px; border-top: 1px solid #c9b97a; margin-top: 20px; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 6px; padding: 20px; margin: 24px 0 8px; text-align: center; }
+.visual-title { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 12px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 12px 16px; margin-top: 8px; margin-bottom: 24px; font-size: 14px; line-height: 1.7; color: #111; border-radius: 0 4px 4px 0; }
+.chapter-header { background: #fdf6e3; text-align: center; padding: 40px 0 32px; border-bottom: 2px solid #c9b97a; margin-bottom: 44px; }
+.chapter-number { font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; color: #555; }
+.chapter-title { font-family: 'Roboto', sans-serif; font-size: 24px; font-weight: 700; color: #111111; line-height: 1.3; margin-bottom: 8px; }
+@media (max-width: 768px) { .container { padding: 32px 22px 60px; } .chapter-title { font-size: 19px; } .section-heading { font-size: 17px; padding: 11px 16px; } p, ul li, ol li { font-size: 15px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="chapter-header">
+  <div class="chapter-number">CHAPTER 58</div>
+  <h1 class="chapter-title">Accumulation, Markup, Distribution र Markdown</h1>
+</header>
+
+<h2 class="section-heading">Chapter Opening Story</h2>
+
+<p>पछिल्लो Chapter मा हामीले प्राविधिक विश्लेषणको एउटा निकै महत्वपूर्ण कुरा सिक्यौँ—बजार सधैं सीधा रेखामा माथि वा सीधा तल जाँदैन। बरु यसले विभिन्न उतारचढाव र अदृश्य चरणहरू पार गर्दै आफ्नो यात्रा तय गर्छ। अब बजारमा दैनिक रूपमा घट्ने एउटा वास्तविक जस्तो लाग्ने अवस्थालाई नियालौँ।</p>
+
+<p>एउटा राम्रो कम्पनीको शेयर लगभग १० महिनासम्म एउटै साँघुरो दायरा (Range) भित्र मात्र घुमिरहेको थियो। बजारका धेरैजसो साधारण ट्रेडरहरूले यसलाई पूरै बेवास्ता गरे। न त सामाजिक सञ्जालमा यसको कुनै चर्चा थियो, न त मिडियामा नै कुनै खास समाचार आएको थियो। बजार पूरै उदासीन देखिन्थ्यो।</p>
+
+<p>त्यसपछि केही समयपछि त्यो शेयरको मूल्य बिस्तारै र गोप्य रूपमा माथि बढ्न थाल्यो। केही महिनामै मूल्य निकै माथि पुगेपछि अचानक बजारका सबै मानिसहरूको ध्यान त्यसतर्फ आकर्षित भयो। युट्युबमा ठूला-ठूला थम्बनेल भएका भिडियोहरू बने, फेसबुकका विभिन्न ग्रुपहरूमा त्यसकै पोस्टहरू आउन थाले र जताततै सकारात्मक हल्लाहरू फैलिए। भीडमा रहेका सबैजना अत्यधिक उत्साहित भएर त्यो शेयर किन्न तँछाडमँछाड गर्न थाले।</p>
+
+<p>तर अचम्मको कुरा, ठीक त्यही समयमा त्यो शेयरको मूल्य वृद्धि अचानक सुस्त हुन थाल्यो र केही दिनमै मूल्य तीव्र गतिमा तल खस्न थाल्यो। नतिजास्वरूप, अत्यधिक उत्साहमा आएर माथिल्लो मूल्यमा किन्ने धेरैजसो रिटेल ट्रेडरहरू ठूलो घाटामा फसे।</p>
+
+<p>यहाँ एउटा गम्भीर प्रश्न उठ्छ: के बजारमा घटेको यो सबै घटना केवल एउटा संयोग मात्र थियो?</p>
+
+<p>Wyckoff Logic अनुसार यस्तो हुनु कुनै संयोग होइन। बजारमा देखिने धेरैजसो ठूला उतारचढावहरू सधैँ केही निश्चित, व्यवस्थित र मनोवैज्ञानिक चरणहरूमा विकसित हुने प्रवृत्ति देखाउँछन्। बजारको यही भित्री चाल र रहस्यलाई बुझ्नका लागि हामीले Accumulation, Markup, Distribution र Markdown को आधारभूत अवधारणालाई गहिरिएर बुझ्न अनिवार्य हुन्छ।</p>
+
+<!-- VISUAL 1: full cycle story -->
+<div class="visual-block">
+  <div class="visual-title">कथाको चक्र — १० महिना शान्त → माथि → भीड पस्यो → खस्यो</div>
+  <svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="840" height="430" fill="#fffdf5"/>
+    <text x="420" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="22" font-weight="700" fill="#111">संयोग होइन — व्यवस्थित चरणहरू</text>
+
+    <rect x="50" y="56" width="740" height="250" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <g stroke-width="1.6">
+      <!-- accumulation low flat -->
+      <line x1="75" y1="240" x2="75" y2="268" stroke="#26a69a"/><rect x="68" y="246" width="14" height="14" fill="#26a69a"/>
+      <line x1="108" y1="236" x2="108" y2="265" stroke="#ef5350"/><rect x="101" y="242" width="14" height="12" fill="#ef5350"/>
+      <line x1="141" y1="238" x2="141" y2="266" stroke="#26a69a"/><rect x="134" y="244" width="14" height="14" fill="#26a69a"/>
+      <line x1="174" y1="234" x2="174" y2="262" stroke="#ef5350"/><rect x="167" y="240" width="14" height="12" fill="#ef5350"/>
+      <line x1="207" y1="237" x2="207" y2="265" stroke="#26a69a"/><rect x="200" y="243" width="14" height="14" fill="#26a69a"/>
+      <!-- markup rising -->
+      <line x1="245" y1="210" x2="245" y2="240" stroke="#26a69a"/><rect x="236" y="215" width="18" height="22" fill="#26a69a"/>
+      <line x1="285" y1="185" x2="285" y2="215" stroke="#26a69a"/><rect x="276" y="190" width="18" height="20" fill="#26a69a"/>
+      <line x1="325" y1="162" x2="325" y2="192" stroke="#ef5350"/><rect x="316" y="167" width="18" height="12" fill="#ef5350"/>
+      <line x1="365" y1="138" x2="365" y2="168" stroke="#26a69a"/><rect x="356" y="143" width="18" height="22" fill="#26a69a"/>
+      <line x1="405" y1="115" x2="405" y2="145" stroke="#26a69a"/><rect x="396" y="120" width="18" height="20" fill="#26a69a"/>
+      <!-- distribution high flat -->
+      <line x1="445" y1="100" x2="445" y2="128" stroke="#26a69a"/><rect x="438" y="106" width="14" height="14" fill="#26a69a"/>
+      <line x1="480" y1="96" x2="480" y2="124" stroke="#ef5350"/><rect x="473" y="102" width="14" height="14" fill="#ef5350"/>
+      <line x1="515" y1="99" x2="515" y2="127" stroke="#26a69a"/><rect x="508" y="105" width="14" height="12" fill="#26a69a"/>
+      <line x1="550" y1="95" x2="550" y2="123" stroke="#ef5350"/><rect x="543" y="101" width="14" height="14" fill="#ef5350"/>
+      <!-- markdown falling -->
+      <line x1="590" y1="115" x2="590" y2="148" stroke="#ef5350"/><rect x="581" y="120" width="18" height="24" fill="#ef5350"/>
+      <line x1="630" y1="142" x2="630" y2="175" stroke="#ef5350"/><rect x="621" y="148" width="18" height="22" fill="#ef5350"/>
+      <line x1="670" y1="168" x2="670" y2="202" stroke="#ef5350"/><rect x="661" y="174" width="18" height="24" fill="#ef5350"/>
+      <line x1="710" y1="195" x2="710" y2="228" stroke="#ef5350"/><rect x="701" y="201" width="18" height="22" fill="#ef5350"/>
+    </g>
+    <!-- markers -->
+    <circle cx="480" cy="100" r="8" fill="#fff" stroke="#c62828" stroke-width="2.5"/>
+    <line x1="480" y1="100" x2="560" y2="60" stroke="#c62828" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="500" y="56" width="280" height="24" rx="7" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="640" y="73" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#c62828">भीड उत्साहित भएर किन्यो → फस्यो</text>
+
+    <!-- phase labels -->
+    <text x="140" y="290" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#2e7d32">१० महिना शान्त</text>
+    <text x="325" y="290" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#1a56cc">गोप्य रूपमा माथि</text>
+    <text x="498" y="290" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#c8a800">सुस्त (Top)</text>
+    <text x="650" y="290" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#c62828">तीव्र गिरावट</text>
+
+    <rect x="50" y="320" width="740" height="58" fill="#f0e6c0" stroke="#c9b97a" stroke-width="1" rx="8"/>
+    <text x="420" y="346" text-anchor="middle" font-family="Roboto, sans-serif" font-size="17" font-weight="700" fill="#111">यही चक्र = Accumulation → Markup → Distribution → Markdown</text>
+    <text x="420" y="369" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#111">बजार निश्चित, व्यवस्थित र मनोवैज्ञानिक चरणहरूमा चल्छ</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले opening story को पूरै चक्र देखाउँछ। पहिले शेयर १० महिना साँघुरो range मा शान्त बस्यो (साना candle) — कसैले ध्यान दिएन। त्यसपछि मूल्य गोप्य रूपमा माथि बढ्यो (हरियो candle को शृङ्खला)। मूल्य धेरै माथि पुगेपछि मात्र भीडको ध्यान गयो — YouTube, Facebook मा hype चर्कियो, सबैले तँछाडमँछाड किन्न थाले (Top नजिक रातो विन्दु)। ठीक त्यही बेला मूल्य वृद्धि सुस्त भयो र तीव्र गतिमा खस्यो — माथि किन्ने रिटेल फसे। मुख्य पाठ — यो संयोग होइन। बजार सधैँ निश्चित, व्यवस्थित र मनोवैज्ञानिक चरणहरूमा चल्छ: Accumulation (शान्त जम्मा) → Markup (माथि) → Distribution (Top मा बाँड्ने) → Markdown (खस्ने)। यही चार चरण यो chapter ले गहिरिएर बुझाउँछ।
+</div>
+
+<h2 class="section-heading">Why This Chapter Matters</h2>
+
+<p>Chapter 57 मा हामीले वाइकोफका मुख्य सिद्धान्तहरू जस्तै:</p>
+<ul>
+  <li>Supply and Demand (माग र आपूर्ति)</li>
+  <li>Cause and Effect (कारण र परिणाम)</li>
+  <li>Effort vs Result (प्रयास र नतिजा)</li>
+  <li>Composite Man Concept (ठूला खेलाडीको सोच)</li>
+</ul>
+<p>को बारेमा एउटा बलियो जग बसालिसकेका छौँ। अब तिनै सैद्धान्तिक अवधारणाहरू वास्तविक चार्टमा र व्यवहारमा कसरी प्रकट हुन्छन् भन्ने बुझ्ने सही समय आएको छ।</p>
+
+<p>यदि तपाईंले बजारको यो चक्र (Market Cycle) लाई सही समयमा चिन्न सक्नुभयो भने:</p>
+<ul>
+  <li>बजारमा धेरै ढिलो वा गलत समयमा Entry गर्ने सम्भावना निकै घट्छ।</li>
+  <li>बजारको उच्च विन्दु (Top) नजिक पुग्दा हुने अत्यधिक उत्साह र FOMO (Fear of Missing Out) बाट बच्न सकिन्छ।</li>
+  <li>ट्रेड लिनु अगाडि आफ्नो वास्तविक जोखिम (Risk) लाई राम्रोसँग मूल्याङ्कन गर्न सकिन्छ।</li>
+  <li>बजार अहिले कुन अवस्था र परिस्थितिबाट गुज्रिरहेको छ, सो सजिलै पहिचान गर्न सकिन्छ।</li>
+</ul>
+
+<p>तर एउटा कुरा सधैं ध्यान दिनुहोस्: यो च्याप्टर बजारको भविष्यको अचूक भविष्यवाणी गर्ने कुनै जादुमयी तरिका होइन। यो त केवल बजारको वर्तमान अवस्थालाई एउटा व्यवस्थित र तार्किक फ्रेमवर्क (Framework) मार्फत अवलोकन गर्ने व्यावसायिक तरिका मात्र हो।</p>
+
+<h2 class="section-heading">Simple Explanation</h2>
+
+<p>Wyckoff दृष्टिकोणबाट हेर्दा समग्र वित्तीय बजार प्रायः चारवटा मुख्य चरणहरूमा एउटा निरन्तर चक्र झैँ घुमिरहने प्रवृत्ति देखाउँछ:</p>
+<ol>
+  <li><strong>Accumulation (जम्मा गर्ने चरण):</strong> यो बजारको पहिलो र सम्भावित तयारीको चरण हो, जहाँ ठूला खेलाडीहरूले सस्तो मूल्यमा बिस्तारै शेयर जम्मा गर्छन्।</li>
+  <li><strong>Markup (मूल्य बढाउने चरण):</strong> यो बजारको दोस्रो र स्पष्ट रूपमा मूल्य बढ्ने आक्रामक चरण हो, जहाँ सर्वसाधारण ट्रेडरहरू आकर्षित हुन्छन्।</li>
+  <li><strong>Distribution (वितरणको चरण):</strong> यो बजारको तेस्रो र माथिल्लो विन्दुमा बाहिरिने चरण हो, जहाँ ठूला खेलाडीहरूले आफ्ना शेयरहरू सर्वसाधारणलाई बिक्री गर्छन्।</li>
+  <li><strong>Markdown (मूल्य खसाउने चरण):</strong> यो बजारको अन्तिम र तीव्र गतिमा मूल्य घट्ने चरण हो, जहाँ जताततै डर र निराशा छाउँछ।</li>
+</ol>
+
+<p>रोचक कुरा के छ भने, यो Markdown को चरण समाप्त भएपछि बजार पुनः अर्को नयाँ Accumulation को चरणमा प्रवेश गर्न सक्छ। यसरी बजारको यो सनातन चक्र अनवरत रूपमा चलिरहन्छ।</p>
+
+<!-- VISUAL 2: full wyckoff cycle conceptual (Chart 58.1) -->
+<div class="visual-block">
+  <div class="visual-title">पूर्ण Wyckoff Market Cycle — 4 चरण (Chart 58.1)</div>
+  <svg viewBox="0 0 840 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="840" height="360" fill="#fffdf5"/>
+    <text x="420" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="23" font-weight="700" fill="#111">चक्र — एक चरणपछि अर्को, फेरि दोहोरिने</text>
+
+    <!-- phase backgrounds -->
+    <rect x="50" y="60" width="180" height="240" fill="#eaf6ea" opacity="0.4"/>
+    <rect x="230" y="60" width="180" height="240" fill="#e8f0fe" opacity="0.4"/>
+    <rect x="410" y="60" width="180" height="240" fill="#fff8dc" opacity="0.5"/>
+    <rect x="590" y="60" width="200" height="240" fill="#ffe5e0" opacity="0.4"/>
+
+    <!-- price curve -->
+    <path d="M 60 250 Q 140 245 220 248 Q 320 245 400 120 Q 460 95 580 110 Q 660 108 700 180 Q 750 240 780 270" stroke="#111" stroke-width="3" fill="none"/>
+
+    <!-- labels -->
+    <text x="140" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#2e7d32">1. Accumulation</text>
+    <text x="140" y="280" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2e7d32">तल जम्मा</text>
+    <text x="320" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#1a56cc">2. Markup ↑</text>
+    <text x="320" y="200" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1a56cc">माथि</text>
+    <text x="500" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c8a800">3. Distribution</text>
+    <text x="500" y="135" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#c8a800">Top मा बाँड्ने</text>
+    <text x="690" y="86" text-anchor="middle" font-family="Roboto, sans-serif" font-size="16" font-weight="700" fill="#c62828">4. Markdown ↓</text>
+    <text x="700" y="290" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#c62828">खस्ने</text>
+
+    <!-- composite man notes -->
+    <text x="140" y="320" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#111">🤫 स्मार्ट मनी किन्छ</text>
+    <text x="500" y="320" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#111">📤 स्मार्ट मनी बेच्छ</text>
+    <text x="420" y="346" text-anchor="middle" font-family="sans-serif" font-size="13.5" fill="#555">Markdown सकिएपछि → फेरि नयाँ Accumulation (सनातन चक्र)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो conceptual चित्र ले पूर्ण Wyckoff Market Cycle का चार चरण क्रमैसँग देखाउँछ (Chart 58.1)। (1) <strong>Accumulation</strong> (हरियो): बजार तल शान्त — स्मार्ट मनी सस्तोमा चुपचाप किन्छ। (2) <strong>Markup</strong> (नीलो): मूल्य आक्रामक रूपमा माथि — सर्वसाधारण आकर्षित। (3) <strong>Distribution</strong> (पहेँलो): Top मा मूल्य अल्झिन्छ — स्मार्ट मनी जनतालाई बेच्छ। (4) <strong>Markdown</strong> (रातो): मूल्य तीव्र गतिमा तल खस्छ — डर र निराशा। मुख्य कुरा — यो Markdown सकिएपछि बजार फेरि नयाँ Accumulation मा प्रवेश गर्छ; यसरी चक्र अनवरत दोहोरिन्छ। स्मार्ट मनी तल किन्छ, माथि बेच्छ — भीडको ठीक विपरीत। यो चक्र चिन्न सके गलत समयमा Entry र FOMO बाट बच्न सकिन्छ।
+</div>
+
+<h2 class="section-heading">Deep Practical Explanation</h2>
+
+<div class="sub-heading">Phase 1: Accumulation (जम्मा गर्ने चरण)</div>
+<p>Accumulation भनेको बजारमा ठूलो लहर आउनु अगाडिको एउटा सम्भावित तयारीको चरण हो। यो Phase मा शेयरको मूल्य सामान्यतया लामो समयसम्म एउटै निश्चित दायरा वा रेन्ज (Range) भित्र मात्र तलमाथि गरिरहन्छ।</p>
+
+<p>बजारमा कुनै ठूलो हलचल नहुने भएकाले धेरैजसो Beginner ट्रेडरहरू यस चरणमा एकदमै बोर हुन्छन्। उनीहरू दिक्क मान्दै सोच्छन्, “यो शेयर त पूरै मरेको बजार हो, यो कहिल्यै चल्दै चल्दैन।” तर वाइकोफ दृष्टिकोणबाट हेर्नुहुन्छ भने, कहिलेकाहीँ चार्टमा यही शान्त फेज नै सबैभन्दा रोचक र नाफामूलक अवसरको जग हुन सक्छ।</p>
+
+<p><strong>Accumulation का सम्भावित विशेषताहरू:</strong></p>
+<ul>
+  <li>शेयरको मूल्य लामो समयसम्म एउटा साँघुरो रेन्ज वा च्यानल भित्र मात्र सीमित हुनु।</li>
+  <li>बजारमा साना लगानीकर्ताहरूको डर र Panic Selling विस्तारै कम हुँदै जानु।</li>
+  <li>दैनिक कारोबारको भोल्युम विस्तारै एउटा निश्चित स्तरमा स्थिर हुनु।</li>
+  <li>बजारमा विक्रेताहरूको दबाब (Selling Pressure) पूर्ण रूपमा घट्दै जानु।</li>
+  <li>चार्टमा मूल्यको आन्तरिक संरचना (Structure) मा बिस्तारै सुधार देखिनु।</li>
+</ul>
+
+<div class="callout-quote">
+  <p style="margin-bottom:0;"><strong>ध्यान दिनुहोस्:</strong> चार्टमा यी संकेतहरू देखिनु मात्रै Accumulation को अकाट्य प्रमाण होइनन्। यी केवल बजारमा ठूला खेलाडीहरू सक्रिय हुन थालेका हुन् कि भनी अवलोकन गर्न मिल्ने प्राथमिक विशेषताहरू मात्र हुन्।</p>
+</div>
+
+<!-- VISUAL 3: Accumulation phase (Chart 58.2) -->
+<div class="visual-block">
+  <div class="visual-title">Accumulation — Range भित्र शान्त, Volume सुक्दै → Breakout (Chart 58.2)</div>
+  <svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="400" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="22" font-weight="700" fill="#111">शान्त फेज भित्र लुकेको तयारी</text>
+
+    <rect x="50" y="58" width="720" height="230" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="80" y1="160" x2="560" y2="160" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <line x1="80" y1="215" x2="560" y2="215" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <g stroke-width="1.6">
+      <line x1="100" y1="178" x2="100" y2="210" stroke="#26a69a"/><rect x="93" y="184" width="14" height="16" fill="#26a69a"/>
+      <line x1="138" y1="172" x2="138" y2="205" stroke="#ef5350"/><rect x="131" y="178" width="14" height="14" fill="#ef5350"/>
+      <line x1="176" y1="176" x2="176" y2="212" stroke="#26a69a"/><rect x="169" y="183" width="14" height="16" fill="#26a69a"/>
+      <line x1="214" y1="170" x2="214" y2="208" stroke="#ef5350"/><rect x="207" y="177" width="14" height="14" fill="#ef5350"/>
+      <line x1="252" y1="174" x2="252" y2="210" stroke="#26a69a"/><rect x="245" y="181" width="14" height="16" fill="#26a69a"/>
+      <line x1="290" y1="172" x2="290" y2="206" stroke="#ef5350"/><rect x="283" y="178" width="14" height="14" fill="#ef5350"/>
+      <line x1="328" y1="176" x2="328" y2="212" stroke="#26a69a"/><rect x="321" y="183" width="14" height="16" fill="#26a69a"/>
+      <line x1="366" y1="170" x2="366" y2="205" stroke="#26a69a"/><rect x="359" y="176" width="14" height="16" fill="#26a69a"/>
+      <line x1="404" y1="174" x2="404" y2="208" stroke="#ef5350"/><rect x="397" y="180" width="14" height="13" fill="#ef5350"/>
+      <line x1="442" y1="172" x2="442" y2="206" stroke="#26a69a"/><rect x="435" y="178" width="14" height="16" fill="#26a69a"/>
+      <line x1="480" y1="168" x2="480" y2="202" stroke="#26a69a"/><rect x="473" y="174" width="14" height="16" fill="#26a69a"/>
+      <line x1="518" y1="170" x2="518" y2="204" stroke="#ef5350"/><rect x="511" y="176" width="14" height="13" fill="#ef5350"/>
+      <!-- breakout -->
+      <line x1="585" y1="115" x2="585" y2="160" stroke="#00897b" stroke-width="2"/><rect x="575" y="119" width="20" height="36" fill="#26a69a" stroke="#00897b" stroke-width="1.5"/>
+      <line x1="630" y1="98" x2="630" y2="126" stroke="#26a69a"/><rect x="621" y="103" width="18" height="18" fill="#26a69a"/>
+      <line x1="675" y1="86" x2="675" y2="112" stroke="#26a69a"/><rect x="666" y="90" width="18" height="18" fill="#26a69a"/>
+    </g>
+    <circle cx="585" cy="119" r="8" fill="#fff" stroke="#00897b" stroke-width="2.5"/>
+    <line x1="585" y1="119" x2="640" y2="80" stroke="#00897b" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="560" y="62" width="200" height="36" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.4"/>
+    <text x="660" y="85" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">Range तोड्यो → Markup</text>
+    <text x="300" y="245" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#c8a800">साँघुरो Range (Accumulation)</text>
+
+    <!-- volume drying -->
+    <rect x="50" y="290" width="720" height="74" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="60" y="310" font-family="sans-serif" font-size="13" font-weight="700" fill="#555">Volume</text>
+    <rect x="93" y="338" width="14" height="22" fill="#26a69a" opacity="0.5"/>
+    <rect x="131" y="342" width="14" height="18" fill="#ef5350" opacity="0.5"/>
+    <rect x="169" y="344" width="14" height="16" fill="#26a69a" opacity="0.5"/>
+    <rect x="207" y="346" width="14" height="14" fill="#ef5350" opacity="0.5"/>
+    <rect x="245" y="348" width="14" height="12" fill="#26a69a" opacity="0.5"/>
+    <rect x="283" y="350" width="14" height="10" fill="#ef5350" opacity="0.5"/>
+    <rect x="321" y="350" width="14" height="10" fill="#26a69a" opacity="0.5"/>
+    <rect x="359" y="351" width="14" height="9" fill="#26a69a" opacity="0.5"/>
+    <rect x="397" y="352" width="14" height="8" fill="#ef5350" opacity="0.5"/>
+    <rect x="435" y="351" width="14" height="9" fill="#26a69a" opacity="0.5"/>
+    <rect x="473" y="350" width="14" height="10" fill="#26a69a" opacity="0.5"/>
+    <rect x="511" y="351" width="14" height="9" fill="#ef5350" opacity="0.5"/>
+    <rect x="575" y="328" width="20" height="32" fill="#26a69a" opacity="0.75"/>
+    <line x1="290" y1="358" x2="360" y2="332" stroke="#c8a800" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <rect x="320" y="320" width="200" height="20" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.2"/>
+    <text x="420" y="335" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c8a800">Volume सुक्दै → अन्त्यमा spike</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Accumulation Phase देखाउँछ (Chart 58.2)। माथि — मूल्य लामो समय एउटै साँघुरो Range भित्र थुनिएको छ (साना candle, माथि-तल)। धेरैले "मरेको बजार" भन्छन्, तर यही शान्त फेज ठूलो अवसरको जग हुन सक्छ। तल Volume मा हेर्नुहोस् — Range भित्र Volume bar बिस्तारै सुक्दै (घट्दै) गयो, अर्थात् विक्रेताको दबाब घट्दै र Panic Selling कम हुँदै थियो (स्मार्ट मनी चुपचाप किन्दै)। अन्त्यमा एउटा बलियो green candle ले Range तोड्यो र Volume spike आयो — यो Markup को सुरुवात हो। मुख्य पाठ — यी संकेत मात्र Accumulation को अकाट्य प्रमाण होइनन्; यी ठूला खेलाडी सक्रिय भएका हुन् कि भनी अवलोकन गर्ने प्राथमिक विशेषता मात्र हुन्। तर Beginner यही फेजमा बोर भएर ध्यान दिँदैनन्।
+</div>
+
+<p><strong>Beginner को मुख्य गल्ती:</strong><br>धेरैजसो नयाँ ट्रेडरहरू Accumulation Phase मा स्टक अध्ययन गर्न कत्ति पनि रुचि राख्दैनन्, किनभने यस चरणमा कुनै रोमाञ्चक उतारचढाव वा Excitement हुँदैन। उनीहरू बजारमा मूल्य बढेर हल्लाखल्ला भएपछि मात्र ध्यान दिन थाल्छन्, जुन धेरै पटक ढिलो भइसकेको हुन्छ।</p>
+
+<div class="sub-heading">Phase 2: Markup (मूल्य बढाउने चरण)</div>
+<p>Markup भनेको बजारको त्यो सुखद चरण हो जहाँ शेयरको मूल्य तीव्र र स्पष्ट रूपमा माथि बढ्न थाल्छ। यस समयमा बजारमा किन्ने माग (Demand) सधैँ बेच्ने आपूर्ति (Supply) भन्दा निकै बलियो र आक्रामक देखिन्छ।</p>
+
+<p><strong>Markup का मुख्य संकेतहरू:</strong></p>
+<ul>
+  <li>चार्टमा मूल्यले लगातार Higher High र Higher Low को सुन्दर शृङ्खला बनाउँछ।</li>
+  <li>बजारको प्रवृत्तिको दिशा (Trend) एकदमै बलियो र स्पष्ट देखिन्छ।</li>
+  <li>हरेक साना पुलब्याक वा करेक्सनहरूमा खरिदकर्ताहरू तुरुन्तै सक्रिय हुन्छन्।</li>
+</ul>
+<p>यही सुखद फेजमा संसारका धेरैजसो ट्रेडरहरूले Trend Following Strategy (ट्रेन्ड पछ्याउने रणनीति) को प्रयोग गरेर कमाउने अवसरहरू खोज्छन्।</p>
+
+<p><strong>Markup किन महत्वपूर्ण छ?</strong><br>किनभने बजारको सबैभन्दा ठूलो, छिटो र आकर्षक मूल्य परिवर्तन (Price Movement) यही Phase मा मात्र देखिन्छ। कम समयमा धेरै नाफा निकाल्न यही चरण उपयुक्त मानिन्छ।</p>
+
+<!-- VISUAL 4: Markup healthy uptrend (Chart 58.3) -->
+<div class="visual-block">
+  <div class="visual-title">Markup — Higher High + Higher Low स्वस्थ Uptrend (Chart 58.3)</div>
+  <svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="360" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="22" font-weight="700" fill="#111">हरेक Pullback मा खरिदकर्ता सक्रिय</text>
+
+    <rect x="50" y="58" width="720" height="240" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <g stroke-width="1.8">
+      <line x1="85" y1="250" x2="85" y2="280" stroke="#26a69a"/><rect x="76" y="256" width="18" height="20" fill="#26a69a"/>
+      <line x1="125" y1="228" x2="125" y2="258" stroke="#26a69a"/><rect x="116" y="233" width="18" height="22" fill="#26a69a"/>
+      <line x1="165" y1="210" x2="165" y2="238" stroke="#26a69a"/><rect x="156" y="215" width="18" height="18" fill="#26a69a"/>
+      <line x1="205" y1="214" x2="205" y2="248" stroke="#ef5350"/><rect x="196" y="220" width="18" height="14" fill="#ef5350"/>
+      <line x1="245" y1="190" x2="245" y2="222" stroke="#26a69a"/><rect x="236" y="195" width="18" height="22" fill="#26a69a"/>
+      <line x1="285" y1="168" x2="285" y2="198" stroke="#26a69a"/><rect x="276" y="173" width="18" height="20" fill="#26a69a"/>
+      <line x1="325" y1="150" x2="325" y2="178" stroke="#26a69a"/><rect x="316" y="155" width="18" height="18" fill="#26a69a"/>
+      <line x1="365" y1="155" x2="365" y2="188" stroke="#ef5350"/><rect x="356" y="161" width="18" height="14" fill="#ef5350"/>
+      <line x1="405" y1="132" x2="405" y2="162" stroke="#26a69a"/><rect x="396" y="137" width="18" height="22" fill="#26a69a"/>
+      <line x1="445" y1="112" x2="445" y2="142" stroke="#26a69a"/><rect x="436" y="117" width="18" height="20" fill="#26a69a"/>
+      <line x1="485" y1="98" x2="485" y2="126" stroke="#26a69a"/><rect x="476" y="103" width="18" height="18" fill="#26a69a"/>
+      <line x1="525" y1="104" x2="525" y2="136" stroke="#ef5350"/><rect x="516" y="110" width="18" height="13" fill="#ef5350"/>
+      <line x1="565" y1="86" x2="565" y2="114" stroke="#26a69a"/><rect x="556" y="90" width="18" height="20" fill="#26a69a"/>
+      <line x1="605" y1="74" x2="605" y2="100" stroke="#26a69a"/><rect x="596" y="78" width="18" height="18" fill="#26a69a"/>
+    </g>
+    <!-- HH HL bubbles -->
+    <line x1="205" y1="248" x2="180" y2="320" stroke="#26a69a" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="70" y="314" width="220" height="36" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.4"/>
+    <text x="180" y="337" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#2e7d32">Higher Low (pullback मा किन्ने)</text>
+    <line x1="485" y1="100" x2="600" y2="320" stroke="#26a69a" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="500" y="314" width="200" height="36" rx="9" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.4"/>
+    <text x="600" y="337" text-anchor="middle" font-family="sans-serif" font-size="14.5" font-weight="700" fill="#2e7d32">Higher High (नयाँ शिखर)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Markup Phase को स्वस्थ Uptrend देखाउँछ (Chart 58.3)। यहाँ माग (Demand) आपूर्ति (Supply) भन्दा निकै बलियो छ — त्यसैले मूल्यले लगातार Higher High र Higher Low को सुन्दर शृङ्खला बनाउँदै माथि जान्छ। बीच-बीचमा साना Pullback (रातो candle) आउँछन्, तर हरेक Pullback मा खरिदकर्ता तुरुन्तै सक्रिय भएर मूल्यलाई फेरि माथि धकेल्छन् (Higher Low बन्छ), अनि नयाँ Higher High बन्छ। यही फेजमा Trend Following रणनीति राम्रो काम गर्छ, र बजारको सबैभन्दा ठूलो, छिटो र आकर्षक नाफा यही चरणमा बन्छ। तर Beginner को गल्ती — उनीहरू Markup को सुरु वा breakout मा होइन, यो चरणको पूरै अन्त्यमा (Top नजिक, जब बजार अत्यधिक तातो हुन्छ) ठूलो पूँजी लिएर किन्न पुग्छन्।
+</div>
+
+<p><strong>Beginner को मुख्य गल्ती:</strong><br>Beginner ट्रेडरहरू Markup चरणको सुरुवात वा ब्रेकआउटमा बजारमा प्रवेश गर्दैनन्। उनीहरू त यो चरणको पूरै अन्तिम भागमा (Top को नजिक), जब बजार अत्यधिक तातो र उत्साहित हुन्छ, तब मात्र ठूलो पूँजी लिएर खरिद गर्न पुग्छन्।</p>
+
+<div class="sub-heading">Phase 3: Distribution (वितरणको चरण)</div>
+<p>Distribution Phase लाई बुझ्न र चिन्नु एउटा ट्रेडरका लागि सबैभन्दा बढी महत्वपूर्ण हुन्छ। किनभने बजारमा ९०% भन्दा बढी सर्वसाधारण रिटेल ट्रेडरहरू यही खतरनाक चरणमा ठूला खेलाडीहरूको जालमा फस्ने गर्छन्।</p>
+
+<p><strong>Distribution वास्तवमा के हो?</strong><br>सरल भाषामा भन्दा, जब शेयरको मूल्य धेरै माथि पुग्छ, तब माथिल्लो मूल्यमा नयाँ खरिदकर्ताहरूको माग (Demand) बिस्तारै कमजोर हुन थाल्छ। मूल्यले पहिलेको जस्तो सजिलै र तीव्र गतिमा नयाँ High बनाउन सक्दैन। बजार माथिल्लो विन्दुमा पुगेर फेरि एउटा दायरा वा रेन्ज (Range) जस्तो व्यवहार देखाउँदै अल्झिन थाल्छ। यहाँ ठूला खेलाडीहरूले आफ्ना शेयरहरू बिस्तारै बजारमा आपूर्ति (Supply) गर्न थाल्छन्।</p>
+
+<p><strong>Distribution का सम्भावित संकेतहरू:</strong></p>
+<ul>
+  <li>बलियो रूपमा गइरहेको Uptrend अचानक सुस्त हुनु वा रोकिनु।</li>
+  <li>मूल्य माथिल्लो विन्दुमा पुगेर एउटा साँघुरो वा उतारचढावपूर्ण रेन्ज भित्र बस्नु।</li>
+  <li>मूल्य खासै नबढे पनि दैनिक कारोबार भोल्युम भने असामान्य रूपमा धेरै उच्च देखिनु।</li>
+  <li>चार्टमा रेजिस्टेन्स तोडेर माथि जान खोजेका ब्रेकआउटहरू बारम्बार फेल (Weak Breakouts) हुनु।</li>
+  <li>बजारको माथिल्लो दिशाको मोमेन्टम (Momentum) लगातार घट्दै जानु।</li>
+</ul>
+
+<div class="callout-quote">
+  <p style="margin-bottom:0;"><strong>फेरि सम्झनुहोस्:</strong> बजारमा देखिने कुनै पनि एउटै मात्र संकेतको आधारमा हतारमा निष्कर्ष निकाल्नु हुँदैन। सधैँ बजारको समग्र इतिहास र Context लाई हेरेर मात्र निर्णय लिनुपर्छ।</p>
+</div>
+
+<!-- VISUAL 5: Distribution + Markdown (Chart 58.4) -->
+<div class="visual-block">
+  <div class="visual-title">Distribution → Markdown — Top मा बाँडेर, फेरि ओरालो (Chart 58.4)</div>
+  <svg viewBox="0 0 820 410" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="410" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="22" font-weight="700" fill="#111">माथि Range + उच्च Volume → Range तोडेर खस्यो</text>
+
+    <rect x="50" y="58" width="720" height="240" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <line x1="80" y1="105" x2="470" y2="105" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <line x1="80" y1="150" x2="470" y2="150" stroke="#c8a800" stroke-width="1.3" stroke-dasharray="5,3"/>
+    <g stroke-width="1.8">
+      <!-- arrive at top -->
+      <line x1="90" y1="175" x2="90" y2="205" stroke="#26a69a"/><rect x="81" y="180" width="18" height="20" fill="#26a69a"/>
+      <line x1="128" y1="148" x2="128" y2="178" stroke="#26a69a"/><rect x="119" y="153" width="18" height="20" fill="#26a69a"/>
+      <!-- distribution range with weak breakouts + long upper wicks -->
+      <line x1="166" y1="92" x2="166" y2="148" stroke="#ef5350"/><rect x="157" y="118" width="18" height="14" fill="#ef5350"/>
+      <line x1="204" y1="108" x2="204" y2="150" stroke="#26a69a"/><rect x="195" y="114" width="18" height="16" fill="#26a69a"/>
+      <line x1="242" y1="90" x2="242" y2="145" stroke="#ef5350"/><rect x="233" y="116" width="18" height="14" fill="#ef5350"/>
+      <line x1="280" y1="110" x2="280" y2="150" stroke="#26a69a"/><rect x="271" y="116" width="18" height="14" fill="#26a69a"/>
+      <line x1="318" y1="88" x2="318" y2="148" stroke="#ef5350"/><rect x="309" y="115" width="18" height="14" fill="#ef5350"/>
+      <line x1="356" y1="108" x2="356" y2="148" stroke="#26a69a"/><rect x="347" y="114" width="18" height="14" fill="#26a69a"/>
+      <line x1="394" y1="95" x2="394" y2="150" stroke="#ef5350"/><rect x="385" y="118" width="18" height="14" fill="#ef5350"/>
+      <line x1="432" y1="112" x2="432" y2="152" stroke="#ef5350"/><rect x="423" y="118" width="18" height="16" fill="#ef5350"/>
+      <!-- markdown break down -->
+      <line x1="475" y1="148" x2="475" y2="195" stroke="#ef5350" stroke-width="2"/><rect x="465" y="154" width="20" height="34" fill="#ef5350"/>
+      <line x1="518" y1="180" x2="518" y2="225" stroke="#ef5350"/><rect x="509" y="186" width="18" height="32" fill="#ef5350"/>
+      <line x1="560" y1="210" x2="560" y2="255" stroke="#ef5350"/><rect x="551" y="216" width="18" height="32" fill="#ef5350"/>
+      <line x1="602" y1="238" x2="602" y2="280" stroke="#ef5350"/><rect x="593" y="244" width="18" height="28" fill="#ef5350"/>
+      <line x1="644" y1="258" x2="644" y2="290" stroke="#26a69a"/><rect x="635" y="263" width="18" height="12" fill="#26a69a"/>
+      <line x1="686" y1="262" x2="686" y2="294" stroke="#ef5350"/><rect x="677" y="267" width="18" height="22" fill="#ef5350"/>
+    </g>
+    <text x="275" y="92" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c8a800">Distribution Range</text>
+    <circle cx="475" cy="154" r="8" fill="#fff" stroke="#c62828" stroke-width="2.5"/>
+    <line x1="475" y1="154" x2="600" y2="160" stroke="#c62828" stroke-width="1.3" stroke-dasharray="4,3"/>
+    <rect x="560" y="142" width="205" height="36" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.4"/>
+    <text x="662" y="165" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#c62828">Range तोड्यो → Markdown</text>
+
+    <!-- volume high in distribution -->
+    <rect x="50" y="300" width="720" height="74" fill="#fffdf5" stroke="#c9b97a" stroke-width="1"/>
+    <text x="60" y="318" font-family="sans-serif" font-size="13" font-weight="700" fill="#555">Volume</text>
+    <rect x="81" y="350" width="18" height="20" fill="#26a69a" opacity="0.5"/>
+    <rect x="119" y="346" width="18" height="24" fill="#26a69a" opacity="0.5"/>
+    <rect x="157" y="334" width="18" height="36" fill="#ef5350" opacity="0.6"/>
+    <rect x="195" y="338" width="18" height="32" fill="#26a69a" opacity="0.6"/>
+    <rect x="233" y="332" width="18" height="38" fill="#ef5350" opacity="0.6"/>
+    <rect x="271" y="340" width="18" height="30" fill="#26a69a" opacity="0.6"/>
+    <rect x="309" y="330" width="18" height="40" fill="#ef5350" opacity="0.65"/>
+    <rect x="347" y="342" width="18" height="28" fill="#26a69a" opacity="0.6"/>
+    <rect x="385" y="333" width="18" height="37" fill="#ef5350" opacity="0.6"/>
+    <line x1="240" y1="332" x2="330" y2="312" stroke="#c8a800" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <rect x="300" y="304" width="250" height="20" rx="6" fill="#fff8dc" stroke="#c8a800" stroke-width="1.2"/>
+    <text x="425" y="319" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#c8a800">मूल्य स्थिर तर Volume उच्च (बाँड्दै)</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो chart ले Distribution र Markdown दुवै देखाउँछ (Chart 58.4)। माथि — मूल्य धेरै माथि पुगेपछि Uptrend सुस्त भयो र एउटा Range भित्र अल्झियो (Distribution Range)। यहाँ रेजिस्टेन्स तोड्ने प्रयासहरू बारम्बार फेल भए (माथि लामो wick भएका कमजोर breakout)। मुख्य संकेत — तल Volume मा हेर्नुहोस्: मूल्य खासै नबढे पनि Volume असामान्य रूपमा उच्च छ — किनकि ठूला खेलाडी यही Top मा चुपचाप आफ्ना शेयर जनतालाई बाँडिरहेका (बेचिरहेका) छन्। यही समयमा News र social media सबैभन्दा सकारात्मक हुन्छन्, जसले नयाँ रिटेललाई फसाउँछ। अनि एउटा बलियो रातो candle ले Range तोड्यो र Markdown सुरु भयो — मूल्यले Lower High/Lower Low बनाउँदै तीव्र गतिमा खस्यो। मुख्य पाठ — Top मा "मूल्य स्थिर तर Volume उच्च" देखियो भने सतर्क हुनुपर्छ; तर एउटै संकेतले होइन, समग्र Context हेरेर निर्णय गर्ने।
+</div>
+
+<p><strong>Retail Psychology (साधारण लगानीकर्ताको मनोविज्ञान):</strong><br>यो चरणको सबैभन्दा रोचक र विडम्बनापूर्ण पक्ष के हो भने, यही समयमा बजारका समाचारहरू (News) अत्यधिक सकारात्मक र आकर्षक हुन्छन्। सामाजिक सञ्जालहरू सो स्टकको तारिफ र नाफाका कथाहरूले भरिएका हुन्छन्। यसले नयाँ र अपरिपक्व क्रेताहरूलाई बजारमा आउन लोभ्याउँछ, जसको फाइदा ठूला खेलाडीले उठाउँछन्।</p>
+
+<div class="sub-heading">Phase 4: Markdown (मूल्य खसाउने चरण)</div>
+<p>Markdown भनेको बजारको त्यो कष्टकर र ओरालो लाग्ने चरण हो जहाँ शेयरको मूल्य तीव्र गतिमा तल खस्न थाल्छ। यस चरणमा बेच्ने आपूर्ति (Supply) किन्ने माग (Demand) भन्दा सधैँ अत्यधिक बलियो र आक्रामक हुन्छ।</p>
+
+<p><strong>Markdown का मुख्य संकेतहरू:</strong></p>
+<ul>
+  <li>चार्टमा मूल्यले लगातार Lower High र Lower Low को शृङ्खला बनाउँछ।</li>
+  <li>बजारको डाउनट्रेन्ड (Downtrend) एकदमै बलियो र डरलाग्दो देखिन्छ।</li>
+  <li>बजारमा आशा र उत्साहको ठाउँ पूरै डर र घबराहटले लिन्छ।</li>
+</ul>
+
+<p><strong>Markdown मा के हुन्छ?</strong><br>यस चरणमा धेरैजसो साधारण ट्रेडरहरू केवल एउटा नक्कली 'Hope' (आशा) मा मात्र बस्छन्। उनीहरू बजारको नियम अनुसार आफ्नो 'Stop Loss' प्रयोग गर्दैनन् र बजारको ट्रेन्ड पूर्ण रूपमा बदलिइसकेको सत्यलाई स्वीकार गर्नै सक्दैनन्। परिणाम स्वरूप, उनीहरूको सानो घाटा पछि गएर एउटा ठूलो र अपूरणीय नोक्सानी (Big Loss) मा परिणत हुन्छ।</p>
+
+<h2 class="section-heading">NEPSE Context</h2>
+
+<p>नेपाल शेयर बजार (NEPSE) मा पनि यस्ता वाइकोफका चक्रहरू विभिन्न समयावधि र सेक्टरहरूमा स्पष्ट रूपमा देखिने गर्छन्। नेप्सेको बजारमा कस्तो रोचक दृश्य देखिन्छ भने:</p>
+<ul>
+  <li>कुनै एउटा निश्चित सेक्टर वा स्टक लामो समयदेखि Accumulation Phase मा शान्त बसिरहेको हुन सक्छ।</li>
+  <li>ठीक त्यही समयमा अर्को कुनै सेक्टर आक्रामक रूपमा Markup Phase मा कुदिरहेको हुन सक्छ।</li>
+  <li>अनि अर्को कुनै सेक्टर भने आफ्नो उच्च विन्दुमा पुगेर Distribution वा Markdown को सामना गरिरहेको हुन सक्छ।</li>
+</ul>
+
+<p>त्यसैले, केवल नेप्से इन्डेक्स (NEPSE Index) मात्र हेरेर बजारका सबै स्टकहरूको वास्तविक अवस्था र चरण बुझ्न कदापि सकिँदैन। एउटा सफल र स्मार्ट ट्रेडरले सधैँ प्रत्येक Individual Stock को चार्ट खोलेर त्यसको आफ्नै आन्तरिक चरण अध्ययन गर्नुपर्छ।</p>
+
+<p><strong>Practical NEPSE Example:</strong><br>मानौँ नेप्सेको कुनै एउटा हाइड्रोपावर स्टक विगत ९ महिनासम्म २५० देखि २७० को रेन्ज भित्र स्थिर छ र त्यसको भोल्युम बिस्तारै सुधारिँदै छ (Accumulation)। केही समयपछि त्यसले आफ्नो रेजिस्टेन्स ब्रेक गरेर आक्रामक रूपमा ४५० सम्मको यात्रा तय गर्छ (Markup)। ४५० को वरपर पुगेपछि मूल्य बढ्न छाड्छ तर भोल्युम अत्यधिक आउँछ (Distribution)। र अन्ततः त्यो रेन्ज तोडेर मूल्य फेरि तल झर्न थाल्छ (Markdown)। यो नेप्सेमा दिनहुँ दोहोरिने एउटा व्यावहारिक चक्रको उत्कृष्ट उदाहरण हो।</p>
+
+<h2 class="section-heading">Trader Psychology Behind This Topic</h2>
+
+<p>बजारको प्रत्येक फरक चरणमा आम लगानीकर्ताहरूको आन्तरिक भावना र मनोविज्ञान पनि पूर्ण रूपमा फरक र निश्चित हुने गर्छ:</p>
+<ul>
+  <li><strong>Accumulation (जम्मा गर्ने चरण):</strong> यहाँ बजारमा पूर्ण <strong>उदासीनता</strong> छाएको हुन्छ। मानिसहरू भन्छन्, “यो शेयरमा कत्ति पनि दम छैन, यसलाई हेर्नु नै बेकार छ।”</li>
+  <li><strong>Markup (मूल्य बढाउने चरण):</strong> यहाँ बजारमा <strong>आशावाद र दृढता</strong> देखिन्छ। मानिसहरू भन्छन्, “बजार निकै राम्रो चलिरहेको छ, यसले अझै राम्रो गर्नेछ।”</li>
+  <li><strong>Distribution (वितरणको चरण):</strong> यहाँ बजारमा <strong>अत्यधिक उत्साह र लोभ (FOMO)</strong> हाबी हुन्छ। मानिसहरू भन्छन्, “यो त अब इतिहासकै नयाँ रेकर्ड बनाउन जाँदैछ, जसरी पनि किन्नुपर्छ।”</li>
+  <li><strong>Markdown (मूल्य खसाउने चरण):</strong> यहाँ बजारमा पूर्ण <strong>डर, संशय र निराशा</strong> व्याप्त हुन्छ। मानिसहरू अत्तालिँदै सोध्छन्, “अब बजार कहिले बढ्छ? मेरो त पूरै पैसा डुब्यो, अब के गर्ने?”</li>
+</ul>
+
+<p>यही मानवीय भावनाहरूको निरन्तर फन्कोले नै बजारको यो चक्रलाई सधैँ जीवित र चलायमान राख्छ।</p>
+
+<!-- VISUAL 6: Phase psychology cycle -->
+<div class="visual-block">
+  <div class="visual-title">चरण अनुसार Trader Psychology — भावनाको चक्र</div>
+  <svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="380" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="22" font-weight="700" fill="#111">हरेक चरणमा भीडको फरक भावना</text>
+
+    <!-- curve -->
+    <path d="M 70 280 Q 150 278 220 275 Q 330 270 400 130 Q 450 100 560 115 Q 650 120 700 200 Q 745 255 770 285" stroke="#c9b97a" stroke-width="3" fill="none"/>
+
+    <!-- Accumulation -->
+    <circle cx="150" cy="277" r="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="2"/>
+    <line x1="150" y1="277" x2="160" y2="320" stroke="#26a69a" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="60" y="320" width="195" height="48" rx="8" fill="#eaf6ea" stroke="#26a69a" stroke-width="1.3"/>
+    <text x="157" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#2e7d32">Accumulation</text>
+    <text x="157" y="358" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111">😴 उदासीनता / बोरियत</text>
+
+    <!-- Markup -->
+    <circle cx="320" cy="200" r="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="2"/>
+    <line x1="320" y1="200" x2="320" y2="165" stroke="#2962ff" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="225" y="118" width="190" height="48" rx="8" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.3"/>
+    <text x="320" y="138" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#1a56cc">Markup</text>
+    <text x="320" y="156" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111">🙂 आशावाद / दृढता</text>
+
+    <!-- Distribution -->
+    <circle cx="480" cy="110" r="9" fill="#fff8dc" stroke="#c8a800" stroke-width="2.5"/>
+    <line x1="480" y1="110" x2="540" y2="78" stroke="#c8a800" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="455" y="56" width="290" height="44" rx="8" fill="#fff8dc" stroke="#c8a800" stroke-width="1.4"/>
+    <text x="600" y="76" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c8a800">Distribution</text>
+    <text x="600" y="93" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111">🤑 चरम उत्साह / लोभ (FOMO)</text>
+
+    <!-- Markdown -->
+    <circle cx="690" cy="195" r="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="2"/>
+    <line x1="690" y1="195" x2="700" y2="320" stroke="#ef5350" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <rect x="595" y="320" width="200" height="48" rx="8" fill="#ffe5e0" stroke="#ef5350" stroke-width="1.3"/>
+    <text x="695" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#c62828">Markdown</text>
+    <text x="695" y="358" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#111">😱 डर / निराशा / आशा</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो visual ले बजारको हरेक चरणमा भीडको भावना कसरी बदलिन्छ देखाउँछ। <strong>Accumulation</strong> (तल): पूर्ण उदासीनता र बोरियत — "यो शेयरमा दम छैन, हेर्नु बेकार"। <strong>Markup</strong> (माथि जाँदै): आशावाद र दृढता — "बजार राम्रो छ, अझै राम्रो गर्छ"। <strong>Distribution</strong> (Top): चरम उत्साह र लोभ/FOMO — "इतिहासकै रेकर्ड बनाउँछ, जसरी पनि किन्नुपर्छ" (यहीँ रिटेल फस्छ)। <strong>Markdown</strong> (खस्दै): डर, संशय र निराशा — "पैसा डुब्यो, अब के गर्ने?"। मुख्य पाठ — भीडको भावना सधैँ उल्टो समयमा चरम हुन्छ: Top मा सबैभन्दा बढी लोभ (किन्ने), Bottom मा सबैभन्दा बढी डर (बेच्ने)। यही मानवीय भावनाको फन्कोले बजारको चक्रलाई जीवित राख्छ। सफल ट्रेडर यो भावना चिनेर भीडको विपरीत, नियम अनुसार चल्छ।
+</div>
+
+<h2 class="section-heading">Common Mistakes</h2>
+
+<ul>
+  <li>लामो समयसम्म रेन्ज वा कन्सोलिडेसनमा बसेको बजारलाई काम नलाग्ने ठानेर पूर्ण रूपमा बेवास्ता गर्नु।</li>
+  <li>Markup चरणको पूरै अन्तिम भागमा, जब बजार अत्यधिक तातो हुन्छ, तब मात्र हौसिएर Entry गर्नु।</li>
+  <li>माथिल्लो विन्दुमा देखिने Distribution का स्पष्ट प्राविधिक संकेतहरूलाई चिन्न नसक्नु वा नजरअन्दाज गर्नु।</li>
+  <li>बजार Markdown (डाउनट्रेन्ड) मा गइसकेपछि पनि केवल अन्धो आशा (Hope) मात्र राखेर बस्नु, सुधार स्वीकार नगर्नु।</li>
+  <li>मूल्य परिवर्तनको पछाडि लुकेको वास्तविक भोल्युम (Volume) को व्यवहारलाई ध्यान नदिनु।</li>
+  <li>बजारको प्रवृत्तिको दिशा र ट्रेन्डमा आएको स्पष्ट परिवर्तनलाई आफ्नो अहङ्कारका कारण स्वीकार नगर्नु।</li>
+  <li>सामाजिक सञ्जालमा चल्ने Hype वा हल्लाहरूको पछि लागेर बजारको उच्च विन्दुमा खरिदको निर्णय गर्नु।</li>
+  <li>आफूले ट्रेड गरिरहेको स्टक हाल Market Cycle को कुन चरणमा छ भन्ने कुराको सामान्य ज्ञान पनि नराख्नु।</li>
+  <li>आफ्नो पुँजी जोगाउने सबैभन्दा मुख्य अस्त्र 'Stop Loss' को प्रयोग गर्न सधैँ कञ्जुस्याईँ वा ढिलाइ गर्नु।</li>
+  <li>स्टकको समग्र ब्याकग्राउन्ड र प्राविधिक सन्दर्भ (Context) नहेरी केवल एउटा क्यान्डलको भरमा ट्रेड लिनु।</li>
+</ul>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ चेतावनी</div>
+  <p style="margin-bottom:0;">बजारमा देखिने हरेक साइडवेज वा फ्ल्याट मार्केट (Sideways Market) सधैँ Accumulation नै हुन्छ भन्ने हुँदैन, त्यो कहिलेकाहीँ अर्को गिरावट अगाडिको Re-Distribution पनि हुन सक्छ। त्यसैगरी, बजारको हरेक माथिल्लो रेन्ज वा टप सधैँ Distribution नै हुँदैन, त्यो अझै माथि जानु अगाडिको Re-Accumulation पनि हुन सक्छ। त्यसैले सधैँ भोल्युम र संरचनाको स्पष्ट कन्फर्मेसन पछि मात्र आफ्नो अन्तिम निर्णय लिनुहोस्।</p>
+</div>
+
+<h2 class="section-heading">Practical Rules</h2>
+
+<ul>
+  <li>लामो समयसम्म एउटै दायरामा बसेका Range Phase वा कन्सोलिडेसनहरूलाई सधैँ उच्च प्राथमिकताका साथ अध्ययन गर्नुहोस्।</li>
+  <li>बजारको हरेक नयाँ चरणमा भोल्युमले कस्तो खालको व्यवहार देखाइरहेको छ, सो अनिवार्य रूपमा नियाल्नुहोस्।</li>
+  <li>बजारको प्रवृत्ति र ट्रेन्डमा आउने प्रारम्भिक परिवर्तनहरूलाई समयमै चिन्न र स्वीकार गर्न सिक्नुहोस्।</li>
+  <li>बजारमा जताततै अत्यधिक उत्साह (Excitement) र हल्ला भएको बेला हतारमा खरिदको कुनै पनि निर्णय नगर्नुहोस्।</li>
+  <li>बजारमा जताततै अत्यधिक डर (Fear) र बबण्डर भएको बेला अत्तालिएर हतारमा आफ्नो शेयर बिक्री नगर्नुहोस्।</li>
+  <li>कुनै पनि स्टकमा प्रवेश गर्नु अगाडि त्यो हाल समग्र Market Cycle को कुन Context मा छ, सो पत्ता लगाउनुहोस्।</li>
+  <li>बजार आफ्नो विपरीत दिशामा जाँदा पूँजी जोगाउनका लागि सधैँ कडा रूपमा 'Stop Loss' को नियम पालना गर्नुहोस्।</li>
+  <li>बजारको दायरा तोडिएपछि सधैँ भोल्युम र प्राइस एक्सनको स्पष्ट Confirmation खोज्ने बानी बसाल्नुहोस्।</li>
+  <li>सामाजिक सञ्जाल वा हल्लाहरू भन्दा आफ्नो आँखा अगाडि चार्टमा देखिने ठोस तथ्य र प्रमाणमा मात्र विश्वास गर्नुहोस्।</li>
+  <li>बजारले आफ्नो एउटा चरणबाट अर्को चरणमा प्रवेश गर्न समय लिने हुनाले सधैँ उच्च स्तरको धैर्यता कायम राख्नुहोस्।</li>
+</ul>
+
+<h2 class="section-heading">Example or Scenario</h2>
+
+<p><strong>Scenario 1: सम्भावित खरिदको चरण</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">एउटा स्थापित कमर्सियल बैंकको शेयर मूल्य विगत ८ महिनादेखि २१० देखि २२५ को साँघुरो दायरा (Range) भित्र बसेको छ। बजार पूरै शान्त छ र भोल्युम एकदमै स्थिर छ। एउटा सजग ट्रेडरले यहाँ Accumulation को बलियो सम्भावनाको अध्ययन गरिरहेको हुन्छ।</p></div>
+
+<p><strong>Scenario 2: स्पष्ट ट्रेन्डको लहर</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">उक्त बैंकको शेयरले अचानक ठूलो भोल्युमका साथ २२५ को रेजिस्टेन्सलाई तोडेर माथि जान्छ र चार्टमा लगातार Higher High र Higher Low बनाउन थाल्छ। ट्रेडरले यहाँ आधिकारिक रूपमा Markup Phase सुरु भएको बुझ्छ र ट्रेन्डको दिशामा अवसर खोज्छ।</p></div>
+
+<p><strong>Scenario 3: माथिल्लो लेभलको खतरा</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">मूल्य लगातार बढेर ४०० को विन्दुमा पुग्छ। त्यहाँ पुगेपछि मूल्य माथि जान छाड्छ तर दैनिक भोल्युम भने इतिहासकै सबैभन्दा धेरै आउन थाल्छ। बजारको मोमेन्टम कम हुँदै गएको छ। ट्रेडरले यहाँ Distribution को बलियो सम्भावना विचार गर्दै आफ्नो नाफा सुरक्षित गर्न थाल्छ।</p></div>
+
+<p><strong>Scenario 4: गिरावटको सुरुवात र जोखिम व्यवस्थापन</strong></p>
+<div class="content-box"><p style="margin-bottom:0;">Distribution को रेन्ज तोडिएर मूल्यले चार्टमा Lower High र Lower Low बनाउँदै ओरालो यात्रा सुरु गर्छ। एउटा अनुशासित र व्यावसायिक ट्रेडरले यहाँ स्पष्ट रूपमा Markdown Phase सुरु भएको स्वीकार गर्छ र Hope मा नबसी आफ्नो Risk Management लागू गर्छ।</p></div>
+
+<h2 class="section-heading">Table 58.1: Accumulation vs Distribution</h2>
+
+<table>
+  <thead>
+    <tr><th>विशेषता</th><th>Accumulation</th><th>Distribution</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>बजारको स्थान</td><td>तल्लो विन्दु / Support नजिक</td><td>उच्च विन्दु / Resistance नजिक</td></tr>
+    <tr><td>अवधि</td><td>लामो समय Range</td><td>उच्चमा Range/अल्झिने</td></tr>
+    <tr><td>Volume</td><td>विस्तारै स्थिर र सुक्खा</td><td>मूल्य स्थिर भए पनि असामान्य उच्च</td></tr>
+    <tr><td>स्मार्ट मनी</td><td>चुपचाप किन्दै</td><td>चुपचाप बेच्दै</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 58.2: चारवटै Market Phase सारांश</h2>
+
+<table>
+  <thead>
+    <tr><th>चरण</th><th>मुख्य प्रवृत्ति</th><th>शक्ति सन्तुलन</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Accumulation</td><td>Sideways</td><td>बराबर जस्तै</td></tr>
+    <tr><td>Markup</td><td>स्पष्ट Uptrend</td><td>Demand पूर्ण हावी</td></tr>
+    <tr><td>Distribution</td><td>पुनः Sideways</td><td>Supply बढ्दै</td></tr>
+    <tr><td>Markdown</td><td>Downtrend</td><td>Supply हावी</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Table 58.3: Phase अनुसार Trader Psychology</h2>
+
+<table>
+  <thead>
+    <tr><th>चरण</th><th>आम लगानीकर्ताको भावना</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Accumulation</td><td>पूर्ण उदासीनता र बोरियत</td></tr>
+    <tr><td>Markup</td><td>आशावाद र दृढ विश्वास</td></tr>
+    <tr><td>Distribution</td><td>अत्यधिक उत्साह र लोभ (FOMO) चरम</td></tr>
+    <tr><td>Markdown</td><td>डर, संशय र अन्धो आशा</td></tr>
+  </tbody>
+</table>
+
+<h2 class="section-heading">Checklist</h2>
+
+<div class="checklist-box">
+  <div class="checklist-title">Market Phase Identification Checklist</div>
+  <ul>
+    <li>के मैले अध्ययन गरिरहेको स्टक अहिले कुनै निश्चित र लामो साघुरो दायरा (Range) भित्र बसिरहेको छ?</li>
+    <li>के चार्टमा मूल्यको वर्तमान ट्रेन्ड (Trend) एकदमै स्पष्ट, सफा र दिशासहितको देखिन्छ?</li>
+    <li>के बजारको हालको विन्दुमा दैनिक कारोबारको भोल्युम (Volume) मा कुनै उल्लेख्य सुधार वा परिवर्तन आएको छ?</li>
+    <li>के चार्टमा मूल्यको माथि जाने गति र शक्ति (Momentum) अझै पनि उत्तिकै बलियो र अक्षुण्ण छ?</li>
+    <li>क्यान्डलहरूको प्रवृत्ति हेर्दा बजारले लगातार नयाँ Higher High र Higher Low को शृङ्खला बनाइरहेको छ?</li>
+    <li>के बजारले आफ्नो अघिल्लो सपोर्टहरू तोड्दै लगातार नयाँ Lower High र Lower Low बनाउन थालेको हो?</li>
+    <li>मेरो गहिरो प्राविधिक विश्लेषण अनुसार यो स्टक हाल समग्र Market Cycle को कुन निश्चित Phase मा हुन सक्छ?</li>
+    <li>के मैले यो ट्रेडको निर्णय लिनु अगाडि बजारको समग्र पृष्ठभूमि, इतिहास र Context लाई राम्ररी विश्लेषण गरेँ?</li>
+    <li>यदि बजार मेरो विश्लेषणको विपरीत दिशामा गयो भने म कहाँ निस्किने भन्ने स्पष्ट Risk Plan वा Stop Loss तयार छ?</li>
+    <li>के मेरो यो व्यापारिक निर्णय बजारको कुनै बाहिरी हल्ला वा भावनामा नबगी पूर्ण रूपमा नियन्त्रित Emotion का साथ तथ्यमा आधारित छ?</li>
+  </ul>
+</div>
+
+<h2 class="section-heading">Exercise for Reader</h2>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 1</div>
+  <p>नेपाल शेयर बजार (NEPSE) का हालका कुनै पनि १० वटा फरक-फरक कम्पनीका चार्टहरू खोल्नुहोस्। प्रत्येक चार्टको गहिरो अध्ययन गरेर ती अहिले वाइकोफका चारवटा चरणहरू (Accumulation, Markup, Distribution, Markdown) मध्ये कुन चरणमा हुन सक्छन्, आफ्नो अनुमान डायरीमा लेख्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 2</div>
+  <p>नेप्सेको इतिहासमा घटेको कुनै एउटा पुरानो र ठूलो Bull Run (बुल मार्केट) को पूरा चार्ट पल्टाउनुहोस्। त्यस चार्ट भित्र वाइकोफले व्याख्या गरेका चारवटै चरणहरूलाई पालैपालो पहिचान गरेर तिनीहरूको समय अवधि गणना गर्ने प्रयास गर्नुहोस्।</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 3</div>
+  <p>आजै आफ्नो ट्रेडिङ जर्नल (Trading Journal) को नयाँ पाना पल्टाउनुहोस् र विगतका ट्रेडहरू सम्झिँदै इमानदारीपूर्वक यो कुरा लेख्नुहोस्: “म प्रायः बजारको कुन चरण (Phase) भइरहेको बेला बजारमा हतारिएर Entry गर्ने गर्छु?”</p>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">📝 Exercise 4</div>
+  <p>तपाईंले विगतमा लिनुभएको कुनै एउटा यस्तो ट्रेड छान्नुहोस् जसमा तपाईंलाई ठूलो घाटा भएको थियो। अब त्यो चार्ट पुनः खोलेर विश्लेषण गर्नुहोस् कि तपाईंले ट्रेड लिँदा बजार वास्तवमा कुन Phase बाट गुज्रिरहेको रहेछ र तपाईं कहाँ चुक्नुभएछ।</p>
+</div>
+
+<h2 class="section-heading">Trader Note</h2>
+
+<div class="trader-note">
+  <div class="trader-note-title">Trader Note</div>
+  <p style="margin-bottom:0;">एउटा सफल र परिपक्व ट्रेडरले बजारमा कहिल्यै पनि केवल शेयरको बाहिरी मूल्य (Price) कति पुग्यो भनेर मात्र हेर्दैन। उसले त जहिले पनि त्यो मूल्य बजारको समग्र चक्र (Market Cycle) को कुन निश्चित चरण वा Phase मा छ भन्ने कुरा बुझ्ने गहिरो प्रयास गरिरहेको हुन्छ। बजारका धेरैजसो साधारण मानिसहरू सधैँ अत्यधिक हल्ला र Excitement भएको बेला अर्थात् Markup को पूरै अन्तिम भागमा मात्र बजारमा प्रवेश गर्छन्, र धेरै कम मानिसहरूसँग मात्र बजार शान्त भएको बेला अर्थात् Accumulation Phase को गहिरो अध्ययन गर्ने धैर्यता र अनुशासन हुन्छ।</p>
+</div>
+
+<h2 class="section-heading">Chapter Summary</h2>
+
+<div class="summary-box">
+  <div class="summary-title">📚 Chapter 58 Summary</div>
+  <p>वाइकोफ मार्केट चक्र (Wyckoff Market Cycle) का चारवटा मुख्य र अपरिवर्तनीय चरणहरू हुन्: Accumulation, Markup, Distribution र Markdown। यी चारवटै चरणहरू बजारको शाश्वत नियम Supply, Demand र आम मानिसको सामूहिक मनोविज्ञान (Crowd Psychology) सँग अत्यन्तै गहिरो र तार्किक रूपमा जोडिएका हुन्छन्।</p>
+  <p style="margin-bottom:0;">बजार कहिल्यै पनि सधैँका लागि एउटै Phase मा रहन सक्दैन, समयको अन्तरालसँगै बजारको चरण अनिवार्य रूपमा बदलिन्छ। त्यसैले, एउटा व्यावसायिक र सफल ट्रेडरले बजारमा मूल्य कहाँ छ भन्ने मात्र होइन, बरु त्यो मूल्य समग्र Market Cycle को कुन चरणबाट गुज्रिरहेको छ भन्ने कुराको भित्री रहस्य पनि उत्तिकै गहिराइमा बुझ्ने प्रयास गर्छ। यही बलियो आधारलाई प्रयोग गरेर अब आउने अर्को अध्यायमा हामी मूल्य र भोल्युमको सम्बन्धलाई अझ बढी गहिराइमा अध्ययन गर्नेछौँ र VSA (Volume Spread Analysis) को मुख्य आधार बुझ्नेछौँ।</p>
+</div>
+
+<div class="closing-quote">
+  धेरै मानिसहरू Price कहाँ पुग्यो भनेर हेर्छन्,<br>
+  तर सफल Trader ले Price अहिले Market Cycle को कुन चरणमा छ भनेर बुझ्ने प्रयास गर्छ।<br>
+  यही बुझाइले भीडलाई पछ्याउने Trader र<br>
+  योजना अनुसार चल्ने Trader बीचको फरक बनाउँछ।”
+</div>
+
+</div>
+</body>
+</html>

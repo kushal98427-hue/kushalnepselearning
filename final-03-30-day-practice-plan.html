@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30-Day Practice Plan — नेपाली सेयर बजार</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans Devanagari', sans-serif; background: #fdf6e3; color: #111; line-height: 1.8; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+.container { max-width: 940px; margin: 0 auto; padding: 46px 56px 80px; }
+p { font-size: 15.5px; line-height: 1.85; }
+strong { font-weight: 700; color: #111; }
+.fs-header { text-align: center; padding: 30px 20px 34px; margin-bottom: 28px; border-bottom: 2px solid #c9b97a; }
+.fs-label { display: inline-block; font-family:'Roboto',sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a7a3a; background: #f0e6c0; padding: 6px 18px; border-radius: 20px; border: 1px solid #c9b97a; margin-bottom: 18px; }
+.fs-title { font-family:'Roboto',sans-serif; font-size: 32px; font-weight: 700; color: #111; line-height: 1.2; letter-spacing: -0.01em; }
+.fs-rule { width: 54px; height: 4px; background: #c9b97a; border-radius: 3px; margin: 16px auto 0; }
+.intro-rule { background: linear-gradient(180deg,#fff8dc,#fffdf5); border: 1px solid #e0c84a; border-left: 5px solid #c8a800; border-radius: 8px; padding: 22px 26px; margin: 26px 0 8px; }
+.intro-rule .ir-tag { font-family:'Roboto',sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #b08900; margin-bottom: 10px; }
+.intro-rule p { font-weight: 500; }
+.visual-block { background: #fffdf5; border: 1px solid #c9b97a; border-radius: 10px; padding: 22px 20px; margin: 30px 0 8px; text-align: center; }
+.visual-title { font-family:'Roboto',sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8a7a3a; margin-bottom: 14px; }
+.visual-explanation { background: #f0e6c0; border-left: 3px solid #c9b97a; padding: 13px 17px; margin: 8px 0 26px; font-size: 14px; line-height: 1.7; border-radius: 0 5px 5px 0; }
+
+/* week block */
+.week { margin: 30px 0; }
+.week-head { display: flex; align-items: center; gap: 14px; padding: 14px 20px; border-radius: 12px 12px 0 0; color: #fff; }
+.week-tag { font-family:'Roboto',sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; background: rgba(255,255,255,0.25); padding: 5px 12px; border-radius: 20px; }
+.week-title { font-family:'Roboto',sans-serif; font-size: 19px; font-weight: 700; }
+.w1 .week-head{background:#2962ff;} .w2 .week-head{background:#0c8b78;} .w3 .week-head{background:#c39400;} .w4 .week-head{background:#7c5cd0;}
+.days { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; background: #fffdf5; border: 1px solid #e2d6ab; border-top: none; border-radius: 0 0 12px 12px; }
+.day { background: #fdf9ec; border: 1px solid #e8ddb6; border-radius: 10px; padding: 14px 16px; }
+.day-num { display: inline-flex; align-items: center; gap: 8px; font-family:'Roboto',sans-serif; font-size: 13px; font-weight: 700; color: #fff; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+.w1 .day-num{background:#2962ff;} .w2 .day-num{background:#0c8b78;} .w3 .day-num{background:#c39400;} .w4 .day-num{background:#7c5cd0;}
+.day p { font-size: 14px; line-height: 1.65; margin-bottom: 8px; }
+.day p:last-child { margin-bottom: 0; }
+.lead-w { font-weight: 700; color: #444; }
+.lead-g { font-weight: 700; }
+.w1 .lead-g{color:#1a47b8;} .w2 .lead-g{color:#0a6e5f;} .w3 .lead-g{color:#9a7400;} .w4 .lead-g{color:#5b3fa6;}
+
+/* review + final days span full */
+.day.review, .day.final { grid-column: 1 / -1; }
+.day.review { background: #fff5f8; border: 1px solid #e7c4d2; border-left: 4px solid #c0506b; }
+.day.review .day-num { background: #c0506b; }
+.qbox { margin-top: 6px; }
+.qtag { font-family:'Roboto',sans-serif; font-size: 13.5px; font-weight: 700; color: #a03c54; margin-bottom: 8px; }
+.qbox ol { margin-left: 20px; }
+.qbox li { font-size: 14px; font-style: italic; color: #333; margin-bottom: 6px; line-height: 1.6; }
+.day.final { background: #fbf3d3; border: 2px solid #c8a800; }
+.day.final .day-num { background: #c8a800; }
+
+/* checks (final + success) */
+.checks { margin-top: 8px; }
+.check { display: flex; align-items: flex-start; gap: 12px; padding: 10px 14px; margin-bottom: 7px; background: #fff; border: 1px solid #e0d09a; border-radius: 8px; cursor: pointer; transition: background .14s; }
+.check:hover { background: #fbf6e2; }
+.check input { appearance: none; -webkit-appearance: none; flex: 0 0 auto; width: 21px; height: 21px; margin-top: 1px; border: 2px solid #c2b277; border-radius: 6px; background: #fff; cursor: pointer; position: relative; }
+.check input:checked { background: #c8a800; border-color: #c8a800; }
+.check input:checked::after { content:"\2713"; position: absolute; top: -3px; left: 3px; color: #fff; font-size: 16px; font-weight: 700; font-family:'Roboto',sans-serif; }
+.check span { font-size: 14.5px; line-height: 1.6; }
+.check span strong { font-weight: 700; }
+
+/* sections */
+.sec-h { font-family:'Roboto',sans-serif; font-size: 21px; font-weight: 700; color: #111; margin: 42px 0 6px; }
+.sec-sub { font-size: 14px; color: #6b6244; margin-bottom: 14px; }
+
+/* habit rules */
+.habits { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.habit { display: flex; gap: 13px; align-items: flex-start; background: #fffdf5; border: 1px solid #d8cca0; border-left: 4px solid #0c8b78; border-radius: 9px; padding: 14px 16px; }
+.habit-n { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0c8b78; color: #fff; font-family:'Roboto',sans-serif; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.habit p { font-size: 14px; line-height: 1.6; }
+.habit p strong { font-weight: 700; }
+
+/* journal table */
+table { width: 100%; border-collapse: collapse; margin: 8px 0 4px; background: #fffdf5; }
+th { background: #c9b97a; color: #111; padding: 11px 14px; text-align: left; font-size: 13.5px; font-weight: 700; }
+td { padding: 11px 14px; border: 1px solid #d8cca0; font-size: 13.8px; vertical-align: top; }
+td:first-child { font-weight: 700; white-space: nowrap; background: #f4eede; width: 168px; }
+tr:nth-child(even) td { background: #fdf6e3; }
+tr:nth-child(even) td:first-child { background: #efe7d0; }
+.bx { display: inline-block; width: 15px; height: 15px; border: 2px solid #c2b277; border-radius: 4px; vertical-align: -3px; margin: 0 4px 0 2px; }
+
+/* final message */
+.final-msg .fm-block { background:#fffdf5; border:1px solid #c9b97a; border-left: 5px solid #c8a800; border-radius: 8px; padding: 22px 26px; margin-bottom: 16px; }
+.final-msg p { font-weight: 500; }
+
+@media (max-width: 768px) {
+  .container { padding: 30px 16px 60px; }
+  .fs-title { font-size: 24px; }
+  .days { grid-template-columns: 1fr; }
+  .habits { grid-template-columns: 1fr; }
+  td:first-child { width: auto; white-space: normal; }
+  .visual-block { padding: 16px 10px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="fs-header">
+  <div class="fs-label">Final Section &bull; 03</div>
+  <h1 class="fs-title">30-Day Practice Plan</h1>
+  <div class="fs-rule"></div>
+</header>
+
+<div class="intro-rule">
+  <div class="ir-tag">&#128221; महत्वपूर्ण सन्देश</div>
+  <p>यो 30-Day Practice Plan को मुख्य उद्देश्य बजारबाट तुरुन्तै पैसा कमाउनु विल्कुलै होइन। यसको एकमात्र उद्देश्य तपाईंको दिमागलाई प्रत्यक्ष Chart, Market Structure, Risk Management र एक व्यवस्थित Trading Process सँग अभ्यस्त गराउनु हो। यदि सम्भव छ भने, यो ३० दिनको कडा अभ्यास अवधिभर आफ्नो वास्तविक पैसा (Real Money) प्रयोग नगरी केवल Paper Trading वा Observation Mode मा मात्र पूरा गर्नुहोस्।</p>
+</div>
+
+<!-- VISUAL 1: 30-day calendar grid -->
+<div class="visual-block">
+  <div class="visual-title">३० दिनको अभ्यास क्यालेन्डर — ४ हप्ता</div>
+  <svg viewBox="0 0 820 560" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+    <rect width="820" height="560" fill="#fffdf5"/>
+    <text x="410" y="38" text-anchor="middle" font-family="Roboto, sans-serif" font-size="24" font-weight="700" fill="#111">दिनैपिच्छे अभ्यास &mdash; क्रमैसँग ३० दिन</text>
+
+    <!-- Row 1: W1 Days 1-7 blue -->
+    <g>
+      <rect x="50" y="64" width="96" height="58" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.6"/><text x="98" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#1a47b8">1</text>
+      <rect x="160" y="64" width="96" height="58" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.6"/><text x="208" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#1a47b8">2</text>
+      <rect x="270" y="64" width="96" height="58" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.6"/><text x="318" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#1a47b8">3</text>
+      <rect x="380" y="64" width="96" height="58" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.6"/><text x="428" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#1a47b8">4</text>
+      <rect x="490" y="64" width="96" height="58" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.6"/><text x="538" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#1a47b8">5</text>
+      <rect x="600" y="64" width="96" height="58" rx="10" fill="#e8f0fe" stroke="#2962ff" stroke-width="1.6"/><text x="648" y="100" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#1a47b8">6</text>
+      <rect x="710" y="64" width="96" height="58" rx="10" fill="#c0506b" stroke="#a03c54" stroke-width="1.6"/><text x="758" y="96" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#fff">7</text><text x="758" y="114" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#ffe0ea">&#9733; Review</text>
+    </g>
+    <!-- Row 2: W2 Days 8-14 teal -->
+    <g>
+      <rect x="50" y="132" width="96" height="58" rx="10" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.6"/><text x="98" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#0a6e5f">8</text>
+      <rect x="160" y="132" width="96" height="58" rx="10" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.6"/><text x="208" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#0a6e5f">9</text>
+      <rect x="270" y="132" width="96" height="58" rx="10" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.6"/><text x="318" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#0a6e5f">10</text>
+      <rect x="380" y="132" width="96" height="58" rx="10" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.6"/><text x="428" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#0a6e5f">11</text>
+      <rect x="490" y="132" width="96" height="58" rx="10" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.6"/><text x="538" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#0a6e5f">12</text>
+      <rect x="600" y="132" width="96" height="58" rx="10" fill="#e6f4f1" stroke="#0c8b78" stroke-width="1.6"/><text x="648" y="168" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#0a6e5f">13</text>
+      <rect x="710" y="132" width="96" height="58" rx="10" fill="#c0506b" stroke="#a03c54" stroke-width="1.6"/><text x="758" y="164" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#fff">14</text><text x="758" y="182" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#ffe0ea">&#9733; Review</text>
+    </g>
+    <!-- Row 3: W3 Days 15-21 amber -->
+    <g>
+      <rect x="50" y="200" width="96" height="58" rx="10" fill="#fbf3d8" stroke="#c39400" stroke-width="1.6"/><text x="98" y="236" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#9a7400">15</text>
+      <rect x="160" y="200" width="96" height="58" rx="10" fill="#fbf3d8" stroke="#c39400" stroke-width="1.6"/><text x="208" y="236" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#9a7400">16</text>
+      <rect x="270" y="200" width="96" height="58" rx="10" fill="#fbf3d8" stroke="#c39400" stroke-width="1.6"/><text x="318" y="236" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#9a7400">17</text>
+      <rect x="380" y="200" width="96" height="58" rx="10" fill="#fbf3d8" stroke="#c39400" stroke-width="1.6"/><text x="428" y="236" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#9a7400">18</text>
+      <rect x="490" y="200" width="96" height="58" rx="10" fill="#fbf3d8" stroke="#c39400" stroke-width="1.6"/><text x="538" y="236" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#9a7400">19</text>
+      <rect x="600" y="200" width="96" height="58" rx="10" fill="#fbf3d8" stroke="#c39400" stroke-width="1.6"/><text x="648" y="236" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#9a7400">20</text>
+      <rect x="710" y="200" width="96" height="58" rx="10" fill="#c0506b" stroke="#a03c54" stroke-width="1.6"/><text x="758" y="232" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#fff">21</text><text x="758" y="250" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#ffe0ea">&#9733; Review</text>
+    </g>
+    <!-- Row 4: W4 Days 22-28 purple -->
+    <g>
+      <rect x="50" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="98" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">22</text>
+      <rect x="160" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="208" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">23</text>
+      <rect x="270" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="318" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">24</text>
+      <rect x="380" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="428" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">25</text>
+      <rect x="490" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="538" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">26</text>
+      <rect x="600" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="648" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">27</text>
+      <rect x="710" y="268" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="758" y="304" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">28</text>
+    </g>
+    <!-- Row 5: W4 Days 29-30 -->
+    <g>
+      <rect x="50" y="336" width="96" height="58" rx="10" fill="#f3eefc" stroke="#7c5cd0" stroke-width="1.6"/><text x="98" y="372" text-anchor="middle" font-family="Roboto, sans-serif" font-size="20" font-weight="700" fill="#5b3fa6">29</text>
+      <rect x="160" y="336" width="96" height="58" rx="10" fill="#fbf3d3" stroke="#c8a800" stroke-width="2"/><text x="208" y="368" text-anchor="middle" font-family="Roboto, sans-serif" font-size="19" font-weight="700" fill="#a8881f">30</text><text x="208" y="386" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#a8881f">&#127937; Final</text>
+    </g>
+
+    <!-- legend -->
+    <rect x="50" y="424" width="756" height="106" rx="10" fill="#fdf6e3" stroke="#e2d6ab" stroke-width="1"/>
+    <rect x="68" y="442" width="16" height="16" rx="4" fill="#2962ff"/><text x="92" y="455" font-family="sans-serif" font-size="14" fill="#111">Week 1 &mdash; Market र Chart</text>
+    <rect x="300" y="442" width="16" height="16" rx="4" fill="#0c8b78"/><text x="324" y="455" font-family="sans-serif" font-size="14" fill="#111">Week 2 &mdash; Volume र Setup</text>
+    <rect x="560" y="442" width="16" height="16" rx="4" fill="#c39400"/><text x="584" y="455" font-family="sans-serif" font-size="14" fill="#111">Week 3 &mdash; Risk</text>
+    <rect x="68" y="476" width="16" height="16" rx="4" fill="#7c5cd0"/><text x="92" y="489" font-family="sans-serif" font-size="14" fill="#111">Week 4 &mdash; Full Process</text>
+    <rect x="300" y="476" width="16" height="16" rx="4" fill="#c0506b"/><text x="324" y="489" font-family="sans-serif" font-size="14" fill="#111">&#9733; Review Day (7, 14, 21)</text>
+    <rect x="560" y="476" width="16" height="16" rx="4" fill="#c8a800"/><text x="584" y="489" font-family="sans-serif" font-size="14" fill="#111">&#127937; Final (Day 30)</text>
+    <text x="428" y="518" text-anchor="middle" font-family="sans-serif" font-size="13.5" font-weight="700" fill="#444">हरेक हप्ताको अन्त्यमा Review &mdash; ३० औँ दिन अन्तिम मूल्यांकन</text>
+  </svg>
+</div>
+<div class="visual-explanation">
+यो क्यालेन्डर ले सिङ्गो ३० दिनको अभ्यासलाई ४ हप्तामा देखाउँछ। <strong>Week 1</strong> (दिन 1-7, नीलो): Market र Chart बुझ्ने। <strong>Week 2</strong> (दिन 8-14, हरियो): Volume र Setup बुझ्ने। <strong>Week 3</strong> (दिन 15-21, सुनौलो): Risk Management। <strong>Week 4</strong> (दिन 22-30, बैजनी): पूर्ण Trading Process र Paper Trades। हरेक हप्ताको अन्तिम दिन (7, 14, 21) <strong>Review Day</strong> हो — आफूले सिकेको समीक्षा। दिन 30 <strong>Final Evaluation</strong> — सम्पूर्ण यात्राको मूल्यांकन। मुख्य पाठ — यो क्रमबद्ध अभ्यास हो; दिनैपिच्छे एक कदम, पैसा कमाउन होइन, दिमागलाई Chart र Process सँग अभ्यस्त बनाउन।
+</div>
+
+<!-- ============ WEEK 1 ============ -->
+<div class="week w1">
+  <div class="week-head"><span class="week-tag">&#128197; WEEK 1</span><span class="week-title">Market र Chart बुझ्ने हप्ता</span></div>
+  <div class="days">
+    <div class="day"><span class="day-num">&#128204; Day 1</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> NEPSE को आधारभूत संरचना के हो, पुस्तकका सुरुवाती खण्डहरू पल्टाएर पुनः गहिरो अध्ययन गर्ने। आफ्नो कम्प्युटर वा मोबाइलमा Market Index Chart खोल्ने र केवल <strong>Daily Timeframe</strong> सेट गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारको समग्र र बृहत् दिशा (Overall Market Direction) हेर्ने पहिलो बानी बसाल्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 2</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> नेप्सेका विभिन्न समूहका कम्तीमा १० वटा छुट्टाछुट्टै कम्पनीहरूको Stock Chart खोल्ने। प्राविधिक सूचकहरूलाई बन्द गरेर केवल क्यान्डलस्टिक (Candlestick) को बनोट मात्र नियाल्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> क्यान्डलको मूल्यको उतारचढाव र चाल (Price Movement) सँग आँखाहरूलाई परिचित गराउने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 3</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> तिनै १० वटा फरक-फरक कम्पनीहरूको Chart मा मूल्य बारम्बार ठोक्किएर माथि फर्केका कडा <strong>Support Zones</strong> पहिचान गरी तेर्सो रेखा (Horizontal Line) ले चिन्ह लगाउने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारमा मूल्य कुन प्राविधिक क्षेत्रमा आएपछि घट्न रोकिन्छ र खरिदकर्ता सक्रिय हुन्छन् भन्ने कुरा बुझ्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 4</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> तिनै १० वटा कम्पनीहरूको Chart मा मूल्य माथि जाँदा बारम्बार ठोक्किएर तल झरेका कडा <strong>Resistance Zones</strong> पहिचान गरी स्पष्ट चिन्ह लगाउने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारमा मूल्य कुन प्राविधिक विन्दुमा पुगेपछि अड्किन्छ र बिक्रेताहरूको आपूर्ति (Supply) कडा हुन्छ भन्ने बुझ्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 5</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> चार्टहरूमा मूल्यले बनाएका उच्च र न्यून विन्दुहरू, जस्तै: Higher High (HH), Higher Low (HL), Lower High (LH) र Lower Low (LL) हरू स्पष्ट रूपमा औंल्याउने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारको आन्तरिक ट्रेन्डको संरचना (<strong>Trend Structure</strong>) लाई गणितीय रूपमा बुझ्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 6</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> आफूले हेरेका चार्टहरू मध्ये कुन चार्ट स्पष्ट अपट्रेन्ड (Uptrend) मा छ, कुन डाउनट्रेन्ड (Downtrend) मा छ र कुन एउटै दायरामा सीमित (Sideways) छ, वर्गीकरण गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारको समग्र रूपरेखा (<strong>Market Structure</strong>) लाई आँखाले छर्लङ्ग चिन्न सक्ने बन्नु।</p>
+    </div>
+    <div class="day review"><span class="day-num">&#128204; Day 7 (Review Day)</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> यो हप्ताभरि चार्टमा अभ्यास गर्दा आफूले महसुस गरेका र सिकेका कुराहरू आफ्नो व्यक्तिगत नोटबुकमा स्पष्ट रूपमा लेख्ने।</p>
+      <div class="qbox">
+        <div class="qtag">&#129300; आफैँलाई सोध्नुपर्ने कडा प्रश्नहरू:</div>
+        <ol>
+          <li>ट्रेन्ड (Trend) भनेको के हो र यसले बजारमा मेरो निर्णयलाई कसरी मद्दत गर्छ?</li>
+          <li>सपोर्ट (Support) र रजिस्ट्रटेन्स (Resistance) कोर्ने मेरो प्राविधिक आधार के हो?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WEEK 2 ============ -->
+<div class="week w2">
+  <div class="week-head"><span class="week-tag">&#128197; WEEK 2</span><span class="week-title">Volume र Setup बुझ्ने हप्ता</span></div>
+  <div class="days">
+    <div class="day"><span class="day-num">&#128204; Day 8</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> कारोबार रकम अर्थात् भोल्युम (Volume) को आधारभूत सिद्धान्त र यसले मूल्यको चाललाई कसरी पुष्टि गर्छ भन्ने च्याप्टर पुनः अध्ययन गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> चार्ट हेर्दा केवल मूल्य मात्र होइन, बरु तल रहेको Volume Bar पनि अनिवार्य रूपमा हेर्ने बलियो बानी बसाल्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 9</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> नेप्सेको इतिहासमा विगतका दिनहरूमा सामान्य औसत भोल्युमको तुलनामा अचानक अस्वाभाविक रूपमा ठूलो भोल्युम आएका (<strong>Volume Spike</strong>) १० वटा फरक Chart हरू खोज्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> चार्टमा स्मार्ट मनी वा ठूला खेलाडीहरूको अस्वाभाविक सक्रियता (Unusual Activity) देख्न सिक्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 10</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> मूल्यले आफ्नो कडा तेर्सो रजिस्ट्रटेन्स विन्दुलाई तोडेर माथिल्लो नयाँ उचाइतर्फ लागेका कडा <strong>Breakout</strong> भएका १० वटा चार्टहरू खोजेर प्राविधिक अध्ययन गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारमा रजिस्ट्रटेन्स ब्रेक (Resistance Break) हुँदा मूल्यको गति कसरी परिवर्तन हुन्छ भनी बुझ्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 11</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> मूल्यले रजिस्ट्रटेन्स तोडेर माथि गए जस्तो गर्ने तर तुरुन्तै सो विन्दुभन्दा तल झरेर सर्वसाधारणलाई फसाएका १० वटा झुठो ब्रेकआउट (<strong>Fake Breakout / Bull Trap</strong>) का चार्टहरू खोज्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारका चतुर खेलाडीहरूले बिछ्याउने प्राविधिक पासो वा ट्र्याप (Trap) पहिचान गर्न सिक्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 12</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> बलियो अपट्रेन्डमा गइरहेको स्टक थोरै सस्तिएर वा विश्राम लिएर आफ्नो महत्वपूर्ण सपोर्ट वा मुभिङ एभरेज नजिक आएका १० वटा <strong>Pullback</strong> चार्टहरू पहिचान गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारको स्वस्थ गिरावट र पुन: खरिद गर्ने क्षेत्र (<strong>Healthy Retracement</strong>) को अवधारणा बुझ्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 13</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> मूल्य महिनौँसम्म एउटा साँघुरो तेर्सो च्यानल (Consolidation) मा बसेर भर्खरै मात्र सो जग तोडेर बाहिर निस्कन लागेका १० वटा <strong>Base Breakout</strong> चार्टहरू फेला पार्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> मूल्य विस्फोट हुनु भन्दा अगाडि बजारले लिने लामो विश्राम र सञ्चय (Accumulation) को कडा महत्व बुझ्ने।</p>
+    </div>
+    <div class="day review"><span class="day-num">&#128204; Day 14 (Review Day)</span>
+      <div class="qbox">
+        <div class="qtag">&#129300; आफैँलाई सोध्नुपर्ने कडा प्रश्नहरू:</div>
+        <ol>
+          <li>एउटा वास्तविक र बलियो Breakout र झुठो Fake Breakout बीचको मुख्य प्राविधिक फरक के हो?</li>
+          <li>मूल्यको ब्रेकआउटलाई प्रमाणित गर्न Volume किन बजारको सबैभन्दा कडा र अनिवार्य आधार हो?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WEEK 3 ============ -->
+<div class="week w3">
+  <div class="week-head"><span class="week-tag">&#128197; WEEK 3</span><span class="week-title">Risk Management हप्ता</span></div>
+  <div class="days">
+    <div class="day"><span class="day-num">&#128204; Day 15</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> पुस्तकमा पूँजी रक्षाका लागि लेखिएको स्टप लस (Stop Loss) र जोखिम व्यवस्थापन सम्बन्धी महत्वपूर्ण च्याप्टरहरू सुरुदेखि अन्त्यसम्म पुनः गहिराइबाट पढ्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> सेयर बजारमा नाफा कमाउनु भन्दा पहिले आफ्नो अमूल्य साँवा जोगाउने (<strong>Capital Protection</strong>) चिन्तन मनमा स्थापित गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 16</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> बजारका १० वटा फरक-फरक चार्टहरू खोल्ने र यदि मैले यो ठाउँमा खरिद गर्ने हो भने प्राविधिक सपोर्टको आधारमा मेरो सुरक्षित स्टप लस कहाँ हुनुपर्छ, सो <strong>Stop Loss Location</strong> चार्टमा कोर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> भावना वा अन्दाजको भरमा नभई चार्टको बनोट अनुसार राखिने <strong>Structure-Based Stop Loss</strong> को व्यावहारिक ज्ञान लिने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 17</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> विभिन्न काल्पनिक खरिद विन्दु र स्टप लस राखेर मेरो सम्भावित नोक्सानीको तुलनामा नाफाको लक्ष्य कम्तीमा दुई गुणा बढी (1:2 Risk-Reward Ratio) हुने गरी १० वटा चार्टमा जोखिम-प्रतिफलको गणित अभ्यास गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारमा ट्रेड लिनु भन्दा अगाडि नै नाफा होइन, सधैँ जोखिम पहिले सोच्ने (Risk First Thinking) मानसिकताको विकास गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 18</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> "कुल पूँजीको जोखिम &divide; प्रति सेयर जोखिम" को सुत्र प्रयोग गरेर, फरक-फरक पूँजी आकार र स्टप लसको दूरी राख्दै कति कित्ता सेयर किन्न मिल्छ भनी २० पटक <strong>Position Sizing Calculation</strong> को कडा अभ्यास गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारमा आफ्नो लोभले होइन, बरु गणितीय नियमले आफ्नो ट्रेडको आकार (Trade Size) पूर्ण नियन्त्रण गर्न सिक्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 19</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> "यदि मैले बजारमा लगातार ५ पटक वा १० पटक घाटा (Losing Streak) ब्यहोर्नु पर्&zwj;यो भने मेरो पूँजी र मेरो मानसिक अवस्थालाई सुरक्षित राख्न म के गर्छु?" भन्ने कडा र व्यावहारिक नियमावली आफ्नो डायरीमा लेख्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारको खराब समयमा आफ्नो भावना र पूँजी नियन्त्रण गर्ने कडा <strong>Emotional Control</strong> को विकास गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 20</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> विगतमा मूल्य आफ्नो टार्गेट क्षेत्रमा पुगेपछि कसरी नाफा सुरक्षित गरिन्छ र कसरी ट्रेलिङ स्टप लसले बाँकी नाफालाई बढाउन मद्दत गर्छ, त्यसका ५ वटा सफल प्राविधिक उदाहरणहरूको चार्टमा गहिरो अध्ययन गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारमा छिर्नु भन्दा अगाडि नै सुरक्षित रूपमा निस्कने स्पष्ट योजना र मार्गचित्र (<strong>Exit Planning</strong>) बुझ्ने।</p>
+    </div>
+    <div class="day review"><span class="day-num">&#128204; Day 21 (Review Day)</span>
+      <div class="qbox">
+        <div class="qtag">&#129300; आफैँलाई सोध्नुपर्ने कडा प्रश्नहरू:</div>
+        <ol>
+          <li>व्यावसायिक ट्रेडिङ करियरमा स्टप लस (Stop Loss) लाई किन आफ्नो सबैभन्दा मिल्ने र भरपर्दो साथी मान्नुपर्छ?</li>
+          <li>लामो समयसम्म नाफामा रहनका लागि Risk-Reward को गणित किन मेरो पक्षमा हुनु अनिवार्य छ?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WEEK 4 ============ -->
+<div class="week w4">
+  <div class="week-head"><span class="week-tag">&#128197; WEEK 4</span><span class="week-title">Complete Trading Process</span></div>
+  <div class="days">
+    <div class="day"><span class="day-num">&#128204; Day 22</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> आजको प्रत्यक्ष बजारमा नेप्से सूचक (NEPSE Index) को डेली चार्ट खोलेर बजार हाल कुन संरचनामा हिँडिरहेको छ, त्यसको पूर्ण प्राविधिक विश्लेषण डायरीमा नोट गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> कुनै पनि व्यक्तिगत स्टक हेर्नु अघि सधैँ समग्र बजारको चाल हेर्ने <strong>Market First Rule</strong> को सोच विकास गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 23</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> नेप्सेका सबै उप-सूचकहरू (Sectors) को चार्ट एक-एक गरी तुलना गर्दै हाल कुन सेक्टरमा सबैभन्दा बढी Momentum र भोल्युम आइरहेको छ, त्यो <strong>Strong Sector</strong> पत्ता लगाउने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजारको पैसा कुन समूहमा प्रवेश गर्दैछ र कता सर्दैछ भन्ने <strong>Sector Rotation</strong> को चक्र बुझ्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 24</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> सोही छानिएको बलियो र नेतृत्वदायी सेक्टर भित्र छिरेर प्राविधिक रूपमा सबैभन्दा कडा हायर हाईको संरचना र उच्च Relative Strength भएको उत्कृष्ट कम्पनी (<strong>Strong Stock</strong>) खोज्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> भीडको पछि नलागी बजारको सबैभन्दा लिडर र बलियो स्टक छान्ने क्षमता (<strong>Stock Selection</strong>) सुधार्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 25</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> आगामी हप्ताका लागि आफूले माथिल्लो प्रक्रियाबाट छानेका प्राविधिक रूपमा उत्कृष्ट र स्वस्थ संरचना भएका कम्तीमा १० वटा कम्पनीहरूको कडा र व्यवस्थित <strong>Watchlist</strong> तयार गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बजार खुल्नु अगावै गरिने पूर्व-तयारीको व्यावसायिक बानी (<strong>Preparation Habit</strong>) विकास गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 26</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> आफ्नो Watchlist मा रहेका कम्पनीहरू मध्ये आगामी दिनहरूमा स्पष्ट र सुरक्षित सेटअप (जस्तै: Breakout वा Pullback) बनाउन लागेका ३ वटा सम्भावित <strong>Setup Lines</strong> चार्टमा स्पष्ट मार्किङ गरेर नोट गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> लाइभ बजारमा उचित सेटअपको आकृति तुरुन्तै आँखाले पहिचान गर्न सक्ने क्षमता (<strong>Setup Recognition</strong>) सुधार्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 27</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> आफ्नो Watchlist को पहिलो कम्पनीले नियम अनुसार सेटअप र Confirmation दिएमा आफ्नो ट्रेडिङ जर्नलको ढाँचा प्रयोग गरी पहिलो काल्पनिक सेयर खरिद अभ्यास (<strong>Paper Trade #1</strong>) दर्ता गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> बिनाकुनै डर वा वास्तविक पैसाको जोखिम, सुरुदेखि अन्त्यसम्मको पूर्ण प्राविधिक र ट्रेडिङ प्रक्रियाको अभ्यास गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 28</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> बजारको चाल अनुसार आफ्नो Watchlist बाट अर्को उपयुक्त अवसर आएको कम्पनीमा आफ्नो पोजिसन साइज गणना गर्दै दोस्रो काल्पनिक अर्डर (<strong>Paper Trade #2</strong>) जर्नलमा प्रविष्ट गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> लाइभ बजार चलिरहेको बेला विचलित नभई आफ्नो नियमबद्ध अनुशासन (<strong>Discipline Test</strong>) को परीक्षण गर्ने।</p>
+    </div>
+    <div class="day"><span class="day-num">&#128204; Day 29</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> तेस्रो कम्पनीको स्पष्ट सेटअप र Confirmation को प्रतीक्षा गर्ने र मूल्यले आफ्नो विन्दु छुनासाथ स्टप लस र टार्गेट सेट गरी तेस्रो काल्पनिक अर्डर (<strong>Paper Trade #3</strong>) जर्नलमा रेकर्ड गर्ने।</p>
+      <p><span class="lead-g">मुख्य लक्ष्य:</span> प्रत्यक्ष बजारको उतारचढावका बीच आफ्नो रिस्क म्यानेजमेन्ट र गणितीय सुत्रहरूको सही प्रयोग गर्ने अभ्यास।</p>
+    </div>
+    <div class="day final"><span class="day-num">&#127937; Day 30 (Final Evaluation Day)</span>
+      <p><span class="lead-w">गर्नुपर्ने काम:</span> आज यो ३० दिनको कडा र अनुशासित यात्राको अन्तिम दिन हो। शान्त दिमागले आफ्नो डायरी खोल्नुहोस् र आफैँलाई यी मुख्य बुँदाहरूमा इमानदारीपूर्वक जाँच गरी टिक लगाउनुहोस्:</p>
+      <div class="checks">
+        <label class="check"><input type="checkbox"><span><strong>Market Analysis:</strong> के म अब नेप्सेको समग्र रूपरेखा र संरचना स्पष्ट बुझ्दछु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Trend Identification:</strong> के म चार्ट हेरेर बजारको मुख्य ट्रेन्ड सजिलै चिन्न सक्छु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Support/Resistance:</strong> के म चार्टमा सही र प्राविधिक की-लेभलहरू कोर्न सक्छु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Volume Understanding:</strong> के म मूल्यको वृद्धिलाई पुष्टि गर्न Volume को सम्बन्ध बुझ्दछु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Setup Recognition:</strong> के म चार्टमा जबरजस्ती नगरी स्पष्ट र प्राकृतिक Setup पहिचान गर्न सक्छु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Risk Management:</strong> के म लोभ नमानी चार्ट अनुसार आफ्नो गणितीय Stop Loss राख्न सक्छु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Psychological Control:</strong> के म बजार तीव्र कुद्न थाल्दा पनि आफ्नो कडा FOMO नियन्त्रण गर्न सक्छु?</span></label>
+        <label class="check"><input type="checkbox"><span><strong>Process Execution:</strong> के म ट्रेड सोच्नु अघि Complete Trading Checklist अनिवार्य प्रयोग गर्न सक्छु?</span></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DAILY HABIT RULES -->
+<h2 class="sec-h">&#128200; Daily Habit Rules</h2>
+<div class="sec-sub">(३० दिनभर पालना गर्नुपर्ने अनिवार्य नियमहरू)</div>
+<p style="margin-bottom:14px;">तपाईंको नाफा-घाटा जेसुकै होस्, यो ३० दिनको अवधिभर प्रत्येक दिन बजार बन्द भएपछि तपाईंले यी ५ वटा कडा कामहरू नियमित रूपमा गर्नै पर्छ:</p>
+<div class="habits">
+  <div class="habit"><div class="habit-n">1</div><p><strong>NEPSE Index Analysis:</strong> आज नेप्से सूचकमा के भयो र यसले कस्तो क्यान्डल बनायो, अनिवार्य हेर्ने।</p></div>
+  <div class="habit"><div class="habit-n">2</div><p><strong>Chart Screening:</strong> आफ्नो Watchlist र बजारका कम्तीमा १० वटा कम्पनीहरूको Chart नियमित रूपमा नियाल्ने।</p></div>
+  <div class="habit"><div class="habit-n">3</div><p><strong>One Technical Note:</strong> आज चार्टमा देखिएको कुनै एउटा विशेष प्राविधिक कुरा वा आकृति नोटबुकमा लेख्ने।</p></div>
+  <div class="habit"><div class="habit-n">4</div><p><strong>One Trading Lesson:</strong> आज बजारको चाल वा आफ्नो पेपर ट्रेडबाट सिकेको एउटा कडा मानसिक वा प्राविधिक पाठ लेख्ने।</p></div>
+  <div class="habit"><div class="habit-n">5</div><p><strong>Journal Update:</strong> आफ्नो Daily Practice Journal को तालिका पूर्ण रूपमा भरेर अपडेट राख्ने।</p></div>
+</div>
+
+<!-- JOURNAL TEMPLATE -->
+<h2 class="sec-h">&#128221; 30-Day Practice Journal Template</h2>
+<table>
+  <thead>
+    <tr><th>विधा / शीर्षक</th><th>आजको प्रत्यक्ष बजार र प्राविधिक विवरणको इमानदार प्रविष्टि</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Date (मिति)</td><td>___________________________</td></tr>
+    <tr><td>Market Condition</td><td><span class="bx"></span> Bullish &nbsp;&nbsp; <span class="bx"></span> Bearish &nbsp;&nbsp; <span class="bx"></span> Sideways Range</td></tr>
+    <tr><td>Strong Sector</td><td>आजको बजारमा सबैभन्दा बढी पैसा प्रवाह भएको बलियो उप-सूचक: _______________</td></tr>
+    <tr><td>Strong Stock</td><td>सोही सेक्टर भित्र मैले छानेको प्राविधिक रूपमा कडा लिडर कम्पनी: _________________</td></tr>
+    <tr><td>My Setup</td><td>चार्टमा स्पष्ट बनेको रणनीति: <span class="bx"></span> Breakout &nbsp;&nbsp; <span class="bx"></span> Pullback &nbsp;&nbsp; <span class="bx"></span> Base Breakout</td></tr>
+    <tr><td>Entry Idea &amp; Reason</td><td>मैले यो विन्दुमा खरिद गर्नुको मुख्य प्राविधिक कारण र पुष्ट्याइँ: ___________________</td></tr>
+    <tr><td>Stop Loss Price</td><td>यदि चार्टको यो संरचना भत्किएमा म कुन निश्चित मूल्यमा नोक्सानी काटेर बाहिरिनेछु: _____</td></tr>
+    <tr><td>Target Price</td><td>मेरो जोखिमको तुलनामा कम्तीमा दुई गुणा बढी रहेको नाफा सुरक्षित गर्ने लक्ष्य: _________</td></tr>
+    <tr><td>Lesson Learned</td><td>आजको बजारको व्यवहार वा मेरो निर्णयबाट मैले भविष्यका लागि सिकेको कडा पाठ: ___________</td></tr>
+  </tbody>
+</table>
+
+<!-- SUCCESS CRITERIA -->
+<h2 class="sec-h">&#127942; 30-Day Success Criteria</h2>
+<div class="sec-sub">(सफलताको वास्तविक मापन)</div>
+<p style="margin-bottom:14px;">यो ३० दिनको कडा र अनुशासित यात्रा सफलतापूर्वक पूरा गरिसकेपछि तपाईंमा यी ८ वटा मुख्य प्राविधिक योग्यताहरू पूर्ण रूपमा विकास भइसकेको हुनुपर्छ:</p>
+<div class="checks">
+  <label class="check"><input type="checkbox"><span><strong>१.</strong> तपाईंले बजारको चल्ती र यसको उतारचढावको समग्र संरचना (<strong>Market Structure</strong>) राम्रोसँग बुझेको हुनुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>२.</strong> तपाईंले कुनै पनि चार्ट देख्नासाथ त्यसको मुख्य र वास्तविक प्रवृत्ति (<strong>Trend Direction</strong>) तुरुन्तै चिन्न सक्नुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>३.</strong> तपाईंले चार्टमा कुनै पनि अन्योलता बिना सही र बलिया <strong>Support र Resistance</strong> रेखाहरू कोर्न सक्नुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>४.</strong> तपाईंले मूल्यको चाल र त्यसको पछाडि रहेको खरिद वा बिक्रीको चाप (<strong>Volume Analysis</strong>) स्पष्ट बुझ्नुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>५.</strong> तपाईंले बजारमा हतार नगरी आफ्नो नियम अनुसारको स्पष्ट रConfirmed <strong>Setup</strong> पहिचान गर्न सक्नुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>६.</strong> तपाईंले आफ्नो सावाँ पूँजी जोगाउनका लागि <strong>Risk Management</strong> र पोजिसन साइजिङको आधारभूत गणित बुझेको हुनुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>७.</strong> तपाईंले आफ्नो प्रत्येक निर्णय र बजारको अनुभवलाई नियमित रूपमा <strong>Trading Journal</strong> मा लेख्न सक्ने बानी बसाल्नुपर्छ।</span></label>
+  <label class="check"><input type="checkbox"><span><strong>८.</strong> तपाईंले बजारमा हचुवाको भरमा अर्डर हाल्ने होइन, बरु एक व्यवस्थित <strong>Trading Process</strong> निर्माण गर्न सुरु गरिसकेको हुनुपर्छ।</span></label>
+</div>
+
+<!-- FINAL MESSAGE -->
+<h2 class="sec-h">Final 30-Day Message</h2>
+<div class="final-msg">
+  <div class="fm-block">
+    <p>याद राख्नुहोस्, केवल यो ३० दिनको छोटो प्राक्टिस प्लानले मात्र तपाईंलाई रातारात विश्वकै सबैभन्दा ठूलो वा नाफादार Professional Trader विल्कुलै बनाउँदैन। तर, यसले तपाईंलाई बजारका ९०% अन्धाधुन्ध अनुमान लगाउने भीडबाट अलग राखेर, सही दिशा र सही मार्गमा हिँडिरहेको एक परिपक्व र अनुशासित Beginner अवश्य बनाउँछ।</p>
+  </div>
+  <div class="fm-block">
+    <p>बजारमा धेरैजसो मानिसहरू केवल चार्ट हेर्न र कम्पनीको नाम सुन्न मात्र सिक्छन्, तर निकै थोरै र रैथाने मानिसहरूले मात्र आफ्नो मन र भावनामाथि कडा अनुशासन (<strong>Discipline</strong>) राख्न सिक्छन्। यदि तपाईंले यी ३० दिन बिनाकुनै बहाना वा आलस्य इमानदारीपूर्वक पूरा गर्नुभयो भने, यो यात्राको तपाईंको सबैभन्दा ठूलो उपलब्धि कुनै क्षणिक Profit हुने छैन&mdash;बरु तपाईंको जीवनभर काम लाग्ने एक कडा र व्यावसायिक सही ट्रेडिङ बानी (<strong>Right Trading Habit</strong>) को बलियो निर्माण हुनु हुनेछ।</p>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
