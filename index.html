@@ -1609,12 +1609,12 @@ function openAuthModal(){ const g=document.getElementById('authGateway'); if(g) 
 (function(){
   const css = document.createElement('style');
   css.textContent = `
-    .pw-toggle{
+    .auth-input-wrapper i.pw-toggle{
       position:absolute !important; left:auto !important; right:12px !important; top:50%; transform:translateY(-50%);
       cursor:pointer; color:#94a3b8; font-size:15px; z-index:5;
       padding:4px; user-select:none;
     }
-    .pw-toggle:hover{ color:#0f172a; }
+    .auth-input-wrapper i.pw-toggle:hover{ color:#0f172a !important; }
     .auth-input-wrapper input[type="password"],
     .auth-input-wrapper input.pw-visible{ padding-right:38px !important; }
   `;
