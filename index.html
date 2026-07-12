@@ -1605,7 +1605,51 @@ function showAuthMessage(text,type){
   if(m){ m.textContent=text; m.className='auth-msg '+type; m.style.display='block'; }
 }
 function openAuthModal(){ const g=document.getElementById('authGateway'); if(g) g.classList.remove('hide-gateway'); toggleAuthMode('login'); }
+// ===== Show / Hide Password (सबै password field मा) =====
+(function(){
+  const css = document.createElement('style');
+  css.textContent = `
+    .pw-toggle{
+      position:absolute; right:12px; top:50%; transform:translateY(-50%);
+      cursor:pointer; color:#94a3b8; font-size:15px; z-index:5;
+      padding:4px; user-select:none;
+    }
+    .pw-toggle:hover{ color:#0f172a; }
+    .auth-input-wrapper input[type="password"],
+    .auth-input-wrapper input.pw-visible{ padding-right:38px !important; }
+  `;
+  document.head.appendChild(css);
 
+  function addToggles(){
+    document.querySelectorAll('.auth-input-wrapper').forEach(function(wrap){
+      const input = wrap.querySelector('input');
+      if(!input) return;
+      if(input.type !== 'password' && !input.classList.contains('pw-visible')) return;
+      if(wrap.querySelector('.pw-toggle')) return;
+
+      if(getComputedStyle(wrap).position === 'static'){ wrap.style.position = 'relative'; }
+
+      const eye = document.createElement('i');
+      eye.className = 'fa-solid fa-eye pw-toggle';
+      eye.setAttribute('title','पासवर्ड देखाउनुहोस्');
+      eye.addEventListener('click', function(){
+        if(input.type === 'password'){
+          input.type = 'text';
+          input.classList.add('pw-visible');
+          eye.className = 'fa-solid fa-eye-slash pw-toggle';
+        } else {
+          input.type = 'password';
+          input.classList.remove('pw-visible');
+          eye.className = 'fa-solid fa-eye pw-toggle';
+        }
+      });
+      wrap.appendChild(eye);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', addToggles);
+  setTimeout(addToggles, 800);
+})();
 // ===== Login (Supabase) =====
 async function handleStrictLogin(event){
   event.preventDefault();
