@@ -1715,20 +1715,7 @@ async function checkUserSession(){
   const profile=document.getElementById('user-profile-section');
 
   if(session){
-    // 8-hour auto-logout check
-    let loginTime = parseInt(localStorage.getItem('loginTime') || '0');
-    if(!loginTime){
-      loginTime = Date.now();
-      localStorage.setItem('loginTime', loginTime.toString());
-    }
-    if(Date.now() - loginTime > 8 * 60 * 60 * 1000){
-      await supabaseClient.auth.signOut();
-      localStorage.removeItem('loginTime');
-      sessionStorage.setItem('sessionExpired','1');
-      location.reload();
-      return;
-    }
-
+    
     if(gateway) gateway.classList.add('hide-gateway');
     if(loginBtn) loginBtn.style.display='none';
     if(profile) profile.style.display='inline-block';
