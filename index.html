@@ -1643,7 +1643,7 @@ function openAuthModal(){ const g=document.getElementById('authGateway'); if(g) 
           eye.className = 'fa-solid fa-eye pw-toggle';
         }
       });
-      wrap.appendChild(eye);
+      eye.style.setProperty('position','absolute','important');       eye.style.setProperty('left','auto','important');       eye.style.setProperty('right','12px','important');       wrap.appendChild(eye);
     });
   }
 
