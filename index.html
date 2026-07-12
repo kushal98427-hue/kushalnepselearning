@@ -1610,7 +1610,7 @@ function openAuthModal(){ const g=document.getElementById('authGateway'); if(g) 
   const css = document.createElement('style');
   css.textContent = `
     .pw-toggle{
-      position:absolute; right:12px; top:50%; transform:translateY(-50%);
+      position:absolute !important; left:auto !important; right:12px !important; top:50%; transform:translateY(-50%);
       cursor:pointer; color:#94a3b8; font-size:15px; z-index:5;
       padding:4px; user-select:none;
     }
