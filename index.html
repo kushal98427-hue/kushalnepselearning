@@ -1648,12 +1648,7 @@ async function handleStrictForgot(event){
     if(data.error){ showAuthMessage('समस्या: ' + data.error,'error'); return; }
 
     // 2. code आएमा (user registered भएमा) EmailJS ले email पठाउँछ
-    if(data.code){
-      await emailjs.send("service_bzntxad", "template_czuuhd6", {
-        email: email,
-        recovery_code: data.code
-      });
-    }
+    
 
     // Privacy: registered होस् वा नहोस्, उही message
     window._resetEmail = email;
