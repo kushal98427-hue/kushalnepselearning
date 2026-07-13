@@ -1780,7 +1780,6 @@ async function checkUserSession(){
         showAuthMessage('Login गर्नुहोस्।','success');
       }, 300);
     }
-    if(gateway) gateway.classList.remove('hide-gateway');
     if(loginBtn) loginBtn.style.display='inline-block';
     if(profile) profile.style.display='none';
     document.body.classList.remove('user-authenticated');
