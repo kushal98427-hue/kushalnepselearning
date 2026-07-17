@@ -1451,7 +1451,7 @@ header {
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    STRICT AUTH GATEWAY INTERFACE (WITH CODE RECOVERY)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<div class="auth-gateway-overlay" id="authGateway">
+<div class="auth-gateway-overlay hide-gateway" id="authGateway">
     <div class="gateway-card">
         
         <!-- तिमीले भनेको प्रिमियम हेडलाइन र लेखकको नाम -->
@@ -1781,7 +1781,6 @@ async function checkUserSession(){
         showAuthMessage('Login गर्नुहोस्।','success');
       }, 300);
     }
-    if(gateway) gateway.classList.remove('hide-gateway');
     if(loginBtn) loginBtn.style.display='inline-block';
     if(profile) profile.style.display='none';
     document.body.classList.remove('user-authenticated');
